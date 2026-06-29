@@ -1,0 +1,14 @@
+---
+import { SITE } from '../../config/site.ts';
+interface Props { title: string; description?: string; }
+const { title, description = SITE.description } = Astro.props;
+const fullTitle = title === SITE.name ? title : `${title} · ${SITE.name}`;
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/favicon.svg" />

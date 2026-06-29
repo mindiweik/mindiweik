@@ -1,0 +1,14 @@
+---
+import { SITE } from '../../config/site.ts';
+interface Props { active?: string; }
+const { active } = Astro.props;
+---
+<header style="display:flex;gap:0.9rem;align-items:center;padding:0.9rem 1.4rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem">
+  <a href="/" style="color:var(--accent-blog);font-weight:700;font-size:0.95rem;margin-right:auto">{SITE.name}</a>
+  {SITE.nav.map((item) => (
+    <a
+      href={item.href}
+      style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''}`}
+    >{item.label}</a>
+  ))}
+</header>

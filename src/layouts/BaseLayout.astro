@@ -1,21 +1,22 @@
 ---
 import '../styles/global.css';
-interface Props { title: string; description?: string; }
-const { title, description = 'Mindi Weik. Software engineer, writer, builder.' } = Astro.props;
+import BaseHead from '../components/layout/BaseHead.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+interface Props { title: string; description?: string; active?: string; }
+const { title, description, active } = Astro.props;
 ---
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <!-- no-flash: defaults to dark now; v1.1 reads a saved preference here -->
-    <script is:inline>
-      document.documentElement.setAttribute('data-theme', 'dark');
-    </script>
+    <BaseHead title={title} description={description} />
+    <script is:inline>document.documentElement.setAttribute('data-theme', 'dark');</script>
   </head>
-  <body>
-    <slot />
+  <body style="min-height:100vh;display:flex;flex-direction:column">
+    <Header active={active} />
+    <main style="flex:1;max-width:680px;margin:0 auto;width:100%;padding:0 1.4rem;box-sizing:border-box">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
