@@ -1,5 +1,5 @@
 ---
-title: anemari fiser — a force of nature
+title: "anemari fiser: a force of nature"
 guest: Anemari Fiser
 version: v1.0.4
 season: 1
