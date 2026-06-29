@@ -1,0 +1,66 @@
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    tags: z.array(z.string()).default([]),
+    readingTime: z.number().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const podcast = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/podcast' }),
+  schema: z.object({
+    title: z.string(),
+    guest: z.string().optional(),
+    version: z.string(), // "v1.0.4"
+    season: z.number(),
+    episodeNumber: z.number().optional(),
+    pubDate: z.coerce.date(),
+    duration: z.string().optional(),
+    audioUrl: z.string().optional(),
+    youtubeUrl: z.string().optional(),
+    descriptor: z.string().optional(),
+    chapters: z.array(z.object({ timestamp: z.string(), title: z.string() })).default([]),
+    links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
+    final: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const speaking = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/speaking' }),
+  schema: z.object({
+    title: z.string(),
+    event: z.string(),
+    date: z.coerce.date(),
+    location: z.string().optional(),
+    type: z.enum(['talk', 'workshop', 'panel']).optional(),
+    description: z.string().optional(),
+    slidesUrl: z.string().optional(),
+    recordingUrl: z.string().optional(),
+    links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
+  }),
+});
+
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
+  schema: z.object({
+    name: z.string(),
+    blurb: z.string(),
+    status: z.enum(['alpha', 'live', 'wip', 'archived']),
+    stack: z.array(z.string()).default([]),
+    url: z.string().optional(),
+    repoUrl: z.string().optional(),
+    featured: z.boolean().default(false),
+    order: z.number().optional(),
+  }),
+});
+
+export const collections = { blog, podcast, speaking, projects };
