@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --font-display: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Canvas + accent tokens. Dark is the only theme shipped.
+   Light mode (v1.1) adds a [data-theme="light"] block overriding ONLY the
+   canvas tokens; accent tokens are mode-independent thanks to the fill rule. */
+:root,
+[data-theme="dark"] {
+  --bg: #0B0E14;
+  --surface: #11151F;
+  --border: rgba(255, 255, 255, 0.10);
+  --text: #ECECF1;
+  --text-muted: rgba(236, 236, 241, 0.60);
+  --ink: #0B0E14; /* dark ink used as text ON accent fills */
+
+  --accent-blog: #6E7BFF;
+  --accent-primary: var(--accent-blog);
+  --accent-podcast: #FF5C85;
+  --accent-speaking: #34D399;
+  --accent-projects: #FF9F45;
+}
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
