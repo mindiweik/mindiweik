@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# SDD controller scratch (do not commit)
+.superpowers/
