@@ -8,7 +8,9 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 <div>
   {entries.map((e) => (
     <a href={e.url} style="display:flex;gap:0.7rem;align-items:baseline;padding:0.65rem 0;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem">
-      <span style={`flex:none;width:3.4rem;font-size:0.6rem;font-weight:700;color:${zoneVar(e.zone)}`}>{e.type}</span>
+      <span style="flex:none;width:3.8rem">
+        <span style={`font-family:var(--font-mono);font-size:0.55rem;font-weight:700;padding:0.12rem 0.4rem;border-radius:5px;background:${zoneVar(e.zone)};color:var(--ink)`}>{e.type}</span>
+      </span>
       <span style="flex:1">{e.title}</span>
       <span style="color:var(--text-muted);font-size:0.65rem">{fmt(e.date)}</span>
     </a>
