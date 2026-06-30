@@ -1,5 +1,6 @@
 ---
 import { SITE } from '../../config/site.ts';
+import ThemeToggle from './ThemeToggle.astro';
 interface Props { active?: string; }
 const { active } = Astro.props;
 ---
@@ -11,4 +12,5 @@ const { active } = Astro.props;
       style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''}`}
     >{item.label}</a>
   ))}
+  <ThemeToggle />
 </header>

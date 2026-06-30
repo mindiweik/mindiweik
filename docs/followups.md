@@ -8,8 +8,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   This is the one spot still using accent-colored small text after zone labels + changelog tags
   were converted to fills. Decide: ratify as-is, or convert to `--text-muted` / a small dot for
   full consistency with the accent-as-fill rule.
-- **Light mode (v1.1):** add a `[data-theme="light"]` block in `global.css` overriding only the
-  canvas tokens, plus a visible toggle. Accent tokens stay as-is (fill rule).
 
 ## Content / data
 - **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
