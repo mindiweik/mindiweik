@@ -19,9 +19,3 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Podcast archive copy** hardcodes "two seasons" (`src/pages/podcast/index.astro`); derive from
   `seasons.length` when `SITE.podcast.status` flips to complete/archived.
 - **About copy** is placeholder; real bio + the crew during content work.
-
-## Hygiene
-- Swap `import { z } from 'astro:content'` to `import { z } from 'zod'` in `src/content.config.ts`
-  to clear ~55 TS deprecation hints.
-- `KofiLink` / `KofiCard` / episode external links use `rel="noopener"`; consider `noopener noreferrer`.
-- `ZONE_ORDER` in `src/lib/zones.ts` is currently unused (home hardcodes order); wire it in or drop it.
