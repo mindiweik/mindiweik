@@ -1,0 +1,13 @@
+---
+import type { ZoneKey } from '../../lib/zones.ts';
+import { zoneVar } from '../../lib/zones.ts';
+interface Props { href: string; title: string; meta: string; zone: ZoneKey; }
+const { href, title, meta, zone } = Astro.props;
+---
+<a href={href} style="display:block;padding:0.8rem 0;border-top:1px solid var(--border)">
+  <span style="display:flex;align-items:center;gap:0.5rem">
+    <span style={`width:0.45rem;height:0.45rem;border-radius:50%;flex:none;background:${zoneVar(zone)}`}></span>
+    <span style="font-family:var(--font-display);font-weight:500;font-size:0.95rem">{title}</span>
+  </span>
+  <span style="display:block;font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.35rem">{meta}</span>
+</a>

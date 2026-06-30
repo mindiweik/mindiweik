@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { ZoneKey } from '../lib/zones.ts';
+import { ZONES, zoneVar } from '../lib/zones.ts';
+interface Props { zone: ZoneKey; heading: string; sub: string; }
+const { zone, heading, sub } = Astro.props;
+const z = ZONES[zone];
+---
+<BaseLayout title={z.label} active={z.route}>
+  <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);padding-top:1.6rem">~{z.route}</div>
+  <h1 style={`font-family:var(--font-display);font-weight:700;font-size:1.7rem;letter-spacing:-0.02em;margin:0.4rem 0 0;color:${zoneVar(zone)}`}>{heading}</h1>
+  <p style="font-family:var(--font-body);font-size:0.85rem;color:var(--text-muted);margin-top:0.4rem">{sub}</p>
+  <div style="margin-top:0.8rem"><slot /></div>
+</BaseLayout>

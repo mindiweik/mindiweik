@@ -1,0 +1,37 @@
+---
+import ZoneIndexLayout from '../../layouts/ZoneIndexLayout.astro';
+import VersionChip from '../../components/content/VersionChip.astro';
+import { SITE } from '../../config/site.ts';
+import { getCollection } from 'astro:content';
+
+const eps = (await getCollection('podcast', (e) => !e.data.draft))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const seasons = [...new Set(eps.map((e) => e.data.season))].sort((a, b) => b - a);
+const status = SITE.podcast.status;
+const sub = status === 'active'
+  ? "life doesn't have release notes. we're figuring it out anyway, one version at a time."
+  : 'a complete run. two seasons, archived.';
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+<ZoneIndexLayout zone="podcast" heading="[WIP] podcast" sub={sub}>
+  {status !== 'active' && (
+    <div style="margin-bottom:0.6rem"><VersionChip label="complete" zone="podcast" /></div>
+  )}
+  {seasons.map((season) => (
+    <section>
+      <div style="display:flex;align-items:center;gap:0.7rem;margin:1.1rem 0 0.2rem">
+        <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">season {season} · v{season}.0.x</span>
+        <span style="flex:1;height:1px;background:var(--border)"></span>
+      </div>
+      {eps.filter((e) => e.data.season === season).map((e) => (
+        <a href={`/podcast/${e.id}`} style="display:flex;gap:0.75rem;align-items:flex-start;padding:0.8rem 0;border-top:1px solid var(--border)">
+          <VersionChip label={e.data.version} zone="podcast" outline={season < seasons[0]} />
+          <span>
+            <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.9rem">{e.data.title}</span>
+            <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);margin-top:0.3rem">{fmt(e.data.pubDate)}{e.data.duration ? ' · ' + e.data.duration : ''}</span>
+          </span>
+        </a>
+      ))}
+    </section>
+  ))}
+</ZoneIndexLayout>
