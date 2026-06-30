@@ -1,5 +1,5 @@
 .prose { font-family: var(--font-body); font-size: 1rem; line-height: 1.7; color: var(--text); }
-.prose p { margin: 0 0 1rem; }
+.prose p { margin: 0 0 1.4rem; }
 .prose h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; margin: 2rem 0 0.6rem; letter-spacing: -0.01em; }
 .prose a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; text-decoration-color: var(--accent-blog); }
 .prose blockquote { border-left: 2px solid var(--accent-blog); padding-left: 0.9rem; margin: 1.2rem 0; font-family: var(--font-display); }
