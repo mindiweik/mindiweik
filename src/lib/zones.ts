@@ -14,8 +14,6 @@ export const ZONES: Record<ZoneKey, Zone> = {
   projects: { key: 'projects', label: 'projects', route: '/projects', token: '--accent-projects' },
 };
 
-export const ZONE_ORDER: ZoneKey[] = ['blog', 'podcast', 'speaking', 'projects'];
-
 export function zoneVar(key: ZoneKey): string {
   return `var(${ZONES[key].token})`;
 }
