@@ -75,7 +75,8 @@ the outbound `links[0]` to the original). No other schema changes. No hero-image
 `linkedin-live-thriving-in-tech-with-adhd`,
 `software-engineering-tales-career-switch-to-software-engineering-with-mindi-weik`.
 
-**Pages (7) → redirect only, no new content:**
+**Pages (7) → redirect only, no new standalone pages** (reviewed individually; none have
+content worth rebuilding as their own page):
 | Old | New |
 |-----|-----|
 | `/` | `/` (home) |
@@ -85,6 +86,17 @@ the outbound `links[0]` to the original). No other schema changes. No hero-image
 | `/personal-development-blog` | `/blog` |
 | `/show-notes-tech-podcast` | `/podcast` |
 | `/subscribe-email-newsletter` | `/` (no newsletter on the new site) |
+
+**Harvest from `/mindi` into the existing About page** (Phase A, small edit, Mindi approves):
+the old `/mindi` bio names things the current About omits and worth pulling in:
+- the advocacy/mission line: amplifying underrepresented groups in tech, **particularly women
+  and neurodivergent folks**.
+- (optional) pronouns and the explicit "speaker / writer" framing.
+- Skip the résumé-style "wrangled integrations / RESTful APIs" lines — too formal for the
+  About voice.
+- **Correct a factual discrepancy:** the current About says "five-plus years"; the right figure
+  is **"10+ years"** (Mindi confirmed). Update the About bio accordingly. Domain stays "real
+  estate and marketing" unless Mindi says otherwise.
 
 Total: 16 + 32 + 5 + 5 + 7 = 65. ✓
 
