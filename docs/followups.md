@@ -27,4 +27,3 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   to clear ~55 TS deprecation hints.
 - `KofiLink` / `KofiCard` / episode external links use `rel="noopener"`; consider `noopener noreferrer`.
 - `ZONE_ORDER` in `src/lib/zones.ts` is currently unused (home hardcodes order); wire it in or drop it.
-- Docs/spec call this "Astro 5"; the toolchain is actually Astro 7 (latest). Reconcile the wording.
