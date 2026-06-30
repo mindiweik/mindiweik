@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/content/Breadcrumb.astro';
+import VersionChip from '../components/content/VersionChip.astro';
+import '../styles/prose.css';
+interface Props { title: string; slug: string; date: Date; tags: string[]; readingMins: number; }
+const { title, slug, date, tags, readingMins } = Astro.props;
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+---
+<BaseLayout title={title} active="/blog">
+  <Breadcrumb path={`~/blog/${slug}.mdx`} />
+  <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
+    <VersionChip label="essay" zone="blog" />
+    <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min{tags.length ? ' · ' + tags.map((t) => '#' + t).join(' ') : ''}</span>
+  </div>
+  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
+  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">mindi weik · {fmt(date)}</div>
+  <article class="prose" style="margin-top:1.2rem"><slot /></article>
+</BaseLayout>
