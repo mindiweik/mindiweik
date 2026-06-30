@@ -1,2 +1,11 @@
 import { defineConfig } from 'vitest/config';
-export default defineConfig({ test: { environment: 'node' } });
+import path from 'path';
+
+export default defineConfig({
+  test: { environment: 'node' },
+  resolve: {
+    alias: {
+      'astro:content': path.resolve('./src/__mocks__/astro-content.ts'),
+    },
+  },
+});
