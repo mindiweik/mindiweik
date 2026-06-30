@@ -1,0 +1,40 @@
+# Build the Astro site and deploy the static output to Hostinger via FTP.
+#
+# Required GitHub repo secrets (Settings > Secrets and variables > Actions):
+#   FTP_SERVER    - Hostinger FTP host (e.g. ftp.mindiweik.com or the IP from hPanel > Files > FTP Accounts)
+#   FTP_USERNAME  - FTP account username
+#   FTP_PASSWORD  - FTP account password
+#
+# Also confirm `server-dir` below points to the web root for mindiweik.com on your
+# Hostinger plan (commonly /public_html/ for the primary domain, or
+# /domains/mindiweik.com/public_html/ if it is an addon domain).
+
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VersionChip from '../components/content/VersionChip.astro';
+---
+<BaseLayout title="404">
+  <div style="padding:4rem 0;text-align:center">
+    <VersionChip label="404" zone="podcast" />
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.9rem;letter-spacing:-0.02em;margin:1.2rem 0 0">this version doesn't exist (yet)</h1>
+    <p style="font-family:var(--font-body);color:var(--text-muted);margin-top:0.8rem">the page you're looking for moved, shipped, or never made it past the cutting room floor.</p>
+    <a href="/" style="display:inline-block;margin-top:1.6rem;font-family:var(--font-mono);font-weight:700;font-size:0.8rem;padding:0.6rem 1rem;border-radius:8px;background:var(--accent-blog);color:var(--ink)">&larr; back home</a>
+  </div>
+</BaseLayout>
