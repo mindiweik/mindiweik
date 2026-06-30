@@ -5,6 +5,7 @@ import ZoneCard from '../components/home/ZoneCard.astro';
 import ChangelogFeed from '../components/home/ChangelogFeed.astro';
 import SectionLabel from '../components/content/SectionLabel.astro';
 import { getChangelog } from '../lib/collections.ts';
+import { SITE } from '../config/site.ts';
 
 const blurbs = {
   blog: 'essays on building, debugging, and the messy parts',
@@ -14,7 +15,7 @@ const blurbs = {
 };
 const changelog = await getChangelog(6);
 ---
-<BaseLayout title="mindi.weik">
+<BaseLayout title={SITE.name}>
   <Hero />
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:1.4rem">
     <ZoneCard zone="blog" blurb={blurbs.blog} />

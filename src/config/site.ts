@@ -1,5 +1,5 @@
 export const SITE = {
-  name: 'mindi.weik',
+  name: 'mindiweik',
   url: 'https://mindiweik.com',
   author: 'Mindi Weik',
   description: 'Software engineer, writer, builder. Figuring it out in public, one version at a time.',
