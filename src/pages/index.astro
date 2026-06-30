@@ -1,9 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import ZoneCard from '../components/home/ZoneCard.astro';
+import ChangelogFeed from '../components/home/ChangelogFeed.astro';
+import SectionLabel from '../components/content/SectionLabel.astro';
+import { getChangelog } from '../lib/collections.ts';
+
+const blurbs = {
+  blog: 'essays on building, debugging, and the messy parts',
+  podcast: '[WIP] — season 1, real talk with builders',
+  speaking: 'workshops, talks, panels',
+  projects: 'audition cat, drip dash, gardyn, marvin',
+};
+const changelog = await getChangelog(6);
 ---
 <BaseLayout title="mindi.weik">
-  <main style="padding:2rem">
-    <h1 style="font-family:var(--font-display);color:var(--accent-blog)">it builds.</h1>
-    <p style="font-family:var(--font-mono)">tokens + fonts loaded.</p>
-  </main>
+  <Hero />
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:1.4rem">
+    <ZoneCard zone="blog" blurb={blurbs.blog} />
+    <ZoneCard zone="podcast" blurb={blurbs.podcast} />
+    <ZoneCard zone="speaking" blurb={blurbs.speaking} />
+    <ZoneCard zone="projects" blurb={blurbs.projects} />
+  </div>
+  <SectionLabel label="// changelog" />
+  <ChangelogFeed entries={changelog} />
+  <a href="/changelog" style="display:inline-block;margin-top:1rem;font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted)">→ full changelog</a>
 </BaseLayout>
