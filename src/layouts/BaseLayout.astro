@@ -10,7 +10,16 @@ const { title, description, active } = Astro.props;
 <html lang="en" data-theme="dark">
   <head>
     <BaseHead title={title} description={description} />
-    <script is:inline>document.documentElement.setAttribute('data-theme', 'dark');</script>
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body style="min-height:100vh;display:flex;flex-direction:column">
     <Header active={active} />

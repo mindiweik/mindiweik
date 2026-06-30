@@ -1,0 +1,40 @@
+---
+// Small sun/moon theme toggle. Icon visibility is driven by the [data-theme]
+// attribute on <html> (see global.css), so both instances stay in sync and
+// render the correct icon on first paint. Used in Header and Footer.
+---
+<button
+  type="button"
+  class="theme-toggle"
+  aria-label="Toggle light/dark theme"
+  title="Toggle light/dark theme"
+  style="display:inline-flex;align-items:center;justify-content:center;background:none;border:none;padding:0.15rem;margin:0;cursor:pointer;color:var(--text-muted);line-height:0"
+>
+  <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+  </svg>
+  <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script>
+  import { nextTheme, resolveTheme, STORAGE_KEY } from '../../lib/theme.ts';
+
+  function currentTheme() {
+    return resolveTheme(document.documentElement.getAttribute('data-theme'));
+  }
+
+  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = nextTheme(currentTheme());
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem(STORAGE_KEY, next);
+      } catch (e) {
+        /* storage blocked: theme still flips for this session */
+      }
+    });
+  });
+</script>
