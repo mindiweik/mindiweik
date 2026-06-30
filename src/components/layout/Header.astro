@@ -1,11 +1,12 @@
 ---
 import { SITE } from '../../config/site.ts';
 import ThemeToggle from './ThemeToggle.astro';
+import Logo from './Logo.astro';
 interface Props { active?: string; }
 const { active } = Astro.props;
 ---
 <header style="display:flex;gap:0.9rem;align-items:center;padding:0.9rem 1.4rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem">
-  <a href="/" style="color:var(--accent-blog);font-weight:700;font-size:0.95rem;margin-right:auto">{SITE.name}</a>
+  <a href="/" aria-label={`${SITE.name} home`} style="display:inline-flex;align-items:center;margin-right:auto;line-height:0"><Logo /></a>
   {SITE.nav.map((item) => (
     <a
       href={item.href}

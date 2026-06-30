@@ -1,0 +1,22 @@
+---
+// Brand monogram: rounded-square badge with a dark-ink lowercase "m".
+// Uses design tokens so it stays in sync with the accent palette and renders
+// identically in light + dark (accent + ink are mode-independent).
+interface Props { size?: number; }
+const { size = 26 } = Astro.props;
+---
+<svg width={size} height={size} viewBox="0 0 32 32" role="img" aria-label="mindiweik">
+  <rect width="32" height="32" rx="7.5" fill="var(--accent-blog)" />
+  <text
+    x="16"
+    y="24"
+    font-family="'JetBrains Mono Variable','JetBrains Mono','SF Mono',ui-monospace,monospace"
+    font-size="24"
+    font-weight="800"
+    fill="var(--ink)"
+    stroke="var(--ink)"
+    stroke-width="0.9"
+    paint-order="stroke"
+    text-anchor="middle"
+  >m</text>
+</svg>

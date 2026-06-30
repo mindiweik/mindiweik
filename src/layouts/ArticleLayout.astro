@@ -14,6 +14,6 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
     <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min{tags.length ? ' · ' + tags.map((t) => '#' + t).join(' ') : ''}</span>
   </div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
-  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">mindi weik · {fmt(date)}</div>
+  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">mindiweik · {fmt(date)}</div>
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
 </BaseLayout>
