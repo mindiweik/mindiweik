@@ -10,9 +10,9 @@
   --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Canvas + accent tokens. Dark is the only theme shipped.
-   Light mode (v1.1) adds a [data-theme="light"] block overriding ONLY the
-   canvas tokens; accent tokens are mode-independent thanks to the fill rule. */
+/* Canvas + accent tokens. Dark is the default theme; light is opt-in via the
+   header/footer toggle. The [data-theme="light"] block overrides ONLY canvas
+   tokens. Accent tokens (and --ink) are mode-independent thanks to the fill rule. */
 :root,
 [data-theme="dark"] {
   --bg: #0B0E14;
@@ -29,7 +29,24 @@
   --accent-projects: #FF9F45;
 }
 
-html { color-scheme: dark; }
+[data-theme="light"] {
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --border: rgba(11, 14, 20, 0.12);
+  --text: #1A1D24;
+  --text-muted: rgba(26, 29, 36, 0.62);
+  /* --ink unchanged: still dark ink on bright accent fills */
+}
+
+[data-theme="dark"] { color-scheme: dark; }
+[data-theme="light"] { color-scheme: light; }
+
+/* Theme toggle: show the icon for the destination theme.
+   Dark now -> show sun (go light). Light now -> show moon (go dark). */
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: inline-flex; }
+[data-theme="light"] .theme-toggle .icon-moon { display: inline-flex; }
 
 body {
   margin: 0;
