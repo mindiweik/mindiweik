@@ -3,7 +3,7 @@ export const SITE = {
   url: 'https://mindiweik.com',
   author: 'Mindi Weik',
   description: 'Software engineer, writer, builder. Figuring it out in public, one version at a time.',
-  kofi: 'wippodcast', // TODO: swap to personal handle when changed
+  kofi: 'mindiweik',
   podcast: { status: 'active' as 'active' | 'complete' | 'archived' },
   nav: [
     { label: 'blog', href: '/blog' },

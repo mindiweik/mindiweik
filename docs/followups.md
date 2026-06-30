@@ -20,7 +20,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Projects with no url** currently link to `#`. Give them real links or a detail page.
 - **Podcast archive copy** hardcodes "two seasons" (`src/pages/podcast/index.astro`); derive from
   `seasons.length` when `SITE.podcast.status` flips to complete/archived.
-- **Ko-fi handle** is still `wippodcast` in `src/config/site.ts`; swap to the personal handle.
 - **About copy** is placeholder; real bio + the crew during content work.
 
 ## Hygiene
