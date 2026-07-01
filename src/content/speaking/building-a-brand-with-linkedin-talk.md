@@ -9,5 +9,3 @@ links:
 ---
 
 I shared this talk at a [Women&TECH Colorado Meetup](https://www.meetup.com/women-andtech-colorado/events/297407956/?utm_medium=referral&utm_campaign=yourEvent_savedevents_share_modal&utm_source=link) and later in a virtual presentation for associates across the US.
-
-[Slide Deck](https://docs.google.com/presentation/d/12v1IbCAI0AqxLdU2OlEcpWgiL6tINU5426sUz5PaTT0/edit?usp=drive_link)

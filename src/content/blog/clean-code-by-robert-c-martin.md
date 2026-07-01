@@ -4,6 +4,7 @@ description: "A practical breakdown of Clean Code by Robert C. Martin: key takea
 pubDate: 2024-02-20
 tags: ["books","career"]
 readingTime: 8
+youtubeUrl: https://www.youtube.com/watch?v=nVjZCne5SEs
 ---
 
 ## *Clean Code* is a **classic**.

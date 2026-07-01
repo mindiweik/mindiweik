@@ -15,5 +15,3 @@ Mindi Weik has done it all, in the past 10+ years she went from working as a Swi
 Completing Hack Reactor bootcamp in 2023, she embarked on a new journey in #tech, working for many years at Sierra Interactive and most recently - landing a new role at Postman.
 
 Throughout the whole journey she has been sharing and posting about her learnings and career growth.
-
-[Event Details](https://www.linkedin.com/events/careerconversations-personalbra7339141708229615616/comments/)

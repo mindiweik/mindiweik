@@ -10,6 +10,6 @@ links:
   - { label: blog post, url: "/blog/capturing-curiosity" }
 ---
 
-I first shared this talk at a [Coding with Callie Meetup](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date). You can find this recording [here](https://www.youtube.com/watch?v=QX8qPM_xKBE).
+I first shared this talk at a Coding with Callie Meetup. You can find this recording [here](https://www.youtube.com/watch?v=QX8qPM_xKBE).
 
 I later shared this live at the [PLoP 2024 conference](https://plopcon.org/plop2024/) in the Columbia River Gorge, Washington. Amongst the beautiful scenery, I tweaked this presentation slightly to better apply to pattern languages of programs, people, and practices.

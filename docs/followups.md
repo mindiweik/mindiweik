@@ -19,6 +19,7 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Images for specific posts** — migration was text-only. Some posts want images, e.g. `fundamentals-of-backend-engineering-course-review` (completion certificate). Source + add real images. Ties into the visual-variety followup. Deferred 2026-07-01.
 - **Internal cross-links point to old paths** — migrated content links to old wip-podcast paths like `/15-...` or `/vNNN-...` instead of `/blog/<slug>` or `/podcast/<slug>`. Sweep all content and rewrite internal links. Fixing case-by-case as flagged; needs a full pass. Deferred 2026-07-01.
 - **Inline links duplicating link buttons** — some speaking/podcast bodies repeat a link inline that's already a frontmatter button (e.g. "Slide Deck"). Removing as flagged; could sweep. Deferred 2026-07-01.
+- **Missing talk recordings** — Mindi has recordings to locate + add as `recording` buttons: `the-software-engineers-guidebook-overview-talk` and `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Resolved
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`
