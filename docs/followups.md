@@ -4,12 +4,12 @@ These are known, intentionally-deferred items from the initial scaffold. None bl
 scaffold being "done." Most belong with the content-migration or light-mode (v1.1) work.
 
 ## Content / data
-- **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
-  `src/lib/collections.ts`. Replace with real ship dates when projects get them; add a test for
-  the `order > 0` branch.
-- **Changelog fragment links** to `/speaking#id` and `/projects#id` are inert (EntryCard has no
-  matching `id`). Thread an `id` onto `EntryCard`'s `<a>` if per-entry anchors are wanted.
-- **Projects with no url** currently link to `#`. Give them real links or a detail page.
+- **Projects revamp (post-migration)** — after the wip-podcast content migration, give each
+  project its own detail page (longer description, links, images) instead of a bare index row.
+  Fold these deferred bits into that work:
+  - **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
+    `src/lib/collections.ts`. Replace with real ship dates; add a test for the `order > 0` branch.
+  - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
 - **About copy** is placeholder; real bio + the crew during content work.
 
 ## Resolved

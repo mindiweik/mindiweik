@@ -9,6 +9,7 @@ const projects = (await getCollection('projects'))
 <ZoneIndexLayout zone="projects" heading="projects" sub="things I build. side quests and serious ones.">
   {projects.map((p) => (
     <EntryCard
+      id={p.id}
       href={p.data.url ?? p.data.repoUrl ?? '#'}
       title={`${p.data.name}${p.data.featured ? ' ★' : ''}`}
       meta={`${p.data.status}${p.data.stack.length ? ' · ' + p.data.stack.join(', ') : ''}`}

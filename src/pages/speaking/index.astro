@@ -10,6 +10,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
 <ZoneIndexLayout zone="speaking" heading="speaking" sub="workshops, talks, and panels.">
   {talks.map((t) => (
     <EntryCard
+      id={t.id}
       href={t.data.slidesUrl ?? t.data.recordingUrl ?? '#'}
       title={t.data.title}
       meta={`${t.data.event} · ${fmt(t.data.date)}${t.data.location ? ' · ' + t.data.location : ''}`}
