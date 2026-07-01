@@ -66,6 +66,5 @@ Over the next several weeks, you may see changes to reflect the new name and fac
 
 See you soon with a new name and face! 😅 ✨ 💖
 
-**Know someone in tech who has an interest in sharing their experiences?**
-
-Please let me know! Have them fill out [this Notion form](https://noteforms.com/forms/podcast-guest-intake-ehzlmr) - OR - hit reply if you receive this via email, comment in Substack, or message me on [LinkedIn](https://www.linkedin.com/in/mindiweik/) (you don’t need a connection or paid account to send me a message). I would be happy to connect with your recommendations to see if they would be a good fit!
+> **Know someone in tech who has an interest in sharing their experiences?**
+> Please let me know! Have them fill out [this Notion form](https://noteforms.com/forms/podcast-guest-intake-ehzlmr) - OR - hit reply if you receive this via email, comment in Substack, or message me on [LinkedIn](https://www.linkedin.com/in/mindiweik/) (you don’t need a connection or paid account to send me a message). I would be happy to connect with your recommendations to see if they would be a good fit!

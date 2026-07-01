@@ -16,8 +16,6 @@ Another long-term goal is to decouple our platform, allowing more vendor flexibi
 
 ### **Thanks so much for reading!** ✨
 
-### **For more, check out:**
-
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
@@ -27,8 +25,9 @@ Although there is a level of flexibility you can build and connect with relation
 
 I mentioned the possibility of future third-party vendor(s). Preliminary research highlighted that the data across other possible vendors is just varied enough to need schema variation. Another win for MongoDB is that it can store multiple shapes of related data in the same collection! Don’t worry, we’ll cover this in more detail.
 
-“Generally, in MongoDB, data that is accessed together should be stored together.”
-  , Jesse Hall, MongoDB Developer [Article](https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/)
+> “Generally, in MongoDB, data that is accessed together should be stored together.”
+>
+> Jesse Hall, MongoDB Developer [Article](https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/)
 
 …and that’s the perfect segway to the crux of this topic.
 

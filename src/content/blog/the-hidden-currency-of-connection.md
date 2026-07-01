@@ -57,7 +57,7 @@ Your contact information will never be sold.
 
 Networking isn’t one specific thing. It can be in-person or online, in live conversations or via text. Networking can span multiple participants, too, as with large groups, small groups, or even one-on-one.
 
-Ultimately, networking is about pushing personal growth and building your own, personal community.
+> Ultimately, networking is about pushing personal growth and building your own, personal community.
 
 It takes time to cultivate and curate that community. Meeting someone once does not automatically add them to your community. Relationships are fostered over time!
 
@@ -106,7 +106,7 @@ If the answer is no, then I politely decline in an RSVP situation or don’t go 
 
 If the answer is yes, I find a way to reframe the situation and go anyway. In these times, I’ve rarely ever left not having enjoyed myself. It’s generally worth the push!
 
-"…people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
+> "…people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
 
 It is so applicable to networking!
 

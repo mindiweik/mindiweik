@@ -60,8 +60,9 @@ Overall, it’s pretty simple to use, and I use it often in my package.json scri
 
 The best way to manage your compiler output (as well as other TypeScript usage details) is through the tsconfig.json file. You can set up the TS project and this special file using the [command](https://www.typescriptlang.org/docs/handbook/compiler-options.html#:~:text=Initializes%20a%20TypeScript%20project%20and%20creates%20a%20tsconfig.json%20file.):
 
-"In computing, a compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language)."
-―[Wikipedia](https://en.wikipedia.org/wiki/Compiler#:~:text=In%20computing%2C%20a%20compiler%20is%20a%20computer%20program%20that%20translates%20computer%20code%20written%20in%20one%20programming%20language%20(the%20source%20language)%20into%20another%20language%20(the%20target%20language).)
+> "In computing, a compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language)."
+>
+> [Wikipedia](https://en.wikipedia.org/wiki/Compiler#:~:text=In%20computing%2C%20a%20compiler%20is%20a%20computer%20program%20that%20translates%20computer%20code%20written%20in%20one%20programming%20language%20(the%20source%20language)%20into%20another%20language%20(the%20target%20language).)
 
 In our case, TypeScript is being compiled into the higher-level language of JavaScript to be understood and used by browsers or a Node environment. Once that’s completed, the JavaScript version of your project can then be deployed.
 

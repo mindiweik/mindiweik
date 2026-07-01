@@ -157,7 +157,11 @@ function processListItems(content, type, depth) {
   return content.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_, inner) => {
     num++;
     const bullet = type === 'ul' ? '-' : `${num}.`;
-    return `${indent}${bullet} ${inner.trim()}\n`;
+    // Multi-paragraph list items (source uses <br><br>): indent continuation
+    // paragraphs so the list numbering/structure stays intact.
+    const contIndent = indent + ' '.repeat(bullet.length + 1);
+    const body = inner.trim().replace(/\n{2,}/g, '\n\n' + contIndent);
+    return `${indent}${bullet} ${body}\n`;
   }).trim();
 }
 
@@ -194,6 +198,22 @@ function htmlToMarkdown(decoded) {
   md = md.replace(/<u[^>]*>([\s\S]*?)<\/u>/gi, '$1');
   md = md.replace(/<span[^>]*>([\s\S]*?)<\/span>/gi, '$1');
   md = md.replace(/<br\s*\/?>/gi, '\n');
+
+  // 3b. Blockquotes (may carry a <footer> attribution). Render as markdown
+  // blockquote lines; put the attribution on its own quoted line (no dash,
+  // per the no-emdash writing rule).
+  md = md.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, inner) => {
+    let attribution = '';
+    inner = inner.replace(/<footer[^>]*>([\s\S]*?)<\/footer>/gi, (_, a) => {
+      attribution = a.replace(/<[^>]+>/g, '').replace(/^[\s―—–-]+/, '').trim();
+      return '';
+    });
+    const text = inner.replace(/<[^>]+>/g, '').replace(/\n{2,}/g, '\n').trim();
+    const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+    if (attribution) lines.push('', attribution);
+    const quoted = lines.map((l) => (l ? `> ${l}` : '>')).join('\n');
+    return `\n\n${quoted}\n\n`;
+  });
 
   // 4. Headings — source overuses <h1> for in-body sections; render as ##.
   md = md.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, (_, t) => `\n## ${t.trim()}\n\n`);
@@ -233,7 +253,14 @@ export function parseBody(html) {
   if (blocks.length === 0) return '';
 
   const parts = blocks.map(b => htmlToMarkdown(b.decoded)).filter(Boolean);
-  const joined = parts.join('\n\n');
+  let joined = parts.join('\n\n');
+
+  // Drop furniture-tail headings whose links were stripped as furniture,
+  // leaving a dangling header (e.g. "For more, check out:", "Connect").
+  joined = joined.replace(
+    /#{1,6}\s*\**\s*(?:for more,?\s*check out|connect|share this(?: post)?|subscribe|follow me)\s*:?\s*\**\s*(?=\n|$)/gi,
+    ''
+  );
 
   // Final whitespace normalisation.
   return joined.replace(/\n{3,}/g, '\n\n').trim();

@@ -48,7 +48,7 @@ I was tasked with figuring out what was going on. I reviewed our **logs** and **
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
-"Debugging without logs is like being a detective at a crime scene where someone cleaned up all the evidence. 🕵️‍♂️ I was still trying to piece together what happened, but without fingerprints, witnesses, or a murder weapon.
+> "Debugging without logs is like being a detective at a crime scene where someone cleaned up all the evidence. 🕵️‍♂️ I was still trying to piece together what happened, but without fingerprints, witnesses, or a murder weapon.
 
 **What could I do in the meantime?**
 

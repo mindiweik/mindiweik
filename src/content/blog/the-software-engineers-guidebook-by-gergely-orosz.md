@@ -60,7 +60,7 @@ Through Meetup, I meet women from all over who reside in my state and work in te
 
 The book starts with core aspects of career growth and ideas for reflection. We’ll touch on some concepts, but I encourage you to read it to understand them fully!
 
-"Career paths are diverse, and there’s no simple way to define what a “good” career path looks like, as this varies from person to person. The best you can do is figure out which career path is interesting and achievable for you."
+> "Career paths are diverse, and there’s no simple way to define what a “good” career path looks like, as this varies from person to person. The best you can do is figure out which career path is interesting and achievable for you."
 
 *→ I won’t touch on compensation, company tiers, performance reviews, promotions, and switching jobs here, but the book covers these in detail.*
 

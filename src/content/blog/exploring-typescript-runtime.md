@@ -255,7 +255,7 @@ Although TypeScript-specific features don’t exist at runtime, there are ways t
 
 Here’s a great summary pulled from *[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)* that is a quick way to describe some of what we’re about to cover:
 
-"TypeScript types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this."
+> "TypeScript types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this."
 
 If given the time to contemplate, one could probably come up with all sorts of ideas and examples. But here, we’ll cover 3 I use pretty frequently, plus examples.
 

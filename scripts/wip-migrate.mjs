@@ -72,9 +72,54 @@ async function migrateBlog() {
   return results;
 }
 
+// ── Podcast ──────────────────────────────────────────────────────────────────
+// [sourceSlug]. Version/season parsed from the slug: v<major><minor><patch>.
+const PODCAST = [
+  'v000-the-first-commit', 'v001-david-weiss', 'v002-christin-martin',
+  'v003-brendan-schirmer', 'v004-colin-j-lacy', 'v005-kim-maida', 'v006-nick-clark',
+  'v007-keshia-coriolan', 'v008-mara-kaela', 'v009-grace-dees', 'v100-release-notes',
+  'v102-erik-gross', 'v103-anna-miller',
+];
+const SOLO = new Set(['v000-the-first-commit', 'v100-release-notes']);
+
+// Promote the inline "Your call to action? →" line into a styled heading + quote.
+const promoteCta = (body) =>
+  body.replace(/\*\*Your call to action\??\s*→?\s*\*\*\s*/i, '## your call to action\n\n> ');
+
+async function migratePodcast() {
+  const outDir = path.join(ROOT, 'src/content/podcast');
+  const results = [];
+  for (const src of PODCAST) {
+    const m = src.match(/^v(\d)(\d)(\d+)-(.+)$/);
+    const [, major, minor, patch, name] = m;
+    const version = `v${major}.${minor}.${patch}`;
+    const slug = `v${major}-${minor}-${patch}-${name}`;
+    try {
+      const html = await getHtml(`${BASE}/${src}`);
+      const meta = parseMeta(html);
+      const yt = parseYoutube(html);
+      const titlePart = (meta.title ?? '').split(' - ').slice(1).join(' - ') || meta.title;
+      const body = promoteCta(debrand(parseBody(html)));
+      const fm = ['---'];
+      fm.push(`title: ${yamlStr(lower(titlePart))}`);
+      if (!SOLO.has(src)) fm.push(`guest: ${yamlStr(titlePart)}`);
+      fm.push(`version: ${version}`);
+      fm.push(`season: ${Number(major)}`);
+      if (meta.datePublished) fm.push(`pubDate: ${meta.datePublished}`);
+      if (yt) fm.push(`youtubeUrl: https://www.youtube.com/watch?v=${yt}`);
+      fm.push('---', '', body, '');
+      fs.writeFileSync(path.join(outDir, `${slug}.md`), fm.join('\n'));
+      results.push({ slug, ok: true, bytes: body.length, yt: !!yt, chapters: /\*\*\d{1,2}:\d{2}/.test(body) });
+    } catch (e) {
+      results.push({ slug, ok: false, error: String(e.message) });
+    }
+  }
+  return results;
+}
+
 // ── Main ─────────────────────────────────────────────────────────────────────
 const type = process.argv[2];
-const runners = { blog: migrateBlog };
+const runners = { blog: migrateBlog, podcast: migratePodcast };
 if (!runners[type]) { console.error(`unknown type: ${type}`); process.exit(1); }
 const results = await runners[type]();
 for (const r of results) {

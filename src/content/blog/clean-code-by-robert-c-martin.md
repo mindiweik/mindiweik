@@ -36,8 +36,6 @@ The conversation that was sparked pleasantly surprised me when I presented to th
 
 ### **Thanks so much for reading!** ✨
 
-### **For more, check out:**
-
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
@@ -53,10 +51,11 @@ For me, clean code is beautiful and embodies ***discipline***. It is concise and
 
 I especially like the application of the referenced “broken windows” metaphor:
 
-"A building with broken windows looks like nobody cares about it. So, other people stop caring. They allow more windows to become broken. Eventually, they actively break them. They despoil the facade with graffiti and allow garbage to collect. One broken window starts the process toward decay."
-― Dave Thomas & Andy Hunt
+> "A building with broken windows looks like nobody cares about it. So, other people stop caring. They allow more windows to become broken. Eventually, they actively break them. They despoil the facade with graffiti and allow garbage to collect. One broken window starts the process toward decay."
+>
+> Dave Thomas & Andy Hunt
 
-"Of course bad code can be cleaned up. But it’s very expensive. As code rots, the modules insinuate themselves into each other, creating lots of hidden and tangled dependencies."
+> "Of course bad code can be cleaned up. But it’s very expensive. As code rots, the modules insinuate themselves into each other, creating lots of hidden and tangled dependencies."
 
 Several other interpretations of “clean code“ were provided by others in the industry. Here are some of the meaningful interpretations I extracted:
 
@@ -140,10 +139,11 @@ Functions are the heart of any program. They should have consistent blocks and i
 4. Have you - or are you - putting anything into practice in your daily work?
 5. Is this most relevant to new engineers, or is it also useful for seniors or man
 
-"The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that."
+> "The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that."
 
-"So too being able to recognize clean code from dirty code does not mean that we know how to write clean code!"
-― Chapter 1, “The Art of Clean Code?”
+> "So too being able to recognize clean code from dirty code does not mean that we know how to write clean code!"
+>
+> Chapter 1, “The Art of Clean Code?”
 
 - Functions should only do one thing.
 - The output should be exactly what you expect.

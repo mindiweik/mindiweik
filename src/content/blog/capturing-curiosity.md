@@ -72,8 +72,8 @@ If you’d like to see/hear an example, in the recording, I discuss a scenario w
 - **Reach the target: **Ideally, you will reach the target in your conversations! This means you have an answer to the question you started with and a shared understanding.
 Over time, you can also try applying these questions inward. Take time to learn from your mistakes, however big or small, and ask yourself these “better” questions.
 
-"Being curious can manifest itself in the activity of asking questions, but it can also be a position from which one approaches their life.”
-- From [gostrengths.com](https://gostrengths.com/what-is-curiosity/)
+> "Being curious can manifest itself in the activity of asking questions, but it can also be a position from which one approaches their life.”
+> - From [gostrengths.com](https://gostrengths.com/what-is-curiosity/)
 
 ### **#4 Seek New Experiences**
 

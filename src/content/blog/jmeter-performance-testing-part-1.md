@@ -44,7 +44,7 @@ JMeter can be used through a Graphic User Interface (GUI) or Command Line Interf
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
-Fair warning, JMeter’s GUI looks outdated! It was clunky at first, but once I got the basics down it was easy enough to manage and navigate. Perservere! 👍
+> Fair warning, JMeter’s GUI looks outdated! It was clunky at first, but once I got the basics down it was easy enough to manage and navigate. Perservere! 👍
 
 Next, I started working on specific options we wanted to use. Trial, error, and research ensued to determine how to accomplish our goals.
 

@@ -13,8 +13,9 @@ Photo by Brett Jordan on Unsplash
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
-"If you can get one percent better each day for one year, you'll end up thirty-seven times better by the time you're done.”
-―James Clear, Atomic Habits
+> "If you can get one percent better each day for one year, you'll end up thirty-seven times better by the time you're done.”
+>
+> James Clear, Atomic Habits
 
 “Atomic Habits” is one of my favorite reads from last year. Much of its advice feels like common sense. However, that advice is often forgotten. We rarely enact this common sense.
 

@@ -11,6 +11,7 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
     `src/lib/collections.ts`. Replace with real ship dates; add a test for the `order > 0` branch.
   - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
 - **About copy** is placeholder; real bio + the crew during content work.
+- **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
 
 ## Resolved
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`

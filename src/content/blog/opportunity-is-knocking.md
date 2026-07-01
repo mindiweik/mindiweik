@@ -45,15 +45,17 @@ Whether you have a cool idea or find a cool way to play with something new, work
 Subscribe to receive occassional blog posts!
 Your contact information will never be sold.
 
-"Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.”
-―Michael Jordan
+> "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.”
+>
+> Michael Jordan
 
 Growth takes effort, intentionality, and sometimes a dash of creativity! I started asking more questions, both of myself and to those around me, to brainstorm ideas to put into practice.
 
-For everything I’ve shared, please remember that we should be **respectful of others**. This is especially true when people are likely going out of their way for us!
+> For everything I’ve shared, please remember that we should be **respectful of others**. This is especially true when people are likely going out of their way for us!
 
-"Don't sit down and wait for the opportunities to come. Get up and make them.”
-―Madam CJ Walker
+> "Don't sit down and wait for the opportunities to come. Get up and make them.”
+>
+> Madam CJ Walker
 
 If you’re solely focused on learning, you can have a great time tinkering with new technology, patterns, languages, etc. If no one looks over your shoulder, the world is your oyster; experiment away!
 
