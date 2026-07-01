@@ -16,7 +16,7 @@ As I began my endeavor to learn more in public, it felt symbolic to start with f
 >
 > John C. Maxwell
 
-That said, this concept is a [common Agile practice](http://xn--weve%20all%20heard%20the%20phrase%20fail%20fast,%20especially%20if%20were%20familiar%20with%20the%20agile%20approach-pu68e8b6rqe.%20as%20counter-intuitive%20as%20it%20might%20sound%20for%20those%20of%20us%20trained%20in%20the%20leadership%20model%20of%20the%20industrial%20era,%20iterating%20fast%20failures%20achieve%20a%20desired%20result%20faster%20than%20perfecting%20the%20solution./), better known as “iterations,” or attempts with adjustments. Experimentation and low-risk failures are encouraged for quicker, quality results.
+That said, this concept is a common Agile practice, better known as “iterations,” or attempts with adjustments. Experimentation and low-risk failures are encouraged for quicker, quality results.
 
 This approach leads to incremental progress over time. It also encourages faster peer feedback and a higher standard of team output.
 
@@ -43,8 +43,8 @@ I recommend fostering a company culture of experimentation and innovation, but i
 - After you read about ideas or approaches, try them!
 - Have a project idea in mind? Mock it up in a simple way.
 - Document results; back up your decisions with data!
-- 🤩 A great tip for cultures that don’t foster failure.
-  - Consider if the experiment can be easily reversed.
+  - 🤩 A great tip for cultures that don’t foster failure.
+- Consider if the experiment can be easily reversed.
   - 🥸 If so, go for it! If not, think twice and be careful.
 
 > "An important goal of the fail fast philosophy is to avoid the sunk cost effect, which is the tendency to continue investing in something that clearly isn't working because it's human nature for people to want to avoid failure."
