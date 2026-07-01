@@ -5,13 +5,57 @@ import Logo from './Logo.astro';
 interface Props { active?: string; }
 const { active } = Astro.props;
 ---
-<header style="display:flex;gap:0.9rem;align-items:center;padding:0.9rem 1.4rem;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem">
-  <a href="/" aria-label={`${SITE.name} home`} style="display:inline-flex;align-items:center;margin-right:auto;line-height:0"><Logo /></a>
-  {SITE.nav.map((item) => (
-    <a
-      href={item.href}
-      style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''}`}
-    >{item.label}</a>
-  ))}
+<header class="site-header">
+  <a href="/" aria-label={`${SITE.name} home`} class="site-header__logo"><Logo /></a>
+  <nav class="site-header__nav">
+    {SITE.nav.map((item) => (
+      <a
+        href={item.href}
+        style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''}`}
+      >{item.label}</a>
+    ))}
+  </nav>
   <ThemeToggle />
 </header>
+
+<style>
+  /* Mobile-first: logo + toggle share the top row (logo pushes toggle right),
+     nav drops to its own full-width line below. The header's row-gap gives the
+     vertical spacing between the two lines. */
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  .site-header__logo {
+    display: inline-flex;
+    align-items: center;
+    margin-right: auto; /* pushes toggle to the far right on the top row */
+    line-height: 0;
+  }
+
+  .site-header__nav {
+    order: 1;            /* forces nav after logo/toggle -> second line */
+    flex-basis: 100%;    /* full width so it wraps onto its own line */
+    display: flex;
+    gap: 1.1rem;
+    justify-content: space-between; /* spread the links across the line */
+  }
+
+  /* Wider screens: everything collapses back to a single row
+     (logo | nav | toggle), matching the original desktop layout. */
+  @media (min-width: 640px) {
+    .site-header__nav {
+      order: 0;
+      flex-basis: auto;
+      justify-content: flex-start;
+      gap: 0.9rem;
+    }
+  }
+</style>
