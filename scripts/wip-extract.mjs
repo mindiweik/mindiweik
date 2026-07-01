@@ -262,6 +262,10 @@ export function parseBody(html) {
     ''
   );
 
+  // Drop the email-subscribe furniture lines (no subscription wired up yet).
+  joined = joined.replace(/^.*Subscribe to receive occassional blog posts.*$/gim, '');
+  joined = joined.replace(/^.*Your contact information will never be sold.*$/gim, '');
+
   // Final whitespace normalisation.
   return joined.replace(/\n{3,}/g, '\n\n').trim();
 }
