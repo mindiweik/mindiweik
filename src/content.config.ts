@@ -26,7 +26,7 @@ const podcast = defineCollection({
     pubDate: z.coerce.date(),
     duration: z.string().optional(),
     audioUrl: z.string().optional(),
-    youtubeUrl: z.string().optional(),
+    youtubeUrl: z.string().url().optional(),
     descriptor: z.string().optional(),
     chapters: z.array(z.object({ timestamp: z.string(), title: z.string() })).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
