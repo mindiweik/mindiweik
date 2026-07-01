@@ -8,9 +8,13 @@ const eps = (await getCollection('podcast', (e) => !e.data.draft))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const seasons = [...new Set(eps.map((e) => e.data.season))].sort((a, b) => b - a);
 const status = SITE.podcast.status;
+// Spell out small season counts for the archive tagline; fall back to digits.
+const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+const count = seasons.length;
+const countWord = NUM_WORDS[count] ?? String(count);
 const sub = status === 'active'
   ? "life doesn't have release notes. we're figuring it out anyway, one version at a time."
-  : 'a complete run. two seasons, archived.';
+  : `a complete run. ${countWord} season${count === 1 ? '' : 's'}, archived.`;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 ---
 <ZoneIndexLayout zone="podcast" heading="[WIP] podcast" sub={sub}>

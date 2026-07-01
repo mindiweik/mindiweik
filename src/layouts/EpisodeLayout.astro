@@ -33,7 +33,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
     <div style="margin-top:1.1rem">
       {chapters.map((c) => (
         <div style="display:flex;gap:0.7rem;font-family:var(--font-mono);font-size:0.7rem;padding:0.45rem 0;border-top:1px solid var(--border)">
-          <span style="color:var(--accent-podcast);flex:none">{c.timestamp}</span>
+          <span style="color:var(--text-muted);flex:none">{c.timestamp}</span>
           <span>{c.title}</span>
         </div>
       ))}
