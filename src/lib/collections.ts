@@ -19,7 +19,7 @@ export function toChangelogEntries(raw: {
   const entries: ChangelogEntry[] = [
     ...raw.blog.map((e) => ({ type: 'essay', zone: 'blog' as ZoneKey, title: e.data.title, url: `/blog/${e.id}`, date: e.data.pubDate })),
     ...raw.podcast.map((e) => ({ type: e.data.version, zone: 'podcast' as ZoneKey, title: e.data.title, url: `/podcast/${e.id}`, date: e.data.pubDate })),
-    ...raw.speaking.map((e) => ({ type: 'talk', zone: 'speaking' as ZoneKey, title: e.data.title, url: `/speaking#${e.id}`, date: e.data.date })),
+    ...raw.speaking.map((e) => ({ type: e.data.type === 'guest' ? 'guest' : 'talk', zone: 'speaking' as ZoneKey, title: e.data.title, url: `/speaking#${e.id}`, date: e.data.date })),
     ...raw.projects.map((e) => ({ type: 'ship', zone: 'projects' as ZoneKey, title: e.data.name, url: `/projects#${e.id}`, date: e.data.order ? new Date(2026, 0, e.data.order) : new Date(0) })),
   ];
   return entries.sort((a, b) => b.date.getTime() - a.date.getTime());

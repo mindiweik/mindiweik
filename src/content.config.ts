@@ -42,7 +42,7 @@ const speaking = defineCollection({
     event: z.string(),
     date: z.coerce.date(),
     location: z.string().optional(),
-    type: z.enum(['talk', 'workshop', 'panel']).optional(),
+    type: z.enum(['talk', 'workshop', 'panel', 'guest']).optional(),
     description: z.string().optional(),
     slidesUrl: z.string().optional(),
     recordingUrl: z.string().optional(),

@@ -3,18 +3,35 @@ import ZoneIndexLayout from '../../layouts/ZoneIndexLayout.astro';
 import EntryCard from '../../components/content/EntryCard.astro';
 import { getCollection } from 'astro:content';
 
-const talks = (await getCollection('speaking'))
+const all = (await getCollection('speaking'))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const talks = all.filter((t) => t.data.type !== 'guest');
+const guests = all.filter((t) => t.data.type === 'guest');
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const linkFor = (t: any) => t.data.slidesUrl ?? t.data.recordingUrl ?? t.data.links?.[0]?.url ?? '#';
 ---
 <ZoneIndexLayout zone="speaking" heading="speaking" sub="workshops, talks, and panels.">
   {talks.map((t) => (
     <EntryCard
       id={t.id}
-      href={t.data.slidesUrl ?? t.data.recordingUrl ?? '#'}
+      href={linkFor(t)}
       title={t.data.title}
       meta={`${t.data.event} · ${fmt(t.data.date)}${t.data.location ? ' · ' + t.data.location : ''}`}
       zone="speaking"
     />
   ))}
+  {guests.length > 0 && (
+    <div style="margin-top:2rem">
+      <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">// guest appearances</div>
+      {guests.map((t) => (
+        <EntryCard
+          id={t.id}
+          href={linkFor(t)}
+          title={t.data.title}
+          meta={`${t.data.event} · ${fmt(t.data.date)}`}
+          zone="speaking"
+        />
+      ))}
+    </div>
+  )}
 </ZoneIndexLayout>
