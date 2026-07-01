@@ -30,7 +30,7 @@ One of his biggest recommendations for anyone trying to learn something new? It'
 
 ## resources & tools
 
-- *So Good They Can't Ignore You* by Cal Newport
+- [*So Good They Can't Ignore You*](https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you) by Cal Newport
 - [D3](https://d3js.org/)
 - [Apache ECharts](https://echarts.apache.org/en/index.html)
 - [Matplotlib](https://matplotlib.org/)
