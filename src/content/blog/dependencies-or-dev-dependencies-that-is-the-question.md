@@ -31,7 +31,7 @@ However, I know I’m not the only one to fall into this trap. I thought it woul
 
 Let’s quickly define a “package” and a “module” in software development to ensure a common understanding. 
 
-A **package **is a file, directory, or resource set that can be publicly or privately shared. These packages can provide useful functions or tools for your project and are defined within a package.json file.
+A **package** is a file, directory, or resource set that can be publicly or privately shared. These packages can provide useful functions or tools for your project and are defined within a package.json file.
 
 That package.json file is important! It holds all the details about your project, like authors, licensing, and scripts. It also houses your list of dependencies and devDependencies and the specific version numbers your project needs to work as intended.
 
@@ -56,11 +56,6 @@ You might use these packages for development and testing, or they might be tools
 The key thing to note is that these packages should be **needed to run in production**.
 
 Here are a few packages we regularly use for Node API projects:
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 ```js
 "devDependencies": {
@@ -101,9 +96,9 @@ C8 is purely for our internal purposes. Tests are frequently run locally, in dev
 
 Similarly, eslint is not something our users should know about. They won’t be looking at our codebase, and it’s unlikely that users would know enough about code - or our particular codebase or domain - to nitpick on our cohesive linting. Unless you’re working on an open-source project. But that’s a different story.
 
-What about TypeScript? One could argue that you would need *some *level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](https://codeoutloud.substack.com/p/exploring-typescript-runtime?r=29u7hv)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](https://codeoutloud.substack.com/p/exploring-typescript-ts-complier?r=29u7hv).
+What about TypeScript? One could argue that you would need *some* level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](https://codeoutloud.substack.com/p/exploring-typescript-runtime?r=29u7hv)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](https://codeoutloud.substack.com/p/exploring-typescript-ts-complier?r=29u7hv).
 
-**Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in **dependencies** to **devDependencies**.**
+**Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in** dependencies **to** devDependencies**.**
 
 My error came when I moved two [BugSnag](https://www.bugsnag.com/) packages, like “@bugsnag/js” listed above, to the devDependencies section. We implemented BugSnag into a new project as a tool to monitor errors and track them down to squash them quickly! At first, it seemed like BugSnag should only be needed in devDependencies because it was a ***developer tool***. Our users would not be interacting with it.
 
@@ -113,11 +108,11 @@ You may already see why that is an issue, but this made perfect sense in my init
 
 I’m grateful that the issue was quickly noticed and easy to fix. The team immediately reverted this to the dependencies section, and all was well. We implemented BugSnag to monitor errors and track them in real-time in the production environment, which is why it needed to be listed in dependencies. Without it in production, we couldn't run the app, nor reach the goal to catch and fix issues promptly.
 
-Although dev tools are *often *only needed in the devDependencies section, consider whether it is actually used in production. In our case, BugSnag needed to be available in production because how else would we find and catch those bugs?
+Although dev tools are *often* only needed in the devDependencies section, consider whether it is actually used in production. In our case, BugSnag needed to be available in production because how else would we find and catch those bugs?
 
 Of course, that makes sense. They say hindsight is 20/20.
 
-**I hope this cautionary tale is helpful for those who have just learned about **dependencies** and **devDependencies** or a good reminder for those who already know. Take an extra moment to think about your packages and where they belong!**
+**I hope this cautionary tale is helpful for those who have just learned about** dependencies **and** devDependencies **or a good reminder for those who already know. Take an extra moment to think about your packages and where they belong!**
 
 ## 🤓 Continued Reading:
 

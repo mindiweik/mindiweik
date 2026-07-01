@@ -46,11 +46,6 @@ Bootcamps are not for everyone. There’s more communication involved than many 
 
 Bootcamp grads should share their career goals with their network to help them find that first role! I’ve heard it gets better once you land the first one. I’ll have to get back to you when I eventually move to my next role. 😉
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 All coding bootcamps differ. This applies to the people who participate in them, too. Every experience is different! 
 
 I completed a bootcamp after 2 years of learning on my own. I'm driven but needed more accountability and opportunities for deeper understanding or to locate *trusted* resources. A rapid feedback loop helps to retain complex information long-term.

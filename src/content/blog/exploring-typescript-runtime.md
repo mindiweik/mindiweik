@@ -46,7 +46,7 @@ Simply put, TypeScript types don’t exist at runtime.
 
 Yes, that’s right. TypeScript types are “erasable,” removed from the compiled code. Interfaces and type annotations also fall under this umbrella of removed code. Although we haven’t covered [declaration files](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html#dts-files), the types and interfaces described in these files will also disappear.
 
-If you recall, we compile TypeScript code into JavaScript. TypeScript is a superset of JavaScript and adds more functionality *on top of *JavaScript. 
+If you recall, we compile TypeScript code into JavaScript. TypeScript is a superset of JavaScript and adds more functionality *on top of* JavaScript. 
 
 As a result, TypeScript-specific features and functionality disappear and can’t affect your JavaScript code. Therefore, interfaces, types, and type annotations cannot affect runtime behavior.
 
@@ -54,18 +54,13 @@ As a result, TypeScript-specific features and functionality disappear and can’
 
 ***In my opinion, the biggest benefit of using TypeScript types is having a pre-defined “shape” of the types you work with.***
 
-This requires thoughtful intention! I’ve worked on projects that aren’t strict with typing and it caused me some headaches. When done well, defined shapes have clarified *exactly *what I’m working with while building and developing. 
+This requires thoughtful intention! I’ve worked on projects that aren’t strict with typing and it caused me some headaches. When done well, defined shapes have clarified *exactly* what I’m working with while building and developing. 
 
 As a simple example to play around with type “shape,” here we define the “shape” of an object we want to use to describe my three pets:
 
 In this way, although TypeScript types and true type checking won’t exist in the generated JavaScript, we can confirm which types we are working with and how we want to utilize them in a way that will translate into runtime. The generated JavaScipt code looks identical in this case!
 
 We can use a similar concept with objects. Let’s say we’re now talking about storing art pieces in galleries!
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 ```js
 interface Art {

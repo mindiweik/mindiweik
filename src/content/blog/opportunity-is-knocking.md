@@ -26,7 +26,7 @@ Here are just a few examples. Think outside the box; you might find other avenue
 
 **In-person ideas:**
 
-- **Talk to people you interact with frequently. **This might be family members, friends, neighbors, acquaintances at the grocery store, clubs, your child's school, or other similar places where you interact with other humans.
+- **Talk to people you interact with frequently.** This might be family members, friends, neighbors, acquaintances at the grocery store, clubs, your child's school, or other similar places where you interact with other humans.
 - **Attend local events.** These events can be tech-related but don't have to be. As you connect with people outside your normal domain, you might generate new ideas or find connections you had never considered.
 - **Join hackathons.** If you’re lucky enough to have a hackathon in your area, I recommend attending! I’m on the lookout for some myself.
 
@@ -34,16 +34,11 @@ Here are just a few examples. Think outside the box; you might find other avenue
 
 - **Leverage social media.** I lean toward [LinkedIn](https://www.linkedin.com/in/mindiweik/) because it's the professional option, but reaching out to folks in your network on other platforms, too, couldn’t hurt. With LinkedIn, you also have an insight advantage, knowing what tech they work with or where they work.
 - **Attend virtual events** - Similar to in-person events, these can be tech-related but don't have to be. There are loads of webinars and networking events online to expand your opportunities.
-- **Open Source **- If you have the time and capacity, consider working on open source projects to expand your skills!
+- **Open Source** - If you have the time and capacity, consider working on open source projects to expand your skills!
 
 ## 😊 Work on your own project(s)
 
 Whether you have a cool idea or find a cool way to play with something new, working on personal project(s) is yet another great option.
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 > "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.”
 >
@@ -88,10 +83,10 @@ Whether it’s a direct teammate or an admirable person on another team, start w
 
 **Some ideas I started with to identify potential mentors or contacts internally:**
 
-- **What to learn first? **Figure this out if it’s not already known. This can help pinpoint who to ask for advice or indicate what we need once we connect.
+- **What to learn first?** Figure this out if it’s not already known. This can help pinpoint who to ask for advice or indicate what we need once we connect.
 - **Consider the “quiet” folks within!** Some are uncomfortable in large groups, but have ample knowledge to share. They may thrive in a more personal environment; these people are hidden gems who make great mentors.
 - **Ask management for ideas.** If you’re newer to the company or you’re struggling to identify someone to connect with, they may have better insight into who is best in certain areas we may not have considered before. They also often know who has bandwidth to help.
-- **Have you asked to help with a new project? **Not always, but sometimes having the conversation is enough to inform your manager you’re bored, burnt out, or want to grow in a different area. They’re supposed to be on your side and will likely do what they can to help!
+- **Have you asked to help with a new project?** Not always, but sometimes having the conversation is enough to inform your manager you’re bored, burnt out, or want to grow in a different area. They’re supposed to be on your side and will likely do what they can to help!
 
 Once internal help is identified, think before connecting. Especially if the person(s) we’ve found are more senior, we do *not* want to waste anyone’s time. It may be the only chance we get to talk with them! Plan questions to ask or concepts to learn before reaching out. It’s helpful to them if we share a bit about what we want to learn and why.
 

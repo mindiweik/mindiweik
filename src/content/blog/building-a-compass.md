@@ -62,11 +62,6 @@ Maybe “I don’t know” isn’t uncertainty. Maybe it’s clarity. The future
 
 **If you feel behind, you’re not broken. The pace is real. Start small. Stay steady. Keep becoming. 💖**
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 On two recent occasions, I was asked where I see myself in the future. My answer in both cases was relatively similar...
 
 **I don't know. 🤔**
@@ -124,7 +119,7 @@ We talked about how my brain did that thing where it tried to generate the “co
 In retrospect, the honest answer is simpler: Focus on what I can actually control. Right now.
 **“I don’t know. I’m focused on building skills that survive change.”**
 
-Because the truth is: **we've seen too many ‘stable paths’ disappear mid-walk. **Especially in the last few years.
+Because the truth is: **we've seen too many ‘stable paths’ disappear mid-walk.** Especially in the last few years.
 
 ### **🤨 Moment #2: The definition changed**
 

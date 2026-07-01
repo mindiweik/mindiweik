@@ -39,11 +39,6 @@ My initial research indicates that it’s still popular. I examined other option
 
 JMeter can be used through a Graphic User Interface (GUI) or Command Line Interface (CLI) commands. We’ll cover the latter in the [second part](/22-jmeter-performance-testing-part-2).
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 > Fair warning, JMeter’s GUI looks outdated! It was clunky at first, but once I got the basics down it was easy enough to manage and navigate. Perservere! 👍
 
 Next, I started working on specific options we wanted to use. Trial, error, and research ensued to determine how to accomplish our goals.
@@ -90,17 +85,17 @@ Finally, one of the most interesting options was the [Extended CSV Data Set Conf
 
 To use this, however, I needed to install the plugin. This was simple enough. 
 
-**Plugin Directions: **Access plugins by selecting “Options” in the Menu Bar, then choose “***Plugins Manager***.”
+**Plugin Directions:** Access plugins by selecting “Options” in the Menu Bar, then choose “***Plugins Manager***.”
 
 A window should open for the “***Plugins Manager***.” Select the “***Available Plugins***” tab and search for the plugin by name. Once identified, mark the checkbox and choose “***Apply Changes and Restart JMeter***” in the lower right corner.
 
 From here, I reviewed/updated the Filename, Variable Name(s), Consider first line as Variable Name, Select Row, and Sharing Mode fields.
 
-1. **Filename - **This was simple enough; I provided the path to my CSV file with the thousands of input options.
-2. **Variable Name(s) - **In our case, our CSV had 2 labels in the header row that aligned with our request parameters. Let’s call them “option1” and “option2” for our example.
-3. **Consider first line as Variable Name - **As mentioned, our CSV has a header row. Therefore, I left this set to true.
+1. **Filename -** This was simple enough; I provided the path to my CSV file with the thousands of input options.
+2. **Variable Name(s) -** In our case, our CSV had 2 labels in the header row that aligned with our request parameters. Let’s call them “option1” and “option2” for our example.
+3. **Consider first line as Variable Name -** As mentioned, our CSV has a header row. Therefore, I left this set to true.
 4. **Select Row -** [This resource](https://rollno748.medium.com/extended-csv-dataset-config-for-jmeter-17b1d8bda6b8#:~:text=using%20this%20plugin-,1.%20Select%20Row,-This%20selection%20allows) describes the options clearly. My goal was random and I chose this in the drop-down.
-5. **Sharing Mode - **The options are “All threads,” “Current thread,” and “Current thread group.” I left the default “All threads” selected.
+5. **Sharing Mode -** The options are “All threads,” “Current thread,” and “Current thread group.” I left the default “All threads” selected.
 
 Now we’ve got a setup that replicates my selections! 
 

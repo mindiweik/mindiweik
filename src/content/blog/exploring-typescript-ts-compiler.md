@@ -31,11 +31,6 @@ If you’re unaware, TypeScript is a superset of JavaScript that adds static typ
 
 Well, to start, you need to ensure you [install TypeScript](https://www.typescriptlang.org/download). You can do this globally:
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ```js
 npm install -g typescript
 ```
@@ -84,7 +79,7 @@ Perhaps your overall project needs unique frontend and backend settings. Similar
 
 I could keep brainstorming, but I think you get the point.
 
-*So, how does one extend a *tsconfig* file or use more than one one?*
+*So, how does one extend a* tsconfig *file or use more than one one?*
 
 Put simply, use the extends option and reference the base file. I found [an example here](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/) that shows this pretty well. [The example is an older reference. Some options may have changed with newer TS version releases!]
 
@@ -94,7 +89,7 @@ Here is a simplified file example from my own usage, too:
 
 Technically, other compiler options, like Babel, could be used. However, in my own experience, I’ve most often seen the TypeScript Compiler. In any case, we need to convert TypeScript code to JavaScript code!
 
-*Oh, and did you know that *tsc* is actually also written in TypeScript and compiled into JavaScript?* 
+*Oh, and did you know that* tsc *is actually also written in TypeScript and compiled into JavaScript?* 
 
 🤯 I know, it blew my mind, too, when I heard [Josh Goldberg](https://www.linkedin.com/in/joshuakgoldbergcodes/) mention this in a recent talk I heard!
 

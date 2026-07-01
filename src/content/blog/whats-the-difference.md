@@ -47,8 +47,3 @@ So, our recipe is currently written in Japanese (TypeScript), but we need it to 
 **Compiling is essentially translating code from one language to another!**
 
 *This could also look like translating C or Rust to machine code.*
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.

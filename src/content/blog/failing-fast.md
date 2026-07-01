@@ -50,5 +50,3 @@ I recommend fostering a company culture of experimentation and innovation, but i
 > "An important goal of the fail fast philosophy is to avoid the sunk cost effect, which is the tendency to continue investing in something that clearly isn't working because it's human nature for people to want to avoid failure."
 >
 > [TechTarget.com post](https://www.techtarget.com/whatis/definition/fail-fast)
-
-### **Thanks so much for reading!** ✨

@@ -14,11 +14,6 @@ Our API proxy service will add a safety layer between the platform and a third-p
 
 Another long-term goal is to decouple our platform, allowing more vendor flexibility in the future. You never know when something will change with an API you don’t control. 😉
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## Why MongoDB - or why a NoSQL database - you might ask?
 
 Although there is a level of flexibility you can build and connect with relational databases and foreign keys, NoSQL databases are known for their flexible data structure capabilities. Ever-growing SQL tables leads to complicated queries and multiple join tables to access scattered data. Those queries can become expensive.
@@ -47,7 +42,7 @@ Mongoose is a popular third-party JavaScript library for Node.js. It helps to mo
 
 Mongoose provides more structure to developer interactions with MongoDB. The schema allows you to define the shape of your data and its expected types as well as additional options like default values, designated uniqueness, or indexing for example. 
 
-The model, on the other hand, applies your schema structure to each of the MongoDB documents. Models are then used for “CRUD” database actions on the records: creating, reading, updating, and deleting. *, View the ****[full list of Mongoose queries](https://mongoosejs.com/docs/queries.html) ****available.*
+The model, on the other hand, applies your schema structure to each of the MongoDB documents. Models are then used for “CRUD” database actions on the records: creating, reading, updating, and deleting. *, View the* ***[full list of Mongoose queries](https://mongoosejs.com/docs/queries.html)* ***available.*
 
 To ensure our mental model is aligned, here’s an example of a base schema in JavaScript we will use to define a model we can work with:
 

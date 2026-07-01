@@ -8,7 +8,7 @@ readingTime: 2
 
 Over the last year and a half I’ve experimented with **codeOutLoud** as a conduit. It’s been fun! Knowledge has been gained and significant growth attained both personally and professionally since the inception of this Substack.
 
-*During the last few months, I’ve done a lot of thinking. *🤔
+*During the last few months, I’ve done a lot of thinking.* 🤔
 
 You may - or may not - have noticed a recent, subtle rebrand as I tried to formalize my thoughts, goals, “personal brand,” and what’s in store for the future. Alas, it’s not quite enough. At least for me.
 
@@ -48,11 +48,6 @@ The intent is to humanize the tech industry with curiosity as we learn about the
 A majority of the episodes will feature guests! I will reach all across the industry including not only engineers, but also support, product, design, marketing, strategists, coaches, and more! Some smaller snippets will be sprinkled in to share my own learning moments and - perhaps - learning moments from others.
 
 ## Here’s a glimpse at the new branding 👀
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 ## Join me!
 

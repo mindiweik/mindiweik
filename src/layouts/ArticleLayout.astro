@@ -19,4 +19,5 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
   <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">{fmt(date)}</div>
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
+  <div style="margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--border);font-family:var(--font-display);font-size:1rem;color:var(--text-muted)">thanks so much for reading! ✨</div>
 </BaseLayout>

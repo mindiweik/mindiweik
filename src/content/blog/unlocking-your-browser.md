@@ -74,11 +74,6 @@ Once you've got them open, you'll usually see a panel at the bottom or side of y
 
 Today we're opening the first drawer.
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## Elements: inspecting & editing the DOM
 
 The **Elements** tab shows you the HTML structure of the page you're looking at. This is the Document Object Model (DOM), which you can think of as the skeleton of the webpage.

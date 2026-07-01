@@ -48,11 +48,6 @@ You should  share about yourself, what you’re working on, or what you need hel
 
 Consider the Maya Angelou quote:
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## ❓What
 
 Networking isn’t one specific thing. It can be in-person or online, in live conversations or via text. Networking can span multiple participants, too, as with large groups, small groups, or even one-on-one.
@@ -87,7 +82,7 @@ Networking can happen at the grocery store or a cafe while waiting in line. It c
 
 More than likely, you’re familiar with conferences or organized events. These events are great, often providing at least one similar connection you can use as a springboard, like a Cloud conference or a UI/UX meetup. Many have built-in event structure, helping some folks feel more at ease.
 
-**An important thing I like to remember, particularly for organized events, is to consider what times *actually* work best for you. **
+**An important thing I like to remember, particularly for organized events, is to consider what times *actually* work best for you.** 
 
 You want to present your best self, not your completely exhausted or stressed self! 
 
@@ -122,6 +117,6 @@ Whatever you do for networking, remember to be yourself! Not everyone will like 
 
 ### 🥳 BONUS
 
-Someone in *my* *network* mentioned that they hadn’t been networking for the last several years. They wanted to get back into it and started reading *[Networking for People Who Hate Networking](https://www.thriftbooks.com/w/networking-for-people-who-hate-networking-a-field-guide-for-introverts-the-overwhelmed-and-the-underconnected_devora-zack/311700/item/6265358/?utm_source=google&utm_medium=cpc&utm_campaign=high_vol_backlist_standard_shopping_retention_16912200463&utm_adgroup=&utm_term=&utm_content=659177830229&gad_source=1&gclid=CjwKCAjw--K_BhB5EiwAuwYoyoHy94agS0O9VU-3WWkEo16gMskj94SxyAwNJBdh0NfJt8iwJgGaqBoCxAwQAvD_BwE#idiq=6265358&edition=5480792) *by Devora Zack. Although not yet finished, they said there were multiple helpful tips even within the first half!
+Someone in *my* *network* mentioned that they hadn’t been networking for the last several years. They wanted to get back into it and started reading *[Networking for People Who Hate Networking](https://www.thriftbooks.com/w/networking-for-people-who-hate-networking-a-field-guide-for-introverts-the-overwhelmed-and-the-underconnected_devora-zack/311700/item/6265358/?utm_source=google&utm_medium=cpc&utm_campaign=high_vol_backlist_standard_shopping_retention_16912200463&utm_adgroup=&utm_term=&utm_content=659177830229&gad_source=1&gclid=CjwKCAjw--K_BhB5EiwAuwYoyoHy94agS0O9VU-3WWkEo16gMskj94SxyAwNJBdh0NfJt8iwJgGaqBoCxAwQAvD_BwE#idiq=6265358&edition=5480792)* by Devora Zack. Although not yet finished, they said there were multiple helpful tips even within the first half!
 
 **I have not read this book myself. No guarantees of anything!*

@@ -81,18 +81,13 @@ If you want some guidance, set `HINTS = true` in `script.js` to turn on hint mod
 
 In Part 3, we're going to the Network tab where you can watch every single request your browser makes in real time. API calls, failed requests, CORS errors, HTTP status codes. It's where the really juicy debugging happens.
 
-**Until then: **open the Console on every site you visit. Run a `console.log`. Change a color. Make something editable. **Get weird with it.**
+**Until then:** open the Console on every site you visit. Run a `console.log`. Change a color. Make something editable. **Get weird with it.**
 
 The Console doesn't bite. 💖
 
 *Did something click for you? I'd love to hear about it!*
 
 ← [Part 1: Meet Your Browser's Toolbox](/28-unlocking-your-browser) | [Part 3: What's Actually Happening](/30-whats-actually-happening) →
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 ```js
 document.querySelector('h1').textContent = 'I own this now 😈'

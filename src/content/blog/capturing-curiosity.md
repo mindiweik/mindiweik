@@ -25,11 +25,6 @@ Below is a recording of the first presentation for “Capturing Curiosity”, a 
 
  If you have any feedback you would like to share, I’m open to hearing it! [Link to the current slides, if interested!](https://www.canva.com/design/DAGRKyHC3TE/FUsGdL0j9XI1Ck96kVq2eQ/edit?utm_content=DAGRKyHC3TE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 It took me several attempts to get the octopus right. Each time, though, I learned something new and gained a new approach. Even in some of those failures, I learned some options and ideas I could use in other projects where it had an effect I *did* want!
 
 The point is that even when you encounter failure, it may or may not help you in the future. However, you’re expanding your toolbox for the next problem you encounter, the next project you work on, or the next idea you want to approach.
@@ -42,15 +37,15 @@ As we venture forth, the more questions we ask, the more we grow our understandi
 
 **Pattern approaches you can use to ask improved questions:**
 
-1. **Check your intention: **Pause and ask yourself, “What is my intention?” Often, we judge others based on their actions because we can’t know their internal intentions. With ourselves, we can learn our intentions. This takes the ability to be honest with yourself, but hopefully, if we know our intent, we can ask more pointed questions or rephrase a question.
-2. **Why?: **Be careful with this one-word question. Many are triggered by a why because it feels like you are questioning them, their authority, or their approach. Honestly, the responder probably doesn’t know the answer! It can cause negative reactions, and likely, you will not find the information you seek, nor will it align with your intention. There are ways to rephrase your why to reach the desired result and still reach the “why” behind.
+1. **Check your intention:** Pause and ask yourself, “What is my intention?” Often, we judge others based on their actions because we can’t know their internal intentions. With ourselves, we can learn our intentions. This takes the ability to be honest with yourself, but hopefully, if we know our intent, we can ask more pointed questions or rephrase a question.
+2. **Why?:** Be careful with this one-word question. Many are triggered by a why because it feels like you are questioning them, their authority, or their approach. Honestly, the responder probably doesn’t know the answer! It can cause negative reactions, and likely, you will not find the information you seek, nor will it align with your intention. There are ways to rephrase your why to reach the desired result and still reach the “why” behind.
 - Instead of “Why are we doing X?” consider something like, “What will improve if we do X?” or “Who may benefit when we finish doing X?”
 - Instead of “Why did you choose to do Y?” consider something like, “What helped you make the final decision to choose Y?” or “How did you approach Y to figure this out?”
 - Instead of “Why am I going to work with the Z team?” consider something like, “How did you decide on team dynamics?” or “Which skills do you think I can bring to best help out the Z team?”
-3. **Find a spotter: **Ask a friend for help! Find a spotter to help monitor your questions and check in to see if the phrasing, attitude, etc., aligned with your intention. This could be a coworker, a partner, a friend, or children/grandchildren. Kids can be brutally honest! Just make sure it’s someone you trust who can be honest with you so that you can learn and improve over time.
-4. **Pause: **Pause to your advantage! This is challenging, but ultimately, it gives the responder time to *think*, and you will be less likely to “lead” them to answers they wouldn’t have chosen otherwise. This encourages the responder to go further in their answer and motivates you to truly listen to their unfiltered answer.
-5. **Disguised questions: **Similarly, avoid statements or feelings in the form of a question. For instance, “Do you think that [so-and-so] is taking advantage of the company when they take long lunches?” These leading questions won’t help you find real answers; your biases will taint them. Rapid follow-up questions also cause this. Even if you start open-ended (see next point), fast follow-ups can alter the response. If our intention is truly to learn, then we should consider our phrasing to refrain from those leading questions that are likely inaccurate.
-6. **Open-ended questions: **You may have heard about open-ended and closed questions. A closed question usually leads to a “yes” or “no” or a direct answer like, “What’s your favorite color?” “Green.” Open-ended questions seek deeper answers like, “How did you celebrate your birthday last week?” To learn more about someone or a subject, we should lean toward open-ended questions to dive deeper. Closed questions serve a purpose but allow the responder to decide how much information to provide. You hand over the power, which may squander your chance to practice your curiosity muscle if have limited opportunity or time!
+3. **Find a spotter:** Ask a friend for help! Find a spotter to help monitor your questions and check in to see if the phrasing, attitude, etc., aligned with your intention. This could be a coworker, a partner, a friend, or children/grandchildren. Kids can be brutally honest! Just make sure it’s someone you trust who can be honest with you so that you can learn and improve over time.
+4. **Pause:** Pause to your advantage! This is challenging, but ultimately, it gives the responder time to *think*, and you will be less likely to “lead” them to answers they wouldn’t have chosen otherwise. This encourages the responder to go further in their answer and motivates you to truly listen to their unfiltered answer.
+5. **Disguised questions:** Similarly, avoid statements or feelings in the form of a question. For instance, “Do you think that [so-and-so] is taking advantage of the company when they take long lunches?” These leading questions won’t help you find real answers; your biases will taint them. Rapid follow-up questions also cause this. Even if you start open-ended (see next point), fast follow-ups can alter the response. If our intention is truly to learn, then we should consider our phrasing to refrain from those leading questions that are likely inaccurate.
+6. **Open-ended questions:** You may have heard about open-ended and closed questions. A closed question usually leads to a “yes” or “no” or a direct answer like, “What’s your favorite color?” “Green.” Open-ended questions seek deeper answers like, “How did you celebrate your birthday last week?” To learn more about someone or a subject, we should lean toward open-ended questions to dive deeper. Closed questions serve a purpose but allow the responder to decide how much information to provide. You hand over the power, which may squander your chance to practice your curiosity muscle if have limited opportunity or time!
 Finally, let’s combine a few of these things and discuss the “questioning funnel.” 
 
 **There are 4 keys to the questioning funnel:**
@@ -64,12 +59,12 @@ If you’d like to see/hear an example, in the recording, I discuss a scenario w
 
 **Here’s the simplified version:**
 
-- **Start at the bottom: **Hear me out. You need to identify your target to better frame your questions! This is also a great moment to check in with yourself to discover your *intention* with this conversation.
-- **Top of the funnel: **Now, let’s go through the process. To start, you want to ask those open-ended questions. Ideally, the responder will share information to guide your follow-up questions.
-- **Begin to narrow: **The answers provided may help you ask more probing or clarifying questions. If needed, ask additional questions about the received information to get closer to the target.
-- **Keep narrowing: **You may need to ask closed questions to improve your understanding. Then, you should be ready to summarize and paraphrase what you heard to confirm a shared understanding.
-- **Repeat as needed: **If you misunderstood something or the information gives you a different perspective, you may want to revert to open-ended questions and go through the process again.
-- **Reach the target: **Ideally, you will reach the target in your conversations! This means you have an answer to the question you started with and a shared understanding.
+- **Start at the bottom:** Hear me out. You need to identify your target to better frame your questions! This is also a great moment to check in with yourself to discover your *intention* with this conversation.
+- **Top of the funnel:** Now, let’s go through the process. To start, you want to ask those open-ended questions. Ideally, the responder will share information to guide your follow-up questions.
+- **Begin to narrow:** The answers provided may help you ask more probing or clarifying questions. If needed, ask additional questions about the received information to get closer to the target.
+- **Keep narrowing:** You may need to ask closed questions to improve your understanding. Then, you should be ready to summarize and paraphrase what you heard to confirm a shared understanding.
+- **Repeat as needed:** If you misunderstood something or the information gives you a different perspective, you may want to revert to open-ended questions and go through the process again.
+- **Reach the target:** Ideally, you will reach the target in your conversations! This means you have an answer to the question you started with and a shared understanding.
 Over time, you can also try applying these questions inward. Take time to learn from your mistakes, however big or small, and ask yourself these “better” questions.
 
 > "Being curious can manifest itself in the activity of asking questions, but it can also be a position from which one approaches their life.”
@@ -109,7 +104,7 @@ I thought it was the opposite of meditation, so I called it this. However, the P
 - **Observe & Investigate:** Consider your “environment” or how that may affect you.
 - **Embrace Failure:** You may not get it perfect the first time and that is okay!
 - **Ask the “Right” Questions:** Ask yourself well-formed questions to think outside the box and act as a third-party observer as much as possible.
-- **Seek New Experiences: **Consider how this practice could be different, or think about other things you may want to try during your “meditation.”
+- **Seek New Experiences:** Consider how this practice could be different, or think about other things you may want to try during your “meditation.”
 The best part about this type of exercise is that it’s FREE! Set aside a few minutes whenever you need it!
 
 Everything we do has the potential to stimulate a curious mind, even in unexpected moments. You now have a pattern toolkit to help you branch outside the box when needed! Increasing the frequency of your curiosity practice should help you start to see new perspectives and consider new ideas, allowing you to think of solutions you may not have otherwise.
@@ -122,7 +117,7 @@ Give it a go and start to ask yourself the really hard questions. Welcome the hu
 
 With these pattern tools, we can start having fun with more things we do. I’m still a work in progress. I have found that I genuinely enjoy life more when I can take that step back to observe and make the time to find and enjoy new experiences, however big or small.
 
-**I’m hopeful you can take away at least a small spark of inspiration to spread that joy I felt when I found technology and decided to bring my curiosity into my career… wherever you need it most. **
+**I’m hopeful you can take away at least a small spark of inspiration to spread that joy I felt when I found technology and decided to bring my curiosity into my career… wherever you need it most.**
 
 ## **Lessons learned in the first presentation:**
 

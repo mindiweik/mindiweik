@@ -51,11 +51,6 @@ We’ll cover three of these terms that have given me past trouble. I hope I can
 
 - Let’s do something super simple. We’ll create a snippet to inform you which environment is running.
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ```js
 // isomorphic.js
 

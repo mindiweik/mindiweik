@@ -46,14 +46,9 @@ I’ve taken a look at other Scrimba courses since taking this particular course
 
 ## 📖 Programming TypeScript by Boris Cherny
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## 💪 Lots of Practice
 
-This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the ***most* **helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
+This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the ***most*** helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
 
 When I first started using TypeScript at work, I spent time reading the [official documentation](https://www.typescriptlang.org/docs/handbook/intro.html) if I wondered how something in the codebase worked. I paired with a teammate to ask questions and used the [playground tool](https://www.typescriptlang.org/play) to test how things worked.
 

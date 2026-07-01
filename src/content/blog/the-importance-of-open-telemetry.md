@@ -14,7 +14,7 @@ It’s fresh, it’s clean, we can do what we want! To some extent, yes, but it�
 
 In my case, I didn’t know just how much we needed [Open Telemetry](https://opentelemetry.io/)! Let’s take a high-level look at what this is and how it can help in most projects.
 
-**There are**** oversimplifications**** here to share foundational concepts at a high level.*
+**There are*** *oversimplifications*** *here to share foundational concepts at a high level.*
 
 **Here, we’ll cover:**
 
@@ -23,7 +23,7 @@ In my case, I didn’t know just how much we needed [Open Telemetry](https://ope
   2. 📊 What is Observability?
   3. 🔭 What is Open Telemetry?
 
-*Blasting off! *🚀
+*Blasting off!* 🚀
 
 First, I want to share a bit of a story with a fun analogy I enjoyed using in my recent **Denver Gusto Lightning Talks from Women and Folks in Tech** lightning talk! 
 
@@ -41,12 +41,7 @@ While reviewing some of the data, we noticed in our **metrics** that there were 
 
 That’s *WAY* too long for what should be a fairly simple request that also didn’t take nearly that long when we developed it! 🤯
 
-I was tasked with figuring out what was going on. I reviewed our **logs** and **traces** for offending events to track down the issue. Essentially, we had multiple similar calls to a vendor that didn’t appear to be necessary and slowed these responses *WAY *down.
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
+I was tasked with figuring out what was going on. I reviewed our **logs** and **traces** for offending events to track down the issue. Essentially, we had multiple similar calls to a vendor that didn’t appear to be necessary and slowed these responses *WAY* down.
 
 > "Debugging without logs is like being a detective at a crime scene where someone cleaned up all the evidence. 🕵️‍♂️ I was still trying to piece together what happened, but without fingerprints, witnesses, or a murder weapon.
 
@@ -116,7 +111,7 @@ Blurry for added privacy and to capture all trace events. Highlighted portion = 
 
 Upon first glance, it appeared related to a code call that shouldn’t have been happening with the inputs provided. I was questioning, “how in the world is this getting called with an expected undefined input?” 🤔
 
-I spent more time working with it and drilled deeply into our [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/insights-overview). Long story short, we were unwittingly making repetitive function calls when initiating an interface that *should *have only happened once. 😱
+I spent more time working with it and drilled deeply into our [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/insights-overview). Long story short, we were unwittingly making repetitive function calls when initiating an interface that *should* have only happened once. 😱
 
 We didn’t notice it because our local data set is MUCH smaller than our production data. As one might expect. So, we were making this call, but it was no big deal, it was fast. At production scale, however, it was taking far too long.
 
@@ -170,10 +165,10 @@ Oversimplified Open Telemetry flow as shown in the presentation
 
 Essentially:
 
-- **Instrumentation - **We begin by adding the code or libraries into our application. 
+- **Instrumentation -** We begin by adding the code or libraries into our application. 
 - In my case, this is initiated before the server starts up so that we can capture information about the pods or failed startup, if needed.
-  - **Software Development Kit - **The code/libraries then help to collect and organize the data, preparing it for send-off.
-  - **Exporter - **At the end, we send that data to our observability tool via Open Telemetry!
+  - **Software Development Kit -** The code/libraries then help to collect and organize the data, preparing it for send-off.
+  - **Exporter -** At the end, we send that data to our observability tool via Open Telemetry!
 - It feels a little like magic when you see your data appearing in your tool. Very satisfying!
 
 There are opportunities for customization, but better yet, there are “auto-instrumentation” libraries that exist for most languages to make setup a breeze. We used auto-instrumentations-node in my project and it was well worth the usage for a team just starting to work with OTel! ([npm package link](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node))
@@ -182,7 +177,7 @@ Once it’s implemented, Open Telemetry is useful for debugging, maintaining rel
 
 ## Closing Thoughts
 
-[Open Telemetry](https://opentelemetry.io/) isn’t necessarily super *easy *to use, but it was much easier to work with than I expected!
+[Open Telemetry](https://opentelemetry.io/) isn’t necessarily super *easy* to use, but it was much easier to work with than I expected!
 
 Speakers and Organizers from the Denver Gusto Lightning Talks with Women and Folks in Tech on April 22, 2025 | Left to Right: Mindi Weik, Kseniya Lifanova, Margaret Sabelhaus, Lisa Barcelo, Tori Huang, Alejandra Dominguez, Christine Lee | Second Row: Liz Donovan, Vui Nguyen
 

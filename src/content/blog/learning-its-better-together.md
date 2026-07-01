@@ -35,5 +35,3 @@ You can expect varied content about software development, personal development, 
 ## Keep an eye out!
 
 I look forward to sharing with you all and I hope you’ll engage along this journey.
-
-### **Thanks so much for reading!** ✨

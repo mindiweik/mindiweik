@@ -38,11 +38,6 @@ Again, I toyed with different options and worked through some examples to get co
 
 First, we need to add a config element for User Defined Variables.
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 Then, we can add in our key-value pairs. Here’s an example using a key of example-key and a value of example-value:
 
 Then, these variables can be plugged into various fields throughout the test! Let’s look at a simple example. We will use the following snippet to introduce our User Defined Variables as a parameterized value:
@@ -83,7 +78,7 @@ jmeter -n -t  \
 - I added specific instructions not to include the path and queries for the URL, as I configured this for randomized testing in the JMeter test plan.
   - **x-api-key** was optional. The default value was foobar as mentioned above.
   - **csv** accepts a file with options we discussed in [Part 1](/20-jmeter-performance-testing-part-1).
-**-f **- This argument tells JMeter to force delete existing results files and web report folder if present before starting the test as a cleanup step
+**-f** - This argument tells JMeter to force delete existing results files and web report folder if present before starting the test as a cleanup step
 
 **-l** - This indicates that the next argument provides a path to store the test results in either a .jtl or .csv file
 
@@ -121,10 +116,10 @@ Finally, I added these files to the repo and added information on a sample scrip
 For consistency, each spike test was set to last for 10 minutes after the 5-minute warm-up. Below are three options I chose, though you may make different choices based on your expected traffic load or how hard you want to test the system.
 
 - 3,000 requests
-- **Throughput: **To simulate this spike, we will divide our spike amount of 3,000 by the 10-minute timeframe.
+- **Throughput:** To simulate this spike, we will divide our spike amount of 3,000 by the 10-minute timeframe.
 - 3,000 requests / 10 minutes = **300 requests/minute**
     - 10,000 requests
-- **Throughput: **To simulate this spike, we will divide our spike amount of 10,000 by the 10-minute timeframe.
+- **Throughput:** To simulate this spike, we will divide our spike amount of 10,000 by the 10-minute timeframe.
 - 10,000 requests / 10 minutes = **1,000 requests/minute**
     - 50,000 requests
 - **Throughput:** To simulate this spike, we will divide our spike amount of 50,000 by the 10-minute timeframe.
@@ -136,10 +131,10 @@ After performing all of these, I checked with our QA testing expert to see if I 
 
 - Standard Average Load Testing
 - **Time:** We wanted to test the standard average load over 2 days or 48 hours.
-- **Throughput: **50,000 / 24 hours / 60 minutes = **34.7 requests/minute**
+- **Throughput:** 50,000 / 24 hours / 60 minutes = **34.7 requests/minute**
   - Standard Highest Average Load Testing
-- **Time: **We wanted to test the standard highest average load over 2 days or 48 hours.
-- **Throughput: **100,000 / 24 hours / 60 minutes = **69.4 requests/minute**
+- **Time:** We wanted to test the standard highest average load over 2 days or 48 hours.
+- **Throughput:** 100,000 / 24 hours / 60 minutes = **69.4 requests/minute**
 
 This is quite a long time to test! In our case, we had others using the API to implement it in the platform to ultimately use the service. For this reason, I tested Friday through Sunday. I checked in a little over the weekend, which is easy to do when you work remotely. 👍
 
@@ -190,7 +185,7 @@ We opted to perform **load testing**, **stress testing**, and **spike testing**.
 
 - To ensure we weren’t hitting a “cold” server, we implemented a 5-minute “warm-up” period where we sent through the average load before attempting to push its limits.
 - We also wanted to ask: If it fails, does it recover? How quickly will it recover?
-**Standard Load testing **was recommended by one of our QA team members. 
+**Standard Load testing** was recommended by one of our QA team members. 
 
 - This is essentially running the average load over 1-2 days to check the system’s long-term strength. 
 - *We decided not to, but we could have also tested the highest average load.
@@ -228,20 +223,20 @@ Again we assume we had an average of 50,000 daily requests with the highest aver
 
 - Average Load Testing
 - **Time:** We wanted to test the average load over an hour.
-- **Throughput: **50,000 / 24 hours / 60 minutes = **34.7 requests/minute**
+- **Throughput:** 50,000 / 24 hours / 60 minutes = **34.7 requests/minute**
   - Highest Average Load Testing
-- **Time: **We wanted to test the highest average load over an hour for consistency.
-- **Throughput: **100,000 / 24 hours / 60 minutes = **69.4 requests/minute**
+- **Time:** We wanted to test the highest average load over an hour for consistency.
+- **Throughput:** 100,000 / 24 hours / 60 minutes = **69.4 requests/minute**
 
 #### **Stress Testing**
 
 - 3x the Average Load
-- **Time: **For consistency, we maintained an hour timeframe.
-- **Throughput: **Multiply the Average Load Test amount by 3. I’m using the rounded number to keep things simple.
+- **Time:** For consistency, we maintained an hour timeframe.
+- **Throughput:** Multiply the Average Load Test amount by 3. I’m using the rounded number to keep things simple.
 - 34.7 requests x 3 = **104.1 requests/minute**
     - 3x the Highest Average Load
-- **Time: **For consistency, we maintained an hour timeframe.
-- **Throughput: **Multiply the Highest Average Load Test amount by 3. I’m using the rounded number again to keep things simple.
+- **Time:** For consistency, we maintained an hour timeframe.
+- **Throughput:** Multiply the Highest Average Load Test amount by 3. I’m using the rounded number again to keep things simple.
 - 69.4 requests x 3 = **208.2 requests/minute**
 
 #### **Spike Testing**

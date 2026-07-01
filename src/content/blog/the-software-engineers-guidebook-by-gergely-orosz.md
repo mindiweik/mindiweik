@@ -27,11 +27,6 @@ Below, we’ll review the book's first two sections. They cover career fundament
 
 I [recorded a Loom presentation](https://www.loom.com/share/5ac9c21df8524559b6f8b824d6d35f7b?sid=8515e32e-f773-4d1a-b457-4d8f0d6ac798) if you’d prefer to hear and/or visually see this information. It’s about 22 minutes long. [Here is a link to the slides!](https://www.canva.com/design/DAGKHoLXYFo/88WU5ztzzdR4B70ygO3VHQ/edit?utm_content=DAGKHoLXYFo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## 💡 My 3 Big Takeaways
 
 1. No one will advocate for your career better than you. Take ownership!
@@ -46,7 +41,7 @@ I bring related topics to my one-on-one meetings. *Here’s [a terrific read](ht
 
 ### 📝 Write it down. Yes, everything!
 
-Documenting accomplishments, challenges, and projects cannot be understated. ***Don’t forget to add peer feedback! ***You will better understand what you’re doing now and what’s next.*** ***This is also a solid tool when discussing your role. This could be a promotion conversation aid, a resume update reference, or proof if you are in a sticky situation.
+Documenting accomplishments, challenges, and projects cannot be understated. ***Don’t forget to add peer feedback!* **You will better understand what you’re doing now and what’s next.** **This is also a solid tool when discussing your role. This could be a promotion conversation aid, a resume update reference, or proof if you are in a sticky situation.
 
 Be consistent and store it on a personal device or account to retain access. I have a weekly reminder, tried a few templates, and currently use a [Trello board](https://trello.com/templates/productivity/self-advocacy-record-A7mAFfdr) adaptation. (Other options: [Brag Document](https://jvns.ca/blog/brag-documents/), Notion, spreadsheet(s), etc.)
 
@@ -54,7 +49,7 @@ Be consistent and store it on a personal device or account to retain access. I h
 
 Through Meetup, I meet women from all over who reside in my state and work in tech. Their stories and tech roles are different, even if they have the same title! The best we can do is learn from other’s experiences and apply their lessons to our challenges.
 
-***Whatever advice, suggestions, and feedback you receive, you are responsible for discovering how and whether to apply it. ***Gergely did an excellent job clarifying that in this book. The information is a reference, not explicit instructions.
+***Whatever advice, suggestions, and feedback you receive, you are responsible for discovering how and whether to apply it.* **Gergely did an excellent job clarifying that in this book. The information is a reference, not explicit instructions.
 
 ## 🔨 Career Fundamentals
 
@@ -69,20 +64,20 @@ The book starts with core aspects of career growth and ideas for reflection. We�
 There are several types of companies that hire technical workers.
 
 - **Big Tech** - Large, publicly traded companies that are commonly known (think MAANG; Meta, Amazon, Apple, Netflix, Google, or other variations), with market caps in the billions of dollars. These companies impact hundreds of millions of customers and hire tens of thousands of Software Engineers.
-- **Medium to Large **- Tech-first companies with Software Engineering at the heart of their business, like Atlassian, Dropbox, or Shopify, employ hundreds or thousands of engineers. Though they still offer wide-impact opportunities, their customer base tends to be smaller than Big Tech’s.
-- **Scaleups **- Venture-funded companies are often later-stage startups with product-market fit investing in growth. They may intentionally take a loss or move fast under high pressure. Some examples are Airtable, Klarna, and Notion.
-- **Startups **- Although venture-funded, startups depend on, and may secure, smaller funding rounds and seek product-market fit. They can be risky, less stable, and have poor work-life balance. However, engineers have freedom with work variety and growth due to a smaller headcount. An example is Airbnb (before graduating to a Scaleup).
-- **Traditional **- Often non-tech companies with tech divisions supporting the core business. Think JP Morgan, Toyota, or Walmart. Tech may be considered costly with fewer staff+ paths, but it provides solid work-life balance and stability. Some keep tech front and center. Maybe they started as standouts and are now mature, reliable, and profitable with rigid organizational structures. They typically offer customer impact closer to Big Tech with more stability, work-life balance, and tenure. Examples are Broadcom, Cisco, Intel, and Nokia.
-- **Other **- Examples are non-venture-funded (bootstrapped) companies, the public sector or government, nonprofits, consultancies/outsourcing/developer agencies, and academia or research labs.
+- **Medium to Large** - Tech-first companies with Software Engineering at the heart of their business, like Atlassian, Dropbox, or Shopify, employ hundreds or thousands of engineers. Though they still offer wide-impact opportunities, their customer base tends to be smaller than Big Tech’s.
+- **Scaleups** - Venture-funded companies are often later-stage startups with product-market fit investing in growth. They may intentionally take a loss or move fast under high pressure. Some examples are Airtable, Klarna, and Notion.
+- **Startups** - Although venture-funded, startups depend on, and may secure, smaller funding rounds and seek product-market fit. They can be risky, less stable, and have poor work-life balance. However, engineers have freedom with work variety and growth due to a smaller headcount. An example is Airbnb (before graduating to a Scaleup).
+- **Traditional** - Often non-tech companies with tech divisions supporting the core business. Think JP Morgan, Toyota, or Walmart. Tech may be considered costly with fewer staff+ paths, but it provides solid work-life balance and stability. Some keep tech front and center. Maybe they started as standouts and are now mature, reliable, and profitable with rigid organizational structures. They typically offer customer impact closer to Big Tech with more stability, work-life balance, and tenure. Examples are Broadcom, Cisco, Intel, and Nokia.
+- **Other** - Examples are non-venture-funded (bootstrapped) companies, the public sector or government, nonprofits, consultancies/outsourcing/developer agencies, and academia or research labs.
 With such variety, how do you know what’s right for you? That may take some thought. Narrow realistic options based on your circumstances. Talk with other engineers to learn about their experiences and ask questions!
 
 ### 👟 Types of Career Paths
 
 Once you find a role, how do you determine a path? Each is unique and could change over time, but how do you get there?
 
-**☝️ The Single-Track Career Path - **In some cases, engineers move from an IC (Individual Contributor) role to management. They may remain long-term or later return to engineering if unsatisfied, possibly moving companies in the process.
+**☝️ The Single-Track Career Path -** In some cases, engineers move from an IC (Individual Contributor) role to management. They may remain long-term or later return to engineering if unsatisfied, possibly moving companies in the process.
 
-**✌️ The Dual-Track Career Path - **This is the flexible path; it’s probably more applicable to most because of that flexibility!
+**✌️ The Dual-Track Career Path -** This is the flexible path; it’s probably more applicable to most because of that flexibility!
 
 Some engineers stick with IC, some follow the single-track path, and some switch between them.
 
@@ -102,11 +97,11 @@ Put simply, profit centers directly generate revenue for the business. Promotion
 
 There’s more to a career than finances and benefits, right? Absolutely! Here are a few to consider in your long-term career.
 
-- **Culture - **Consider if you align with the mission and values of your company. Do you appreciate any societal contribution they provide?
-- **Flexibility - **Do you have set or flexible hours? Is your role in-office, remote first, or hybrid? There may also be an on-call rotation to consider.
-- **Personal - **You may prefer to “leave it at work.” You may have your own reasons for (dis)liking a company or a team. These are perfectly valid.
-- **Health - **Consider actual or possible effects on your physical or mental health.
-- **Growth - **Are there opportunities for growth or options to progress your skills and career? You don’t want to stagnate!
+- **Culture -** Consider if you align with the mission and values of your company. Do you appreciate any societal contribution they provide?
+- **Flexibility -** Do you have set or flexible hours? Is your role in-office, remote first, or hybrid? There may also be an on-call rotation to consider.
+- **Personal -** You may prefer to “leave it at work.” You may have your own reasons for (dis)liking a company or a team. These are perfectly valid.
+- **Health -** Consider actual or possible effects on your physical or mental health.
+- **Growth -** Are there opportunities for growth or options to progress your skills and career? You don’t want to stagnate!
 - **People -** This includes your relationship with your manager and peer dynamics.
 
 ### 🎯 Owning Your Career
@@ -135,7 +130,7 @@ Identify and stick to a solution and a cadence that works for you. What should y
 
 A work log is powerful for identifying priorities and keeping them top of mind. You may feel empowered to say “no” or re-prioritize. Viewing completed work can bring a sense of accomplishment, too. It’s an incredible reference to quantify your impact.
 
-#### **💬 Feedback **
+#### **💬 Feedback**
 
 Give and receive feedback as often as possible!
 
@@ -167,11 +162,11 @@ Your manager will impact your career. It’s a significant workplace relationshi
 
 The “Stretching, Executing, Coast” method can help prevent burnout. These are states of being in your day-to-day. Navigate between them.
 
-- **Stretching **can be hard but worth it! Initially, it is the most fun; you learn new things and grow quickly. You likely have fresh challenges to embrace!
+- **Stretching** can be hard but worth it! Initially, it is the most fun; you learn new things and grow quickly. You likely have fresh challenges to embrace!
 - Extended periods lead to burnout or a loss of motivation. Surround yourself with trusted people to help identify if you’re pushing too hard for too long.
-  - **Executing **is your “normal” way of working and getting things done well. When you have the capacity to go beyond, do so, but in ways that don’t overstretch you.
+  - **Executing** is your “normal” way of working and getting things done well. When you have the capacity to go beyond, do so, but in ways that don’t overstretch you.
 - This is especially useful after a stretching period to avoid burnout.
-  - **Coast **when needed, but it should only be a few days. You may work at lower quality, not be proactive, and need task nudges in this state. 
+  - **Coast** when needed, but it should only be a few days. You may work at lower quality, not be proactive, and need task nudges in this state. 
 - It could be a breather after a tough project, catching up, or a mental break due to personal circumstances or symptoms of low motivation. If this extends, consider what must change ahead of a difficult conversation!
 
 #### **🤔 Owning Your Own Career Advice**
@@ -187,26 +182,26 @@ There are different modes of work environments. Learning to work in each has a w
 
 First, we’ll compare product and platform teams. Rotating between these builds empathy for various “customers.”
 
-- **Product Teams **build products for external customers through quick validation cycles.
+- **Product Teams** build products for external customers through quick validation cycles.
 - Engineers are interested in the product and proactive with ideas and opinions. They are usually interested in the business, user behavior, and relevant data.
 - They are curious about the “why” and build relationships with non-engineers through strong communication.
 - End-to-end product feature ownership is common.
-- **To thrive: **seek feedback, embrace curiosity, learn about the business, and build relationships.
-  - **Platform Teams **build functionality to support business-facing internal customers. They are key in high-growth engineering organizations.
+- **To thrive:** seek feedback, embrace curiosity, learn about the business, and build relationships.
+  - **Platform Teams** build functionality to support business-facing internal customers. They are key in high-growth engineering organizations.
 - Engineers are focused on a technical mission often used by multiple teams.
 - They are often experienced engineers who seek complexity with wider impact.
 - Business impact can be harder to define. Frequently seen as a cost center, these teams are distant from external customers.
-- **To thrive: **build empathy for internal customers, talk to (and work with) engineers using your platform, and aim for *some *urgency.
+- **To thrive:** build empathy for internal customers, talk to (and work with) engineers using your platform, and aim for *some* urgency.
 Next, we’ll cover company modes: peacetime and wartime.
 
-- **Peacetime **is a calm and steady state that focuses on expansion and reinforcing strengths. The company has a current market advantage!
+- **Peacetime** is a calm and steady state that focuses on expansion and reinforcing strengths. The company has a current market advantage!
 - **Take your time**, complete your work with high quality, and focus on longer-term initiatives that will benefit the business.
 - Avoid disputes and **foster relationships.**
 - **Continue to learn and grow**; avoid stagnation, but still pace yourself.
-  - **Wartime **occurs when the company’s existence is at stake! Competition may be fierce, the core market turbulent, or an imminent threat may exist.
-- **Get things done quickly. **Don’t focus on perfection.
+  - **Wartime** occurs when the company’s existence is at stake! Competition may be fierce, the core market turbulent, or an imminent threat may exist.
+- **Get things done quickly.** Don’t focus on perfection.
 - Don’t take conflicts personally; the strained context usually causes them.
-- **Prioritize business needs. **Work like your job depends on it…it might!
+- **Prioritize business needs.** Work like your job depends on it…it might!
 - Pace yourself to avoid burnout!
 
 ## 🔧 Building Competence
@@ -223,7 +218,7 @@ How do they do this?
 
 ***Focus on the single MOST important thing first, no exceptions.*** Learn to say “no.” Necessary things arise, but this adds up. It’s a balancing act. I like the offered tactic of, “Yes, I’d like to help, but…” to provide context for your “no.”
 
-***Unblocking yourself ***is a skill! Start to identify when you’re stuck, like spending more than 30-60 minutes without meaningful progress.
+***Unblocking yourself* **is a skill! Start to identify when you’re stuck, like spending more than 30-60 minutes without meaningful progress.
 
 Leverage ideas to get unstuck:
 
@@ -241,21 +236,21 @@ What if a person blocks you? This is more common at larger companies, and gettin
 
 ***Effectively breaking down work*** takes thought. Begin at a high level and identify “chunks” of work. Then, narrow “chunks” into straightforward tasks. If they’re unclear, break them down again. Don’t be afraid to add, remove, or change tasks.
 
-***Estimations are challenging. ***You will be asked. Use your (and peers’) experiences with the codebase, language, or similar work to provide estimates. When that’s not possible, prototype and timebox. You can also provide ideal and “worst case” options when there are unknowns, leaning toward the “worst case.”
+***Estimations are challenging.* **You will be asked. Use your (and peers’) experiences with the codebase, language, or similar work to provide estimates. When that’s not possible, prototype and timebox. You can also provide ideal and “worst case” options when there are unknowns, leaning toward the “worst case.”
 
-***Find mentors to help you grow. ***This is a *group* of people, not one person. You may look to more experienced engineers through a formal work program or informal, ad hoc one-on-one requests for help. Don’t forget about online mentors who share their experiences more publicly in blogs, podcasts, or books. 
+***Find mentors to help you grow.* **This is a *group* of people, not one person. You may look to more experienced engineers through a formal work program or informal, ad hoc one-on-one requests for help. Don’t forget about online mentors who share their experiences more publicly in blogs, podcasts, or books. 
 
 ***Retain a positive “goodwill balance”*** and help others, too. You’ll need help, and this balance level spans a spectrum. You will have a higher balance when you first start (as a junior or during onboarding). People want to help! But, as you take, be sure to give back with your expertise. Give thanks either privately or in a public team setting.
 
-***Take initiative ***when you can. Some of the most productive engineers take on work that wasn’t assigned! Talk with others to learn about projects and opportunities to volunteer. Try to document unclear things, take on investigations, research tools or frameworks your team uses, and talk with your manager about upcoming projects.
+***Take initiative* **when you can. Some of the most productive engineers take on work that wasn’t assigned! Talk with others to learn about projects and opportunities to volunteer. Try to document unclear things, take on investigations, research tools or frameworks your team uses, and talk with your manager about upcoming projects.
 
 ### ⌨️ Coding
 
 Practice. Practice more. You need to be proficient to translate your ideas into working code efficiently. Here are some ways to practice:
 
 - ***Code regularly and ask for code reviews.*** These are invaluable!
-- ***Read as much as you write. ***This helps avoid unusual habits, styles, and conventions. Check out open-source code for more reading opportunities!
-- ***Code some more. ***Build a side project, complete tutorials with coding exercises, do coding challenges, or complete code katas.
+- ***Read as much as you write.* **This helps avoid unusual habits, styles, and conventions. Check out open-source code for more reading opportunities!
+- ***Code some more.* **Build a side project, complete tutorials with coding exercises, do coding challenges, or complete code katas.
 
 #### **👀 Readable Code**
 
@@ -299,8 +294,8 @@ Speaking of tests, competent software developers ensure their code works, plain 
 
 We’ve covered a lot already, but there are a few more things to consider.
 
-- ***Your local development environment. ***Get to know it well and become more efficient. Learn the ins and outs of your IDE or coding text editor of choice, like refactoring, compiling, running the project, hot reloading, debugging, running and debugging tests, or creating a PR. Configure your workflow, learn shortcuts, and set up formatting and linting, if needed. The smoother this is, the less context-switching you’ll have to do.
-- ***Frequently used tools. ***Get to know these and practice using them:
+- ***Your local development environment.* **Get to know it well and become more efficient. Learn the ins and outs of your IDE or coding text editor of choice, like refactoring, compiling, running the project, hot reloading, debugging, running and debugging tests, or creating a PR. Configure your workflow, learn shortcuts, and set up formatting and linting, if needed. The smoother this is, the less context-switching you’ll have to do.
+- ***Frequently used tools.* **Get to know these and practice using them:
 - Git - branching, rebasing, resolving conflicts and merging, cherry-picking
 - Command line/terminal - often within many IDEs; start using it for tasks!
 - Regular expressions - learn some; it can be useful
@@ -308,7 +303,7 @@ We’ve covered a lot already, but there are a few more things to consider.
 - AI - give it a whirl to boost your productivity; there are inline coding assistants and generative AI chat interfaces to “talk through” concepts
 - Company-specific developer tools
 - A “productivity cheat sheet” - create your own doc full of references!
-  - ***Learn to iterate quickly. ***Here are some ideas:
+  - ***Learn to iterate quickly.* **Here are some ideas:
 - Read existing code to understand what it does. Ask someone to walk through the structure, draw it out, share your code map, and create a cheat sheet to help you learn it.
 - Make small code changes when possible.
 - Learn how to debug the CI/CD for your project(s).

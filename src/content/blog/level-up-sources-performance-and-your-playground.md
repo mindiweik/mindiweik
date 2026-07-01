@@ -65,11 +65,6 @@ Happy debugging. 💖
 
 *← [Part 3: What's Actually Happening: Network & Application](/30-whats-actually-happening)*
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 You've made it to the finale. 🎉
 
 In Parts 1-3, we covered the Elements tab, the Console, the Network tab, and the Application tab. If you've been following along and actually opening DevTools while you read, you're on top of things.
@@ -115,7 +110,7 @@ Right-click a line number and choose **Add conditional breakpoint**. You can typ
 
 ## The Performance tab
 
-The Performance tab answers a question you'll hear a lot as you grow: *why is this so slow? *I don't see many devs using this tool and I don't use it as often as I probably could. 😅
+The Performance tab answers a question you'll hear a lot as you grow: *why is this so slow?* I don't see many devs using this tool and I don't use it as often as I probably could. 😅
 
 Open DevTools and click **Performance**. You'll see a big empty space and a record button.
 

@@ -58,11 +58,6 @@ Everyone feels like an impostor sometimes. It’s a sign that we are growing and
 
 It doesn’t feel great right now, but if we keep going, our destination will most likely surprise us!
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 It was initially called the “Imposter phenomenon” in the 1970s research. 
 
 ***Why is this important?***

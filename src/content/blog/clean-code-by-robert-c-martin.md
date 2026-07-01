@@ -8,12 +8,12 @@ readingTime: 8
 
 ## *Clean Code* is a **classic**.
 
-I am not the first to summarize; I won’t be the last! Thank you to my partner for gifting this book to me when I started my career change. 🙏 After I read *Clean Code: A Handbook of Agile Software Craftsmanship, *it was requested I share insights with my team. Any chance to share knowledge is a win! I share the details included in my presentation here, focusing on the most widely applicable content.
+I am not the first to summarize; I won’t be the last! Thank you to my partner for gifting this book to me when I started my career change. 🙏 After I read *Clean Code: A Handbook of Agile Software Craftsmanship,* it was requested I share insights with my team. Any chance to share knowledge is a win! I share the details included in my presentation here, focusing on the most widely applicable content.
 
 **Quick notes:**
 
 - ❌ *The author uses Java-specific references frequently. I’ve removed these because they aren’t relevant to myself or my team.*
-- 👀* There’s an immense level of detail. Please feel free to jump around as you see fit!*
+- 👀 *There’s an immense level of detail. Please feel free to jump around as you see fit!*
 **Here, we’ll cover:**
 
 - 🎬 The Presentation
@@ -34,16 +34,11 @@ The conversation that was sparked pleasantly surprised me when I presented to th
 - We all need to practice this, regardless of our current experience level.
 [Here is a link to the slides!](https://www.canva.com/design/DAF5m0phHYY/vB6CGXGNUejdrCYUo4uTKw/edit?utm_content=DAF5m0phHYY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) And here’s a Loom recording of the presentation (~15 minutes):
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ## 💡 My 3 Big Takeaways
 
 1. **Writing code is a process**. Start with a draft, refine, and repeat. It takes practice.
 2. What ultimately matters is that your team **agrees on standards and sticks to them**.
-3. It is ***everyone’s responsibility**** *to keep a codebase clean!
+3. It is ***everyone’s responsibility*** to keep a codebase clean!
 
 ## 💻 What is clean code?
 
@@ -133,7 +128,7 @@ Functions are the heart of any program. They should have consistent blocks and i
 
 ## 🤔 Questions to consider:
 
-1. Have you read *Clean Code? *Did you have any different insights or any I missed?
+1. Have you read *Clean Code?* Did you have any different insights or any I missed?
 2. What was your favorite or least favorite part?
 3. Do you agree/disagree with anything “Uncle” Bob Martin shared that I have listed?
 4. Have you - or are you - putting anything into practice in your daily work?
@@ -257,7 +252,7 @@ To put some of the following chapters into practice, I’ve pulled some of the m
     - Systems:
 - For systems, consider an example from the book:
 - A hotel is ***built*** by construction and engineering teams.
-- A hotel is ***used ***by regular people on a vacation or business trip.
+- A hotel is ***used* **by regular people on a vacation or business trip.
 - These functions are entirely independent and build/use should be the same in systems, too! E.g. Separate tests from the compilation.
   - Separate the construction of a system from the usage implementation.
   - Dependencies of “main” should direct ***away*** from “main.”

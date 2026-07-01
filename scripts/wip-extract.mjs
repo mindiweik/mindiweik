@@ -273,6 +273,11 @@ export function parseBody(html) {
   joined = joined.replace(/^.*Subscribe to receive occassional blog posts.*$/gim, '');
   joined = joined.replace(/^.*Your contact information will never be sold.*$/gim, '');
 
+  // Drop the "thanks so much for reading" sign-off from the body; it often lands
+  // mid-post after the grid scramble, and the article layout adds a consistent
+  // end-of-post staple instead.
+  joined = joined.replace(/^#{0,6}\s*\**\s*thanks so much for reading[^\n]*$/gim, '');
+
   // Final whitespace normalisation.
   return joined.replace(/\n{3,}/g, '\n\n').trim();
 }

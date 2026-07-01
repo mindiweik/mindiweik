@@ -8,11 +8,6 @@ readingTime: 3
 
 ### 🥸 Proof of completion, just for fun:
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 **Mindi’s Udemy course completion certificate**
 
 ### 👉 Bonus:

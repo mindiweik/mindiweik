@@ -8,11 +8,6 @@ readingTime: 6
 
 Photo by Brett Jordan on Unsplash
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 > "If you can get one percent better each day for one year, you'll end up thirty-seven times better by the time you're done.”
 >
 > James Clear, Atomic Habits
@@ -57,7 +52,7 @@ Even if we only make it to the gym at first, roll out a yoga mat, or put on some
 
 ### [Link to Original Post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
 
-*I’m happy to share this guest post from my friend, *[Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
+*I’m happy to share this guest post from my friend,* [Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
 
 *Your mental health matters. And I’ll never stop saying that. I’ve learned this lesson the hard way in my career. I’ve suffered from burnout and high-stress levels more times than I can count.*
 
@@ -157,4 +152,4 @@ Here are some examples:
   - We also wouldn’t tell a friend that they’re not smart or capable enough to understand a problem.
 - **What we can say instead:** “I don’t have to know everything right away. I can break it down step by step.”
 
-*Thank you to *Mindi Weik *for sharing her story about overcoming burnout and three ways to prioritize your mental health. Please check out her newsletter, *[codeOutLoud](https://open.substack.com/pub/codeoutloud)*, and [follow her on LinkedIn](https://www.linkedin.com/in/mindiweik/).*
+*Thank you to* Mindi Weik *for sharing her story about overcoming burnout and three ways to prioritize your mental health. Please check out her newsletter,* [codeOutLoud](https://open.substack.com/pub/codeoutloud)*, and [follow her on LinkedIn](https://www.linkedin.com/in/mindiweik/).*

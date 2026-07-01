@@ -46,11 +46,6 @@ Even when I would make some progress, I would hit another wall. It was hard, but
 
 **Once I finally got everything working smoothly, I celebrated that hard work**. Now, I smile a little when I hear the fan and know it’s working behind the scenes or when I submit a PR and it quickly hits the pipeline to show that satisfying green checkmark. 🥹
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 *We won't discuss CI/CD or setting up a GitLab Runner here. For this information, please refer to [Part 1.](/07-experiences-with-a-local-gitlab-runner-part-1)*
 
 ## Quick Recap
@@ -68,11 +63,11 @@ Let’s find out how it went after the initial setup…
 
 ## 🧩 First Local Success and Challenge
 
-**Success: **If you read [Part 1](/07-experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
+**Success:** If you read [Part 1](/07-experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
 
 The CI pipeline ran smoothly and caught a few issues before merging to main. It was doing its job. 🎉
 
-**Challenge: **The GitLab Runner on my Mac took over my computing resources for local development.
+**Challenge:** The GitLab Runner on my Mac took over my computing resources for local development.
 
 I manually started and stopped the runner when merge requests came through. 
 

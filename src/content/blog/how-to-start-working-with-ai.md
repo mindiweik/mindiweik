@@ -39,11 +39,6 @@ I engage in several Slack communities in varying spaces. I like to keep a pulse 
 
 Let’s start by understanding what prompted the question and where her headspace was.
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 > "So my boss got me a subscription to the jet brains AI assistant and I want to make a good faith effort to use it effectively ([that new yorker piece](https://www.newyorker.com/magazine/2023/11/20/a-coder-considers-the-waning-days-of-the-craft) I saw people discussing in another channel kinda got in my head.) Any tips to get me started???"
 >
 > [Sarah] - (New Yorker link added for reference)
@@ -70,7 +65,7 @@ Related to the article and discussion, she shared:
 
   
 Ask a chatbot first when you want to Google something. You can confirm it afterward. Even if it’s incorrect, you generally don’t waste much time.
-- AI is helpful when coding, writing, and more, but you should ***always ***double-check the work!
+- AI is helpful when coding, writing, and more, but you should ***always* **double-check the work!
 - You may need to ask a few times to get your desired response or request adjustments.
 - Use AI for more “boring” or repeatable tasks as much as possible.
 - When trying to learn something new, either remove AI assistance (working to master) or leverage it to build foundational knowledge (working to understand) and ask it to “explain this to me like I’m X years old” in the latter scenario.

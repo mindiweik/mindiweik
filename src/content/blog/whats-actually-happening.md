@@ -50,11 +50,6 @@ You'll see these in the Network tab. Learning to read them is half the debugging
 
 Open a new browser tab, open DevTools to the Network tab, and paste this into the Console:
 
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
-
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then(res => res.json())

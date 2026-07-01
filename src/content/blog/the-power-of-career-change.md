@@ -6,9 +6,9 @@ tags: []
 readingTime: 5
 ---
 
-***This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024. ***
+***This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024.* **
 
-***So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar. ***
+***So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar.* **
 
 ***Please enjoy and let me know if you have any questions or if I missed anything!***
 
@@ -40,11 +40,6 @@ I’ve learned much and the things that went well for me others can now use to t
 3. Weaknesses are growth opportunities
 4. Allow experiences to navigate
 5. Intentional work, better than hard work
-
-### **Thanks so much for reading!** ✨
-
-Subscribe to receive occassional blog posts!
-Your contact information will never be sold.
 
 ## **#1 - Identify your “foot in the door”**
 
