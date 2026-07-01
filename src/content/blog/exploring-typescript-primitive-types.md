@@ -46,7 +46,7 @@ You'll notice that single quotes are used in my above example (`'`). Double quot
 ```ts
 let dog: string = "Rigby"
 
-const dogCommand: string = `${dog}, please sit."
+const dogCommand: string = `${dog}, please sit.`
 console.log(dogCommand) // Output: "Rigby, please sit."
 
 dog = "Rayla"
