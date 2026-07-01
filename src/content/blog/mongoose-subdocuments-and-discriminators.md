@@ -28,11 +28,11 @@ I mentioned the possibility of future third-party vendor(s). Preliminary researc
 
 ### In this post, we’ll cover:
 
-❓ What is Mongoose?
-📒 Mongoose Documents
-📑 Mongoose Subdocuments
-🙈🙉🙊 Mongoose Discriminators
-🛠️ When and how to use these tools
+- ❓ What is Mongoose?
+- 📒 Mongoose Documents
+- 📑 Mongoose Subdocuments
+- 🙈🙉🙊 Mongoose Discriminators
+- 🛠️ When and how to use these tools
 
 ## ❓ What is Mongoose?
 
@@ -42,7 +42,7 @@ Mongoose is a popular third-party JavaScript library for Node.js. It helps to mo
 
 Mongoose provides more structure to developer interactions with MongoDB. The schema allows you to define the shape of your data and its expected types as well as additional options like default values, designated uniqueness, or indexing for example. 
 
-The model, on the other hand, applies your schema structure to each of the MongoDB documents. Models are then used for “CRUD” database actions on the records: creating, reading, updating, and deleting. *, View the* ***[full list of Mongoose queries](https://mongoosejs.com/docs/queries.html)* ***available.*
+The model, on the other hand, applies your schema structure to each of the MongoDB documents. Models are then used for “CRUD” database actions on the records: creating, reading, updating, and deleting. View the [full list of Mongoose queries](https://mongoosejs.com/docs/queries.html) available.
 
 To ensure our mental model is aligned, here’s an example of a base schema in JavaScript we will use to define a model we can work with:
 
@@ -237,7 +237,8 @@ Personally, I’ve found that Mongoose has made development with MongoDB easy an
 I hope you found the usage of Subdocuments and Discriminators by this non-relational database as interesting as I did!
 
 **Sources:**
-[MongoDB Article: Getting Started with MongoDB and Mongoose](https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/)
-Mongoose Documentation: [Documents](https://mongoosejs.com/docs/documents.html) | [Subdocuments](https://mongoosejs.com/docs/subdocs.html) | [Discriminators](https://mongoosejs.com/docs/discriminators.html)
-[Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/) and [Mongoose 101](https://www.freecodecamp.org/news/mongoose101/) from freeCodeCamp
-BONUS Recommendation: [MongoDB Podcast](https://podcasts.mongodb.com/public/115/The-MongoDB-Podcast-b02cf624)
+
+- [MongoDB Article: Getting Started with MongoDB and Mongoose](https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/)
+- Mongoose Documentation: [Documents](https://mongoosejs.com/docs/documents.html) | [Subdocuments](https://mongoosejs.com/docs/subdocs.html) | [Discriminators](https://mongoosejs.com/docs/discriminators.html)
+- [Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/) and [Mongoose 101](https://www.freecodecamp.org/news/mongoose101/) from freeCodeCamp
+- BONUS Recommendation: [MongoDB Podcast](https://podcasts.mongodb.com/public/115/The-MongoDB-Podcast-b02cf624)
