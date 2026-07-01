@@ -8,13 +8,13 @@ duration: 33 min
 descriptor: "the data trifecta: engineer, analyst, and scientist"
 youtubeUrl: https://www.youtube.com/watch?v=hGBZSAHoAxE
 chapters:
-  - { timestamp: "00:00", title: journey into data engineering }
-  - { timestamp: "05:27", title: data cleaning importance }
-  - { timestamp: "10:14", title: the trifecta of data roles }
-  - { timestamp: "11:55", title: thinking in tables }
-  - { timestamp: "15:53", title: learning paths and curated education }
-  - { timestamp: "25:52", title: embracing rust in data engineering }
-  - { timestamp: "32:27", title: final thoughts on effort and utility }
+  - { timestamp: "00:00", title: "Journey into Data Engineering" }
+  - { timestamp: "05:27", title: "Data Cleaning Importance" }
+  - { timestamp: "10:14", title: "The Trifecta of Data Roles" }
+  - { timestamp: "11:55", title: "Thinking in Tables" }
+  - { timestamp: "15:53", title: "Learning Paths and Curated Education" }
+  - { timestamp: "25:52", title: "Embracing Rust in Data Engineering" }
+  - { timestamp: "32:27", title: "Final Thoughts on Effort and Utility" }
 links:
   - { label: joram on linkedin, url: "https://www.linkedin.com/in/jorammutenge/" }
   - { label: joram's blog, url: "https://www.conterval.com/blog/" }
@@ -24,15 +24,7 @@ I dubbed Joram Mutenge as a "trifecta" when it comes to the data profession. He 
 
 One of his biggest recommendations for anyone trying to learn something new? It's not random tutorials! Instead, consider a "curated" path of learning. When you invest some level of money into a course or something similar, you're more likely to finish it because you're also financially invested and you won't waste as much time jumping around and trying to put the pieces together on your own.
 
-## in this episode
-
-- Joram's journey into data engineering
-- Why data cleaning matters so much
-- The three data roles explained (engineering, analysis, science)
-- Table-based thinking approaches
-- Structured, curated learning methodologies
-- Rust adoption in data work
-- Time management and effort allocation
+## your call to action
 
 > Useless things take just as much effort as useful things. Ask yourself: is what I'm doing right now useful to what I'm trying to accomplish?
 

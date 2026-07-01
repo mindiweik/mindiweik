@@ -9,9 +9,12 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 ---
 <BaseLayout title={title} active="/blog">
   <Breadcrumb path={`~/blog/${slug}.mdx`} />
-  <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
+  <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label="essay" zone="blog" />
-    <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min{tags.length ? ' · ' + tags.map((t) => '#' + t).join(' ') : ''}</span>
+    <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min</span>
+    {tags.map((t) => (
+      <a href={`/tags/${t}`} style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);text-decoration:underline;text-underline-offset:2px">#{t}</a>
+    ))}
   </div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
   <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">{fmt(date)}</div>
