@@ -2,7 +2,7 @@
 title: "clean code by robert c. martin"
 description: "A practical breakdown of Clean Code by Robert C. Martin: key takeaways on naming, functions, comments, and writing code your team can actually maintain."
 pubDate: 2024-02-20
-tags: []
+tags: ["books","career"]
 readingTime: 8
 ---
 

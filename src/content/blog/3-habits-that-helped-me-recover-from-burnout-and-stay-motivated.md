@@ -2,7 +2,7 @@
 title: "3 habits that helped me recover from burnout and stay motivated"
 description: "Simple, effective ways to rebuild routines and keep going when it gets tough"
 pubDate: 2025-02-25
-tags: []
+tags: ["burnout","mindset"]
 readingTime: 6
 ---
 

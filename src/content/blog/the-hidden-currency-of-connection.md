@@ -2,7 +2,7 @@
 title: "the hidden currency of connection"
 description: "Networking isn’t just nice - it’s necessary"
 pubDate: 2025-04-15
-tags: []
+tags: ["career","community"]
 readingTime: 5
 ---
 

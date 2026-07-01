@@ -2,7 +2,7 @@
 title: "how to start working with ai"
 description: "Tips to EMPOWER yourself with AI"
 pubDate: 2024-03-05
-tags: []
+tags: ["ai"]
 readingTime: 4
 ---
 

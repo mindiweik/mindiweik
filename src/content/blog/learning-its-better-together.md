@@ -2,7 +2,7 @@
 title: "learning: it’s better together."
 description: "Come, learn alongside me!"
 pubDate: 2024-01-09
-tags: []
+tags: ["career","learning"]
 readingTime: 1
 ---
 

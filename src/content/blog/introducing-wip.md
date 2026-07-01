@@ -2,7 +2,7 @@
 title: "✨ introducing... [wip]"
 description: "An upcoming rebrand + a new podcast coming soon!"
 pubDate: 2025-06-11
-tags: []
+tags: ["community"]
 readingTime: 2
 ---
 

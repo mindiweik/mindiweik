@@ -2,7 +2,7 @@
 title: "what's actually happening"
 description: "Part 3 of 4 in the \"Unlocking Your Browser\" series"
 pubDate: 2026-03-12
-tags: []
+tags: ["browser","devtools"]
 readingTime: 4
 ---
 

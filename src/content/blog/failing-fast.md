@@ -2,7 +2,7 @@
 title: "failing fast"
 description: "How to foster failure to leap toward success"
 pubDate: 2024-01-24
-tags: []
+tags: ["career","mindset"]
 readingTime: 2
 ---
 

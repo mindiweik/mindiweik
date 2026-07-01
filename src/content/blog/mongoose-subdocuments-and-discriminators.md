@@ -2,7 +2,7 @@
 title: "mongoose subdocuments & discriminators"
 description: "Interesting Mongoose options for MongoDB collections!"
 pubDate: 2024-02-07
-tags: []
+tags: ["backend","databases"]
 readingTime: 6
 ---
 

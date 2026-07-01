@@ -2,7 +2,7 @@
 title: "the importance of open telemetry"
 description: "How to See the Invisible 👀"
 pubDate: 2025-05-27
-tags: []
+tags: ["observability","backend"]
 readingTime: 8
 ---
 

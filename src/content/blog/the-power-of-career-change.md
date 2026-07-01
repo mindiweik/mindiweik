@@ -2,7 +2,7 @@
 title: "the power of career change"
 description: "5 Lessons Learned"
 pubDate: 2024-05-28
-tags: []
+tags: ["career"]
 readingTime: 5
 ---
 

@@ -2,7 +2,7 @@
 title: "experiences with a local gitlab runner: part 1"
 description: "Setting up a local GitLab Runner"
 pubDate: 2024-04-09
-tags: []
+tags: ["devops","ci-cd"]
 readingTime: 6
 ---
 

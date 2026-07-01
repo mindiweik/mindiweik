@@ -2,7 +2,7 @@
 title: "feeling inadequate is okay."
 description: "Say it with me..."
 pubDate: 2024-04-23
-tags: []
+tags: ["career","mindset"]
 readingTime: 3
 ---
 

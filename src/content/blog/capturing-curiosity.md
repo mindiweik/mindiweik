@@ -2,7 +2,7 @@
 title: "capturing curiosity"
 description: "A behavioral \"muscle\" pattern anyone can build!"
 pubDate: 2024-11-19
-tags: []
+tags: ["career","mindset"]
 readingTime: 15
 ---
 

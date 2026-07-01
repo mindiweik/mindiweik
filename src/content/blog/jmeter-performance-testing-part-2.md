@@ -2,7 +2,7 @@
 title: "jmeter performance testing: part 2"
 description: "Let's parameterize!"
 pubDate: 2025-04-08
-tags: []
+tags: ["performance","testing"]
 readingTime: 9
 ---
 

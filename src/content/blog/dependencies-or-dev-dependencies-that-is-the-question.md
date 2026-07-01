@@ -2,7 +2,7 @@
 title: "dependencies or dev dependencies, that is the question"
 description: "Understanding basic package management"
 pubDate: 2024-11-14
-tags: []
+tags: ["javascript","fundamentals"]
 readingTime: 6
 ---
 

@@ -2,7 +2,7 @@
 title: "jmeter performance testing: part 1"
 description: "...with randomized CSV inputs!"
 pubDate: 2025-03-04
-tags: []
+tags: ["performance","testing"]
 readingTime: 6
 ---
 

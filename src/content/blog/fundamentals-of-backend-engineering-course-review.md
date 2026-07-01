@@ -2,7 +2,7 @@
 title: "fundamentals of backend engineering course review"
 description: "A resource for any engineer!"
 pubDate: 2024-03-12
-tags: []
+tags: ["backend","learning"]
 readingTime: 3
 ---
 

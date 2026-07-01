@@ -2,7 +2,7 @@
 title: "experiences with a local gitlab runner: part2"
 description: "Ups, downs, and - 🙈 SPOILER - the rewards"
 pubDate: 2024-06-11
-tags: []
+tags: ["devops","ci-cd"]
 readingTime: 5
 ---
 

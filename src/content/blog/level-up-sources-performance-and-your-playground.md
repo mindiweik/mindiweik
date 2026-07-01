@@ -2,7 +2,7 @@
 title: "level up: sources, performance & your playground"
 description: "Part 4 of 4 in the \"Unlocking Your Browser\" series"
 pubDate: 2026-03-26
-tags: []
+tags: ["browser","devtools","performance"]
 readingTime: 5
 ---
 

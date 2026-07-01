@@ -2,7 +2,7 @@
 title: "unlocking your browser"
 description: "Meet Your Browser's Toolbox"
 pubDate: 2026-02-18
-tags: []
+tags: ["browser","devtools"]
 readingTime: 5
 ---
 

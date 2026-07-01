@@ -2,7 +2,7 @@
 title: "building a compass"
 description: "Adaptability and balance in a tech industry that won’t sit still."
 pubDate: 2026-01-27
-tags: []
+tags: ["career","mindset"]
 readingTime: 5
 ---
 

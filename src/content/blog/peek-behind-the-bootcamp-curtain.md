@@ -2,7 +2,7 @@
 title: "peek behind the bootcamp curtain 🧐"
 description: "Truths, challenges, and how to make the most of it"
 pubDate: 2024-03-19
-tags: []
+tags: ["career","learning"]
 readingTime: 5
 ---
 

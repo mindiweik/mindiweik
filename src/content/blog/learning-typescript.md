@@ -2,7 +2,7 @@
 title: "learning typescript"
 description: "5 tools recommended from my own journey"
 pubDate: 2024-04-16
-tags: []
+tags: ["typescript","learning"]
 readingTime: 5
 ---
 

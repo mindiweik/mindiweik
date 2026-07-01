@@ -2,7 +2,7 @@
 title: "your new best friend, the console"
 description: "Part 2 of 4 in the \"Unlocking Your Browser\" series"
 pubDate: 2026-02-25
-tags: []
+tags: ["browser","devtools","javascript"]
 readingTime: 4
 ---
 

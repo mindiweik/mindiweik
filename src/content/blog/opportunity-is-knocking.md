@@ -2,7 +2,7 @@
 title: "opportunity is knocking"
 description: "What to do when there are few opportunities at work"
 pubDate: 2025-03-11
-tags: []
+tags: ["career"]
 readingTime: 6
 ---
 

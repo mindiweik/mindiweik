@@ -2,7 +2,7 @@
 title: "what's the difference?!"
 description: "Transpiler | Compiler | Runtime"
 pubDate: 2025-05-13
-tags: []
+tags: ["fundamentals"]
 readingTime: 3
 ---
 
