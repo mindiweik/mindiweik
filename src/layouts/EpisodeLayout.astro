@@ -12,6 +12,15 @@ interface Props {
 const { id, title, version, season, pubDate, duration, descriptor, youtubeUrl, chapters, links } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null) : null;
+// Order the link buttons: LinkedIn first, then the guest's own site (non-social),
+// then everything else (other socials, resources).
+const linkRank = (l: { url: string }) => {
+  const u = (l.url || '').toLowerCase();
+  if (u.includes('linkedin.com')) return 0;
+  const social = /(twitter\.com|x\.com|instagram\.com|github\.com|youtube\.com|youtu\.be|tiktok\.com|goodreads\.com|spotify\.com|music\.apple|facebook\.com|bsky\.app|mastodon|threads\.net)/;
+  return social.test(u) ? 2 : 1;
+};
+const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b));
 ---
 <BaseLayout title={title} active="/podcast">
   <Breadcrumb path={`~/podcast/${id}`} />
@@ -40,7 +49,7 @@ const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11
     <div style="margin-top:1.1rem">
       <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">// the good stuff</span>
       <div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem">
-        {links.map((l) => (
+        {sortedLinks.map((l) => (
           <a href={l.url} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
         ))}
       </div>

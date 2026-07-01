@@ -5,6 +5,20 @@ version: v0.0.8
 season: 0
 pubDate: 2025-09-18
 youtubeUrl: https://www.youtube.com/watch?v=jd572G-i7jw
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Mara Kaela's Journey" }
+  - { timestamp: "02:09", title: "Health Transformation and Dietary Choices" }
+  - { timestamp: "04:10", title: "Parallels Between UX and Health Coaching" }
+  - { timestamp: "09:50", title: "Align Vegan: A Unique Approach to Nutrition" }
+  - { timestamp: "12:10", title: "The Starflower Project: Building a Community" }
+  - { timestamp: "18:12", title: "Seeking Collaboration and Team Building" }
+  - { timestamp: "21:13", title: "Research and Development for the App" }
+  - { timestamp: "25:05", title: "Global Aspirations and Closing Thoughts" }
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/mara-kaela/" }
+  - { label: "TikTok", url: "https://www.tiktok.com/@alignvegan" }
+  - { label: "Align Vegan", url: "mailto:alignvegan@gmail.com" }
+  - { label: "Mucusless Diet Healing System", url: "https://www.goodreads.com/book/show/23591145-prof-arnold-ehret-s-mucusless-diet-healing-system" }
 ---
 
 Now, Mara is on a mission to improve community connections and relationships that will help the “conscious architects” support each other on their own journey to self-actualization. And she is on the lookout for others who might be interested to help: people with startup experience or venture capital funding, engineers, marketing and financial folks, and those who have experience with AI/machine learning.
@@ -14,24 +28,6 @@ Now, Mara is on a mission to improve community connections and relationships tha
 ## your call to action
 
 > We become the people that we spend the most time with. The more intentional we can be and the more tools we can have to nurture our relationships with those people that we do want to be around, he more satisfying our lives will be. It's okay to have an amazing, satisfying life!
-
-## Chapters
-
-**00:00** Introduction to Mara Kaela's Journey
-**02:09** Health Transformation and Dietary Choices
-**04:10** Parallels Between UX and Health Coaching
-**09:50** Align Vegan: A Unique Approach to Nutrition
-**12:10** The Starflower Project: Building a Community
-**18:12** Seeking Collaboration and Team Building
-**21:13** Research and Development for the App
-**25:05** Global Aspirations and Closing Thoughts
-
-## The Good Stuff  - Links & More
-
-- [LinkedIn](https://www.linkedin.com/in/mara-kaela/)
-- [TikTok](https://www.tiktok.com/@alignvegan)
-- Email [Align Vegan](mailto:alignvegan@gmail.com)
-- [Mucusless Diet Healing System](https://www.goodreads.com/book/show/23591145-prof-arnold-ehret-s-mucusless-diet-healing-system)
 
 ## Thanks & Gratitude 🙏
 

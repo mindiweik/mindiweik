@@ -7,7 +7,7 @@ pubDate: 2025-07-07
 
 ## Welcome!
 
-I'm excited for you to join me on my new adventure: a podcast called **[WIP] **where I’ll be talking about human development in tech!
+I'm excited for you to join me on my new adventure: a podcast called **[WIP]** where I’ll be talking about human development in tech!
 
 ✏️ In the tech world, W-I-P stands for *Work in Progress*.
 

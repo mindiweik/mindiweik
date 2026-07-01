@@ -13,6 +13,10 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **About copy** is placeholder; real bio + the crew during content work.
 - **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
 - **Blog post chip label** — the blog article chip currently reads "essay" (VersionChip in `src/layouts/ArticleLayout.astro`). Mindi dislikes "essay"; pick a better word (post / writing / notes?). Deferred 2026-07-01.
+- **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
+- **Inline code styling** — make inline `code-word` spans more visually distinct (background/color/border) so they're easy to pick out in prose. `.prose code` in `src/styles/prose.css`. Deferred 2026-07-01.
+- **Consistent title casing** — titles/headings are inconsistent (some lowercase site-voice, some title-case from source). Pick one convention and normalize across blog/podcast/speaking. Deferred 2026-07-01.
+- **Images for specific posts** — migration was text-only. Some posts want images, e.g. `fundamentals-of-backend-engineering-course-review` (completion certificate). Source + add real images. Ties into the visual-variety followup. Deferred 2026-07-01.
 
 ## Resolved
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`

@@ -5,6 +5,21 @@ version: v0.0.2
 season: 0
 pubDate: 2025-07-31
 youtubeUrl: https://www.youtube.com/watch?v=SSko0piuTCE
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Christin Martin and Career Transition" }
+  - { timestamp: "03:32", title: "Building a Social Media Platform for Developers" }
+  - { timestamp: "07:47", title: "Inception of the 'BuiltInPublic' Project" }
+  - { timestamp: "13:00", title: "Community and Collaboration in Open Source" }
+  - { timestamp: "14:23", title: "Learning and Adapting in Tech" }
+  - { timestamp: "21:38", title: "Navigating Job Search Challenges" }
+  - { timestamp: "24:44", title: "Defining Career Aspirations" }
+  - { timestamp: "28:19", title: "Interview Experiences and Insights" }
+  - { timestamp: "32:36", title: "The Role of AI in Job Searching" }
+  - { timestamp: "34:21", title: "Embracing Continuous Learning" }
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/christin-martin/" }
+  - { label: "BuiltInPublic", url: "https://www.linkedin.com/company/built-in-public/posts/?feedView=all" }
+  - { label: "Christin’s portfolio", url: "https://christin-paige.github.io/portfolio-cpm/" }
 ---
 
 *In this episode, we’ll talk about starting a project with AI, expanding into object oriented programming and TypeScript, and Christin’s job search which inspired the [BuiltInPublic](https://www.linkedin.com/company/built-in-public/posts/?feedView=all) project to encourage others to build publicly. What started as a way to stand out in this tough market turned into an open-source project with a team of people behind it!*
@@ -16,25 +31,6 @@ youtubeUrl: https://www.youtube.com/watch?v=SSko0piuTCE
 > Learn, build, get dopamine, and repeat. 🔄
 
 PS [Book Riot](https://bookriot.com/) Christin would be an awesome addition if you’re looking for a new developer on the team! 😉
-
-## Chapters
-
-**00:00** Introduction to Christin Martin and Career Transition
-**03:32** Building a Social Media Platform for Developers
-**07:47** Inception of the 'BuiltInPublic' Project
-**13:00** Community and Collaboration in Open Source
-**14:23** Learning and Adapting in Tech
-**21:38** Navigating Job Search Challenges
-**24:44** Defining Career Aspirations
-**28:19** Interview Experiences and Insights
-**32:36** The Role of AI in Job Searching
-**34:21** Embracing Continuous Learning
-
-## The Good Stuff  - Links & More
-
-- [LinkedIn](https://www.linkedin.com/in/christin-martin/)
-- [BuiltInPublic](https://www.linkedin.com/company/built-in-public/posts/?feedView=all)
-- [Christin’s portfolio](https://christin-paige.github.io/portfolio-cpm/)
 
 ## Thanks & Gratitude 🙏
 

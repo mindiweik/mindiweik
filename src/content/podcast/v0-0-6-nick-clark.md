@@ -5,6 +5,26 @@ version: v0.0.6
 season: 0
 pubDate: 2025-08-28
 youtubeUrl: https://www.youtube.com/watch?v=8WYhkMi8q98
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Nick Clark's Journey" }
+  - { timestamp: "04:08", title: "Exploring DevOps and CI/CD" }
+  - { timestamp: "06:47", title: "The Role of Jenkins in Modern Development" }
+  - { timestamp: "09:45", title: "Cloud Services and Multi-Provider Strategies" }
+  - { timestamp: "12:37", title: "Building in Public: The GitHub Actions Project" }
+  - { timestamp: "14:44", title: "Navigating Azure Certifications and Learning Paths" }
+  - { timestamp: "20:16", title: "Navigating Certification Exams" }
+  - { timestamp: "22:48", title: "The Value of Certifications vs. Experience" }
+  - { timestamp: "24:36", title: "Exploring Career Paths in Tech" }
+  - { timestamp: "27:07", title: "The Transition from Back-End to Front-End Development" }
+  - { timestamp: "27:53", title: "Leveraging Tools for API Development" }
+  - { timestamp: "30:24", title: "The Importance of Diversification in Projects" }
+  - { timestamp: "33:45", title: "Implementing CI/CD Practices" }
+  - { timestamp: "35:05", title: "The Power of Community and Collaboration" }
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/nicholas-a-clark/" }
+  - { label: "BuiltInPublic", url: "https://www.linkedin.com/company/built-in-public/posts/?feedView=all" }
+  - { label: "episode v0.0.2", url: "/v002-christin-martin" }
+  - { label: "Renovate repo", url: "https://github.com/renovatebot/renovate" }
 ---
 
 *In this episode, we’ll talk about Nick’s path into tech, current projects he’s working on including various DevOps techniques and tools, the challenges of using multiple tools across teams and projects, certification training and the value of certs, and diversifying yourself and for organizations.*
@@ -12,31 +32,6 @@ youtubeUrl: https://www.youtube.com/watch?v=8WYhkMi8q98
 ## your call to action
 
 > Lend a hand and help each other out so we can share and lift each other up!
-
-## Chapters
-
-**00:00** Introduction to Nick Clark's Journey
-**04:08** Exploring DevOps and CI/CD
-**06:47** The Role of Jenkins in Modern Development
-**09:45** Cloud Services and Multi-Provider Strategies
-**12:37** Building in Public: The GitHub Actions Project
-**14:44** Navigating Azure Certifications and Learning Paths
-**20:16** Navigating Certification Exams
-**22:48** The Value of Certifications vs. Experience
-**24:36** Exploring Career Paths in Tech
-**27:07** The Transition from Back-End to Front-End Development
-**27:53** Leveraging Tools for API Development
-**30:24** The Importance of Diversification in Projects
-**33:45** Implementing CI/CD Practices
-**35:05** The Power of Community and Collaboration
-
-## The Good Stuff - Links & More
-
-[LinkedIn](https://www.linkedin.com/in/nicholas-a-clark/)
-
-[BuiltInPublic](https://www.linkedin.com/company/built-in-public/posts/?feedView=all) (discussed in Christin Martin’s [episode v0.0.2](/v002-christin-martin))
-
-[Renovate repo](https://github.com/renovatebot/renovate)
 
 ## Thanks & Gratitude 🙏
 

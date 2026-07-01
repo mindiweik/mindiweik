@@ -185,10 +185,17 @@ function htmlToMarkdown(decoded) {
   );
 
   // 3. Inline: strong, em, links, underline, span — process before block elements.
-  md = md.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, '**$1**');
-  md = md.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, '**$1**');
-  md = md.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, '*$1*');
-  md = md.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, '*$1*');
+  // Emphasis: move any leading/trailing whitespace OUTSIDE the markers, else
+  // markdown won't render it (e.g. "**text **" is not bold). Drop empty emphasis.
+  const emph = (marker) => (_, t) => {
+    const m = t.match(/^(\s*)([\s\S]*?)(\s*)$/);
+    if (!m || !m[2].trim()) return m ? m[1] + m[3] : t;
+    return `${m[1]}${marker}${m[2]}${marker}${m[3]}`;
+  };
+  md = md.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, emph('**'));
+  md = md.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, emph('**'));
+  md = md.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, emph('*'));
+  md = md.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, emph('*'));
   // Links — preserve the href.
   md = md.replace(/<a\s[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, text) => {
     const cleanHref = unescapeHtml(href);

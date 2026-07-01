@@ -5,6 +5,19 @@ version: v0.0.4
 season: 0
 pubDate: 2025-08-14
 youtubeUrl: https://www.youtube.com/watch?v=91A7t9jwjyw
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Colin J Lacy and His Journey" }
+  - { timestamp: "05:40", title: "Transitioning into Cloud Engineering" }
+  - { timestamp: "10:41", title: "The Challenges of Cloud Engineering" }
+  - { timestamp: "15:32", title: "Exploring AI Infrastructure" }
+  - { timestamp: "20:03", title: "Understanding MCP and Its Relevance" }
+  - { timestamp: "28:32", title: "Platform Engineering for Data Scientists" }
+  - { timestamp: "32:43", title: "Final Thoughts and Advice on Open Source Contributions" }
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/colinjlacy/" }
+  - { label: "Colin’s YouTube channel", url: "https://www.youtube.com/@colinjcodesalot" }
+  - { label: "projectsveltos", url: "https://github.com/projectsveltos" }
+  - { label: "Curious about the TypeScript moving to Go(lang) comments?", url: "https://devblogs.microsoft.com/typescript/typescript-native-port/" }
 ---
 
 It still takes time and patience to grasp some of the complicated things. And that is very normal. 
@@ -14,23 +27,6 @@ It still takes time and patience to grasp some of the complicated things. And th
 ## your call to action
 
 > Start contributing to open source early and often. 🙌
-
-## Chapters
-
-**00:00** Introduction to Colin J Lacy and His Journey
-**05:40** Transitioning into Cloud Engineering
-**10:41** The Challenges of Cloud Engineering
-**15:32** Exploring AI Infrastructure
-**20:03** Understanding MCP and Its Relevance
-**28:32** Platform Engineering for Data Scientists
-**32:43** Final Thoughts and Advice on Open Source Contributions
-
-## The Good Stuff  - Links & More
-
-- [LinkedIn](https://www.linkedin.com/in/colinjlacy/)
-- [Colin’s YouTube channel](https://www.youtube.com/@colinjcodesalot)
-- [projectsveltos](https://github.com/projectsveltos) (open source project Colin mentioned)
-- [Curious about the TypeScript moving to Go(lang) comments?](https://devblogs.microsoft.com/typescript/typescript-native-port/)
 
 ## Thanks & Gratitude 🙏
 

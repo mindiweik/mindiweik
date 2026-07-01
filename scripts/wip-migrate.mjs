@@ -77,14 +77,37 @@ async function migrateBlog() {
 const PODCAST = [
   'v000-the-first-commit', 'v001-david-weiss', 'v002-christin-martin',
   'v003-brendan-schirmer', 'v004-colin-j-lacy', 'v005-kim-maida', 'v006-nick-clark',
-  'v007-keshia-coriolan', 'v008-mara-kaela', 'v009-grace-dees', 'v100-release-notes',
-  'v102-erik-gross', 'v103-anna-miller',
+  'v007-keshia-coriolan', 'v008-mara-kaela', 'v009-grace-dees', 'v0010-joram-mutenge',
+  'v100-release-notes', 'v101-jaidie-vargas', 'v102-erik-gross', 'v103-anna-miller',
+  'v104-anemari-fiser',
 ];
 const SOLO = new Set(['v000-the-first-commit', 'v100-release-notes']);
 
 // Promote the inline "Your call to action? →" line into a styled heading + quote.
 const promoteCta = (body) =>
   body.replace(/\*\*Your call to action\??\s*→?\s*\*\*\s*/i, '## your call to action\n\n> ');
+
+// Pull the Chapters + "The Good Stuff"/Links sections out of the body markdown
+// into structured data, and return the body with those sections removed.
+function splitSections(body) {
+  const chapters = [];
+  const links = [];
+  // Chapters -> [{timestamp, title}]
+  body = body.replace(/#{1,6}\s*chapters?\b[^\n]*\n([\s\S]*?)(?=\n#{1,6}\s|$)/i, (_, sec) => {
+    for (const cm of sec.matchAll(/\*\*(\d{1,2}:\d{2}(?::\d{2})?)\*\*\s*([^\n]+)/g)) {
+      chapters.push({ timestamp: cm[1], title: cm[2].trim() });
+    }
+    return '';
+  });
+  // "The Good Stuff" / Links -> [{label, url}]
+  body = body.replace(/#{1,6}\s*(?:the good stuff|links)\b[^\n]*\n([\s\S]*?)(?=\n#{1,6}\s|$)/i, (_, sec) => {
+    for (const lm of sec.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)) {
+      links.push({ label: lm[1].trim(), url: lm[2].trim() });
+    }
+    return '';
+  });
+  return { chapters, links, body: body.replace(/\n{3,}/g, '\n\n').trim() };
+}
 
 async function migratePodcast() {
   const outDir = path.join(ROOT, 'src/content/podcast');
@@ -98,18 +121,30 @@ async function migratePodcast() {
       const html = await getHtml(`${BASE}/${src}`);
       const meta = parseMeta(html);
       const yt = parseYoutube(html);
-      const titlePart = (meta.title ?? '').split(' - ').slice(1).join(' - ') || meta.title;
-      const body = promoteCta(debrand(parseBody(html)));
+      // Strip the leading "vA.B.C -" version prefix (spacing varies in source).
+      const rawTitle = (meta.title ?? '').replace(/^v[\d.]+\s*-\s*/i, '').trim();
+      // Guest episodes title as just the person's name (drop any ": subtitle").
+      const name0 = rawTitle.split(':')[0].trim();
+      const { chapters, links, body: cleaned } = splitSections(debrand(parseBody(html)));
+      const body = promoteCta(cleaned);
       const fm = ['---'];
-      fm.push(`title: ${yamlStr(lower(titlePart))}`);
-      if (!SOLO.has(src)) fm.push(`guest: ${yamlStr(titlePart)}`);
+      fm.push(`title: ${yamlStr(lower(SOLO.has(src) ? rawTitle : name0))}`);
+      if (!SOLO.has(src)) fm.push(`guest: ${yamlStr(name0)}`);
       fm.push(`version: ${version}`);
       fm.push(`season: ${Number(major)}`);
       if (meta.datePublished) fm.push(`pubDate: ${meta.datePublished}`);
       if (yt) fm.push(`youtubeUrl: https://www.youtube.com/watch?v=${yt}`);
+      if (chapters.length) {
+        fm.push('chapters:');
+        for (const c of chapters) fm.push(`  - { timestamp: ${JSON.stringify(c.timestamp)}, title: ${JSON.stringify(c.title)} }`);
+      }
+      if (links.length) {
+        fm.push('links:');
+        for (const l of links) fm.push(`  - { label: ${JSON.stringify(l.label)}, url: ${JSON.stringify(l.url)} }`);
+      }
       fm.push('---', '', body, '');
       fs.writeFileSync(path.join(outDir, `${slug}.md`), fm.join('\n'));
-      results.push({ slug, ok: true, bytes: body.length, yt: !!yt, chapters: /\*\*\d{1,2}:\d{2}/.test(body) });
+      results.push({ slug, ok: true, bytes: body.length, yt: !!yt, chapters: chapters.length, links: links.length });
     } catch (e) {
       results.push({ slug, ok: false, error: String(e.message) });
     }

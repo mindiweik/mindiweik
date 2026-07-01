@@ -5,6 +5,20 @@ version: v1.0.3
 season: 1
 pubDate: 2026-04-17
 youtubeUrl: https://www.youtube.com/watch?v=2WbYX15O86k
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Career Mentorship in Tech" }
+  - { timestamp: "02:18", title: "Navigating the Job Market: The Role of Networking" }
+  - { timestamp: "05:15", title: "The Importance of Online Visibility" }
+  - { timestamp: "08:24", title: "Understanding the Job Search Process" }
+  - { timestamp: "11:25", title: "The Evolution of Interview Preparation" }
+  - { timestamp: "14:16", title: "The Difference Between Landing and Passing Interviews" }
+  - { timestamp: "16:29", title: "The Emotional Aspect of Job Searching" }
+  - { timestamp: "19:26", title: "The Mentorship Model and Its Benefits" }
+  - { timestamp: "22:07", title: "Innovations in Interview Preparation: AI Role Play" }
+  - { timestamp: "24:38", title: "Final Thoughts on Communication and Self-Reflection" }
+links:
+  - { label: "Anna Miller, LinkedIn", url: "https://www.linkedin.com/in/annamiller/" }
+  - { label: "Outlier Mentors", url: "https://outliermentorship.systeme.io/" }
 ---
 
 Anna brings a no-nonsense, deeply human approach to job searching. She understands that the process is emotional, that rejection emails often mean nothing, and that the engineers who get hired aren't necessarily the most skilled, they're the ones who show up prepared, visible, and practiced.
@@ -16,24 +30,6 @@ Anna's network-first philosophy isn't just theory. It's built from years of watc
 ## your call to action
 
 > Record yourself speaking about something. Anything. If you do it, you will be a more successful person in life.
-
-## Chapters
-
-**00:00** Introduction to Career Mentorship in Tech
-**02:18** Navigating the Job Market: The Role of Networking
-**05:15** The Importance of Online Visibility
-**08:24** Understanding the Job Search Process
-**11:25** The Evolution of Interview Preparation
-**14:16** The Difference Between Landing and Passing Interviews
-**16:29** The Emotional Aspect of Job Searching
-**19:26** The Mentorship Model and Its Benefits
-**22:07** Innovations in Interview Preparation: AI Role Play
-**24:38** Final Thoughts on Communication and Self-Reflection
-
-## The Good Stuff: Links & More
-
-- [Anna Miller, LinkedIn](https://www.linkedin.com/in/annamiller/)
-- [Outlier Mentors](https://outliermentorship.systeme.io/)
 
 ## Thanks & Gratitude 🙏
 

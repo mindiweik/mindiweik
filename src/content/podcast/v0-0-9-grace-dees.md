@@ -5,6 +5,17 @@ version: v0.0.9
 season: 0
 pubDate: 2025-09-25
 youtubeUrl: https://www.youtube.com/watch?v=YLLBRaNDxu4
+chapters:
+  - { timestamp: "00:00", title: "Introduction to Grace Dees" }
+  - { timestamp: "01:43", title: "Transitioning into Cybersecurity" }
+  - { timestamp: "03:38", title: "Current Projects and Responsibilities" }
+  - { timestamp: "06:16", title: "Navigating Burnout and Setting Boundaries" }
+  - { timestamp: "08:56", title: "Learning and Adapting in a High-Demand Field" }
+  - { timestamp: "12:03", title: "Building Confidence and Personal Agency" }
+  - { timestamp: "14:54", title: "Overcoming Fear and Taking Action" }
+  - { timestamp: "17:51", title: "Community Support and Resources" }
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/grace-dees/" }
 ---
 
 *In this episode, we’ll talk about transitioning from the equine to tech industry, boundary-setting, preventing burnout, giving space to grow and learn, and moving forward and asking for help even when you’re scared.*
@@ -12,21 +23,6 @@ youtubeUrl: https://www.youtube.com/watch?v=YLLBRaNDxu4
 ## your call to action
 
 > Do it scared. Do it nervous. It can be hard to keep going when you’re not confident, but it’s so worth it to reach out for help at your comfort level. There are plenty of resources out there and people who truly want you to succeed!
-
-## Chapters
-
-**00:00** Introduction to Grace Dees
-**01:43** Transitioning into Cybersecurity
-**03:38** Current Projects and Responsibilities
-**06:16** Navigating Burnout and Setting Boundaries
-**08:56** Learning and Adapting in a High-Demand Field
-**12:03** Building Confidence and Personal Agency
-**14:54** Overcoming Fear and Taking Action
-**17:51** Community Support and Resources
-
-## The Good Stuff  - Links & More
-
-- [LinkedIn](https://www.linkedin.com/in/grace-dees/)
 
 ## Thanks & Gratitude 🙏
 
