@@ -11,6 +11,7 @@ interface Props {
 }
 const { id, title, version, season, pubDate, duration, descriptor, youtubeUrl, chapters, links } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null) : null;
 ---
 <BaseLayout title={title} active="/podcast">
   <Breadcrumb path={`~/podcast/${id}`} />
@@ -21,6 +22,19 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
   {descriptor && <p style="font-family:var(--font-body);color:var(--text-muted);font-size:0.85rem;margin-top:0.4rem">{descriptor}</p>}
   <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">[WIP] podcast · {fmt(pubDate)}</div>
+
+  {ytId && (
+    <div style="margin-top:1.1rem;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${ytId}`}
+        title={title}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+      ></iframe>
+    </div>
+  )}
 
   {chapters.length > 0 && (
     <div style="margin-top:1.1rem">
@@ -35,13 +49,10 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
 
-  {(youtubeUrl || links.length > 0) && (
+  {links.length > 0 && (
     <div style="margin-top:1.4rem">
       <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">// the good stuff</span>
       <div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem">
-        {youtubeUrl && (
-          <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">watch on youtube →</a>
-        )}
         {links.map((l) => (
           <a href={l.url} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
         ))}
