@@ -16,13 +16,13 @@ As I began my endeavor to learn more in public, it felt symbolic to start with f
 >
 > John C. Maxwell
 
+That said, this concept is a [common Agile practice](http://xn--weve%20all%20heard%20the%20phrase%20fail%20fast,%20especially%20if%20were%20familiar%20with%20the%20agile%20approach-pu68e8b6rqe.%20as%20counter-intuitive%20as%20it%20might%20sound%20for%20those%20of%20us%20trained%20in%20the%20leadership%20model%20of%20the%20industrial%20era,%20iterating%20fast%20failures%20achieve%20a%20desired%20result%20faster%20than%20perfecting%20the%20solution./), better known as “iterations,” or attempts with adjustments. Experimentation and low-risk failures are encouraged for quicker, quality results.
+
+This approach leads to incremental progress over time. It also encourages faster peer feedback and a higher standard of team output.
+
 Although this process leads to innovation, failing fast doesn't work in every situation. The best is when experimentation is safe and warranted, like trying out a new idea or product.
 
 If there is a potential for high costs or negative results you can’t easily reverse, it may not be best to try failing fast. In these cases, the costs could outweigh any benefits. Consider consequences before making a decision!
-
-That said, this concept is a common Agile practice, better known as “iterations,” or attempts with adjustments. Experimentation and low-risk failures are encouraged for quicker, quality results.
-
-This approach leads to incremental progress over time. It also encourages faster peer feedback and a higher standard of team output.
 
 Failing fast as a practice was initially hard for me to adopt, but the value has been tremendous.
 
