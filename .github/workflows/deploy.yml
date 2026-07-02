@@ -40,14 +40,11 @@ jobs:
           server-dir: /domains/mindiweik.com/public_html/
 
       # Phase B: wip-podcast.com landing page + 301 redirect map.
-      # ENABLE (remove the `if: false`) once wip-podcast.com is moved off
-      # Website Builder onto file hosting in hPanel (same move mindiweik.com had).
+      # Enabled 2026-07-02 after wip-podcast.com moved to file hosting.
       - name: Build wip-podcast.com landing page
-        if: ${{ false }}
         run: node scripts/build-wip-landing.mjs
 
       - name: Deploy wip-podcast.com landing page
-        if: ${{ false }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
