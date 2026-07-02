@@ -6,19 +6,24 @@ import KofiCard from '../components/support/KofiCard.astro';
 
 const now = [
   { dot: '--accent-blog', k: 'onboarding', v: 'new providers @ OpenRouter' },
-  { dot: '--accent-projects', k: 'shipping', v: 'Audition Cat (alpha), Drip Dash, MARVIN' },
+  { dot: '--accent-projects', k: 'shipping', v: 'Audition Cat (alpha), Drip Dash' },
   { dot: '--accent-podcast', k: 'hosting', v: '[WIP] podcast, season 1' },
-  { dot: '--accent-speaking', k: 'training', v: 'Denver Colfax marathon' },
+  { dot: '--accent-speaking', k: 'training', v: 'Denver Colfax marathon 2027' },
 ];
 ---
 <BaseLayout title="about" active="/about">
   <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);padding-top:1.6rem">~/about.md</div>
-  <div style="margin-top:0.7rem"><VersionChip label="v2.0.0 · current release" zone="blog" /></div>
+  <div style="margin-top:0.7rem;display:flex;gap:0.6rem;align-items:center"><VersionChip label="work in progress" zone="blog" /><span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">she/her</span></div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.9rem;line-height:1.5;letter-spacing:-0.02em;margin:0.8rem 0 0"><span style="background:var(--accent-blog);color:var(--ink);padding:0.08em 0.34em;border-radius:7px;box-decoration-break:clone;-webkit-box-decoration-break:clone">I build things, then write about figuring them out.</span></h1>
   <div style="font-family:var(--font-body);font-size:0.95rem;line-height:1.65;color:var(--text);opacity:0.9;margin-top:1rem">
-    <p>I'm a software engineer who likes the seams: the places where systems, people, and process all have to agree. I got here the long way, with a communication degree and a studio art minor, five-plus years leading teams and untangling client relationships in real estate and marketing, then a bootcamp and a hard pivot into code. That detour isn't a footnote. It's why I build thinking about the user, the stakeholder, and the system all at once.</p>
-    <p>These days I'm at OpenRouter, onboarding new providers and pulling more of the AI ecosystem into one place developers can actually reach. On the side, I'm a founding engineer on Audition Cat, a CRM for performing artists that's three years in the making and finally in alpha. And when I'm off the clock, I help organize Colorado Women&amp;TECH and show up for the community through speaking and writing.</p>
-    <p>This site is where the build log lives: blog posts, the [WIP] podcast, talks, and whatever I'm shipping. Life doesn't have release notes, so I write my own.</p>
+    <p>I'm a software engineer who likes the seams: the places where systems, people, and process all have to agree. I got here the long way, with a communication degree and a studio art minor, ten years as a professional and leader in real estate and non-profits, then a bootcamp and a hard pivot into code. That detour isn't a footnote. It's why I build thinking about the user, the stakeholder, and the system all at once.</p>
+    <p>Since the pivot I've wrangled unwieldy software integrations, designed and built RESTful APIs, enabled deployments and developer productivity, and led projects and teams along the way.</p>
+    <p>These days I'm at OpenRouter, onboarding new providers and pulling more of the AI ecosystem into one place developers can actually reach. On the side, I'm a founding engineer on Audition Cat, a CRM for performing artists that's three years in the making and finally in alpha. And when I'm off the clock, I help organize Colorado Women&amp;TECH, because I care deeply about amplifying underrepresented groups in tech, especially women and neurodivergent folks.</p>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.2rem 0 1.4rem">
+      <a href="https://www.meetup.com/women-andtech-colorado/" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on meetup →</a>
+      <a href="https://luma.com/womenandtech" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on luma →</a>
+    </div>
+    <p>This site is where the build log lives: blog posts, the [WIP] podcast, talks, and whatever I'm shipping. I write and speak about being human in tech, career navigation, creativity and curiosity, ADHD, TypeScript, AI, and whatever else the work teaches me. Life doesn't have release notes, so I write my own.</p>
   </div>
 
   <SectionLabel label="// status" />
@@ -30,6 +35,14 @@ const now = [
         <span>{r.v}</span>
       </div>
     ))}
+  </div>
+
+  <SectionLabel label="// elsewhere" />
+  <div style="font-family:var(--font-mono);font-size:0.8rem;display:flex;gap:1.2rem;flex-wrap:wrap;padding:0.5rem 0">
+    <a href="https://www.linkedin.com/in/mindiweik/" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-blog)">linkedin</a>
+    <a href="https://github.com/mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-projects)">github</a>
+    <a href="https://gitlab.com/mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-speaking)">gitlab</a>
+    <a href="https://www.youtube.com/@mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-podcast)">youtube</a>
   </div>
 
   <KofiCard />
