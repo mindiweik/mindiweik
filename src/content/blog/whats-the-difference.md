@@ -29,8 +29,6 @@ But today, let’s cover these three topics - transpiler, compiler, and runtime 
 
 *Warning, you may get hungry reading this. I was hungry when I wrote it. Ready?*
 
-<!-- MIGRATION TODO: original shows an image here (intro graphic): https://substack-post-media.s3.amazonaws.com/public/images/d7b41dce-f0eb-4279-8c27-a5c2bbc80e10_940x788.png -->
-
 I was trying to think of a good way to describe and/or remember the differences. I love analogies. And I love to eat. So, let’s talk food.
 
 Hear me out! 🤣

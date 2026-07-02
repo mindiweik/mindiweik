@@ -25,8 +25,6 @@ In my case, I didn’t know just how much we needed [Open Telemetry](https://ope
 
 *Blasting off!* 🚀
 
-<!-- MIGRATION TODO: missing image (rocket illustration, no caption in original); source: https://substack-post-media.s3.amazonaws.com/public/images/1fc62a8c-6756-4219-b2ca-ab8e793d739c_940x788.png -->
-
 First, I want to share a bit of a story with a fun analogy I enjoyed using in my recent **Denver Gusto Lightning Talks from Women and Folks in Tech** lightning talk! 
 
 Here I have also gone into more detail than I was able to cover in my 5-minute lightning talk. *Talk recording at the end of this post for those interested!*
@@ -165,9 +163,26 @@ Open Telemetry does a great job of tying together all of the telemetry data so i
 
 In my lightning talk I shared an oversimplified flow.
 
-<!-- MIGRATION TODO: missing image (oversimplified OTel flow slide); source: https://substack-post-media.s3.amazonaws.com/public/images/4cbd4ed5-43be-4b21-8ee1-bf3f4e289dca_4000x3000.jpeg -->
-
-Oversimplified Open Telemetry flow as shown in the presentation
+<div style="margin:1.4rem 0">
+  <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:0.6rem">Open Telemetry flow</div>
+  <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;font-family:var(--font-mono);font-size:0.78rem;line-height:1.5">
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">01 · instrumentation</div>
+      <div style="margin-top:0.3rem">Code or libraries to collect data</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">02 · sdk</div>
+      <div style="margin-top:0.3rem">Gather and organize the data</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">03 · exporter</div>
+      <div style="margin-top:0.3rem">Send the data to your observability tool(s)</div>
+    </div>
+  </div>
+  <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);margin-top:0.5rem">Oversimplified Open Telemetry flow as shown in the presentation</div>
+</div>
 
 Essentially:
 

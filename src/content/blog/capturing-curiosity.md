@@ -19,8 +19,6 @@ Let’s be clear: I am not an expert on curiosity or perfect at practicing it. H
 3. ⚖️ Benefits + Challenges
 4. 👉 The 4 Core Concepts
 
-<!-- MIGRATION TODO: missing image (intro graphic); source: https://substack-post-media.s3.amazonaws.com/public/images/d664f6eb-00f7-4d5d-850d-652b61170fb4_940x788.png -->
-
 ## 🎬 Video + Presentation Insights
 
 Below is a recording of the first presentation for “Capturing Curiosity”, a [collaboration](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date) with [Coding with Callie](https://coding-with-callie.com/) in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
@@ -207,7 +205,18 @@ Finally, let’s combine a few of these things and discuss the “questioning fu
 - the questioner summarizes and confirms what they heard
 - ideally, the questioner reaches the target and broadens their understanding
 
-<!-- MIGRATION TODO: missing image (questioning funnel diagram); source: https://substack-post-media.s3.amazonaws.com/public/images/2db90632-0b94-49f9-8d84-69bcca53c5e8_571x743.png -->
+<div style="margin:1.4rem 0;max-width:26rem">
+  <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:0.6rem;text-align:center">The questioning funnel</div>
+  <div style="font-family:var(--font-mono);font-size:0.75rem;line-height:1.5;display:flex;flex-direction:column;align-items:center;gap:0.35rem">
+    <div style="width:100%;border:1px solid var(--border);border-radius:10px;padding:0.5rem 0.8rem;background:var(--surface);text-align:center">open-ended</div>
+    <div aria-hidden="true" style="color:var(--text-muted)">↓</div>
+    <div style="width:78%;border:1px solid var(--border);border-radius:10px;padding:0.5rem 0.8rem;background:var(--surface);text-align:center">probe, clarify, reflect</div>
+    <div aria-hidden="true" style="color:var(--text-muted)">↓</div>
+    <div style="width:56%;border:1px solid var(--border);border-radius:10px;padding:0.5rem 0.8rem;background:var(--surface);text-align:center">summarize, confirm</div>
+    <div aria-hidden="true" style="color:var(--text-muted)">↓</div>
+    <div style="width:36%;border:1px solid var(--accent-blog);border-radius:10px;padding:0.5rem 0.8rem;text-align:center;font-weight:700">🎯 target</div>
+  </div>
+</div>
 
 If you’d like to see/hear an example, in the recording, I discuss a scenario where someone might ask about an ash tree cut down in my backyard earlier this year.
 

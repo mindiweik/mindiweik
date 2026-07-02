@@ -23,8 +23,6 @@ Below, we’ll review the book's first two sections. They cover career fundament
 3. 🔨 Career Fundamentals
 4. 🔧 Building Competence
 
-<!-- MIGRATION TODO: missing image (book cover, no caption in original): https://substack-post-media.s3.amazonaws.com/public/images/9a4b1caf-fa9b-4fd7-9915-37708b0c4baf_940x788.png -->
-
 ## 🎬 The Presentation
 
 I [recorded a Loom presentation](https://www.loom.com/share/5ac9c21df8524559b6f8b824d6d35f7b?sid=8515e32e-f773-4d1a-b457-4d8f0d6ac798) if you’d prefer to hear and/or visually see this information. It’s about 22 minutes long. [Here is a link to the slides!](https://www.canva.com/design/DAGKHoLXYFo/88WU5ztzzdR4B70ygO3VHQ/edit?utm_content=DAGKHoLXYFo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
@@ -82,13 +80,29 @@ Once you find a role, how do you determine a path? Each is unique and could chan
 
 **☝️ The Single-Track Career Path -** In some cases, engineers move from an IC (Individual Contributor) role to management. They may remain long-term or later return to engineering if unsatisfied, possibly moving companies in the process.
 
-<!-- MIGRATION TODO: missing image (single-track career path diagram, no caption in original): https://substack-post-media.s3.amazonaws.com/public/images/404b2669-ba10-4ee1-b001-6940c2fbf274_323x176.png -->
+| Level | IC | Manager |
+|---|---|---|
+| Level 1 | SWE | |
+| Level 2 | Senior Engineer | |
+| Level 3 | Staff/Principal Eng | Manager |
+| Level 4 | | Director |
+| Level 5 | | VP of Engineering |
+| Level 6 | | CTO |
 
 **✌️ The Dual-Track Career Path -** This is the flexible path; it’s probably more applicable to most because of that flexibility!
 
 Some engineers stick with IC, some follow the single-track path, and some switch between them.
 
-<!-- MIGRATION TODO: missing image (dual-track career path diagram, no caption in original): https://substack-post-media.s3.amazonaws.com/public/images/92029f82-4dd7-4f11-96f5-ade708e7176e_326x209.png -->
+| Level | IC | Manager |
+|---|---|---|
+| Level 1 | SWE | |
+| Level 2 | Senior Engineer | |
+| Level 3 | Staff Engineer | Manager |
+| Level 4 | Senior Staff Eng | Director |
+| Level 5 | Principal Eng | Senior Director |
+| Level 6 | Distinguished Eng | VP of Engineering |
+| Level 7 | Fellow | Senior VP of Eng |
+| Level 8 | | CTO |
 
 ### ⚖️ Cost Centers and Profit Centers
 

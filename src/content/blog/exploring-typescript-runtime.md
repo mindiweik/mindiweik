@@ -18,8 +18,6 @@ Understanding the nitty gritty bits and pieces of a language can only benefit us
 
 **Let's go!**
 
-<!-- MIGRATION TODO: original shows an image here (intro graphic): https://substack-post-media.s3.amazonaws.com/public/images/3483dd57-e2cf-41d4-a546-67f19cd6c6db_940x788.png -->
-
 ## 🤔 What is runtime?
 
 To start, let’s better grasp what type of “runtime” I’m referring to and what it actually means in that context.

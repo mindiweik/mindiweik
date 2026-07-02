@@ -19,8 +19,6 @@ Let’s find out how it went after the initial setup…
 3. 🔄 Current Usage
 4. 💡 Lessons Learned
 
-<!-- MIGRATION TODO: missing "Part 2" header image, source: https://substack-post-media.s3.amazonaws.com/public/images/1f14291f-1c49-411a-8ab2-75be2260e8c5_940x788.png -->
-
 ## 🧩 First Local Success and Challenge
 
 **Success:** If you read [Part 1](/blog/experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 

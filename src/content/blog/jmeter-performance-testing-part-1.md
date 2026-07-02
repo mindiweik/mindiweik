@@ -16,8 +16,6 @@ I dove so deeply into JMeter that I’d like to split this into two parts! ✌�
 
 First, we’ll review some initial understanding and setup details. In the [second part](/blog/jmeter-performance-testing-part-2), we’ll look more at usage and my experience creating a script to parameterize and automate for the future!
 
-<!-- MIGRATION TODO: missing image (intro graphic (also repeats at post end in original)); source: https://substack-post-media.s3.amazonaws.com/public/images/35d58fc7-8cb6-4cfc-a4be-db48756077be_940x788.png -->
-
 **Here, we’ll cover:**
 
 1. ☝️ Quick Intro to JMeter
@@ -37,9 +35,25 @@ JMeter can be used through a Graphic User Interface (GUI) or Command Line Interf
 
 At the core, JMeter facilitates sending requests to your server and fielding responses. It then captures the data, which you can use to generate reports and review results. Results can be generated in multiple file formats, such as XML, HTML, JSON, and text.
 
-JMeter sends a Request, receives a Response, and generates Reports.
-
-<!-- MIGRATION TODO: the line above is the caption for a diagram in the original. Source image: https://substack-post-media.s3.amazonaws.com/public/images/3ed4148d-e111-4eb0-bf71-2ea4bd0778e0_646x461.png -->
+<div style="margin:1.4rem 0">
+  <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:0.6rem">JMeter at a glance</div>
+  <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;font-family:var(--font-mono);font-size:0.78rem;line-height:1.5">
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">01 · request</div>
+      <div style="margin-top:0.3rem">JMeter sends a Request to the Server</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">02 · response</div>
+      <div style="margin-top:0.3rem">The Server returns a Response</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">03 · reports</div>
+      <div style="margin-top:0.3rem">JMeter generates Reports</div>
+    </div>
+  </div>
+</div>
 
 ## 🛠️ Test Setup
 

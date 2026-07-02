@@ -17,8 +17,6 @@ Understanding the nitty gritty bits and pieces of a language can only benefit us
 
 **Let's dive in!**
 
-<!-- MIGRATION TODO: original shows an image here (intro graphic): https://substack-post-media.s3.amazonaws.com/public/images/d70665e7-02b3-4491-bd4f-8b0c2d8c3f84_940x788.png -->
-
 You're probably thinking, "Why are we going so low-level and foundational?"
 
 Now that we've covered the [TypeScript Compiler](/blog/exploring-typescript-ts-compiler) and [Runtime](/blog/exploring-typescript-runtime), primitive types are a natural next step in continuing to build upon a strong foundation. The stronger the base knowledge, the better we can grow toward more advanced topics.

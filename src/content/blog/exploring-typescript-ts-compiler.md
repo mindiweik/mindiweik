@@ -18,8 +18,6 @@ This post will cover the **TypeScript Compiler**.
 
 **Let's dive in!**
 
-<!-- MIGRATION TODO: original shows an image here (intro graphic): https://substack-post-media.s3.amazonaws.com/public/images/6cfc7b53-5ce9-4dbe-83f4-740fbbec829f_940x788.png -->
-
 ## 🤔 What is tsc (TypeScript Compiler)?
 
 TypeScript is free and [open-source](https://github.com/microsoft/TypeScript). Microsoft originally developed and released it in 2012. This language is often best used in larger or more complicated projects.

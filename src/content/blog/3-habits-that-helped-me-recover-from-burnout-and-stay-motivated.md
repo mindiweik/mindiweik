@@ -14,7 +14,6 @@ readingTime: 6
 
 ### [Link to Original Post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
 
-
 *I’m happy to share this guest post from my friend,* [Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
 
 *Your mental health matters. And I’ll never stop saying that. I’ve learned this lesson the hard way in my career. I’ve suffered from burnout and high-stress levels more times than I can count.*

@@ -29,8 +29,6 @@ Before asking for help, we should consider what we need and be as specific as po
 3. 🤔 Reach outside your company
 4. 😊 Work on your own project(s)
 
-<!-- MIGRATION TODO: missing image (no caption in original), source: https://substackcdn.com/image/fetch/$s_!NCz3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0edb5342-ed9e-4227-8320-be96c2609fc3_940x788.png -->
-
 ## 🫵 Look within your own team
 
 Whether it’s a direct teammate or an admirable person on another team, start within! Don’t jump in “half-cocked,” though. 

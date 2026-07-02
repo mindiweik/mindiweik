@@ -31,8 +31,6 @@ I found tech later in life, as many others have. Let’s start with a brief care
 - Year four with the same company
   - I was a Platform Expert and Onboarding Manager and then I moved into a Software Engineer role last May!
 
-<!-- MIGRATION TODO: image (career snapshot graphic, 940x788) that followed this list on Substack was not migrated; source: https://substack-post-media.s3.amazonaws.com/public/images/e5a20d5b-0360-4b2a-a23a-f3ec8c445cf1_940x788.png -->
-
 ## **Lessons Learned**
 
 I’ve learned much and the things that went well for me others can now use to thrive! Here are five tips from my journey.
