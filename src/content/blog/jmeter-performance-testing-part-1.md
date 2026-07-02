@@ -27,7 +27,7 @@ First, we’ll review some initial understanding and setup details. In the [seco
 
 My initial research indicates that it’s still popular. I examined other options and asked other testers for their feedback and experiences. JMeter is primarily used for web application testing, however, it can also test APIs, databases, and more. It’s powerful enough for a wide range of testing capabilities. *My experience focused on API testing.*
 
-\*It doesn’t fit all use cases. Here’s a great list of where you can run into trouble. <!-- MIGRATION TODO: "Here's a great list" was a link, but the href is broken in the Substack original AND the Builder page (href="http://Be aware that JMeter doesn't fit all use cases"). Real URL unrecoverable; relink manually. The leading asterisk is literal text in the original. -->
+\*It doesn’t fit all use cases.
 
 JMeter can be used through a Graphic User Interface (GUI) or Command Line Interface (CLI) commands. We’ll cover the latter in the [second part](/blog/jmeter-performance-testing-part-2).
 
