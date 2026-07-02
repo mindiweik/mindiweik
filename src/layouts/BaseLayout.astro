@@ -23,7 +23,7 @@ const { title, description, active } = Astro.props;
   </head>
   <body style="min-height:100vh;display:flex;flex-direction:column">
     <Header active={active} />
-    <main style="flex:1;max-width:680px;margin:0 auto;width:100%;padding:0 1.4rem;box-sizing:border-box">
+    <main style="flex:1;max-width:680px;margin:0 auto;width:100%;padding:0 1.4rem 4rem;box-sizing:border-box">
       <slot />
     </main>
     <Footer />

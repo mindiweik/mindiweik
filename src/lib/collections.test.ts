@@ -15,3 +15,19 @@ describe('toChangelogEntries', () => {
     expect(out.find((e) => e.zone === 'projects')?.title).toBe('Proj');
   });
 });
+
+describe('toChangelogEntries speaking type', () => {
+  it('uses the entry type for speaking (guest vs talk)', () => {
+    const out = toChangelogEntries({
+      blog: [], podcast: [], projects: [],
+      speaking: [
+        { id: 'a-guest', data: { title: 'on a show', type: 'guest', date: new Date('2025-01-01') } },
+        { id: 'a-talk', data: { title: 'my talk', date: new Date('2025-02-01') } },
+      ],
+    });
+    const guest = out.find((e) => e.title === 'on a show');
+    const talk = out.find((e) => e.title === 'my talk');
+    expect(guest?.type).toBe('guest');
+    expect(talk?.type).toBe('talk');
+  });
+});

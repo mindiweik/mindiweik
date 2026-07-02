@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/content/Breadcrumb.astro';
+import VersionChip from '../components/content/VersionChip.astro';
+import '../styles/prose.css';
+interface Props {
+  id: string;
+  title: string;
+  event: string;
+  date: Date;
+  type?: string;
+  links: { label: string; url: string }[];
+}
+const { id, title, event, date, type, links } = Astro.props;
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+---
+<BaseLayout title={title} active="/speaking">
+  <Breadcrumb path={`~/speaking/${id}`} />
+  <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
+    <VersionChip label={type ?? 'talk'} zone="speaking" />
+  </div>
+  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
+  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">{event} · {fmt(date)}</div>
+  <article class="prose" style="margin-top:1.2rem"><slot /></article>
+  {links.length > 0 && (
+    <div style="margin-top:1.4rem">
+      <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">// links & more</span>
+      <div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+        {links.map((l) => (
+          <a href={l.url} target={l.url.startsWith('/') ? undefined : '_blank'} rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
+        ))}
+      </div>
+    </div>
+  )}
+</BaseLayout>
