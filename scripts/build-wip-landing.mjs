@@ -61,7 +61,7 @@ const html = `<!doctype html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>[WIP] Podcast · human development in tech</title>
-  <meta name="description" content="[WIP] Podcast: real talk with builders. Life doesn't have release notes; we're figuring it out anyway, one version at a time." />
+  <meta name="description" content="[WIP] Podcast: real talk. Life doesn't have release notes; we're figuring it out anyway, one version at a time." />
   <link rel="canonical" href="https://mindiweik.com/podcast" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -104,7 +104,7 @@ const html = `<!doctype html>
   <main>
     <div class="crumb">~/wip-podcast</div>
     <h1><span class="hl">[WIP] Podcast: human development in tech</span></h1>
-    <p class="sub">Real talk with builders about the messy, honest, and ongoing process of growth. Life doesn't have release notes, so we write our own, one version at a time.</p>
+    <p class="sub">Real talk about the messy, honest, and ongoing process of growth. Life doesn't have release notes, so we write our own, one version at a time.</p>
     <div class="btns">
       <a class="btn" href="https://www.youtube.com/channel/UCMYEpKDKqHnAqcUG9N_qtKg" target="_blank" rel="noopener noreferrer">youtube &rarr;</a>
       <a class="btn" href="https://open.spotify.com/show/2Z6pfAQvwfxREv6uh8iPpb" target="_blank" rel="noopener noreferrer">spotify &rarr;</a>
