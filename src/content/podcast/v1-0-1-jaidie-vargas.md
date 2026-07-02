@@ -31,6 +31,12 @@ links:
   - { label: "TikTok", url: "https://www.tiktok.com/@amigas.in.tech" }
 ---
 
+[Jaidie Vargas](https://www.linkedin.com/in/jaidie-vargas/) is a force of nature. She is a national speaker, Navy veteran, PhD student researching AI ethics, co-founder and executive director of [Amigas in Tech](https://bio.site/amigasintech), IT Director, and a mom. 
+
+What doesn't she do?!
+
+She's a champion whose actions inspire women and particularly the Latina community to feel empowered and claim their seat at the table.
+
 Jaidie's journey from IT in the Navy to cybersecurity leadership shows the power of asking her favorite question, "why not?" at every turn. She built a career by staying curious, communicating authentically, and bringing others along for the climb. Now, through Amigas in Tech, she's building a community with friends she once needed which offers salary negotiation workshops, civic engagement tools, and real resources beyond just panels.
 
 Her PhD research focuses on AI ethical frameworks with a human-centric, community-first approach. She's making sure communities have a voice when data centers pop up and AI decisions get made because innovation without consideration of its effects isn't progress.
@@ -45,9 +51,3 @@ Her PhD research focuses on AI ethical frameworks with a human-centric, communit
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Jaidie Vargas](https://www.linkedin.com/in/jaidie-vargas/) is a force of nature. She is a national speaker, Navy veteran, PhD student researching AI ethics, co-founder and executive director of [Amigas in Tech](https://bio.site/amigasintech), IT Director, and a mom. 
-
-What doesn't she do?!
-
-She's a champion whose actions inspire women and particularly the Latina community to feel empowered and claim their seat at the table.

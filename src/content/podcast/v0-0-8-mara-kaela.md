@@ -21,6 +21,10 @@ links:
   - { label: "Mucusless Diet Healing System", url: "https://www.goodreads.com/book/show/23591145-prof-arnold-ehret-s-mucusless-diet-healing-system" }
 ---
 
+[Mara Kaela](https://www.linkedin.com/in/mara-kaela/) is a health coaching consultant who discovered her own health and wellness journey after a health crisis post-study abroad trip. Over years she’s asked questions, experimented, and iterated, learning along the way.
+
+A UX course not only aided in her practice, but also got Mara thinking about new ways to approach goal-setting from a user flow perspective or building connection and relationships amongst a community!
+
 Now, Mara is on a mission to improve community connections and relationships that will help the “conscious architects” support each other on their own journey to self-actualization. And she is on the lookout for others who might be interested to help: people with startup experience or venture capital funding, engineers, marketing and financial folks, and those who have experience with AI/machine learning.
 
 *In this episode, we’ll talk about finding a diet and lifestyle that work well for you, how UX can be applied in a bit of a unique way, her practice with Align Vegan and utilizing astrological charts and spirituality to create a “green print” for improving others’ lives, and her new project called the Starflower app, an AI-powered relational operating system designed to transform the search for a partner into a guided journey of self-actualization!*
@@ -33,7 +37,3 @@ Now, Mara is on a mission to improve community connections and relationships tha
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Mara Kaela](https://www.linkedin.com/in/mara-kaela/) is a health coaching consultant who discovered her own health and wellness journey after a health crisis post-study abroad trip. Over years she’s asked questions, experimented, and iterated, learning along the way.
-
-A UX course not only aided in her practice, but also got Mara thinking about new ways to approach goal-setting from a user flow perspective or building connection and relationships amongst a community!

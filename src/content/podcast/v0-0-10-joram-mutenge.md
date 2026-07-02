@@ -16,14 +16,6 @@ chapters:
 links:
   - { label: "LinkedIn", url: "https://www.linkedin.com/in/jorammutenge/" }
   - { label: "Joram’s blog", url: "https://www.conterval.com/blog/" }
-  - { label: "So Good They Can’t Ignore You by Cal Newport", url: "https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you" }
-  - { label: "D3", url: "https://d3js.org/" }
-  - { label: "Apache ECharts", url: "https://echarts.apache.org/en/index.html" }
-  - { label: "Matplotlib", url: "https://matplotlib.org/" }
-  - { label: "Plotly", url: "https://plotly.com/" }
-  - { label: "hvPlot", url: "https://hvplot.holoviz.org/en/docs/latest/index.html" }
-  - { label: "Pandas", url: "https://pandas.pydata.org/" }
-  - { label: "Polars", url: "https://pola.rs/" }
 ---
 
 I dubbed [Joram Mutenge](https://www.linkedin.com/in/jorammutenge/) as a “trifecta” when it comes to the data profession. He is a data engineer, data analyst, and data scientist! As with many people, the route wasn’t a straight one, but suits him well once he learned to love the parts few enjoy and how to be safely creative within data.
@@ -37,6 +29,12 @@ One of his biggest recommendations for anyone trying to learn something new? It�
 ## your call to action
 
 > Useless things take just as much effort as useful things. Ask yourself: Is what I’m doing right now useful to what I’m trying to accomplish?
+
+## also mentioned
+
+- [So Good They Can’t Ignore You by Cal Newport](https://www.goodreads.com/book/show/13525945-so-good-they-can-t-ignore-you)
+
+Data-viz tools discussed: [D3](https://d3js.org/), [Apache ECharts](https://echarts.apache.org/en/index.html), [Matplotlib](https://matplotlib.org/), [Plotly](https://plotly.com/), [hvPlot](https://hvplot.holoviz.org/en/docs/latest/index.html), [Pandas](https://pandas.pydata.org/), [Polars](https://pola.rs/)
 
 ## Thanks & Gratitude 🙏
 

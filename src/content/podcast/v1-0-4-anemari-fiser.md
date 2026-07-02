@@ -17,12 +17,14 @@ chapters:
   - { timestamp: "23:52", title: "Current Trends in Tech Leadership and AI" }
   - { timestamp: "26:52", title: "Final Thoughts on Intentional Growth" }
 links:
-  - { label: "Leveling Up as a Tech Lead", url: "https://www.oreilly.com/library/view/leveling-up-as/9781098177508/" }
-  - { label: "Soft Skills for Tech Leads", url: "https://www.oreilly.com/library/view/soft-skills-for/0642572043995" }
-  - { label: "Substack", url: "https://level-up-as-a-tech-lead.anemarifiser.com" }
   - { label: "Website", url: "https://anemarifiser.com" }
+  - { label: "Substack", url: "https://level-up-as-a-tech-lead.anemarifiser.com" }
   - { label: "Anemari on LinkedIn", url: "https://www.linkedin.com/in/anemari-fiser" }
 ---
+
+Tech lead, coach, author, and the person 500+ engineers called when they needed someone who actually got it.
+
+[Anemari Fiser](https://www.linkedin.com/in/anemari-fiser) burned out in a role she loved. And then she built something better. After a decade in tech - starting as a software engineer, becoming a tech lead at 26 (the youngest on her team, a detail she quietly kept to herself for years) - she left her full-time role, got her coaching certification, and built a practice that's now shaped 500+ engineers and 400+ tech leads across companies of all sizes.
 
 Based in Barcelona and working globally, Anemari helps teams navigate the messy middle of tech leadership: the part where your title changes but nobody hands you the manual. She helps companies scale by empowering tech leads through leadership training, coaches tech professionals on performance and confidence, and frequently speaks at conferences about the lessons, challenges, and successes she’s encountered throughout that journey.
 
@@ -38,11 +40,12 @@ Anemari has seen this story hundreds of times. She knows what actually helps. In
 
 > Make a plan for where you want to be and how you want to get there. Build small steps along the way because motivation is not what's going to keep you there. Consistency is.
 
+## also mentioned
+
+- [Leveling Up as a Tech Lead](https://www.oreilly.com/library/view/leveling-up-as/9781098177508/) (O’Reilly)
+- [Soft Skills for Tech Leads](https://www.oreilly.com/library/view/soft-skills-for/0642572043995) (O’Reilly)
+
 ## Thanks & Gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-Tech lead, coach, author, and the person 500+ engineers called when they needed someone who actually got it.
-
-[Anemari Fiser](https://www.linkedin.com/in/anemari-fiser) burned out in a role she loved. And then she built something better. After a decade in tech - starting as a software engineer, becoming a tech lead at 26 (the youngest on her team, a detail she quietly kept to herself for years) - she left her full-time role, got her coaching certification, and built a practice that's now shaped 500+ engineers and 400+ tech leads across companies of all sizes.

@@ -17,8 +17,11 @@ links:
   - { label: "LinkedIn", url: "https://www.linkedin.com/in/colinjlacy/" }
   - { label: "Colin’s YouTube channel", url: "https://www.youtube.com/@colinjcodesalot" }
   - { label: "projectsveltos", url: "https://github.com/projectsveltos" }
-  - { label: "Curious about the TypeScript moving to Go(lang) comments?", url: "https://devblogs.microsoft.com/typescript/typescript-native-port/" }
 ---
+
+[Colin J Lacy](https://www.linkedin.com/in/colinjlacy/) started his tech journey in restaurant marketing - spoiler: he was bad at it - and began learning to code instead. He started as a self-taught developer and freelancer with HTML and CSS, then expanded into many languages like JavaScript, WordPress and PHP, Rails, Python, Golang and later moved away from frontend engineering altogether into cloud engineering and he “hasn’t looked back!” There was a need and he was ready to fill it. 
+
+Throughout his tenure, continuous learning has been a common theme. Colin has felt “late to the party” with loads and loads of resources for well-established languages and tools and now with the rise of AI, he’s in an “early to the party” learning stage with little to no resources. The experience is different, but also somehow not different at all. 🤔
 
 It still takes time and patience to grasp some of the complicated things. And that is very normal. 
 
@@ -28,11 +31,11 @@ It still takes time and patience to grasp some of the complicated things. And th
 
 > Start contributing to open source early and often. 🙌
 
+## also mentioned
+
+- [TypeScript’s native port to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/)
+
 ## Thanks & Gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Colin J Lacy](https://www.linkedin.com/in/colinjlacy/) started his tech journey in restaurant marketing - spoiler: he was bad at it - and began learning to code instead. He started as a self-taught developer and freelancer with HTML and CSS, then expanded into many languages like JavaScript, WordPress and PHP, Rails, Python, Golang and later moved away from frontend engineering altogether into cloud engineering and he “hasn’t looked back!” There was a need and he was ready to fill it. 
-
-Throughout his tenure, continuous learning has been a common theme. Colin has felt “late to the party” with loads and loads of resources for well-established languages and tools and now with the rise of AI, he’s in an “early to the party” learning stage with little to no resources. The experience is different, but also somehow not different at all. 🤔

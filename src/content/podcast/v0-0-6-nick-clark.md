@@ -27,6 +27,10 @@ links:
   - { label: "Renovate repo", url: "https://github.com/renovatebot/renovate" }
 ---
 
+From a [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64), to programming, to roles like QA and support, to DevOps, [Nick Clark](https://www.linkedin.com/in/nicholas-a-clark/) was hooked on tech since he was 7 years old.
+
+If we can learn one thing from him, it’s to keep learning. He’s worked on (and currently working on) many different projects! If you feel yourself stagnating, it’s the perfect time to try something new.
+
 *In this episode, we’ll talk about Nick’s path into tech, current projects he’s working on including various DevOps techniques and tools, the challenges of using multiple tools across teams and projects, certification training and the value of certs, and diversifying yourself and for organizations.*
 
 ## your call to action
@@ -37,7 +41,3 @@ links:
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-From a [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64), to programming, to roles like QA and support, to DevOps, [Nick Clark](https://www.linkedin.com/in/nicholas-a-clark/)was hooked on tech since he was 7 years old.
-
-If we can learn one thing from him, it’s to keep learning. He’s worked on (and currently working on) many different projects! If you feel yourself stagnating, it’s the perfect time to try something new.

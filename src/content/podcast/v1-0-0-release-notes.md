@@ -6,7 +6,18 @@ pubDate: 2026-01-22
 youtubeUrl: https://www.youtube.com/watch?v=m-FzyhJVo3M
 ---
 
-#### **Thank you, truly, to all of the folks who reached out. 🙏**
+## What It Looks Like to Build, Pause, and Return in Public
+
+### chore: acknowledge the pause + appreciation
+
+Welcome back. Or welcome for the first time. Either way, I'm so glad you're here!
+
+Life happened and I wanted to recalibrate.
+
+During that pause, so many people reached out. To check in. To say they missed the podcast. To ask if it was coming back.
+**Guess what? It is!**
+
+**Thank you, truly, to all of the folks who reached out. 🙏**
 **I am so grateful! 🥹**
 
 This version exists because of those messages and care. I want to keep learning together!
@@ -30,17 +41,6 @@ Another new feature per audience feedback I’m excited about is to end intervie
 This season is yet another experiment iteration. Let's try something new!
 
 I’ll be testing new episode styles/different formats, and potentially new ways of having conversations. There may be a familiar face joining soon in a collaborative capacity or repeat guest(s). TBD - leaning into curiosity and iteration!
-
-## What It Looks Like to Build, Pause, and Return in Public
-
-### chore: acknowledge the pause + appreciation
-
-Welcome back. Or welcome for the first time. Either way, I'm so glad you're here!
-
-Life happened and I wanted to recalibrate.
-
-During that pause, so many people reached out. To check in. To say they missed the podcast. To ask if it was coming back.
-**Guess what? It is!**
 
 ## Thanks & Gratitude 🙏
 

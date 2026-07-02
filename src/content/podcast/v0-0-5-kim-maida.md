@@ -22,13 +22,13 @@ chapters:
   - { timestamp: "39:43", title: "Key Takeaways for Developers and Creators" }
 links:
   - { label: "LinkedIn", url: "https://www.linkedin.com/in/kimmaida/" }
-  - { label: "https://github.com/kmaida/auth-architecture", url: "https://github.com/kmaida/auth-architecture" }
-  - { label: "https://github.com/kmaida/auth-architecture-ng", url: "https://github.com/kmaida/auth-architecture-ng" }
-  - { label: "Vittorio Bertocci", url: "https://auth0.com/blog/in-celebration-of-vittorio-bertocci/" }
   - { label: "website", url: "https://maida.kim" }
   - { label: "Miniatures/keycaps", url: "https://mihi-mini.studio" }
-  - { label: "playlist", url: "https://www.youtube.com/playlist?list=PL3v-_yYK87UIx-3apmJ1FoCYb52r7e_UF" }
 ---
+
+[Kim Maida](https://www.linkedin.com/in/kimmaida/) is the Senior Director of Developer Relations (DevRel) at [FusionAuth](https://fusionauth.io/), and a passionate advocate for educating others and leading tech users (usually developers) to success!
+
+Lately she’s been working on a newer concept, architecture-driven authentication. It’s just another way that Kim is working to arm her team with knowledge as well as sharing with the wider community! Keeping app users safe is so important and anyone can use that knowledge regardless of the provider you’re using.
 
 But, how much do users actually need to know? How deeply should DevRel go into sharing what’s inside the black box? There’s definitely a balance to strike.
 
@@ -38,11 +38,14 @@ But, how much do users actually need to know? How deeply should DevRel go into s
 
 > Choose to spend your time on things that you care about and you love; don't worry about spending a ton of time and energy learning things that won’t help you feel fulfilled…
 
+## also mentioned
+
+- [auth-architecture (GitHub)](https://github.com/kmaida/auth-architecture)
+- [auth-architecture-ng (GitHub)](https://github.com/kmaida/auth-architecture-ng)
+- [In celebration of Vittorio Bertocci](https://auth0.com/blog/in-celebration-of-vittorio-bertocci/)
+- [YouTube playlist](https://www.youtube.com/playlist?list=PL3v-_yYK87UIx-3apmJ1FoCYb52r7e_UF)
+
 ## Thanks & Gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Kim Maida](https://www.linkedin.com/in/kimmaida/) is the Senior Director of Developer Relations (DevRel) at [FusionAuth](https://fusionauth.io/), and a passionate advocate for educating others and leading tech users (usually developers) to success!
-
-Lately she’s been working on a newer concept, architecture-driven authentication. It’s just another way that Kim is working to arm her team with knowledge as well as sharing with the wider community! Keeping app users safe is so important and anyone can use that knowledge regardless of the provider you’re using.

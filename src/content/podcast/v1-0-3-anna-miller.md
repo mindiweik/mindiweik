@@ -21,6 +21,10 @@ links:
   - { label: "Outlier Mentors", url: "https://outliermentorship.systeme.io/" }
 ---
 
+[Anna Miller](https://www.linkedin.com/in/annamiller/) has coached over 100 engineers into roles at companies like Google and Amazon. She has 44,000+ LinkedIn followers who tune in for her straight talk on what actually works in today's job market. And she built Outlier Mentors, a career mentorship community, to fill the gap she kept seeing: engineers who are talented, hardworking, and completely unprepared for how  getting hired actually works.
+
+*Spoiler: it's not about blasting out applications.*
+
 Anna brings a no-nonsense, deeply human approach to job searching. She understands that the process is emotional, that rejection emails often mean nothing, and that the engineers who get hired aren't necessarily the most skilled, they're the ones who show up prepared, visible, and practiced.
 
 Anna's network-first philosophy isn't just theory. It's built from years of watching engineers miss offers not because they weren't qualified, but because they treated the job search like a form submission instead of a human process. Getting the interview and passing the interview are two completely different skill sets, and most people never train for either one.
@@ -35,7 +39,3 @@ Anna's network-first philosophy isn't just theory. It's built from years of watc
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Anna Miller](https://www.linkedin.com/in/annamiller/) has coached over 100 engineers into roles at companies like Google and Amazon. She has 44,000+ LinkedIn followers who tune in for her straight talk on what actually works in today's job market. And she built Outlier Mentors, a career mentorship community, to fill the gap she kept seeing: engineers who are talented, hardworking, and completely unprepared for how  getting hired actually works.
-
-*Spoiler: it's not about blasting out applications.*

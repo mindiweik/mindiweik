@@ -30,11 +30,14 @@ chapters:
   - { timestamp: "25:35", title: "When Systems Architecture Clicks" }
   - { timestamp: "29:02", title: "One Takeaway: You Can Learn to Code" }
 links:
-  - { label: "Erik Gross, LinkedIn", url: "https://www.linkedin.com/in/erikgross/" }
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/erikgross/" }
   - { label: "The Tech Academy", url: "https://www.learncodinganywhere.com/" }
   - { label: "The Uncommon Engineer", url: "https://theuncommonengineer.com/" }
-  - { label: "Claude by Anthropic", url: "https://claude.ai" }
 ---
+
+**From Navy Nuclear Reactors to 4,000+ Students: Why Fundamentals Still Beat AI**
+
+[Erik Gross](https://www.linkedin.com/in/erikgross/) is the co-founder of the [Tech Academy](https://www.learncodinganywhere.com/) and author of *The Uncommon Engineer*. A Navy nuclear reactor operator turned sales professional turned software engineer, Erik couldn't find junior developers, so he built a school to train them.
 
 *In this episode, we talk about Erik's journey from programming on a Vic 20 at age 11, to operating nuclear reactors in the Navy, to co-founding one of the earliest coding bootcamps. We dig into why AI is a game changer for experienced developers but a potential crutch for beginners, the moment systems architecture "clicked" on a submarine in Idaho, how the Tech Academy bakes AI training into every bootcamp, job search tenacity, and Erik's upcoming book, The Uncommon Engineer.*
 
@@ -42,11 +45,11 @@ links:
 
 > → If you can read and do basic math, you can learn to code. Whatever method you choose, give it a shot.
 
+## also mentioned
+
+- [Claude by Anthropic](https://claude.ai)
+
 ## Thanks & Gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-From Navy Nuclear Reactors to 4,000+ Students: Why Fundamentals Still Beat AI
-
-[Erik Gross](https://www.linkedin.com/in/erikgross/) is the co-founder of the [Tech Academy](https://www.learncodinganywhere.com/) and author of *The Uncommon Engineer*. A Navy nuclear reactor operator turned sales professional turned software engineer, Erik couldn't find junior developers, so he built a school to train them.

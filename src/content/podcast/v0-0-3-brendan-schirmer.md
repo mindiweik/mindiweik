@@ -23,6 +23,10 @@ links:
   - { label: "Example of 2mm Shift Concept from Tony Robbins", url: "https://www.inc.com/bill-carmody/tony-robbins-explains-how-a-2-millimeter-shift-can-make-or-break-your-business.html" }
 ---
 
+[Brendan Schirmer](https://www.linkedin.com/in/brendanschirmer/) is an Australian living in the UK who previously worked 10 years as a software engineer. Over time, he discovered a special touch communicating across technical and non-technical folks. Now, he’s shifted into coaching both with one-on-one clients and integrating to help entire teams under his business, “[No BS Coaching](https://www.linkedin.com/company/no-bs-coaching/).” (Get it? His initials + a cheeky statement on attitude! 😅)
+
+With the help of his own coach, he’s made revisions to his approach in pricing and how he wants to show up as a coach. Through a series of small changes, Brendan has seen significant strides forward!
+
 *In this episode, we’ll talk about Brendan’s journey as a software engineer turned translator turned communication coach, async communication, sympathy and empathy, the two millimeter shift, how making small changes leads to big results, modeling the type of person you want to be, and - a bit surprisingly - weight loss.*
 
 ## your call to action
@@ -33,7 +37,3 @@ links:
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Brendan Schirmer](https://www.linkedin.com/in/brendanschirmer/) is an Australian living in the UK who previously worked 10 years as a software engineer. Over time, he discovered a special touch communicating across technical and non-technical folks. Now, he’s shifted into coaching both with one-on-one clients and integrating to help entire teams under his business, “[No BS Coaching](https://www.linkedin.com/company/no-bs-coaching/).” (Get it? His initials + a cheeky statement on attitude! 😅)
-
-With the help of his own coach, he’s made revisions to his approach in pricing and how he wants to show up as a coach. Through a series of small changes, Brendan has seen significant strides forward!

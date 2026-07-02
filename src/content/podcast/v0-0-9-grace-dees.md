@@ -18,6 +18,10 @@ links:
   - { label: "LinkedIn", url: "https://www.linkedin.com/in/grace-dees/" }
 ---
 
+[Grace Dees](https://www.linkedin.com/in/grace-dees/) came into my life through networking with women in tech in Colorado as she worked to break into the cybersecurity field! Most recently she has worked with a startup as a Cybersecurity Business Analyst.
+
+Between personal life changes and growing into this profession, she has learned a lot about setting boundaries in both small and big ways. Also, moving into a new-to-you field calls for time, grace, and self-reflection on what you need and want. For Grace, calendar and project management have been essential!
+
 *In this episode, we’ll talk about transitioning from the equine to tech industry, boundary-setting, preventing burnout, giving space to grow and learn, and moving forward and asking for help even when you’re scared.*
 
 ## your call to action
@@ -28,7 +32,3 @@ links:
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!
-
-[Grace Dees](https://www.linkedin.com/in/grace-dees/) came into my life through networking with women in tech in Colorado as she worked to break into the cybersecurity field! Most recently she has worked with a startup as a Cybersecurity Business Analyst.
-
-Between personal life changes and growing into this profession, she has learned a lot about setting boundaries in both small and big ways. Also, moving into a new-to-you field calls for time, grace, and self-reflection on what you need and want. For Grace, calendar and project management have been essential!
