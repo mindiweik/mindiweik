@@ -65,11 +65,11 @@ One of the best tools was the [CI lint tool](https://docs.gitlab.com/ee/ci/lint.
 
 This can be accessed under the **Build** option in GitLab > choose **Pipelines** > and select the **CI lint** button in the upper right corner.
 
-<!-- MIGRATION TODO: screenshot ("GitLab screenshot depicting how to access the CI lint tool.") -->
+![GitLab screenshot depicting how to access the CI lint tool](../../assets/blog/experiences-with-a-local-gitlab-runner-part-1/ci-lint-access.webp)
 
 Here, you can enter your YAML file contents and click on **Validate** which will show you any linting issues or invalid syntax.
 
-<!-- MIGRATION TODO: screenshot ("GitLab screenshot of the CI lint tool.") -->
+![GitLab screenshot of the CI lint tool](../../assets/blog/experiences-with-a-local-gitlab-runner-part-1/ci-lint-tool.webp)
 
 ### Install and Create a GitLab Runner
 
@@ -83,13 +83,13 @@ The installation was relatively easy, and I didn’t run into too many issues.
 
 Next, a new Runner needs to be created within GitLab to connect with your project(s). This step will also generate a token you’ll use later. This can be accessed under the **Settings** option in GitLab > choose **CI/CD** > locate **Runners** and click to Expand.
 
-<!-- MIGRATION TODO: screenshot ("GitLab screenshot showing the Runners for our project.") -->
+![GitLab screenshot showing the Runners for our project](../../assets/blog/experiences-with-a-local-gitlab-runner-part-1/project-runners.webp)
 
 Here, choose “**New Project Runner**” and enter basic details like the tags you want to use and the name of the Runner. For instance, I used a tag in the **`.gitlab-ci.yml`** for the CI pipeline to trigger on a specific Runner: **`mindi-local`**. I opted to create project-level Runners for both the frontend and backend repos, and these steps were necessary for both projects. 
 
 Upon creation, leave the new Runner confirmation screen up. There are registration directions, but more important, your token is only visible on this screen unless you copy/paste it elsewhere.
 
-<!-- MIGRATION TODO: screenshot ("GitLab screenshot of the confirmation screen for a new, fake Runner.") -->
+![GitLab screenshot of the confirmation screen for a new, fake Runner](../../assets/blog/experiences-with-a-local-gitlab-runner-part-1/runner-confirmation.webp)
 
 Let’s move on to the next step.
 

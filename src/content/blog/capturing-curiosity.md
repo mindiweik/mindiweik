@@ -172,7 +172,7 @@ What did I learn from these experiences?
 2. When I was working on a small stuffed octopus, it took a few attempts to figure out how to position my needles to get the right angle for a rounded effect. I made a lot of these creatures.
 3. Similarly, when working on the octopuses, I learned that my directions about where to place the legs were unclear. There were many “squids” with 6 legs instead of “octopuses” with 8 legs.
 
-<!-- MIGRATION TODO: missing image (crochet octopus photo); source: https://substack-post-media.s3.amazonaws.com/public/images/b9675af2-8fbf-41fe-9fef-ffc19d444491_385x405.png -->
+![crochet octopus photo](../../assets/blog/capturing-curiosity/crochet-octopus-photo.png)
 
 It took me several attempts to get the octopus right. Each time, though, I learned something new and gained a new approach. Even in some of those failures, I learned some options and ideas I could use in other projects where it had an effect I *did* want!
 

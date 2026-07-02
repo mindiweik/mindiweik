@@ -35,6 +35,9 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
+- **Smart 404** — instead of a plain 404, try to suggest a similar/related page (e.g. fuzzy-match
+  the requested path against the collections' slugs client-side and offer "did you mean" links).
+  Mindi requested 2026-07-02.
 - **Email subscription** — newsletter signup so readers get new posts/episodes by email
   (replaces the old Substack subscribe). Options to evaluate: Buttondown (indie-friendly,
   RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already

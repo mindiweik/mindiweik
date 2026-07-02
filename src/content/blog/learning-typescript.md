@@ -36,6 +36,8 @@ I’ve taken a look at other Scrimba courses since taking this particular course
 
 A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful. 
 
+![Programming TypeScript by Boris Cherny book cover](../../assets/blog/learning-typescript/programming-typescript-cover.jpeg)
+
 Even though I had been working with TypeScript for a couple of months when I received the book, these concepts were essential to solidifying my foundation. Even the seemingly simple details that are core to the functionality have deeper descriptions embedded and some helpful use cases to build better understanding.
 
 As the book moves forward, more advanced concepts and examples are provided, too, so regardless of level of experience with TypeScript there is sure to be something for everyone to take away!
@@ -43,6 +45,8 @@ As the book moves forward, more advanced concepts and examples are provided, too
 ## 🤓 Effective TypeScript by Dan Vanderkam
 
 I felt this book had more tangible and actionable advice, tips, and examples. *Programming TypeScript* felt better at providing that aforementioned foundation and underlying concepts.
+
+![Effective TypeScript by Dan Vanderkam book cover](../../assets/blog/learning-typescript/effective-typescript-cover.jpeg)
 
 This book was also broken into 62 very specific ways to get better at TypeScript, making it very easy to pick up, read one “item,” and then put it down to practice it.
 
@@ -61,6 +65,8 @@ I would read about a concept and then within some short time, I would come acros
 In this way, I was hitting all the bases for learning: repetition of concepts, read it statically, watch it “live” in a code editor, hear about it from a knowledgeable source, and practice the concepts in my daily work through small, local code edit tests. 
 
 I haven’t done a review of this course, like I did with the [Fundamentals of Backend Engineering](/blog/fundamentals-of-backend-engineering-course-review) course, but I would give it a similar review. The value was high (I also actually bought the TypeScript course in the same sale), the content was manageable and informative, and I learned a lot!
+
+![Mindi's Udemy course completion certificate for TypeScript 5 for Developers](../../assets/blog/learning-typescript/udemy-typescript5-certificate.jpeg)
 
 ## 💪 Lots of Practice
 

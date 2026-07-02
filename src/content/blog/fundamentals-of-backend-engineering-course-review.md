@@ -84,7 +84,7 @@ Hussein Nasser brings a wealth of knowledge and experience. Come prepared for en
 
 ### 🥸 Proof of completion, just for fun:
 
-<!-- MIGRATION TODO: certificate image not migrated. Original asset: https://assets.zyrosite.com/Yan01MjyJEH16nVN/4150ed44-fe72-426e-a245-23266fadc724_1600x1190-AR01jBlaMrCalx6b.webp -->
+![Mindi's Udemy course completion certificate for Fundamentals of Backend Engineering](../../assets/blog/fundamentals-of-backend-engineering-course-review/udemy-backend-certificate.webp)
 
 **Mindi’s Udemy course completion certificate**
 

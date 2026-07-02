@@ -81,6 +81,8 @@ Clean code sometimes requires pushback on timelines (within reason) for higher-q
 
 Tidiness takes a team effort to clean up - and maintain - the codebase. Martin recommends the Boy Scout rule when working: “Leave the campground better than you found it.” Care about your craft!
 
+![A smiling Earth illustration reading 'Leave it better than you found it.'](../../assets/blog/clean-code-by-robert-c-martin/leave-it-better.png)
+
 ## 🏗️ Foundations: names, functions, comments, and formatting
 
 What does this actually consist of? Let’s cover major areas where pain points arise.

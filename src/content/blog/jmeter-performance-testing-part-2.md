@@ -116,7 +116,7 @@ We set up a short “warm-up” period for the server to better simulate a real-
 
 It’s worth noting that adding a warm-up period requires an additional thread to set up different throughput and test details.
 
-<!-- MIGRATION TODO: screenshot missing; source: https://substack-post-media.s3.amazonaws.com/public/images/0d5fcfd4-d945-442a-bc48-3593cc0e1761_1764x1206.png -->
+![Spike test warm-up thread configuration in JMeter](../../assets/blog/jmeter-performance-testing-part-2/spike-warmup-threads.png)
 
 For consistency, each spike test was set to last for 10 minutes after the 5-minute warm-up. Below are three options I chose, though you may make different choices based on your expected traffic load or how hard you want to test the system.
 
@@ -175,11 +175,11 @@ Again, I toyed with different options and worked through some examples to get co
 
 First, we need to add a config element for User Defined Variables.
 
-<!-- MIGRATION TODO: screenshot missing; source: https://substack-post-media.s3.amazonaws.com/public/images/b35f2e24-0a3d-406a-affb-919f4aa22e45_1132x1126.png -->
+![Adding a User Defined Variables config element](../../assets/blog/jmeter-performance-testing-part-2/user-defined-variables-config.png)
 
 Then, we can add in our key-value pairs. Here’s an example using a key of example-key and a value of example-value.
 
-<!-- MIGRATION TODO: screenshot missing; source: https://substack-post-media.s3.amazonaws.com/public/images/44d940b9-6b0d-4972-b4a0-94f2b8ac20a4_1778x494.png -->
+![User Defined Variables with an example key and value](../../assets/blog/jmeter-performance-testing-part-2/udv-example-key-value.png)
 
 Then, these variables can be plugged into various fields throughout the test! Let’s look at a simple example. We will use the following snippet to introduce our User Defined Variables as a parameterized value:
 
@@ -189,11 +189,11 @@ ${__P(example-variable,default)}
 
 The left side within the parentheses is our User Defined Variable name (x-api-key below), and the right is our default value. In the case below, we use foobar. Meaning, if we provide no value, foobar will be used as the value for this header.
 
-<!-- MIGRATION TODO: screenshot missing; source: https://substack-post-media.s3.amazonaws.com/public/images/527744f2-de54-4af7-8425-67b19303754a_1726x478.png -->
+![A User Defined Variable used in a header with a default value](../../assets/blog/jmeter-performance-testing-part-2/udv-header-default-value.png)
 
 One important thing I learned during this process is that it is possible to use the full URL in the path instead of setting the protocol, the server name/IP address, and identifying the “Advanced Implementation” setting [described here in Part 1](/blog/jmeter-performance-testing-part-1).
 
-<!-- MIGRATION TODO: screenshot missing; source: https://substack-post-media.s3.amazonaws.com/public/images/cecafba6-9e50-4f73-b8ce-1a07890074d2_1406x1146.png -->
+![Using the full URL in the path field of an HTTP Request](../../assets/blog/jmeter-performance-testing-part-2/full-url-in-path.png)
 
 ## Consider the Options
 

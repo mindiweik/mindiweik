@@ -105,7 +105,7 @@ That’s *WAY* too long for what should be a fairly simple request that also did
 
 I was tasked with figuring out what was going on. I reviewed our **logs** and **traces** for offending events to track down the issue. Essentially, we had multiple similar calls to a vendor that didn’t appear to be necessary and slowed these responses *WAY* down.
 
-<!-- MIGRATION TODO: missing image (blurry trace screenshot with repeated call highlighted); source: https://substack-post-media.s3.amazonaws.com/public/images/65959e82-fae1-4140-a3f0-4a470b5100a5_500x900.png -->
+![blurry trace screenshot with repeated call highlighted](../../assets/blog/the-importance-of-open-telemetry/blurry-trace-screenshot-with-repeated-call-highl.png)
 
 Blurry for added privacy and to capture all trace events. Highlighted portion = all the same call repeated multiple times
 
@@ -200,7 +200,7 @@ Once it’s implemented, Open Telemetry is useful for debugging, maintaining rel
 
 [Open Telemetry](https://opentelemetry.io/) isn’t necessarily super *easy* to use, but it was much easier to work with than I expected!
 
-<!-- MIGRATION TODO: missing image (group photo of speakers and organizers); source: https://substack-post-media.s3.amazonaws.com/public/images/c5df79ad-91aa-4b8d-acd4-85580f89d0bf_4032x3024.jpeg -->
+![group photo of speakers and organizers](../../assets/blog/the-importance-of-open-telemetry/group-photo-of-speakers-and-organizers.jpeg)
 
 Speakers and Organizers from the Denver Gusto Lightning Talks with Women and Folks in Tech on April 22, 2025 | Left to Right: Mindi Weik, Kseniya Lifanova, Margaret Sabelhaus, Lisa Barcelo, Tori Huang, Alejandra Dominguez, Christine Lee | Second Row: Liz Donovan, Vui Nguyen
 
