@@ -12,7 +12,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
 - **About copy** is placeholder; real bio + the crew during content work.
 - **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
-- **Blog post chip label** — the blog article chip currently reads "essay" (VersionChip in `src/layouts/ArticleLayout.astro`). Mindi dislikes "essay"; pick a better word (post / writing / notes?). Deferred 2026-07-01.
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Inline code styling** — make inline `code-word` spans more visually distinct (background/color/border) so they're easy to pick out in prose. `.prose code` in `src/styles/prose.css`. Deferred 2026-07-01.
 - **Consistent title casing** — titles/headings are inconsistent (some lowercase site-voice, some title-case from source). Pick one convention and normalize across blog/podcast/speaking. Deferred 2026-07-01.
@@ -42,6 +41,8 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 ## Resolved
+- ~~**Blog post chip label "essay"**~~ -> renamed to "blog" everywhere (chip, changelog type,
+  About + blog index copy) per Mindi's pick (2026-07-02).
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`
   for full accent-as-fill consistency (2026-06-30).
 - ~~**Podcast archive copy** hardcoded "two seasons"~~ -> derived from `seasons.length`

@@ -7,7 +7,7 @@ const posts = (await getCollection('blog', (e) => !e.data.draft))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
-<ZoneIndexLayout zone="blog" heading="blog" sub="essays on building, debugging, and the messy parts. newest first.">
+<ZoneIndexLayout zone="blog" heading="blog" sub="building, debugging, and career detours. newest first.">
   {posts.map((p) => (
     <EntryCard
       href={`/blog/${p.id}`}

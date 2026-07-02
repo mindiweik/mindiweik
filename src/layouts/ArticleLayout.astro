@@ -11,7 +11,7 @@ const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11
 <BaseLayout title={title} active="/blog">
   <Breadcrumb path={`~/blog/${slug}.mdx`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
-    <VersionChip label="essay" zone="blog" />
+    <VersionChip label="blog" zone="blog" />
     <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min</span>
     {tags.map((t) => (
       <a href={`/tags/${t}`} style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);text-decoration:underline;text-underline-offset:2px">#{t}</a>
