@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import { getAdjacentEpisodes } from '../../lib/related.ts';
+
+interface Props { currentId: string; }
+const { currentId } = Astro.props;
+const eps = await getCollection('podcast', (e) => !e.data.draft);
+const { prev, next } = getAdjacentEpisodes(currentId, eps);
+---
+{(prev || next) && (
+  <div style="margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:1rem">
+    <span>
+      {prev && (
+        <a href={`/podcast/${prev.id}`} style="display:block">
+          <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">← previous · {prev.data.version}</span>
+          <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.9rem;margin-top:0.3rem">{prev.data.title}</span>
+        </a>
+      )}
+    </span>
+    <span style="text-align:right">
+      {next && (
+        <a href={`/podcast/${next.id}`} style="display:block">
+          <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">next · {next.data.version} →</span>
+          <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.9rem;margin-top:0.3rem">{next.data.title}</span>
+        </a>
+      )}
+    </span>
+  </div>
+)}

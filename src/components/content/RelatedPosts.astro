@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import EntryCard from './EntryCard.astro';
+import { getRelatedPosts } from '../../lib/related.ts';
+
+interface Props { currentId: string; }
+const { currentId } = Astro.props;
+const posts = await getCollection('blog', (e) => !e.data.draft);
+const related = getRelatedPosts(currentId, posts);
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+---
+{related.length > 0 && (
+  <div style="margin-top:2.4rem">
+    <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">// related posts</span>
+    <div style="margin-top:0.5rem">
+      {related.map((p) => (
+        <EntryCard
+          href={`/blog/${p.id}`}
+          title={p.data.title}
+          meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
+          zone="blog"
+        />
+      ))}
+    </div>
+  </div>
+)}
