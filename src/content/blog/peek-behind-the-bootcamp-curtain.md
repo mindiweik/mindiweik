@@ -6,46 +6,6 @@ tags: ["career","learning"]
 readingTime: 5
 ---
 
-## 😌 Advice
-
-#### You get out of it what you put into it.
-
-No matter the program, you get reciprocal success for the effort given. If you learned the fundamentals, you were quicker to grasp the next phases. If you spent time on individual tools, you were more capable of applying them in projects.
-
-My engineering manager wrapped up my effort neatly in my first annual review as a Software Engineer. 
-
-He was blunt with me. He wasn't thrilled when he learned my company committed to hiring a new engineer who recently completed a bootcamp. He shared that immediately, he was impressed by my ability to speak to technical challenges, the smooth onboarding for a newer engineer, and my ability to communicate. 
-
-Which leads me to my next point.
-
-#### Career changers are powerful!
-
-These days, many people find tech after pursuing other careers. This brings a wealth of knowledge and experience from different domains and levels.
-
-Right away, I applied my experience in US real estate to my company where we build tools and websites for North American agents. My empathy and understanding of customer needs from my time in Support and Onboarding brought new insights to our team and projects.
-
-**If you’re a career changer**, take your experience with you! It’s truly valuable.
-
-**If you’re a hiring manager**, your team will be more diverse if you hire folks with varied experience. Even if it’s not as directly correlated as my experience, we bring all sorts of skills to build better software!
-
-#### Job searching.
-
-Here is the best I can give: leverage your network. For my first role, I am grateful that my company supported my efforts and moved me to engineering after completion. 
-
-I didn’t go through what many in tech have in recent years. Multiple interviews, tests, projects, problems, recruiters…I leveraged opportunity.
-
-I worked hard for them and clarified my goals - to give myself proper credit. I talked to the leadership team early and often. Granted, I work for a small company with under 100 full-time employees; I had the ability to speak with the C-suite directly.
-
-## Conclusion
-
-Results will vary. Honestly, I could leave it there, but I’ll wrap it up. 
-
-My bootcamp was hard and I learned a crazy amount in a relatively short time. My investments were large, but my rewards have been great thus far.
-
-Bootcamps are not for everyone. There’s more communication involved than many believe when considering this career, but it’s an extremely important asset. Some people learn coding isn’t for them or choose to leave before finishing.
-
-Bootcamp grads should share their career goals with their network to help them find that first role! I’ve heard it gets better once you land the first one. I’ll have to get back to you when I eventually move to my next role. 😉
-
 All coding bootcamps differ. This applies to the people who participate in them, too. Every experience is different! 
 
 I completed a bootcamp after 2 years of learning on my own. I'm driven but needed more accountability and opportunities for deeper understanding or to locate *trusted* resources. A rapid feedback loop helps to retain complex information long-term.
@@ -57,7 +17,8 @@ We’ll cover my experience for someone considering this path or for curious min
 1. 🤔 Takeaways
 2. 🤯 Challenges
 3. 😌 Advice
-**The part-time program was discontinued in 2023; as of this writing, only full-time is available.*
+
+*\*The part-time program was discontinued in 2023; as of this writing, only full-time is available.*
 
 ## 🤔 Takeaways
 
@@ -112,3 +73,43 @@ Whether a program takes weeks, months, or one or more years to complete, this is
 I suddenly lost someone important to me, learned my father had lung cancer, and we learned our beloved dog had bladder cancer, and we needed to make tough decisions as caregivers.
 
 I’m sure others had hardships, too, but this was a level I had never faced. My career and coursework were challenging, and my personal life added even more to juggle in the last half of the course.
+
+## 😌 Advice
+
+#### You get out of it what you put into it.
+
+No matter the program, you get reciprocal success for the effort given. If you learned the fundamentals, you were quicker to grasp the next phases. If you spent time on individual tools, you were more capable of applying them in projects.
+
+My engineering manager wrapped up my effort neatly in my first annual review as a Software Engineer. 
+
+He was blunt with me. He wasn't thrilled when he learned my company committed to hiring a new engineer who recently completed a bootcamp. He shared that immediately, he was impressed by my ability to speak to technical challenges, the smooth onboarding for a newer engineer, and my ability to communicate. 
+
+Which leads me to my next point.
+
+#### Career changers are powerful!
+
+These days, many people find tech after pursuing other careers. This brings a wealth of knowledge and experience from different domains and levels.
+
+Right away, I applied my experience in US real estate to my company where we build tools and websites for North American agents. My empathy and understanding of customer needs from my time in Support and Onboarding brought new insights to our team and projects.
+
+**If you’re a career changer**, take your experience with you! It’s truly valuable.
+
+**If you’re a hiring manager**, your team will be more diverse if you hire folks with varied experience. Even if it’s not as directly correlated as my experience, we bring all sorts of skills to build better software!
+
+#### Job searching.
+
+Here is the best I can give: leverage your network. For my first role, I am grateful that my company supported my efforts and moved me to engineering after completion. 
+
+I didn’t go through what many in tech have in recent years. Multiple interviews, tests, projects, problems, recruiters…I leveraged opportunity.
+
+I worked hard for them and clarified my goals - to give myself proper credit. I talked to the leadership team early and often. Granted, I work for a small company with under 100 full-time employees; I had the ability to speak with the C-suite directly.
+
+## Conclusion
+
+Results will vary. Honestly, I could leave it there, but I’ll wrap it up. 
+
+My bootcamp was hard and I learned a crazy amount in a relatively short time. My investments were large, but my rewards have been great thus far.
+
+Bootcamps are not for everyone. There’s more communication involved than many believe when considering this career, but it’s an extremely important asset. Some people learn coding isn’t for them or choose to leave before finishing.
+
+Bootcamp grads should share their career goals with their network to help them find that first role! I’ve heard it gets better once you land the first one. I’ll have to get back to you when I eventually move to my next role. 😉

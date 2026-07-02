@@ -6,7 +6,7 @@ tags: ["browser","devtools","javascript"]
 readingTime: 4
 ---
 
-If you made it through [Part 1](/28-unlocking-your-browser), you've already "hacked" Wikipedia, poked around the DOM, and maybe changed a button color or two. Good. You're getting comfortable being curious.
+If you made it through [Part 1](/blog/unlocking-your-browser), you've already "hacked" Wikipedia, poked around the DOM, and maybe changed a button color or two. Good. You're getting comfortable being curious.
 
 Now we're going deeper.
 
@@ -18,6 +18,7 @@ This is Part 2 of a 4-part series:
 2. **Your New Best Friend: The Console (you are here! 👋)**
 3. What's Actually Happening: Network & Application
 4. Level Up: Sources, Performance & Your Playground
+
 Let's get into it.
 
 ## What even is the Console?
@@ -48,46 +49,9 @@ You'll see a blank panel with a `>` prompt. That's your playground.
 
 ## 6 things you can do right now
 
-These are the demos I ran during my [Parsity.io](http://Parsity.io) Tech Talk. Try each one on any page you have open.
+These are the demos I ran during my [Parsity.io](https://parsity.io) Tech Talk. Try each one on any page you have open.
 
 ### 1. Target and change content
-
-## The bigger picture
-
-These six demos barely scratch the surface of what the Console can do. But they illustrate the core idea: **the Console lets you interact with a live page as if you wrote the code yourself.**
-
-It's the fastest way to:
-
-Test a function before adding it to your codebase
-
-Figure out why a variable isn't what you expect
-
-Check what data an API is actually returning
-
-Prototype a small interaction without spinning up a dev environment
-
-Next time you're debugging, try this: before you change anything in your code, open the Console and log the thing that's confusing you. Nine times out of ten, that log will tell you exactly what's wrong.
-
-## Your Catz4Life challenge 🐱
-
-Remember the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life) from [Part 1](/28-unlocking-your-browser)? There's a broken "Adopt Me!" button that's supposed to do something when you click it...but it doesn't.
-
-Open the project in your browser, open the Console, and see if you can figure out what's happening. 
-(Hint: check for any errors that show up automatically when the page loads. The Console is already watching.)
-
-If you want some guidance, set `HINTS = true` in `script.js` to turn on hint mode.
-
-## What's next
-
-In Part 3, we're going to the Network tab where you can watch every single request your browser makes in real time. API calls, failed requests, CORS errors, HTTP status codes. It's where the really juicy debugging happens.
-
-**Until then:** open the Console on every site you visit. Run a `console.log`. Change a color. Make something editable. **Get weird with it.**
-
-The Console doesn't bite. 💖
-
-*Did something click for you? I'd love to hear about it!*
-
-← [Part 1: Meet Your Browser's Toolbox](/28-unlocking-your-browser) | [Part 3: What's Actually Happening](/30-whats-actually-happening) →
 
 ```js
 document.querySelector('h1').textContent = 'I own this now 😈'
@@ -121,7 +85,7 @@ window.location
 
 This returns an object with everything about the current URL like the full `href`, the `hostname`, the `pathname`, query params, and more. It's incredibly useful when debugging routing issues or building something that depends on URL structure.
 
-Try `window.location.pathname` to get just the current path. Or `[window.location.search](http://window.location.search)` to see query string parameters.
+Try `window.location.pathname` to get just the current path. Or `window.location.search` to see query string parameters.
 
 ### 5. Make the entire page editable
 
@@ -140,3 +104,37 @@ This grabs every `img` element on the page and logs its source URL. Useful for a
 ```js
 document.querySelectorAll('img').forEach(img => console.log(img.src))
 ```
+
+## The bigger picture
+
+These six demos barely scratch the surface of what the Console can do. But they illustrate the core idea: **the Console lets you interact with a live page as if you wrote the code yourself.**
+
+It's the fastest way to:
+
+- Test a function before adding it to your codebase
+- Figure out why a variable isn't what you expect
+- Check what data an API is actually returning
+- Prototype a small interaction without spinning up a dev environment
+
+Next time you're debugging, try this: before you change anything in your code, open the Console and log the thing that's confusing you. Nine times out of ten, that log will tell you exactly what's wrong.
+
+## Your Catz4Life challenge 🐱
+
+Remember the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life) from [Part 1](/blog/unlocking-your-browser)? There's a broken "Adopt Me!" button that's supposed to do something when you click it...but it doesn't.
+
+Open the project in your browser, open the Console, and see if you can figure out what's happening. 
+(Hint: check for any errors that show up automatically when the page loads. The Console is already watching.)
+
+If you want some guidance, set `HINTS = true` in `script.js` to turn on hint mode.
+
+## What's next
+
+In Part 3, we're going to the Network tab where you can watch every single request your browser makes in real time. API calls, failed requests, CORS errors, HTTP status codes. It's where the really juicy debugging happens.
+
+**Until then:** open the Console on every site you visit. Run a `console.log`. Change a color. Make something editable. **Get weird with it.**
+
+The Console doesn't bite. 💖
+
+*Did something click for you? I'd love to hear about it!*
+
+← [Part 1: Meet Your Browser's Toolbox](/blog/unlocking-your-browser) | [Part 3: What's Actually Happening](/blog/whats-actually-happening) →

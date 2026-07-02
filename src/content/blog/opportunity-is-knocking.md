@@ -12,34 +12,6 @@ At times, our professional growth may feel slow or even halt. We lack new projec
 
 When I started feeling something along these lines, I decided to take action rather than dwell in discomfort. A lack of obvious opportunities can’t stop me.
 
-## 🤔 Reach outside your company
-
-Whether you find someone internally or not, there is almost always someone in your network who can help! Or, someone within your network can connect you with someone in *their* network. It’s all a big web after all. 🕸️
-
-Remain considerate of others and their time. As you share more about your goals and desires, ideally you have a strong idea of what you want to accomplish to guide you to the right connections. 
-
-If your idea isn't entirely solidified, perhaps they can connect you with someone they know in the domain or working with a similar technology that can help you pinpoint what you're working toward learning. The more you know about your goals, the better the connection could help you get closer to those goals.
-
-There are several ways you can reach outside your network. If you start sharing more, you might be surprised who you or your network will find!
-
-Here are just a few examples. Think outside the box; you might find other avenues that work better for you!
-
-**In-person ideas:**
-
-- **Talk to people you interact with frequently.** This might be family members, friends, neighbors, acquaintances at the grocery store, clubs, your child's school, or other similar places where you interact with other humans.
-- **Attend local events.** These events can be tech-related but don't have to be. As you connect with people outside your normal domain, you might generate new ideas or find connections you had never considered.
-- **Join hackathons.** If you’re lucky enough to have a hackathon in your area, I recommend attending! I’m on the lookout for some myself.
-
-**Virtual ideas:**
-
-- **Leverage social media.** I lean toward [LinkedIn](https://www.linkedin.com/in/mindiweik/) because it's the professional option, but reaching out to folks in your network on other platforms, too, couldn’t hurt. With LinkedIn, you also have an insight advantage, knowing what tech they work with or where they work.
-- **Attend virtual events** - Similar to in-person events, these can be tech-related but don't have to be. There are loads of webinars and networking events online to expand your opportunities.
-- **Open Source** - If you have the time and capacity, consider working on open source projects to expand your skills!
-
-## 😊 Work on your own project(s)
-
-Whether you have a cool idea or find a cool way to play with something new, working on personal project(s) is yet another great option.
-
 > "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.”
 >
 > Michael Jordan
@@ -47,26 +19,6 @@ Whether you have a cool idea or find a cool way to play with something new, work
 Growth takes effort, intentionality, and sometimes a dash of creativity! I started asking more questions, both of myself and to those around me, to brainstorm ideas to put into practice.
 
 > For everything I’ve shared, please remember that we should be **respectful of others**. This is especially true when people are likely going out of their way for us!
-
-> "Don't sit down and wait for the opportunities to come. Get up and make them.”
->
-> Madam CJ Walker
-
-If you’re solely focused on learning, you can have a great time tinkering with new technology, patterns, languages, etc. If no one looks over your shoulder, the world is your oyster; experiment away!
-
-At the same time, this can be tricky. When you work alone, you can gain some odd habits or you may not learn “best practice” techniques. If possible, share your work with someone you like and trust so you can talk through it, discover what you learned, and possibly get some insights from this other person’s perspective.
-
-Better yet, find a friend or two or more to work on a project with. You’ll have camaraderie, multiple brains to pool knowledge to share, and hopefully have fun in the process!
-
-Whatever path (or paths) you choose, there’s opportunity for you waiting behind a door. ***You just have to start opening them!* 🚪**
-
-## 🍀 Still no luck?
-
-I recognize that the above won’t always work or it might just take too much time. It’s worth noting if it is time to [consider leaving your job](https://open.substack.com/pub/thehustlingengineer/p/6-clear-signs-its-time-to-quit-your?utm_source=share&utm_medium=android&r=29u7hv). In several places I’ve come across the reminder that stagnation is a career killer.
-
-Keep learning, keep growing, and challenge yourself. Onward and upward, my friend!
-
-**PS I would love to hear if you try any of these and how they went for you!**
 
 Before asking for help, we should consider what we need and be as specific as possible. If they say no, honor that and check another door.
 
@@ -76,6 +28,8 @@ Before asking for help, we should consider what we need and be as specific as po
 2. 🤝 Don’t underestimate other departments
 3. 🤔 Reach outside your company
 4. 😊 Work on your own project(s)
+
+<!-- MIGRATION TODO: missing image (no caption in original), source: https://substackcdn.com/image/fetch/$s_!NCz3!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0edb5342-ed9e-4227-8320-be96c2609fc3_940x788.png -->
 
 ## 🫵 Look within your own team
 
@@ -123,3 +77,51 @@ Whomever we talk with, we will almost certainly learn something new! Often I am 
 Even if your organization doesn’t openly support this approach, the benefits can far outweigh concerns for lost time or efficiency. Connecting with others expands our understanding of the overall organization, improves our empathy, and helps us think more creatively.
 
 Sometimes asking for forgiveness rather than permission isn’t a bad approach 😉 but use your best judgement!
+
+## 🤔 Reach outside your company
+
+Whether you find someone internally or not, there is almost always someone in your network who can help! Or, someone within your network can connect you with someone in *their* network. It’s all a big web after all. 🕸️
+
+Remain considerate of others and their time. As you share more about your goals and desires, ideally you have a strong idea of what you want to accomplish to guide you to the right connections. 
+
+If your idea isn't entirely solidified, perhaps they can connect you with someone they know in the domain or working with a similar technology that can help you pinpoint what you're working toward learning. The more you know about your goals, the better the connection could help you get closer to those goals.
+
+There are several ways you can reach outside your network. If you start sharing more, you might be surprised who you or your network will find!
+
+Here are just a few examples. Think outside the box; you might find other avenues that work better for you!
+
+**In-person ideas:**
+
+- **Talk to people you interact with frequently.** This might be family members, friends, neighbors, acquaintances at the grocery store, clubs, your child's school, or other similar places where you interact with other humans.
+- **Attend local events.** These events can be tech-related but don't have to be. As you connect with people outside your normal domain, you might generate new ideas or find connections you had never considered.
+- **Join hackathons.** If you’re lucky enough to have a hackathon in your area, I recommend attending! I’m on the lookout for some myself.
+
+**Virtual ideas:**
+
+- **Leverage social media.** I lean toward [LinkedIn](https://www.linkedin.com/in/mindiweik/) because it's the professional option, but reaching out to folks in your network on other platforms, too, couldn’t hurt. With LinkedIn, you also have an insight advantage, knowing what tech they work with or where they work.
+- **Attend virtual events** - Similar to in-person events, these can be tech-related but don't have to be. There are loads of webinars and networking events online to expand your opportunities.
+- **Open Source** - If you have the time and capacity, consider working on open source projects to expand your skills!
+
+## 😊 Work on your own project(s)
+
+Whether you have a cool idea or find a cool way to play with something new, working on personal project(s) is yet another great option.
+
+> "Don't sit down and wait for the opportunities to come. Get up and make them.”
+>
+> Madam CJ Walker
+
+If you’re solely focused on learning, you can have a great time tinkering with new technology, patterns, languages, etc. If no one looks over your shoulder, the world is your oyster; experiment away!
+
+At the same time, this can be tricky. When you work alone, you can gain some odd habits or you may not learn “best practice” techniques. If possible, share your work with someone you like and trust so you can talk through it, discover what you learned, and possibly get some insights from this other person’s perspective.
+
+Better yet, find a friend or two or more to work on a project with. You’ll have camaraderie, multiple brains to pool knowledge to share, and hopefully have fun in the process!
+
+Whatever path (or paths) you choose, there’s opportunity for you waiting behind a door. ***You just have to start opening them!* 🚪**
+
+## 🍀 Still no luck?
+
+I recognize that the above won’t always work or it might just take too much time. It’s worth noting if it is time to [consider leaving your job](https://open.substack.com/pub/thehustlingengineer/p/6-clear-signs-its-time-to-quit-your?utm_source=share&utm_medium=android&r=29u7hv). In several places I’ve come across the reminder that stagnation is a career killer.
+
+Keep learning, keep growing, and challenge yourself. Onward and upward, my friend!
+
+**PS I would love to hear if you try any of these and how they went for you!**

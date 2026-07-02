@@ -14,16 +14,18 @@ It’s fresh, it’s clean, we can do what we want! To some extent, yes, but it�
 
 In my case, I didn’t know just how much we needed [Open Telemetry](https://opentelemetry.io/)! Let’s take a high-level look at what this is and how it can help in most projects.
 
-**There are*** *oversimplifications*** *here to share foundational concepts at a high level.*
+*\*There are **oversimplifications** here to share foundational concepts at a high level.*
 
 **Here, we’ll cover:**
 
 1. 👾 What is Telemetry?
-1. 🤓 Real Example
-  2. 📊 What is Observability?
-  3. 🔭 What is Open Telemetry?
+   1. 🤓 Real Example
+2. 📊 What is Observability?
+3. 🔭 What is Open Telemetry?
 
 *Blasting off!* 🚀
+
+<!-- MIGRATION TODO: missing image (rocket illustration, no caption in original); source: https://substack-post-media.s3.amazonaws.com/public/images/1fc62a8c-6756-4219-b2ca-ab8e793d739c_940x788.png -->
 
 First, I want to share a bit of a story with a fun analogy I enjoyed using in my recent **Denver Gusto Lightning Talks from Women and Folks in Tech** lightning talk! 
 
@@ -34,14 +36,6 @@ Here I have also gone into more detail than I was able to cover in my 5-minute l
 When I started working on one of my first greenfield projects, we were still setting up our CI/CD pipelines for deployments and this was often my task.
 
 We were logging within the application, to be fair. But, when our Kubernetes pods would restart those logs were lost! …More than once! It was frustrating to try to track down issues that popped up in the meantime. We looked into a few solutions, but didn’t find a good one we wanted to fully implement right away.
-
-## 🤓 Real Example
-
-While reviewing some of the data, we noticed in our **metrics** that there were several of requests that were taking give or take an average of ~8 seconds to respond. 
-
-That’s *WAY* too long for what should be a fairly simple request that also didn’t take nearly that long when we developed it! 🤯
-
-I was tasked with figuring out what was going on. I reviewed our **logs** and **traces** for offending events to track down the issue. Essentially, we had multiple similar calls to a vendor that didn’t appear to be necessary and slowed these responses *WAY* down.
 
 > "Debugging without logs is like being a detective at a crime scene where someone cleaned up all the evidence. 🕵️‍♂️ I was still trying to piece together what happened, but without fingerprints, witnesses, or a murder weapon.
 
@@ -59,7 +53,7 @@ It’s not impossible to solve bugs this way. However, it's frustrating, time-co
 
 I like to think of telemetry most simply as a *collection of data*.
 
-But it’s more than just collecting data,especially in the context of OpenTelemetry. Telemetry refers to automatic gathering and sending of data from different parts of your system so you can see how everything is working and catch problems early.
+But it’s more than just collecting data, especially in the context of OpenTelemetry. Telemetry refers to automatic gathering and sending of data from different parts of your system so you can see how everything is working and catch problems early.
 
 This data is also what will be fed into our Observability tooling!
 
@@ -105,6 +99,16 @@ Because we can now see previously invisible bottlenecks, we can identify what to
 
 ***Let’s look at a recent example I encountered!***
 
+## 🤓 Real Example
+
+While reviewing some of the data, we noticed in our **metrics** that there were several of requests that were taking give or take an average of ~8 seconds to respond. 
+
+That’s *WAY* too long for what should be a fairly simple request that also didn’t take nearly that long when we developed it! 🤯
+
+I was tasked with figuring out what was going on. I reviewed our **logs** and **traces** for offending events to track down the issue. Essentially, we had multiple similar calls to a vendor that didn’t appear to be necessary and slowed these responses *WAY* down.
+
+<!-- MIGRATION TODO: missing image (blurry trace screenshot with repeated call highlighted); source: https://substack-post-media.s3.amazonaws.com/public/images/65959e82-fae1-4140-a3f0-4a470b5100a5_500x900.png -->
+
 Blurry for added privacy and to capture all trace events. Highlighted portion = all the same call repeated multiple times
 
 ### ***What was happening?***
@@ -138,10 +142,10 @@ Myriad tools exist for observability, some with more emphasis on certain telemet
 - Splunk
 - Sentry
 - **Cloud-native infrastructure monitoring:**
-- AWS CloudWatch – Native observability for AWS infrastructure.
-- Azure Monitor / Application Insights – Observability for Azure services and apps.
-- Google Cloud Operations Suite (formerly Stackdriver) – GCP's native observability tools.
-  - …and there are more that exist!
+  - AWS CloudWatch – Native observability for AWS infrastructure.
+  - Azure Monitor / Application Insights – Observability for Azure services and apps.
+  - Google Cloud Operations Suite (formerly Stackdriver) – GCP's native observability tools.
+- …and there are more that exist!
 
 The point is, there are a lot of options. To decide, you will also need to know what information is most important to your company, for your software, or whatever other stakeholder so you can capture and display that data most appropriately.
 
@@ -161,15 +165,17 @@ Open Telemetry does a great job of tying together all of the telemetry data so i
 
 In my lightning talk I shared an oversimplified flow.
 
+<!-- MIGRATION TODO: missing image (oversimplified OTel flow slide); source: https://substack-post-media.s3.amazonaws.com/public/images/4cbd4ed5-43be-4b21-8ee1-bf3f4e289dca_4000x3000.jpeg -->
+
 Oversimplified Open Telemetry flow as shown in the presentation
 
 Essentially:
 
 - **Instrumentation -** We begin by adding the code or libraries into our application. 
-- In my case, this is initiated before the server starts up so that we can capture information about the pods or failed startup, if needed.
-  - **Software Development Kit -** The code/libraries then help to collect and organize the data, preparing it for send-off.
-  - **Exporter -** At the end, we send that data to our observability tool via Open Telemetry!
-- It feels a little like magic when you see your data appearing in your tool. Very satisfying!
+  - In my case, this is initiated before the server starts up so that we can capture information about the pods or failed startup, if needed.
+- **Software Development Kit -** The code/libraries then help to collect and organize the data, preparing it for send-off.
+- **Exporter -** At the end, we send that data to our observability tool via Open Telemetry!
+  - It feels a little like magic when you see your data appearing in your tool. Very satisfying!
 
 There are opportunities for customization, but better yet, there are “auto-instrumentation” libraries that exist for most languages to make setup a breeze. We used auto-instrumentations-node in my project and it was well worth the usage for a team just starting to work with OTel! ([npm package link](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node))
 
@@ -178,6 +184,8 @@ Once it’s implemented, Open Telemetry is useful for debugging, maintaining rel
 ## Closing Thoughts
 
 [Open Telemetry](https://opentelemetry.io/) isn’t necessarily super *easy* to use, but it was much easier to work with than I expected!
+
+<!-- MIGRATION TODO: missing image (group photo of speakers and organizers); source: https://substack-post-media.s3.amazonaws.com/public/images/c5df79ad-91aa-4b8d-acd4-85580f89d0bf_4032x3024.jpeg -->
 
 Speakers and Organizers from the Denver Gusto Lightning Talks with Women and Folks in Tech on April 22, 2025 | Left to Right: Mindi Weik, Kseniya Lifanova, Margaret Sabelhaus, Lisa Barcelo, Tori Huang, Alejandra Dominguez, Christine Lee | Second Row: Liz Donovan, Vui Nguyen
 
@@ -194,3 +202,7 @@ It feels like our real example was resolved much faster than it would have been 
 If you haven’t yet, but you want to improve your understanding of your application adn its actions, I highly recommend Open Telemetry! 😁
 
 ## 👀 BONUS: Recording
+
+<div style="margin:1.2rem 0;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+  <iframe src="https://www.youtube-nocookie.com/embed/s3JYirx26s8" title="How to See the Invisible: Intro to OpenTelemetry" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+</div>

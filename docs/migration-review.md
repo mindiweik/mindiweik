@@ -26,30 +26,30 @@ Check off each page as you approve it. Ordered oldest → newest (review order).
 - [x] learning: it’s better together
 - [x] failing fast
 - [x] mongoose subdocuments & discriminators
-- [ ] clean code by robert c. martin
-- [ ] how to start working with ai
-- [ ] fundamentals of backend engineering course review
-- [ ] peek behind the bootcamp curtain
-- [ ] experiences with a local gitlab runner: part 1
-- [ ] learning typescript
-- [ ] feeling inadequate is okay
+- [x] clean code by robert c. martin
+- [x] how to start working with ai
+- [x] fundamentals of backend engineering course review *(image pending, see followups)*
+- [x] peek behind the bootcamp curtain
+- [x] experiences with a local gitlab runner: part 1 *(images pending, see followups)*
+- [x] learning typescript *(images pending, see followups)*
+- [x] feeling inadequate is okay
 - [ ] the power of career change
 - [ ] experiences with a local gitlab runner: part 2
-- [ ] 3 big, scary software engineering words explained
+- [x] 3 big, scary software engineering words explained
 - [ ] exploring typescript: ts compiler
 - [ ] exploring typescript: runtime
 - [ ] the software engineer's guidebook review
 - [ ] dependencies or dev dependencies, that is the question
 - [ ] capturing curiosity
 - [ ] typescript primitive types explained
-- [ ] 3 habits that helped me recover from burnout and stay motivated
+- [x] 3 habits that helped me recover from burnout and stay motivated
 - [ ] jmeter performance testing: part 1
 - [ ] opportunity is knocking
 - [ ] jmeter performance testing: part 2
-- [ ] the hidden currency of connection
+- [x] the hidden currency of connection
 - [ ] what's the difference?!
 - [ ] the importance of open telemetry
-- [ ] ✨ introducing... [wip]
+- [x] ✨ introducing... [wip]
 - [ ] building a compass
 - [ ] unlocking your browser
 - [ ] your new best friend, the console

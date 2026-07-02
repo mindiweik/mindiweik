@@ -6,14 +6,6 @@ tags: ["javascript","fundamentals"]
 readingTime: 6
 ---
 
-## 🧑🏾‍💻 What is a Dev Dependency?
-
-Now that we’ve established what a dependency is, let’s look at the other side of the equation - devDependencies. The devDependencies packages are specifically used for **local development and testing**. 
-
-In other words, if there is a package or module you only need to use during development, and your app doesn’t need it when deployed into the wild, that package should be added under the devDependencies object in your package.json file.
-
-Here are a few packages we regularly use for Node API projects, along with the “oops” package, which we’ll talk about toward the end:
-
 I, a human coder, made a silly mistake. There was a time when I moved a package in our project’s package.json file from the dependencies section to the devDependencies section because it made sense to me then. How wrong I was!
 
 Thankfully, it didn’t have a huge impact; it was for a developer tool and a new-to-us package. The issue resulting from the change was caught quickly. We rectified it with ease, and we all lived happily ever after.
@@ -25,6 +17,7 @@ However, I know I’m not the only one to fall into this trap. I thought it woul
 1. 📂 Package & Module Definitions
 2. 💎 What is a Dependency?
 3. 🧑🏾‍💻 What is a Dev Dependency?
+
 **I’ll share some examples and my story. We’ll keep it simple.** 😉
 
 ## 📂 Package & Module Definitions
@@ -58,15 +51,6 @@ The key thing to note is that these packages should be **needed to run in produc
 Here are a few packages we regularly use for Node API projects:
 
 ```js
-"devDependencies": {
-  "@bugsnag/js": "^8.1.2", // my offending "oops"
-  "c8": "^10.1.2",
-  "eslint": "^9.14.0",
-  "typescript": "^5.6.3"
-}
-```
-
-```js
 "dependencies": {
   "express": "^4.21.1",
   "pino": "^9.5.0",
@@ -88,6 +72,23 @@ And Zod? Especially because we use TypeScript in my team projects, a more strict
 
 Hopefully these examples provide a bit more context. To reiterate, when we need to use a package in the production deployment or if a tool is needed to interact with or validate user input, this is usually an indicator that your package needs to be located in the dependencies list.
 
+## 🧑🏾‍💻 What is a Dev Dependency?
+
+Now that we’ve established what a dependency is, let’s look at the other side of the equation - devDependencies. The devDependencies packages are specifically used for **local development and testing**. 
+
+In other words, if there is a package or module you only need to use during development, and your app doesn’t need it when deployed into the wild, that package should be added under the devDependencies object in your package.json file.
+
+Here are a few packages we regularly use for Node API projects, along with the “oops” package, which we’ll talk about toward the end:
+
+```js
+"devDependencies": {
+  "@bugsnag/js": "^8.1.2", // my offending "oops"
+  "c8": "^10.1.2",
+  "eslint": "^9.14.0",
+  "typescript": "^5.6.3"
+}
+```
+
 **Let’s start with the packages that belong here.**
 
 If you’re unfamiliar with these packages, here is the gist: [C8](https://github.com/bcoe/c8) is a tool we use to check our test coverage natively in Node. [Eslint](https://eslint.org/) is a popular linting utility tool to ensure your project follows the standards you put into place in your config file. This will typically follow your team or organization’s determined linting rules. [TypeScript](https://www.typescriptlang.org/), which I’ve already mentioned, is a language that happens to be a superset (or added features on top of) of JavaScript.
@@ -96,7 +97,7 @@ C8 is purely for our internal purposes. Tests are frequently run locally, in dev
 
 Similarly, eslint is not something our users should know about. They won’t be looking at our codebase, and it’s unlikely that users would know enough about code - or our particular codebase or domain - to nitpick on our cohesive linting. Unless you’re working on an open-source project. But that’s a different story.
 
-What about TypeScript? One could argue that you would need *some* level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](https://codeoutloud.substack.com/p/exploring-typescript-runtime?r=29u7hv)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](https://codeoutloud.substack.com/p/exploring-typescript-ts-complier?r=29u7hv).
+What about TypeScript? One could argue that you would need *some* level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](/blog/exploring-typescript-runtime)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](/blog/exploring-typescript-ts-compiler).
 
 **Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in** dependencies **to** devDependencies**.**
 
@@ -121,8 +122,8 @@ If you want more details, I used these sources to help me refine my thoughts and
 - [npm - About Packages and Modules](https://docs.npmjs.com/about-packages-and-modules)
 - [npm - Specifying dependencies and devDependencies in a package.json file](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file)
 - [DhiWise - Mastering Package Management: DevDependencies vs. Dependencies](https://www.dhiwise.com/post/package-management-devdependencies-vs-dependencies)
-- A great, in-depth article. **BONUS**: They also discuss peerDependencies!
-  - [Stack Overflow - An old, but incredibly helpful question and answer](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencie#:~:text=Summary%20of%20important%20behavior%20differences%3A)
-- **BONUS**: peerDependencies mentioned here
-  - [Geeks for Geeks - Difference between dependencies, devDependencies and peerDependencies](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/)
-- **BONUS**: peerDependencies mentioned + a useful table!
+  - A great, in-depth article. **BONUS**: They also discuss peerDependencies!
+- [Stack Overflow - An old, but incredibly helpful question and answer](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencie#:~:text=Summary%20of%20important%20behavior%20differences%3A)
+  - **BONUS**: peerDependencies mentioned here
+- [Geeks for Geeks - Difference between dependencies, devDependencies and peerDependencies](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/)
+  - **BONUS**: peerDependencies mentioned + a useful table!

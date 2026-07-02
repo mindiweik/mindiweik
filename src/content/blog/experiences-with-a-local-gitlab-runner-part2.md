@@ -6,51 +6,9 @@ tags: ["devops","ci-cd"]
 readingTime: 5
 ---
 
-## 💡 Lessons Learned
+*We won't discuss CI/CD or setting up a GitLab Runner here. For this information, please refer to [Part 1.](/blog/experiences-with-a-local-gitlab-runner-part-1)*
 
-This second part of the journey certainly had ups and downs. I gave a quick snapshot above, but there was so much time spent reading articles, documentation, and tutorials, plus ample Google searching to try to pinpoint the right methods to make everything work well together. 
-
-**I have 3 key takeaways from this portion of the local GitLab Runner experience:**
-
-1. Sometimes, a setback can propel your overall development.
-2. Don’t forget to read beyond the surface details.
-3. Keep going, even when it’s hard. The reward awaits!
-
-### Sometimes, a setback can propel overall development.
-
-There’s such a thing as the [sunk cost fallacy](https://thedecisionlab.com/biases/the-sunk-cost-fallacy). I’m sure you’ve heard of it. I fell into this trap, too, and didn’t want to pivot after I invested a lot of time on a solution already.
-
-When I corrupted my Pi it actually forced me to take a step back and reconsider the problem. I had to start fresh with a new architecture and OS and this turned out to be more helpful than I initially realized.
-
-Without being stopped in my tracks, I may have kept banging my head against the wall trying to get the unsupported architecture to work (countless hours had already been paid toward this battle). I didn’t want to give up!
-
-But it was never going to work, honestly. Starting over gave me a new perspective that allowed me to get where I needed to be much faster than I likely would have otherwise.
-
-### Don’t forget to read beyond the surface details.
-
-Errors always provide clues. It’s not that you have to read between the lines, but read them carefully!
-
-I hate to admit it, but I struggled to resolve the issues with the unsupported Pi architecture and the Mac/Linux case-sensitivity conundrum for far too long. I half-read the error messages and assumed I understood what they meant. Then I went around in circles trying to solve for things that actually weren’t even close to resolving my issues in hindsight.
-
-Always, always, always read the messages thoroughly and don’t be afraid to Google your exact error. 
-
-Some of the hits may not match exactly what you need for your own situation, but often I’ve found that reading others’ results can help point to the right direction of what to look into next to try to solve my particular brand of the issue.
-
-### **Keep going, even when it’s hard. The reward awaits!**
-
-Although this migration to the Raspberry Pi took time and effort, it’s been one of my happiest and more rewarding moments as a software engineer.
-
-I absolutely love a challenge. The harder to unravel, the more I want to see the end result. And overall, this one was a doozy for me.
-
-Even when I would make some progress, I would hit another wall. It was hard, but I wanted to see this conclusion so I kept pushing myself. *And, my partner helped keep my spirits up when things got hard. I appreciated that!*
-
-**Once I finally got everything working smoothly, I celebrated that hard work**. Now, I smile a little when I hear the fan and know it’s working behind the scenes or when I submit a PR and it quickly hits the pipeline to show that satisfying green checkmark. 🥹
-
-*We won't discuss CI/CD or setting up a GitLab Runner here. For this information, please refer to [Part 1.](/07-experiences-with-a-local-gitlab-runner-part-1)*
-
-## Quick Recap
-
-I wanted to set up a CI pipeline to improve the team’s development speed while working on a side project with my team. I also wanted to do simple checks to ensure we wouldn't break anything obvious when merging to main! 
+**Quick recap:** I wanted to set up a CI pipeline to improve the team’s development speed while working on a side project with my team. I also wanted to do simple checks to ensure we wouldn't break anything obvious when merging to main! 
 
 Let’s find out how it went after the initial setup…
 
@@ -61,9 +19,11 @@ Let’s find out how it went after the initial setup…
 3. 🔄 Current Usage
 4. 💡 Lessons Learned
 
+<!-- MIGRATION TODO: missing "Part 2" header image, source: https://substack-post-media.s3.amazonaws.com/public/images/1f14291f-1c49-411a-8ab2-75be2260e8c5_940x788.png -->
+
 ## 🧩 First Local Success and Challenge
 
-**Success:** If you read [Part 1](/07-experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
+**Success:** If you read [Part 1](/blog/experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
 
 The CI pipeline ran smoothly and caught a few issues before merging to main. It was doing its job. 🎉
 
@@ -107,8 +67,48 @@ And THEN, it was safe to celebrate when the pipeline jobs turned green again whi
 
 The Raspberry Pi is plugged in and sits to the side of my office workspace in a position that limits fan noise. 
 
-The Runner is always open because computing resources are now dedicated to this purpose. This means that our merge requests always go right through the CI pipeline,this happens automatically and without any thought!
+The Runner is always open because computing resources are now dedicated to this purpose. This means that our merge requests always go right through the CI pipeline - this happens automatically and without any thought!
 
 After getting everything set up properly, I’ve had to move the device's location a few times. Resetting the machine or reconnecting to Wi-Fi during these changes wasn’t as much of a hinderance as I expected. It all reconnects without much issue, and it’s easy to connect a monitor and keyboard/mouse to interact as needed.
 
 Otherwise, the Raspberry Pi is essentially left running with limited effort and power usage. We recently installed solar panels that can cover more than our household usage; I don’t feel I’m wasting energy keeping a small server running! ⚡️
+
+## 💡 Lessons Learned
+
+This second part of the journey certainly had ups and downs. I gave a quick snapshot above, but there was so much time spent reading articles, documentation, and tutorials, plus ample Google searching to try to pinpoint the right methods to make everything work well together. 
+
+**I have 3 key takeaways from this portion of the local GitLab Runner experience:**
+
+1. Sometimes, a setback can propel your overall development.
+2. Don’t forget to read beyond the surface details.
+3. Keep going, even when it’s hard. The reward awaits!
+
+### Sometimes, a setback can propel overall development.
+
+There’s such a thing as the [sunk cost fallacy](https://thedecisionlab.com/biases/the-sunk-cost-fallacy). I’m sure you’ve heard of it. I fell into this trap, too, and didn’t want to pivot after I invested a lot of time on a solution already.
+
+When I corrupted my Pi it actually forced me to take a step back and reconsider the problem. I had to start fresh with a new architecture and OS and this turned out to be more helpful than I initially realized.
+
+Without being stopped in my tracks, I may have kept banging my head against the wall trying to get the unsupported architecture to work (countless hours had already been paid toward this battle). I didn’t want to give up!
+
+But it was never going to work, honestly. Starting over gave me a new perspective that allowed me to get where I needed to be much faster than I likely would have otherwise.
+
+### Don’t forget to read beyond the surface details.
+
+Errors always provide clues. It’s not that you have to read between the lines, but read them carefully!
+
+I hate to admit it, but I struggled to resolve the issues with the unsupported Pi architecture and the Mac/Linux case-sensitivity conundrum for far too long. I half-read the error messages and assumed I understood what they meant. Then I went around in circles trying to solve for things that actually weren’t even close to resolving my issues in hindsight.
+
+Always, always, always read the messages thoroughly and don’t be afraid to Google your exact error. 
+
+Some of the hits may not match exactly what you need for your own situation, but often I’ve found that reading others’ results can help point to the right direction of what to look into next to try to solve my particular brand of the issue.
+
+### **Keep going, even when it’s hard. The reward awaits!**
+
+Although this migration to the Raspberry Pi took time and effort, it’s been one of my happiest and more rewarding moments as a software engineer.
+
+I absolutely love a challenge. The harder to unravel, the more I want to see the end result. And overall, this one was a doozy for me.
+
+Even when I would make some progress, I would hit another wall. It was hard, but I wanted to see this conclusion so I kept pushing myself. *And, my partner helped keep my spirits up when things got hard. I appreciated that!*
+
+**Once I finally got everything working smoothly, I celebrated that hard work**. Now, I smile a little when I hear the fan and know it’s working behind the scenes or when I submit a PR and it quickly hits the pipeline to show that satisfying green checkmark. 🥹

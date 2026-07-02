@@ -6,12 +6,6 @@ tags: ["career","mindset"]
 readingTime: 3
 ---
 
-## 🎧 A truly excellent podcast episode
-
-Although Women Who Code is closing down, I’ve learned a lot from the experiences, including the podcast they’ve run for the last several years,one episode in particular hits home during these times.
-
-“Career Nav #13: Using Conflict Fluency Skills to Create Inclusive Workspaces” with guest [Noelle Notermann](https://www.linkedin.com/in/noellenotermann/):
-
 If you haven’t heard that working in tech can bring out feelings of inadequacy or imposter syndrome, you may live under a rock. It’s par for the course in engineering. I’ve heard warnings about it hundreds of times since entering tech.
 
 I thought I knew the signs and all the approaches to avoid it.
@@ -58,17 +52,25 @@ Everyone feels like an impostor sometimes. It’s a sign that we are growing and
 
 It doesn’t feel great right now, but if we keep going, our destination will most likely surprise us!
 
-It was initially called the “Imposter phenomenon” in the 1970s research. 
+## 🎧 A truly excellent podcast episode
+
+Although Women Who Code is closing down, I’ve learned a lot from the experiences, including the podcast they’ve run for the last several years, one episode in particular hits home during these times.
+
+“Career Nav #13: Using Conflict Fluency Skills to Create Inclusive Workspaces” with guest [Noelle Notermann](https://www.linkedin.com/in/noellenotermann/):
+
+<iframe style="border-radius:12px;margin:0.4rem 0 1.4rem" src="https://open.spotify.com/embed/episode/6CjYwsyFlhCNrJGF3H7fKn" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+It was initially called the “Imposter phenomenon” in the 1970s research.
 
 ***Why is this important?***
 
 “Syndrome” indicates a long-term experience, whereas a “phenomenon” is short and fleeting. These feelings may come and go, but they are typically short in the grand scheme of the overall experience, and this discomfort won’t last forever.
 
-Additionally, this episode provides many tangible concepts and helps put the typical “imposter syndrome” feelings into perspective. It’s a great listen if you can get to it sooner rather than later,I can’t guarantee the podcast will live on.
+Additionally, this episode provides many tangible concepts and helps put the typical “imposter syndrome” feelings into perspective. It’s a great listen if you can get to it sooner rather than later, I can’t guarantee the podcast will live on.
 
 ## Conclusion
 
-Acknowledging and identifying the discomfort is the first step. 
+Acknowledging and identifying the discomfort is the first step.
 
 Working through the challenges we face is the hardest part.
 

@@ -18,6 +18,7 @@ This is Part 3 of a 4-part series:
 2. Your New Best Friend: The Console
 3. **What's Actually Happening: Network & Application (you are here! 👋)**
 4. Level Up: Sources, Performance & Your Playground
+
 Let's get into it.
 
 ## The Network tab
@@ -44,6 +45,7 @@ Before we start breaking things on purpose, a quick cheat sheet:
 - **422** - unprocessable entity. The data you sent was valid JSON but failed validation.
 - **500** - server error. Something blew up on the backend.
 - **503** - service unavailable. The server is down or overloaded.
+
 You'll see these in the Network tab. Learning to read them is half the debugging battle.
 
 ## A working request, then some chaos
@@ -121,6 +123,27 @@ Click **Local storage** in the sidebar, then click your domain. You'll see a tab
 - **Click a value** to edit it in place
 - **Right-click** to delete an entry
 - **Add new entries** with the "+" button
+
 This is incredibly useful for debugging auth or other workflows. If you're logged in and something is acting weird, check your cookies for your session token. Is it there? Is it expired? Is it malformed? The Application tab will show you.
 
 Real-world example: you're building a theme toggle. Light mode, dark mode, whatever. You store the preference in localStorage as `theme: "dark"`. If the toggle isn't working, open the Application tab and check: is the value actually being set? Is it being read correctly? You can manually change the value and refresh to test both states without touching your code.
+
+## Your Catz4Life challenge 🐱
+
+Back to the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life). Open the project and the Network tab at the same time. Somewhere in the app there's a broken API call. Watch the Network tab as you interact with the page and find the failed request to figure out what went wrong.
+
+Then check the Application tab. There's a theme toggle buried in the UI. Find where it stores its state, change the value manually, and see what happens on refresh.
+
+Hints mode is still there if you need it: `HINTS = true` in `script.js`.
+
+## What's next
+
+In Part 4 (the finale!), we're covering Sources, Performance, and Lighthouse plus a full guided walkthrough of the Catz4Life sandbox with all the bugs called out by tab.
+
+But before you get there: next time an API call isn't working, open the Network tab before you change a single line of code. The answer is almost always already there.
+
+Happy debugging. 💖
+
+*Questions, lightbulb moments, war stories about CORS? Let me know!*
+
+← [Part 2: Your New Best Friend: The Console](/blog/your-new-best-friend-the-console) | [Part 4: Level Up](/blog/level-up-sources-performance-and-your-playground) →

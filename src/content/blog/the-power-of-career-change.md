@@ -6,9 +6,9 @@ tags: ["career"]
 readingTime: 5
 ---
 
-***This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024.* **
+***This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024.***
 
-***So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar.* **
+***So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar.***
 
 ***Please enjoy and let me know if you have any questions or if I missed anything!***
 
@@ -16,20 +16,22 @@ I found tech later in life, as many others have. Let’s start with a brief care
 
 - Undergrad communication degree: public speaking, PR, interpersonal and organizational communication
 - Non-profit program director and aquatics director
-- The long hours and hard finances quickly burned me out.
-  - Real estate assistant
-- My boss and I created a real estate marketing “side hustle.”
-  - Side hustles
-- A creative outlet: licensed drone pilot, built websites, photographed homes, created print materials, and operated a 3D camera.
-- Gig work: home showings, attended inspections/contractor meetings.
-  - COVID-19 challenges and contemplation
-- Real estate and marketing weren’t for me. “Solopreneur” contract work is unstable.
-- Tech drew me in; I tried self-learning to code.
-  - Small, remote SaaS company building real estate tools/websites
-- Start in Support, take every technical opportunity to slingshot my way to the technical side.
-- After two years of trying to code on my own, I needed the accountability of a bootcamp to reach a higher technical level.
-  - Year four with the same company
-- I was a Platform Expert and Onboarding Manager and then I moved into a Software Engineer role last May!
+  - The long hours and hard finances quickly burned me out.
+- Real estate assistant
+  - My boss and I created a real estate marketing “side hustle.”
+- Side hustles
+  - A creative outlet: licensed drone pilot, built websites, photographed homes, created print materials, and operated a 3D camera.
+  - Gig work: home showings, attended inspections/contractor meetings.
+- COVID-19 challenges and contemplation
+  - Real estate and marketing weren’t for me. “Solopreneur” contract work is unstable.
+  - Tech drew me in; I tried self-learning to code.
+- Small, remote SaaS company building real estate tools/websites
+  - Start in Support, take every technical opportunity to slingshot my way to the technical side.
+  - After two years of trying to code on my own, I needed the accountability of a bootcamp to reach a higher technical level.
+- Year four with the same company
+  - I was a Platform Expert and Onboarding Manager and then I moved into a Software Engineer role last May!
+
+<!-- MIGRATION TODO: image (career snapshot graphic, 940x788) that followed this list on Substack was not migrated; source: https://substack-post-media.s3.amazonaws.com/public/images/e5a20d5b-0360-4b2a-a23a-f3ec8c445cf1_940x788.png -->
 
 ## **Lessons Learned**
 
@@ -87,7 +89,7 @@ These decisions are very personal. Trust in yourself, your wants, and your goals
 
 ## **#5 - Intentional work, better than hard work**
 
-It’s easy to fall into working hard without direction.[Take it from Arit!](https://www.youtube.com/watch?v=pe5fb4t_JDw) *(← A Women Who Code video ~1 hour long with some tremendously useful stories and advice!)*
+It’s easy to fall into working hard without direction. [Take it from Arit!](https://www.youtube.com/watch?v=pe5fb4t_JDw) *(← A Women Who Code video ~1 hour long with some tremendously useful stories and advice!)*
 
 I worked hard as a real estate assistant. When I first entered tech, I worked hard in Support, trying to prove - mainly to myself - that if I worked harder, I would become more technical.
 

@@ -6,18 +6,6 @@ tags: ["typescript","learning"]
 readingTime: 5
 ---
 
-## 💻 Udemy: TypeScript 5 for Developers by Alex Dan
-
-Generally, I appreciate repetition in my learning. 
-
-I found [TypeScript 5 for Developers](https://www.udemy.com/course/typescript-full-stack-programming/?couponCode=ST8MT40924) on [Udemy](https://www.udemy.com/) by [Alex Dan](https://www.linkedin.com/in/alex-dan-02598a137?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACFtJ50B6aaQ7qIcbN88GJz13jVmTL9AQRY&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bs89i5unCQlia%2F4aPZ4hsEA%3D%3D). I took this course over the same time I was reading *Programming TypeScript* and *Effective TypeScript* and it happened to time out well to reinforce my learnings!
-
-I would read about a concept and then within some short time, I would come across a similar concept in the course…or sometimes the other way around.
-
-In this way, I was hitting all the bases for learning: repetitionof concepts, read it statically, watch it “live” in a code editor, hear about it from a knowledgeable source, and practice the concepts in my daily work through small, local code edit tests. 
-
-I haven’t done a review of this course, like I did with the [Fundamentals of Backend Engineering](https://codeoutloud.substack.com/p/fundamentals-of-backend-engineering?r=29u7hv) course, but I would give it a similar review. The value was high (I also actually bought the TypeScript course in the same sale), the content was manageable and informative, and I learned a lot!
-
 My initial developer training consisted of mainly JavaScript. When I began a role using TypeScript, I wanted to learn best practices and how to work well as quickly as possible. 
 
 That said, true learning takes time. I have to remember to be patient and that practice makes me better each time I do it! I’m about a year in and I wanted to share what’s helped me the most during this time.
@@ -46,6 +34,34 @@ I’ve taken a look at other Scrimba courses since taking this particular course
 
 ## 📖 Programming TypeScript by Boris Cherny
 
+A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful. 
+
+Even though I had been working with TypeScript for a couple of months when I received the book, these concepts were essential to solidifying my foundation. Even the seemingly simple details that are core to the functionality have deeper descriptions embedded and some helpful use cases to build better understanding.
+
+As the book moves forward, more advanced concepts and examples are provided, too, so regardless of level of experience with TypeScript there is sure to be something for everyone to take away!
+
+## 🤓 Effective TypeScript by Dan Vanderkam
+
+I felt this book had more tangible and actionable advice, tips, and examples. *Programming TypeScript* felt better at providing that aforementioned foundation and underlying concepts.
+
+This book was also broken into 62 very specific ways to get better at TypeScript, making it very easy to pick up, read one “item,” and then put it down to practice it.
+
+I’ve also [mentioned on LinkedIn](https://www.linkedin.com/posts/mindiweik_todoist-a-to-do-list-to-organize-your-work-activity-7179515177124462594-jaF3?utm_source=share&utm_medium=member_desktop) that I use [ToDoist](https://todoist.com/). Once I figured out the groove and commitment, I was able to put in a (mostly) daily task to complete an “item” each day. This helped keep motivation to move toward completion when it was in such digestible chunks!
+
+I’ll refer back to this book, in particular, to take a look at it’s very specific examples and suggestions when I run into any issues or need inspiration to solve a problem.
+
+## 💻 Udemy: TypeScript 5 for Developers by Alex Dan
+
+Generally, I appreciate repetition in my learning. 
+
+I found [TypeScript 5 for Developers](https://www.udemy.com/course/typescript-full-stack-programming/?couponCode=ST8MT40924) on [Udemy](https://www.udemy.com/) by [Alex Dan](https://www.linkedin.com/in/alex-dan-02598a137?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACFtJ50B6aaQ7qIcbN88GJz13jVmTL9AQRY&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bs89i5unCQlia%2F4aPZ4hsEA%3D%3D). I took this course over the same time I was reading *Programming TypeScript* and *Effective TypeScript* and it happened to time out well to reinforce my learnings!
+
+I would read about a concept and then within some short time, I would come across a similar concept in the course…or sometimes the other way around.
+
+In this way, I was hitting all the bases for learning: repetition of concepts, read it statically, watch it “live” in a code editor, hear about it from a knowledgeable source, and practice the concepts in my daily work through small, local code edit tests. 
+
+I haven’t done a review of this course, like I did with the [Fundamentals of Backend Engineering](/blog/fundamentals-of-backend-engineering-course-review) course, but I would give it a similar review. The value was high (I also actually bought the TypeScript course in the same sale), the content was manageable and informative, and I learned a lot!
+
 ## 💪 Lots of Practice
 
 This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the ***most*** helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
@@ -63,19 +79,3 @@ Working on another team showed me even greater variation of styles and practices
 I’ve been keeping my eye out for more opportunities to work on other projects. One open source project has caught my attention, but I also need to figure out a good balance for myself to be able to contribute to more while also working, contributing to the side project, having a life, and writing this lovely, informative blog!
 
 **I’ll get there soon enough!** 🤩
-
-A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful. 
-
-Even though I had been working with TypeScript for a couple of months when I received the book, these concepts were essential to solidifying my foundation. Even the seemingly simple details that are core to the functionality have deeper descriptions embedded and some helpful use cases to build better understanding.
-
-As the book moves forward, more advanced concepts and examples are provided, too, so regardless of level of experience with TypeScript there is sure to be something for everyone to take away!
-
-## 🤓 Effective TypeScript by Dan Vanderkam
-
-I felt this book had more tangible and actionable advice, tips, and examples. *Programming TypeScript* felt better at providing that aforementioned foundation and underlying concepts.
-
-This book was also broken into 62 very specific ways to get better at TypeScript, making it very easy to pick up, read one “item,” and then put it down to practice it.
-
-I’ve also [mentioned on LinkedIn](https://www.linkedin.com/posts/mindiweik_todoist-a-to-do-list-to-organize-your-work-activity-7179515177124462594-jaF3?utm_source=share&utm_medium=member_desktop) that I use [ToDoist](https://todoist.com/). Once I figured out the groove and commitment, I was able to put in a (mostly) daily task to complete an “item” each day. This helped keep motivation to move toward completion when it was in such digestible chunks!
-
-I’ll refer back to this book, in particular, to take a look at it’s very specific examples and suggestions when I run into any issues or need inspiration to solve a problem.

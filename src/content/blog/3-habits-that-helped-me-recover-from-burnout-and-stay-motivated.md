@@ -6,51 +6,14 @@ tags: ["burnout","mindset"]
 readingTime: 6
 ---
 
-Photo by Brett Jordan on Unsplash
-
-> "If you can get one percent better each day for one year, you'll end up thirty-seven times better by the time you're done.”
->
-> James Clear, Atomic Habits
-
-“Atomic Habits” is one of my favorite reads from last year. Much of its advice feels like common sense. However, that advice is often forgotten. We rarely enact this common sense.
-
-The two concepts that helped me most:
-
-1. The 4 laws of behavior change
-2. Habit Stacking
-
-### **The 4 laws of behavior change**
-
-Reflect on your goals, resolutions, or intentions and brainstorm ideas to make them slightly easier to accomplish. The more you break it down, the easier to start building momentum, however microscopic it may feel.
-
-The 4 laws of behavior change are:
-
-1. **Cue:** Make it obvious
-2. **Craving:** Make it attractive
-3. **Response:** Make it easy
-4. **Reward:** Make it satisfying
-
-Let’s use a common resolution to start an exercise habit to gain measurable strength or lose a certain amount of weight.
-
-**Cue:** We might use an alarm or do this during lunch. Find a consistent way to make it obvious that it is time to head to the gym or outside for exercise!
-
-**Craving:** We may feel energized to burn some energy. Perhaps if we exercise at lunch we feel a craving to blow off some steam.
-
-**Response:** For a morning alarm, this might be prepping workout clothes near the bed. If we choose lunch and work remote, it may be easiest to step outside, put on a video, or have home equipment rather than heading to another location.
-
-**Reward:** We are relaxed and enjoy the endorphins we released!
-
-Even if we only make it to the gym at first, roll out a yoga mat, or put on some shoes, this is a small step in the right direction. Do a few minutes next, then a few more. Quickly your habit begins to form. Starting is the hardest part; don’t be too hard on yourself in the beginning and allow organic growth over time.
-
-→ Bonus tip: Reverse the 4 laws of change to break a bad habit!
-
 ## ICYMI I had the pleasure of writing a guest spot...
 
 ...for my friend, David Weiss' newsletter called [Besides Code](https://www.besidescode.com/)! It was enjoyable to be a little vulnerable. I hope you'll check out his newsletter if you're not already following it - he shares excellent tips, advice, and stories to help with growth, communication, and leadership skills. 😁
 
-- [Mindi Weik](https://www.linkedin.com/in/mindiweik/)
+[Mindi Weik](https://www.linkedin.com/in/mindiweik/)
 
 ### [Link to Original Post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
+
 
 *I’m happy to share this guest post from my friend,* [Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
 
@@ -96,6 +59,7 @@ The best way to do this is to pause and evaluate each plate. To be most effectiv
 - What’s the best that could happen if I drop this plate?
 - Am I spinning this plate for myself or someone else?
 - What do I *want* to accomplish?
+
 Compare the plates. Is our hands-on side project work the most important? Or is time better spent working to improve effectiveness at work?
 
 The individual decision varies, but it’s important to examine thoroughly to identify if you spend your time where you desire or need to. Then you can drop plates that don’t help you progress or are okay to drop. Like a plastic plate that can easily be picked up later, maybe it’s reading a technical book or a personal project you can pause and resume in a few weeks or months.
@@ -107,12 +71,13 @@ If you get anywhere close to burnout, it’s time for a break. Full stop.
 This was difficult for me. I worked and learned during the day; during nights, weekends, and breaks in the workday I would:
 
 - build and learn more things
-- write[Substack](https://codeoutloud.substack.com/) articles
+- write [Substack](https://codeoutloud.substack.com/) articles
 - engage with my [LinkedIn](https://linkedin.com/in/mindiweik) network
 - organize, promote, and host women in tech events
 - read informative books or articles
 - work on conference or low-key talks
 - …and handfuls of similar things plus balancing time with friends, family, and myself.
+
 ☝️ This is a list with too many plates.
 
 To pinpoint what to drop, I paused everything for roughly 2-3 months. I found opportunities to step away from work, take a trip, enjoy a staycation, and find quiet space after my workday.
@@ -122,6 +87,42 @@ This space helped me think about what I *wanted* to accomplish and which plates 
 ## **Start Small**
 
 We shifted; we’re ready to regain motivation and resume growth! But how can we do that?
+
+> "If you can get one percent better each day for one year, you'll end up thirty-seven times better by the time you're done.”
+>
+> James Clear, Atomic Habits
+
+“Atomic Habits” is one of my favorite reads from last year. Much of its advice feels like common sense. However, that advice is often forgotten. We rarely enact this common sense.
+
+The two concepts that helped me most:
+
+1. The 4 laws of behavior change
+2. Habit Stacking
+
+### **The 4 laws of behavior change**
+
+Reflect on your goals, resolutions, or intentions and brainstorm ideas to make them slightly easier to accomplish. The more you break it down, the easier to start building momentum, however microscopic it may feel.
+
+The 4 laws of behavior change are:
+
+1. **Cue:** Make it obvious
+2. **Craving:** Make it attractive
+3. **Response:** Make it easy
+4. **Reward:** Make it satisfying
+
+Let’s use a common resolution to start an exercise habit to gain measurable strength or lose a certain amount of weight.
+
+**Cue:** We might use an alarm or do this during lunch. Find a consistent way to make it obvious that it is time to head to the gym or outside for exercise!
+
+**Craving:** We may feel energized to burn some energy. Perhaps if we exercise at lunch we feel a craving to blow off some steam.
+
+**Response:** For a morning alarm, this might be prepping workout clothes near the bed. If we choose lunch and work remote, it may be easiest to step outside, put on a video, or have home equipment rather than heading to another location.
+
+**Reward:** We are relaxed and enjoy the endorphins we released!
+
+Even if we only make it to the gym at first, roll out a yoga mat, or put on some shoes, this is a small step in the right direction. Do a few minutes next, then a few more. Quickly your habit begins to form. Starting is the hardest part; don’t be too hard on yourself in the beginning and allow organic growth over time.
+
+→ Bonus tip: Reverse the 4 laws of change to break a bad habit!
 
 ### **Habit Stacking**
 
@@ -146,10 +147,10 @@ I’ll leave you with some helpful ideas. We can reframe our self-talk. I like t
 Here are some examples:
 
 - We wouldn’t tell a good friend that they are foolish to start a new project or bad at a new hobby right after starting, right?
-- **What we can say instead:** “I am learning a new craft. I will get better with time.”
-  - We wouldn’t tell our good friend they are terrible because they made a simple mistake.
-- **What we can say instead:** “I am allowed to make mistakes, we all do! They are growth opportunities.”
-  - We also wouldn’t tell a friend that they’re not smart or capable enough to understand a problem.
-- **What we can say instead:** “I don’t have to know everything right away. I can break it down step by step.”
+  - **What we can say instead:** “I am learning a new craft. I will get better with time.”
+- We wouldn’t tell our good friend they are terrible because they made a simple mistake.
+  - **What we can say instead:** “I am allowed to make mistakes, we all do! They are growth opportunities.”
+- We also wouldn’t tell a friend that they’re not smart or capable enough to understand a problem.
+  - **What we can say instead:** “I don’t have to know everything right away. I can break it down step by step.”
 
 *Thank you to* Mindi Weik *for sharing her story about overcoming burnout and three ways to prioritize your mental health. Please check out her newsletter,* [codeOutLoud](https://open.substack.com/pub/codeoutloud)*, and [follow her on LinkedIn](https://www.linkedin.com/in/mindiweik/).*

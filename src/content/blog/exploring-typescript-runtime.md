@@ -15,7 +15,10 @@ Understanding the nitty gritty bits and pieces of a language can only benefit us
 1. 🤔 What is runtime?
 2. 🦾 Reconstruct and confirm runtime types
 3. 📚 Resources for further reading
+
 **Let's go!**
+
+<!-- MIGRATION TODO: original shows an image here (intro graphic): https://substack-post-media.s3.amazonaws.com/public/images/3483dd57-e2cf-41d4-a546-67f19cd6c6db_940x788.png -->
 
 ## 🤔 What is runtime?
 
@@ -23,7 +26,7 @@ To start, let’s better grasp what type of “runtime” I’m referring to and
 
 Here, **runtime** refers to the process of a computer interpreting and performing a program’s instructions. Think of each line of code in your program or file as a line of instructions to be carried out!
 
-In the first post of this series, I wrote about the [TypeScript Compiler](/22-jmeter-performance-testing-part-2).
+In the first post of this series, I wrote about the [TypeScript Compiler](/blog/exploring-typescript-ts-compiler).
 
 ### *What does the compiler have to do with runtime?*
 
@@ -35,14 +38,14 @@ Why is this helpful?
 
 - This allows your IDE to offer some powerful tooling and reduces errors upfront! 
 - Issues can be caught before a user experiences something your team missed.
-  - You’ll achieve better readability and maintainability for your future self and teammates. When written well, TypeScript reads like good documentation.
+- You’ll achieve better readability and maintainability for your future self and teammates. When written well, TypeScript reads like good documentation.
 - There should also be less cognitive load, scrolling, and searching for files; your IDE will show you relevant information when you mouse over variables!
 
 ### *What does runtime have to do with TypeScript, then?*
 
 Simply put, TypeScript types don’t exist at runtime.
 
-### ***Come again?***
+***Come again?***
 
 Yes, that’s right. TypeScript types are “erasable,” removed from the compiled code. Interfaces and type annotations also fall under this umbrella of removed code. Although we haven’t covered [declaration files](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html#dts-files), the types and interfaces described in these files will also disappear.
 
@@ -57,109 +60,6 @@ As a result, TypeScript-specific features and functionality disappear and can’
 This requires thoughtful intention! I’ve worked on projects that aren’t strict with typing and it caused me some headaches. When done well, defined shapes have clarified *exactly* what I’m working with while building and developing. 
 
 As a simple example to play around with type “shape,” here we define the “shape” of an object we want to use to describe my three pets:
-
-In this way, although TypeScript types and true type checking won’t exist in the generated JavaScript, we can confirm which types we are working with and how we want to utilize them in a way that will translate into runtime. The generated JavaScipt code looks identical in this case!
-
-We can use a similar concept with objects. Let’s say we’re now talking about storing art pieces in galleries!
-
-```js
-interface Art {
-  title: string
-  artist: string
-  paint?: 'acrylic' | 'watercolor' | 'oil' | 'other'
-  digital?: 'photo' | 'video' | 'slideshow' | 'other'
-}
-
-// Perhaps we want to handle these mediums differently:
-// Paintings are stored in one gallery, digital art in another.
-
-const paintingGallery: Art[] = []
-const digitalGallery: Art[] = []
-
-const moveArtworkToGallery = (artwork: Art) => {
-  if ('paint' in artwork) {
-    // Move a painting to the painting gallery
-    paintingGallery.push(artwork)
-  } else if ('digital' in artwork) {
-    // Move digital art to the digital gallery
-    digitalGallery.push(artwork)
-  } else {
-    // Again, unlikely, but this is unknown art we're handling!
-    throw new Error('We need a different gallery for this piece!')
-  }
-}
-
-moveArtworkToGallery({
-  title: 'The Starry Night',
-  artist: 'Vincent van Gogh',
-  paint: 'oil'
-})
-moveArtworkToGallery({
-  title: 'Self',
-  artist: 'Mindi',
-  digital: 'photo'
-})
-moveArtworkToGallery({
-  title: 'Two Calla Lilies on Pink',
-  artist: 'Georgia O\'Keeffe',
-  paint: 'watercolor',
-});
-
-console.log('Painting Display:', paintingGallery)
-// list should have 2 paintings
-console.log('Digital Display:', digitalGallery)
-// list should have one photo
-```
-
-```js
-npm install typescript --save-dev
-```
-
-```js
-tsc file-name.ts
-```
-
-Again, the JavaScript code generated appears almost identical! The interface is the main element missing from the compiled code this time, but we can still determine a rough type using property checking in the moveArtworkToGallery function.
-
-The property check only involves values that are available at runtime but still allows the type checker to refine the object's shape to the Art type. That’s great TypeScript code practice and translatable JavaScript all at once!
-
-### **Use a discriminated (or “tagged”) union**
-
-This concept is similar to the object case above, and I’ve found it useful to specifically use the field name type, especially for building APIs. As a user I’ve seen it often in third-party APIs, so I feel it’s a common enough practice to lean on.
-
-We are essentially doing property checking again, but in my experience, this is often with a set list of known types. Perhaps this list is described in the API documentation.
-
-Let’s return back to the example of my three pets!
-
-```js
-// For reference, let's restate the interface shape:
-
-interface Pet {
-  name: string
-  age: number
-  type: 'cat' | 'dog'
-}
-
-// In this example, we want to do act on the different types!
-
-const makePetSound = (pet: Pet): string => {
-  if (pet.type === 'cat') {
-    return 'Meow!'
-  } else if (pet.type === 'dog') {
-    return 'Woof!'
-  } else {
-    throw new Error('Unknown pet type!')
-  }
-}
-
-const dog1: Pet = {
-  name: 'Rigby',
-  age: 6,
-  type: 'dog'
-}
-
-console.log(makePetSound(dog1)) // Woof!
-```
 
 ```js
 // First, we'll define the shape
@@ -209,36 +109,10 @@ const cat2: Pet = {
 // Property 'age' is missing in type '{ name: string; type: "cat"; }' but required in type 'Pet'.
 ```
 
-When using a [discriminated union](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) (or “tagged” union as it’s described in *[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)*), we are essentially implementing some kind of type storage in our object using a “tag” that we can access and use at runtime.
-
-How can we access this? It’s because there is also a value stored in the type field.
-
-**I hope that these examples were helpful! Considering how your runtime will read and follow your instructions through your TyeScript code after compilation may help you build better!**
-
-## 📚 Resources for further reading
-
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-  - [Wikipedia on TypeScript](https://en.wikipedia.org/wiki/TypeScript#:~:text=Development%20tools-,Compiler,that%20can%20execute%20the%20compiler.)
-  - [Wikipedia on Runtime](https://en.wikipedia.org/wiki/Execution_(computing)#Runtime)
-  - [Contentful: “TypeScript vs. JavaScript: Explaining the differences”](https://www.cvs.com/store-locator/belleville-il-pharmacies/5720-n-belt-west-belleville-il-62226/storeid=18009)
-  - [TotalTypeScript: “No, TypeScript Types Don’t Exist At Runtime”](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime)
-- There are a few interesting exceptions to the rules here covered more in-depth: enums, namespaces, and parameter properties.
-  - [Log Rocket: “Methods for TypeScript runtime type checking”](https://blog.logrocket.com/methods-for-typescript-runtime-type-checking/)
-  - O’Reilly Books:
-- [Programming TypeScript by Boris Cherny](https://www.oreilly.com/library/view/programming-typescript/9781492037644/)
-- [Effective TypeScript by Dan Vanderkam](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)
-- [Learning TypeScript by Josh Goldberg](https://www.oreilly.com/library/view/learning-typescript/9781098110321/)
-- I’m reading this as of this writing. I’ve seen him speak, and his humor and conciseness come across well in print!
-  - [TypeScript Cookbook by Stefan Baumgartner](https://www.oreilly.com/library/view/typescript-cookbook/9781098136642/)
-- It was unread by me as of this writing, but it’s on my list.
-
-## Keep exploring TypeScript
-
 Before we run this code, we’ll encounter issues. In VSCode, for example, a little red squiggly identifies issues with the code snippet.
 
-- We tried to use a string to describe Rayla as ‘6 months’ instead of the expected number input for her age (0, 0.5, or 1 depending on your own interpretation). Whoops! What were we thinking?
-- Afterward, we created an imaginary cat. Because it’s not real, we aren’t sure how old it is! Bummer. Alas, Pet as an interface is looking for an age field.
+- We tried to use a string to describe `Rayla` as `'6 months'` instead of the expected number input for her age (`0`, `0.5`, or `1` depending on your own interpretation). Whoops! What were we thinking?
+- Afterward, we created an imaginary cat. Because it’s not real, we aren’t sure how old it is! Bummer. Alas, `Pet` as an interface is looking for an age field.
 
 ### *Wait, this example uses an interface, and that goes away after compile time, right?*
 
@@ -257,14 +131,12 @@ If given the time to contemplate, one could probably come up with all sorts of i
 1. Validate inputs from external sources
 2. Check types or properties to handle in your code
 3. Use a discriminated (or “tagged”) union
+
 **Hint:** You can use the following commands to follow along with examples in #2 and #3 using TypeScript in Node!
 
-```js
-// compiles your file into JavaScript
-tsc file-name.ts
-
-// runs your compiled code in Node
-node file-name.js
+```bash
+tsc <file-name.ts> # compiles your file into JavaScript
+node <file-name.js> # runs your compiled code in Node
 ```
 
 ### **Validate inputs from external sources**
@@ -369,3 +241,122 @@ const phoneNumberToE164String = (input: string | number): string => {
 const test = phoneNumberToE164String(5555555555) // A number is provided
 console.log(test, typeof test) // +15555555555 string
 ```
+
+In this way, although TypeScript types and true type checking won’t exist in the generated JavaScript, we can confirm which types we are working with and how we want to utilize them in a way that will translate into runtime. The generated JavaScipt code looks identical in this case!
+
+We can use a similar concept with objects. Let’s say we’re now talking about storing art pieces in galleries!
+
+```js
+interface Art {
+  title: string
+  artist: string
+  paint?: 'acrylic' | 'watercolor' | 'oil' | 'other'
+  digital?: 'photo' | 'video' | 'slideshow' | 'other'
+}
+
+// Perhaps we want to handle these mediums differently:
+// Paintings are stored in one gallery, digital art in another.
+
+const paintingGallery: Art[] = []
+const digitalGallery: Art[] = []
+
+const moveArtworkToGallery = (artwork: Art) => {
+  if ('paint' in artwork) {
+    // Move a painting to the painting gallery
+    paintingGallery.push(artwork)
+  } else if ('digital' in artwork) {
+    // Move digital art to the digital gallery
+    digitalGallery.push(artwork)
+  } else {
+    // Again, unlikely, but this is unknown art we're handling!
+    throw new Error('We need a different gallery for this piece!')
+  }
+}
+
+moveArtworkToGallery({
+  title: 'The Starry Night',
+  artist: 'Vincent van Gogh',
+  paint: 'oil'
+})
+moveArtworkToGallery({
+  title: 'Self',
+  artist: 'Mindi',
+  digital: 'photo'
+})
+moveArtworkToGallery({
+  title: 'Two Calla Lilies on Pink',
+  artist: 'Georgia O\'Keeffe',
+  paint: 'watercolor',
+});
+
+console.log('Painting Display:', paintingGallery)
+// list should have 2 paintings
+console.log('Digital Display:', digitalGallery)
+// list should have one photo
+```
+
+Again, the JavaScript code generated appears almost identical! The interface is the main element missing from the compiled code this time, but we can still determine a rough type using property checking in the `moveArtworkToGallery` function.
+
+The property check only involves values that are available at runtime but still allows the type checker to refine the object's shape to the `Art` type. That’s great TypeScript code practice and translatable JavaScript all at once!
+
+### **Use a discriminated (or “tagged”) union**
+
+This concept is similar to the object case above, and I’ve found it useful to specifically use the field name `type`, especially for building APIs. As a user I’ve seen it often in third-party APIs, so I feel it’s a common enough practice to lean on.
+
+We are essentially doing property checking again, but in my experience, this is often with a set list of known types. Perhaps this list is described in the API documentation.
+
+Let’s return back to the example of my three pets!
+
+```js
+// For reference, let's restate the interface shape:
+
+interface Pet {
+  name: string
+  age: number
+  type: 'cat' | 'dog'
+}
+
+// In this example, we want to do act on the different types!
+
+const makePetSound = (pet: Pet): string => {
+  if (pet.type === 'cat') {
+    return 'Meow!'
+  } else if (pet.type === 'dog') {
+    return 'Woof!'
+  } else {
+    throw new Error('Unknown pet type!')
+  }
+}
+
+const dog1: Pet = {
+  name: 'Rigby',
+  age: 6,
+  type: 'dog'
+}
+
+console.log(makePetSound(dog1)) // Woof!
+```
+
+When using a [discriminated union](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) (or “tagged” union as it’s described in *[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)*), we are essentially implementing some kind of type storage in our object using a “tag” that we can access and use at runtime.
+
+How can we access this? It’s because there is also a value stored in the `type` field.
+
+**I hope that these examples were helpful! Considering how your runtime will read and follow your instructions through your TyeScript code after compilation may help you build better!**
+
+## 📚 Resources for further reading
+
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+  - [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [Wikipedia on TypeScript](https://en.wikipedia.org/wiki/TypeScript#:~:text=Development%20tools-,Compiler,that%20can%20execute%20the%20compiler.)
+- [Wikipedia on Runtime](https://en.wikipedia.org/wiki/Execution_(computing)#Runtime)
+- [Contentful: “TypeScript vs. JavaScript: Explaining the differences”](https://www.contentful.com/blog/typescript-vs-javascript/)
+- [TotalTypeScript: “No, TypeScript Types Don’t Exist At Runtime”](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime)
+  - There are a few interesting exceptions to the rules here covered more in-depth: enums, namespaces, and parameter properties.
+- [Log Rocket: “Methods for TypeScript runtime type checking”](https://blog.logrocket.com/methods-for-typescript-runtime-type-checking/)
+- O’Reilly Books:
+  - [Programming TypeScript by Boris Cherny](https://www.oreilly.com/library/view/programming-typescript/9781492037644/)
+  - [Effective TypeScript by Dan Vanderkam](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)
+  - [Learning TypeScript by Josh Goldberg](https://www.oreilly.com/library/view/learning-typescript/9781098110321/)
+    - I’m reading this as of this writing. I’ve seen him speak, and his humor and conciseness come across well in print!
+  - [TypeScript Cookbook by Stefan Baumgartner](https://www.oreilly.com/library/view/typescript-cookbook/9781098136642/)
+    - It was unread by me as of this writing, but it’s on my list.

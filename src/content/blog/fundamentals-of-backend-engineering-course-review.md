@@ -6,14 +6,6 @@ tags: ["backend","learning"]
 readingTime: 3
 ---
 
-### 🥸 Proof of completion, just for fun:
-
-**Mindi’s Udemy course completion certificate**
-
-### 👉 Bonus:
-
-I was looking for new Podcasts to listen to during the course. I poked around a bit and found that Hussein Nasser has one if you want to listen! | [Backend Engineering](https://www.husseinnasser.com/p/podcast.html)
-
 I recently completed the [Fundamentals of Backend Engineering](https://www.udemy.com/share/107rGq3@Nbj-Z2Zckw7X9diaLNDMLP9XC8TUPF285j_NxZ11XNKQGrRHDIgTisjY2NCgn2otaQ==/) course on [Udemy](https://www.udemy.com/) and shared this accomplishment on [LinkedIn](https://www.linkedin.com/posts/mindiweik_udemy-course-completion-certificate-activity-7166921897345998848-3zha?utm_source=share&utm_medium=member_desktop)!
 
 Let’s look at the course from a high level and find out how I think it went. 🤔 
@@ -21,16 +13,16 @@ Let’s look at the course from a high level and find out how I think it went. �
 **We’ll cover:**
 
 - 💻 Overall Content
-- 🎯 Who is the Best Audience?
-- 🛠️ Are the Skills Real World Applicable?
-  - ⏳ Time Commitment
-  - 💸 Value
-  - 🎬 Instructor
-  - 👉 Conclusion
+  - 🎯 Who is the Best Audience?
+  - 🛠️ Are the Skills Real World Applicable?
+- ⏳ Time Commitment
+- 💸 Value
+- 🎬 Instructor
+- 👉 Conclusion
 
 ## 💻 Overall Content
 
-## 🎯 Who is the Best Audience?
+### 🎯 Who is the Best Audience?
 
 Any engineer can leverage knowledge of backend engineering. So, pretty much any active developer could take this course!
 
@@ -38,7 +30,7 @@ Admittedly, a backend engineer will likely get more from the course as it is gea
 
 That said, this isn’t as ideal for a brand-new engineer with little experience. I’m not saying, “Don’t take it,” if you fall into that category, but I would recommend some self-guided digging into how the internet works and getting a nice base level of knowledge before taking the course. Nothing too thorough; he covers some basics. Having a point of reference for some terms would be useful.
 
-## 🛠️ Are the Skills Real World Applicable?
+### 🛠️ Are the Skills Real World Applicable?
 
 A resounding yes! 
 
@@ -89,3 +81,13 @@ With about 16 hours of content, it’s best absorbed in small doses over time!
 This course has so much usable content. I used it more than once in my day-to-day role. As mentioned, I feel the content fulfills the value offered even at full price.
 
 Hussein Nasser brings a wealth of knowledge and experience. Come prepared for energetic and informative lectures with plenty of visual aids!
+
+### 🥸 Proof of completion, just for fun:
+
+<!-- MIGRATION TODO: certificate image not migrated. Original asset: https://assets.zyrosite.com/Yan01MjyJEH16nVN/4150ed44-fe72-426e-a245-23266fadc724_1600x1190-AR01jBlaMrCalx6b.webp -->
+
+**Mindi’s Udemy course completion certificate**
+
+### 👉 Bonus:
+
+I was looking for new Podcasts to listen to during the course. I poked around a bit and found that Hussein Nasser has one if you want to listen! [Backend Engineering](https://www.husseinnasser.com/p/podcast.html)

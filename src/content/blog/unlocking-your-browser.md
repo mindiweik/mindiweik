@@ -10,7 +10,7 @@ readingTime: 5
 
 The browser is actually your secret weapon for building, debugging, and understanding the web.
 
-Last August I presented a Tech Talk for the folks in bootcamp phase at [[Parsity.io](http://Parsity.io)]([https://parsity.io](https://parsity.io)). It was a blast! I was excited to share my rediscovery of the neat things your browser can do. See, I'd just moved to a frontend-focused team after spending the beginning of my developer career building backend APIs where the browser was never the intended client. I'd kind of... forgotten how powerful it is.
+Last August I presented a Tech Talk for the folks in bootcamp phase at [Parsity.io](https://parsity.io). It was a blast! I was excited to share my rediscovery of the neat things your browser can do. See, I'd just moved to a frontend-focused team after spending the beginning of my developer career building backend APIs where the browser was never the intended client. I'd kind of... forgotten how powerful it is.
 
 Before I switched careers into tech, I thought my browser was just for looking at websites. Reading articles, checking email, watching videos. The usual stuff.
 
@@ -24,6 +24,7 @@ This is **Part 1 of a 4-part series**:
 2. Your New Best Friend: The Console
 3. What's Actually Happening: Network & Application
 4. Level Up: Sources, Performance & Your Playground
+
 Let's get into it.
 
 ## What browser do you use?
@@ -97,6 +98,7 @@ Seriously. Do it. I'll wait.
 3. Right-click on a headline and select **"Inspect"**
 4. Double-click the text in the Elements panel
 5. Change it to something silly like "[YOUR NAME] WAS HERE!"
+
 You just "hacked" Wikipedia! 🎉
 
 (Not really, though. Your changes only exist in your browser and will reset when you refresh. No websites were harmed in the making of this tutorial.)
@@ -126,6 +128,7 @@ For this post, here's your Elements tab challenge:
 - There are **typos in the headlines** that need fixing
 - The **CSS colors are... a choice** 😬 (see if you can make them less offensive)
 - Try hiding and showing elements to see how the layout changes
+
 Grab it here: [github.com/mindiweik/catz4life](https://github.com/mindiweik/catz4life)
 
 Download or fork it, open `index.html` in your browser, open DevTools, and start poking around!
@@ -140,4 +143,4 @@ The best developers I know aren't the ones who memorized every CSS property. The
 
 Go forth and break something. 💖
 
-[Part 2: Your New Best Friend: The Console](/29-your-new-best-friend-the-console) →
+[Part 2: Your New Best Friend: The Console](/blog/your-new-best-friend-the-console) →
