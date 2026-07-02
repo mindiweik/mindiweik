@@ -19,13 +19,27 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Images for specific posts** — migration was text-only. Some posts want images, e.g. `fundamentals-of-backend-engineering-course-review` (completion certificate; source URL in a `<!-- MIGRATION TODO -->` comment in the file). Also: `clean-code-by-robert-c-martin` has a cute image Mindi wants brought over/moved (flagged 2026-07-01). **`experiences-with-a-local-gitlab-runner-part-1` has LOTS of screenshots to migrate** (4 marked with TODO comments + alt text in the file; Mindi flagged 2026-07-01). `the-power-of-career-change` career-snapshot graphic (source URL in TODO comment). `learning-typescript` has a couple of images Mindi wants to add (flagged 2026-07-01). The jmeter posts' originals have ~12+ GUI screenshots each (part 2 has 5 TODO markers with source URLs; part 1's were not individually marked). Many repaired posts now carry `<!-- MIGRATION TODO -->` markers with Substack CDN source URLs — grep for `MIGRATION TODO` across `src/content/blog/` for the full image worklist. Source + add real images. Ties into the visual-variety followup. Deferred 2026-07-01.
 - **Internal cross-links point to old paths** — migrated content links to old wip-podcast paths like `/15-...` or `/vNNN-...` instead of `/blog/<slug>` or `/podcast/<slug>`. Sweep all content and rewrite internal links. Fixing case-by-case as flagged; needs a full pass. Deferred 2026-07-01.
 - **Inline links duplicating link buttons** — some speaking/podcast bodies repeat a link inline that's already a frontmatter button (e.g. "Slide Deck"). Removing as flagged; could sweep. Deferred 2026-07-01.
-- **Missing talk recordings** — Mindi has recordings to locate + add as `recording` buttons: `the-software-engineers-guidebook-overview-talk` and `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
+- **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
 - **Draft mode** — support a `draft: true` frontmatter flag (blog/podcast/speaking collections):
   drafts render in local dev (`astro dev`) but are excluded from production builds
   (`import.meta.env.PROD` filter in the collection queries / `getStaticPaths`). Lets in-progress
   content live on `main` without deploying. Deferred 2026-07-01 during migration review.
+- **Related-content buttons** — at the end of posts/episodes, buttons suggesting other posts,
+  [WIP] episodes, etc. (could start simple: same-tag matches from the collections). Mindi
+  requested 2026-07-02.
+- **Scheduled posts** — ability to "schedule" a post to go live at a later time. Static site +
+  GitHub Actions deploy, so likely: filter `pubDate > now` out of prod builds + a scheduled
+  (cron) GitHub Actions rebuild so future-dated posts appear when their date arrives. Pairs
+  with draft mode. Mindi requested 2026-07-02.
+- **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
+  giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
+  (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
+- **Email subscription** — newsletter signup so readers get new posts/episodes by email
+  (replaces the old Substack subscribe). Options to evaluate: Buttondown (indie-friendly,
+  RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already
+  has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 ## Resolved
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`

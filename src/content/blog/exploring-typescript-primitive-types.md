@@ -1,5 +1,5 @@
 ---
-title: typescript primitive types explained
+title: "exploring typescript: primitive types"
 description: "A clear breakdown of TypeScript's 7 primitive types: string, number, boolean, bigint, symbol, null, and undefined, with examples and gotchas for every one."
 pubDate: 2025-01-14
 tags: ["typescript"]
@@ -85,7 +85,12 @@ console.log (greeting("Hello")) // Output: "Hello"
 
 However, if you were to use `const` variable declaration for a string without declaring it as a string more broadly, TypeScript may infer this as a type literal! Take a look at this example. The variable `test` is the literal string of `"Hello"` as its type, not a more generic `string`!
 
-<!-- MIGRATION TODO: original shows an image here (IDE screenshot, caption: "TypeScript type literal in the VSCode IDE"): https://substack-post-media.s3.amazonaws.com/public/images/fa12cce1-889f-456d-aaa5-ac4c7c0470b3_276x80.png -->
+```ts
+const test = "Hello";
+
+// Hovering over `test` in the VSCode IDE shows:
+// const test: "Hello"
+```
 
 Why is this? When we use `const` in this way, we essentially make the variable read-only. The variables are unable to be reassigned and, therefore, remain constant. If we cannot reassign `test` to, say, `"Goodbye"` then it makes some sense that its type would be `"Hello"` as the type literal as opposed to a `string`.
 

@@ -34,7 +34,25 @@ If you’re unaware, TypeScript is a superset of JavaScript that adds static typ
 
 In our case, TypeScript is being compiled into the higher-level language of JavaScript to be understood and used by browsers or a Node environment. Once that’s completed, the JavaScript version of your project can then be deployed.
 
-<!-- MIGRATION TODO: diagram image here, caption "TypeScript code cannot be used directly by browsers, and Node": https://substack-post-media.s3.amazonaws.com/public/images/897e9f10-26d7-4a85-8600-25fbc8082c5a_1024x768.png -->
+<div style="margin:1.4rem 0">
+  <div style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:0.6rem">TypeScript project steps</div>
+  <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;font-family:var(--font-mono);font-size:0.78rem;line-height:1.5">
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">01 · typescript</div>
+      <div style="margin-top:0.3rem">Write code in TypeScript</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">02 · compile</div>
+      <div style="margin-top:0.3rem">Compile code to JavaScript</div>
+    </div>
+    <div aria-hidden="true" style="color:var(--text-muted)">→</div>
+    <div style="flex:1;min-width:10.5rem;border:1px solid var(--border);border-radius:10px;padding:0.7rem 0.85rem;background:var(--surface)">
+      <div style="font-weight:700;color:var(--text-muted)">03 · javascript</div>
+      <div style="margin-top:0.3rem">Deploy code for browsers or Node</div>
+    </div>
+  </div>
+</div>
 
 *Note that this differs from transpiling, which we will discuss in a future post.*
 

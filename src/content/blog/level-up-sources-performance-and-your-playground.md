@@ -118,28 +118,29 @@ Hints mode is available if you want a nudge: set `HINTS = true` in `script.js`.
 
 **Elements tab**
 
-- There's a typo in the page heading. Inspect the DOM and find it.
-- One of the cat cards has a CSS issue making it look ugly. Use the Styles panel to find and fix it.
+There's a typo in the page heading. Inspect the DOM and find it.
+
+One of the cat cards has a CSS issue making it look ugly. Use the Styles panel to find and fix it.
 
 **Console tab**
 
-- The "Adopt Me!" button on one card throws an error when clicked. Open the Console, click the button, and read the error message. The fix is one line.
+The "Adopt Me!" button on one card throws an error when clicked. Open the Console, click the button, and read the error message. The fix is one line.
 
 **Network tab**
 
-- One of the cat images fails to load. Watch the Network tab as the page loads and find the failed request. Check the URL for a typo.
+One of the cat images fails to load. Watch the Network tab as the page loads and find the failed request. Check the URL for a typo.
 
 **Application tab**
 
-- There's a theme toggle in the UI. Find where it stores its state in localStorage. Try changing the value manually and refreshing.
+There's a theme toggle in the UI. Find where it stores its state in localStorage. Try changing the value manually and refreshing.
 
 **Sources tab**
 
-- Set a breakpoint on the button click handler and step through the code. Where does it go wrong?
+Set a breakpoint on the button click handler and step through the code. Where does it go wrong?
 
 **Lighthouse**
 
-- Run a Lighthouse audit on the page. What's the accessibility score? There are at least two issues to find.
+Run a Lighthouse audit on the page. What's the accessibility score? There are at least two issues to find.
 
 ## Your browser is a workbench
 

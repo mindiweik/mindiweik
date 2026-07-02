@@ -29,6 +29,8 @@ Below, we’ll review the book's first two sections. They cover career fundament
 
 I [recorded a Loom presentation](https://www.loom.com/share/5ac9c21df8524559b6f8b824d6d35f7b?sid=8515e32e-f773-4d1a-b457-4d8f0d6ac798) if you’d prefer to hear and/or visually see this information. It’s about 22 minutes long. [Here is a link to the slides!](https://www.canva.com/design/DAGKHoLXYFo/88WU5ztzzdR4B70ygO3VHQ/edit?utm_content=DAGKHoLXYFo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
+<div style="margin:1.2rem 0;position:relative;padding-bottom:64.92178098676294%;height:0;border-radius:10px;overflow:hidden;border:1px solid var(--border)"><iframe src="https://www.loom.com/embed/5ac9c21df8524559b6f8b824d6d35f7b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div>
+
 ## 💡 My 3 Big Takeaways
 
 1. No one will advocate for your career better than you. Take ownership!
@@ -152,7 +154,8 @@ So, if someone shares constructive feedback with you, remember it would’ve bee
 
 **Giving:**
 
-- It’s helpful to consider your approach for positive and critical feedback.
+It’s helpful to consider your approach for positive and critical feedback.
+
 - **Positive:** Call out good work when you really mean it. Share specifics about what you liked and why.
 - **Critical:** Make it clear that you want to help and try to end positively. Focus on situational observations and impacts, clarify that it’s only an observation, and avoid telling them what to do. Deliver a critique in person (or via video) to reduce the chances of miscommunication.
 
@@ -294,9 +297,7 @@ Although it sounds counterintuitive, learning to debug without tools can be help
 
 This also takes practice! Make this an everyday habit and work on it, starting with your own. After you write code, revisit it and see what you can improve. Some IDEs have refactoring capabilities. Look at yours and give it a shot if yours has this ability.  Code reviews can give you more ideas for refactoring. It’s a good idea to give them a shot!
 
-Reading through code should provide new insights: you can deepen your knowledge of the codebase and begin to spot inconsistencies. Make notes as you go along and seek feedback to see if a refactor is worthwhile before diving in. For an easier start, you could look at refactoring tests and the helpers for those tests. It will deepen your codebase understanding; ideally, others will be able to better understand
-
-<!-- MIGRATION TODO: paragraph ends mid-sentence ("...others will be able to better understand") in the Substack original (https://codeoutloud.substack.com/p/the-software-engineers-guidebook) and the wip-podcast.com copy as well; lost tail is unrecoverable from both sources -->
+Reading through code should provide new insights: you can deepen your knowledge of the codebase and begin to spot inconsistencies. Make notes as you go along and seek feedback to see if a refactor is worthwhile before diving in. For an easier start, you could look at refactoring tests and the helpers for those tests. It will deepen your codebase understanding; ideally, others will be able to better understand.
 
 #### **🧪 Testing**
 

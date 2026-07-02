@@ -37,9 +37,9 @@ It’s interesting to note that TypeScript is statically typed. The types are ch
 Why is this helpful?
 
 - This allows your IDE to offer some powerful tooling and reduces errors upfront! 
-- Issues can be caught before a user experiences something your team missed.
+  - Issues can be caught before a user experiences something your team missed.
 - You’ll achieve better readability and maintainability for your future self and teammates. When written well, TypeScript reads like good documentation.
-- There should also be less cognitive load, scrolling, and searching for files; your IDE will show you relevant information when you mouse over variables!
+  - There should also be less cognitive load, scrolling, and searching for files; your IDE will show you relevant information when you mouse over variables!
 
 ### *What does runtime have to do with TypeScript, then?*
 
@@ -349,7 +349,7 @@ How can we access this? It’s because there is also a value stored in the `type
   - [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 - [Wikipedia on TypeScript](https://en.wikipedia.org/wiki/TypeScript#:~:text=Development%20tools-,Compiler,that%20can%20execute%20the%20compiler.)
 - [Wikipedia on Runtime](https://en.wikipedia.org/wiki/Execution_(computing)#Runtime)
-- [Contentful: “TypeScript vs. JavaScript: Explaining the differences”](https://www.contentful.com/blog/typescript-vs-javascript/)
+- [Contentful: “TypeScript vs. JavaScript: Explaining the differences”](https://www.contentful.com/blog/typescript-vs-javascript-explaining-the-differences/)
 - [TotalTypeScript: “No, TypeScript Types Don’t Exist At Runtime”](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime)
   - There are a few interesting exceptions to the rules here covered more in-depth: enums, namespaces, and parameter properties.
 - [Log Rocket: “Methods for TypeScript runtime type checking”](https://blog.logrocket.com/methods-for-typescript-runtime-type-checking/)

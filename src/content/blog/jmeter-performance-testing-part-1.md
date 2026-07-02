@@ -16,6 +16,8 @@ I dove so deeply into JMeter that I’d like to split this into two parts! ✌�
 
 First, we’ll review some initial understanding and setup details. In the [second part](/blog/jmeter-performance-testing-part-2), we’ll look more at usage and my experience creating a script to parameterize and automate for the future!
 
+<!-- MIGRATION TODO: missing image (intro graphic (also repeats at post end in original)); source: https://substack-post-media.s3.amazonaws.com/public/images/35d58fc7-8cb6-4cfc-a4be-db48756077be_940x788.png -->
+
 **Here, we’ll cover:**
 
 1. ☝️ Quick Intro to JMeter
@@ -47,6 +49,8 @@ To start, I set up a simple test with four listeners: the Backend Listener, the 
 
 🚨 *Check whether you want your Listeners under the Test Plan or in nested elements added below! I wanted a snapshot of the overall so I added mine to the Test Plan.*
 
+<!-- MIGRATION TODO: missing image (JMeter Test Plan screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/334fbd84-23c3-4fd2-bc90-ba4b2855f7f3_1894x1408.png -->
+
 Next, I started working on specific options we wanted to use. Trial, error, and research ensued to determine how to accomplish our goals.
 
 For example, we wanted to test real requests with randomized inputs using a CSV with thousands of possibilities. I found a [CSV Data Set Config](https://www.blazemeter.com/blog/jmeter-csv-dataset-config) option, but this inputs from the file line-by-line! Random inputs would better simulate a real-world test. Identifying that tool took more effort, but I did find it! We’ll cover that below.
@@ -57,15 +61,25 @@ Testing an API service requires using an HTTP Request. Simple enough! Right?
 
 Yes, generally. I added a name for the Request (optional) and the URL, path, and port number. This was pretty easy for local testing, but I learned that some changes are needed to access external services and resources via HTTPS requests!
 
+<!-- MIGRATION TODO: missing image (screenshot 1 of 2 (consecutive images here)); source: https://substack-post-media.s3.amazonaws.com/public/images/10e36771-40ae-4075-8851-e551ff0e8c78_1052x956.png -->
+
+<!-- MIGRATION TODO: missing image (screenshot 2 of 2); source: https://substack-post-media.s3.amazonaws.com/public/images/4731c651-407f-4286-a4f1-ec26af1e9221_1860x978.png -->
+
 For an HTTPS request, identify the protocol in the protocol field and - likely - set the port number to `443` to access your SSL/TLS-secured resource.
 
 Additionally, under the “Advanced” tab I needed to update the “Implementation” drop-down to the “HttpClient4” option. Later, I learned that having this option selected for HTTP request testing didn’t change anything, so I suggest this in all cases.
 
+<!-- MIGRATION TODO: missing image (HTTP request settings screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/42f75b9e-8548-45ae-ba01-44e6955661e7_2032x1456.png -->
+
 One “gotcha” you might encounter is that you’ll need to ensure you have a Thread Group first and then add associated options under that particular Thread Group. We’ll cover this below.
+
+<!-- MIGRATION TODO: missing image (Thread Group screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/32b42c4f-47e1-4124-9b5a-9f726525b77e_1246x720.png -->
 
 ### 📋 Option 2: HTTP Header Manager
 
 For our service, we use a specific header. This needed to be included for our service to work properly with the tests, and this was one of the simplest items to add. I popped in a header key and an appropriate value and checked this off the list. ✅
+
+<!-- MIGRATION TODO: missing image (Header Manager screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/620311b2-edab-475a-b5cd-1a3b9363e3d2_1038x1206.png -->
 
 ### ⏱️ Option 3: Constant Throughput Timer
 
@@ -79,6 +93,8 @@ To achieve this, I used this option to provide a “Target throughput (in sample
 
 In our example, I input 34.7 to the “Target throughput (in samples per minute)” field which would spread requests across the time frame provided to match this throughput. You can be more specific on the decimal, if desired.
 
+<!-- MIGRATION TODO: missing image (throughput timer screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/1a410b19-fbca-4d73-8175-8b4460294e53_1294x1436.png -->
+
 In other words, if I test for 1 minute, I should expect about 34 requests to have been sent and received for my test’s duration. This option was helpful for deeper control over our test parameters!
 
 ### 🧐 Option 4: Extended CSV Data Set Config
@@ -89,9 +105,17 @@ To use this, however, I needed to install the plugin. This was simple enough.
 
 **Plugin Directions:** Access plugins by selecting “Options” in the Menu Bar, then choose “***Plugins Manager***.”
 
+<!-- MIGRATION TODO: missing image (Plugins Manager menu screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/d1b0abbc-2bb6-4bb9-8721-4cdc9a56f91b_1274x708.png -->
+
 A window should open for the “***Plugins Manager***.” Select the “***Available Plugins***” tab and search for the plugin by name. Once identified, mark the checkbox and choose “***Apply Changes and Restart JMeter***” in the lower right corner.
 
+<!-- MIGRATION TODO: missing image (plugin apply/restart screenshot); source: https://substack-post-media.s3.amazonaws.com/public/images/bb2bfadb-c805-4c56-b36d-38c87df265d7_2002x1328.png -->
+
 From here, I reviewed/updated the Filename, Variable Name(s), Consider first line as Variable Name, Select Row, and Sharing Mode fields.
+
+<!-- MIGRATION TODO: missing image (CSV Data Set Config screenshot 1 of 2 (consecutive)); source: https://substack-post-media.s3.amazonaws.com/public/images/e9d03698-e38a-4dc6-a5f2-bea205b140c4_1534x1482.png -->
+
+<!-- MIGRATION TODO: missing image (screenshot 2 of 2); source: https://substack-post-media.s3.amazonaws.com/public/images/55d562b0-c60a-4c57-8fab-ef9c2ea3a373_2448x1232.png -->
 
 1. **Filename -** This was simple enough; I provided the path to my CSV file with the thousands of input options.
 2. **Variable Name(s) -** In our case, our CSV had 2 labels in the header row that aligned with our request parameters. Let’s call them “option1” and “option2” for our example.

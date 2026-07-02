@@ -16,9 +16,8 @@ What is the best way to solidify that information? Research, write it down, and 
 
 I previously wrote about two of the items we’re going to talk about today, from the perspective of TypeScript, specifically:
 
-#### [Exploring TypeScript: TS Compiler](/blog/exploring-typescript-ts-compiler)
-
-#### [Exploring TypeScript: Runtime](/blog/exploring-typescript-runtime)
+- [Exploring TypeScript: TS Compiler](/blog/exploring-typescript-ts-compiler)
+- [Exploring TypeScript: Runtime](/blog/exploring-typescript-runtime)
 
 But today, let’s cover these three topics - transpiler, compiler, and runtime - more broadly. Shall we?
 
@@ -83,5 +82,3 @@ However, it’s important to remember that if something goes wrong (like missing
 I hope that these breakdowns are helpful.
 
 Are any other terms, concepts, or phrases tripping you up or wasting your precious time Googling/asking AI again because they’re not sticking? Let me know!
-
-**Thanks for reading!** Did I miss anything, or would you like to add anything? Let me know! I appreciate constructive feedback so we can all learn together. 🙌

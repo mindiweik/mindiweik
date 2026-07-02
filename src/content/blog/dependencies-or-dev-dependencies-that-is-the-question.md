@@ -99,7 +99,7 @@ Similarly, eslint is not something our users should know about. They won’t be 
 
 What about TypeScript? One could argue that you would need *some* level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](/blog/exploring-typescript-runtime)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](/blog/exploring-typescript-ts-compiler).
 
-**Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in** dependencies **to** devDependencies**.**
+**Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in `dependencies` to `devDependencies`.**
 
 My error came when I moved two [BugSnag](https://www.bugsnag.com/) packages, like “@bugsnag/js” listed above, to the devDependencies section. We implemented BugSnag into a new project as a tool to monitor errors and track them down to squash them quickly! At first, it seemed like BugSnag should only be needed in devDependencies because it was a ***developer tool***. Our users would not be interacting with it.
 

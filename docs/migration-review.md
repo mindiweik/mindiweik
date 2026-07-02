@@ -33,28 +33,28 @@ Check off each page as you approve it. Ordered oldest → newest (review order).
 - [x] experiences with a local gitlab runner: part 1 *(images pending, see followups)*
 - [x] learning typescript *(images pending, see followups)*
 - [x] feeling inadequate is okay
-- [ ] the power of career change
-- [ ] experiences with a local gitlab runner: part 2
+- [x] the power of career change *(career-snapshot graphic pending, see followups)*
+- [x] experiences with a local gitlab runner: part 2 *(header image pending, see followups)*
 - [x] 3 big, scary software engineering words explained
-- [ ] exploring typescript: ts compiler
-- [ ] exploring typescript: runtime
-- [ ] the software engineer's guidebook review
-- [ ] dependencies or dev dependencies, that is the question
-- [ ] capturing curiosity
-- [ ] typescript primitive types explained
+- [x] exploring typescript: ts compiler *(intro graphic pending or drop, see followups)*
+- [x] exploring typescript: runtime
+- [x] the software engineer's guidebook review *(images pending, see followups)*
+- [x] dependencies or dev dependencies, that is the question
+- [x] capturing curiosity *(images pending, see followups)*
+- [x] exploring typescript: primitive types *(intro graphic pending or drop, see followups)*
 - [x] 3 habits that helped me recover from burnout and stay motivated
-- [ ] jmeter performance testing: part 1
-- [ ] opportunity is knocking
-- [ ] jmeter performance testing: part 2
+- [x] jmeter performance testing: part 1 *(images pending + "great list" link to relink, see followups)*
+- [x] opportunity is knocking
+- [x] jmeter performance testing: part 2 *(images pending, see followups)*
 - [x] the hidden currency of connection
-- [ ] what's the difference?!
-- [ ] the importance of open telemetry
+- [x] what's the difference?!
+- [x] the importance of open telemetry *(images pending, see followups)*
 - [x] ✨ introducing... [wip]
-- [ ] building a compass
-- [ ] unlocking your browser
-- [ ] your new best friend, the console
-- [ ] what's actually happening
-- [ ] level up: sources, performance & your playground
+- [x] building a compass
+- [x] unlocking your browser
+- [x] your new best friend, the console
+- [x] what's actually happening
+- [x] level up: sources, performance & your playground
 
 ## 🗣️ Speaking — ✅ ALL APPROVED
 

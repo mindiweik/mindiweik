@@ -19,6 +19,8 @@ Let’s be clear: I am not an expert on curiosity or perfect at practicing it. H
 3. ⚖️ Benefits + Challenges
 4. 👉 The 4 Core Concepts
 
+<!-- MIGRATION TODO: missing image (intro graphic); source: https://substack-post-media.s3.amazonaws.com/public/images/d664f6eb-00f7-4d5d-850d-652b61170fb4_940x788.png -->
+
 ## 🎬 Video + Presentation Insights
 
 Below is a recording of the first presentation for “Capturing Curiosity”, a [collaboration](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date) with [Coding with Callie](https://coding-with-callie.com/) in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
@@ -172,6 +174,8 @@ What did I learn from these experiences?
 2. When I was working on a small stuffed octopus, it took a few attempts to figure out how to position my needles to get the right angle for a rounded effect. I made a lot of these creatures.
 3. Similarly, when working on the octopuses, I learned that my directions about where to place the legs were unclear. There were many “squids” with 6 legs instead of “octopuses” with 8 legs.
 
+<!-- MIGRATION TODO: missing image (crochet octopus photo); source: https://substack-post-media.s3.amazonaws.com/public/images/b9675af2-8fbf-41fe-9fef-ffc19d444491_385x405.png -->
+
 It took me several attempts to get the octopus right. Each time, though, I learned something new and gained a new approach. Even in some of those failures, I learned some options and ideas I could use in other projects where it had an effect I *did* want!
 
 The point is that even when you encounter failure, it may or may not help you in the future. However, you’re expanding your toolbox for the next problem you encounter, the next project you work on, or the next idea you want to approach.
@@ -202,6 +206,8 @@ Finally, let’s combine a few of these things and discuss the “questioning fu
 - questions to probe, clarify, and reflect
 - the questioner summarizes and confirms what they heard
 - ideally, the questioner reaches the target and broadens their understanding
+
+<!-- MIGRATION TODO: missing image (questioning funnel diagram); source: https://substack-post-media.s3.amazonaws.com/public/images/2db90632-0b94-49f9-8d84-69bcca53c5e8_571x743.png -->
 
 If you’d like to see/hear an example, in the recording, I discuss a scenario where someone might ask about an ash tree cut down in my backyard earlier this year.
 
