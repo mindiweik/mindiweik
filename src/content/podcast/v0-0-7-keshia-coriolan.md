@@ -14,10 +14,10 @@ chapters:
   - { timestamp: "31:54", title: "Transitioning Back to Engineering" }
   - { timestamp: "49:28", title: "Empowerment and Belonging in Tech" }
 links:
-  - { label: "LinkedIn", url: "https://www.linkedin.com/in/ACoAABkqoBkBjPThgtJ8A4P_lVoqsdYTzFJs6R4?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BpLf1czQnQriF%2FT6u9TyvZg%3D%3D" }
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/keshia-coriolan/" }
   - { label: "Travel Diaries", url: "https://www.loom.com/share/bb76a1a39ec04799a5aa2651575d5c33?sid=de01652f-525a-446d-a28f-88affe1fee2d" }
   - { label: "Spotify client coding challenge", url: "https://codingchallenges.substack.com/p/from-the-challenges-spotify-client" }
-  - { label: "Keshia Coriolan", url: "https://www.linkedin.com/in/ACoAABkqoBkBjPThgtJ8A4P_lVoqsdYTzFJs6R4?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BpLf1czQnQriF%2FT6u9TyvZg%3D%3D" }
+  - { label: "Keshia Coriolan", url: "https://www.linkedin.com/in/keshia-coriolan/" }
 ---
 
 Keshia started as a junior developer and almost didn’t stick with it. She’s since spent time working closely with customers and learning to dig into their issues to surface the “real” problem at hand and building up her communication skills.
