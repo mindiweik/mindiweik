@@ -60,8 +60,8 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[WIP] podcast · human development in tech</title>
-  <meta name="description" content="[WIP]: real talk with builders. Life doesn't have release notes; we're figuring it out anyway, one version at a time." />
+  <title>[WIP] Podcast · human development in tech</title>
+  <meta name="description" content="[WIP] Podcast: real talk with builders. Life doesn't have release notes; we're figuring it out anyway, one version at a time." />
   <link rel="canonical" href="https://mindiweik.com/podcast" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -103,7 +103,7 @@ const html = `<!doctype html>
 <body>
   <main>
     <div class="crumb">~/wip-podcast</div>
-    <h1><span class="hl">[WIP]: human development in tech</span></h1>
+    <h1><span class="hl">[WIP] Podcast: human development in tech</span></h1>
     <p class="sub">Real talk with builders about the messy, honest, and ongoing process of growth. Life doesn't have release notes, so we write our own, one version at a time.</p>
     <div class="btns">
       <a class="btn" href="https://www.youtube.com/channel/UCMYEpKDKqHnAqcUG9N_qtKg" target="_blank" rel="noopener noreferrer">youtube &rarr;</a>
@@ -116,7 +116,7 @@ ${seasons.map(seasonBlock).join('\n')}
   </main>
   <footer>
     <div class="foot">
-      <span>[WIP] is part of <a href="https://mindiweik.com">mindiweik.com</a></span>
+      <span>[WIP] Podcast is part of <a href="https://mindiweik.com">mindiweik.com</a></span>
       <span><a href="https://mindiweik.com/podcast">browse all episodes &rarr;</a></span>
     </div>
   </footer>
