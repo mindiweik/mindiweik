@@ -15,3 +15,14 @@ const fullTitle = title === SITE.name ? title : `${title} · ${SITE.name}`;
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="alternate" type="application/rss+xml" title="mindiweik · blog" href="/rss.xml" />
+{import.meta.env.PROD && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}`}></script>
+    <script is:inline define:vars={{ ga4: SITE.ga4 }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', ga4);
+    </script>
+  </>
+)}
