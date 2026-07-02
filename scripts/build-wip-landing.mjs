@@ -2,8 +2,12 @@
 //
 // Generates wip-dist/index.html from the podcast content collection so the
 // episode list never goes stale, and copies wip-landing/.htaccess (the 301
-// map for every old wip-podcast.com URL). Deployed to the wip-podcast.com
-// web root by the GitHub Action once the domain is on file hosting.
+// map for every old wip-podcast.com URL). Also emits wip-dist/sitemap.xml
+// listing the OLD urls from the 301 map — a migration-era sitemap that gets
+// Google to recrawl the old pages and discover the redirects faster. Remove
+// it once GSC shows the old urls dropped out of the index. Deployed to the
+// wip-podcast.com web root by the GitHub Action once the domain is on file
+// hosting.
 //
 // Usage: node scripts/build-wip-landing.mjs
 
@@ -124,7 +128,19 @@ ${seasons.map(seasonBlock).join('\n')}
 </html>
 `;
 
+const oldPaths = readFileSync(join(root, 'wip-landing/.htaccess'), 'utf8')
+  .split('\n')
+  .map((line) => line.match(/^Redirect 301 (\S+) /)?.[1])
+  .filter(Boolean);
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${oldPaths.map((p) => `  <url><loc>https://wip-podcast.com${p}</loc></url>`).join('\n')}
+</urlset>
+`;
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'index.html'), html);
+writeFileSync(join(outDir, 'sitemap.xml'), sitemap);
 copyFileSync(join(root, 'wip-landing/.htaccess'), join(outDir, '.htaccess'));
-console.log(`wip-dist/index.html written (${eps.length} episodes, ${seasons.length} season(s)) + .htaccess copied`);
+console.log(`wip-dist/index.html written (${eps.length} episodes, ${seasons.length} season(s)) + sitemap.xml (${oldPaths.length} old urls) + .htaccess copied`);
