@@ -4,6 +4,7 @@ description: "Part 3 of 4 in the \"Unlocking Your Browser\" series"
 pubDate: 2026-03-12
 tags: ["browser","devtools"]
 readingTime: 4
+draft: true
 ---
 
 If you've been following along, you've poked around the DOM, styled things on the fly, and debugged with the Console like a pro. Nice work.
