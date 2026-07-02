@@ -2,7 +2,7 @@
 title: "3 big, scary software engineering words explained"
 description: "Idempotent | Polymorphism | Isomorphic"
 pubDate: 2024-06-25
-tags: ["fundamentals"]
+tags: ["fundamentals","backend"]
 readingTime: 3
 ---
 
