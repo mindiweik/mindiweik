@@ -2,6 +2,7 @@
 title: capturing curiosity
 event: Coding with Callie / PLoP 2024
 date: 2024-10-14
+location: Stevenson, WA
 type: talk
 description: A talk on curiosity techniques for problem-solving, shared at Coding with Callie and PLoP 2024.
 links:

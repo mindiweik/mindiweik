@@ -2,6 +2,7 @@
 title: building a brand with linkedin
 event: Women&TECH Colorado
 date: 2023-12-13
+location: Denver, CO
 type: talk
 description: Personal branding with LinkedIn, shared at Women&TECH Colorado and in a virtual US presentation.
 links:

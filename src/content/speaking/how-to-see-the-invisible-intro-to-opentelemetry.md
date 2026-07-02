@@ -2,6 +2,7 @@
 title: "how to see the invisible: intro to opentelemetry"
 event: Gusto Denver
 date: 2025-04-22
+location: Denver, CO
 type: talk
 description: A lightning talk on OpenTelemetry and observability, shared at Gusto Denver's women and folks in tech event.
 links:
