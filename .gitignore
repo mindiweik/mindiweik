@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # SDD controller scratch (do not commit)
 .superpowers/
+wip-dist/
