@@ -8,7 +8,7 @@ links:
   - { label: watch, url: "https://www.linkedin.com/events/careerconversations-personalbra7339141708229615616/comments/" }
 ---
 
-This was an excellent chat with my LinkedIn friend, [🌻 Anna Miller](https://www.linkedin.com/in/annamiller/), about my experience with personal branding and the job search process into my role at Postman.
+This was an excellent chat with my LinkedIn friend, [Anna Miller](https://www.linkedin.com/in/annamiller/), about my experience with personal branding and the job search process into my role at Postman.
 
 Mindi Weik has done it all, in the past 10+ years she went from working as a Swimming Instructor to Real Estate to Software Engineer.
 

@@ -8,6 +8,6 @@ links:
   - { label: watch, url: "https://www.linkedin.com/events/7476687897497104384/" }
 ---
 
-Another great chat with my LinkedIn friend, [♦️ Anna Miller](https://www.linkedin.com/in/annamiller/), this time about my most recent job search and what it actually takes to go from searching to final rounds.
+Another great chat with my LinkedIn friend, [Anna Miller](https://www.linkedin.com/in/annamiller/), this time about my most recent job search and what it actually takes to go from searching to final rounds.
 
 We discussed how I went from search to final rounds in 2 months, landing final round interviews with 3 companies.
