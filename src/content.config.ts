@@ -48,6 +48,7 @@ const speaking = defineCollection({
     slidesUrl: z.string().optional(),
     recordingUrl: z.string().optional(),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
+    draft: z.boolean().default(false),
   }),
 });
 

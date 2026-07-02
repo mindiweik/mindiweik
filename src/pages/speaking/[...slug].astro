@@ -1,9 +1,10 @@
 ---
 import { getCollection, render } from 'astro:content';
 import SpeakingLayout from '../../layouts/SpeakingLayout.astro';
+import { isVisible } from '../../lib/publish.ts';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('speaking');
+  const entries = await getCollection('speaking', isVisible);
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props;

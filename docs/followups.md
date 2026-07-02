@@ -21,17 +21,9 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
-- **Draft mode** — support a `draft: true` frontmatter flag (blog/podcast/speaking collections):
-  drafts render in local dev (`astro dev`) but are excluded from production builds
-  (`import.meta.env.PROD` filter in the collection queries / `getStaticPaths`). Lets in-progress
-  content live on `main` without deploying. Deferred 2026-07-01 during migration review.
 - **Related-content buttons** — at the end of posts/episodes, buttons suggesting other posts,
   [WIP] episodes, etc. (could start simple: same-tag matches from the collections). Mindi
   requested 2026-07-02.
-- **Scheduled posts** — ability to "schedule" a post to go live at a later time. Static site +
-  GitHub Actions deploy, so likely: filter `pubDate > now` out of prod builds + a scheduled
-  (cron) GitHub Actions rebuild so future-dated posts appear when their date arrives. Pairs
-  with draft mode. Mindi requested 2026-07-02.
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
@@ -51,6 +43,12 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   + .htaccess redirect map (old slug list recoverable from the old sitemap).
 
 ## Resolved
+- ~~**Draft mode**~~ + ~~**Scheduled posts**~~ -> shipped 2026-07-02. `draft: true` frontmatter
+  (blog/podcast/speaking) and future `pubDate`/`date` both render in dev (with a dashed
+  draft/scheduled chip) and are excluded from prod builds via `src/lib/publish.ts` `isVisible`.
+  Daily cron rebuild (13:00 UTC ≈ 6am Denver) in deploy.yml releases scheduled posts; push or
+  manual workflow run releases immediately. Spec:
+  `docs/superpowers/specs/2026-07-02-draft-mode-scheduled-posts-design.md`.
 - ~~**Blog post chip label "essay"**~~ -> renamed to "blog" everywhere (chip, changelog type,
   About + blog index copy) per Mindi's pick (2026-07-02).
 - ~~**Episode chapter timestamps** in accent-pink small text~~ -> converted to `--text-muted`

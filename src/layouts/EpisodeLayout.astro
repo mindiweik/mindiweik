@@ -2,14 +2,17 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '../components/content/Breadcrumb.astro';
 import VersionChip from '../components/content/VersionChip.astro';
+import PublishStateChip from '../components/content/PublishStateChip.astro';
+import type { PublishState } from '../lib/publish.ts';
 import '../styles/prose.css';
 interface Props {
   id: string; title: string; version: string; season: number; pubDate: Date;
   duration?: string; descriptor?: string; youtubeUrl?: string;
   chapters: { timestamp: string; title: string }[];
   links: { label: string; url: string }[];
+  state?: PublishState;
 }
-const { id, title, version, season, pubDate, duration, descriptor, youtubeUrl, chapters, links } = Astro.props;
+const { id, title, version, season, pubDate, duration, descriptor, youtubeUrl, chapters, links, state } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null) : null;
 // Order the link buttons: LinkedIn first, then the guest's own site (non-social),
@@ -26,6 +29,7 @@ const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b))
   <Breadcrumb path={`~/podcast/${id}`} />
   <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
     <VersionChip label={version} zone="podcast" />
+    <PublishStateChip state={state} zone="podcast" />
     <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{duration ? duration + ' · ' : ''}season {season}</span>
   </div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>

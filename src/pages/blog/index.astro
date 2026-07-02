@@ -2,8 +2,9 @@
 import ZoneIndexLayout from '../../layouts/ZoneIndexLayout.astro';
 import EntryCard from '../../components/content/EntryCard.astro';
 import { getCollection } from 'astro:content';
+import { isVisible, publishState } from '../../lib/publish.ts';
 
-const posts = (await getCollection('blog', (e) => !e.data.draft))
+const posts = (await getCollection('blog', isVisible))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
@@ -14,6 +15,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
       title={p.data.title}
       meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
       zone="blog"
+      state={publishState(p.data, new Date())}
     />
   ))}
 </ZoneIndexLayout>

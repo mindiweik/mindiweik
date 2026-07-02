@@ -15,6 +15,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Daily rebuild so scheduled posts (future pubDate) go live without a push.
+  # 13:00 UTC = 6am Denver in winter (MST), 7am in summer (MDT).
+  schedule:
+    - cron: '0 13 * * *'
 
 jobs:
   deploy:

@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import type { ZoneKey } from './zones';
+import { isVisible } from './publish';
 
 export interface ChangelogEntry {
   type: string;   // "blog" | "v1.0.4" | "talk" | "ship"
@@ -27,9 +28,9 @@ export function toChangelogEntries(raw: {
 
 export async function getChangelog(limit?: number): Promise<ChangelogEntry[]> {
   const [blog, podcast, speaking, projects] = await Promise.all([
-    getCollection('blog', (e) => !e.data.draft),
-    getCollection('podcast', (e) => !e.data.draft),
-    getCollection('speaking'),
+    getCollection('blog', isVisible),
+    getCollection('podcast', isVisible),
+    getCollection('speaking', isVisible),
     getCollection('projects'),
   ]);
   const all = toChangelogEntries({ blog, podcast, speaking, projects });

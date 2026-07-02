@@ -2,9 +2,11 @@
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '../components/content/Breadcrumb.astro';
 import VersionChip from '../components/content/VersionChip.astro';
+import PublishStateChip from '../components/content/PublishStateChip.astro';
+import type { PublishState } from '../lib/publish.ts';
 import '../styles/prose.css';
-interface Props { title: string; slug: string; date: Date; tags: string[]; readingMins: number; youtubeUrl?: string; }
-const { title, slug, date, tags, readingMins, youtubeUrl } = Astro.props;
+interface Props { title: string; slug: string; date: Date; tags: string[]; readingMins: number; youtubeUrl?: string; state?: PublishState; }
+const { title, slug, date, tags, readingMins, youtubeUrl, state } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null) : null;
 ---
@@ -12,6 +14,7 @@ const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11
   <Breadcrumb path={`~/blog/${slug}.mdx`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label="blog" zone="blog" />
+    <PublishStateChip state={state} zone="blog" />
     <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min</span>
     {tags.map((t) => (
       <a href={`/tags/${t}`} style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);text-decoration:underline;text-underline-offset:2px">#{t}</a>
