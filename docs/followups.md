@@ -43,6 +43,13 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
+- **Phase B shape DECIDED (2026-07-02):** wip-podcast.com becomes a single [WIP] podcast
+  landing page (brand + subscribe links to YouTube/Spotify/Apple + "browse all episodes ->"
+  linking to mindiweik.com/podcast); every other old URL gets a 301 to its mindiweik.com
+  equivalent. No duplicate content, no double publishing, domain + brand presence kept.
+  Mechanics: move wip-podcast.com off Website Builder to file hosting, upload landing page
+  + .htaccess redirect map (old slug list recoverable from the old sitemap).
+
 ## Resolved
 - ~~**Blog post chip label "essay"**~~ -> renamed to "blog" everywhere (chip, changelog type,
   About + blog index copy) per Mindi's pick (2026-07-02).
