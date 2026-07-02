@@ -4,7 +4,6 @@ description: "Part 4 of 4 in the \"Unlocking Your Browser\" series"
 pubDate: 2026-03-26
 tags: ["browser","devtools","performance"]
 readingTime: 5
-draft: true
 ---
 
 You've made it to the finale. 🎉
