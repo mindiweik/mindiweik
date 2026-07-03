@@ -42,6 +42,14 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /domains/mindiweik.com/public_html/
+          # dev/ is the dev.mindiweik.com preview (nested subdomain folder);
+          # the prod sync must never delete or overwrite it. exclude replaces
+          # the action's defaults, so those are restated.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            dev/**
 
       # Phase B: wip-podcast.com landing page + 301 redirect map.
       # Enabled 2026-07-02 after wip-podcast.com moved to file hosting.
@@ -56,3 +64,32 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./wip-dist/
           server-dir: /domains/wip-podcast.com/public_html/
+
+      # dev.mindiweik.com preview: same site with draft + scheduled entries
+      # visible (dashed chips). Protected by hPanel basic auth on the dev/
+      # folder; .htaccess/.htpasswd are excluded so deploys never remove it.
+      # Reuses ./dist/ - safe because the prod upload above already finished.
+      - name: Build dev preview (drafts + scheduled visible)
+        run: npm run build
+        env:
+          PUBLIC_SHOW_DRAFTS: 'true'
+          DEPLOY_SITE: 'https://dev.mindiweik.com'
+
+      - name: Block crawlers on dev preview
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+
+      - name: Deploy dev preview via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /domains/mindiweik.com/public_html/dev/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.htaccess
+            **/.htpasswd*
