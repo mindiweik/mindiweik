@@ -1,0 +1,34 @@
+# Dependabot configuration
+# Docs: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+version: 2
+updates:
+  # npm dependencies (Astro site)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    # Bundle minor + patch bumps into one PR to cut noise on a solo repo.
+    groups:
+      npm-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # GitHub Actions used in workflows (e.g. deploy.yml)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    groups:
+      actions-all:
+        update-types:
+          - "minor"
+          - "patch"
