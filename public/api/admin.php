@@ -1,11 +1,13 @@
 <?php
 declare(strict_types=1);
 
-// Token-gated moderation for the comments queue. The admin token is accepted
-// only once, on the login POST, and is never rendered into HTML. After a
-// successful login an HttpOnly session cookie keeps the admin in; Approve and
-// Delete actions are authorised by a random per-session CSRF token, so the
-// secret token never appears on the page. Serve only over HTTPS.
+// Token-gated comment management. Comments publish themselves once the author
+// confirms via the emailed link, so there is no approval queue: this page lists
+// every comment (live and pending confirmation) and lets you delete spam or
+// abuse. The admin token is accepted only once, on the login POST, and is never
+// rendered into HTML. After login an HttpOnly session cookie keeps the admin
+// in; the Delete action is authorised by a random per-session CSRF token, so
+// the secret token never appears on the page. Serve only over HTTPS.
 
 $config = require __DIR__ . '/../../comments-config.php';
 
@@ -64,7 +66,7 @@ $csrf = (string) $_SESSION['csrf'];
 $pdo = db($config);
 
 $action = (string) ($_POST['action'] ?? '');
-if ($action === 'approve' || $action === 'delete') {
+if ($action === 'delete') {
   if (!hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
     http_response_code(400);
     echo 'bad request';
@@ -72,37 +74,35 @@ if ($action === 'approve' || $action === 'delete') {
   }
   $id = (int) ($_POST['id'] ?? 0);
   if ($id > 0) {
-    if ($action === 'approve') {
-      $pdo->prepare('UPDATE comments SET approved = 1 WHERE id = ?')->execute([$id]);
-    } else {
-      $pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
-    }
+    $pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
   }
 }
 
 $rows = $pdo->query(
-  'SELECT id, page_key, author_name, author_email, body, created_at, ip_address
-     FROM comments WHERE approved = 0 ORDER BY created_at DESC'
+  'SELECT id, page_key, author_name, author_email, body, created_at, ip_address, approved
+     FROM comments ORDER BY created_at DESC'
 )->fetchAll();
 
 echo '<!doctype html><html><head><meta name="robots" content="noindex">'
    . '<meta name="viewport" content="width=device-width,initial-scale=1">'
    . '<title>comments admin</title></head>'
    . '<body style="font-family:sans-serif;max-width:48rem;margin:2rem auto">';
-echo '<h1>pending comments (' . count($rows) . ')</h1>';
+echo '<h1>comments (' . count($rows) . ')</h1>';
 if (!$rows) {
-  echo '<p>nothing waiting. nice.</p>';
+  echo '<p>no comments yet.</p>';
 }
 foreach ($rows as $r) {
+  $live = (int) $r['approved'] === 1;
+  $badge = $live ? 'live' : 'pending confirmation';
   echo '<div style="border:1px solid #ccc;border-radius:8px;padding:1rem;margin:1rem 0">';
   echo '<div style="font-size:.8rem;color:#555">'
+     . '[' . $badge . '] '
      . h($r['author_name']) . ' &lt;' . h($r['author_email']) . '&gt; · '
      . h($r['page_key']) . ' · ' . h($r['created_at']) . ' · ' . h($r['ip_address']) . '</div>';
   echo '<p style="white-space:pre-wrap">' . h($r['body']) . '</p>';
   echo '<form method="post" style="display:inline">'
      . '<input type="hidden" name="csrf" value="' . h($csrf) . '">'
      . '<input type="hidden" name="id" value="' . (int) $r['id'] . '">'
-     . '<button name="action" value="approve">approve</button> '
      . '<button name="action" value="delete" onclick="return confirm(\'delete?\')">delete</button>'
      . '</form>';
   echo '</div>';

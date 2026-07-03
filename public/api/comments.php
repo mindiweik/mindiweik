@@ -7,6 +7,7 @@ declare(strict_types=1);
 // Credentials load from a file above the web root; see comments-config.example.php.
 
 $config = require __DIR__ . '/../../comments-config.php';
+require __DIR__ . '/mailer.php';
 
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: ' . ($config['allowed_origin'] ?? ''));
@@ -53,7 +54,7 @@ try {
     $stmt->execute([$page]);
     $rows = $stmt->fetchAll();
     foreach ($rows as &$r) {
-      $r['created_at'] = gmdate('c', strtotime($r['created_at'] . ' UTC'));
+      $r['created_at'] = gmdate('Y-m-d\TH:i:s\Z', strtotime($r['created_at'] . ' UTC'));
     }
     unset($r);
     respond(200, ['comments' => $rows]);
@@ -69,7 +70,7 @@ try {
 
     // Honeypot: humans never see "website"; bots fill it. Pretend success.
     if (!empty($data['website'])) {
-      respond(200, ['ok' => true, 'message' => 'Thanks. Your comment is awaiting approval.']);
+      respond(200, ['ok' => true, 'message' => 'Almost there. Check your email for the link to confirm your comment.']);
     }
 
     $page  = trim((string) ($data['page_key'] ?? ''));
@@ -101,12 +102,26 @@ try {
       }
     }
 
+    // Store as unverified (approved=0) with a one-time token. The link emailed
+    // below flips it to approved=1 (live) when the commenter clicks it.
+    $token = bin2hex(random_bytes(32));
     $ins = $pdo->prepare(
-      'INSERT INTO comments (page_key, author_name, author_email, body, created_at, approved, ip_address)
-       VALUES (?, ?, ?, ?, UTC_TIMESTAMP(), 0, ?)'
+      'INSERT INTO comments (page_key, author_name, author_email, body, created_at, approved, verify_token, ip_address)
+       VALUES (?, ?, ?, ?, UTC_TIMESTAMP(), 0, ?, ?)'
     );
-    $ins->execute([$page, $name, $email, $body, $ip]);
-    respond(201, ['ok' => true, 'message' => 'Thanks. Your comment is awaiting approval.']);
+    $ins->execute([$page, $name, $email, $body, $token, $ip]);
+    $id = (int) $pdo->lastInsertId();
+
+    $siteUrl = rtrim((string) ($config['site_url'] ?? 'https://mindiweik.com'), '/');
+    $verifyLink = $siteUrl . '/api/verify.php?token=' . $token;
+    try {
+      send_verification_email($config, $email, $name, $verifyLink);
+    } catch (Throwable $mailError) {
+      // A failed send must not leave an orphaned pending row.
+      $pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
+      respond(502, ['error' => 'We could not send the confirmation email. Please try again.']);
+    }
+    respond(201, ['ok' => true, 'message' => 'Almost there. Check your email for the link to confirm your comment.']);
   }
 
   respond(405, ['error' => 'method not allowed']);
