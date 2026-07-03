@@ -10,7 +10,7 @@ const projects = (await getCollection('projects'))
   {projects.map((p) => (
     <EntryCard
       id={p.id}
-      href={p.data.url ?? p.data.repoUrl ?? '#'}
+      href={`/projects/${p.id}`}
       title={`${p.data.name}${p.data.featured ? ' ★' : ''}`}
       meta={`${p.data.status}${p.data.stack.length ? ' · ' + p.data.stack.join(', ') : ''}`}
       zone="projects"

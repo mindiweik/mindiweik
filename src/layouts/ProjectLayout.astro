@@ -1,0 +1,56 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/content/Breadcrumb.astro';
+import VersionChip from '../components/content/VersionChip.astro';
+import { Image } from 'astro:assets';
+import '../styles/prose.css';
+
+interface Props {
+  name: string;
+  slug: string;
+  status: string;
+  stack: string[];
+  since: number;
+  featured: boolean;
+  pushedAt?: Date | null;
+  url?: string;
+  repoUrl?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+}
+const { name, slug, status, stack, since, featured, pushedAt, url, repoUrl, image, imageAlt } = Astro.props;
+
+const fmtMonth = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toLowerCase();
+// AC (no fetchable repo) reads "since 2023 · ongoing"; repos read "since 2025 · last commit jan 2026".
+const metaParts = [`since ${since}`];
+if (pushedAt) metaParts.push(`last commit ${fmtMonth(pushedAt)}`);
+else if (status !== 'archived') metaParts.push('ongoing');
+const meta = metaParts.join(' · ');
+
+const links = [
+  ...(url ? [{ label: 'visit site', href: url }] : []),
+  ...(repoUrl ? [{ label: 'github', href: repoUrl }] : []),
+];
+---
+<BaseLayout title={name} active="/projects">
+  <Breadcrumb path={`~/projects/${slug}.md`} />
+  <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
+    <VersionChip label={status} zone="projects" />
+    {stack.map((s) => (
+      <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{s}</span>
+    ))}
+  </div>
+  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{name}{featured ? ' ★' : ''}</h1>
+  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">{meta}</div>
+  {image && (
+    <Image src={image} alt={imageAlt ?? ''} style="margin-top:1.2rem;width:100%;height:auto;border-radius:10px;border:1px solid var(--border)" />
+  )}
+  <article class="prose" style="margin-top:1.2rem"><slot /></article>
+  {links.length > 0 && (
+    <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+      {links.map((l) => (
+        <a href={l.href} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
+      ))}
+    </div>
+  )}
+</BaseLayout>

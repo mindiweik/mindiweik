@@ -10,9 +10,10 @@ const blogEntries = (await getCollection('blog')).filter(isVisible);
 const blog = blogEntries.map((e) => ({ path: `/blog/${e.id}`, title: e.data.title }));
 const podcast = (await getCollection('podcast')).filter(isVisible).map((e) => ({ path: `/podcast/${e.id}`, title: `${e.data.version} ${e.data.title}` }));
 const speaking = (await getCollection('speaking')).filter(isVisible).map((e) => ({ path: `/speaking/${e.id}`, title: e.data.title }));
+const projects = (await getCollection('projects')).map((e) => ({ path: `/projects/${e.id}`, title: e.data.name }));
 const tags = [...new Set(blogEntries.flatMap((e) => e.data.tags))].map((t) => ({ path: `/tags/${t}`, title: `#${t}` }));
 const pages = ['/blog', '/podcast', '/speaking', '/projects', '/about', '/changelog', '/tags'].map((p) => ({ path: p, title: p.slice(1) }));
-const routes = [{ path: '/', title: 'home' }, ...pages, ...blog, ...podcast, ...speaking, ...tags];
+const routes = [{ path: '/', title: 'home' }, ...pages, ...blog, ...podcast, ...speaking, ...projects, ...tags];
 ---
 <BaseLayout title="404">
   <div style="padding:4rem 0;text-align:center">

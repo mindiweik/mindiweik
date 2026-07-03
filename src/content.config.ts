@@ -57,16 +57,23 @@ const speaking = defineCollection({
 
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
-  schema: z.object({
-    name: z.string(),
-    blurb: z.string(),
-    status: z.enum(['alpha', 'live', 'wip', 'archived']),
-    stack: z.array(z.string()).default([]),
-    url: z.string().optional(),
-    repoUrl: z.string().optional(),
-    featured: z.boolean().default(false),
-    order: z.number().optional(),
-  }),
+  schema: ({ image }) =>
+    z
+      .object({
+        name: z.string(),
+        blurb: z.string(),
+        status: z.enum(['alpha', 'live', 'wip', 'archived']),
+        stack: z.array(z.string()).default([]),
+        url: z.string().optional(),
+        repoUrl: z.string().optional(),
+        featured: z.boolean().default(false),
+        order: z.number().optional(),
+        since: z.number().int().min(2000).max(2100),
+        lastUpdated: z.coerce.date().optional(),
+        image: image().optional(),
+        imageAlt: z.string().optional(),
+      })
+      .refine((d) => !d.image || !!d.imageAlt, { message: 'imageAlt is required when image is set' }),
 });
 
 export const collections = { blog, podcast, speaking, projects };

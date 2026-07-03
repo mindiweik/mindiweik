@@ -4,12 +4,6 @@ These are known, intentionally-deferred items from the initial scaffold. None bl
 scaffold being "done." Most belong with the content-migration or light-mode (v1.1) work.
 
 ## Content / data
-- **Projects revamp (post-migration)** — after the wip-podcast content migration, give each
-  project its own detail page (longer description, links, images) instead of a bare index row.
-  Fold these deferred bits into that work:
-  - **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
-    `src/lib/collections.ts`. Replace with real ship dates; add a test for the `order > 0` branch.
-  - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
@@ -35,6 +29,15 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   Mindi requested 2026-07-03.
 - **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
   silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
+- **Pin the mindiweik.com changelog entry** — the site's project entry dates off its own
+  repo's `pushedAt`, which bumps on every deploy, so "update · mindiweik.com" floats near
+  the top of the changelog dated "today". Mindi's lean: pin it with `lastUpdated: 2026-06-30`
+  (the official launch date) in `src/content/projects/mindiweik-site.md`; shipping as-is
+  first to observe. Noted 2026-07-03.
+- **Project page OG descriptions** — ProjectLayout doesn't pass a description to BaseLayout,
+  so project pages share the generic site OG description instead of their blurb. Matches the
+  preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
+  From final review 2026-07-03.
 - **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
   color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
   the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
@@ -67,6 +70,14 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - ~~**About copy**~~ -> done 2026-07-03. Real bio + the crew replaced the placeholder.
 - ~~**Social links**~~ -> done 2026-07-03. Mindi's socials added.
 - ~~**Inline code styling**~~ -> done 2026-07-03. Inline `code` spans visually distinct in prose.
+- ~~**Projects revamp**~~ -> shipped 2026-07-03. Five projects (Audition Cat ★,
+  Drip Dash, mindiweik.com, catz4life, prettykitties), each with a detail page
+  (markdown body via ProjectLayout, same pattern as blog). Cards navigate
+  internally; the `#` fallback and the synthesized changelog dates are gone.
+  Changelog project entries are type `update`, dated lastUpdated (manual, for
+  Audition Cat milestones) -> GitHub pushedAt (build-time fetch, fresh daily via
+  cron) -> Jan 1 of `since`. Screenshots pending from Mindi (image/imageAlt
+  fields are wired). GitLab API for AC = deliberately skipped.
 - ~~**Smart 404**~~ -> shipped 2026-07-02. Build-time route list (isVisible-filtered, so drafts
   never leak) inlined into 404.astro; client-side fuzzy match (token overlap + Levenshtein on
   the last segment, section words excluded) renders up to 5 "did you mean" buttons showing
