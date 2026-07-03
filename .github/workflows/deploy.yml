@@ -44,6 +44,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Bumped from the 30s default: Hostinger's FTP endpoint has intermittently
+          # been slow to accept the connection ("Failed to connect... via FTP"), which
+          # failed the deploy. A longer per-operation timeout absorbs a slow handshake.
+          timeout: 120000
           local-dir: ./dist/
           server-dir: /domains/mindiweik.com/public_html/
           # dev/ is the dev.mindiweik.com preview (nested subdomain folder);
@@ -66,6 +70,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          timeout: 120000 # see note on the prod upload above
           local-dir: ./wip-dist/
           server-dir: /domains/wip-podcast.com/public_html/
 
@@ -90,6 +95,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          timeout: 120000 # see note on the prod upload above
           local-dir: ./dist/
           server-dir: /domains/mindiweik.com/public_html/dev/
           exclude: |
