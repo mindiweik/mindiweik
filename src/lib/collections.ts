@@ -4,7 +4,7 @@ import { isVisible } from './publish';
 import { fetchRepoActivity } from './github';
 
 export interface ChangelogEntry {
-  type: string;   // "blog" | "v1.0.4" | "talk" | "guest" | "update"
+  type: string; // "blog" | "v1.0.4" | "talk" | "guest" | "update"
   zone: ZoneKey;
   title: string;
   url: string;
@@ -19,9 +19,27 @@ export function toChangelogEntries(raw: {
   projects: { id: string; data: any; pushedAt?: Date }[];
 }): ChangelogEntry[] {
   const entries: ChangelogEntry[] = [
-    ...raw.blog.map((e) => ({ type: 'blog', zone: 'blog' as ZoneKey, title: e.data.title, url: `/blog/${e.id}`, date: e.data.pubDate })),
-    ...raw.podcast.map((e) => ({ type: e.data.version, zone: 'podcast' as ZoneKey, title: e.data.title, url: `/podcast/${e.id}`, date: e.data.pubDate })),
-    ...raw.speaking.map((e) => ({ type: e.data.type === 'guest' ? 'guest' : 'talk', zone: 'speaking' as ZoneKey, title: e.data.title, url: `/speaking#${e.id}`, date: e.data.date })),
+    ...raw.blog.map((e) => ({
+      type: 'blog',
+      zone: 'blog' as ZoneKey,
+      title: e.data.title,
+      url: `/blog/${e.id}`,
+      date: e.data.pubDate,
+    })),
+    ...raw.podcast.map((e) => ({
+      type: e.data.version,
+      zone: 'podcast' as ZoneKey,
+      title: e.data.title,
+      url: `/podcast/${e.id}`,
+      date: e.data.pubDate,
+    })),
+    ...raw.speaking.map((e) => ({
+      type: e.data.type === 'guest' ? 'guest' : 'talk',
+      zone: 'speaking' as ZoneKey,
+      title: e.data.title,
+      url: `/speaking#${e.id}`,
+      date: e.data.date,
+    })),
     ...raw.projects.map((e) => ({
       type: 'update',
       zone: 'projects' as ZoneKey,
@@ -40,10 +58,12 @@ export async function getChangelog(limit?: number): Promise<ChangelogEntry[]> {
     getCollection('speaking', isVisible),
     getCollection('projects'),
   ]);
-  const enriched = await Promise.all(projects.map(async (p) => ({
-    ...p,
-    pushedAt: p.data.repoUrl ? (await fetchRepoActivity(p.data.repoUrl))?.pushedAt : undefined,
-  })));
+  const enriched = await Promise.all(
+    projects.map(async (p) => ({
+      ...p,
+      pushedAt: p.data.repoUrl ? (await fetchRepoActivity(p.data.repoUrl))?.pushedAt : undefined,
+    })),
+  );
   const all = toChangelogEntries({ blog, podcast, speaking, projects: enriched });
   return limit ? all.slice(0, limit) : all;
 }

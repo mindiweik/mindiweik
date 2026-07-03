@@ -41,7 +41,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<h1>mindiweik</h1>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(1);
@@ -51,7 +51,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
   });
@@ -60,7 +60,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 503, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 3, sleep: noSleep }
+      { fetchFn, attempts: 3, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(fetchFn.calls.length).toBe(3);
@@ -74,7 +74,7 @@ describe('checkOne', () => {
     ]);
     const r = await checkOne(
       { url: 'https://www.mindiweik.com/', expectStatus: 200 },
-      { fetchFn, attempts: 5, sleep: noSleep }
+      { fetchFn, attempts: 5, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(2);
@@ -84,7 +84,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<html>error</html>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(r.detail).toContain('mindiweik');
@@ -94,10 +94,41 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([new Error('ECONNRESET')]);
     const r = await checkOne(
       { url: 'https://wip-podcast.com/', expectStatus: 200 },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
+    expect(r.blocked).toBe(false); // ambiguous network error must fail loudly
     expect(fetchFn.calls.length).toBe(2);
+  });
+
+  it('marks a persistent 403 as a host-level block', async () => {
+    const fetchFn = fakeFetch([{ status: 403, body: '' }]);
+    const r = await checkOne(
+      { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
+      { fetchFn, attempts: 3, sleep: noSleep },
+    );
+    expect(r.ok).toBe(false);
+    expect(r.blocked).toBe(true);
+  });
+
+  it('does not treat a 503 as a block (real outage, not a bot-block)', async () => {
+    const fetchFn = fakeFetch([{ status: 503, body: '' }]);
+    const r = await checkOne(
+      { url: 'https://mindiweik.com/', expectStatus: 200 },
+      { fetchFn, attempts: 2, sleep: noSleep },
+    );
+    expect(r.ok).toBe(false);
+    expect(r.blocked).toBe(false);
+  });
+
+  it('does not treat a 200-with-wrong-body as a block', async () => {
+    const fetchFn = fakeFetch([{ status: 200, body: '<html>error</html>' }]);
+    const r = await checkOne(
+      { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
+      { fetchFn, attempts: 2, sleep: noSleep },
+    );
+    expect(r.ok).toBe(false);
+    expect(r.blocked).toBe(false);
   });
 });
 
@@ -109,7 +140,7 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(passed).toBe(true);
     expect(results.length).toBe(2);
@@ -126,8 +157,38 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, attempts: 1, sleep: noSleep }
+      { fetchFn, attempts: 1, sleep: noSleep },
     );
     expect(passed).toBe(false);
+  });
+
+  it('flags a uniform 403 across every URL as inconclusive, not failed', async () => {
+    const fetchFn = async () => ({ status: 403, text: async () => '' });
+    const { passed, blocked } = await runChecks(
+      [
+        { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
+        { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
+      ],
+      { fetchFn, attempts: 1, sleep: noSleep },
+    );
+    expect(passed).toBe(false);
+    expect(blocked).toBe(true);
+  });
+
+  it('is a genuine failure (not blocked) when only some URLs are blocked', async () => {
+    // apex serves fine (200 + marker), blog is 403 — a real mixed result.
+    const fetchFn = async (url) =>
+      url.endsWith('/blog/')
+        ? { status: 403, text: async () => '' }
+        : { status: 200, text: async () => 'mindiweik' };
+    const { passed, blocked } = await runChecks(
+      [
+        { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
+        { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
+      ],
+      { fetchFn, attempts: 1, sleep: noSleep },
+    );
+    expect(passed).toBe(false);
+    expect(blocked).toBe(false);
   });
 });

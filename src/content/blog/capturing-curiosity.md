@@ -1,8 +1,8 @@
 ---
-title: "capturing curiosity"
-description: "A behavioral \"muscle\" pattern anyone can build!"
+title: 'capturing curiosity'
+description: 'A behavioral "muscle" pattern anyone can build!'
 pubDate: 2024-11-19
-tags: ["career","mindset"]
+tags: ['career', 'mindset']
 readingTime: 15
 ---
 
@@ -86,7 +86,7 @@ The **benefits** of our curiosity are plentiful and relatively simple to underst
 - Build trust with others
 - Expand your empathy, getting to know the experience of others
 - Breed more creativity and a variety of possible solutions in the face of a problem
-- People tend to think curious leaders are *more* *likable* and *more competent*
+- People tend to think curious leaders are _more_ _likable_ and _more competent_
 
 That said, there are 3 major **challenges** I’ve identified that can be potential blockers. We should be mindful of these, which can lead us to avoid practicing curiosity.
 
@@ -108,7 +108,7 @@ For ages, we have naturally conformed to the expectations of our tribes because 
 
 > You may need to question the status quo. It can be uncomfortable.
 
-Often, companies and teams express a value for the curious trait. But almost as often, leaders fail to relinquish their fears that embracing it will lead to less efficiency and higher costs. It’s true that, in some sense, embracing curiosity is a risk; we don’t know what the outcome will be. But ultimately, this valued trait is an *expression* of value only because of the fear of failure.
+Often, companies and teams express a value for the curious trait. But almost as often, leaders fail to relinquish their fears that embracing it will lead to less efficiency and higher costs. It’s true that, in some sense, embracing curiosity is a risk; we don’t know what the outcome will be. But ultimately, this valued trait is an _expression_ of value only because of the fear of failure.
 
 Please remember that you don’t have to necessarily act on anything, especially if you are truly uncomfortable. Even asking questions to challenge something small, like, “I wonder how greeting cards became a staple for birthdays and holidays,” could lead to an interesting exercise and possibly bring some new insights.
 
@@ -174,7 +174,7 @@ What did I learn from these experiences?
 
 ![crochet octopus photo](../../assets/blog/capturing-curiosity/crochet-octopus-photo.png)
 
-It took me several attempts to get the octopus right. Each time, though, I learned something new and gained a new approach. Even in some of those failures, I learned some options and ideas I could use in other projects where it had an effect I *did* want!
+It took me several attempts to get the octopus right. Each time, though, I learned something new and gained a new approach. Even in some of those failures, I learned some options and ideas I could use in other projects where it had an effect I _did_ want!
 
 The point is that even when you encounter failure, it may or may not help you in the future. However, you’re expanding your toolbox for the next problem you encounter, the next project you work on, or the next idea you want to approach.
 
@@ -182,7 +182,7 @@ The point is that even when you encounter failure, it may or may not help you in
 
 There is true value in the ability to question knowledge. Even people we typically consider smart - like scientists - are often wrong and must iterate on what we “know” as a human species. This also applied to explorers! Consider Christopher Columbus, whose claim to fame you may know as an explorer who “discovered” the Americas. He thought he was in the East Indies!
 
-As we venture forth, the more questions we ask, the more we grow our understanding of ourselves and others. Ultimately, as humans, we *want* to be understood and to understand our surroundings.
+As we venture forth, the more questions we ask, the more we grow our understanding of ourselves and others. Ultimately, as humans, we _want_ to be understood and to understand our surroundings.
 
 **Pattern approaches you can use to ask improved questions:**
 
@@ -192,7 +192,7 @@ As we venture forth, the more questions we ask, the more we grow our understandi
    - Instead of “Why did you choose to do Y?” consider something like, “What helped you make the final decision to choose Y?” or “How did you approach Y to figure this out?”
    - Instead of “Why am I going to work with the Z team?” consider something like, “How did you decide on team dynamics?” or “Which skills do you think I can bring to best help out the Z team?”
 3. **Find a spotter:** Ask a friend for help! Find a spotter to help monitor your questions and check in to see if the phrasing, attitude, etc., aligned with your intention. This could be a coworker, a partner, a friend, or children/grandchildren. Kids can be brutally honest! Just make sure it’s someone you trust who can be honest with you so that you can learn and improve over time.
-4. **Pause:** Pause to your advantage! This is challenging, but ultimately, it gives the responder time to *think*, and you will be less likely to “lead” them to answers they wouldn’t have chosen otherwise. This encourages the responder to go further in their answer and motivates you to truly listen to their unfiltered answer.
+4. **Pause:** Pause to your advantage! This is challenging, but ultimately, it gives the responder time to _think_, and you will be less likely to “lead” them to answers they wouldn’t have chosen otherwise. This encourages the responder to go further in their answer and motivates you to truly listen to their unfiltered answer.
 5. **Disguised questions:** Similarly, avoid statements or feelings in the form of a question. For instance, “Do you think that [so-and-so] is taking advantage of the company when they take long lunches?” These leading questions won’t help you find real answers; your biases will taint them. Rapid follow-up questions also cause this. Even if you start open-ended (see next point), fast follow-ups can alter the response. If our intention is truly to learn, then we should consider our phrasing to refrain from those leading questions that are likely inaccurate.
 6. **Open-ended questions:** You may have heard about open-ended and closed questions. A closed question usually leads to a “yes” or “no” or a direct answer like, “What’s your favorite color?” “Green.” Open-ended questions seek deeper answers like, “How did you celebrate your birthday last week?” To learn more about someone or a subject, we should lean toward open-ended questions to dive deeper. Closed questions serve a purpose but allow the responder to decide how much information to provide. You hand over the power, which may squander your chance to practice your curiosity muscle if have limited opportunity or time!
 
@@ -222,7 +222,7 @@ If you’d like to see/hear an example, in the recording, I discuss a scenario w
 
 **Here’s the simplified version:**
 
-- **Start at the bottom:** Hear me out. You need to identify your target to better frame your questions! This is also a great moment to check in with yourself to discover your *intention* with this conversation.
+- **Start at the bottom:** Hear me out. You need to identify your target to better frame your questions! This is also a great moment to check in with yourself to discover your _intention_ with this conversation.
 - **Top of the funnel:** Now, let’s go through the process. To start, you want to ask those open-ended questions. Ideally, the responder will share information to guide your follow-up questions.
 - **Begin to narrow:** The answers provided may help you ask more probing or clarifying questions. If needed, ask additional questions about the received information to get closer to the target.
 - **Keep narrowing:** You may need to ask closed questions to improve your understanding. Then, you should be ready to summarize and paraphrase what you heard to confirm a shared understanding.
@@ -232,6 +232,7 @@ If you’d like to see/hear an example, in the recording, I discuss a scenario w
 Over time, you can also try applying these questions inward. Take time to learn from your mistakes, however big or small, and ask yourself these “better” questions.
 
 > “Being **curious** can manifest itself in the activity of asking questions, but it can also be a position from which one approaches their life.”
+>
 > - From [gostrengths.com](https://gostrengths.com/what-is-curiosity/)
 
 ### **#4 seek new experiences**

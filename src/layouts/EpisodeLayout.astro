@@ -8,70 +8,125 @@ import EpisodeNav from '../components/content/EpisodeNav.astro';
 import Comments from '../components/content/Comments.astro';
 import '../styles/prose.css';
 interface Props {
-  id: string; title: string; version: string; season: number; pubDate: Date;
-  duration?: string; descriptor?: string; youtubeUrl?: string;
+  id: string;
+  title: string;
+  version: string;
+  season: number;
+  pubDate: Date;
+  duration?: string;
+  descriptor?: string;
+  youtubeUrl?: string;
   chapters: { timestamp: string; title: string }[];
   links: { label: string; url: string }[];
   state?: PublishState;
 }
-const { id, title, version, season, pubDate, duration, descriptor, youtubeUrl, chapters, links, state } = Astro.props;
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null) : null;
+const {
+  id,
+  title,
+  version,
+  season,
+  pubDate,
+  duration,
+  descriptor,
+  youtubeUrl,
+  chapters,
+  links,
+  state,
+} = Astro.props;
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const ytId = youtubeUrl
+  ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null)
+  : null;
 // Order the link buttons: LinkedIn first, then the guest's own site (non-social),
 // then everything else (other socials, resources).
 const linkRank = (l: { url: string }) => {
   const u = (l.url || '').toLowerCase();
   if (u.includes('linkedin.com')) return 0;
-  const social = /(twitter\.com|x\.com|instagram\.com|github\.com|youtube\.com|youtu\.be|tiktok\.com|goodreads\.com|spotify\.com|music\.apple|facebook\.com|bsky\.app|mastodon|threads\.net)/;
+  const social =
+    /(twitter\.com|x\.com|instagram\.com|github\.com|youtube\.com|youtu\.be|tiktok\.com|goodreads\.com|spotify\.com|music\.apple|facebook\.com|bsky\.app|mastodon|threads\.net)/;
   return social.test(u) ? 2 : 1;
 };
 const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b));
 ---
+
 <BaseLayout title={title} description={descriptor} zone="podcast" active="/podcast">
   <Breadcrumb path={`~/podcast/${id}`} />
   <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
     <VersionChip label={version} zone="podcast" />
     <PublishStateChip state={state} zone="podcast" />
-    <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{duration ? duration + ' · ' : ''}season {season}</span>
+    <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)"
+      >{duration ? duration + ' · ' : ''}season {season}</span
+    >
   </div>
-  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>
-  {descriptor && <p style="font-family:var(--font-body);color:var(--text-muted);font-size:0.85rem;margin-top:0.4rem">{descriptor}</p>}
-  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">[WIP] podcast · {fmt(pubDate)}</div>
+  <h1
+    style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0"
+  >
+    {title}
+  </h1>
+  {
+    descriptor && (
+      <p style="font-family:var(--font-body);color:var(--text-muted);font-size:0.85rem;margin-top:0.4rem">
+        {descriptor}
+      </p>
+    )
+  }
+  <div
+    style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem"
+  >
+    [WIP] podcast · {fmt(pubDate)}
+  </div>
 
-  {ytId && (
-    <div style="margin-top:1.1rem;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
-      <iframe
-        src={`https://www.youtube-nocookie.com/embed/${ytId}`}
-        title={title}
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="position:absolute;inset:0;width:100%;height:100%;border:0"
-      ></iframe>
-    </div>
-  )}
+  {
+    ytId && (
+      <div style="margin-top:1.1rem;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${ytId}`}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        />
+      </div>
+    )
+  }
 
-  {links.length > 0 && (
-    <div style="margin-top:1.1rem">
-      <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">// links & more</span>
-      <div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem">
-        {sortedLinks.map((l) => (
-          <a href={l.url} target="_blank" rel="noopener noreferrer" class="hov-card" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
+  {
+    links.length > 0 && (
+      <div style="margin-top:1.1rem">
+        <span style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">
+          // links & more
+        </span>
+        <div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+          {sortedLinks.map((l) => (
+            <a
+              href={l.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hov-card"
+              style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px"
+            >
+              {l.label} →
+            </a>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  {
+    chapters.length > 0 && (
+      <div style="margin-top:1.1rem">
+        {chapters.map((c) => (
+          <div style="display:flex;gap:0.7rem;font-family:var(--font-mono);font-size:0.7rem;padding:0.45rem 0;border-top:1px solid var(--border)">
+            <span style="color:var(--text-muted);flex:none">{c.timestamp}</span>
+            <span>{c.title}</span>
+          </div>
         ))}
       </div>
-    </div>
-  )}
-
-  {chapters.length > 0 && (
-    <div style="margin-top:1.1rem">
-      {chapters.map((c) => (
-        <div style="display:flex;gap:0.7rem;font-family:var(--font-mono);font-size:0.7rem;padding:0.45rem 0;border-top:1px solid var(--border)">
-          <span style="color:var(--text-muted);flex:none">{c.timestamp}</span>
-          <span>{c.title}</span>
-        </div>
-      ))}
-    </div>
-  )}
+    )
+  }
 
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
   <EpisodeNav currentId={id} />

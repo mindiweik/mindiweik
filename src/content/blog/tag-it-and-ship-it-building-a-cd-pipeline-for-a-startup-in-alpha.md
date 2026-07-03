@@ -1,8 +1,8 @@
 ---
-title: "tag it and ship it: building a CD pipeline for a startup in alpha"
-description: "how a two-engineer startup went from SSH-and-pray to a tag-based pipeline, and what changed between the plan and production."
+title: 'tag it and ship it: building a CD pipeline for a startup in alpha'
+description: 'how a two-engineer startup went from SSH-and-pray to a tag-based pipeline, and what changed between the plan and production.'
 pubDate: 2026-07-23
-tags: ["devops","ci-cd"]
+tags: ['devops', 'ci-cd']
 ---
 
 When you're a small startup with two engineers and zero users watching, it's tempting to just SSH into the server and run `docker run` manually every time you want to ship something.
@@ -48,15 +48,14 @@ That was the plan. Clean. Reasonable. Mostly right.
 
 The original plan had one runner, `mindi-local` (my Linux machine on a Raspberry Pi). It was handling everything: building Docker images, SSHing into servers, running deploys.
 
-*You can see more about my adventures setting up this GitLab runner:*
+_You can see more about my adventures setting up this GitLab runner:_
 
-<a href="/blog/experiences-with-a-local-gitlab-runner-part-1" class="hov-card" style="display:inline-block;font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--text)">gitlab runner - part 1 →</a> 
+<a href="/blog/experiences-with-a-local-gitlab-runner-part-1" class="hov-card" style="display:inline-block;font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--text)">gitlab runner - part 1 →</a>
 <a href="/blog/experiences-with-a-local-gitlab-runner-part2" class="hov-card" style="display:inline-block;font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--text)">gitlab runner - part 2 →</a>
-
 
 But...that wasn't enough power or space.
 
-Building multi-platform Docker images from a local machine and SSHing into EC2s across every deploy is slow, brittle, and created a hard dependency on my machine being on and available. 
+Building multi-platform Docker images from a local machine and SSHing into EC2s across every deploy is slow, brittle, and created a hard dependency on my machine being on and available.
 
 Not great.
 
@@ -136,4 +135,4 @@ We went from "SSH and pray" to a pipeline we actually trust. It took a few round
 
 Are you building CI/CD for a small team or solo project? I'd love to hear what your setup looks like. 🚀
 
-*[Audition Cat](/projects/audition-cat/) is a casting and audition platform currently in alpha. Follow along as we build it in public.*
+_[Audition Cat](/projects/audition-cat/) is a casting and audition platform currently in alpha. Follow along as we build it in public._

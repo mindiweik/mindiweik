@@ -1,8 +1,8 @@
 ---
-title: "your new best friend, the console"
-description: "Part 2 of 4 in the \"Unlocking Your Browser\" series"
+title: 'your new best friend, the console'
+description: 'Part 2 of 4 in the "Unlocking Your Browser" series'
 pubDate: 2026-02-25
-tags: ["browser","devtools","javascript"]
+tags: ['browser', 'devtools', 'javascript']
 readingTime: 4
 ---
 
@@ -34,14 +34,17 @@ Here's the thing: most developers open the Console when something breaks. But so
 You might already have it open from Part 1. If not:
 
 **Chrome / Edge / Brave:**
+
 - Mac: `Cmd + Option + i` or `Cmd + Option + j`
 - Windows/Linux: `F12` or `Ctrl + Shift + i`
 
 **Firefox:**
+
 - Mac: `Cmd + Option + i`
 - Windows/Linux: `F12` or `Ctrl + Shift + i`
 
 **Safari:**
+
 - First, you need to enable the Developer menu: Go to **Preferences > Advanced** and check "Show Develop menu in menu bar"
 - Then: `Cmd + Option + i`
 
@@ -54,7 +57,7 @@ These are the demos I ran during my [Parsity.io](https://parsity.io) Tech Talk. 
 ### 1. target and change content
 
 ```js
-document.querySelector('h1').textContent = 'I own this now 😈'
+document.querySelector('h1').textContent = 'I own this now 😈';
 ```
 
 This grabs the first `h1` on the page and replaces its text. Change `'h1'` to any CSS selector: a class, an ID, a button. This is how you test content changes before touching your code.
@@ -62,7 +65,7 @@ This grabs the first `h1` on the page and replaces its text. Change `'h1'` to an
 ### 2. style on the fly
 
 ```js
-document.body.style.backgroundColor = 'hotpink'
+document.body.style.backgroundColor = 'hotpink';
 ```
 
 Instant hotpink. You're welcome. Swap in any CSS property (camelCase) and any value. This is faster than toggling between your editor and browser when you're trying to nail a style.
@@ -70,7 +73,7 @@ Instant hotpink. You're welcome. Swap in any CSS property (camelCase) and any va
 ### 3. log for debugging
 
 ```js
-console.log('hello from the console 👋')
+console.log('hello from the console 👋');
 ```
 
 Okay, this one looks simple, and it is. But `console.log` is the most underused debugging tool I see new devs skip over. When something isn't working, log everything. Log your variables, log your API responses, log your function outputs. The Console will tell you exactly what your code is seeing, which is usually different from what you think it's seeing.
@@ -80,7 +83,7 @@ Also worth knowing: `console.warn()` and `console.error()` give you yellow and r
 ### 4. explore page context
 
 ```js
-window.location
+window.location;
 ```
 
 This returns an object with everything about the current URL like the full `href`, the `hostname`, the `pathname`, query params, and more. It's incredibly useful when debugging routing issues or building something that depends on URL structure.
@@ -90,10 +93,10 @@ Try `window.location.pathname` to get just the current path. Or `window.location
 ### 5. make the entire page editable
 
 ```js
-document.body.contentEditable = true
+document.body.contentEditable = true;
 ```
 
-Yes, really. 
+Yes, really.
 
 Run this and then click anywhere on the page. You can type, delete, edit. The whole page becomes a document! Refresh to undo. This is fun for testing copy changes or doing a quick "how does this look with shorter text?" gut check.
 
@@ -102,7 +105,7 @@ Run this and then click anywhere on the page. You can type, delete, edit. The wh
 This grabs every `img` element on the page and logs its source URL. Useful for auditing what images are loading, debugging missing images, or just being nosy about where a site's assets live.
 
 ```js
-document.querySelectorAll('img').forEach(img => console.log(img.src))
+document.querySelectorAll('img').forEach((img) => console.log(img.src));
 ```
 
 ## the bigger picture
@@ -122,7 +125,7 @@ Next time you're debugging, try this: before you change anything in your code, o
 
 Remember the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life) from [Part 1](/blog/unlocking-your-browser)? There's a broken "Adopt Me!" button that's supposed to do something when you click it...but it doesn't.
 
-Open the project in your browser, open the Console, and see if you can figure out what's happening. 
+Open the project in your browser, open the Console, and see if you can figure out what's happening.
 (Hint: check for any errors that show up automatically when the page loads. The Console is already watching.)
 
 If you want some guidance, set `HINTS = true` in `script.js` to turn on hint mode.
@@ -135,6 +138,6 @@ In Part 3, we're going to the Network tab where you can watch every single reque
 
 The Console doesn't bite. 💖
 
-*Did something click for you? I'd love to hear about it!*
+_Did something click for you? I'd love to hear about it!_
 
 ← [Part 1: Meet Your Browser's Toolbox](/blog/unlocking-your-browser) | [Part 3: What's Actually Happening](/blog/whats-actually-happening) →

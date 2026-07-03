@@ -1,14 +1,14 @@
 ---
-title: "fundamentals of backend engineering course review"
-description: "A resource for any engineer!"
+title: 'fundamentals of backend engineering course review'
+description: 'A resource for any engineer!'
 pubDate: 2024-03-12
-tags: ["backend","learning"]
+tags: ['backend', 'learning']
 readingTime: 3
 ---
 
 I recently completed the [Fundamentals of Backend Engineering](https://www.udemy.com/share/107rGq3@Nbj-Z2Zckw7X9diaLNDMLP9XC8TUPF285j_NxZ11XNKQGrRHDIgTisjY2NCgn2otaQ==/) course on [Udemy](https://www.udemy.com/) and shared this accomplishment on [LinkedIn](https://www.linkedin.com/posts/mindiweik_udemy-course-completion-certificate-activity-7166921897345998848-3zha?utm_source=share&utm_medium=member_desktop)!
 
-Let’s look at the course from a high level and find out how I think it went. 🤔 
+Let’s look at the course from a high level and find out how I think it went. 🤔
 
 **We’ll cover:**
 
@@ -32,9 +32,9 @@ That said, this isn’t as ideal for a brand-new engineer with little experience
 
 ### 🛠️ are the skills real world applicable?
 
-A resounding yes! 
+A resounding yes!
 
-While working on a current project to build a greenfield API, I found that learning more about polling and long polling, TLS, TCP, WebSockets, and Stateful vs. Stateless were all timely and helpful. 
+While working on a current project to build a greenfield API, I found that learning more about polling and long polling, TLS, TCP, WebSockets, and Stateful vs. Stateless were all timely and helpful.
 
 These concepts directly aided my understanding of the full scope of the project and how certain services were currently interacting together and planned future interactions.
 
@@ -62,7 +62,7 @@ Considering all of the in-depth content, I find this course to be very affordabl
 
 [Hussein Nasser](https://www.udemy.com/course/fundamentals-of-backend-communications-and-protocols/?couponCode=KEEPLEARNING#instructor-1) is an Engineer with about 25 years of experience, which is apparent during his lectures. As he dove into a lecture or a concept, his excitement encouraged my desire to learn more!
 
-At times, the excitement made the concepts difficult to understand. He does a pretty good job of keeping the jargon low-key or taking the time to explain what he’s talking about, but there were a few areas where I had to re-listen/rewatch or do some extra digging to get a better understanding. 
+At times, the excitement made the concepts difficult to understand. He does a pretty good job of keeping the jargon low-key or taking the time to explain what he’s talking about, but there were a few areas where I had to re-listen/rewatch or do some extra digging to get a better understanding.
 
 This isn’t necessarily a bad thing! It also encourages self-discovery and promotes curiosity to some degree.
 

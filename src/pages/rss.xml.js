@@ -5,7 +5,7 @@ import { isVisible } from '../lib/publish.ts';
 
 export async function GET(context) {
   const posts = (await getCollection('blog', isVisible)).sort(
-    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
 
   return rss({

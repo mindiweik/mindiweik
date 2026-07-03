@@ -26,10 +26,12 @@
 ### Task 1: `showUnpublished()` helper + `isVisible` preview mode
 
 **Files:**
+
 - Modify: `src/lib/publish.ts:29-34` (the `isVisible` block)
 - Test: `src/lib/publish.test.ts`
 
 **Interfaces:**
+
 - Produces: `showUnpublished(env?: { DEV?: boolean; PUBLIC_SHOW_DRAFTS?: string }): boolean` exported from `src/lib/publish.ts`, defaulting `env` to `import.meta.env`. Task 2 imports it.
 - `isVisible` signature unchanged.
 
@@ -101,9 +103,11 @@ git commit -m "feat: showUnpublished helper for preview builds"
 ### Task 2: Chip renders on preview builds
 
 **Files:**
+
 - Modify: `src/components/content/PublishStateChip.astro:7-9`
 
 **Interfaces:**
+
 - Consumes: `showUnpublished()` from Task 1.
 
 - [ ] **Step 1: Update the gate**
@@ -143,6 +147,7 @@ git commit -m "feat: publish-state chips render on preview builds"
 ### Task 3: Overridable site URL
 
 **Files:**
+
 - Modify: `astro.config.mjs:8`
 
 - [ ] **Step 1: Make `site` env-driven**
@@ -173,6 +178,7 @@ git commit -m "feat: DEPLOY_SITE env override for site URL"
 ### Task 4: Deploy workflow preview steps
 
 **Files:**
+
 - Modify: `.github/workflows/deploy.yml`
 
 - [ ] **Step 1: Protect the nested dev folder from the prod sync**
@@ -180,21 +186,21 @@ git commit -m "feat: DEPLOY_SITE env override for site URL"
 In the existing "Deploy to Hostinger via FTP" step, add `exclude` (restating action defaults):
 
 ```yaml
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /domains/mindiweik.com/public_html/
-          # dev/ is the dev.mindiweik.com preview (nested subdomain folder);
-          # the prod sync must never delete or overwrite it.
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            dev/**
+- name: Deploy to Hostinger via FTP
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  with:
+    server: ${{ secrets.FTP_SERVER }}
+    username: ${{ secrets.FTP_USERNAME }}
+    password: ${{ secrets.FTP_PASSWORD }}
+    local-dir: ./dist/
+    server-dir: /domains/mindiweik.com/public_html/
+    # dev/ is the dev.mindiweik.com preview (nested subdomain folder);
+    # the prod sync must never delete or overwrite it.
+    exclude: |
+      **/.git*
+      **/.git*/**
+      **/node_modules/**
+      dev/**
 ```
 
 - [ ] **Step 2: Append the preview build + deploy steps**

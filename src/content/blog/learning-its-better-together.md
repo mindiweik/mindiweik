@@ -1,8 +1,8 @@
 ---
-title: "learning: it’s better together."
-description: "Come, learn alongside me!"
+title: 'learning: it’s better together.'
+description: 'Come, learn alongside me!'
 pubDate: 2024-01-09
-tags: ["career","learning"]
+tags: ['career', 'learning']
 readingTime: 1
 ---
 
@@ -10,13 +10,13 @@ readingTime: 1
 
 Thank you for joining me! Together I hope that we will learn something new, add to shared knowledge through conversation, and dive deep into interesting technical topics.
 
-I am a Software Engineer working remotely in the United States. My background is varied (odd jobs through my teens, non-profits, real estate, SaaS tech starting in Customer Success/Support). I altered my career trajectory when I realized just how much I love solving highly technical problems and enjoy consistent learning. 
+I am a Software Engineer working remotely in the United States. My background is varied (odd jobs through my teens, non-profits, real estate, SaaS tech starting in Customer Success/Support). I altered my career trajectory when I realized just how much I love solving highly technical problems and enjoy consistent learning.
 
 My only regret? I wish I discovered it sooner!
 
 This content will remain free for the foreseeable future! My aim is to learn together.
 
-You can expect varied content about software development, personal development, and various adjacent tech topics from me. Mostly, I will share what I’m learning or thinking about in my tech career. 
+You can expect varied content about software development, personal development, and various adjacent tech topics from me. Mostly, I will share what I’m learning or thinking about in my tech career.
 
 ## what this space is not intended to be:
 

@@ -29,21 +29,37 @@ async function getHtml(url) {
 
 // ── Blog ───────────────────────────────────────────────────────────────────
 const BLOG = [
-  '00-learning-its-better-together', '01-failing-fast',
-  '02-mongoose-subdocuments-and-discriminators', '03-clean-code-by-robert-c-martin',
-  '04-how-to-start-working-with-ai', '05-fundamentals-of-backend-engineering-course-review',
-  '06-peek-behind-the-bootcamp-curtain-', '07-experiences-with-a-local-gitlab-runner-part-1',
-  '08-learning-typescript', '09-feeling-inadequate-is-okay', '10-the-power-of-career-change',
-  '11-experiences-with-a-local-gitlab-runner-part2', '12-3-big-scary-software-engineering-words-explained',
-  '13-exploring-typescript-ts-compiler', '14-exploring-typescript-runtime',
+  '00-learning-its-better-together',
+  '01-failing-fast',
+  '02-mongoose-subdocuments-and-discriminators',
+  '03-clean-code-by-robert-c-martin',
+  '04-how-to-start-working-with-ai',
+  '05-fundamentals-of-backend-engineering-course-review',
+  '06-peek-behind-the-bootcamp-curtain-',
+  '07-experiences-with-a-local-gitlab-runner-part-1',
+  '08-learning-typescript',
+  '09-feeling-inadequate-is-okay',
+  '10-the-power-of-career-change',
+  '11-experiences-with-a-local-gitlab-runner-part2',
+  '12-3-big-scary-software-engineering-words-explained',
+  '13-exploring-typescript-ts-compiler',
+  '14-exploring-typescript-runtime',
   '15-the-software-engineers-guidebook-by-gergely-orosz',
-  '16-dependencies-or-dev-dependencies-that-is-the-question', '17-capturing-curiosity',
+  '16-dependencies-or-dev-dependencies-that-is-the-question',
+  '17-capturing-curiosity',
   '19-3-habits-that-helped-me-recover-from-burnout-and-stay-motivated',
-  '20-jmeter-performance-testing-part-1', '21-opportunity-is-knocking',
-  '22-jmeter-performance-testing-part-2', '23-the-hidden-currency-of-connection',
-  '24-whats-the-difference', '25-the-importance-of-open-telemetry', '26-introducing-wip',
-  '27-building-a-compass', '28-unlocking-your-browser', '29-your-new-best-friend-the-console',
-  '30-whats-actually-happening', '31-level-up-sources-performance-and-your-playground',
+  '20-jmeter-performance-testing-part-1',
+  '21-opportunity-is-knocking',
+  '22-jmeter-performance-testing-part-2',
+  '23-the-hidden-currency-of-connection',
+  '24-whats-the-difference',
+  '25-the-importance-of-open-telemetry',
+  '26-introducing-wip',
+  '27-building-a-compass',
+  '28-unlocking-your-browser',
+  '29-your-new-best-friend-the-console',
+  '30-whats-actually-happening',
+  '31-level-up-sources-performance-and-your-playground',
 ];
 
 async function migrateBlog() {
@@ -64,7 +80,13 @@ async function migrateBlog() {
       if (meta.readingTimeMin) fm.push(`readingTime: ${meta.readingTimeMin}`);
       fm.push('---', '', body, '');
       fs.writeFileSync(path.join(outDir, `${slug}.md`), fm.join('\n'));
-      results.push({ slug, ok: true, bytes: body.length, tags: tags.length, code: body.includes('```') });
+      results.push({
+        slug,
+        ok: true,
+        bytes: body.length,
+        tags: tags.length,
+        code: body.includes('```'),
+      });
     } catch (e) {
       results.push({ slug, ok: false, error: String(e.message) });
     }
@@ -75,10 +97,21 @@ async function migrateBlog() {
 // ── Podcast ──────────────────────────────────────────────────────────────────
 // [sourceSlug]. Version/season parsed from the slug: v<major><minor><patch>.
 const PODCAST = [
-  'v000-the-first-commit', 'v001-david-weiss', 'v002-christin-martin',
-  'v003-brendan-schirmer', 'v004-colin-j-lacy', 'v005-kim-maida', 'v006-nick-clark',
-  'v007-keshia-coriolan', 'v008-mara-kaela', 'v009-grace-dees', 'v0010-joram-mutenge',
-  'v100-release-notes', 'v101-jaidie-vargas', 'v102-erik-gross', 'v103-anna-miller',
+  'v000-the-first-commit',
+  'v001-david-weiss',
+  'v002-christin-martin',
+  'v003-brendan-schirmer',
+  'v004-colin-j-lacy',
+  'v005-kim-maida',
+  'v006-nick-clark',
+  'v007-keshia-coriolan',
+  'v008-mara-kaela',
+  'v009-grace-dees',
+  'v0010-joram-mutenge',
+  'v100-release-notes',
+  'v101-jaidie-vargas',
+  'v102-erik-gross',
+  'v103-anna-miller',
   'v104-anemari-fiser',
 ];
 const SOLO = new Set(['v000-the-first-commit', 'v100-release-notes']);
@@ -100,12 +133,15 @@ function splitSections(body) {
     return '';
   });
   // "The Good Stuff" / Links -> [{label, url}]
-  body = body.replace(/#{1,6}\s*(?:the good stuff|links)\b[^\n]*\n([\s\S]*?)(?=\n#{1,6}\s|$)/i, (_, sec) => {
-    for (const lm of sec.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)) {
-      links.push({ label: lm[1].trim(), url: lm[2].trim() });
-    }
-    return '';
-  });
+  body = body.replace(
+    /#{1,6}\s*(?:the good stuff|links)\b[^\n]*\n([\s\S]*?)(?=\n#{1,6}\s|$)/i,
+    (_, sec) => {
+      for (const lm of sec.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)) {
+        links.push({ label: lm[1].trim(), url: lm[2].trim() });
+      }
+      return '';
+    },
+  );
   return { chapters, links, body: body.replace(/\n{3,}/g, '\n\n').trim() };
 }
 
@@ -136,15 +172,26 @@ async function migratePodcast() {
       if (yt) fm.push(`youtubeUrl: https://www.youtube.com/watch?v=${yt}`);
       if (chapters.length) {
         fm.push('chapters:');
-        for (const c of chapters) fm.push(`  - { timestamp: ${JSON.stringify(c.timestamp)}, title: ${JSON.stringify(c.title)} }`);
+        for (const c of chapters)
+          fm.push(
+            `  - { timestamp: ${JSON.stringify(c.timestamp)}, title: ${JSON.stringify(c.title)} }`,
+          );
       }
       if (links.length) {
         fm.push('links:');
-        for (const l of links) fm.push(`  - { label: ${JSON.stringify(l.label)}, url: ${JSON.stringify(l.url)} }`);
+        for (const l of links)
+          fm.push(`  - { label: ${JSON.stringify(l.label)}, url: ${JSON.stringify(l.url)} }`);
       }
       fm.push('---', '', body, '');
       fs.writeFileSync(path.join(outDir, `${slug}.md`), fm.join('\n'));
-      results.push({ slug, ok: true, bytes: body.length, yt: !!yt, chapters: chapters.length, links: links.length });
+      results.push({
+        slug,
+        ok: true,
+        bytes: body.length,
+        yt: !!yt,
+        chapters: chapters.length,
+        links: links.length,
+      });
     } catch (e) {
       results.push({ slug, ok: false, error: String(e.message) });
     }
@@ -155,10 +202,17 @@ async function migratePodcast() {
 // ── Main ─────────────────────────────────────────────────────────────────────
 const type = process.argv[2];
 const runners = { blog: migrateBlog, podcast: migratePodcast };
-if (!runners[type]) { console.error(`unknown type: ${type}`); process.exit(1); }
+if (!runners[type]) {
+  console.error(`unknown type: ${type}`);
+  process.exit(1);
+}
 const results = await runners[type]();
 for (const r of results) {
-  console.log(r.ok ? `✓ ${r.slug}  (${r.bytes}b, ${r.tags} tags${r.code ? ', code' : ''})` : `✗ ${r.slug}  ${r.error}`);
+  console.log(
+    r.ok
+      ? `✓ ${r.slug}  (${r.bytes}b, ${r.tags} tags${r.code ? ', code' : ''})`
+      : `✗ ${r.slug}  ${r.error}`,
+  );
 }
 const failed = results.filter((r) => !r.ok).length;
 console.log(`\n${results.length - failed}/${results.length} migrated`);

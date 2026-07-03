@@ -26,36 +26,36 @@ Here, **runtime** refers to the process of a computer interpreting and performin
 
 In the first post of this series, I wrote about the [TypeScript Compiler](/blog/exploring-typescript-ts-compiler).
 
-### *what does the compiler have to do with runtime?*
+### _what does the compiler have to do with runtime?_
 
 We learned that JavaScript code is generated from our TypeScript code through the compilation steps, which is what our runtime will use! JavaScript runtime is often executed in Node but could also be accomplished using Deno, Bun, or a web browser.
 
-It’s interesting to note that TypeScript is statically typed. The types are checked at compile time, not runtime, like JavaScript or other dynamically typed languages. This process checks your code to help find syntax issues or correct misusage in advance. 
+It’s interesting to note that TypeScript is statically typed. The types are checked at compile time, not runtime, like JavaScript or other dynamically typed languages. This process checks your code to help find syntax issues or correct misusage in advance.
 
 Why is this helpful?
 
-- This allows your IDE to offer some powerful tooling and reduces errors upfront! 
+- This allows your IDE to offer some powerful tooling and reduces errors upfront!
   - Issues can be caught before a user experiences something your team missed.
 - You’ll achieve better readability and maintainability for your future self and teammates. When written well, TypeScript reads like good documentation.
   - There should also be less cognitive load, scrolling, and searching for files; your IDE will show you relevant information when you mouse over variables!
 
-### *what does runtime have to do with typescript, then?*
+### _what does runtime have to do with typescript, then?_
 
 Simply put, TypeScript types don’t exist at runtime.
 
-***Come again?***
+_**Come again?**_
 
 Yes, that’s right. TypeScript types are “erasable,” removed from the compiled code. Interfaces and type annotations also fall under this umbrella of removed code. Although we haven’t covered [declaration files](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html#dts-files), the types and interfaces described in these files will also disappear.
 
-If you recall, we compile TypeScript code into JavaScript. TypeScript is a superset of JavaScript and adds more functionality *on top of* JavaScript. 
+If you recall, we compile TypeScript code into JavaScript. TypeScript is a superset of JavaScript and adds more functionality _on top of_ JavaScript.
 
 As a result, TypeScript-specific features and functionality disappear and can’t affect your JavaScript code. Therefore, interfaces, types, and type annotations cannot affect runtime behavior.
 
 **That’s not at all to say that TypeScript is useless!** On the contrary, it empowers your JavaScript code output and developer experience if you take advantage of them, even if aspects disappear when your program hits runtime.
 
-***In my opinion, the biggest benefit of using TypeScript types is having a pre-defined “shape” of the types you work with.***
+_**In my opinion, the biggest benefit of using TypeScript types is having a pre-defined “shape” of the types you work with.**_
 
-This requires thoughtful intention! I’ve worked on projects that aren’t strict with typing and it caused me some headaches. When done well, defined shapes have clarified *exactly* what I’m working with while building and developing. 
+This requires thoughtful intention! I’ve worked on projects that aren’t strict with typing and it caused me some headaches. When done well, defined shapes have clarified _exactly_ what I’m working with while building and developing.
 
 As a simple example to play around with type “shape,” here we define the “shape” of an object we want to use to describe my three pets:
 
@@ -76,7 +76,7 @@ const dog1: Pet = {
   type: 'dog'
 }
 
-// This is valid 
+// This is valid
 
 const cat1: Pet = {
   name: 'Buzz',
@@ -112,7 +112,7 @@ Before we run this code, we’ll encounter issues. In VSCode, for example, a lit
 - We tried to use a string to describe `Rayla` as `'6 months'` instead of the expected number input for her age (`0`, `0.5`, or `1` depending on your own interpretation). Whoops! What were we thinking?
 - Afterward, we created an imaginary cat. Because it’s not real, we aren’t sure how old it is! Bummer. Alas, `Pet` as an interface is looking for an age field.
 
-### *wait, this example uses an interface, and that goes away after compile time, right?*
+### _wait, this example uses an interface, and that goes away after compile time, right?_
 
 Correct; I’m so glad you brought that back to the forefront. Let’s look into how you can still ensure type safety at runtime!
 
@@ -120,7 +120,7 @@ Correct; I’m so glad you brought that back to the forefront. Let’s look into
 
 Although TypeScript-specific features don’t exist at runtime, there are ways to ensure that runtime is safe. Don’t fret!
 
-Here’s a great summary pulled from *[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)* that is a quick way to describe some of what we’re about to cover:
+Here’s a great summary pulled from _[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)_ that is a quick way to describe some of what we’re about to cover:
 
 > "TypeScript types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this."
 
@@ -139,9 +139,9 @@ node <file-name.js> # runs your compiled code in Node
 
 ### **validate inputs from external sources**
 
-You can usually find me building APIs with TypeScript. 
+You can usually find me building APIs with TypeScript.
 
-This means we receive data from the outside world for most endpoints, which we have no control over, sent to us. Malicious actors may send questionable data to attempt to take advantage of our API! 
+This means we receive data from the outside world for most endpoints, which we have no control over, sent to us. Malicious actors may send questionable data to attempt to take advantage of our API!
 
 I recommend validation because we honestly have no idea what a user (whether malicious or misinformed) may try to send us. You could build your own, but I’ve had success using [Zod](https://zod.dev/). It has excellent documentation and significant support. I’ve heard [Yup](https://github.com/jquense/yup) is also great, though I haven’t used it personally!
 
@@ -208,7 +208,7 @@ const countrySchema = z.object({
 
 ### **check types or properties to handle in your code**
 
-When working with multiple potential types, it’s a good idea to confirm the input's “shape” or data type. This is great both in your TypeScript code and for runtime! 
+When working with multiple potential types, it’s a good idea to confirm the input's “shape” or data type. This is great both in your TypeScript code and for runtime!
 
 This could be a simple check when you expect, for instance, one type or another. Maybe we know a phone number could be provided as a string or a number, and let’s assume we know the input has the right character count or number length already, but we want the same [E164 format output](https://www.twilio.com/docs/glossary/what-e164) for a North American phone number in either case:
 
@@ -229,7 +229,7 @@ const phoneNumberToE164String = (input: string | number): string => {
 
   } else {
 
-    // Probably an unnecessary check, but something went wild 
+    // Probably an unnecessary check, but something went wild
     // if we get here we should handle
     throw new Error('Invalid input')
 
@@ -335,7 +335,7 @@ const dog1: Pet = {
 console.log(makePetSound(dog1)) // Woof!
 ```
 
-When using a [discriminated union](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) (or “tagged” union as it’s described in *[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)*), we are essentially implementing some kind of type storage in our object using a “tag” that we can access and use at runtime.
+When using a [discriminated union](https://dev.to/darkmavis1980/what-are-typescript-discriminated-unions-5hbb) (or “tagged” union as it’s described in _[Effective TypeScript](https://www.oreilly.com/library/view/effective-typescript-2nd/9781098155056/)_), we are essentially implementing some kind of type storage in our object using a “tag” that we can access and use at runtime.
 
 How can we access this? It’s because there is also a value stored in the `type` field.
 
@@ -346,7 +346,7 @@ How can we access this? It’s because there is also a value stored in the `type
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
   - [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 - [Wikipedia on TypeScript](https://en.wikipedia.org/wiki/TypeScript#:~:text=Development%20tools-,Compiler,that%20can%20execute%20the%20compiler.)
-- [Wikipedia on Runtime](https://en.wikipedia.org/wiki/Execution_(computing)#Runtime)
+- [Wikipedia on Runtime](<https://en.wikipedia.org/wiki/Execution_(computing)#Runtime>)
 - [Contentful: “TypeScript vs. JavaScript: Explaining the differences”](https://www.contentful.com/blog/typescript-vs-javascript-explaining-the-differences/)
 - [TotalTypeScript: “No, TypeScript Types Don’t Exist At Runtime”](https://www.totaltypescript.com/typescript-types-dont-exist-at-runtime)
   - There are a few interesting exceptions to the rules here covered more in-depth: enums, namespaces, and parameter properties.

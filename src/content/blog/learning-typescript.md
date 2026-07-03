@@ -1,18 +1,18 @@
 ---
-title: "learning typescript"
-description: "5 tools recommended from my own journey"
+title: 'learning typescript'
+description: '5 tools recommended from my own journey'
 pubDate: 2024-04-16
-tags: ["typescript","learning"]
+tags: ['typescript', 'learning']
 readingTime: 5
 ---
 
-My initial developer training consisted of mainly JavaScript. When I began a role using TypeScript, I wanted to learn best practices and how to work well as quickly as possible. 
+My initial developer training consisted of mainly JavaScript. When I began a role using TypeScript, I wanted to learn best practices and how to work well as quickly as possible.
 
 That said, true learning takes time. I have to remember to be patient and that practice makes me better each time I do it! I’m about a year in and I wanted to share what’s helped me the most during this time.
 
 The base knowledge of JavaScript helped a lot with learning TypeScript as it’s a superset of JavaScript. It’s open-source and written/maintained by Microsoft. It’s pretty powerful in my experience.
 
-However, there are a lot of nuances and unexpected cases within TypeScript I found interesting along the way. 
+However, there are a lot of nuances and unexpected cases within TypeScript I found interesting along the way.
 
 We'll talk through my core learning materials and suggestions:
 
@@ -34,7 +34,7 @@ I’ve taken a look at other Scrimba courses since taking this particular course
 
 ## 📖 programming typescript by boris cherny
 
-A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful. 
+A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful.
 
 ![Programming TypeScript by Boris Cherny book cover](../../assets/blog/learning-typescript/programming-typescript-cover.jpeg)
 
@@ -44,7 +44,7 @@ As the book moves forward, more advanced concepts and examples are provided, too
 
 ## 🤓 effective typescript by dan vanderkam
 
-I felt this book had more tangible and actionable advice, tips, and examples. *Programming TypeScript* felt better at providing that aforementioned foundation and underlying concepts.
+I felt this book had more tangible and actionable advice, tips, and examples. _Programming TypeScript_ felt better at providing that aforementioned foundation and underlying concepts.
 
 ![Effective TypeScript by Dan Vanderkam book cover](../../assets/blog/learning-typescript/effective-typescript-cover.jpeg)
 
@@ -56,13 +56,13 @@ I’ll refer back to this book, in particular, to take a look at it’s very spe
 
 ## 💻 udemy: typescript 5 for developers by alex dan
 
-Generally, I appreciate repetition in my learning. 
+Generally, I appreciate repetition in my learning.
 
-I found [TypeScript 5 for Developers](https://www.udemy.com/course/typescript-full-stack-programming/?couponCode=ST8MT40924) on [Udemy](https://www.udemy.com/) by [Alex Dan](https://www.linkedin.com/in/alex-dan-02598a137?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACFtJ50B6aaQ7qIcbN88GJz13jVmTL9AQRY&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bs89i5unCQlia%2F4aPZ4hsEA%3D%3D). I took this course over the same time I was reading *Programming TypeScript* and *Effective TypeScript* and it happened to time out well to reinforce my learnings!
+I found [TypeScript 5 for Developers](https://www.udemy.com/course/typescript-full-stack-programming/?couponCode=ST8MT40924) on [Udemy](https://www.udemy.com/) by [Alex Dan](https://www.linkedin.com/in/alex-dan-02598a137?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACFtJ50B6aaQ7qIcbN88GJz13jVmTL9AQRY&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bs89i5unCQlia%2F4aPZ4hsEA%3D%3D). I took this course over the same time I was reading _Programming TypeScript_ and _Effective TypeScript_ and it happened to time out well to reinforce my learnings!
 
 I would read about a concept and then within some short time, I would come across a similar concept in the course…or sometimes the other way around.
 
-In this way, I was hitting all the bases for learning: repetition of concepts, read it statically, watch it “live” in a code editor, hear about it from a knowledgeable source, and practice the concepts in my daily work through small, local code edit tests. 
+In this way, I was hitting all the bases for learning: repetition of concepts, read it statically, watch it “live” in a code editor, hear about it from a knowledgeable source, and practice the concepts in my daily work through small, local code edit tests.
 
 I haven’t done a review of this course, like I did with the [Fundamentals of Backend Engineering](/blog/fundamentals-of-backend-engineering-course-review) course, but I would give it a similar review. The value was high (I also actually bought the TypeScript course in the same sale), the content was manageable and informative, and I learned a lot!
 
@@ -70,7 +70,7 @@ I haven’t done a review of this course, like I did with the [Fundamentals of B
 
 ## 💪 lots of practice
 
-This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the ***most*** helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
+This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the _**most**_ helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
 
 When I first started using TypeScript at work, I spent time reading the [official documentation](https://www.typescriptlang.org/docs/handbook/intro.html) if I wondered how something in the codebase worked. I paired with a teammate to ask questions and used the [playground tool](https://www.typescriptlang.org/play) to test how things worked.
 
@@ -78,9 +78,9 @@ As I moved along, I wanted to see how TypeScript worked on the frontend, too. So
 
 Having an active codebase to contribute to offered plenty of practice! Code reviews were essential in helping me formulate a better understanding and provided different ideas on how to approach the styling and usage of the tools.
 
-That said, I also wanted more practice outside of work. I picked up a side project with some friends, a team of 4 developers including me, and we’ve been working on codebases involving a backend API and frontend for a project I hope to share more about soon! 
+That said, I also wanted more practice outside of work. I picked up a side project with some friends, a team of 4 developers including me, and we’ve been working on codebases involving a backend API and frontend for a project I hope to share more about soon!
 
-Working on another team showed me even greater variation of styles and practices and I’ve learned *so* much more working on this side project and practicing my skills than if I had simply stuck to my work alone.
+Working on another team showed me even greater variation of styles and practices and I’ve learned _so_ much more working on this side project and practicing my skills than if I had simply stuck to my work alone.
 
 I’ve been keeping my eye out for more opportunities to work on other projects. One open source project has caught my attention, but I also need to figure out a good balance for myself to be able to contribute to more while also working, contributing to the side project, having a life, and writing this lovely, informative blog!
 

@@ -3,24 +3,45 @@ import { getCollection } from 'astro:content';
 import { getAdjacentEpisodes } from '../../lib/related.ts';
 import { isVisible } from '../../lib/publish.ts';
 
-interface Props { currentId: string; }
+interface Props {
+  currentId: string;
+}
 const { currentId } = Astro.props;
 const eps = await getCollection('podcast', isVisible);
 const { prev, next } = getAdjacentEpisodes(currentId, eps);
 ---
-{(prev || next) && (
-  <div style="margin-top:2.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:0.5rem">
-    {prev && (
-      <a href={`/podcast/${prev.id}`} class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px">
-        <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">← previous · {prev.data.version}</span>
-        <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">{prev.data.title}</span>
-      </a>
-    )}
-    {next && (
-      <a href={`/podcast/${next.id}`} class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-align:right">
-        <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">next · {next.data.version} →</span>
-        <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">{next.data.title}</span>
-      </a>
-    )}
-  </div>
-)}
+
+{
+  (prev || next) && (
+    <div style="margin-top:2.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:0.5rem">
+      {prev && (
+        <a
+          href={`/podcast/${prev.id}`}
+          class="hov-card"
+          style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px"
+        >
+          <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">
+            ← previous · {prev.data.version}
+          </span>
+          <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">
+            {prev.data.title}
+          </span>
+        </a>
+      )}
+      {next && (
+        <a
+          href={`/podcast/${next.id}`}
+          class="hov-card"
+          style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-align:right"
+        >
+          <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)">
+            next · {next.data.version} →
+          </span>
+          <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">
+            {next.data.title}
+          </span>
+        </a>
+      )}
+    </div>
+  )
+}

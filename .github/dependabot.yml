@@ -3,44 +3,44 @@
 version: 2
 updates:
   # npm dependencies (Astro site)
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "America/Denver"
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'America/Denver'
     open-pull-requests-limit: 5
     labels:
-      - "dependencies"
+      - 'dependencies'
     groups:
       # Safe bumps: one bundled PR to merge without much thought.
       npm-minor-patch:
         update-types:
-          - "minor"
-          - "patch"
+          - 'minor'
+          - 'patch'
       # Majors: bundled into one deliberate "review carefully" PR.
       npm-major:
         update-types:
-          - "major"
+          - 'major'
 
   # GitHub Actions used in workflows (e.g. deploy.yml)
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "America/Denver"
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'America/Denver'
     labels:
-      - "dependencies"
-      - "github-actions"
+      - 'dependencies'
+      - 'github-actions'
     groups:
       # First-party actions rarely break; bundle everything (incl. majors).
       actions-all:
         patterns:
-          - "*"
+          - '*'
         update-types:
-          - "minor"
-          - "patch"
-          - "major"
+          - 'minor'
+          - 'patch'
+          - 'major'

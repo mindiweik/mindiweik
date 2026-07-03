@@ -1,12 +1,12 @@
 ---
-title: "the hidden currency of connection"
-description: "Networking isn’t just nice - it’s necessary"
+title: 'the hidden currency of connection'
+description: 'Networking isn’t just nice - it’s necessary'
 pubDate: 2025-04-15
-tags: ["career","community"]
+tags: ['career', 'community']
 readingTime: 5
 ---
 
-Whether you are a natural extrovert who thrives in groups and fills up their battery when surrounded by others or a shy introvert who would rather charge up amongst a stack of books or a quiet space in solitude, you ***need*** networking.
+Whether you are a natural extrovert who thrives in groups and fills up their battery when surrounded by others or a shy introvert who would rather charge up amongst a stack of books or a quiet space in solitude, you _**need**_ networking.
 
 **Here, we’ll cover the…**
 
@@ -43,13 +43,13 @@ Perhaps to foster a new relationship, you might see someone at a recurring event
 
 I’m not saying you have to be a best friend to everyone you meet and hang out with all the time. However, you should make an effort to connect with folks you admire, who inspire you, help you grow, or just make you feel good.
 
-*Always remember, if anyone crosses a line or you’re not mutually benefitting, you don’t have to keep engaging. Give yourself permission to disengage.*
+_Always remember, if anyone crosses a line or you’re not mutually benefitting, you don’t have to keep engaging. Give yourself permission to disengage._
 
 ## 🤨 why
 
 One obvious benefit is that networking can help you when you are in need. For instance, you need help finding a job, funding sources for a startup, or mentor options, for example.
 
-Networking doesn’t have to be - *and really should not be* - done only when you need something, though. Yes, it takes work, but having a strong network can only help you in the long run. Remember, we’re ultimately building up our community!
+Networking doesn’t have to be - _and really should not be_ - done only when you need something, though. Yes, it takes work, but having a strong network can only help you in the long run. Remember, we’re ultimately building up our community!
 
 If you put in true effort to your network, I can guarantee you will find opportunities you never considered! I’ve been asked to speak, join a few active projects, and organize a local women in tech Meetup group. These opportunities all blossomed through networking!
 
@@ -65,9 +65,9 @@ Networking can happen at the grocery store or a cafe while waiting in line. It c
 
 More than likely, you’re familiar with conferences or organized events. These events are great, often providing at least one similar connection you can use as a springboard, like a Cloud conference or a UI/UX meetup. Many have built-in event structure, helping some folks feel more at ease.
 
-**An important thing I like to remember, particularly for organized events, is to consider what times *actually* work best for you.** 
+**An important thing I like to remember, particularly for organized events, is to consider what times _actually_ work best for you.**
 
-You want to present your best self, not your completely exhausted or stressed self! 
+You want to present your best self, not your completely exhausted or stressed self!
 
 If you are especially nervous or anxious, you may already struggle to get to a networking event. When you’re tired, will you actually push through and go?
 
@@ -96,19 +96,19 @@ It might take a few attempts, so be patient, but look for your people! Whether t
 
 Start small; start somewhere where you feel comfortable going and being yourself.
 
-If you become too uncomfortable, like if the group is too large or you’re overwhelmed, give yourself permission to leave. 
+If you become too uncomfortable, like if the group is too large or you’re overwhelmed, give yourself permission to leave.
 
-*Just promise me you’ll try again or try another option!*
+_Just promise me you’ll try again or try another option!_
 
 Once you start building your connections, it will build your confidence to try new groups and meet more people over time. Your new connections could become new friends, mentors, or even just point you toward another event where you might feel comfortable or welcome!
 
 ## 🥸 who
 
-Of course, it can be easier to connect with people doing similar things as you, but **I want to challenge you to** **find connections outside of your own tech stack, industry, or comfort zone.** 
+Of course, it can be easier to connect with people doing similar things as you, but **I want to challenge you to** **find connections outside of your own tech stack, industry, or comfort zone.**
 
 When you bring in varied people, you build up your empathy and learn more about other areas, which can improve your problem-solving capabilities. Plus, you’ll likely have someone to call on when you need their expertise!
 
-You should  share about yourself, what you’re working on, or what you need help with (like finding a job or identifying startup funding sources). However, find appropriate times for this and don’t hog the conversation.
+You should share about yourself, what you’re working on, or what you need help with (like finding a job or identifying startup funding sources). However, find appropriate times for this and don’t hog the conversation.
 
 Consider the Maya Angelou quote:
 
@@ -122,12 +122,12 @@ If not, try to stretch your curiosity muscles and ask more about them, their pas
 
 ## 💭 closing thoughts
 
-Whatever you do for networking, remember to be yourself! Not everyone will like you, and you won’t like everyone, and that’s okay. We don’t need to force it - that only leads to wasted energy. 
+Whatever you do for networking, remember to be yourself! Not everyone will like you, and you won’t like everyone, and that’s okay. We don’t need to force it - that only leads to wasted energy.
 
 **Bring yourself and an open mind; I’m sure you’ll find more in networking than you expected!**
 
 ### 🥳 bonus
 
-Someone in *my* *network* mentioned that they hadn’t been networking for the last several years. They wanted to get back into it and started reading *[Networking for People Who Hate Networking](https://www.thriftbooks.com/w/networking-for-people-who-hate-networking-a-field-guide-for-introverts-the-overwhelmed-and-the-underconnected_devora-zack/311700/)* by Devora Zack. Although not yet finished, they said there were multiple helpful tips even within the first half!
+Someone in _my_ _network_ mentioned that they hadn’t been networking for the last several years. They wanted to get back into it and started reading _[Networking for People Who Hate Networking](https://www.thriftbooks.com/w/networking-for-people-who-hate-networking-a-field-guide-for-introverts-the-overwhelmed-and-the-underconnected_devora-zack/311700/)_ by Devora Zack. Although not yet finished, they said there were multiple helpful tips even within the first half!
 
-**I have not read this book myself. No guarantees of anything!*
+*_I have not read this book myself. No guarantees of anything!_

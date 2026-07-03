@@ -1,30 +1,30 @@
 ---
-title: "david weiss"
-guest: "David Weiss"
+title: 'david weiss'
+guest: 'David Weiss'
 version: v0.0.1
 season: 0
 pubDate: 2025-07-24
 youtubeUrl: https://www.youtube.com/watch?v=SSXyLRFVPeY
 chapters:
-  - { timestamp: "00:00", title: "Introduction to Work in Progress Podcast" }
-  - { timestamp: "01:51", title: "David Weiss: Career Journey and Tech Background" }
-  - { timestamp: "04:33", title: "Exploring Digital Products and Knowledge Sharing" }
-  - { timestamp: "09:09", title: "Experimentation and Side Projects" }
-  - { timestamp: "12:08", title: "Breaking Down Projects into Manageable Tasks" }
-  - { timestamp: "15:26", title: "Collaboration and Seeking Feedback" }
-  - { timestamp: "19:23", title: "Overcoming Fear of Rejection" }
-  - { timestamp: "27:37", title: "Highlighting Current Projects and Future Aspirations" }
-  - { timestamp: "33:34", title: "Final Thoughts and Encouragement to Create" }
+  - { timestamp: '00:00', title: 'Introduction to Work in Progress Podcast' }
+  - { timestamp: '01:51', title: 'David Weiss: Career Journey and Tech Background' }
+  - { timestamp: '04:33', title: 'Exploring Digital Products and Knowledge Sharing' }
+  - { timestamp: '09:09', title: 'Experimentation and Side Projects' }
+  - { timestamp: '12:08', title: 'Breaking Down Projects into Manageable Tasks' }
+  - { timestamp: '15:26', title: 'Collaboration and Seeking Feedback' }
+  - { timestamp: '19:23', title: 'Overcoming Fear of Rejection' }
+  - { timestamp: '27:37', title: 'Highlighting Current Projects and Future Aspirations' }
+  - { timestamp: '33:34', title: 'Final Thoughts and Encouragement to Create' }
 links:
-  - { label: "David’s LinkedIn", url: "https://www.linkedin.com/in/bydavidweiss/" }
-  - { label: "Besides Code", url: "https://www.besidescode.com/" }
+  - { label: 'David’s LinkedIn', url: 'https://www.linkedin.com/in/bydavidweiss/' }
+  - { label: 'Besides Code', url: 'https://www.besidescode.com/' }
 ---
 
 David Weiss is a good friend of mine and I am so pleased to have him as my first official guest in this new podcast adventure!
 
 We met on LinkedIn about 2 years ago and bonded over being career changers and busy professionals who just can’t seem to stop working on side projects: newsletters, building apps, creating LinkedIn content, guest spots on podcasts and LinkedIn Lives, you name it.
 
-*In this episode, we’ll talk about fear, experimentation, and growth as we dive into the mindset of a consistent creator.*
+_In this episode, we’ll talk about fear, experimentation, and growth as we dive into the mindset of a consistent creator._
 
 ## your call to action
 

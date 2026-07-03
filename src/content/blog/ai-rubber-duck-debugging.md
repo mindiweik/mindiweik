@@ -1,8 +1,8 @@
 ---
-title: "ai is rubber duck debugging, but the duck talks back"
-description: "rubber duck debugging works. it works even better when the duck answers."
+title: 'ai is rubber duck debugging, but the duck talks back'
+description: 'rubber duck debugging works. it works even better when the duck answers.'
 pubDate: 2026-07-16
-tags: ["ai", "learning", "debugging"]
+tags: ['ai', 'learning', 'debugging']
 ---
 
 You know rubber duck debugging, right?
@@ -21,7 +21,7 @@ I could Google my way through it. I could read docs. I could post on Stack Overf
 
 Or I could just... talk through it. With AI.
 
-And I mean *actually* talk through it, not "write me a CI pipeline," but "here's what I'm trying to do, here's what's happening, here's what I've already tried, what am I missing?"
+And I mean _actually_ talk through it, not "write me a CI pipeline," but "here's what I'm trying to do, here's what's happening, here's what I've already tried, what am I missing?"
 
 There's a definitive difference.
 
@@ -29,9 +29,9 @@ There's a definitive difference.
 
 The magic isn't AI itself. The magic is **the process of explaining the problem.**
 
-When you're forced to write up what's happening like what you expected, what actually occurred, or what you've tried, something clicks. You start to understand the shape of the problem better just by describing it. Often I figure out the next thing to try *while writing the message.*
+When you're forced to write up what's happening like what you expected, what actually occurred, or what you've tried, something clicks. You start to understand the shape of the problem better just by describing it. Often I figure out the next thing to try _while writing the message._
 
-It's the rubber duck effect. Except when you're done explaining, the duck goes "oh interesting, that error usually means X. Have you checked Y?" and suddenly you're actually learning *why* X causes that behavior, not just copying a fix from Stack Overflow.
+It's the rubber duck effect. Except when you're done explaining, the duck goes "oh interesting, that error usually means X. Have you checked Y?" and suddenly you're actually learning _why_ X causes that behavior, not just copying a fix from Stack Overflow.
 
 ## a real example
 
@@ -73,4 +73,4 @@ The learning happens in the conversation. In the follow-up questions. In the "wa
 
 The rubber duck was always a tool for thinking. This is just taking it to the next level.
 
-*If you've been using AI as a learning tool (or you're still figuring out where it fits in your workflow), I'd love to hear about it. Find me on LinkedIn.* 💙
+_If you've been using AI as a learning tool (or you're still figuring out where it fits in your workflow), I'd love to hear about it. Find me on LinkedIn._ 💙

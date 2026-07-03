@@ -4,49 +4,42 @@ These are known, intentionally-deferred items from the initial scaffold. None bl
 scaffold being "done." Most belong with the content-migration or light-mode (v1.1) work.
 
 ## Content / data
+
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
-- **Dependabot** — set up GitHub Dependabot for the `mindiweik` repo (automated dependency
-  update PRs + security alerts). Add `.github/dependabot.yml` (npm + github-actions ecosystems).
-  Mindi requested 2026-07-03.
-- **Post-deploy smoke test** — after the FTP upload in `deploy.yml`, curl the homepage + a
-  couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
-  FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
-  bad deploy). Highest-value reliability add. Mindi requested 2026-07-03.
-  - **False-positive found 7/3 (run for `ed252e6`):** Hostinger 403'd the Actions runner on
-    ALL urls (both domains) when two deploys ran back-to-back; the site was fine from a
-    residential IP. Likely WAF/rate-limit on the runner IP. Consider: longer backoff between
-    retries, a browser-ish User-Agent, or tolerating 403-from-runner when a prior run just
-    passed.
-- **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
-  block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
-  a bad merge going live. Mindi requested 2026-07-03.
-- **Prose lint in CI** — enforce the documented writing conventions automatically: fail on
-  emdashes in `src/content/` (extend to sentence-casing / lowercase-hashtag checks later).
-  Freezes the manual style review into a check that runs every push. Mindi requested 2026-07-03.
-- **Link checker in CI** — automate the dead-link pass (lychee or similar) so internal/external
-  links stay clean as content grows, instead of relying on periodic manual sweeps.
-  Mindi requested 2026-07-03.
+
+- **Prose lint: extend beyond emdashes** — the emdash gate shipped (see resolved "CI quality
+  gates"); the deferred extras are sentence-casing and lowercase-hashtag checks. Noted 2026-07-03.
+- **Link checker in CI** — attempted 2026-07-03 (lychee over built `dist/`), then pulled before
+  merge: the first run was mostly false positives (97 YouTube URLs, plus Canva/Substack/Udemy/
+  Medium/Loom) because those hosts return 999/403/429 to a CI runner, not because the links are
+  dead. A useful version needs a curated `.lycheeignore` of bot-blocking hosts first, so red
+  actually means broken. Genuinely dead link found in the process: `coding-with-callie.com`
+  (referenced in `src/content/blog/capturing-curiosity.md` and
+  `src/content/speaking/capturing-curiosity-talk.md`) — unlink whenever content gets a pass.
+  Working config to revive: lychee with `--root-dir ${{ github.workspace }}/dist` (needed so
+  site-absolute links like `/about` resolve), advisory (not a required check), on content PRs +
+  weekly.
 - **Structured data (JSON-LD)** — add schema.org markup: `Article` for blog posts,
   `PodcastEpisode` for episodes. Improves search appearance (ties into the GSC work).
   Mindi requested 2026-07-03.
 - **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
   silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
-- **Pin the mindiweik.com changelog entry** — the site's project entry dates off its own
-  repo's `pushedAt`, which bumps on every deploy, so "update · mindiweik.com" floats near
-  the top of the changelog dated "today". Mindi's lean: pin it with `lastUpdated: 2026-06-30`
-  (the official launch date) in `src/content/projects/mindiweik-site.md`; shipping as-is
-  first to observe. Noted 2026-07-03.
 - **Project page OG descriptions** — ProjectLayout doesn't pass a description to BaseLayout,
   so project pages share the generic site OG description instead of their blurb. Matches the
   preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
   From final review 2026-07-03.
-- **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
-  color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
-  the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
-  the baseline. Mindi requested 2026-07-02.
+- **Accessibility pass** — audit + fixes across the site. Mindi requested 2026-07-02.
+  - **Baseline shipped 2026-07-03 (PR #11, `chore/a11y-audit`):** skip-to-content link +
+    `id="main-content"` on `<main>` (WCAG 2.4.1); global `:focus-visible` outline (2.4.7);
+    `aria-current="page"` on active nav link (1.4.1); `prefers-reduced-motion` media query
+    (2.3.3); labeled header/footer nav landmarks (1.3.1). Verified in built `dist/`.
+  - **Still open:** color contrast (accent-on-dark chips + muted text, incl. the `opacity:0.6`
+    inactive nav links); heading order audit; alt text sweep (ties into the images pass +
+    `og:image:alt` below); keyboard nav on cards; run Lighthouse/axe as the baseline
+    (ties into the Lighthouse CI budgets item above).
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
@@ -64,6 +57,48 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+
+- ~~**Pin the mindiweik.com changelog entry**~~ -> done 2026-07-03. The site's own project
+  entry dated off its repo's `pushedAt`, which bumps every deploy, so "update · mindiweik.com"
+  floated to the top of the changelog dated "today". Pinned with `lastUpdated: 2026-06-30` (the
+  official launch date) in `src/content/projects/mindiweik-site.md`; `lastUpdated` already wins
+  the `?? pushedAt ?? Jan-1-of-since` precedence in `toChangelogEntries` (no logic change).
+- ~~**CI quality gates (build gate + prose lint + branch protection)**~~ -> shipped
+  2026-07-03. Extends `lint.yml`: a new `build` job runs `astro check` + `astro build` (the
+  seatbelt against a broken build auto-deploying to prod), and the `lint` job gained a prose
+  step (`scripts/prose-lint.mjs` fails on emdashes in `src/content/`, skipping fenced code).
+  Branch protection on `main` requires the `lint` and `build` checks to pass before merge.
+  Deferred: sentence-casing + lowercase-hashtag prose checks. A link checker was attempted and
+  pulled (see the open "Link checker in CI" item for why + a working config to revive).
+- ~~**Linting + formatting**~~ -> shipped 2026-07-03. ESLint flat config (`typescript-eslint`
+  recommended + `eslint-plugin-astro`) covering `.astro`/`.ts`/`.mjs`, and Prettier
+  (`prettier-plugin-astro` + `prettier-plugin-tailwindcss`; single-quote, 100-col, matches the
+  existing style). Scripts: `lint`, `lint:fix`, `format`, `format:check`. Enforced three ways:
+  `lint.yml` (ESLint + Prettier check + tests on push/PR), plus husky + lint-staged pre-commit
+  (fix + format staged files only). One-time repo-wide `prettier --write` applied as its own
+  commit. Config choices worth knowing: `no-explicit-any` is `warn` (pragmatic uses in test
+  mocks + the getCollection-shape type); `no-undef` is off for `.astro` (TS resolves ambient
+  Astro globals); blog `.md` files use `embeddedLanguageFormatting: off` so code samples are
+  never rewritten; `BaseHead.astro` is prettier-ignored (upstream prettier-plugin-astro bug
+  parsing the inline gtag `define:vars` script — ESLint still lints it). `docs/superpowers/`
+  and `scripts/fixtures/` are prettier-ignored (embedded fragments / byte-exact fixtures).
+- ~~**Post-deploy smoke test**~~ -> SHIPPED 2026-07-03; false-alarm hardened same day.
+  `scripts/smoke-test.mjs` (+ unit tests) runs as the `smoke-test` job in `deploy.yml`:
+  fetches the five prod URLs, asserts 200 + the `mindiweik` marker on both homepages, retries
+  5x/10s for FTP/CDN propagation lag. The 7/3 false positive (Hostinger 403'd the runner IP on
+  ALL urls while the site was fine from a residential IP) is fixed two ways: (1) send a
+  browser-ish `User-Agent`/`Accept` so the runner reads less like a bot; (2) classify a uniform
+  403/429 across every URL as INCONCLUSIVE (warn, exit 0) instead of failing the run; a real
+  breakage still fails loudly (any 404/500/timeout, a 200 missing the marker, or a mixed
+  pass/block result). Separately, raised the FTP-Deploy-Action timeout 30s->120s on all three
+  uploads to absorb the intermittent "Failed to connect... via FTP" deploy drops.
+- ~~**Dependabot**~~ -> shipped 2026-07-03. `.github/dependabot.yml` covers npm +
+  github-actions, weekly (Mon 09:00 America/Denver). Grouping: npm minor/patch bundled,
+  npm majors bundled separately for deliberate review, all github-actions (incl. majors)
+  bundled since first-party actions rarely break. First scan opened PRs #5-#8 (all merged).
+  Repo `dependencies` + `github-actions` labels created. Remaining (manual, one toggle):
+  enable **Dependabot security updates** under Settings > Code security for CVE-driven PRs —
+  the config file only does version updates.
 - ~~**Social sharing preview images**~~ -> SHIPPED 2026-07-03. Five zone-colored OG cards
   (checked-in satori script, `npm run og:cards`, rendered at 2x for retina crispness) in
   `public/og/`; `BaseHead` emits absolute `og:image` + `twitter:card` with fallback chain

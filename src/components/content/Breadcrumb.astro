@@ -1,5 +1,12 @@
 ---
-interface Props { path: string; }
+interface Props {
+  path: string;
+}
 const { path } = Astro.props;
 ---
-<div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);padding-top:1.6rem">{path}</div>
+
+<div
+  style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);padding-top:1.6rem"
+>
+  {path}
+</div>
