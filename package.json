@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run"
+    "test": "vitest run",
+    "og:cards": "node scripts/generate-og-cards.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.0",
@@ -25,7 +26,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^26.0.1",
+    "satori": "^0.26.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.9"
   }
