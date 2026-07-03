@@ -1,10 +1,20 @@
 <?php
 declare(strict_types=1);
 
-// Token-gated moderation for the comments queue. Single password submitted with
-// every request (no sessions). Serves only over HTTPS in production.
+// Token-gated moderation for the comments queue. The admin token is accepted
+// only once, on the login POST, and is never rendered into HTML. After a
+// successful login an HttpOnly session cookie keeps the admin in; Approve and
+// Delete actions are authorised by a random per-session CSRF token, so the
+// secret token never appears on the page. Serve only over HTTPS.
 
 $config = require __DIR__ . '/../../comments-config.php';
+
+session_set_cookie_params([
+  'httponly' => true,
+  'secure'   => true,
+  'samesite' => 'Strict',
+]);
+session_start();
 
 function db(array $config): PDO {
   $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8mb4', $config['db_host'], $config['db_name']);
@@ -22,8 +32,18 @@ header('Content-Type: text/html; charset=utf-8');
 header('X-Robots-Tag: noindex, nofollow');
 
 $token = (string) ($config['admin_token'] ?? '');
-$given = (string) ($_POST['token'] ?? '');
-$authed = $token !== '' && hash_equals($token, $given);
+
+// Login: the ONLY place the raw token is read. Compared, then discarded.
+if (isset($_POST['token'])) {
+  if ($token !== '' && hash_equals($token, (string) $_POST['token'])) {
+    session_regenerate_id(true);
+    $_SESSION['comments_admin'] = true;
+  } else {
+    usleep(300000); // small penalty to slow brute force
+  }
+}
+
+$authed = ($_SESSION['comments_admin'] ?? false) === true;
 
 if (!$authed) {
   echo '<!doctype html><html><head><meta name="robots" content="noindex">'
@@ -35,15 +55,28 @@ if (!$authed) {
   exit;
 }
 
+// Per-session CSRF token for action forms. Never reveals the admin token.
+if (empty($_SESSION['csrf'])) {
+  $_SESSION['csrf'] = bin2hex(random_bytes(16));
+}
+$csrf = (string) $_SESSION['csrf'];
+
 $pdo = db($config);
 
 $action = (string) ($_POST['action'] ?? '');
 if ($action === 'approve' || $action === 'delete') {
+  if (!hash_equals($csrf, (string) ($_POST['csrf'] ?? ''))) {
+    http_response_code(400);
+    echo 'bad request';
+    exit;
+  }
   $id = (int) ($_POST['id'] ?? 0);
-  if ($action === 'approve') {
-    $pdo->prepare('UPDATE comments SET approved = 1 WHERE id = ?')->execute([$id]);
-  } else {
-    $pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
+  if ($id > 0) {
+    if ($action === 'approve') {
+      $pdo->prepare('UPDATE comments SET approved = 1 WHERE id = ?')->execute([$id]);
+    } else {
+      $pdo->prepare('DELETE FROM comments WHERE id = ?')->execute([$id]);
+    }
   }
 }
 
@@ -67,7 +100,7 @@ foreach ($rows as $r) {
      . h($r['page_key']) . ' · ' . h($r['created_at']) . ' · ' . h($r['ip_address']) . '</div>';
   echo '<p style="white-space:pre-wrap">' . h($r['body']) . '</p>';
   echo '<form method="post" style="display:inline">'
-     . '<input type="hidden" name="token" value="' . h($token) . '">'
+     . '<input type="hidden" name="csrf" value="' . h($csrf) . '">'
      . '<input type="hidden" name="id" value="' . (int) $r['id'] . '">'
      . '<button name="action" value="approve">approve</button> '
      . '<button name="action" value="delete" onclick="return confirm(\'delete?\')">delete</button>'
