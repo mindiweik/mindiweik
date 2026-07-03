@@ -6,7 +6,7 @@ tags: [career]
 draft: true
 ---
 
-{/* DRAFT v0.2, written from the solo episode outline + the real tracker. Numbers below are from the tracker (65 applications with a status; the outline said "over 50", so pick the framing you like). Per your own rules: no company names, no offer amounts, no round-by-round play-by-play. Set the real pubDate before publish; this doubles as the blog-first source for the podcast episode. */}
+<!-- DRAFT v0.2, written from the solo episode outline + the real tracker. Numbers below are from the tracker (65 applications with a status; the outline said "over 50", so pick the framing you like). Per your own rules: no company names, no offer amounts, no round-by-round play-by-play. Set the real pubDate before publish; this doubles as the blog-first source for the podcast episode. -->
 
 I applied to 65 jobs. At my peak I had 3 active processes going at the same time. I made it to final rounds with 2 companies. I got 1 offer. And one company liked me enough that even after the process ended, they wanted to put me in for a different role.
 
