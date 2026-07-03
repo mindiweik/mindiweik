@@ -1,11 +1,11 @@
 ---
 import { SITE } from '../../config/site.ts';
 interface Props { blurb?: string; }
-const { blurb = '[WIP] and the writing are made on nights and weekends. If something here helped, a coffee keeps it going.' } = Astro.props;
+const { blurb = 'All of this (the podcast, the posts, the projects) happens on nights and weekends. If something here saved you a headache, the tip jar is always open.' } = Astro.props;
 ---
 <div style="border:1px solid var(--border);border-radius:12px;padding:1rem;max-width:320px;margin:1.5rem 0">
   <div style="display:flex;align-items:center;gap:0.6rem">
-    <span style="width:1.9rem;height:1.9rem;border-radius:8px;background:var(--accent-projects);color:var(--ink);display:flex;align-items:center;justify-content:center;flex:none">☕</span>
+    <span style="width:1.9rem;height:1.9rem;border-radius:8px;background:var(--accent-projects);color:var(--ink);display:flex;align-items:center;justify-content:center;flex:none">🧡</span>
     <span style="font-family:var(--font-display);font-weight:700;font-size:0.95rem">support the work</span>
   </div>
   <p style="font-family:var(--font-body);font-size:0.8rem;color:var(--text-muted);margin:0.6rem 0 0;line-height:1.5">{blurb}</p>
