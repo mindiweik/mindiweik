@@ -214,3 +214,19 @@ return [
 
 Email notifications, threaded replies, editing or deleting your own comment,
 markdown, avatars, reactions.
+
+---
+
+## Addendum: email verification + auto-publish (2026-07-03)
+
+Supersedes the manual moderation-queue decision after user feedback at the UI checkpoint.
+
+- **Model change:** instead of Mindi approving each comment, comments self-publish once the author confirms via an emailed link. `approved=1` now means "email-verified and live"; new comments start `approved=0` with a one-time `verify_token`.
+- **Schema:** `ALTER TABLE comments ADD COLUMN verify_token VARCHAR(64) NULL AFTER approved;` (owner-run).
+- **comments.php POST:** generates `bin2hex(random_bytes(32))`, inserts pending + token, sends the confirmation email via SMTP; a failed send deletes the pending row and returns 502.
+- **verify.php (new):** validates a 64-hex token, flips the matching pending row to `approved=1`, clears the token (single-use), and shows a confirmation page linking back to the post.
+- **admin.php:** no longer an approval queue. Delete-only management view listing all comments with a live/pending badge. Session + CSRF retained.
+- **Email sending:** Hostinger SMTP mailbox (`noreply@mindiweik.com`, `smtp.hostinger.com:465` SSL) via vendored PHPMailer at `public/api/lib/PHPMailer/` (deploys over FTP; no Composer on the server).
+- **Config additions:** `site_url`, `smtp_host`, `smtp_port`, `smtp_secure`, `smtp_user`, `smtp_pass`, `from_email`, `from_name`.
+- **Frontend:** form collapsed behind a "leave a comment" disclosure; stacked fields with mono labels; copy explains the one-time email confirmation; success state reads "Almost there. Check your email for the link to confirm your comment."
+- **Residual risk (accepted v1):** entering someone else's email sends them one confirmation email; bounded by the existing per-IP rate limit (3/min, 10/hour).
