@@ -66,6 +66,7 @@ const projects = defineCollection({
         stack: z.array(z.string()).default([]),
         url: z.string().optional(),
         repoUrl: z.string().optional(),
+        links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
         featured: z.boolean().default(false),
         order: z.number().optional(),
         since: z.number().int().min(2000).max(2100),

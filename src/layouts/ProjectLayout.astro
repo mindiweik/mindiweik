@@ -15,10 +15,11 @@ interface Props {
   pushedAt?: Date | null;
   url?: string;
   repoUrl?: string;
+  extraLinks?: { label: string; url: string }[];
   image?: ImageMetadata;
   imageAlt?: string;
 }
-const { name, slug, status, stack, since, featured, pushedAt, url, repoUrl, image, imageAlt } = Astro.props;
+const { name, slug, status, stack, since, featured, pushedAt, url, repoUrl, extraLinks = [], image, imageAlt } = Astro.props;
 
 const fmtMonth = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toLowerCase();
 // AC (no fetchable repo) reads "since 2023 · ongoing"; repos read "since 2025 · last commit jan 2026".
@@ -30,6 +31,7 @@ const meta = metaParts.join(' · ');
 const links = [
   ...(url ? [{ label: 'visit site', href: url }] : []),
   ...(repoUrl ? [{ label: 'github', href: repoUrl }] : []),
+  ...extraLinks.map((l) => ({ label: l.label, href: l.url })),
 ];
 ---
 <BaseLayout title={name} active="/projects">
