@@ -11,6 +11,15 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
+- **Pin the mindiweik.com changelog entry** — the site's project entry dates off its own
+  repo's `pushedAt`, which bumps on every deploy, so "update · mindiweik.com" floats near
+  the top of the changelog dated "today". Mindi's lean: pin it with `lastUpdated: 2026-06-30`
+  (the official launch date) in `src/content/projects/mindiweik-site.md`; shipping as-is
+  first to observe. Noted 2026-07-03.
+- **Project page OG descriptions** — ProjectLayout doesn't pass a description to BaseLayout,
+  so project pages share the generic site OG description instead of their blurb. Matches the
+  preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
+  From final review 2026-07-03.
 - **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
   color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
   the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
