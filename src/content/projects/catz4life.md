@@ -15,19 +15,19 @@ The catz4life adopshun centre is a very broken cat adoption page, on purpose. Yo
 I built it to support a talk I gave about the browser, the same material that became my four-part DevTools series here on the blog. Slides only get you so far; fixing a real broken page is where DevTools actually clicks.
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:0.5rem">
-  <a href="/blog/unlocking-your-browser" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none">
+  <a href="/blog/unlocking-your-browser" class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;--hover-accent:var(--accent-blog)">
     <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted)">part 1</span>
     <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">unlocking your browser</span>
   </a>
-  <a href="/blog/your-new-best-friend-the-console" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none">
+  <a href="/blog/your-new-best-friend-the-console" class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;--hover-accent:var(--accent-blog)">
     <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted)">part 2</span>
     <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">your new best friend, the console</span>
   </a>
-  <a href="/blog/whats-actually-happening" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none">
+  <a href="/blog/whats-actually-happening" class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;--hover-accent:var(--accent-blog)">
     <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted)">part 3</span>
     <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">what's actually happening</span>
   </a>
-  <a href="/blog/level-up-sources-performance-and-your-playground" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none">
+  <a href="/blog/level-up-sources-performance-and-your-playground" class="hov-card" style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;--hover-accent:var(--accent-blog)">
     <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted)">part 4</span>
     <span style="display:block;font-family:var(--font-display);font-weight:500;font-size:0.85rem;line-height:1.3;margin-top:0.35rem">level up: sources, performance &amp; your playground</span>
   </a>

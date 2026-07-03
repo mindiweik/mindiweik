@@ -21,8 +21,8 @@ const now = [
     <p>Since the pivot I've wrangled unwieldy software integrations, designed and built RESTful APIs, enabled deployments and developer productivity, and led projects and teams along the way.</p>
     <p>These days I'm at OpenRouter, onboarding new providers and pulling more of the AI ecosystem into one place developers can actually reach. On the side, I'm a founding engineer on Audition Cat, a CRM for performing artists that's three years in the making and finally in alpha. And when I'm off the clock, I help organize Colorado Women&amp;TECH, because I care deeply about amplifying underrepresented groups in tech, especially women and neurodivergent folks.</p>
     <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.2rem 0 1.4rem">
-      <a href="https://www.meetup.com/women-andtech-colorado/" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on meetup →</a>
-      <a href="https://luma.com/womenandtech" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on luma →</a>
+      <a href="https://www.meetup.com/women-andtech-colorado/" target="_blank" rel="noopener noreferrer" class="hov-card" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on meetup →</a>
+      <a href="https://luma.com/womenandtech" target="_blank" rel="noopener noreferrer" class="hov-card" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">women&amp;tech on luma →</a>
     </div>
     <p>This site is where the build log lives: blog posts, the [WIP] podcast, talks, and whatever I'm shipping. I write and speak about being human in tech, career navigation, creativity and curiosity, ADHD, TypeScript, AI, and whatever else the work teaches me. Life doesn't have release notes, so I write my own.</p>
   </div>
@@ -41,7 +41,7 @@ const now = [
   <SectionLabel label="// elsewhere" />
   <div style="font-family:var(--font-mono);font-size:0.8rem;display:flex;gap:1.2rem;flex-wrap:wrap;padding:0.5rem 0">
     {SITE.socials.map((s) => (
-      <a href={s.url} style={`color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent})`}>{s.label}</a>
+      <a href={s.url} class="hov-link" style={`color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent});--hover-accent:var(--accent-${s.accent})`}>{s.label}</a>
     ))}
   </div>
 

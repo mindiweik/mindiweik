@@ -5,6 +5,15 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 interface Props { title: string; description?: string; image?: string; zone?: string; active?: string; }
 const { title, description, image, zone, active } = Astro.props;
+// Page-wide hover accent: interactive elements light up in the active zone's
+// color (see the .hov-* rules in global.css). Mixed-zone spots override inline.
+const ZONE_HOVER: Record<string, string> = {
+  '/blog': '--accent-blog',
+  '/podcast': '--accent-podcast',
+  '/speaking': '--accent-speaking',
+  '/projects': '--accent-projects',
+};
+const hoverAccent = ZONE_HOVER[active ?? ''] ?? '--accent-primary';
 ---
 <!doctype html>
 <html lang="en" data-theme="dark">
@@ -21,7 +30,7 @@ const { title, description, image, zone, active } = Astro.props;
       })();
     </script>
   </head>
-  <body style="min-height:100vh;display:flex;flex-direction:column">
+  <body style={`min-height:100vh;display:flex;flex-direction:column;--hover-accent:var(${hoverAccent})`}>
     <Header active={active} />
     <main style="flex:1;max-width:680px;margin:0 auto;width:100%;padding:0 1.4rem 4rem;box-sizing:border-box">
       <slot />

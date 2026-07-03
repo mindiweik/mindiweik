@@ -11,7 +11,8 @@ const { active } = Astro.props;
     {SITE.nav.map((item) => (
       <a
         href={item.href}
-        style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''}`}
+        class="hov-link"
+        style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''};--hover-accent:var(--accent-${item.href.replace('/', '') || 'primary'}, var(--accent-primary))`}
       >{item.label}</a>
     ))}
   </nav>
@@ -31,6 +32,11 @@ const { active } = Astro.props;
     border-bottom: 1px solid var(--border);
     font-family: var(--font-mono);
     font-size: 0.8rem;
+  }
+
+  .site-header__nav a:hover,
+  .site-header__nav a:focus-visible {
+    opacity: 1 !important; /* beats the inline dimming */
   }
 
   .site-header__logo {

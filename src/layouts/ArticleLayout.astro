@@ -19,7 +19,7 @@ const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11
     <PublishStateChip state={state} zone="blog" />
     <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{readingMins} min</span>
     {tags.map((t) => (
-      <a href={`/tags/${t}`} style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);text-decoration:underline;text-underline-offset:2px">#{t}</a>
+      <a href={`/tags/${t}`} class="hov-link" style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);text-decoration:underline;text-underline-offset:2px">#{t}</a>
     ))}
   </div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{title}</h1>

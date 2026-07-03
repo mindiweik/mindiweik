@@ -24,7 +24,7 @@ const routes = [{ path: '/', title: 'home' }, ...pages, ...blog, ...podcast, ...
       <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted)">// did you mean</div>
       <ul id="suggestion-list" style="list-style:none;padding:0;margin:0.9rem 0 0;display:flex;flex-direction:column;gap:0.6rem;align-items:center"></ul>
     </div>
-    <a href="/" style="display:inline-block;margin-top:1.6rem;font-family:var(--font-mono);font-weight:700;font-size:0.8rem;padding:0.6rem 1rem;border-radius:8px;background:var(--accent-blog);color:var(--ink)">&larr; back home</a>
+    <a href="/" class="hov-fill" style="display:inline-block;margin-top:1.6rem;font-family:var(--font-mono);font-weight:700;font-size:0.8rem;padding:0.6rem 1rem;border-radius:8px;background:var(--accent-blog);color:var(--ink)">&larr; back home</a>
   </div>
 </BaseLayout>
 
@@ -70,6 +70,7 @@ const routes = [{ path: '/', title: 'home' }, ...pages, ...blog, ...podcast, ...
       const a = document.createElement('a');
       a.href = route.path;
       a.textContent = route.title;
+      a.className = 'hov-card';
       a.style.cssText = 'display:inline-block;font-family:var(--font-mono);font-weight:700;font-size:0.8rem;padding:0.55rem 1rem;border-radius:8px;background:var(--surface);border:1px solid var(--border);color:var(--text);text-decoration:none';
       li.appendChild(a);
       list.appendChild(li);

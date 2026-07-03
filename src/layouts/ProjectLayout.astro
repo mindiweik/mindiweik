@@ -49,7 +49,7 @@ const links = [
   {links.length > 0 && (
     <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.5rem">
       {links.map((l) => (
-        <a href={l.href} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
+        <a href={l.href} target="_blank" rel="noopener noreferrer" class="hov-card" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
       ))}
     </div>
   )}

@@ -15,6 +15,11 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
   FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
   bad deploy). Highest-value reliability add. Mindi requested 2026-07-03.
+  - **False-positive found 7/3 (run for `ed252e6`):** Hostinger 403'd the Actions runner on
+    ALL urls (both domains) when two deploys ran back-to-back; the site was fine from a
+    residential IP. Likely WAF/rate-limit on the runner IP. Consider: longer backoff between
+    retries, a browser-ish User-Agent, or tolerating 403-from-runner when a prior run just
+    passed.
 - **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
   block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
   a bad merge going live. Mindi requested 2026-07-03.

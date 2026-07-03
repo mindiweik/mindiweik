@@ -18,3 +18,4 @@
 .prose li { margin: 0 0 0.4rem; line-height: 1.7; }
 .prose li > ul,
 .prose li > ol { margin: 0.4rem 0 0; }
+.prose a:hover { color: var(--hover-accent, var(--accent-primary)); }
