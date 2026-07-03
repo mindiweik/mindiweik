@@ -5,9 +5,9 @@ import { readFileSync } from 'node:fs';
 const CARDS = ['default', 'blog', 'podcast', 'speaking', 'projects'];
 
 describe('og cards', () => {
-  it.each(CARDS)('public/og/%s.png exists and is 1200x630', (name) => {
+  it.each(CARDS)('public/og/%s.png exists and is 2400x1260 (1200x630 @2x)', (name) => {
     const buf = readFileSync(new URL(`../public/og/${name}.png`, import.meta.url));
-    expect(buf.readUInt32BE(16)).toBe(1200);
-    expect(buf.readUInt32BE(20)).toBe(630);
+    expect(buf.readUInt32BE(16)).toBe(2400);
+    expect(buf.readUInt32BE(20)).toBe(1260);
   });
 });

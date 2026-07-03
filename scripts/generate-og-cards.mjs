@@ -7,6 +7,9 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
 const W = 1200;
 const H = 630;
+// Rasterize at 2x (2400x1260) so previews stay crisp on retina displays;
+// the layout is still designed at 1200x630 logical pixels.
+const SCALE = 2;
 
 // Duplicated from src/styles/global.css :root tokens (satori can't read CSS vars).
 // If the site palette changes, update here and rerun.
@@ -56,7 +59,7 @@ const targets = [
 ];
 for (const t of targets) {
   const svg = await satori(card(t), { width: W, height: H, fonts });
-  const png = new Resvg(svg, { fitTo: { mode: 'width', value: W } }).render().asPng();
+  const png = new Resvg(svg, { fitTo: { mode: 'width', value: W * SCALE } }).render().asPng();
   writeFileSync(`public/og/${t.file}`, png);
   console.log(`wrote public/og/${t.file}`);
 }
