@@ -97,11 +97,9 @@ async function main() {
     // runner's datacenter IP. The FTP deploy already succeeded, so the host is
     // reachable and the content is live; this is a false alarm, not a broken
     // deploy. Stay green rather than page Mindi over a self-recovering block.
+    console.warn('Smoke test INCONCLUSIVE: every URL returned a host-level block (403/429).');
     console.warn(
-      'Smoke test INCONCLUSIVE: every URL returned a host-level block (403/429).'
-    );
-    console.warn(
-      'This means Hostinger blocked the CI runner, not that the deploy is broken. Not failing the run.'
+      'This means Hostinger blocked the CI runner, not that the deploy is broken. Not failing the run.',
     );
     return;
   }

@@ -4,12 +4,25 @@ import KofiLink from '../support/KofiLink.astro';
 import ThemeToggle from './ThemeToggle.astro';
 const year = new Date().getFullYear();
 ---
-<footer style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding:2rem 1.4rem;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted)">
+
+<footer
+  style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding:2rem 1.4rem;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted)"
+>
   <span>© {year} {SITE.author}</span>
   <nav aria-label="Social links" style="display:flex;gap:0.9rem;flex-wrap:wrap">
-    {SITE.socials.map((s) => (
-      <a href={s.url} target="_blank" rel="noopener noreferrer" class="hov-link" style={`color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent});--hover-accent:var(--accent-${s.accent})`}>{s.label}</a>
-    ))}
+    {
+      SITE.socials.map((s) => (
+        <a
+          href={s.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hov-link"
+          style={`color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent});--hover-accent:var(--accent-${s.accent})`}
+        >
+          {s.label}
+        </a>
+      ))
+    }
   </nav>
   <KofiLink />
   <ThemeToggle />

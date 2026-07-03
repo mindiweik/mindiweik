@@ -1,11 +1,14 @@
 ---
-title: "linkedin live: career conversations: personal branding with mindi weik"
+title: 'linkedin live: career conversations: personal branding with mindi weik'
 event: LinkedIn Live with Anna Miller
 date: 2025-07-01
 type: guest
 description: A LinkedIn Live conversation about personal branding and the job search journey into tech.
 links:
-  - { label: watch, url: "https://www.linkedin.com/events/careerconversations-personalbra7339141708229615616/comments/" }
+  - {
+      label: watch,
+      url: 'https://www.linkedin.com/events/careerconversations-personalbra7339141708229615616/comments/',
+    }
 ---
 
 This was an excellent chat with my LinkedIn friend, [Anna Miller](https://www.linkedin.com/in/annamiller/), about my experience with personal branding and the job search process into my role at Postman.

@@ -22,27 +22,27 @@ However, I know I’m not the only one to fall into this trap. I thought it woul
 
 ## 📂 package & module definitions
 
-Let’s quickly define a “package” and a “module” in software development to ensure a common understanding. 
+Let’s quickly define a “package” and a “module” in software development to ensure a common understanding.
 
 A **package** is a file, directory, or resource set that can be publicly or privately shared. These packages can provide useful functions or tools for your project and are defined within a package.json file.
 
 That package.json file is important! It holds all the details about your project, like authors, licensing, and scripts. It also houses your list of dependencies and devDependencies and the specific version numbers your project needs to work as intended.
 
-One of the most common software registries for packages is **[npm](https://docs.npmjs.com/about-npm)**. I’m sure you’ve interacted with it at some point! My teams work a lot in Node, and npm also helps share and use **Node modules** similarly, loading something directly *from* a JavaScript or package.json file for use in your project. 
+One of the most common software registries for packages is **[npm](https://docs.npmjs.com/about-npm)**. I’m sure you’ve interacted with it at some point! My teams work a lot in Node, and npm also helps share and use **Node modules** similarly, loading something directly _from_ a JavaScript or package.json file for use in your project.
 
 In any case, npm uses your package.json file to determine which packages or modules you will need for your project. Remember that you will list a version number that npm will use to install the corresponding package. Take an extra moment to consider this for your project; failing to do so could result in feature compatibility issues, bugs, and instability.
 
 Packages allow individuals, organizations, and companies to take advantage of existing solutions, saving time and resources. They also typically provide documentation to help users apply these solutions to their project needs. Keep in mind that the quality of documentation can vary greatly!
 
-But using packages and modules is not all 🌈 rainbows and unicorns 🦄. 
+But using packages and modules is not all 🌈 rainbows and unicorns 🦄.
 
 When you add tooling like this, it needs ongoing maintenance - someone has to update it, fix bugs, and improve the documentation.
 
-Hidden security risks can also exist, especially if the creator(s) no longer maintain it. 
+Hidden security risks can also exist, especially if the creator(s) no longer maintain it.
 
 ## 💎 what is a dependency?
 
-Dependencies are ultimately any package used in your project. Dependencies should be added to your package.json file's dependencies object to help your project function properly when deployed. 
+Dependencies are ultimately any package used in your project. Dependencies should be added to your package.json file's dependencies object to help your project function properly when deployed.
 
 You might use these packages for development and testing, or they might be tools, libraries, frameworks, or other packages that improve an end user’s experience.
 
@@ -62,7 +62,7 @@ Consider these packages and why they ended up in the dependencies list.
 
 If you’re unfamiliar with these packages, here’s the gist: [Express](https://expressjs.com/) is a Node framework commonly used to create a project server. [Pino](https://getpino.io/) is a fast and lightweight logging library. [Zod](https://zod.dev/) is a schema validation library we use to ensure that our “outside data” conforms to the TypeScript types we utilize in our codebase.
 
-Now let’s take a closer look at ***why*** each of these packages belongs in the dependencies section of the project.
+Now let’s take a closer look at _**why**_ each of these packages belongs in the dependencies section of the project.
 
 Express is a bit obvious. How would an end user send over an API request without a server to connect with? We need a server on the production deployment for our users to reach our API. Easy enough!
 
@@ -74,7 +74,7 @@ Hopefully these examples provide a bit more context. To reiterate, when we need 
 
 ## 🧑🏾‍💻 what is a dev dependency?
 
-Now that we’ve established what a dependency is, let’s look at the other side of the equation - devDependencies. The devDependencies packages are specifically used for **local development and testing**. 
+Now that we’ve established what a dependency is, let’s look at the other side of the equation - devDependencies. The devDependencies packages are specifically used for **local development and testing**.
 
 In other words, if there is a package or module you only need to use during development, and your app doesn’t need it when deployed into the wild, that package should be added under the devDependencies object in your package.json file.
 
@@ -97,19 +97,19 @@ C8 is purely for our internal purposes. Tests are frequently run locally, in dev
 
 Similarly, eslint is not something our users should know about. They won’t be looking at our codebase, and it’s unlikely that users would know enough about code - or our particular codebase or domain - to nitpick on our cohesive linting. Unless you’re working on an open-source project. But that’s a different story.
 
-What about TypeScript? One could argue that you would need *some* level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](/blog/exploring-typescript-runtime)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code *before* it is [compiled](/blog/exploring-typescript-ts-compiler).
+What about TypeScript? One could argue that you would need _some_ level of language available to actually run the code, right? [TypeScript doesn’t exist at runtime](/blog/exploring-typescript-runtime)! Runtime code is essentially the executed code your users interact with. JavaScript files are created in the project's “build” or compile step, and Node can execute these files, so TypeScript is unnecessary in the dependencies section. Where TypeScript shines is its ability to write type-safe JavaScript code _before_ it is [compiled](/blog/exploring-typescript-ts-compiler).
 
 **Let’s talk about the 'oops' moment when I mistakenly moved a package that should’ve been in `dependencies` to `devDependencies`.**
 
-My error came when I moved two [BugSnag](https://www.bugsnag.com/) packages, like “@bugsnag/js” listed above, to the devDependencies section. We implemented BugSnag into a new project as a tool to monitor errors and track them down to squash them quickly! At first, it seemed like BugSnag should only be needed in devDependencies because it was a ***developer tool***. Our users would not be interacting with it.
+My error came when I moved two [BugSnag](https://www.bugsnag.com/) packages, like “@bugsnag/js” listed above, to the devDependencies section. We implemented BugSnag into a new project as a tool to monitor errors and track them down to squash them quickly! At first, it seemed like BugSnag should only be needed in devDependencies because it was a _**developer tool**_. Our users would not be interacting with it.
 
-You may already see why that is an issue, but this made perfect sense in my initial mental model. When this change was deployed into our production code, we noticed an issue immediately. 
+You may already see why that is an issue, but this made perfect sense in my initial mental model. When this change was deployed into our production code, we noticed an issue immediately.
 
 **We used BugSnag references in our handlers and application-level code that relied on this package and our production deployment couldn’t compile and build!**
 
 I’m grateful that the issue was quickly noticed and easy to fix. The team immediately reverted this to the dependencies section, and all was well. We implemented BugSnag to monitor errors and track them in real-time in the production environment, which is why it needed to be listed in dependencies. Without it in production, we couldn't run the app, nor reach the goal to catch and fix issues promptly.
 
-Although dev tools are *often* only needed in the devDependencies section, consider whether it is actually used in production. In our case, BugSnag needed to be available in production because how else would we find and catch those bugs?
+Although dev tools are _often_ only needed in the devDependencies section, consider whether it is actually used in production. In our case, BugSnag needed to be available in production because how else would we find and catch those bugs?
 
 Of course, that makes sense. They say hindsight is 20/20.
 

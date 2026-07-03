@@ -1,8 +1,8 @@
 ---
-title: "feeling inadequate is okay."
-description: "Say it with me..."
+title: 'feeling inadequate is okay.'
+description: 'Say it with me...'
 pubDate: 2024-04-23
-tags: ["career","mindset"]
+tags: ['career', 'mindset']
 readingTime: 3
 ---
 
@@ -12,7 +12,7 @@ I thought I knew the signs and all the approaches to avoid it.
 
 My “can-do” attitude would never steer me into this void…right?
 
-Yet, here I am, struggling over the last few weeks with where I feel my experience is now and where I feel like I should be or *wanted* to be at this stage in my overall career and my tech career since transitioning to engineering.
+Yet, here I am, struggling over the last few weeks with where I feel my experience is now and where I feel like I should be or _wanted_ to be at this stage in my overall career and my tech career since transitioning to engineering.
 
 On top of this was the loss of a community last week that I have enjoyed and has uplifted me to engage with other empowering people as an underrepresented person in tech. [Women Who Code](https://womenwhocode.com/) recently [announced the shuttering of the organization](https://womenwhocode.com/blog/the-end-of-an-era-women-who-code-closing). It is a significant blow for women around the globe, myself included.
 
@@ -62,7 +62,7 @@ Although Women Who Code is closing down, I’ve learned a lot from the experienc
 
 It was initially called the “Imposter phenomenon” in the 1970s research.
 
-***Why is this important?***
+_**Why is this important?**_
 
 “Syndrome” indicates a long-term experience, whereas a “phenomenon” is short and fleeting. These feelings may come and go, but they are typically short in the grand scheme of the overall experience, and this discomfort won’t last forever.
 

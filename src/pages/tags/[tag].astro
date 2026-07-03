@@ -18,16 +18,24 @@ export async function getStaticPaths() {
   }));
 }
 const { tag, posts } = Astro.props;
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
-<ZoneIndexLayout zone="blog" heading={`#${tag}`} sub={`${posts.length} post${posts.length === 1 ? '' : 's'} tagged ${tag}.`}>
-  {posts.map((p) => (
-    <EntryCard
-      href={`/blog/${p.id}`}
-      title={p.data.title}
-      meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
-      zone="blog"
-      state={publishState(p.data, new Date())}
-    />
-  ))}
+
+<ZoneIndexLayout
+  zone="blog"
+  heading={`#${tag}`}
+  sub={`${posts.length} post${posts.length === 1 ? '' : 's'} tagged ${tag}.`}
+>
+  {
+    posts.map((p) => (
+      <EntryCard
+        href={`/blog/${p.id}`}
+        title={p.data.title}
+        meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
+        zone="blog"
+        state={publishState(p.data, new Date())}
+      />
+    ))
+  }
 </ZoneIndexLayout>

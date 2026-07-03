@@ -1,5 +1,5 @@
 ---
-title: "the first commit"
+title: 'the first commit'
 version: v0.0.0
 season: 0
 pubDate: 2025-07-07
@@ -9,17 +9,17 @@ pubDate: 2025-07-07
 
 I'm excited for you to join me on my new adventure: a podcast called **[WIP]** where I’ll be talking about human development in tech!
 
-✏️ In the tech world, W-I-P stands for *Work in Progress*.
+✏️ In the tech world, W-I-P stands for _Work in Progress_.
 
 It’s what we label pull/merge requests and document or project drafts that aren’t quite finished. And guess what? As humans, none of us are finished.
 
-***Humans are always in draft mode!***
+_**Humans are always in draft mode!**_
 
 This podcast is about the real, messy, human side of working in tech.
 
 I plan to talk with engineers, designers, product folks, customer support gurus, tech coaches - and people from all across tech - about what they’re learning, struggling with, building, and becoming.
 
-***Not just in code, but in life.***
+_**Not just in code, but in life.**_
 
 We’re not here to showcase perfection. No.
 

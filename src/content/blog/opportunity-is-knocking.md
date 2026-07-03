@@ -1,8 +1,8 @@
 ---
-title: "opportunity is knocking"
-description: "What to do when there are few opportunities at work"
+title: 'opportunity is knocking'
+description: 'What to do when there are few opportunities at work'
 pubDate: 2025-03-11
-tags: ["career"]
+tags: ['career']
 readingTime: 6
 ---
 
@@ -31,7 +31,7 @@ Before asking for help, we should consider what we need and be as specific as po
 
 ## 🫵 look within your own team
 
-Whether it’s a direct teammate or an admirable person on another team, start within! Don’t jump in “half-cocked,” though. 
+Whether it’s a direct teammate or an admirable person on another team, start within! Don’t jump in “half-cocked,” though.
 
 **Some ideas I started with to identify potential mentors or contacts internally:**
 
@@ -40,7 +40,7 @@ Whether it’s a direct teammate or an admirable person on another team, start w
 - **Ask management for ideas.** If you’re newer to the company or you’re struggling to identify someone to connect with, they may have better insight into who is best in certain areas we may not have considered before. They also often know who has bandwidth to help.
 - **Have you asked to help with a new project?** Not always, but sometimes having the conversation is enough to inform your manager you’re bored, burnt out, or want to grow in a different area. They’re supposed to be on your side and will likely do what they can to help!
 
-Once internal help is identified, think before connecting. Especially if the person(s) we’ve found are more senior, we do *not* want to waste anyone’s time. It may be the only chance we get to talk with them! Plan questions to ask or concepts to learn before reaching out. It’s helpful to them if we share a bit about what we want to learn and why.
+Once internal help is identified, think before connecting. Especially if the person(s) we’ve found are more senior, we do _not_ want to waste anyone’s time. It may be the only chance we get to talk with them! Plan questions to ask or concepts to learn before reaching out. It’s helpful to them if we share a bit about what we want to learn and why.
 
 The more clear the questions we bring, the better the experience for all!
 
@@ -52,7 +52,7 @@ The more clear the questions we bring, the better the experience for all!
 
 Genuine acknowledgements or willingness to learn will often catch their interest. If at all possible, try to add in some way that it might be beneficial to them, too.
 
-Perhaps the Engineering Manager shared that their recommendation is actively looking for opportunities to mentor. We can tie that into our request. Or maybe if we learn from this person, we could take this smaller task off their plate while we grow. 
+Perhaps the Engineering Manager shared that their recommendation is actively looking for opportunities to mentor. We can tie that into our request. Or maybe if we learn from this person, we could take this smaller task off their plate while we grow.
 
 The benefit to them will depend on the situation.
 
@@ -78,9 +78,9 @@ Sometimes asking for forgiveness rather than permission isn’t a bad approach �
 
 ## 🤔 reach outside your company
 
-Whether you find someone internally or not, there is almost always someone in your network who can help! Or, someone within your network can connect you with someone in *their* network. It’s all a big web after all. 🕸️
+Whether you find someone internally or not, there is almost always someone in your network who can help! Or, someone within your network can connect you with someone in _their_ network. It’s all a big web after all. 🕸️
 
-Remain considerate of others and their time. As you share more about your goals and desires, ideally you have a strong idea of what you want to accomplish to guide you to the right connections. 
+Remain considerate of others and their time. As you share more about your goals and desires, ideally you have a strong idea of what you want to accomplish to guide you to the right connections.
 
 If your idea isn't entirely solidified, perhaps they can connect you with someone they know in the domain or working with a similar technology that can help you pinpoint what you're working toward learning. The more you know about your goals, the better the connection could help you get closer to those goals.
 
@@ -114,7 +114,7 @@ At the same time, this can be tricky. When you work alone, you can gain some odd
 
 Better yet, find a friend or two or more to work on a project with. You’ll have camaraderie, multiple brains to pool knowledge to share, and hopefully have fun in the process!
 
-Whatever path (or paths) you choose, there’s opportunity for you waiting behind a door. ***You just have to start opening them!* 🚪**
+Whatever path (or paths) you choose, there’s opportunity for you waiting behind a door. **_You just have to start opening them!_ 🚪**
 
 ## 🍀 still no luck?
 

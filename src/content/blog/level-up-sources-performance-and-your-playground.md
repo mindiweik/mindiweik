@@ -1,8 +1,8 @@
 ---
-title: "level up: sources, performance & your playground"
-description: "Part 4 of 4 in the \"Unlocking Your Browser\" series"
+title: 'level up: sources, performance & your playground'
+description: 'Part 4 of 4 in the "Unlocking Your Browser" series'
 pubDate: 2026-03-26
-tags: ["browser","devtools","performance"]
+tags: ['browser', 'devtools', 'performance']
 readingTime: 5
 ---
 
@@ -54,7 +54,7 @@ Right-click a line number and choose **Add conditional breakpoint**. You can typ
 
 ## the performance tab
 
-The Performance tab answers a question you'll hear a lot as you grow: *why is this so slow?* I don't see many devs using this tool and I don't use it as often as I probably could. 😅
+The Performance tab answers a question you'll hear a lot as you grow: _why is this so slow?_ I don't see many devs using this tool and I don't use it as often as I probably could. 😅
 
 Open DevTools and click **Performance**. You'll see a big empty space and a record button.
 
@@ -162,6 +162,6 @@ Happy debugging. 💖
 
 ---
 
-*Thanks for reading the whole series! Questions, lightbulb moments, or things I missed? Drop a comment or find me on LinkedIn.*
+_Thanks for reading the whole series! Questions, lightbulb moments, or things I missed? Drop a comment or find me on LinkedIn._
 
-*← [Part 3: What's Actually Happening: Network & Application](/blog/whats-actually-happening)*
+_← [Part 3: What's Actually Happening: Network & Application](/blog/whats-actually-happening)_

@@ -3,17 +3,25 @@ import ZoneIndexLayout from '../../layouts/ZoneIndexLayout.astro';
 import EntryCard from '../../components/content/EntryCard.astro';
 import { getCollection } from 'astro:content';
 
-const projects = (await getCollection('projects'))
-  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99),
+);
 ---
-<ZoneIndexLayout zone="projects" heading="projects" sub="things I build. side quests and serious ones.">
-  {projects.map((p) => (
-    <EntryCard
-      id={p.id}
-      href={`/projects/${p.id}`}
-      title={`${p.data.name}${p.data.featured ? ' ★' : ''}`}
-      meta={`${p.data.status}${p.data.stack.length ? ' · ' + p.data.stack.join(', ') : ''}`}
-      zone="projects"
-    />
-  ))}
+
+<ZoneIndexLayout
+  zone="projects"
+  heading="projects"
+  sub="things I build. side quests and serious ones."
+>
+  {
+    projects.map((p) => (
+      <EntryCard
+        id={p.id}
+        href={`/projects/${p.id}`}
+        title={`${p.data.name}${p.data.featured ? ' ★' : ''}`}
+        meta={`${p.data.status}${p.data.stack.length ? ' · ' + p.data.stack.join(', ') : ''}`}
+        zone="projects"
+      />
+    ))
+  }
 </ZoneIndexLayout>

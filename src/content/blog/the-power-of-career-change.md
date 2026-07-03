@@ -1,16 +1,16 @@
 ---
-title: "the power of career change"
-description: "5 Lessons Learned"
+title: 'the power of career change'
+description: '5 Lessons Learned'
 pubDate: 2024-05-28
-tags: ["career"]
+tags: ['career']
 readingTime: 5
 ---
 
-***This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024.***
+_**This post was originally written for Women Who Code and was selected for publication! However, in unfortunate timing, my post was scheduled for May 22, 2024 and Women Who Code shuttered the organization in April 2024.**_
 
-***So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar.***
+_**So, I decided to make some minor edits (to open the audience outside of just women in tech) and share it instead! The format is slightly different, but overall similar.**_
 
-***Please enjoy and let me know if you have any questions or if I missed anything!***
+_**Please enjoy and let me know if you have any questions or if I missed anything!**_
 
 I found tech later in life, as many others have. Let’s start with a brief career snapshot as a baseline for examples of how to use prior experiences to leapfrog into success as a career changer:
 
@@ -87,7 +87,7 @@ These decisions are very personal. Trust in yourself, your wants, and your goals
 
 ## **#5 - intentional work, better than hard work**
 
-It’s easy to fall into working hard without direction. [Take it from Arit!](https://www.youtube.com/watch?v=pe5fb4t_JDw) *(← A Women Who Code video ~1 hour long with some tremendously useful stories and advice!)*
+It’s easy to fall into working hard without direction. [Take it from Arit!](https://www.youtube.com/watch?v=pe5fb4t_JDw) _(← A Women Who Code video ~1 hour long with some tremendously useful stories and advice!)_
 
 I worked hard as a real estate assistant. When I first entered tech, I worked hard in Support, trying to prove - mainly to myself - that if I worked harder, I would become more technical.
 

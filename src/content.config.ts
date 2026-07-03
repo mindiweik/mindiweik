@@ -74,7 +74,9 @@ const projects = defineCollection({
         image: image().optional(),
         imageAlt: z.string().optional(),
       })
-      .refine((d) => !d.image || !!d.imageAlt, { message: 'imageAlt is required when image is set' }),
+      .refine((d) => !d.image || !!d.imageAlt, {
+        message: 'imageAlt is required when image is set',
+      }),
 });
 
 export const collections = { blog, podcast, speaking, projects };

@@ -28,27 +28,27 @@ Check off each page as you approve it. Ordered oldest → newest (review order).
 - [x] mongoose subdocuments & discriminators
 - [x] clean code by robert c. martin
 - [x] how to start working with ai
-- [x] fundamentals of backend engineering course review *(image pending, see followups)*
+- [x] fundamentals of backend engineering course review _(image pending, see followups)_
 - [x] peek behind the bootcamp curtain
-- [x] experiences with a local gitlab runner: part 1 *(images pending, see followups)*
-- [x] learning typescript *(images pending, see followups)*
+- [x] experiences with a local gitlab runner: part 1 _(images pending, see followups)_
+- [x] learning typescript _(images pending, see followups)_
 - [x] feeling inadequate is okay
-- [x] the power of career change *(career-snapshot graphic pending, see followups)*
-- [x] experiences with a local gitlab runner: part 2 *(header image pending, see followups)*
+- [x] the power of career change _(career-snapshot graphic pending, see followups)_
+- [x] experiences with a local gitlab runner: part 2 _(header image pending, see followups)_
 - [x] 3 big, scary software engineering words explained
-- [x] exploring typescript: ts compiler *(intro graphic pending or drop, see followups)*
+- [x] exploring typescript: ts compiler _(intro graphic pending or drop, see followups)_
 - [x] exploring typescript: runtime
-- [x] the software engineer's guidebook review *(images pending, see followups)*
+- [x] the software engineer's guidebook review _(images pending, see followups)_
 - [x] dependencies or dev dependencies, that is the question
-- [x] capturing curiosity *(images pending, see followups)*
-- [x] exploring typescript: primitive types *(intro graphic pending or drop, see followups)*
+- [x] capturing curiosity _(images pending, see followups)_
+- [x] exploring typescript: primitive types _(intro graphic pending or drop, see followups)_
 - [x] 3 habits that helped me recover from burnout and stay motivated
-- [x] jmeter performance testing: part 1 *(images pending + "great list" link to relink, see followups)*
+- [x] jmeter performance testing: part 1 _(images pending + "great list" link to relink, see followups)_
 - [x] opportunity is knocking
-- [x] jmeter performance testing: part 2 *(images pending, see followups)*
+- [x] jmeter performance testing: part 2 _(images pending, see followups)_
 - [x] the hidden currency of connection
 - [x] what's the difference?!
-- [x] the importance of open telemetry *(images pending, see followups)*
+- [x] the importance of open telemetry _(images pending, see followups)_
 - [x] ✨ introducing... [wip]
 - [x] building a compass
 - [x] unlocking your browser

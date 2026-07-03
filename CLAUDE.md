@@ -3,12 +3,14 @@
 Personal site for Mindi Weik. Astro static site, dark-first, deploys to mindiweik.com.
 
 ## Run it
+
 - `npm run dev` - dev server
 - `npm run build` - static build to `dist/`
 - `npm test` - Vitest (lib logic)
 - `npx astro check` - type + content schema check
 
 ## Design system (read before touching styles)
+
 - **Color is wayfinding.** Four zones, each a role-named token in `src/styles/global.css`:
   `--accent-blog` (blue, also `--accent-primary`/brand), `--accent-podcast` (pink),
   `--accent-speaking` (green), `--accent-projects` (amber).
@@ -24,6 +26,7 @@ Personal site for Mindi Weik. Astro static site, dark-first, deploys to mindiwei
   nav, breadcrumbs, code, timestamps), Inter (body/prose).
 
 ## Conventions
+
 - Content lives in `src/content/{blog,podcast,speaking,projects}/`. Schemas in
   `src/content.config.ts`. Blog posts are `.mdx` so components embed inline.
 - Episodes use a `v1.0.x` version as their ID/badge; the home `// changelog` mixes all
@@ -34,8 +37,10 @@ Personal site for Mindi Weik. Astro static site, dark-first, deploys to mindiwei
   mode (v1.1) overrides only canvas tokens, not accents.
 
 ## Writing rules (Mindi's voice)
+
 - Never use emdashes.
 - Sentence case for all headings except the H1.
 
 ## Design decisions
+
 See the spec (in the MARVIN repo): `docs/superpowers/specs/2026-06-29-mindiweik-site-rebuild-design.md`.

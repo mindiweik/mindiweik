@@ -1,12 +1,12 @@
 ---
-title: "3 big, scary software engineering words explained"
-description: "Idempotent | Polymorphism | Isomorphic"
+title: '3 big, scary software engineering words explained'
+description: 'Idempotent | Polymorphism | Isomorphic'
 pubDate: 2024-06-25
-tags: ["fundamentals","backend"]
+tags: ['fundamentals', 'backend']
 readingTime: 3
 ---
 
-A simple Google search often clarifies the meaning of unknown terms I encounter as a Software Engineer. Sometimes, though, they seem more complicated and require a second (or even third or fourth) look to understand them better. 
+A simple Google search often clarifies the meaning of unknown terms I encounter as a Software Engineer. Sometimes, though, they seem more complicated and require a second (or even third or fourth) look to understand them better.
 
 We’ll cover three of these terms that have given me past trouble. I hope I can reduce your search just a smidge! 🙃
 
@@ -16,7 +16,7 @@ We’ll cover three of these terms that have given me past trouble. I hope I can
 - What do they mean to a Software Engineer?
 - And what is an example to point to?
 
-**Let’s dive in!** 
+**Let’s dive in!**
 
 ## ♻️ idempotent
 
@@ -114,7 +114,7 @@ animal_sound(cat)  # Outputs: meow meow
 
 **Useful resources:**
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Polymorphism_(computer_science))
+- [Wikipedia](<https://en.wikipedia.org/wiki/Polymorphism_(computer_science)>)
 - [Techopedia](https://www.techopedia.com/definition/28106/polymorphism-general-programming#:~:text=With%20polymorphism%2C%20each%20subclass%20may,displaying%20trotting%20on%20the%20screen.)
 - [Tech Target](https://www.techtarget.com/whatis/definition/polymorphism#:~:text=The%20word%20polymorphism%20is%20derived,biology%2C%20chemistry%20and%20drug%20development.)
 - [VIDEO: iAmDev](https://www.youtube.com/watch?v=tIWm3I_Zu7I)
@@ -126,7 +126,7 @@ animal_sound(cat)  # Outputs: meow meow
 - JS code is written strategically to **run on the client OR the server**.
   - The project must maintain a minimum Node version and work on multiple browsers. Transpilers and polyfill tools implement modern JS features that may be missing, making this challenge a little easier!
   - Typically, you will use third-party libraries when writing your JS code and avoid using native Node libraries or browser APIs.
-- General isomorphism in programming is slightly different ([Stack Overflow link](https://stackoverflow.com/questions/11245183/importance-of-isomorphic-functions), for edification). 
+- General isomorphism in programming is slightly different ([Stack Overflow link](https://stackoverflow.com/questions/11245183/importance-of-isomorphic-functions), for edification).
   - This is when different programming structures/processes can be transformed into one another without losing info or functionality. They are essentially the same in structure or behavior but may look different.
 
 **Use case:**
@@ -146,13 +146,13 @@ animal_sound(cat)  # Outputs: meow meow
 
 const defineEnvironment = () => {
   if (typeof window == 'undefined') {
-    console.log('This is the server!')
+    console.log('This is the server!');
   } else {
-    console.log('This is the browser!')
+    console.log('This is the browser!');
   }
-}
+};
 
-defineEnvironment()
+defineEnvironment();
 ```
 
 - To run this in Node:

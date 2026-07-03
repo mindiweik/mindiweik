@@ -1,8 +1,8 @@
 ---
-title: "3 habits that helped me recover from burnout and stay motivated"
-description: "Simple, effective ways to rebuild routines and keep going when it gets tough"
+title: '3 habits that helped me recover from burnout and stay motivated'
+description: 'Simple, effective ways to rebuild routines and keep going when it gets tough'
 pubDate: 2025-02-25
-tags: ["burnout","mindset"]
+tags: ['burnout', 'mindset']
 readingTime: 6
 ---
 
@@ -14,11 +14,11 @@ readingTime: 6
 
 ### [link to original post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
 
-*I’m happy to share this guest post from my friend,* [Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
+_I’m happy to share this guest post from my friend,_ [Mindi Weik](https://www.linkedin.com/in/mindiweik/)_. She has a vulnerable story to share about burnout that we can all learn from._
 
-*Your mental health matters. And I’ll never stop saying that. I’ve learned this lesson the hard way in my career. I’ve suffered from burnout and high-stress levels more times than I can count.*
+_Your mental health matters. And I’ll never stop saying that. I’ve learned this lesson the hard way in my career. I’ve suffered from burnout and high-stress levels more times than I can count._
 
-*In this post, Mindi shares three effective ways to foster mental wellness so you can stay focused on your goals and prevent burnout.*
+_In this post, Mindi shares three effective ways to foster mental wellness so you can stay focused on your goals and prevent burnout._
 
 We’re human; we stumble.
 
@@ -34,7 +34,7 @@ If you’re unfamiliar with “spinning plates,” it’s a balancing act, somew
 
 Now imagine that person balancing another pole, another spinning plate. This is harder.
 
-What if they held *several* poles and plates? More plates means the plates are more likely to fall or stop. We only have two hands!
+What if they held _several_ poles and plates? More plates means the plates are more likely to fall or stop. We only have two hands!
 
 Burned out, all of my plates suffered. Quality dipped, and it was perpetually harder to keep them spinning. You can probably see where this spiral leads.
 
@@ -57,7 +57,7 @@ The best way to do this is to pause and evaluate each plate. To be most effectiv
 - What’s the worst that could happen if I drop this plate?
 - What’s the best that could happen if I drop this plate?
 - Am I spinning this plate for myself or someone else?
-- What do I *want* to accomplish?
+- What do I _want_ to accomplish?
 
 Compare the plates. Is our hands-on side project work the most important? Or is time better spent working to improve effectiveness at work?
 
@@ -81,7 +81,7 @@ This was difficult for me. I worked and learned during the day; during nights, w
 
 To pinpoint what to drop, I paused everything for roughly 2-3 months. I found opportunities to step away from work, take a trip, enjoy a staycation, and find quiet space after my workday.
 
-This space helped me think about what I *wanted* to accomplish and which plates might be plastic. I recharged, ending with a better sense of what was important for me moving forward.
+This space helped me think about what I _wanted_ to accomplish and which plates might be plastic. I recharged, ending with a better sense of what was important for me moving forward.
 
 ## **start small**
 
@@ -152,4 +152,4 @@ Here are some examples:
 - We also wouldn’t tell a friend that they’re not smart or capable enough to understand a problem.
   - **What we can say instead:** “I don’t have to know everything right away. I can break it down step by step.”
 
-*Thank you to* Mindi Weik *for sharing her story about overcoming burnout and three ways to prioritize your mental health. Please check out her newsletter,* [codeOutLoud](https://open.substack.com/pub/codeoutloud)*, and [follow her on LinkedIn](https://www.linkedin.com/in/mindiweik/).*
+_Thank you to_ Mindi Weik _for sharing her story about overcoming burnout and three ways to prioritize your mental health. Please check out her newsletter,_ [codeOutLoud](https://open.substack.com/pub/codeoutloud)_, and [follow her on LinkedIn](https://www.linkedin.com/in/mindiweik/)._

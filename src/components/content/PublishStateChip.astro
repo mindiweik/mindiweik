@@ -3,7 +3,10 @@ import type { ZoneKey } from '../../lib/zones.ts';
 import { zoneVar } from '../../lib/zones.ts';
 import type { PublishState } from '../../lib/publish.ts';
 import { showUnpublished } from '../../lib/publish.ts';
-interface Props { state?: PublishState; zone: ZoneKey; }
+interface Props {
+  state?: PublishState;
+  zone: ZoneKey;
+}
 const { state = 'published', zone } = Astro.props;
 // Dev + preview builds only: the real prod build filters unpublished entries
 // out entirely, so this never renders there. The dashed border marks
@@ -11,6 +14,13 @@ const { state = 'published', zone } = Astro.props;
 const show = showUnpublished() && state !== 'published';
 const fill = zoneVar(zone);
 ---
-{show && (
-  <span style={`font-family:var(--font-mono);font-size:0.6rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;background:var(--surface);color:${fill};border:1px dashed ${fill};flex:none`}>{state}</span>
-)}
+
+{
+  show && (
+    <span
+      style={`font-family:var(--font-mono);font-size:0.6rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;background:var(--surface);color:${fill};border:1px dashed ${fill};flex:none`}
+    >
+      {state}
+    </span>
+  )
+}

@@ -1,8 +1,8 @@
 ---
-title: "building a compass"
-description: "Adaptability and balance in a tech industry that won’t sit still."
+title: 'building a compass'
+description: 'Adaptability and balance in a tech industry that won’t sit still.'
 pubDate: 2026-01-27
-tags: ["career","mindset"]
+tags: ['career', 'mindset']
 readingTime: 5
 ---
 
@@ -19,17 +19,17 @@ And honestly?
 
 ## **I’m not unmotivated**
 
-It's tough to say where we will end up, I *am* still energized by all the things we can build and do with the plethora of tools that exist and will someday come to be. But, it's also exhausting to keep up with. The work keeps changing and things are unclear.
+It's tough to say where we will end up, I _am_ still energized by all the things we can build and do with the plethora of tools that exist and will someday come to be. But, it's also exhausting to keep up with. The work keeps changing and things are unclear.
 
 It's not just because AI is "here now." Though, of course, AI has a lot to do with this pace, bringing significant change in its wake. (Compare to my [first post on using AI](/blog/how-to-start-working-with-ai) from barely 2 years ago! 🤯)
 
-The entire *shape* of software engineering has changed. Skills that were "optional" when I started are now baseline. Take a look at some of the job descriptions out there for newbies. The demands are insane sometimes. I don't even qualify for some wish lists. 😵‍💫
+The entire _shape_ of software engineering has changed. Skills that were "optional" when I started are now baseline. Take a look at some of the job descriptions out there for newbies. The demands are insane sometimes. I don't even qualify for some wish lists. 😵‍💫
 
 Because of this rapid pace we're expected to know more, output more, and move faster all the while. And the parts we thought would stay human (at least for a bit) are being automated, scaled, rewritten, and redefined in real time, including some of the more creative endeavors.
 
-So when someone asks where I’ll be in [*n*] years, I can’t give them a neat answer.
+So when someone asks where I’ll be in [_n_] years, I can’t give them a neat answer.
 
-**What I *can* say is what I’m building instead:**
+**What I _can_ say is what I’m building instead:**
 
 ✅ adaptability  
 ✅ balance  
@@ -37,7 +37,7 @@ So when someone asks where I’ll be in [*n*] years, I can’t give them a neat 
 
 ## **career ladders are actually jungle gyms**
 
-Even in v0 of the [WIP] Podcast, it's clear to me that no journey is the same, nor is any journey I've heard straightforward. 
+Even in v0 of the [WIP] Podcast, it's clear to me that no journey is the same, nor is any journey I've heard straightforward.
 
 Humans are consistently experimenting, iterating, and trying to see where we belong whether we do it intentionally or not.
 
@@ -56,7 +56,7 @@ Adaptability is staying functional while the rules keep updating.
 
 ### **😱 moment #1: inquiry about “the future”**
 
-I was talking with my therapist about this afterward, too. (Yay therapy!) I shared those recent moments where I had been asked where I think I'll be in [*n*] [*timeframe*] and shared my concerns about how much I feel I really can't answer that clearly.
+I was talking with my therapist about this afterward, too. (Yay therapy!) I shared those recent moments where I had been asked where I think I'll be in [_n_] [_timeframe_] and shared my concerns about how much I feel I really can't answer that clearly.
 
 We talked about how my brain did that thing where it tried to generate the “correct” response. Senior engineer? Leadership? Architecture? Product? Something impressive?
 
@@ -97,7 +97,7 @@ What I've learned in the last year in particular is that adaptability also needs
 👉 “Always be learning.”  
 👉 “Keep up or fall behind.”
 
-Okay, but… ***when do you get to be a person?***
+Okay, but… _**when do you get to be a person?**_
 
 I've been feeling lately that this seems to be another one of those "go slow to go fast" times I hear so much about in tech. I've tried to embrace it more and more lately.
 
@@ -141,7 +141,7 @@ Adaptability is built through practice, not panic.
 
 ### **3 - 🛠️ build a balance system you can actually maintain**
 
-Balance isn’t goofing off while pretending deadlines don't exist. It’s having a pace you can trust. 
+Balance isn’t goofing off while pretending deadlines don't exist. It’s having a pace you can trust.
 
 Some examples:
 

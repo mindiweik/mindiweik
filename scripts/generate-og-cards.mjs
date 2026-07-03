@@ -23,29 +23,97 @@ const ACCENTS = {
   speaking: '#34D399',
   projects: '#FF9F45',
 };
-const TAGLINE = 'software engineer, writer, builder. figuring it out in public, one version at a time.';
+const TAGLINE =
+  'software engineer, writer, builder. figuring it out in public, one version at a time.';
 
-const grotesk = readFileSync('node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff');
-const mono = readFileSync('node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff');
+const grotesk = readFileSync(
+  'node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff',
+);
+const mono = readFileSync(
+  'node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-700-normal.woff',
+);
 
 const el = (type, style, children) => ({ type, props: { style, children } });
 
 function card({ zone, accent }) {
-  return el('div', {
-    width: '100%', height: '100%', display: 'flex', position: 'relative',
-    flexDirection: 'column', justifyContent: 'center',
-    backgroundColor: BG, paddingLeft: 96, paddingRight: 96,
-  }, [
-    // zone-color stripe down the left edge
-    el('div', { position: 'absolute', left: 0, top: 0, width: 28, height: H, backgroundColor: accent }),
-    // chip (zone cards) or muted prompt (default card), VersionChip-style
-    zone
-      ? el('div', { display: 'flex', alignSelf: 'flex-start', backgroundColor: accent, color: INK, borderRadius: 12, padding: '10px 24px', fontFamily: 'JetBrains Mono', fontSize: 32, fontWeight: 700, marginBottom: 30 }, zone)
-      : el('div', { display: 'flex', color: MUTED, fontFamily: 'JetBrains Mono', fontSize: 32, marginBottom: 30 }, '~/'),
-    el('div', { display: 'flex', color: TEXT, fontFamily: 'Space Grotesk', fontSize: 112, fontWeight: 700, letterSpacing: '-0.02em' }, 'mindiweik'),
-    el('div', { display: 'flex', color: MUTED, fontFamily: 'JetBrains Mono', fontSize: 28, marginTop: 32, lineHeight: 1.5 },
-      zone ? `mindiweik.com/${zone}` : TAGLINE),
-  ]);
+  return el(
+    'div',
+    {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      position: 'relative',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      backgroundColor: BG,
+      paddingLeft: 96,
+      paddingRight: 96,
+    },
+    [
+      // zone-color stripe down the left edge
+      el('div', {
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: 28,
+        height: H,
+        backgroundColor: accent,
+      }),
+      // chip (zone cards) or muted prompt (default card), VersionChip-style
+      zone
+        ? el(
+            'div',
+            {
+              display: 'flex',
+              alignSelf: 'flex-start',
+              backgroundColor: accent,
+              color: INK,
+              borderRadius: 12,
+              padding: '10px 24px',
+              fontFamily: 'JetBrains Mono',
+              fontSize: 32,
+              fontWeight: 700,
+              marginBottom: 30,
+            },
+            zone,
+          )
+        : el(
+            'div',
+            {
+              display: 'flex',
+              color: MUTED,
+              fontFamily: 'JetBrains Mono',
+              fontSize: 32,
+              marginBottom: 30,
+            },
+            '~/',
+          ),
+      el(
+        'div',
+        {
+          display: 'flex',
+          color: TEXT,
+          fontFamily: 'Space Grotesk',
+          fontSize: 112,
+          fontWeight: 700,
+          letterSpacing: '-0.02em',
+        },
+        'mindiweik',
+      ),
+      el(
+        'div',
+        {
+          display: 'flex',
+          color: MUTED,
+          fontFamily: 'JetBrains Mono',
+          fontSize: 28,
+          marginTop: 32,
+          lineHeight: 1.5,
+        },
+        zone ? `mindiweik.com/${zone}` : TAGLINE,
+      ),
+    ],
+  );
 }
 
 mkdirSync('public/og', { recursive: true });

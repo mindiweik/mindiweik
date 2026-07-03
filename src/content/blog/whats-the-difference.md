@@ -1,12 +1,12 @@
 ---
 title: "what's the difference?!"
-description: "Transpiler | Compiler | Runtime"
+description: 'Transpiler | Compiler | Runtime'
 pubDate: 2025-05-13
-tags: ["fundamentals"]
+tags: ['fundamentals']
 readingTime: 3
 ---
 
-After trying to get 3 “big” software engineering words to stick, I wrote a similar post: 
+After trying to get 3 “big” software engineering words to stick, I wrote a similar post:
 
 #### [3 big, scary software engineering words explained](/blog/3-big-scary-software-engineering-words-explained)
 
@@ -27,7 +27,7 @@ But today, let’s cover these three topics - transpiler, compiler, and runtime 
 2. 🧑🏽‍🍳 Transpiling
 3. 🔥 Runtime
 
-*Warning, you may get hungry reading this. I was hungry when I wrote it. Ready?*
+_Warning, you may get hungry reading this. I was hungry when I wrote it. Ready?_
 
 I was trying to think of a good way to describe and/or remember the differences. I love analogies. And I love to eat. So, let’s talk food.
 
@@ -39,17 +39,17 @@ We have a recipe in front of us (our code) 📖 that we want to combine and turn
 
 ## 📖 compiling
 
-*First, let’s change the recipe from one language to a completely different language.*
+_First, let’s change the recipe from one language to a completely different language._
 
 So, our recipe is currently written in Japanese (TypeScript), but we need it to be in English (JavaScript) so that other people who don’t understand Japanese can read it and enjoy this delicious ramen recipe, too.
 
 **Compiling is essentially translating code from one language to another!**
 
-*This could also look like translating C or Rust to machine code.*
+_This could also look like translating C or Rust to machine code._
 
 ## 🧑🏽‍🍳 transpiling
 
-*Okay, great! But, now we want to rewrite it to make it simpler English.*
+_Okay, great! But, now we want to rewrite it to make it simpler English._
 
 Maybe we used words that are too fancy or went into way too much detail about some steps. We care a lot about this ramen!
 
@@ -59,11 +59,11 @@ Let’s rewrite the recipe from those detailed, fancy words (modern JavaScript a
 
 **Transpiling transforms code into a simpler version of the same language; it’s easier to understand.**
 
-*This can also look like a transformation of JSX files to JavaScript or Sass to CSS.*
+_This can also look like a transformation of JSX files to JavaScript or Sass to CSS._
 
 ## 🔥 runtime
 
-*Finally, let’s actually use this recipe we’ve worked so hard on! We’ll cook the ramen!*
+_Finally, let’s actually use this recipe we’ve worked so hard on! We’ll cook the ramen!_
 
 Our computer is following the recipe we’ve made and generating our ramen!
 
@@ -73,7 +73,7 @@ However, it’s important to remember that if something goes wrong (like missing
 
 **Runtime is when a computer is running the code we wrote.**
 
-*This can also look like Python running in the Python interpreter or Java running on the JVM (Java Virtual Machine).*
+_This can also look like Python running in the Python interpreter or Java running on the JVM (Java Virtual Machine)._
 
 **🍜 Yay! We finally made it!**
 

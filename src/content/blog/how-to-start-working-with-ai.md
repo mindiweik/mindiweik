@@ -1,8 +1,8 @@
 ---
-title: "how to start working with ai"
-description: "Tips to EMPOWER yourself with AI"
+title: 'how to start working with ai'
+description: 'Tips to EMPOWER yourself with AI'
 pubDate: 2024-03-05
-tags: ["ai"]
+tags: ['ai']
 readingTime: 4
 ---
 
@@ -59,7 +59,7 @@ My point is really that I agree that AI will be a force to make us faster, more 
 ### from my response, I would pull the following tips:
 
 - Ask a chatbot first when you want to Google something. You can confirm it afterward. Even if it’s incorrect, you generally don’t waste much time.
-- AI is helpful when coding, writing, and more, but you should *always* double-check the work!
+- AI is helpful when coding, writing, and more, but you should _always_ double-check the work!
 - You may need to ask a few times to get your desired response or request adjustments.
 - Use AI for more “boring” or repeatable tasks as much as possible.
 - When trying to learn something new, either remove AI assistance (working to master) or leverage it to build foundational knowledge (working to understand) and ask it to “explain this to me like I’m X years old” in the latter scenario.
@@ -85,4 +85,4 @@ And, finally, this wouldn’t be a good article about AI without asking AI for i
 
 Say “thank you” to your AI assistant(s)! It feels good - at least to me - and it covers your backside if AI gains sentience one day. I’m only half-joking. 😉
 
-***Please note that I acknowledge AI has flaws, most importantly built-in biases.*** I do not want to encourage anyone to participate in AI who might be uncomfortable. These are simply tips and recommendations on engaging with AI tools if interested!
+_**Please note that I acknowledge AI has flaws, most importantly built-in biases.**_ I do not want to encourage anyone to participate in AI who might be uncomfortable. These are simply tips and recommendations on engaging with AI tools if interested!

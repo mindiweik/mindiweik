@@ -1,0 +1,23 @@
+# Build output & generated files
+dist/
+wip-dist/
+.astro/
+public/
+
+# Archived / generated WIP landing (hand-authored HTML, leave as-is)
+wip-landing/
+wip-archive/
+
+# SDD spec/plan docs embed illustrative code fragments that aren't valid files
+docs/superpowers/
+
+# Test fixtures must stay byte-exact (intentionally messy source HTML)
+scripts/fixtures/
+
+# prettier-plugin-astro can't parse the inline gtag define:vars <script>
+# (upstream bug). ESLint still lints it. Leave formatting to hand.
+src/components/layout/BaseHead.astro
+
+# Dependency & lockfiles
+node_modules/
+package-lock.json

@@ -1,8 +1,8 @@
 ---
-title: "unlocking your browser"
+title: 'unlocking your browser'
 description: "Meet Your Browser's Toolbox"
 pubDate: 2026-02-18
-tags: ["browser","devtools"]
+tags: ['browser', 'devtools']
 readingTime: 5
 ---
 
@@ -31,7 +31,7 @@ Let's get into it.
 
 Chrome? Firefox? Safari? Edge? Brave? Something else entirely?
 
-It doesn't really matter for what we'll cover. All modern browsers have similar developer tools built in. But it's worth knowing the landscape because they're not *exactly* the same.
+It doesn't really matter for what we'll cover. All modern browsers have similar developer tools built in. But it's worth knowing the landscape because they're not _exactly_ the same.
 
 ### brief version of the browser landscape
 
@@ -60,14 +60,17 @@ But here's the thing: the core functionality of DevTools is remarkably similar a
 Before we dive in, let's make sure you know how to actually open these tools.
 
 **Chrome / Edge / Brave:**
+
 - Mac: `Cmd + Option + i` or `Cmd + Option + j`
 - Windows/Linux: `F12` or `Ctrl + Shift + i`
 
 **Firefox:**
+
 - Mac: `Cmd + Option + i`
 - Windows/Linux: `F12` or `Ctrl + Shift + i`
 
 **Safari:**
+
 - First, you need to enable the Developer menu: Go to **Preferences > Advanced** and check "Show Develop menu in menu bar"
 - Then: `Cmd + Option + i`
 
@@ -114,10 +117,10 @@ This isn't just a party trick. The Elements tab is incredibly practical when you
 
 ### pro tips for the elements tab
 
-1. **Hover to highlight.** As you move your mouse over elements in the panel, they'll highlight on the page. This is the fastest way to figure out "what element is *that*?"
+1. **Hover to highlight.** As you move your mouse over elements in the panel, they'll highlight on the page. This is the fastest way to figure out "what element is _that_?"
 2. **The pick tool.** See that little cursor icon in the top-left of DevTools? Click it (or press `Cmd + Shift + C` on Mac), then click anything on the page to jump straight to it in the Elements panel.
 3. **Force element states.** Right-click an element in the panel and look for "Force state." You can force `:hover`, `:active`, `:focus`, and `:visited` states. Super handy for debugging interactive styles without actually hovering.
-4. **Computed tab.** Next to the Styles pane, there's a "Computed" tab that shows you the *final* CSS values after all the cascading and specificity battles have been fought. When you can't figure out why your style isn't applying, this is where the truth lives.
+4. **Computed tab.** Next to the Styles pane, there's a "Computed" tab that shows you the _final_ CSS values after all the cascading and specificity battles have been fought. When you can't figure out why your style isn't applying, this is where the truth lives.
 
 ## want to practice? meet catz4life 🐱
 

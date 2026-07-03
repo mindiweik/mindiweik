@@ -1,11 +1,19 @@
 ---
 import type { ZoneKey } from '../../lib/zones.ts';
 import { zoneVar } from '../../lib/zones.ts';
-interface Props { label: string; zone: ZoneKey; outline?: boolean; }
+interface Props {
+  label: string;
+  zone: ZoneKey;
+  outline?: boolean;
+}
 const { label, zone, outline = false } = Astro.props;
 const fill = zoneVar(zone);
 const style = outline
   ? `background:var(--surface);color:${fill};border:1px solid ${fill}`
   : `background:${fill};color:var(--ink)`;
 ---
-<span style={`font-family:var(--font-mono);font-size:0.6rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;${style}`}>{label}</span>
+
+<span
+  style={`font-family:var(--font-mono);font-size:0.6rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;${style}`}
+  >{label}</span
+>

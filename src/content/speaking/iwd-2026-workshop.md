@@ -1,5 +1,5 @@
 ---
-title: "give to gain"
+title: 'give to gain'
 event: International Women's Day 2026 · Colorado Women&TECH
 date: 2026-03-13
 location: Denver, CO

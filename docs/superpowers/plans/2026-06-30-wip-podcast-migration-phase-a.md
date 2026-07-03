@@ -22,6 +22,7 @@
 ## Shared migration procedure (referenced by Tasks 3-6)
 
 **Slug rules:**
+
 - Blog: old `NN-title-words` → `title-words` (strip leading `NN-`). File: `src/content/blog/<slug>.md`.
 - Podcast: old `vABC-name` → version `vA.B.C`, slug `vA-B-C-name`, season = `A`. File: `src/content/podcast/<slug>.md`. (`v0010` → `v0.0.10`, slug `v0-0-10-joram-mutenge`.)
 - Speaking: slug = old path (talks) or a kebab of the title (guests). File: `src/content/speaking/<slug>.md`.
@@ -29,6 +30,7 @@
 **Frontmatter templates** (fill from JSON-LD via the helper + body):
 
 Blog:
+
 ```md
 ---
 title: <headline, lowercased to match site voice>
@@ -38,7 +40,9 @@ tags: [<articleSection items, lowercased>]
 readingTime: <timeRequired minutes as number, omit if absent>
 ---
 ```
+
 Podcast:
+
 ```md
 ---
 title: <episode title, lowercased>
@@ -49,7 +53,9 @@ pubDate: <date YYYY-MM-DD>
 duration: <"NN min" if present, else omit>
 ---
 ```
+
 Speaking (talk):
+
 ```md
 ---
 title: <talk title, lowercased>
@@ -60,7 +66,9 @@ description: <one-line>
 links: [{ label: <where>, url: <original> }]
 ---
 ```
+
 Speaking (guest):
+
 ```md
 ---
 title: <appearance title, lowercased>
@@ -73,14 +81,16 @@ links: [{ label: listen/watch, url: <original appearance URL> }]
 ```
 
 **Light-touch de-brand rules** (apply to body + frontmatter text):
+
 - Replace "[WIP] Podcast" / "the [WIP] show" / "[WIP] Blog" with a neutral reference ("the podcast", "this blog") or drop it.
 - "join us" / "we're figuring it out" / first-person-plural "we"/"our" → "I"/"my" where the subject is clearly Mindi solo. Leave "we" when it refers to a guest conversation.
 - Remove trailing site furniture that leaked into the body: "Connect", "Support the [WIP] show", "Start over", "mindi@wip-podcast.com", "© 2026", nav crumbs ("Show Notes Blog Gratitude Support").
 - Do not rewrite sentences for style; only de-brand and de-furniture.
 
 **Body→markdown rules:**
+
 - Headings, lists, links, bold/italic preserved.
-- Code: any `<pre>`/`<code>` block → fenced ```` ``` ```` with a language hint inferred from content (ts/js/bash/json) when obvious, else a bare fence.
+- Code: any `<pre>`/`<code>` block → fenced ` ``` ` with a language hint inferred from content (ts/js/bash/json) when obvious, else a bare fence.
 - Strip the repeated top nav and footer furniture (see de-brand list).
 
 ---
@@ -88,12 +98,14 @@ links: [{ label: listen/watch, url: <original appearance URL> }]
 ### Task 1: Add `guest` type to speaking (schema + render + changelog)
 
 **Files:**
+
 - Modify: `src/content.config.ts` (speaking `type` enum)
 - Modify: `src/pages/speaking/index.astro` (render guest entries)
 - Modify: `src/lib/collections.ts` (changelog type from `data.type`)
 - Test: `src/lib/collections.test.ts` (extend existing)
 
 **Interfaces:**
+
 - Consumes: nothing.
 - Produces: `speaking.type` accepts `'guest'`; `/speaking` shows guest entries; `toChangelogEntries` emits speaking entry `type` from `data.type` (default `'talk'`).
 
@@ -106,9 +118,14 @@ import { toChangelogEntries } from './collections.ts';
 describe('toChangelogEntries speaking type', () => {
   it('uses the entry type for speaking (guest vs talk)', () => {
     const out = toChangelogEntries({
-      blog: [], podcast: [], projects: [],
+      blog: [],
+      podcast: [],
+      projects: [],
       speaking: [
-        { id: 'a-guest', data: { title: 'on a show', type: 'guest', date: new Date('2025-01-01') } },
+        {
+          id: 'a-guest',
+          data: { title: 'on a show', type: 'guest', date: new Date('2025-01-01') },
+        },
         { id: 'a-talk', data: { title: 'my talk', date: new Date('2025-02-01') } },
       ],
     });
@@ -128,51 +145,63 @@ Expected: FAIL — guest entry currently maps to `'talk'`.
 - [ ] **Step 3: Implement** — three edits.
 
 `src/content.config.ts`, speaking schema:
+
 ```ts
     type: z.enum(['talk', 'workshop', 'panel', 'guest']).optional(),
 ```
 
 `src/lib/collections.ts`, the speaking map line inside `toChangelogEntries`:
+
 ```ts
     ...raw.speaking.map((e) => ({ type: e.data.type === 'guest' ? 'guest' : 'talk', zone: 'speaking' as ZoneKey, title: e.data.title, url: `/speaking#${e.id}`, date: e.data.date })),
 ```
 
 `src/pages/speaking/index.astro` — split talks vs guests and label guests. Replace the body with:
+
 ```astro
 ---
 import ZoneIndexLayout from '../../layouts/ZoneIndexLayout.astro';
 import EntryCard from '../../components/content/EntryCard.astro';
 import { getCollection } from 'astro:content';
 
-const all = (await getCollection('speaking'))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const all = (await getCollection('speaking')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 const talks = all.filter((t) => t.data.type !== 'guest');
 const guests = all.filter((t) => t.data.type === 'guest');
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-const linkFor = (t: any) => t.data.slidesUrl ?? t.data.recordingUrl ?? t.data.links?.[0]?.url ?? '#';
+const linkFor = (t: any) =>
+  t.data.slidesUrl ?? t.data.recordingUrl ?? t.data.links?.[0]?.url ?? '#';
 ---
+
 <ZoneIndexLayout zone="speaking" heading="speaking" sub="workshops, talks, and panels.">
-  {talks.map((t) => (
-    <EntryCard
-      href={linkFor(t)}
-      title={t.data.title}
-      meta={`${t.data.event} · ${fmt(t.data.date)}${t.data.location ? ' · ' + t.data.location : ''}`}
-      zone="speaking"
-    />
-  ))}
-  {guests.length > 0 && (
-    <div style="margin-top:2rem">
-      <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">// guest appearances</div>
-      {guests.map((t) => (
-        <EntryCard
-          href={linkFor(t)}
-          title={t.data.title}
-          meta={`${t.data.event} · ${fmt(t.data.date)}`}
-          zone="speaking"
-        />
-      ))}
-    </div>
-  )}
+  {
+    talks.map((t) => (
+      <EntryCard
+        href={linkFor(t)}
+        title={t.data.title}
+        meta={`${t.data.event} · ${fmt(t.data.date)}${t.data.location ? ' · ' + t.data.location : ''}`}
+        zone="speaking"
+      />
+    ))
+  }
+  {
+    guests.length > 0 && (
+      <div style="margin-top:2rem">
+        <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">
+          // guest appearances
+        </div>
+        {guests.map((t) => (
+          <EntryCard
+            href={linkFor(t)}
+            title={t.data.title}
+            meta={`${t.data.event} · ${fmt(t.data.date)}`}
+            zone="speaking"
+          />
+        ))}
+      </div>
+    )
+  }
 </ZoneIndexLayout>
 ```
 
@@ -193,10 +222,12 @@ git commit -m "feat: add guest type to speaking (schema, render, changelog)"
 ### Task 2: Tested metadata-extraction helper
 
 **Files:**
+
 - Create: `scripts/wip-extract.mjs`
 - Create: `scripts/wip-extract.test.mjs`
 
 **Interfaces:**
+
 - Consumes: nothing.
 - Produces: `parseMeta(html: string): { title, description, datePublished, readingTimeMin, sections: string[], type }` — pulls fields from the page's JSON-LD. Removable after migration.
 
@@ -239,7 +270,10 @@ export function parseMeta(html) {
   for (const b of blocks) {
     try {
       const obj = JSON.parse(b[1].trim());
-      if (obj['@type'] && obj['@type'] !== 'WebSite') { ld = obj; break; }
+      if (obj['@type'] && obj['@type'] !== 'WebSite') {
+        ld = obj;
+        break;
+      }
       if (!ld['@type']) ld = obj;
     } catch {}
   }
@@ -250,7 +284,11 @@ export function parseMeta(html) {
     description: ld.description || null,
     datePublished: iso,
     readingTimeMin: tr ? Number(tr[1]) : null,
-    sections: Array.isArray(ld.articleSection) ? ld.articleSection : (ld.articleSection ? [ld.articleSection] : []),
+    sections: Array.isArray(ld.articleSection)
+      ? ld.articleSection
+      : ld.articleSection
+        ? [ld.articleSection]
+        : [],
     type: ld['@type'] || null,
   };
 }
@@ -282,6 +320,7 @@ git commit -m "chore: add tested wip-podcast metadata extraction helper"
 Migrate four pages by hand to lock conventions before bulk. Use the Shared migration procedure.
 
 **Files:**
+
 - Create: `src/content/blog/exploring-typescript-primitive-types.md` (from `/18-exploring-typescript-primitive-types`)
 - Create: `src/content/podcast/v0-0-10-joram-mutenge.md` (from `/v0010-joram-mutenge`)
 - Create: `src/content/speaking/the-case-of-the-curious-engineer-talk.md` (from `/the-case-of-the-curious-engineer-talk`)
@@ -295,6 +334,7 @@ node scripts/wip-extract.mjs https://www.wip-podcast.com/v0010-joram-mutenge
 node scripts/wip-extract.mjs https://www.wip-podcast.com/the-case-of-the-curious-engineer-talk
 node scripts/wip-extract.mjs https://www.wip-podcast.com/linkedin-live-thriving-in-tech-with-adhd
 ```
+
 Expected: JSON with title/description/date/readingTime/sections per page.
 
 - [ ] **Step 2: Fetch + convert each body to markdown** — for each URL, `curl -sL <url>`, extract the article body, convert per the Body→markdown rules (preserve the TS code blocks in the primitive-types post), apply de-brand rules, and write the file with the matching frontmatter template. The TS post MUST keep its fenced ```ts code examples.
@@ -303,9 +343,11 @@ Expected: JSON with title/description/date/readingTime/sections per page.
 
 Run: `npm run build`
 Expected: "Complete!", page count +4. Then verify in `dist/`:
+
 ```bash
 grep -c "<pre" dist/blog/exploring-typescript-primitive-types/index.html
 ```
+
 Expected: ≥1 (code block rendered). Open `npm run dev` and eyeball the four pages: code formatting, no "[WIP]"/footer leakage, dates/tags present.
 
 - [ ] **Step 4: Commit**
@@ -347,10 +389,11 @@ Run: `npm run build`
 Expected: "Complete!"; blog page count = 33 (2 original + 32 migrated). No schema errors.
 
 - [ ] **Step 3: Sanity-check frontmatter** — every file has title/description/pubDate; code-heavy posts (08, 12, 13, 14) contain fenced code:
-```bash
+
+````bash
 for f in 08-learning-typescript 13-exploring-typescript-ts-compiler 14-exploring-typescript-runtime; do echo "$f:"; grep -l '```' src/content/blog/*.md | wc -l; done
 ls src/content/blog/*.md | wc -l   # expect 33
-```
+````
 
 - [ ] **Step 4: Commit**
 
@@ -379,6 +422,7 @@ Run: `npm run build`
 Expected: "Complete!"; podcast page count = 16 (no dupes). Versions render in the changelog.
 
 - [ ] **Step 3: Check** — 16 files, versions unique:
+
 ```bash
 ls src/content/podcast/*.md | wc -l            # expect 16
 grep -h '^version:' src/content/podcast/*.md | sort | uniq -d   # expect empty (no dup versions)
@@ -410,6 +454,7 @@ Guests → type `guest`: `episode-233-how-mindi-navigated-adhd-bootcamp-burnout-
 
 Run: `npm run build`
 Expected: "Complete!"; `/speaking` shows the talks plus a "// guest appearances" group.
+
 ```bash
 ls src/content/speaking/*.md | wc -l   # expect 11 (1 original + 5 talks + 5 guests)
 grep -l 'type: guest' src/content/speaking/*.md | wc -l   # expect 5
@@ -427,6 +472,7 @@ git commit -m "content: migrate talks + guest appearances from wip-podcast"
 ### Task 7: Harvest `/mindi` into the About page
 
 **Files:**
+
 - Modify: `src/pages/about.astro` (bio paragraphs)
 
 - [ ] **Step 1: Edit the About bio.** In `src/pages/about.astro`, change "five-plus years" to "10+ years", and weave in the advocacy mission from `/mindi`. Replace the first bio paragraph's tail and add the mission to the community sentence. Specifically:
@@ -460,6 +506,7 @@ Run: `npm test && npm run build`
 Expected: all tests PASS; build "Complete!" with ~70 pages (12 original + 58 migrated), zero errors.
 
 - [ ] **Step 2: Coverage check** — counts match the spec:
+
 ```bash
 echo "blog:"; ls src/content/blog/*.md* | wc -l        # 33
 echo "podcast:"; ls src/content/podcast/*.md | wc -l    # 16
@@ -476,6 +523,7 @@ echo "speaking:"; ls src/content/speaking/*.md | wc -l  # 11
 git push origin main
 gh run list -R mindiweik/mindiweik --limit 1
 ```
+
 Wait for the deploy run to succeed, then verify a sample migrated URL is live, e.g.
 `curl -sL https://mindiweik.com/blog/exploring-typescript-primitive-types/ | grep -o "<title>[^<]*</title>"`.
 
@@ -486,6 +534,7 @@ Wait for the deploy run to succeed, then verify a sample migrated URL is live, e
 ## Self-Review
 
 **Spec coverage:**
+
 - 58 files, 16/32/5/5 split → Tasks 3-6. ✓
 - `guest` type (schema + render) → Task 1. ✓
 - Slug rules (drop NN-, vABC→vA.B.C) → Shared procedure + Tasks 4/5. ✓

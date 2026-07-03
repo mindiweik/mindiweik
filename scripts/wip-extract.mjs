@@ -6,9 +6,14 @@ export function parseMeta(html) {
   for (const b of blocks) {
     try {
       const obj = JSON.parse(b[1].trim());
-      if (obj['@type'] && obj['@type'] !== 'WebSite') { ld = obj; break; }
+      if (obj['@type'] && obj['@type'] !== 'WebSite') {
+        ld = obj;
+        break;
+      }
       if (!ld['@type']) ld = obj;
-    } catch {}
+    } catch {
+      /* skip malformed JSON-LD blocks */
+    }
   }
   const iso = ld.datePublished ? String(ld.datePublished).slice(0, 10) : null;
   const tr = typeof ld.timeRequired === 'string' ? ld.timeRequired.match(/PT(\d+)M/) : null;
@@ -17,7 +22,11 @@ export function parseMeta(html) {
     description: ld.description || null,
     datePublished: iso,
     readingTimeMin: tr ? Number(tr[1]) : null,
-    sections: Array.isArray(ld.articleSection) ? ld.articleSection : (ld.articleSection ? [ld.articleSection] : []),
+    sections: Array.isArray(ld.articleSection)
+      ? ld.articleSection
+      : ld.articleSection
+        ? [ld.articleSection]
+        : [],
     type: ld['@type'] || null,
   };
 }
@@ -27,15 +36,15 @@ export function parseMeta(html) {
 /** Unescape HTML entities in a string. */
 function unescapeHtml(str) {
   return str
-    .replace(/&amp;/g,  '&')
-    .replace(/&lt;/g,   '<')
-    .replace(/&gt;/g,   '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#x27;/g, "'")
-    .replace(/&#39;/g,  "'")
+    .replace(/&#39;/g, "'")
     .replace(/&#x2F;/g, '/')
     .replace(/&nbsp;/g, ' ')
-    .replace(/&#(\d+);/g,          (_, n) => String.fromCharCode(parseInt(n, 10)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
     .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h, 16)));
 }
 
@@ -55,7 +64,7 @@ function isFurniture(decoded) {
     decoded.includes('mindi@wip-podcast.com') ||
     decoded.includes('Let me know!') ||
     decoded.includes('Did I miss anything') ||
-    decoded.includes('© 2026') ||           // © 2026
+    decoded.includes('© 2026') || // © 2026
     decoded.includes('&copy;') ||
     decoded.includes('You can find Mindi Weik on these platforms') ||
     decoded.includes('Do you want more straight to your inbox') ||
@@ -104,9 +113,9 @@ function extractBlocks(html) {
     // Layer 2: unescape the backslash-escaped quotes inside the JSON string.
     const raw = cm[1];
     const decoded = raw
-      .replace(/\\"/g,  '"')
-      .replace(/\\n/g,  '\n')
-      .replace(/\\t/g,  '\t')
+      .replace(/\\"/g, '"')
+      .replace(/\\n/g, '\n')
+      .replace(/\\t/g, '\t')
       .replace(/\\\\/g, '\\');
 
     if (isFurniture(decoded)) continue;
@@ -115,7 +124,7 @@ function extractBlocks(html) {
     // The desktop key can be up to ~5 000 chars after the type declaration.
     const wideSnippet = unescaped.slice(blockStart, blockStart + 6000);
     const deskMatch = wideSnippet.match(/"desktop":\[0,\{"top":\[0,(\d+)\],"left":\[0,(\d+)\]/);
-    const top  = deskMatch ? parseInt(deskMatch[1], 10) : 99999;
+    const top = deskMatch ? parseInt(deskMatch[1], 10) : 99999;
     const left = deskMatch ? parseInt(deskMatch[2], 10) : 0;
 
     blocks.push({ top, left, srcIdx: blockStart, decoded });
@@ -154,15 +163,17 @@ function processListItems(content, type, depth) {
   // Strip <p> wrappers inside <li> (they add no structure in a list context).
   content = content.replace(/<\/?p[^>]*>/gi, '');
   let num = 0;
-  return content.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_, inner) => {
-    num++;
-    const bullet = type === 'ul' ? '-' : `${num}.`;
-    // Multi-paragraph list items (source uses <br><br>): indent continuation
-    // paragraphs so the list numbering/structure stays intact.
-    const contIndent = indent + ' '.repeat(bullet.length + 1);
-    const body = inner.trim().replace(/\n{2,}/g, '\n\n' + contIndent);
-    return `${indent}${bullet} ${body}\n`;
-  }).trim();
+  return content
+    .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_, inner) => {
+      num++;
+      const bullet = type === 'ul' ? '-' : `${num}.`;
+      // Multi-paragraph list items (source uses <br><br>): indent continuation
+      // paragraphs so the list numbering/structure stays intact.
+      const contIndent = indent + ' '.repeat(bullet.length + 1);
+      const body = inner.trim().replace(/\n{2,}/g, '\n\n' + contIndent);
+      return `${indent}${bullet} ${body}\n`;
+    })
+    .trim();
 }
 
 /** Convert a single decoded HTML chunk to Markdown. */
@@ -181,7 +192,7 @@ function htmlToMarkdown(decoded) {
       const fence = lang || 'js';
       const clean = unescapeHtml(code).trim();
       return `\n\`\`\`${fence}\n${clean}\n\`\`\`\n\n`;
-    }
+    },
   );
 
   // 3. Inline: strong, em, links, underline, span — process before block elements.
@@ -212,11 +223,20 @@ function htmlToMarkdown(decoded) {
   md = md.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, inner) => {
     let attribution = '';
     inner = inner.replace(/<footer[^>]*>([\s\S]*?)<\/footer>/gi, (_, a) => {
-      attribution = a.replace(/<[^>]+>/g, '').replace(/^[\s―—–-]+/, '').trim();
+      attribution = a
+        .replace(/<[^>]+>/g, '')
+        .replace(/^[\s―—–-]+/, '')
+        .trim();
       return '';
     });
-    const text = inner.replace(/<[^>]+>/g, '').replace(/\n{2,}/g, '\n').trim();
-    const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+    const text = inner
+      .replace(/<[^>]+>/g, '')
+      .replace(/\n{2,}/g, '\n')
+      .trim();
+    const lines = text
+      .split('\n')
+      .map((l) => l.trim())
+      .filter(Boolean);
     if (attribution) lines.push('', attribution);
     const quoted = lines.map((l) => (l ? `> ${l}` : '>')).join('\n');
     return `\n\n${quoted}\n\n`;
@@ -259,14 +279,14 @@ export function parseBody(html) {
   const blocks = extractBlocks(html);
   if (blocks.length === 0) return '';
 
-  const parts = blocks.map(b => htmlToMarkdown(b.decoded)).filter(Boolean);
+  const parts = blocks.map((b) => htmlToMarkdown(b.decoded)).filter(Boolean);
   let joined = parts.join('\n\n');
 
   // Drop furniture-tail headings whose links were stripped as furniture,
   // leaving a dangling header (e.g. "For more, check out:", "Connect").
   joined = joined.replace(
     /#{1,6}\s*\**\s*(?:for more,?\s*check out|connect|share this(?: post)?|subscribe|follow me)\s*:?\s*\**\s*(?=\n|$)/gi,
-    ''
+    '',
   );
 
   // Drop the email-subscribe furniture lines (no subscription wired up yet).

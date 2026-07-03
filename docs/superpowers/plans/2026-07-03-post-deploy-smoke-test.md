@@ -21,10 +21,12 @@
 ### Task 1: Smoke-test checker script + tests
 
 **Files:**
+
 - Create: `scripts/smoke-test.mjs`
 - Test: `scripts/smoke-test.test.mjs`
 
 **Interfaces:**
+
 - Consumes: nothing (leaf module).
 - Produces:
   - `CHECKS` — array of `{ url: string, expectStatus: number, expectText?: string }`.
@@ -79,7 +81,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<h1>mindiweik</h1>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(1);
@@ -89,7 +91,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
   });
@@ -98,7 +100,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 503, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 3, sleep: noSleep }
+      { fetchFn, attempts: 3, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(fetchFn.calls.length).toBe(3);
@@ -112,7 +114,7 @@ describe('checkOne', () => {
     ]);
     const r = await checkOne(
       { url: 'https://www.mindiweik.com/', expectStatus: 200 },
-      { fetchFn, attempts: 5, sleep: noSleep }
+      { fetchFn, attempts: 5, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(2);
@@ -122,7 +124,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<html>error</html>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(r.detail).toContain('mindiweik');
@@ -132,7 +134,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([new Error('ECONNRESET')]);
     const r = await checkOne(
       { url: 'https://wip-podcast.com/', expectStatus: 200 },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(fetchFn.calls.length).toBe(2);
@@ -147,7 +149,7 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(passed).toBe(true);
     expect(results.length).toBe(2);
@@ -166,7 +168,7 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, attempts: 1, sleep: noSleep }
+      { fetchFn, attempts: 1, sleep: noSleep },
     );
     expect(passed).toBe(false);
   });
@@ -281,9 +283,11 @@ git commit -m "feat: post-deploy smoke test checker script"
 ### Task 2: Wire the smoke-test job into deploy.yml
 
 **Files:**
+
 - Modify: `.github/workflows/deploy.yml` (add a new job after the existing `deploy` job)
 
 **Interfaces:**
+
 - Consumes: `scripts/smoke-test.mjs` (Task 1) via `node scripts/smoke-test.mjs`.
 - Produces: a `smoke-test` job that fails the run when the script exits non-zero.
 
@@ -292,21 +296,21 @@ git commit -m "feat: post-deploy smoke test checker script"
 Append to `.github/workflows/deploy.yml`, as a new job under `jobs:` (sibling of `deploy`, after it):
 
 ```yaml
-  # Post-deploy verification: fetch the live sites and fail the run if any is
-  # not serving the expected content. Notification only (FTP has no rollback);
-  # value is fast awareness. See scripts/smoke-test.mjs.
-  smoke-test:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+# Post-deploy verification: fetch the live sites and fail the run if any is
+# not serving the expected content. Notification only (FTP has no rollback);
+# value is fast awareness. See scripts/smoke-test.mjs.
+smoke-test:
+  needs: deploy
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
 
-      - name: Smoke-test the live sites
-        run: node scripts/smoke-test.mjs
+    - name: Smoke-test the live sites
+      run: node scripts/smoke-test.mjs
 ```
 
 - [ ] **Step 2: Validate the workflow YAML parses**

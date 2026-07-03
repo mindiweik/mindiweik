@@ -7,10 +7,10 @@ const sample = `<html><head><script type="application/ld+json">
 </script></head><body>hi</body></html>`;
 
 const fixturesDir = new URL('./fixtures/', import.meta.url).pathname;
-const joramHtml    = readFileSync(fixturesDir + 'episode-joram.html',        'utf8');
-const primHtml     = readFileSync(fixturesDir + 'blog-primitives.html',      'utf8');
-const curiousHtml  = readFileSync(fixturesDir + 'talk-curious-engineer.html','utf8');
-const adhdHtml     = readFileSync(fixturesDir + 'guest-adhd.html',           'utf8');
+const joramHtml = readFileSync(fixturesDir + 'episode-joram.html', 'utf8');
+const primHtml = readFileSync(fixturesDir + 'blog-primitives.html', 'utf8');
+const curiousHtml = readFileSync(fixturesDir + 'talk-curious-engineer.html', 'utf8');
+const adhdHtml = readFileSync(fixturesDir + 'guest-adhd.html', 'utf8');
 
 describe('parseMeta', () => {
   it('extracts JSON-LD fields', () => {

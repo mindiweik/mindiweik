@@ -24,11 +24,11 @@ TypeScript is free and [open-source](https://github.com/microsoft/TypeScript). M
 
 If you’re unaware, TypeScript is a superset of JavaScript that adds static typing to JavaScript syntax and functionality. This offers a level of type safety to help developers reduce mistakes, and, in my opinion, it broadens the context of the codebase, making it more readable for teammates and your future self!
 
-*So, what the heck is a compiler?*
+_So, what the heck is a compiler?_
 
 > "In computing, a compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language)."
 >
-> [Wikipedia](https://en.wikipedia.org/wiki/Compiler#:~:text=In%20computing%2C%20a%20compiler%20is%20a%20computer%20program%20that%20translates%20computer%20code%20written%20in%20one%20programming%20language%20(the%20source%20language)%20into%20another%20language%20(the%20target%20language).)
+> [Wikipedia](<https://en.wikipedia.org/wiki/Compiler#:~:text=In%20computing%2C%20a%20compiler%20is%20a%20computer%20program%20that%20translates%20computer%20code%20written%20in%20one%20programming%20language%20(the%20source%20language)%20into%20another%20language%20(the%20target%20language).>)
 
 In our case, TypeScript is being compiled into the higher-level language of JavaScript to be understood and used by browsers or a Node environment. Once that’s completed, the JavaScript version of your project can then be deployed.
 
@@ -52,11 +52,11 @@ In our case, TypeScript is being compiled into the higher-level language of Java
   </div>
 </div>
 
-*Note that this differs from transpiling, which we will discuss in a future post.*
+_Note that this differs from transpiling, which we will discuss in a future post._
 
 Technically, other compiler options, like Babel, could be used. However, in my own experience, I’ve most often seen the TypeScript Compiler. In any case, we need to convert TypeScript code to JavaScript code!
 
-*Oh, and did you know that* tsc *is actually also written in TypeScript and compiled into JavaScript?* 
+_Oh, and did you know that_ tsc _is actually also written in TypeScript and compiled into JavaScript?_
 
 🤯 I know, it blew my mind, too, when I heard [Josh Goldberg](https://www.linkedin.com/in/joshuakgoldbergcodes/) mention this in a recent talk I heard!
 
@@ -84,7 +84,7 @@ tsc <file-name.ts>
 
 The above command will perform the compilation step of the TypeScript file and output a compiled JavaScript file with a similar name and a .js file extension: `<file-name.js>`
 
-Overall, it’s pretty simple to use, and I use it often in my package.json scripts!  If you want to get a little “fancy,” you can also make use of the many tsc [CLI options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in your scripts or directly in the terminal.
+Overall, it’s pretty simple to use, and I use it often in my package.json scripts! If you want to get a little “fancy,” you can also make use of the many tsc [CLI options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in your scripts or directly in the terminal.
 
 ### **`tsc` is installed, and I can generate javascript files! but how can I have more control over the typescript compiler? ⚙️**
 
@@ -108,7 +108,7 @@ Perhaps your overall project needs unique frontend and backend settings. Similar
 
 I could keep brainstorming, but I think you get the point.
 
-*So, how does one extend a* tsconfig *file or use more than one one?*
+_So, how does one extend a_ tsconfig _file or use more than one one?_
 
 Put simply, use the extends option and reference the base file. I found [an example here](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/) that shows this pretty well. [The example is an older reference. Some options may have changed with newer TS version releases!]
 
@@ -135,7 +135,7 @@ Here is a simplified file example from my own usage, too:
 Then, we have a debugger setup in which we want to ensure everything else is the same, but in this case, we want source mapping to be used:
 
 ```js
-// Debugger tsconfig file extends the base file: 
+// Debugger tsconfig file extends the base file:
 // tsconfig.debug.json
 
 {
@@ -150,7 +150,7 @@ When we want to run the debugger, this extended tsconfig file is used on top of 
 
 ## 📚 resources for further reading
 
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/) 
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
   - `tsc` / [Compiler section](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#tsc-the-typescript-compiler)
   - [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
   - [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
