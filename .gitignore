@@ -26,3 +26,6 @@ pnpm-debug.log*
 # SDD controller scratch (do not commit)
 .superpowers/
 wip-dist/
+
+# Comments backend secrets (uploaded to the server by hand, never committed)
+comments-config.php
