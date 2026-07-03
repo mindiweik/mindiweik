@@ -8,15 +8,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
-- **Post-deploy smoke test** — after the FTP upload in `deploy.yml`, curl the homepage + a
-  couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
-  FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
-  bad deploy). Highest-value reliability add. Mindi requested 2026-07-03.
-  - **False-positive found 7/3 (run for `ed252e6`):** Hostinger 403'd the Actions runner on
-    ALL urls (both domains) when two deploys ran back-to-back; the site was fine from a
-    residential IP. Likely WAF/rate-limit on the runner IP. Consider: longer backoff between
-    retries, a browser-ish User-Agent, or tolerating 403-from-runner when a prior run just
-    passed.
 - **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
   block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
   a bad merge going live. Mindi requested 2026-07-03.
@@ -61,6 +52,16 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+- ~~**Post-deploy smoke test**~~ -> SHIPPED 2026-07-03; false-alarm hardened same day.
+  `scripts/smoke-test.mjs` (+ unit tests) runs as the `smoke-test` job in `deploy.yml`:
+  fetches the five prod URLs, asserts 200 + the `mindiweik` marker on both homepages, retries
+  5x/10s for FTP/CDN propagation lag. The 7/3 false positive (Hostinger 403'd the runner IP on
+  ALL urls while the site was fine from a residential IP) is fixed two ways: (1) send a
+  browser-ish `User-Agent`/`Accept` so the runner reads less like a bot; (2) classify a uniform
+  403/429 across every URL as INCONCLUSIVE (warn, exit 0) instead of failing the run; a real
+  breakage still fails loudly (any 404/500/timeout, a 200 missing the marker, or a mixed
+  pass/block result). Separately, raised the FTP-Deploy-Action timeout 30s->120s on all three
+  uploads to absorb the intermittent "Failed to connect... via FTP" deploy drops.
 - ~~**Dependabot**~~ -> shipped 2026-07-03. `.github/dependabot.yml` covers npm +
   github-actions, weekly (Mon 09:00 America/Denver). Grouping: npm minor/patch bundled,
   npm majors bundled separately for deliberate review, all github-actions (incl. majors)
