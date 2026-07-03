@@ -1,9 +1,8 @@
 ---
 title: "ai is rubber duck debugging, but the duck talks back"
 description: "rubber duck debugging works. it works even better when the duck answers."
-pubDate: 2026-07-02
+pubDate: 2026-07-16
 tags: ["ai", "learning", "debugging"]
-draft: true
 ---
 
 You know rubber duck debugging, right?
@@ -41,12 +40,12 @@ Recently I spent a few hours debugging a CD pipeline for that startup project I 
 - GitLab pipelines not triggering on tags (protected variable scoping, who knew!)
 - Docker login failing in CI with a TTY error
 - DNS resolution dying inside buildkit containers
-- QEMU emulation dropping network connections during `npm ci`
+- Network connections randomly dropping mid-`npm ci`
 - A multi-stage Dockerfile optimization to eliminate the network calls entirely
 
 Each one of those could have been a rabbit hole I fell into alone, probably getting frustrated and copy-pasting fixes I didn't understand.
 
-Instead, each time something broke, I pasted the error and explained what I was seeing. We troubleshot it together. I asked "why does this happen?" and got actual explanations, not just "run this command." By the end, I understood QEMU emulation, Docker credential stores, and buildkit networking in a way I genuinely wouldn't have if I'd just followed a tutorial.
+Instead, each time something broke, I pasted the error and explained what I was seeing. We troubleshot it together. I asked "why does this happen?" and got actual explanations, not just "run this command." By the end, I understood Docker credential stores, buildkit networking, and why multi-stage builds matter in a way I genuinely wouldn't have if I'd just followed a tutorial.
 
 ## the writing-up-the-problem part is a skill
 
@@ -62,14 +61,16 @@ When you can do this well, you become better at asking for help from humans too.
 
 And weirdly, sometimes you don't even need the answer. You just needed to write it out.
 
-## it's not cheating. it's learning out loud.
+## we're all being told to embrace AI anyway
 
-I think there's still some guilt in the developer community around using AI. Like you're supposed to suffer through the docs alone as some kind of rite of passage.
+If you work in tech, you've gotten the memo by now: use AI. Your company wants it, your tools ship with it, half the job listings mention it. The push is everywhere.
 
-But you're not outsourcing the thinking. You're thinking out loud with a patient, knowledgeable collaborator who doesn't judge you for not knowing what QEMU is.
+I'm on board. Not because I was told to be, but because this is the version of AI use that actually makes you better at your job. You're not outsourcing the thinking. You're thinking out loud with a patient, knowledgeable collaborator who doesn't judge you for asking a "basic" question.
+
+That distinction matters, because "embrace AI" can mean two very different things. It can mean pasting in a ticket and shipping whatever comes back. Or it can mean this: explaining, asking why, following up, actually understanding the fix before you apply it. One makes you faster today. The other makes you faster forever.
 
 The learning happens in the conversation. In the follow-up questions. In the "wait, why does that work?" moments.
 
-The rubber duck was always a tool for thinking. This is just a rubber duck that thinks back.
+The rubber duck was always a tool for thinking. This is just taking it to the next level.
 
-*If you've been using AI as a learning tool (or avoiding it out of guilt), I'd love to hear about it. Find me on LinkedIn.* 💙
+*If you've been using AI as a learning tool (or you're still figuring out where it fits in your workflow), I'd love to hear about it. Find me on LinkedIn.* 💙
