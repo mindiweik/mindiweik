@@ -12,6 +12,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const mins = post.data.readingTime ?? readingTime(post.body ?? '');
 ---
-<ArticleLayout title={post.data.title} slug={post.id} date={post.data.pubDate} tags={post.data.tags} readingMins={mins} youtubeUrl={post.data.youtubeUrl} state={publishState(post.data, new Date())}>
+<ArticleLayout title={post.data.title} description={post.data.description} image={post.data.ogImage} slug={post.id} date={post.data.pubDate} tags={post.data.tags} readingMins={mins} youtubeUrl={post.data.youtubeUrl} state={publishState(post.data, new Date())}>
   <Content />
 </ArticleLayout>

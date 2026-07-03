@@ -12,6 +12,9 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     readingTime: z.number().optional(),
     youtubeUrl: z.string().url().optional(),
+    // Social share override, explicit opt-in only (never auto-derived).
+    // Use ~1200x630 images or LinkedIn crops unpredictably.
+    ogImage: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });
