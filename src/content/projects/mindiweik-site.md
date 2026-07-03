@@ -17,7 +17,7 @@ This started as "I should move off the website builder" and turned into a full m
 
 ## how it's built
 
-Astro with content collections, deployed to Hostinger over FTP by GitHub Actions on every push. A daily rebuild releases scheduled posts, drafts get a password-protected preview subdomain, and the 404 page does fuzzy "did you mean" suggestions. The repo is public if you want to poke around.
+Astro with content collections, deployed to Hostinger over FTP by GitHub Actions on every push. A daily rebuild releases scheduled posts, and the 404 page does fuzzy "did you mean" suggestions. The repo is public if you want to poke around.
 
 ## where it's at
 
