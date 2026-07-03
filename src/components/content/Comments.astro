@@ -6,6 +6,7 @@ interface Props {
 const { pageKey, zone } = Astro.props;
 const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog)';
 ---
+
 <section class="comments" aria-labelledby="comments-heading" style={`--c-accent:${accent}`}>
   <h2 id="comments-heading" class="eyebrow">// comments<span data-comments-count></span></h2>
 
@@ -24,8 +25,18 @@ const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog
 
         <label class="field-row">
           <span class="field-label">email</span>
-          <input name="email" type="email" maxlength="190" required autocomplete="email" class="field" />
-          <span class="hint">Used once to send a confirmation link, so we know you are a real person. It is never shown or shared.</span>
+          <input
+            name="email"
+            type="email"
+            maxlength="190"
+            required
+            autocomplete="email"
+            class="field"
+          />
+          <span class="hint"
+            >Used once to send a confirmation link, so we know you are a real person. It is never
+            shown or shared.</span
+          >
         </label>
 
         <label class="field-row">
@@ -34,7 +45,14 @@ const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog
         </label>
 
         <!-- honeypot: hidden from humans; bots fill it and get silently dropped -->
-        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" />
+        <input
+          type="text"
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          class="honeypot"
+        />
 
         <div class="submit-row">
           <button type="submit" class="submit">post comment</button>
@@ -92,7 +110,9 @@ const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog
     list-style: none;
     user-select: none;
   }
-  .disclosure-summary::-webkit-details-marker { display: none; }
+  .disclosure-summary::-webkit-details-marker {
+    display: none;
+  }
   .disclosure[open] .disclosure-summary {
     margin-bottom: 1rem;
     opacity: 0.85;
@@ -134,7 +154,9 @@ const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog
     outline: none;
     border-color: var(--c-accent);
   }
-  .ta { resize: vertical; }
+  .ta {
+    resize: vertical;
+  }
   .hint {
     font-family: var(--font-mono);
     font-size: 0.6rem;
@@ -257,12 +279,17 @@ const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog
         const res = await fetch(api, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ page_key: pageKey, ...input, website: String(fd.get('website') ?? '') }),
+          body: JSON.stringify({
+            page_key: pageKey,
+            ...input,
+            website: String(fd.get('website') ?? ''),
+          }),
         });
         const data = await res.json();
         if (res.ok) {
           form.reset();
-          formStatus.textContent = data.message ?? 'Almost there. Check your email for the confirmation link.';
+          formStatus.textContent =
+            data.message ?? 'Almost there. Check your email for the confirmation link.';
         } else {
           formStatus.textContent = data.error ?? 'Something went wrong.';
         }

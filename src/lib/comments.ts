@@ -31,9 +31,7 @@ export function validateComment(input: CommentInput): { ok: boolean; errors: str
 }
 
 // Same-origin in prod; PUBLIC_COMMENTS_API lets local dev point at a php -S server.
-export function commentsApiUrl(
-  env: { PUBLIC_COMMENTS_API?: string } = import.meta.env,
-): string {
+export function commentsApiUrl(env: { PUBLIC_COMMENTS_API?: string } = import.meta.env): string {
   return env.PUBLIC_COMMENTS_API || '/api/comments.php';
 }
 

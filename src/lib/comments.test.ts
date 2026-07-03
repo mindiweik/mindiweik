@@ -34,8 +34,10 @@ describe('isValidEmail', () => {
 
 describe('validateComment', () => {
   it('passes a good comment', () => {
-    expect(validateComment({ name: 'Mindi', email: 'm@x.com', body: 'hi' }))
-      .toEqual({ ok: true, errors: [] });
+    expect(validateComment({ name: 'Mindi', email: 'm@x.com', body: 'hi' })).toEqual({
+      ok: true,
+      errors: [],
+    });
   });
   it('flags each bad field', () => {
     const r = validateComment({ name: '', email: 'bad', body: '' });
@@ -56,8 +58,9 @@ describe('commentsApiUrl', () => {
     expect(commentsApiUrl({})).toBe('/api/comments.php');
   });
   it('honors a local override', () => {
-    expect(commentsApiUrl({ PUBLIC_COMMENTS_API: 'http://localhost:8080/api/comments.php' }))
-      .toBe('http://localhost:8080/api/comments.php');
+    expect(commentsApiUrl({ PUBLIC_COMMENTS_API: 'http://localhost:8080/api/comments.php' })).toBe(
+      'http://localhost:8080/api/comments.php',
+    );
   });
 });
 
