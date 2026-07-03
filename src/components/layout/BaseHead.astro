@@ -1,8 +1,11 @@
 ---
 import { SITE } from '../../config/site.ts';
-interface Props { title: string; description?: string; }
-const { title, description = SITE.description } = Astro.props;
+interface Props { title: string; description?: string; image?: string; zone?: string; }
+const { title, description = SITE.description, image, zone } = Astro.props;
 const fullTitle = title === SITE.name ? title : `${title} · ${SITE.name}`;
+// og:image resolution: explicit page image -> zone card -> site default.
+// Absolute URL required (LinkedIn ignores relative paths).
+const ogImage = new URL(image ?? (zone ? `/og/${zone}.png` : '/og/default.png'), SITE.url).href;
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,6 +14,11 @@ const fullTitle = title === SITE.name ? title : `${title} · ${SITE.name}`;
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={ogImage} />
 <link rel="icon" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
