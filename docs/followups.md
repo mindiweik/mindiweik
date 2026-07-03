@@ -8,9 +8,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
-- **Dependabot** — set up GitHub Dependabot for the `mindiweik` repo (automated dependency
-  update PRs + security alerts). Add `.github/dependabot.yml` (npm + github-actions ecosystems).
-  Mindi requested 2026-07-03.
 - **Post-deploy smoke test** — after the FTP upload in `deploy.yml`, curl the homepage + a
   couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
   FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
@@ -64,6 +61,13 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+- ~~**Dependabot**~~ -> shipped 2026-07-03. `.github/dependabot.yml` covers npm +
+  github-actions, weekly (Mon 09:00 America/Denver). Grouping: npm minor/patch bundled,
+  npm majors bundled separately for deliberate review, all github-actions (incl. majors)
+  bundled since first-party actions rarely break. First scan opened PRs #5-#8 (all merged).
+  Repo `dependencies` + `github-actions` labels created. Remaining (manual, one toggle):
+  enable **Dependabot security updates** under Settings > Code security for CVE-driven PRs —
+  the config file only does version updates.
 - ~~**Social sharing preview images**~~ -> SHIPPED 2026-07-03. Five zone-colored OG cards
   (checked-in satori script, `npm run og:cards`, rendered at 2x for retina crispness) in
   `public/og/`; `BaseHead` emits absolute `og:image` + `twitter:card` with fallback chain
