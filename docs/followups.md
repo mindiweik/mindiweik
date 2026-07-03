@@ -27,11 +27,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   Mindi requested 2026-07-03.
 - **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
   silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
-- **Pin the mindiweik.com changelog entry** — the site's project entry dates off its own
-  repo's `pushedAt`, which bumps on every deploy, so "update · mindiweik.com" floats near
-  the top of the changelog dated "today". Mindi's lean: pin it with `lastUpdated: 2026-06-30`
-  (the official launch date) in `src/content/projects/mindiweik-site.md`; shipping as-is
-  first to observe. Noted 2026-07-03.
 - **Project page OG descriptions** — ProjectLayout doesn't pass a description to BaseLayout,
   so project pages share the generic site OG description instead of their blurb. Matches the
   preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
@@ -63,6 +58,11 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 
 ## Resolved
 
+- ~~**Pin the mindiweik.com changelog entry**~~ -> done 2026-07-03. The site's own project
+  entry dated off its repo's `pushedAt`, which bumps every deploy, so "update · mindiweik.com"
+  floated to the top of the changelog dated "today". Pinned with `lastUpdated: 2026-06-30` (the
+  official launch date) in `src/content/projects/mindiweik-site.md`; `lastUpdated` already wins
+  the `?? pushedAt ?? Jan-1-of-since` precedence in `toChangelogEntries` (no logic change).
 - ~~**Linting + formatting**~~ -> shipped 2026-07-03. ESLint flat config (`typescript-eslint`
   recommended + `eslint-plugin-astro`) covering `.astro`/`.ts`/`.mjs`, and Prettier
   (`prettier-plugin-astro` + `prettier-plugin-tailwindcss`; single-quote, 100-col, matches the
