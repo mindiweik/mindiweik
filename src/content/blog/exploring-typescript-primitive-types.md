@@ -1,8 +1,8 @@
 ---
-title: "exploring typescript: primitive types"
+title: 'exploring typescript: primitive types'
 description: "A clear breakdown of TypeScript's 7 primitive types: string, number, boolean, bigint, symbol, null, and undefined, with examples and gotchas for every one."
 pubDate: 2025-01-14
-tags: ["typescript"]
+tags: ['typescript']
 readingTime: 6
 ---
 
@@ -55,36 +55,36 @@ As a note, you may notice that these types are referred to in lowercase (`string
 The `string` type is one of the three most common primitives. It represents data in the form of text. In TypeScript, you can declare the string type using the `string` keyword, as you might expect:
 
 ```ts
-let name: string = 'Mindi'
+let name: string = 'Mindi';
 ```
 
 You'll notice that single quotes are used in my above example (`'`). Double quotes (`"`) may also be used, as well as backticks (`` ` ``) for a template literal. These are the same options as in JavaScript, just with the added type declaration. Here are examples using these last two options together:
 
 ```ts
-let dog: string = "Rigby"
+let dog: string = 'Rigby';
 
-const dogCommand: string = `${dog}, please sit.`
-console.log(dogCommand) // Output: "Rigby, please sit."
+const dogCommand: string = `${dog}, please sit.`;
+console.log(dogCommand); // Output: "Rigby, please sit."
 
-dog = "Rayla"
-console.log(dogCommand) // Output: "Rayla, please sit."
+dog = 'Rayla';
+console.log(dogCommand); // Output: "Rayla, please sit."
 ```
 
 If you weren't aware, TypeScript is also smart enough to infer types! However, this can come with confusion. In a function, TypeScript would understand that the output will be a string:
 
 ```ts
 const greeting = (str: string) => {
-  return str
-}
+  return str;
+};
 
-console.log (greeting("Hello")) // Output: "Hello"
+console.log(greeting('Hello')); // Output: "Hello"
 // The type when you hover over `greeting` shows a string type
 ```
 
 However, if you were to use `const` variable declaration for a string without declaring it as a string more broadly, TypeScript may infer this as a type literal! Take a look at this example. The variable `test` is the literal string of `"Hello"` as its type, not a more generic `string`!
 
 ```ts
-const test = "Hello";
+const test = 'Hello';
 
 // Hovering over `test` in the VSCode IDE shows:
 // const test: "Hello"
@@ -94,7 +94,7 @@ Why is this? When we use `const` in this way, we essentially make the variable r
 
 Although it seems rather simple, I have found nuance is littered throughout TypeScript. Let's keep this in mind as we examine the remaining primitive types.
 
-***When in doubt, hover your mouse in the IDE to check it out! 👀***
+_**When in doubt, hover your mouse in the IDE to check it out! 👀**_
 
 ## #️⃣ number
 
@@ -103,23 +103,23 @@ Another of the three most common primitive types is `number`. As you may have as
 As with the `string` type, you can declare a variable as a `number` with the corresponding keyword:
 
 ```ts
-let year: number = 2050
-let distance: number = 21.555
+let year: number = 2050;
+let distance: number = 21.555;
 ```
 
 As with strings, TypeScript will attempt to infer the type if you do not state it:
 
 ```ts
-let age = 100
+let age = 100;
 // hovering over age, shows a type of number
 
-const zero = 0
+const zero = 0;
 // hovering over zero shows a type literal of 0
 ```
 
 As you can see from the variable `zero`, using `const` will again cause TypeScript to infer a type literal of `0` as opposed to the more broad `number` type.
 
-***When in doubt, check it out! 👀***
+_**When in doubt, check it out! 👀**_
 
 ## ⚖️ boolean
 
@@ -128,20 +128,20 @@ The `boolean` type is the third most common primitive. This refers to the two lo
 They are typically used in conditional testing like `if...else` or `while` statements that return a truth or false result. You can also use the ternary operator; here's an example:
 
 ```ts
-let happy = "happy"
+let happy = 'happy';
 
-let isHappy: boolean = happy === "happy" ? true : false
+let isHappy: boolean = happy === 'happy' ? true : false;
 // hovering over isHappy shows a type of boolean
 ```
 
 And, if you were wondering, a type literal will occur if using `const` as with the `number` and `string` primitives.
 
 ```ts
-const isTrue = true
+const isTrue = true;
 // hovering over isTrue shows a type literal of true
 ```
 
-***When in doubt, check it out! 👀***
+_**When in doubt, check it out! 👀**_
 
 ## 🏋 bigint
 
@@ -154,17 +154,17 @@ Overall, this primitive is rarely used in my own experience. My work and side pr
 For now, here's a simple example:
 
 ```ts
-let oneBigInteger: bigint = 1n
+let oneBigInteger: bigint = 1n;
 ```
 
 Again, similar to the previous primitives, using `const` will result in a type literal:
 
 ```ts
-const aBiggerBigInteger = 100n
+const aBiggerBigInteger = 100n;
 // hovering over aBiggerBigInteger shows a type literal of 100n
 ```
 
-***When in doubt, check it out! 👀***
+_**When in doubt, check it out! 👀**_
 
 ## 👾 symbol
 
@@ -172,15 +172,15 @@ Another primitive that I rarely use is a `symbol`. If you have a great example f
 
 A `symbol` is an immutable and exclusive value for a property key created using the `Symbol()` constructor. Strings are optional to provide a key value used to access a `symbol` at a later time.
 
-This is the only primitive with a reference identity making it unique. In some ways, they behave like objects. Often, a `symbol` can be used to add a unique property to an object that acts as a *hidden* mechanism from other code that might typically access a key.
+This is the only primitive with a reference identity making it unique. In some ways, they behave like objects. Often, a `symbol` can be used to add a unique property to an object that acts as a _hidden_ mechanism from other code that might typically access a key.
 
 Each `symbol` creation is completely separate. Let's take a look:
 
 ```ts
-let example1 = Symbol("example")
-let example2 = Symbol("example")
+let example1 = Symbol('example');
+let example2 = Symbol('example');
 
-console.log(example1 === example2)
+console.log(example1 === example2);
 // Output: false, symbols are unique
 ```
 
@@ -192,7 +192,7 @@ Let's look at an example that my friend GitHub Copilot helped generate using `co
 
 ```ts
 // Define a unique symbol
-const uniqueKey: unique symbol = Symbol("uniqueKey")
+const uniqueKey: unique symbol = Symbol('uniqueKey');
 
 // Create an interface with a property of type unique symbol
 interface MyObject {
@@ -201,14 +201,14 @@ interface MyObject {
 
 // Create an object that implements the interface
 const obj: MyObject = {
-  [uniqueKey]: "This is a unique value"
-}
+  [uniqueKey]: 'This is a unique value',
+};
 
 // Access the unique property
-console.log(obj[uniqueKey]) // Output: This is a unique value
+console.log(obj[uniqueKey]); // Output: This is a unique value
 ```
 
-***When in doubt, check it out! 👀***
+_**When in doubt, check it out! 👀**_
 
 ## 🍽️ null and undefined
 
@@ -221,16 +221,16 @@ Here's a quick couple of examples:
 ```ts
 // Example 1
 
-let nullExample = null
-console.log(nullExample) // Output: null
+let nullExample = null;
+console.log(nullExample); // Output: null
 
 // Example 2
 
-const nameExample = db.findName()
+const nameExample = db.findName();
 // We make some call to a database to find a name object.
 // No name object was found for the sake of our example!
 
-console.log(nameExample) // Output: null
+console.log(nameExample); // Output: null
 // If no name was found, we could return a null value
 // to make this result clear without throwing an error
 ```
@@ -240,8 +240,8 @@ console.log(nameExample) // Output: null
 Let's take a look at a quick example:
 
 ```ts
-let unassignedExample
-console.log(unassignedExample) // Output: undefined
+let unassignedExample;
+console.log(unassignedExample); // Output: undefined
 ```
 
 **What are the more subtle differences then?**
@@ -251,33 +251,33 @@ First, `null` represents an intentional absence of a value, whereas `undefined` 
 That can be a little confusing, so let's take a look at an example of `undefined` where you might use it intentionally. Let's say we're trying to apply grade scores to a respective letter grade, but maybe there can be a glitch in the system providing the grade scores.
 
 ```ts
-const numberGrade: number = NaN
+const numberGrade: number = NaN;
 // Let's say we got this from an outside source
 
-let letterGrade
+let letterGrade;
 
 if (numberGrade >= 90) {
-	letterGrade = "A"
+  letterGrade = 'A';
 } else if (numberGrade >= 80) {
-	letterGrade = "B"
+  letterGrade = 'B';
 } else if (numberGrade >= 70) {
-	letterGrade = "C"
+  letterGrade = 'C';
 } else if (numberGrade >= 60) {
-	letterGrade = "D"
+  letterGrade = 'D';
 } else if (numberGrade >= 0) {
-	letterGrade = "F"
+  letterGrade = 'F';
 }
 
-console.log(letterGrade) // Output: undefined
+console.log(letterGrade); // Output: undefined
 ```
 
 Perhaps we can add some checks for such an `undefined` incident and handle it appropriately now.
 
-The next difference is that `null` represents the absence of an object. In our earlier example, we expected a result to be an object containing details about a name record. On the other hand, `undefined` is a lack of *any* value at all.
+The next difference is that `null` represents the absence of an object. In our earlier example, we expected a result to be an object containing details about a name record. On the other hand, `undefined` is a lack of _any_ value at all.
 
 Finally, equality between the two differs. `null` and `undefined` are loosely equal (`null == undefined`), but not strictly equal (`null !== undefined`). Loose equality performs type coercion and both primitives evaluate to an absence of value. Strict equality, however, checks whether the data types and values are the same and `null` and `undefined` are ultimately not the same data types.
 
-***When in doubt, always check it out! 👀***
+_**When in doubt, always check it out! 👀**_
 
 **I hope that covering these primitives can be at least a little bit informative! In writing this I learned a few new things myself or at least considered aspects of these types I hadn't before. 🤓**
 

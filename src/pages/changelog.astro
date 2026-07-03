@@ -5,9 +5,18 @@ import SectionLabel from '../components/content/SectionLabel.astro';
 import { getChangelog } from '../lib/collections.ts';
 const entries = await getChangelog();
 ---
+
 <BaseLayout title="changelog">
-  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;letter-spacing:-0.02em;margin:1.6rem 0 0">the changelog</h1>
-  <p style="font-family:var(--font-body);font-size:0.85rem;color:var(--text-muted);margin-top:0.4rem">everything I ship, newest first.</p>
+  <h1
+    style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;letter-spacing:-0.02em;margin:1.6rem 0 0"
+  >
+    the changelog
+  </h1>
+  <p
+    style="font-family:var(--font-body);font-size:0.85rem;color:var(--text-muted);margin-top:0.4rem"
+  >
+    everything I ship, newest first.
+  </p>
   <SectionLabel label="// all" />
   <ChangelogFeed entries={entries} />
 </BaseLayout>

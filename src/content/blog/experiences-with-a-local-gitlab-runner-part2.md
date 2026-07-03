@@ -1,14 +1,14 @@
 ---
-title: "experiences with a local gitlab runner: part2"
-description: "Ups, downs, and - 🙈 SPOILER - the rewards"
+title: 'experiences with a local gitlab runner: part2'
+description: 'Ups, downs, and - 🙈 SPOILER - the rewards'
 pubDate: 2024-06-11
-tags: ["devops","ci-cd"]
+tags: ['devops', 'ci-cd']
 readingTime: 5
 ---
 
-*We won't discuss CI/CD or setting up a GitLab Runner here. For this information, please refer to [Part 1.](/blog/experiences-with-a-local-gitlab-runner-part-1)*
+_We won't discuss CI/CD or setting up a GitLab Runner here. For this information, please refer to [Part 1.](/blog/experiences-with-a-local-gitlab-runner-part-1)_
 
-**Quick recap:** I wanted to set up a CI pipeline to improve the team’s development speed while working on a side project with my team. I also wanted to do simple checks to ensure we wouldn't break anything obvious when merging to main! 
+**Quick recap:** I wanted to set up a CI pipeline to improve the team’s development speed while working on a side project with my team. I also wanted to do simple checks to ensure we wouldn't break anything obvious when merging to main!
 
 Let’s find out how it went after the initial setup…
 
@@ -21,15 +21,15 @@ Let’s find out how it went after the initial setup…
 
 ## 🧩 first local success and challenge
 
-**Success:** If you read [Part 1](/blog/experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
+**Success:** If you read [Part 1](/blog/experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook!
 
 The CI pipeline ran smoothly and caught a few issues before merging to main. It was doing its job. 🎉
 
 **Challenge:** The GitLab Runner on my Mac took over my computing resources for local development.
 
-I manually started and stopped the runner when merge requests came through. 
+I manually started and stopped the runner when merge requests came through.
 
-This was not ideal! I wanted to move the Runner to a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) I hadn’t used for anything specific yet. *(Thank you to my partner for gifting this to me early in my coding journey!)* This way, I could keep the Runner open for quicker development while freeing up my resources.
+This was not ideal! I wanted to move the Runner to a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) I hadn’t used for anything specific yet. _(Thank you to my partner for gifting this to me early in my coding journey!)_ This way, I could keep the Runner open for quicker development while freeing up my resources.
 
 **Sure, we could have chosen other options for a Runner**, including using the GitLab built-in Runners. But I’ve wanted to find a good use for this Raspberry Pi, and I was determined to make it work!
 
@@ -47,13 +47,13 @@ Directions in a blog were followed, and despite the clear warnings of a “dange
 
 Finally, I completed the GitLab Runner setup, connected everything, and watched the first pipeline run. I was ready to celebrate! 😅
 
-*Of course, there was yet one more challenge to handle…*
+_Of course, there was yet one more challenge to handle…_
 
-The frontend build couldn’t pass because OSX is the [only system that ignores file case sensitivity](https://medium.com/@paulbjensen/what-mac-oss-case-insensitive-filenames-teaches-us-cd8feee7b0b3). I wasn’t aware of this until trying to get our project working alongside Linux! 
+The frontend build couldn’t pass because OSX is the [only system that ignores file case sensitivity](https://medium.com/@paulbjensen/what-mac-oss-case-insensitive-filenames-teaches-us-cd8feee7b0b3). I wasn’t aware of this until trying to get our project working alongside Linux!
 
 Our team develops on Mac devices, and the Raspberry Pi is a Linux/Raspian device, so of course this needed to be addressed to move forward. This is especially needed because we’re planning to deploy this project in the coming months and it will likely be on a Linux AWS instance. At least this aspect should be resolved in advance. 🤞
 
-To combat this, I installed the [case-sensitive-paths-webpack-plugin](https://www.npmjs.com/package/case-sensitive-paths-webpack-plugin) npm package, updated our webpack config file for the front end, and worked through some file and image renaming challenges. 
+To combat this, I installed the [case-sensitive-paths-webpack-plugin](https://www.npmjs.com/package/case-sensitive-paths-webpack-plugin) npm package, updated our webpack config file for the front end, and worked through some file and image renaming challenges.
 
 We’re using TypeScript, and I also needed to add a d.ts [types file](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html) for our image files to work properly.
 
@@ -63,7 +63,7 @@ And THEN, it was safe to celebrate when the pipeline jobs turned green again whi
 
 **TL;DR: Things are running smoothly! 🙌**
 
-The Raspberry Pi is plugged in and sits to the side of my office workspace in a position that limits fan noise. 
+The Raspberry Pi is plugged in and sits to the side of my office workspace in a position that limits fan noise.
 
 The Runner is always open because computing resources are now dedicated to this purpose. This means that our merge requests always go right through the CI pipeline - this happens automatically and without any thought!
 
@@ -73,7 +73,7 @@ Otherwise, the Raspberry Pi is essentially left running with limited effort and 
 
 ## 💡 lessons learned
 
-This second part of the journey certainly had ups and downs. I gave a quick snapshot above, but there was so much time spent reading articles, documentation, and tutorials, plus ample Google searching to try to pinpoint the right methods to make everything work well together. 
+This second part of the journey certainly had ups and downs. I gave a quick snapshot above, but there was so much time spent reading articles, documentation, and tutorials, plus ample Google searching to try to pinpoint the right methods to make everything work well together.
 
 **I have 3 key takeaways from this portion of the local GitLab Runner experience:**
 
@@ -97,7 +97,7 @@ Errors always provide clues. It’s not that you have to read between the lines,
 
 I hate to admit it, but I struggled to resolve the issues with the unsupported Pi architecture and the Mac/Linux case-sensitivity conundrum for far too long. I half-read the error messages and assumed I understood what they meant. Then I went around in circles trying to solve for things that actually weren’t even close to resolving my issues in hindsight.
 
-Always, always, always read the messages thoroughly and don’t be afraid to Google your exact error. 
+Always, always, always read the messages thoroughly and don’t be afraid to Google your exact error.
 
 Some of the hits may not match exactly what you need for your own situation, but often I’ve found that reading others’ results can help point to the right direction of what to look into next to try to solve my particular brand of the issue.
 
@@ -107,6 +107,6 @@ Although this migration to the Raspberry Pi took time and effort, it’s been on
 
 I absolutely love a challenge. The harder to unravel, the more I want to see the end result. And overall, this one was a doozy for me.
 
-Even when I would make some progress, I would hit another wall. It was hard, but I wanted to see this conclusion so I kept pushing myself. *And, my partner helped keep my spirits up when things got hard. I appreciated that!*
+Even when I would make some progress, I would hit another wall. It was hard, but I wanted to see this conclusion so I kept pushing myself. _And, my partner helped keep my spirits up when things got hard. I appreciated that!_
 
 **Once I finally got everything working smoothly, I celebrated that hard work**. Now, I smile a little when I hear the fan and know it’s working behind the scenes or when I submit a PR and it quickly hits the pipeline to show that satisfying green checkmark. 🥹

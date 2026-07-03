@@ -1,52 +1,62 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "@fontsource-variable/space-grotesk";
-@import "@fontsource-variable/jetbrains-mono";
-@import "@fontsource-variable/inter";
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/inter';
 
 @theme {
-  --font-display: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
-  --font-body: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Canvas + accent tokens. Dark is the default theme; light is opt-in via the
    header/footer toggle. The [data-theme="light"] block overrides ONLY canvas
    tokens. Accent tokens (and --ink) are mode-independent thanks to the fill rule. */
 :root,
-[data-theme="dark"] {
-  --bg: #0B0E14;
-  --surface: #11151F;
-  --border: rgba(255, 255, 255, 0.10);
-  --text: #ECECF1;
-  --text-muted: rgba(236, 236, 241, 0.60);
-  --ink: #0B0E14; /* dark ink used as text ON accent fills */
+[data-theme='dark'] {
+  --bg: #0b0e14;
+  --surface: #11151f;
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #ececf1;
+  --text-muted: rgba(236, 236, 241, 0.6);
+  --ink: #0b0e14; /* dark ink used as text ON accent fills */
 
-  --accent-blog: #6E7BFF;
+  --accent-blog: #6e7bff;
   --accent-primary: var(--accent-blog);
-  --accent-podcast: #FF5C85;
-  --accent-speaking: #34D399;
-  --accent-projects: #FF9F45;
+  --accent-podcast: #ff5c85;
+  --accent-speaking: #34d399;
+  --accent-projects: #ff9f45;
 }
 
-[data-theme="light"] {
-  --bg: #FAFAF7;
-  --surface: #FFFFFF;
+[data-theme='light'] {
+  --bg: #fafaf7;
+  --surface: #ffffff;
   --border: rgba(11, 14, 20, 0.12);
-  --text: #1A1D24;
+  --text: #1a1d24;
   --text-muted: rgba(26, 29, 36, 0.62);
   /* --ink unchanged: still dark ink on bright accent fills */
 }
 
-[data-theme="dark"] { color-scheme: dark; }
-[data-theme="light"] { color-scheme: light; }
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+[data-theme='light'] {
+  color-scheme: light;
+}
 
 /* Theme toggle: show the icon for the destination theme.
    Dark now -> show sun (go light). Light now -> show moon (go dark). */
 .theme-toggle .icon-sun,
-.theme-toggle .icon-moon { display: none; }
-[data-theme="dark"] .theme-toggle .icon-sun { display: inline-flex; }
-[data-theme="light"] .theme-toggle .icon-moon { display: inline-flex; }
+.theme-toggle .icon-moon {
+  display: none;
+}
+[data-theme='dark'] .theme-toggle .icon-sun {
+  display: inline-flex;
+}
+[data-theme='light'] .theme-toggle .icon-moon {
+  display: inline-flex;
+}
 
 body {
   margin: 0;
@@ -56,12 +66,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Automatic vertical rhythm: space between stacked paragraphs, site-wide.
    Adjacent-sibling only, so isolated paragraphs (taglines, subtitles) are
    untouched. .prose matches this value for consistent blog spacing. */
-p + p { margin-top: 1.4rem; }
+p + p {
+  margin-top: 1.4rem;
+}
 
 /* Zone-accent hover. BaseLayout sets --hover-accent to the active zone's
    accent; mixed-zone elements (changelog rows, nav links, cross-zone cards)
@@ -69,9 +84,14 @@ p + p { margin-top: 1.4rem; }
    .hov-card = bordered cards/buttons: border warms to the accent + faint tint
    .hov-link = text links: color shifts to the accent
    .hov-fill = accent-filled buttons: slight brighten */
-a, button {
-  transition: color 0.15s ease, border-color 0.15s ease,
-    background-color 0.15s ease, opacity 0.15s ease, filter 0.15s ease;
+a,
+button {
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    opacity 0.15s ease,
+    filter 0.15s ease;
 }
 
 .hov-card:hover,

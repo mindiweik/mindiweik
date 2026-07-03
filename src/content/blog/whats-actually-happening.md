@@ -1,8 +1,8 @@
 ---
 title: "what's actually happening"
-description: "Part 3 of 4 in the \"Unlocking Your Browser\" series"
+description: 'Part 3 of 4 in the "Unlocking Your Browser" series'
 pubDate: 2026-03-12
-tags: ["browser","devtools"]
+tags: ['browser', 'devtools']
 readingTime: 4
 ---
 
@@ -54,8 +54,8 @@ Open a new browser tab, open DevTools to the Network tab, and paste this into th
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(res => res.json())
-  .then(data => console.log(data))
+  .then((res) => res.json())
+  .then((data) => console.log(data));
 ```
 
 Switch back to the Network tab. You'll see a new request appear - `1` - with a status of `200`. Click it. You can inspect the request headers, the response headers, and the actual response data.
@@ -67,8 +67,7 @@ That's a healthy request. Now let's break some stuff.
 ### 1. bad url (failed request)
 
 ```js
-fetch('https://this-url-does-not-exist-at-all.xyz/api')
-  .catch(err => console.error(err))
+fetch('https://this-url-does-not-exist-at-all.xyz/api').catch((err) => console.error(err));
 ```
 
 No status code. No response. Just a red `failed` entry in the Network tab. This happens when the DNS lookup fails because the server doesn't exist. Classic typo in a base URL.
@@ -76,8 +75,7 @@ No status code. No response. Just a red `failed` entry in the Network tab. This 
 ### 2. wrong endpoint, 404
 
 ```js
-fetch('https://api.thecatapi.com/v1/imaaaages/search')
-  .then(res => console.log(res.status))
+fetch('https://api.thecatapi.com/v1/imaaaages/search').then((res) => console.log(res.status));
 ```
 
 Spot the typo? `imaaaages` instead of `images`. The server exists, but the route doesn't. You'll see a clean `404` in the Network tab. This is one of the most common bugs I've seen new devs spend 20 minutes on and it's a one-character fix.
@@ -85,8 +83,7 @@ Spot the typo? `imaaaages` instead of `images`. The server exists, but the route
 ### 3. cors issues
 
 ```js
-fetch('https://www.google.com')
-  .catch(err => console.error(err))
+fetch('https://www.google.com').catch((err) => console.error(err));
 ```
 
 This one will fail with a CORS error. You'll see it in both the Console and the Network tab. CORS (**Cross-Origin Resource Sharing**) is the browser's way of preventing one website from making requests to another without permission. The Network tab will show the request as blocked, and the Console will tell you exactly which header is missing.
@@ -97,9 +94,8 @@ CORS errors are confusing when you first encounter them, but they always follow 
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'DELETE'
-})
-  .then(res => console.log(res.status))
+  method: 'DELETE',
+}).then((res) => console.log(res.status));
 ```
 
 The endpoint exists, but it doesn't accept DELETE requests (or whatever method you used). The server responds with a `405 Method Not Allowed`. If you're getting a 405, double-check your HTTP verb; it's almost always a `POST` where there should be a `PUT`, or a `GET` where there should be a `PATCH`.
@@ -144,6 +140,6 @@ But before you get there: next time an API call isn't working, open the Network 
 
 Happy debugging. 💖
 
-*Questions, lightbulb moments, war stories about CORS? Let me know!*
+_Questions, lightbulb moments, war stories about CORS? Let me know!_
 
 ← [Part 2: Your New Best Friend: The Console](/blog/your-new-best-friend-the-console) | [Part 4: Level Up](/blog/level-up-sources-performance-and-your-playground) →

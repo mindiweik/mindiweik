@@ -1,5 +1,5 @@
 ---
-title: "release notes"
+title: 'release notes'
 version: v1.0.0
 season: 1
 pubDate: 2026-01-22
@@ -24,7 +24,7 @@ This version exists because of those messages and care. I want to keep learning 
 
 ### fix: infrastructure + ownership under the hood
 
-One of the biggest changes is actually behind the scenes. Though you may notice it if you look at the site! The site and podcast have moved to fully-managed hosting. This gives me more control, flexibility, and sustainability long-term. Home base is still the same: **[wip-podcast.com](/podcast)**. 
+One of the biggest changes is actually behind the scenes. Though you may notice it if you look at the site! The site and podcast have moved to fully-managed hosting. This gives me more control, flexibility, and sustainability long-term. Home base is still the same: **[wip-podcast.com](/podcast)**.
 
 I also added a new light! 💡Which is technically a hardware upgrade, but I wanted to listen to audience feedback!
 

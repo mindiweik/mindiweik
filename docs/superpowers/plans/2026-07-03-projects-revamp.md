@@ -26,10 +26,12 @@
 ### Task 1: GitHub activity fetcher (`src/lib/github.ts`)
 
 **Files:**
+
 - Create: `src/lib/github.ts`
 - Test: `src/lib/github.test.ts`
 
 **Interfaces:**
+
 - Produces: `parseGithubRepo(repoUrl: string): { owner: string; name: string } | null`
 - Produces: `fetchRepoActivity(repoUrl: string): Promise<{ pushedAt: Date } | null>` (module-level cache per URL; safe to call from many pages in one build)
 - Consumes: nothing from other tasks.
@@ -44,11 +46,20 @@ import { parseGithubRepo, fetchRepoActivity, _clearActivityCache } from './githu
 
 describe('parseGithubRepo', () => {
   it('parses a github https URL', () => {
-    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash')).toEqual({ owner: 'mindiweik', name: 'drip-dash' });
+    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash')).toEqual({
+      owner: 'mindiweik',
+      name: 'drip-dash',
+    });
   });
   it('tolerates trailing slash and .git suffix', () => {
-    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash/')).toEqual({ owner: 'mindiweik', name: 'drip-dash' });
-    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash.git')).toEqual({ owner: 'mindiweik', name: 'drip-dash' });
+    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash/')).toEqual({
+      owner: 'mindiweik',
+      name: 'drip-dash',
+    });
+    expect(parseGithubRepo('https://github.com/mindiweik/drip-dash.git')).toEqual({
+      owner: 'mindiweik',
+      name: 'drip-dash',
+    });
   });
   it('returns null for non-github hosts (gitlab stays private)', () => {
     expect(parseGithubRepo('https://gitlab.com/auditioncat/app')).toBeNull();
@@ -60,14 +71,25 @@ describe('parseGithubRepo', () => {
 });
 
 describe('fetchRepoActivity', () => {
-  beforeEach(() => { _clearActivityCache(); vi.stubGlobal('fetch', vi.fn()); });
-  afterEach(() => { vi.unstubAllGlobals(); });
+  beforeEach(() => {
+    _clearActivityCache();
+    vi.stubGlobal('fetch', vi.fn());
+  });
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
 
   it('returns pushedAt from the GitHub API', async () => {
-    (fetch as any).mockResolvedValue({ ok: true, json: async () => ({ pushed_at: '2026-01-05T12:00:00Z' }) });
+    (fetch as any).mockResolvedValue({
+      ok: true,
+      json: async () => ({ pushed_at: '2026-01-05T12:00:00Z' }),
+    });
     const out = await fetchRepoActivity('https://github.com/mindiweik/drip-dash');
     expect(out?.pushedAt.toISOString()).toBe('2026-01-05T12:00:00.000Z');
-    expect(fetch).toHaveBeenCalledWith('https://api.github.com/repos/mindiweik/drip-dash', expect.anything());
+    expect(fetch).toHaveBeenCalledWith(
+      'https://api.github.com/repos/mindiweik/drip-dash',
+      expect.anything(),
+    );
   });
   it('returns null for non-github URLs without fetching', async () => {
     expect(await fetchRepoActivity('https://gitlab.com/auditioncat/app')).toBeNull();
@@ -82,7 +104,10 @@ describe('fetchRepoActivity', () => {
     expect(await fetchRepoActivity('https://github.com/mindiweik/drip-dash')).toBeNull();
   });
   it('caches per URL (one fetch for two calls)', async () => {
-    (fetch as any).mockResolvedValue({ ok: true, json: async () => ({ pushed_at: '2026-01-05T12:00:00Z' }) });
+    (fetch as any).mockResolvedValue({
+      ok: true,
+      json: async () => ({ pushed_at: '2026-01-05T12:00:00Z' }),
+    });
     await fetchRepoActivity('https://github.com/mindiweik/drip-dash');
     await fetchRepoActivity('https://github.com/mindiweik/drip-dash');
     expect(fetch).toHaveBeenCalledTimes(1);
@@ -103,13 +128,19 @@ Create `src/lib/github.ts`:
 // Build-time GitHub activity lookup for project pages + changelog.
 // A failed lookup degrades to null; it must never fail the build.
 
-export interface RepoActivity { pushedAt: Date; }
+export interface RepoActivity {
+  pushedAt: Date;
+}
 
 export function parseGithubRepo(repoUrl: string): { owner: string; name: string } | null {
   try {
     const u = new URL(repoUrl);
     if (u.hostname !== 'github.com') return null;
-    const [owner, name] = u.pathname.replace(/\/+$/, '').replace(/\.git$/, '').split('/').filter(Boolean);
+    const [owner, name] = u.pathname
+      .replace(/\/+$/, '')
+      .replace(/\.git$/, '')
+      .split('/')
+      .filter(Boolean);
     if (!owner || !name) return null;
     return { owner, name };
   } catch {
@@ -119,7 +150,9 @@ export function parseGithubRepo(repoUrl: string): { owner: string; name: string 
 
 const cache = new Map<string, Promise<RepoActivity | null>>();
 
-export function _clearActivityCache() { cache.clear(); }
+export function _clearActivityCache() {
+  cache.clear();
+}
 
 export function fetchRepoActivity(repoUrl: string): Promise<RepoActivity | null> {
   const repo = parseGithubRepo(repoUrl);
@@ -147,7 +180,9 @@ async function lookup(key: string): Promise<RepoActivity | null> {
     if (!body?.pushed_at) return null;
     return { pushedAt: new Date(body.pushed_at) };
   } catch (err) {
-    console.warn(`[github] ${key}: ${err instanceof Error ? err.message : err}; skipping last-active data`);
+    console.warn(
+      `[github] ${key}: ${err instanceof Error ? err.message : err}; skipping last-active data`,
+    );
     return null;
   }
 }
@@ -172,10 +207,12 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 2: Real changelog dates (`src/lib/collections.ts`)
 
 **Files:**
+
 - Modify: `src/lib/collections.ts` (the `raw.projects.map` line inside `toChangelogEntries`, and `getChangelog`)
 - Test: `src/lib/collections.test.ts` (extend)
 
 **Interfaces:**
+
 - Consumes: `fetchRepoActivity` from Task 1.
 - Produces: `toChangelogEntries` now accepts `projects: { id: string; data: any; pushedAt?: Date }[]` (new optional `pushedAt` alongside `data`). Project entries become `type: 'update'`, `url: /projects/{id}`, `date: data.lastUpdated ?? pushedAt ?? new Date(data.since, 0, 1)`.
 
@@ -190,20 +227,38 @@ describe('toChangelogEntries project dates', () => {
   const base = { blog: [], podcast: [], speaking: [] };
 
   it('labels projects as update and links to the detail page', () => {
-    const out = toChangelogEntries({ ...base, projects: [{ id: 'drip-dash', data: { name: 'Drip Dash', since: 2025 } }] });
+    const out = toChangelogEntries({
+      ...base,
+      projects: [{ id: 'drip-dash', data: { name: 'Drip Dash', since: 2025 } }],
+    });
     expect(out[0].type).toBe('update');
     expect(out[0].url).toBe('/projects/drip-dash');
   });
 
   it('prefers manual lastUpdated over pushedAt', () => {
-    const out = toChangelogEntries({ ...base, projects: [{ id: 'ac', data: { name: 'AC', since: 2023, lastUpdated: new Date('2026-05-01') }, pushedAt: new Date('2026-06-01') }] });
+    const out = toChangelogEntries({
+      ...base,
+      projects: [
+        {
+          id: 'ac',
+          data: { name: 'AC', since: 2023, lastUpdated: new Date('2026-05-01') },
+          pushedAt: new Date('2026-06-01'),
+        },
+      ],
+    });
     expect(out[0].date.toISOString()).toBe(new Date('2026-05-01').toISOString());
   });
 
   it('falls back to pushedAt, then Jan 1 of since', () => {
-    const withPush = toChangelogEntries({ ...base, projects: [{ id: 'a', data: { name: 'A', since: 2023 }, pushedAt: new Date('2026-06-01') }] });
+    const withPush = toChangelogEntries({
+      ...base,
+      projects: [{ id: 'a', data: { name: 'A', since: 2023 }, pushedAt: new Date('2026-06-01') }],
+    });
     expect(withPush[0].date.toISOString()).toBe(new Date('2026-06-01').toISOString());
-    const bare = toChangelogEntries({ ...base, projects: [{ id: 'b', data: { name: 'B', since: 2023 } }] });
+    const bare = toChangelogEntries({
+      ...base,
+      projects: [{ id: 'b', data: { name: 'B', since: 2023 } }],
+    });
     expect(bare[0].date.getTime()).toBe(new Date(2023, 0, 1).getTime());
   });
 });
@@ -246,10 +301,12 @@ export async function getChangelog(limit?: number): Promise<ChangelogEntry[]> {
     getCollection('speaking', isVisible),
     getCollection('projects'),
   ]);
-  const enriched = await Promise.all(projects.map(async (p) => ({
-    ...p,
-    pushedAt: p.data.repoUrl ? (await fetchRepoActivity(p.data.repoUrl))?.pushedAt : undefined,
-  })));
+  const enriched = await Promise.all(
+    projects.map(async (p) => ({
+      ...p,
+      pushedAt: p.data.repoUrl ? (await fetchRepoActivity(p.data.repoUrl))?.pushedAt : undefined,
+    })),
+  );
   const all = toChangelogEntries({ blog, podcast, speaking, projects: enriched });
   return limit ? all.slice(0, limit) : all;
 }
@@ -274,11 +331,13 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 3: Schema + existing frontmatter (`content.config.ts`)
 
 **Files:**
+
 - Modify: `src/content.config.ts` (projects collection only)
 - Modify: `src/content/projects/audition-cat.md` (frontmatter only)
 - Modify: `src/content/projects/drip-dash.md` (frontmatter only)
 
 **Interfaces:**
+
 - Produces: projects schema fields `since: number` (required), `lastUpdated?: Date`, `image?` (Astro image), `imageAlt?: string` with a refine rule "imageAlt required when image set". Tasks 4 and 6 rely on these exact names.
 - Consumes: nothing.
 
@@ -305,7 +364,9 @@ const projects = defineCollection({
         image: image().optional(),
         imageAlt: z.string().optional(),
       })
-      .refine((d) => !d.image || !!d.imageAlt, { message: 'imageAlt is required when image is set' }),
+      .refine((d) => !d.image || !!d.imageAlt, {
+        message: 'imageAlt is required when image is set',
+      }),
 });
 ```
 
@@ -358,10 +419,12 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 4: Detail pages (`ProjectLayout` + `[...slug].astro`)
 
 **Files:**
+
 - Create: `src/layouts/ProjectLayout.astro`
 - Create: `src/pages/projects/[...slug].astro`
 
 **Interfaces:**
+
 - Consumes: `fetchRepoActivity` (Task 1); schema fields (Task 3).
 - Produces: route `/projects/{id}` for every projects entry. Task 5 links to it.
 
@@ -390,9 +453,11 @@ interface Props {
   image?: ImageMetadata;
   imageAlt?: string;
 }
-const { name, slug, status, stack, since, featured, pushedAt, url, repoUrl, image, imageAlt } = Astro.props;
+const { name, slug, status, stack, since, featured, pushedAt, url, repoUrl, image, imageAlt } =
+  Astro.props;
 
-const fmtMonth = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toLowerCase();
+const fmtMonth = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }).toLowerCase();
 // AC (no fetchable repo) reads "since 2023 · ongoing"; repos read "since 2025 · last commit jan 2026".
 const metaParts = [`since ${since}`];
 if (pushedAt) metaParts.push(`last commit ${fmtMonth(pushedAt)}`);
@@ -404,27 +469,55 @@ const links = [
   ...(repoUrl ? [{ label: 'github', href: repoUrl }] : []),
 ];
 ---
+
 <BaseLayout title={name} active="/projects">
   <Breadcrumb path={`~/projects/${slug}.md`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label={status} zone="projects" />
-    {stack.map((s) => (
-      <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">{s}</span>
-    ))}
+    {
+      stack.map((s) => (
+        <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)">
+          {s}
+        </span>
+      ))
+    }
   </div>
-  <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0">{name}{featured ? ' ★' : ''}</h1>
-  <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem">{meta}</div>
-  {image && (
-    <Image src={image} alt={imageAlt ?? ''} style="margin-top:1.2rem;width:100%;height:auto;border-radius:10px;border:1px solid var(--border)" />
-  )}
+  <h1
+    style="font-family:var(--font-display);font-weight:700;font-size:1.8rem;line-height:1.1;letter-spacing:-0.02em;margin:0.8rem 0 0"
+  >
+    {name}{featured ? ' ★' : ''}
+  </h1>
+  <div
+    style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.6rem"
+  >
+    {meta}
+  </div>
+  {
+    image && (
+      <Image
+        src={image}
+        alt={imageAlt ?? ''}
+        style="margin-top:1.2rem;width:100%;height:auto;border-radius:10px;border:1px solid var(--border)"
+      />
+    )
+  }
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
-  {links.length > 0 && (
-    <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.5rem">
-      {links.map((l) => (
-        <a href={l.href} target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px">{l.label} →</a>
-      ))}
-    </div>
-  )}
+  {
+    links.length > 0 && (
+      <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.5rem">
+        {links.map((l) => (
+          <a
+            href={l.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-family:var(--font-mono);font-size:0.7rem;padding:0.35rem 0.6rem;border:1px solid var(--border);border-radius:6px"
+          >
+            {l.label} →
+          </a>
+        ))}
+      </div>
+    )
+  }
 </BaseLayout>
 ```
 
@@ -444,6 +537,7 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 const activity = project.data.repoUrl ? await fetchRepoActivity(project.data.repoUrl) : null;
 ---
+
 <ProjectLayout
   name={project.data.name}
   slug={project.id}
@@ -480,9 +574,11 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 5: Index cards navigate internally
 
 **Files:**
+
 - Modify: `src/pages/projects/index.astro`
 
 **Interfaces:**
+
 - Consumes: route `/projects/{id}` (Task 4).
 - Produces: nothing new.
 
@@ -491,13 +587,13 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 In `src/pages/projects/index.astro`, replace
 
 ```astro
-      href={p.data.url ?? p.data.repoUrl ?? '#'}
+href={p.data.url ?? p.data.repoUrl ?? '#'}
 ```
 
 with
 
 ```astro
-      href={`/projects/${p.id}`}
+href={`/projects/${p.id}`}
 ```
 
 - [ ] **Step 2: Verify**
@@ -519,6 +615,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 6: Content for all five projects
 
 **Files:**
+
 - Modify: `src/content/projects/audition-cat.md` (add body)
 - Modify: `src/content/projects/drip-dash.md` (add body)
 - Create: `src/content/projects/mindiweik-site.md`
@@ -526,6 +623,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 - Create: `src/content/projects/prettykitties.md`
 
 **Interfaces:**
+
 - Consumes: schema (Task 3).
 - Produces: the five entries Mindi reviews. ALL COPY BELOW IS DRAFT, flagged for Mindi's voice pass before merge.
 
@@ -676,9 +774,11 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 7: Authenticated GitHub API in deploys
 
 **Files:**
+
 - Modify: `.github/workflows/deploy.yml` (both `npm run build` steps)
 
 **Interfaces:**
+
 - Consumes: `GITHUB_TOKEN` env read in Task 1's `github.ts`.
 - Produces: authenticated (higher rate limit) API calls in CI.
 
@@ -687,17 +787,17 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 Change:
 
 ```yaml
-      - run: npm ci
-      - run: npm run build
+- run: npm ci
+- run: npm run build
 ```
 
 to:
 
 ```yaml
-      - run: npm ci
-      - run: npm run build
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+- run: npm ci
+- run: npm run build
+  env:
+    GITHUB_TOKEN: ${{ github.token }}
 ```
 
 - [ ] **Step 2: Pass the token to the dev preview build step**
@@ -705,22 +805,22 @@ to:
 Change:
 
 ```yaml
-      - name: Build dev preview (drafts + scheduled visible)
-        run: npm run build
-        env:
-          PUBLIC_SHOW_DRAFTS: 'true'
-          DEPLOY_SITE: 'https://dev.mindiweik.com'
+- name: Build dev preview (drafts + scheduled visible)
+  run: npm run build
+  env:
+    PUBLIC_SHOW_DRAFTS: 'true'
+    DEPLOY_SITE: 'https://dev.mindiweik.com'
 ```
 
 to:
 
 ```yaml
-      - name: Build dev preview (drafts + scheduled visible)
-        run: npm run build
-        env:
-          PUBLIC_SHOW_DRAFTS: 'true'
-          DEPLOY_SITE: 'https://dev.mindiweik.com'
-          GITHUB_TOKEN: ${{ github.token }}
+- name: Build dev preview (drafts + scheduled visible)
+  run: npm run build
+  env:
+    PUBLIC_SHOW_DRAFTS: 'true'
+    DEPLOY_SITE: 'https://dev.mindiweik.com'
+    GITHUB_TOKEN: ${{ github.token }}
 ```
 
 - [ ] **Step 3: Sanity-check the workflow file**
@@ -742,9 +842,11 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 ### Task 8: Bookkeeping + final verification
 
 **Files:**
+
 - Modify: `docs/followups.md`
 
 **Interfaces:**
+
 - Consumes: everything prior.
 - Produces: a branch ready for Mindi's content review + merge.
 

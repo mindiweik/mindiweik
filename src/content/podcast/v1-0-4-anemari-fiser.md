@@ -1,25 +1,25 @@
 ---
-title: "anemari fiser"
-guest: "Anemari Fiser"
+title: 'anemari fiser'
+guest: 'Anemari Fiser'
 version: v1.0.4
 season: 1
 pubDate: 2026-06-04
 youtubeUrl: https://www.youtube.com/watch?v=r28Zmbryyys
 chapters:
-  - { timestamp: "00:00", title: "Introduction to Tech Leadership and Coaching" }
-  - { timestamp: "03:03", title: "Navigating the Journey from Engineer to Tech Lead" }
-  - { timestamp: "05:50", title: "The Impact of Age and Experience in Tech" }
-  - { timestamp: "09:13", title: "Transitioning to Freelancing and Coaching" }
-  - { timestamp: "11:59", title: "Understanding the Role of a Tech Lead" }
-  - { timestamp: "14:54", title: "Burnout in the Tech Industry" }
-  - { timestamp: "18:02", title: "The Writing Process of a Tech Leadership Book" }
-  - { timestamp: "21:12", title: "The Importance of Accountability in Growth" }
-  - { timestamp: "23:52", title: "Current Trends in Tech Leadership and AI" }
-  - { timestamp: "26:52", title: "Final Thoughts on Intentional Growth" }
+  - { timestamp: '00:00', title: 'Introduction to Tech Leadership and Coaching' }
+  - { timestamp: '03:03', title: 'Navigating the Journey from Engineer to Tech Lead' }
+  - { timestamp: '05:50', title: 'The Impact of Age and Experience in Tech' }
+  - { timestamp: '09:13', title: 'Transitioning to Freelancing and Coaching' }
+  - { timestamp: '11:59', title: 'Understanding the Role of a Tech Lead' }
+  - { timestamp: '14:54', title: 'Burnout in the Tech Industry' }
+  - { timestamp: '18:02', title: 'The Writing Process of a Tech Leadership Book' }
+  - { timestamp: '21:12', title: 'The Importance of Accountability in Growth' }
+  - { timestamp: '23:52', title: 'Current Trends in Tech Leadership and AI' }
+  - { timestamp: '26:52', title: 'Final Thoughts on Intentional Growth' }
 links:
-  - { label: "Website", url: "https://anemarifiser.com" }
-  - { label: "Substack", url: "https://level-up-as-a-tech-lead.anemarifiser.com" }
-  - { label: "Anemari on LinkedIn", url: "https://www.linkedin.com/in/anemari-fiser" }
+  - { label: 'Website', url: 'https://anemarifiser.com' }
+  - { label: 'Substack', url: 'https://level-up-as-a-tech-lead.anemarifiser.com' }
+  - { label: 'Anemari on LinkedIn', url: 'https://www.linkedin.com/in/anemari-fiser' }
 ---
 
 Tech lead, coach, author, and the person 500+ engineers called when they needed someone who actually got it.
@@ -34,7 +34,7 @@ The title "tech lead" is used frequently and it means something different at eve
 
 Anemari has seen this story hundreds of times. She knows what actually helps. In this episode, she gets honest about hiding her age early in her career, what burnout really looks like when you love your work, and why motivation is the wrong thing to rely on - whether for writing a book or for growing as a leader.
 
-*In this episode, we'll talk about her path from software engineer to tech lead to full-time coach, navigating age and experience in tech, the one burnout strategy that actually works (redistribution), what a tech lead actually is and why every company answers differently, writing a technical book with O'Reilly and what consistency really requires, accountability as the real engine of progress, how AI is reshaping the tech lead role, and why intentional growth beats motivation every time.*
+_In this episode, we'll talk about her path from software engineer to tech lead to full-time coach, navigating age and experience in tech, the one burnout strategy that actually works (redistribution), what a tech lead actually is and why every company answers differently, writing a technical book with O'Reilly and what consistency really requires, accountability as the real engine of progress, how AI is reshaping the tech lead role, and why intentional growth beats motivation every time._
 
 ## your call to action
 

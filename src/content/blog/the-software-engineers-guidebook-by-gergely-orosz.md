@@ -2,7 +2,7 @@
 title: "the software engineer's guidebook review"
 description: "Gergely Orosz wrote the book on growing as a software engineer - literally. Here are the insights that actually stick from The Software Engineer's Guidebook."
 pubDate: 2024-10-08
-tags: ["books","career"]
+tags: ['books', 'career']
 readingTime: 15
 ---
 
@@ -10,11 +10,11 @@ Similar to an [earlier post on Clean Code](/blog/clean-code-by-robert-c-martin),
 
 With my education budget, I purchased a copy of SWEG! I’ve considered whether to steer my career into leadership or a more technical track. This book is well worth it, covering multiple aspects of both options. I’ll undoubtedly reference this for many years!
 
-Below, we’ll review the book's first two sections. They cover career fundamentals and building competence, which I chose to focus on because they are the most actionable sections. I also decided to present this part to my team. 
+Below, we’ll review the book's first two sections. They cover career fundamentals and building competence, which I chose to focus on because they are the most actionable sections. I also decided to present this part to my team.
 
-***Although I cover a lot from the book, I’ve added my own interpretations and content simplifications. What you see here is only brushing the surface.***
+_**Although I cover a lot from the book, I’ve added my own interpretations and content simplifications. What you see here is only brushing the surface.**_
 
-***If any of this interests you, please [purchase a copy](https://www.amazon.com/Software-Engineers-Guidebook-Navigating-positions/dp/908338182X) for yourself! 👌***
+_**If any of this interests you, please [purchase a copy](https://www.amazon.com/Software-Engineers-Guidebook-Navigating-positions/dp/908338182X) for yourself! 👌**_
 
 **In this overview, we’ll cover:**
 
@@ -37,13 +37,13 @@ I [recorded a Loom presentation](https://www.loom.com/share/5ac9c21df8524559b6f8
 
 ### 🫵 no one will advocate for your career better than you. take ownership!
 
-When stated, it seems obvious. You are in control of your own career. In my [Power of Career Change](/blog/the-power-of-career-change) post, I talked about “ambiguous ambition,” where I didn’t have direction in my career path. ***I am happier actively making goals, completing activities toward those goals, and fulfilling a career trajectory.***
+When stated, it seems obvious. You are in control of your own career. In my [Power of Career Change](/blog/the-power-of-career-change) post, I talked about “ambiguous ambition,” where I didn’t have direction in my career path. _**I am happier actively making goals, completing activities toward those goals, and fulfilling a career trajectory.**_
 
-I bring related topics to my one-on-one meetings. *Here’s [a terrific read](https://read.highgrowthengineer.com/p/you-and-your-manager-3-ways-to-work?utm_source=publication-search) in a collaboration post from [High Growth Engineer](https://open.substack.com/pub/highgrowthengineer) on working with your manager(s).*
+I bring related topics to my one-on-one meetings. _Here’s [a terrific read](https://read.highgrowthengineer.com/p/you-and-your-manager-3-ways-to-work?utm_source=publication-search) in a collaboration post from [High Growth Engineer](https://open.substack.com/pub/highgrowthengineer) on working with your manager(s)._
 
 ### 📝 write it down. yes, everything!
 
-Documenting accomplishments, challenges, and projects cannot be understated. ***Don’t forget to add peer feedback!*** You will better understand what you’re doing now and what’s next. This is also a solid tool when discussing your role. This could be a promotion conversation aid, a resume update reference, or proof if you are in a sticky situation.
+Documenting accomplishments, challenges, and projects cannot be understated. _**Don’t forget to add peer feedback!**_ You will better understand what you’re doing now and what’s next. This is also a solid tool when discussing your role. This could be a promotion conversation aid, a resume update reference, or proof if you are in a sticky situation.
 
 Be consistent and store it on a personal device or account to retain access. I have a weekly reminder, tried a few templates, and currently use a [Trello board](https://trello.com/templates/productivity/self-advocacy-record-A7mAFfdr) adaptation. (Other options: [Brag Document](https://jvns.ca/blog/brag-documents/), Notion, spreadsheet(s), etc.)
 
@@ -51,7 +51,7 @@ Be consistent and store it on a personal device or account to retain access. I h
 
 Through Meetup, I meet women from all over who reside in my state and work in tech. Their stories and tech roles are different, even if they have the same title! The best we can do is learn from other’s experiences and apply their lessons to our challenges.
 
-***Whatever advice, suggestions, and feedback you receive, you are responsible for discovering how and whether to apply it.*** Gergely did an excellent job clarifying that in this book. The information is a reference, not explicit instructions.
+_**Whatever advice, suggestions, and feedback you receive, you are responsible for discovering how and whether to apply it.**_ Gergely did an excellent job clarifying that in this book. The information is a reference, not explicit instructions.
 
 ## 🔨 career fundamentals
 
@@ -59,7 +59,7 @@ The book starts with core aspects of career growth and ideas for reflection. We�
 
 > "Career paths are diverse, and there’s no simple way to define what a “good” career path looks like, as this varies from person to person. The best you can do is figure out which career path is interesting and achievable for you."
 
-*→ I won’t touch on compensation, company tiers, performance reviews, promotions, and switching jobs here, but the book covers these in detail.*
+_→ I won’t touch on compensation, company tiers, performance reviews, promotions, and switching jobs here, but the book covers these in detail._
 
 ### 🏢 types of tech companies
 
@@ -80,29 +80,29 @@ Once you find a role, how do you determine a path? Each is unique and could chan
 
 **☝️ The Single-Track Career Path -** In some cases, engineers move from an IC (Individual Contributor) role to management. They may remain long-term or later return to engineering if unsatisfied, possibly moving companies in the process.
 
-| Level | IC | Manager |
-|---|---|---|
-| Level 1 | SWE | |
-| Level 2 | Senior Engineer | |
-| Level 3 | Staff/Principal Eng | Manager |
-| Level 4 | | Director |
-| Level 5 | | VP of Engineering |
-| Level 6 | | CTO |
+| Level   | IC                  | Manager           |
+| ------- | ------------------- | ----------------- |
+| Level 1 | SWE                 |                   |
+| Level 2 | Senior Engineer     |                   |
+| Level 3 | Staff/Principal Eng | Manager           |
+| Level 4 |                     | Director          |
+| Level 5 |                     | VP of Engineering |
+| Level 6 |                     | CTO               |
 
 **✌️ The Dual-Track Career Path -** This is the flexible path; it’s probably more applicable to most because of that flexibility!
 
 Some engineers stick with IC, some follow the single-track path, and some switch between them.
 
-| Level | IC | Manager |
-|---|---|---|
-| Level 1 | SWE | |
-| Level 2 | Senior Engineer | |
-| Level 3 | Staff Engineer | Manager |
-| Level 4 | Senior Staff Eng | Director |
-| Level 5 | Principal Eng | Senior Director |
+| Level   | IC                | Manager           |
+| ------- | ----------------- | ----------------- |
+| Level 1 | SWE               |                   |
+| Level 2 | Senior Engineer   |                   |
+| Level 3 | Staff Engineer    | Manager           |
+| Level 4 | Senior Staff Eng  | Director          |
+| Level 5 | Principal Eng     | Senior Director   |
 | Level 6 | Distinguished Eng | VP of Engineering |
-| Level 7 | Fellow | Senior VP of Eng |
-| Level 8 | | CTO |
+| Level 7 | Fellow            | Senior VP of Eng  |
+| Level 8 |                   | CTO               |
 
 ### ⚖️ cost centers and profit centers
 
@@ -175,13 +175,13 @@ It’s helpful to consider your approach for positive and critical feedback.
 
 #### **🤝 ally with your manager**
 
-Your manager will impact your career. It’s a significant workplace relationship! One who believes in, advocates for, and supports your career goals can make a huge difference. How can you foster this relationship? *It takes time.*
+Your manager will impact your career. It’s a significant workplace relationship! One who believes in, advocates for, and supports your career goals can make a huge difference. How can you foster this relationship? _It takes time._
 
-***Proactively*** ***share*** your log and accomplishments, ask for specific feedback, and discuss professional goals in regular one-on-ones. They have a lot on their plates!
+_**Proactively**_ _**share**_ your log and accomplishments, ask for specific feedback, and discuss professional goals in regular one-on-ones. They have a lot on their plates!
 
-***Show reliability!*** Build trust by delivering what you agree on and providing updates when you don’t. You should be open, honest, and transparent to your comfort level. Hopefully, it will be mutual. Don’t forget to ask for help when needed!
+_**Show reliability!**_ Build trust by delivering what you agree on and providing updates when you don’t. You should be open, honest, and transparent to your comfort level. Hopefully, it will be mutual. Don’t forget to ask for help when needed!
 
-***This relationship isn’t only about you.*** Take time to understand their goals and challenges. You might help each other, or you may learn more about team nuances to identify opportunities in the future. Try to handle a task weighing on the team, especially if it helps you grow. *Your manager is human; empathy can go a long way!*
+_**This relationship isn’t only about you.**_ Take time to understand their goals and challenges. You might help each other, or you may learn more about team nuances to identify opportunities in the future. Try to handle a task weighing on the team, especially if it helps you grow. _Your manager is human; empathy can go a long way!_
 
 #### 🐢 **pace yourself**
 
@@ -191,7 +191,7 @@ The “Stretching, Executing, Coast” method can help prevent burnout. These ar
   - Extended periods lead to burnout or a loss of motivation. Surround yourself with trusted people to help identify if you’re pushing too hard for too long.
 - **Executing** is your “normal” way of working and getting things done well. When you have the capacity to go beyond, do so, but in ways that don’t overstretch you.
   - This is especially useful after a stretching period to avoid burnout.
-- **Coast** when needed, but it should only be a few days. You may work at lower quality, not be proactive, and need task nudges in this state. 
+- **Coast** when needed, but it should only be a few days. You may work at lower quality, not be proactive, and need task nudges in this state.
   - It could be a breather after a tough project, catching up, or a mental break due to personal circumstances or symptoms of low motivation. If this extends, consider what must change ahead of a difficult conversation!
 
 #### **🤔 owning your own career advice**
@@ -216,7 +216,7 @@ First, we’ll compare product and platform teams. Rotating between these builds
   - Engineers are focused on a technical mission often used by multiple teams.
   - They are often experienced engineers who seek complexity with wider impact.
   - Business impact can be harder to define. Frequently seen as a cost center, these teams are distant from external customers.
-  - **To thrive:** build empathy for internal customers, talk to (and work with) engineers using your platform, and aim for *some* urgency.
+  - **To thrive:** build empathy for internal customers, talk to (and work with) engineers using your platform, and aim for _some_ urgency.
 
 Next, we’ll cover company modes: peacetime and wartime.
 
@@ -242,9 +242,9 @@ Competent engineers are good at breaking down work, providing realistic estimate
 
 How do they do this?
 
-***Focus on the single MOST important thing first, no exceptions.*** Learn to say “no.” Necessary things arise, but this adds up. It’s a balancing act. I like the offered tactic of, “Yes, I’d like to help, but…” to provide context for your “no.”
+_**Focus on the single MOST important thing first, no exceptions.**_ Learn to say “no.” Necessary things arise, but this adds up. It’s a balancing act. I like the offered tactic of, “Yes, I’d like to help, but…” to provide context for your “no.”
 
-***Unblocking yourself*** is a skill! Start to identify when you’re stuck, like spending more than 30-60 minutes without meaningful progress.
+_**Unblocking yourself**_ is a skill! Start to identify when you’re stuck, like spending more than 30-60 minutes without meaningful progress.
 
 Leverage ideas to get unstuck:
 
@@ -261,23 +261,23 @@ After a solid solo try, seek help! Asking for help is great, but come prepared t
 
 What if a person blocks you? This is more common at larger companies, and getting contact help is sensible. You may need to escalate delays, but handle this delicately to retain relationships!
 
-***Effectively breaking down work*** takes thought. Begin at a high level and identify “chunks” of work. Then, narrow “chunks” into straightforward tasks. If they’re unclear, break them down again. Don’t be afraid to add, remove, or change tasks.
+_**Effectively breaking down work**_ takes thought. Begin at a high level and identify “chunks” of work. Then, narrow “chunks” into straightforward tasks. If they’re unclear, break them down again. Don’t be afraid to add, remove, or change tasks.
 
-***Estimations are challenging.*** You will be asked. Use your (and peers’) experiences with the codebase, language, or similar work to provide estimates. When that’s not possible, prototype and timebox. You can also provide ideal and “worst case” options when there are unknowns, leaning toward the “worst case.”
+_**Estimations are challenging.**_ You will be asked. Use your (and peers’) experiences with the codebase, language, or similar work to provide estimates. When that’s not possible, prototype and timebox. You can also provide ideal and “worst case” options when there are unknowns, leaning toward the “worst case.”
 
-***Find mentors to help you grow.*** This is a *group* of people, not one person. You may look to more experienced engineers through a formal work program or informal, ad hoc one-on-one requests for help. Don’t forget about online mentors who share their experiences more publicly in blogs, podcasts, or books. 
+_**Find mentors to help you grow.**_ This is a _group_ of people, not one person. You may look to more experienced engineers through a formal work program or informal, ad hoc one-on-one requests for help. Don’t forget about online mentors who share their experiences more publicly in blogs, podcasts, or books.
 
-***Retain a positive “goodwill balance”*** and help others, too. You’ll need help, and this balance level spans a spectrum. You will have a higher balance when you first start (as a junior or during onboarding). People want to help! But, as you take, be sure to give back with your expertise. Give thanks either privately or in a public team setting.
+_**Retain a positive “goodwill balance”**_ and help others, too. You’ll need help, and this balance level spans a spectrum. You will have a higher balance when you first start (as a junior or during onboarding). People want to help! But, as you take, be sure to give back with your expertise. Give thanks either privately or in a public team setting.
 
-***Take initiative*** when you can. Some of the most productive engineers take on work that wasn’t assigned! Talk with others to learn about projects and opportunities to volunteer. Try to document unclear things, take on investigations, research tools or frameworks your team uses, and talk with your manager about upcoming projects.
+_**Take initiative**_ when you can. Some of the most productive engineers take on work that wasn’t assigned! Talk with others to learn about projects and opportunities to volunteer. Try to document unclear things, take on investigations, research tools or frameworks your team uses, and talk with your manager about upcoming projects.
 
 ### ⌨️ coding
 
 Practice. Practice more. You need to be proficient to translate your ideas into working code efficiently. Here are some ways to practice:
 
-- ***Code regularly and ask for code reviews.*** These are invaluable!
-- ***Read as much as you write.*** This helps avoid unusual habits, styles, and conventions. Check out open-source code for more reading opportunities!
-- ***Code some more.*** Build a side project, complete tutorials with coding exercises, do coding challenges, or complete code katas.
+- _**Code regularly and ask for code reviews.**_ These are invaluable!
+- _**Read as much as you write.**_ This helps avoid unusual habits, styles, and conventions. Check out open-source code for more reading opportunities!
+- _**Code some more.**_ Build a side project, complete tutorials with coding exercises, do coding challenges, or complete code katas.
 
 #### **👀 readable code**
 
@@ -309,7 +309,7 @@ Although it sounds counterintuitive, learning to debug without tools can be help
 
 #### **♻️ refactoring**
 
-This also takes practice! Make this an everyday habit and work on it, starting with your own. After you write code, revisit it and see what you can improve. Some IDEs have refactoring capabilities. Look at yours and give it a shot if yours has this ability.  Code reviews can give you more ideas for refactoring. It’s a good idea to give them a shot!
+This also takes practice! Make this an everyday habit and work on it, starting with your own. After you write code, revisit it and see what you can improve. Some IDEs have refactoring capabilities. Look at yours and give it a shot if yours has this ability. Code reviews can give you more ideas for refactoring. It’s a good idea to give them a shot!
 
 Reading through code should provide new insights: you can deepen your knowledge of the codebase and begin to spot inconsistencies. Make notes as you go along and seek feedback to see if a refactor is worthwhile before diving in. For an easier start, you could look at refactoring tests and the helpers for those tests. It will deepen your codebase understanding; ideally, others will be able to better understand.
 
@@ -321,8 +321,8 @@ Speaking of tests, competent software developers ensure their code works, plain 
 
 We’ve covered a lot already, but there are a few more things to consider.
 
-- ***Your local development environment.*** Get to know it well and become more efficient. Learn the ins and outs of your IDE or coding text editor of choice, like refactoring, compiling, running the project, hot reloading, debugging, running and debugging tests, or creating a PR. Configure your workflow, learn shortcuts, and set up formatting and linting, if needed. The smoother this is, the less context-switching you’ll have to do.
-- ***Frequently used tools.*** Get to know these and practice using them:
+- _**Your local development environment.**_ Get to know it well and become more efficient. Learn the ins and outs of your IDE or coding text editor of choice, like refactoring, compiling, running the project, hot reloading, debugging, running and debugging tests, or creating a PR. Configure your workflow, learn shortcuts, and set up formatting and linting, if needed. The smoother this is, the less context-switching you’ll have to do.
+- _**Frequently used tools.**_ Get to know these and practice using them:
   - Git - branching, rebasing, resolving conflicts and merging, cherry-picking
   - Command line/terminal - often within many IDEs; start using it for tasks!
   - Regular expressions - learn some; it can be useful
@@ -330,7 +330,7 @@ We’ve covered a lot already, but there are a few more things to consider.
   - AI - give it a whirl to boost your productivity; there are inline coding assistants and generative AI chat interfaces to “talk through” concepts
   - Company-specific developer tools
   - A “productivity cheat sheet” - create your own doc full of references!
-- ***Learn to iterate quickly.*** Here are some ideas:
+- _**Learn to iterate quickly.**_ Here are some ideas:
   - Read existing code to understand what it does. Ask someone to walk through the structure, draw it out, share your code map, and create a cheat sheet to help you learn it.
   - Make small code changes when possible.
   - Learn how to debug the CI/CD for your project(s).
@@ -340,8 +340,8 @@ We’ve covered a lot already, but there are a few more things to consider.
   - Get frequent feedback by building things!
   - You can compare team member outputs but only to gauge iteration speed. Because career trajectories vary, don’t generally compare yourself to others.
 
-**I hope that this information is concise and digestible while also being helpful!** 
+**I hope that this information is concise and digestible while also being helpful!**
 
-The book was excellent, filled with ample stories, examples, and actionable advice I didn’t cover that can be used at any career level in the current tech environment. 
+The book was excellent, filled with ample stories, examples, and actionable advice I didn’t cover that can be used at any career level in the current tech environment.
 
 Get yourself a copy, too, to reference as you navigate your career!

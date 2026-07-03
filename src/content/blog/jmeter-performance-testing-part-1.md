@@ -1,8 +1,8 @@
 ---
-title: "jmeter performance testing: part 1"
-description: "...with randomized CSV inputs!"
+title: 'jmeter performance testing: part 1'
+description: '...with randomized CSV inputs!'
 pubDate: 2025-03-04
-tags: ["performance","testing"]
+tags: ['performance', 'testing']
 readingTime: 6
 ---
 
@@ -25,7 +25,7 @@ First, we’ll review some initial understanding and setup details. In the [seco
 
 [Apache JMeter](https://jmeter.apache.org/) is a free, open-source Java application for performance testing at the protocol level. It offers flexibility and configurability. It’s even OS-independent!
 
-My initial research indicates that it’s still popular. I examined other options and asked other testers for their feedback and experiences. JMeter is primarily used for web application testing, however, it can also test APIs, databases, and more. It’s powerful enough for a wide range of testing capabilities. *My experience focused on API testing.*
+My initial research indicates that it’s still popular. I examined other options and asked other testers for their feedback and experiences. JMeter is primarily used for web application testing, however, it can also test APIs, databases, and more. It’s powerful enough for a wide range of testing capabilities. _My experience focused on API testing._
 
 \*It doesn’t fit all use cases.
 
@@ -57,11 +57,11 @@ At the core, JMeter facilitates sending requests to your server and fielding res
 
 ## 🛠️ test setup
 
-The initial setup and getting to know the software is nuanced, to say the least. A [Geeks for Geeks tutorial](https://www.geeksforgeeks.org/how-to-use-jmeter-for-performance-and-load-testing/) helped me get the basics, which was *very* useful. Afterward, I better understood where things were and how to leverage more options.
+The initial setup and getting to know the software is nuanced, to say the least. A [Geeks for Geeks tutorial](https://www.geeksforgeeks.org/how-to-use-jmeter-for-performance-and-load-testing/) helped me get the basics, which was _very_ useful. Afterward, I better understood where things were and how to leverage more options.
 
 To start, I set up a simple test with four listeners: the Backend Listener, the View Results Tree, the Summary Report, and the Aggregate Report. These are used to view results and reporting. I suggest looking around at these before, during, and after tests using the GUI while getting set up to get a sense of what you might need from them.
 
-🚨 *Check whether you want your Listeners under the Test Plan or in nested elements added below! I wanted a snapshot of the overall so I added mine to the Test Plan.*
+🚨 _Check whether you want your Listeners under the Test Plan or in nested elements added below! I wanted a snapshot of the overall so I added mine to the Test Plan._
 
 ![JMeter Test Plan screenshot](../../assets/blog/jmeter-performance-testing-part-1/jmeter-test-plan-screenshot.png)
 
@@ -117,11 +117,11 @@ Finally, one of the most interesting options was the [Extended CSV Data Set Conf
 
 To use this, however, I needed to install the plugin. This was simple enough.
 
-**Plugin Directions:** Access plugins by selecting “Options” in the Menu Bar, then choose “***Plugins Manager***.”
+**Plugin Directions:** Access plugins by selecting “Options” in the Menu Bar, then choose “_**Plugins Manager**_.”
 
 ![Plugins Manager menu screenshot](../../assets/blog/jmeter-performance-testing-part-1/plugins-manager-menu-screenshot.png)
 
-A window should open for the “***Plugins Manager***.” Select the “***Available Plugins***” tab and search for the plugin by name. Once identified, mark the checkbox and choose “***Apply Changes and Restart JMeter***” in the lower right corner.
+A window should open for the “_**Plugins Manager**_.” Select the “_**Available Plugins**_” tab and search for the plugin by name. Once identified, mark the checkbox and choose “_**Apply Changes and Restart JMeter**_” in the lower right corner.
 
 ![plugin apply/restart screenshot](../../assets/blog/jmeter-performance-testing-part-1/plugin-apply-restart-screenshot.png)
 

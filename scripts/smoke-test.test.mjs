@@ -41,7 +41,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<h1>mindiweik</h1>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(1);
@@ -51,7 +51,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
   });
@@ -60,7 +60,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 503, body: '' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 3, sleep: noSleep }
+      { fetchFn, attempts: 3, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(fetchFn.calls.length).toBe(3);
@@ -74,7 +74,7 @@ describe('checkOne', () => {
     ]);
     const r = await checkOne(
       { url: 'https://www.mindiweik.com/', expectStatus: 200 },
-      { fetchFn, attempts: 5, sleep: noSleep }
+      { fetchFn, attempts: 5, sleep: noSleep },
     );
     expect(r.ok).toBe(true);
     expect(fetchFn.calls.length).toBe(2);
@@ -84,7 +84,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([{ status: 200, body: '<html>error</html>' }]);
     const r = await checkOne(
       { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(r.detail).toContain('mindiweik');
@@ -94,7 +94,7 @@ describe('checkOne', () => {
     const fetchFn = fakeFetch([new Error('ECONNRESET')]);
     const r = await checkOne(
       { url: 'https://wip-podcast.com/', expectStatus: 200 },
-      { fetchFn, attempts: 2, sleep: noSleep }
+      { fetchFn, attempts: 2, sleep: noSleep },
     );
     expect(r.ok).toBe(false);
     expect(fetchFn.calls.length).toBe(2);
@@ -109,7 +109,7 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, sleep: noSleep }
+      { fetchFn, sleep: noSleep },
     );
     expect(passed).toBe(true);
     expect(results.length).toBe(2);
@@ -126,7 +126,7 @@ describe('runChecks', () => {
         { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
         { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
       ],
-      { fetchFn, attempts: 1, sleep: noSleep }
+      { fetchFn, attempts: 1, sleep: noSleep },
     );
     expect(passed).toBe(false);
   });

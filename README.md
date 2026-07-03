@@ -3,12 +3,14 @@
 Mindi Weik's personal site: blog, [WIP] podcast, speaking, and projects. Built with Astro.
 
 ## Develop
+
 ```bash
 npm install
 npm run dev
 ```
 
 ## Build
+
 ```bash
 npm run build   # static output in dist/
 ```

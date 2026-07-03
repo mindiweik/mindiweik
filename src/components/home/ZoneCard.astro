@@ -1,10 +1,14 @@
 ---
 import type { ZoneKey } from '../../lib/zones.ts';
 import { ZONES, zoneVar } from '../../lib/zones.ts';
-interface Props { zone: ZoneKey; blurb: string; }
+interface Props {
+  zone: ZoneKey;
+  blurb: string;
+}
 const { zone, blurb } = Astro.props;
 const z = ZONES[zone];
 ---
+
 <a
   href={z.route}
   class="hov-fill"

@@ -3,7 +3,7 @@ export type PublishState = 'draft' | 'scheduled' | 'published';
 interface Publishable {
   draft?: boolean;
   pubDate?: Date; // blog + podcast
-  date?: Date;    // speaking
+  date?: Date; // speaking
 }
 
 // Date-only frontmatter dates (the common case) parse as midnight UTC, which

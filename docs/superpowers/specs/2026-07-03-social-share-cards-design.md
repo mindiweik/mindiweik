@@ -1,6 +1,6 @@
 # Social sharing cards (og:image) — design
 
-*2026-07-03. Approved by Mindi via brainstorming session.*
+_2026-07-03. Approved by Mindi via brainstorming session._
 
 ## Problem
 

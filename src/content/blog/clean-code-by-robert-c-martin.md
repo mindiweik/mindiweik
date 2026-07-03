@@ -1,19 +1,19 @@
 ---
-title: "clean code by robert c. martin"
-description: "A practical breakdown of Clean Code by Robert C. Martin: key takeaways on naming, functions, comments, and writing code your team can actually maintain."
+title: 'clean code by robert c. martin'
+description: 'A practical breakdown of Clean Code by Robert C. Martin: key takeaways on naming, functions, comments, and writing code your team can actually maintain.'
 pubDate: 2024-02-20
-tags: ["books","career"]
+tags: ['books', 'career']
 readingTime: 8
 ---
 
-## *clean code* is a **classic**.
+## _clean code_ is a **classic**.
 
-I am not the first to summarize; I won’t be the last! Thank you to my partner for gifting this book to me when I started my career change. 🙏 After I read *Clean Code: A Handbook of Agile Software Craftsmanship,* it was requested I share insights with my team. Any chance to share knowledge is a win! I share the details included in my presentation here, focusing on the most widely applicable content.
+I am not the first to summarize; I won’t be the last! Thank you to my partner for gifting this book to me when I started my career change. 🙏 After I read _Clean Code: A Handbook of Agile Software Craftsmanship,_ it was requested I share insights with my team. Any chance to share knowledge is a win! I share the details included in my presentation here, focusing on the most widely applicable content.
 
 **Quick notes:**
 
-- ❌ *The author uses Java-specific references frequently. I’ve removed these because they aren’t relevant to myself or my team.*
-- 👀 *There’s an immense level of detail. Please feel free to jump around as you see fit!*
+- ❌ _The author uses Java-specific references frequently. I’ve removed these because they aren’t relevant to myself or my team._
+- 👀 _There’s an immense level of detail. Please feel free to jump around as you see fit!_
 
 **Here, we’ll cover:**
 
@@ -51,11 +51,11 @@ The conversation that was sparked pleasantly surprised me when I presented to th
 
 1. **Writing code is a process**. Start with a draft, refine, and repeat. It takes practice.
 2. What ultimately matters is that your team **agrees on standards and sticks to them**.
-3. It is ***everyone’s responsibility*** to keep a codebase clean!
+3. It is _**everyone’s responsibility**_ to keep a codebase clean!
 
 ## 💻 what is clean code?
 
-For me, clean code is beautiful and embodies ***discipline***. It is concise and clear to any reader. Business needs and team members will inevitably change! So, it’s important to hone the craft to solve a problem with meaningful code for others to understand.
+For me, clean code is beautiful and embodies _**discipline**_. It is concise and clear to any reader. Business needs and team members will inevitably change! So, it’s important to hone the craft to solve a problem with meaningful code for others to understand.
 
 I especially like the application of the referenced “broken windows” metaphor:
 
@@ -158,7 +158,7 @@ Functions are the heart of any program. They should have consistent blocks and i
 
 ## comments
 
-Everyone has their own view on this. Regardless, note point 2 in my main takeaways. If your team agrees on a pattern, adopt the pattern. Ultimately, the best advice I’ve received is that a comment should explain ***why*** you made a decision (like business needs) and not ***what*** your code is doing.
+Everyone has their own view on this. Regardless, note point 2 in my main takeaways. If your team agrees on a pattern, adopt the pattern. Ultimately, the best advice I’ve received is that a comment should explain _**why**_ you made a decision (like business needs) and not _**what**_ your code is doing.
 
 - Delete dead code.
   - We have version control for a reason!
@@ -224,7 +224,7 @@ To put some of the following chapters into practice, I’ve pulled some of the m
 - **Boundaries for Third-Party Tools:**
   - Wrap an implementation around third-party code to control what is used and reduce affected code when a change you can't control occurs.
   - Read the docs, test and explore a tool, and build “learning tests” (super powerful to identify API changes early) to get to know the API well!
-  - Define the interface you *want* when you face the unknown. This guides design decisions. It’s better to depend on the code you can control!
+  - Define the interface you _want_ when you face the unknown. This guides design decisions. It’s better to depend on the code you can control!
 - **Unit Tests:**
   - Tests are just as important to keep clean! Write small, readable tests.
   - Tests reduce fear of maintenance, refactors, or improvements.
@@ -235,30 +235,30 @@ To put some of the following chapters into practice, I’ve pulled some of the m
     - INDEPENDENT - should not depend on each other, diagnosis is difficult
     - REPEATABLE - able to happen in any environment, reduce failure excuses
     - SELF-VALIDATING - boolean output, pass or fail
-    - TIMELY - write in a timely fashion *just before* the production code
+    - TIMELY - write in a timely fashion _just before_ the production code
   - The three laws of TDD (Test-Driven Development) from the book:
     1. You may not write production code until you have written a failing unit test.
     2. You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
     3. You may not write more production code than is sufficient to pass the currently failing test.
 - **Classes:**
-  - Classes should be small! “The first rule of ~~functions~~ classes is that they should be small. The second rule of ~~functions~~ classes is that *they should be smaller than that*.”
+  - Classes should be small! “The first rule of ~~functions~~ classes is that they should be small. The second rule of ~~functions~~ classes is that _they should be smaller than that_.”
   - Avoid a “god class” that tries to do all things.
   - Follow the Single Responsibility Principle.
   - Organize classes in the common standard: list variables, private instance variables, then easily read from top to bottom with important items at the top.
   - Organize classes to reduce change in the case of adding functionality later and isolate the class as much as possible from external change.
 - **Systems:**
   - For systems, consider an example from the book:
-    - A hotel is ***built*** by construction and engineering teams.
-    - A hotel is ***used*** by regular people on a vacation or business trip.
+    - A hotel is _**built**_ by construction and engineering teams.
+    - A hotel is _**used**_ by regular people on a vacation or business trip.
     - These functions are entirely independent and build/use should be the same in systems, too! E.g. Separate tests from the compilation.
   - Separate the construction of a system from the usage implementation.
-  - Dependencies of “main” should direct ***away*** from “main.”
+  - Dependencies of “main” should direct _**away**_ from “main.”
   - The Single Responsibility Principle or Inversion of Control moves responsibilities from an object to others dedicated to the purpose.
     - Meaning an object doesn’t instantiate dependencies itself.
   - Implement only what’s needed today; refactor and scale over time (incremental agility).
     - Evolve from simple to sophisticated over time and with more resources!
   - Optimize decision-making with modularity and separation of concerns; no one person can make decisions.
-    - “We often forget that it is also best to *postpone decisions until the last possible moment.*”
+    - “We often forget that it is also best to _postpone decisions until the last possible moment._”
     - Waiting allows for informed decisions.
   - Domain-specific language helps code read like structured prose a domain expert might write. This reduces incorrect translations!
 - **Final thoughts and reminders:**
@@ -277,26 +277,26 @@ Below is a table of common issues provided by Martin (excluding Java-related ite
 
 You may need to scroll to see all the goodies!
 
-| Comments | Environment | Functions | Names | Tests | General 1 | General 2 | General 3 |
-|---|---|---|---|---|---|---|---|
-| inappropriate information | build requires more than one step | too many arguments | choose descriptive names | insufficient tests | multiple languages in one source file | artificial coupling | be precise |
-| obsolete comment | tests require more than one step | output arguments | choose names at the appropriate level of abstraction | use a coverage tool! | obvious behavior is unimplemented | feature envy | replace magic numbers with named constants |
-| redundant comment |  | flag arguments | use standard nomenclature where possible | don’t skip trivial tests | incorrect behavior at the boundaries | selector arguments (bool) | structure over convention |
-| poorly written comment |  | dead function | unambiguous names | an ignored test is a question about ambiguity | overridden safeties | obscured intent | encapsulate conditionals |
-| commented-out code |  |  | use long names for long scopes | test boundary conditions | duplication | misplaced responsibility | avoid negative conditionals |
-|  |  |  | avoid encodings | exhaustively test near bugs | code at wrong level of abstraction | inappropriate static (referring to a method, prefer non-static methods) | functions should do one thing |
-|  |  |  | names should describe side-effects | patterns of failure are revealing | base classes depending on their derivatives | use explanatory variables | hidden temporal couplings (don’t hide it when it's necessary) |
-|  |  |  |  | test coverage patterns can be revealing | too much information - hide info, keep it tight and small | function names should say what they do | don’t be arbitrary |
-|  |  |  |  | tests should be fast | dead code | understand the algorithm | encapsulate boundary conditions |
-|  |  |  |  |  | vertical separation | make logical dependencies physical | functions should descend only one level of abstraction |
-|  |  |  |  |  | inconsistency | prefer polymorphism to if/else or switch/case | keep configurable data at high levels |
-|  |  |  |  |  | clutter | follow standard conventions | avoid transitive navigation |
+| Comments                  | Environment                       | Functions          | Names                                                | Tests                                         | General 1                                                 | General 2                                                               | General 3                                                     |
+| ------------------------- | --------------------------------- | ------------------ | ---------------------------------------------------- | --------------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------- |
+| inappropriate information | build requires more than one step | too many arguments | choose descriptive names                             | insufficient tests                            | multiple languages in one source file                     | artificial coupling                                                     | be precise                                                    |
+| obsolete comment          | tests require more than one step  | output arguments   | choose names at the appropriate level of abstraction | use a coverage tool!                          | obvious behavior is unimplemented                         | feature envy                                                            | replace magic numbers with named constants                    |
+| redundant comment         |                                   | flag arguments     | use standard nomenclature where possible             | don’t skip trivial tests                      | incorrect behavior at the boundaries                      | selector arguments (bool)                                               | structure over convention                                     |
+| poorly written comment    |                                   | dead function      | unambiguous names                                    | an ignored test is a question about ambiguity | overridden safeties                                       | obscured intent                                                         | encapsulate conditionals                                      |
+| commented-out code        |                                   |                    | use long names for long scopes                       | test boundary conditions                      | duplication                                               | misplaced responsibility                                                | avoid negative conditionals                                   |
+|                           |                                   |                    | avoid encodings                                      | exhaustively test near bugs                   | code at wrong level of abstraction                        | inappropriate static (referring to a method, prefer non-static methods) | functions should do one thing                                 |
+|                           |                                   |                    | names should describe side-effects                   | patterns of failure are revealing             | base classes depending on their derivatives               | use explanatory variables                                               | hidden temporal couplings (don’t hide it when it's necessary) |
+|                           |                                   |                    |                                                      | test coverage patterns can be revealing       | too much information - hide info, keep it tight and small | function names should say what they do                                  | don’t be arbitrary                                            |
+|                           |                                   |                    |                                                      | tests should be fast                          | dead code                                                 | understand the algorithm                                                | encapsulate boundary conditions                               |
+|                           |                                   |                    |                                                      |                                               | vertical separation                                       | make logical dependencies physical                                      | functions should descend only one level of abstraction        |
+|                           |                                   |                    |                                                      |                                               | inconsistency                                             | prefer polymorphism to if/else or switch/case                           | keep configurable data at high levels                         |
+|                           |                                   |                    |                                                      |                                               | clutter                                                   | follow standard conventions                                             | avoid transitive navigation                                   |
 
 **That’s a wrap!**
 
 ## 🤔 questions to consider:
 
-1. Have you read *Clean Code?* Did you have any different insights or any I missed?
+1. Have you read _Clean Code?_ Did you have any different insights or any I missed?
 2. What was your favorite or least favorite part?
 3. Do you agree/disagree with anything “Uncle” Bob Martin shared that I have listed?
 4. Have you - or are you - putting anything into practice in your daily work?
@@ -304,6 +304,6 @@ You may need to scroll to see all the goodies!
 
 ## 🫶 bonus recommendation
 
-I recently began listening to the [Working Code Podcast](https://workingcode.dev/) (from the 2020 start…it’s how I listen to all podcasts). The hosts reviewed *Clean Code* in episodes [#22](https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/) and [#23](https://workingcode.dev/episodes/023-book-club-1-clean-code-by-uncle-bob-martin-pt2/).
+I recently began listening to the [Working Code Podcast](https://workingcode.dev/) (from the 2020 start…it’s how I listen to all podcasts). The hosts reviewed _Clean Code_ in episodes [#22](https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/) and [#23](https://workingcode.dev/episodes/023-book-club-1-clean-code-by-uncle-bob-martin-pt2/).
 
 Thus far, I highly recommend the podcast! The real banter is great for anyone who works remotely to feel like they can enjoy technical conversations anytime!

@@ -3,14 +3,32 @@ import type { ZoneKey } from '../../lib/zones.ts';
 import { zoneVar } from '../../lib/zones.ts';
 import type { PublishState } from '../../lib/publish.ts';
 import PublishStateChip from './PublishStateChip.astro';
-interface Props { href: string; title: string; meta: string; zone: ZoneKey; id?: string; state?: PublishState; }
+interface Props {
+  href: string;
+  title: string;
+  meta: string;
+  zone: ZoneKey;
+  id?: string;
+  state?: PublishState;
+}
 const { href, title, meta, zone, id, state } = Astro.props;
 ---
-<a id={id} href={href} class="hov-card" style={`display:block;padding:0.8rem 0;border-top:1px solid var(--border);scroll-margin-top:1.5rem;--hover-accent:${zoneVar(zone)}`}>
+
+<a
+  id={id}
+  href={href}
+  class="hov-card"
+  style={`display:block;padding:0.8rem 0;border-top:1px solid var(--border);scroll-margin-top:1.5rem;--hover-accent:${zoneVar(zone)}`}
+>
   <span style="display:flex;align-items:center;gap:0.5rem">
-    <span style={`width:0.45rem;height:0.45rem;border-radius:50%;flex:none;background:${zoneVar(zone)}`}></span>
+    <span
+      style={`width:0.45rem;height:0.45rem;border-radius:50%;flex:none;background:${zoneVar(zone)}`}
+    ></span>
     <span style="font-family:var(--font-display);font-weight:500;font-size:0.95rem">{title}</span>
     <PublishStateChip state={state} zone={zone} />
   </span>
-  <span style="display:block;font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.35rem">{meta}</span>
+  <span
+    style="display:block;font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin-top:0.35rem"
+    >{meta}</span
+  >
 </a>

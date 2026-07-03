@@ -42,12 +42,14 @@ const eps = readdirSync(contentDir)
   .sort((a, b) => b.pubDate - a.pubDate);
 
 const seasons = [...new Set(eps.map((e) => e.season))].sort((a, b) => b - a);
-const fmtDate = (d) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+const fmtDate = (d) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 const row = (e, latestSeason) => {
-  const chip = e.season < latestSeason
-    ? `background:var(--surface);color:var(--accent);border:1px solid var(--accent)`
-    : `background:var(--accent);color:var(--ink)`;
+  const chip =
+    e.season < latestSeason
+      ? `background:var(--surface);color:var(--accent);border:1px solid var(--accent)`
+      : `background:var(--accent);color:var(--ink)`;
   return `      <a class="ep" href="https://mindiweik.com/podcast/${e.slug}">
         <span class="chip" style="${chip}">${e.version}</span>
         <span><span class="ep-title">${e.title}</span><span class="ep-meta">${fmtDate(e.pubDate)}${e.duration ? ' · ' + e.duration : ''}</span></span>
@@ -56,7 +58,10 @@ const row = (e, latestSeason) => {
 
 const seasonBlock = (s) => `    <section>
       <div class="season"><span>season ${s} · v${s}.0.x</span><span class="rule"></span></div>
-${eps.filter((e) => e.season === s).map((e) => row(e, seasons[0])).join('\n')}
+${eps
+  .filter((e) => e.season === s)
+  .map((e) => row(e, seasons[0]))
+  .join('\n')}
     </section>`;
 
 const html = `<!doctype html>
@@ -143,4 +148,6 @@ mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'index.html'), html);
 writeFileSync(join(outDir, 'sitemap.xml'), sitemap);
 copyFileSync(join(root, 'wip-landing/.htaccess'), join(outDir, '.htaccess'));
-console.log(`wip-dist/index.html written (${eps.length} episodes, ${seasons.length} season(s)) + sitemap.xml (${oldPaths.length} old urls) + .htaccess copied`);
+console.log(
+  `wip-dist/index.html written (${eps.length} episodes, ${seasons.length} season(s)) + sitemap.xml (${oldPaths.length} old urls) + .htaccess copied`,
+);

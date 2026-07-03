@@ -1,14 +1,14 @@
 ---
-title: "peek behind the bootcamp curtain 🧐"
-description: "Truths, challenges, and how to make the most of it"
+title: 'peek behind the bootcamp curtain 🧐'
+description: 'Truths, challenges, and how to make the most of it'
 pubDate: 2024-03-19
-tags: ["career","learning"]
+tags: ['career', 'learning']
 readingTime: 5
 ---
 
-All coding bootcamps differ. This applies to the people who participate in them, too. Every experience is different! 
+All coding bootcamps differ. This applies to the people who participate in them, too. Every experience is different!
 
-I completed a bootcamp after 2 years of learning on my own. I'm driven but needed more accountability and opportunities for deeper understanding or to locate *trusted* resources. A rapid feedback loop helps to retain complex information long-term.
+I completed a bootcamp after 2 years of learning on my own. I'm driven but needed more accountability and opportunities for deeper understanding or to locate _trusted_ resources. A rapid feedback loop helps to retain complex information long-term.
 
 After months of research, I selected the best program for me, my partnership, and my career goals. I chose the part-time Hack Reactor (by Galvanize) Software Engineering Immersive*, which encompassed 9 months of nights and weekends plus a significant cost. Afterward, I was better prepared than I managed on my own!
 
@@ -18,11 +18,11 @@ We’ll cover my experience for someone considering this path or for curious min
 2. 🤯 Challenges
 3. 😌 Advice
 
-*\*The part-time program was discontinued in 2023; as of this writing, only full-time is available.*
+_\*The part-time program was discontinued in 2023; as of this writing, only full-time is available._
 
 ## 🤔 takeaways
 
-I learned so much, even beyond the technology! 
+I learned so much, even beyond the technology!
 
 #### communication is extremely important.
 
@@ -46,7 +46,7 @@ We had to quickly pick up new tech to complete projects on time while practicing
 
 #### projects are the best possible learning tool.
 
-I’m certain you’ve heard this before. Tutorials and reading can only get you so far. 
+I’m certain you’ve heard this before. Tutorials and reading can only get you so far.
 
 Touching the tech, working through confusion, and practicing in a project are the best ways to learn. I’ve taken that seriously since diving into my career and side projects.
 
@@ -62,7 +62,7 @@ I underestimated the time investment. The course itself involved Zoom meetings o
 
 The info was clear, but living it was harder. I didn't have the luxury to leave work during my course, so I also worked full-time throughout.
 
-Weekdays for me consisted of meetings with customers, my team, and other teams. When I didn’t have meetings, my work was also on a computer. Most evenings, I took a short break before class started but I was still overwhelmed and exhausted. *I’m extremely grateful to my partner for taking on more so I could focus.*
+Weekdays for me consisted of meetings with customers, my team, and other teams. When I didn’t have meetings, my work was also on a computer. Most evenings, I took a short break before class started but I was still overwhelmed and exhausted. _I’m extremely grateful to my partner for taking on more so I could focus._
 
 Saturdays involved a 5-hour class followed by outside coursework. The program recommended taking Sundays off, and I tried, but it was my best time for a clear mind to focus and grasp content. I often worked on Sundays as a trade-off to rest after long workdays.
 
@@ -80,9 +80,9 @@ I’m sure others had hardships, too, but this was a level I had never faced. My
 
 No matter the program, you get reciprocal success for the effort given. If you learned the fundamentals, you were quicker to grasp the next phases. If you spent time on individual tools, you were more capable of applying them in projects.
 
-My engineering manager wrapped up my effort neatly in my first annual review as a Software Engineer. 
+My engineering manager wrapped up my effort neatly in my first annual review as a Software Engineer.
 
-He was blunt with me. He wasn't thrilled when he learned my company committed to hiring a new engineer who recently completed a bootcamp. He shared that immediately, he was impressed by my ability to speak to technical challenges, the smooth onboarding for a newer engineer, and my ability to communicate. 
+He was blunt with me. He wasn't thrilled when he learned my company committed to hiring a new engineer who recently completed a bootcamp. He shared that immediately, he was impressed by my ability to speak to technical challenges, the smooth onboarding for a newer engineer, and my ability to communicate.
 
 Which leads me to my next point.
 
@@ -98,7 +98,7 @@ Right away, I applied my experience in US real estate to my company where we bui
 
 #### job searching.
 
-Here is the best I can give: leverage your network. For my first role, I am grateful that my company supported my efforts and moved me to engineering after completion. 
+Here is the best I can give: leverage your network. For my first role, I am grateful that my company supported my efforts and moved me to engineering after completion.
 
 I didn’t go through what many in tech have in recent years. Multiple interviews, tests, projects, problems, recruiters…I leveraged opportunity.
 
@@ -106,7 +106,7 @@ I worked hard for them and clarified my goals - to give myself proper credit. I 
 
 ## conclusion
 
-Results will vary. Honestly, I could leave it there, but I’ll wrap it up. 
+Results will vary. Honestly, I could leave it there, but I’ll wrap it up.
 
 My bootcamp was hard and I learned a crazy amount in a relatively short time. My investments were large, but my rewards have been great thus far.
 

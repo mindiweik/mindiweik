@@ -32,6 +32,7 @@ const ogImage = new URL(image ?? cardPath, SITE.url).href;
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}`}></script>
     <script is:inline define:vars={{ ga4: SITE.ga4 }}>
       window.dataLayer = window.dataLayer || [];
+      // eslint-disable-next-line prefer-rest-params -- verbatim Google gtag snippet
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', ga4);

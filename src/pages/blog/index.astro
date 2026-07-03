@@ -4,18 +4,27 @@ import EntryCard from '../../components/content/EntryCard.astro';
 import { getCollection } from 'astro:content';
 import { isVisible, publishState } from '../../lib/publish.ts';
 
-const posts = (await getCollection('blog', isVisible))
-  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const posts = (await getCollection('blog', isVisible)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
-<ZoneIndexLayout zone="blog" heading="blog" sub="building, debugging, and career detours. newest first.">
-  {posts.map((p) => (
-    <EntryCard
-      href={`/blog/${p.id}`}
-      title={p.data.title}
-      meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
-      zone="blog"
-      state={publishState(p.data, new Date())}
-    />
-  ))}
+
+<ZoneIndexLayout
+  zone="blog"
+  heading="blog"
+  sub="building, debugging, and career detours. newest first."
+>
+  {
+    posts.map((p) => (
+      <EntryCard
+        href={`/blog/${p.id}`}
+        title={p.data.title}
+        meta={`${fmt(p.data.pubDate)}${p.data.tags.length ? ' · ' + p.data.tags.map((t) => '#' + t).join(' ') : ''}`}
+        zone="blog"
+        state={publishState(p.data, new Date())}
+      />
+    ))
+  }
 </ZoneIndexLayout>

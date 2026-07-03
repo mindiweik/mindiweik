@@ -11,6 +11,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 ---
+
 <SpeakingLayout
   id={entry.id}
   title={d.title}
