@@ -42,7 +42,7 @@ choice), visual/screenshot diffing, per-page content assertions beyond the homep
 | `https://mindiweik.com/` | HTTP 200 + body contains `mindiweik` | apex home is up and serving real content, not a blank page or 500 |
 | `https://mindiweik.com/blog/` | HTTP 200 | blog section built and routed |
 | `https://mindiweik.com/podcast/` | HTTP 200 | podcast section built and routed |
-| `https://www.mindiweik.com/` | HTTP 200 | catches the CDN-staleness failure mode on the www edge |
+| `https://www.mindiweik.com/` | HTTP 200 + body contains `mindiweik` | confirms the www edge is serving real content (catches a blank or error page from a stale edge); cannot detect stale-but-still-valid content without a per-deploy build-hash marker, which is out of scope |
 | `https://wip-podcast.com/` | HTTP 200 | migration landing page + 301 host is alive |
 
 The `mindiweik` content marker on the apex homepage guards against the "server returns 200

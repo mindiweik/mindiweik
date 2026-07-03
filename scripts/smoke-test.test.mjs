@@ -116,9 +116,7 @@ describe('runChecks', () => {
   });
 
   it('fails overall if any single check fails', async () => {
-    let call = 0;
     const fetchFn = async (url) => {
-      call += 1;
       // first URL ok, second URL always 500
       const ok = url.endsWith('.com/');
       return { status: ok ? 200 : 500, text: async () => 'mindiweik' };

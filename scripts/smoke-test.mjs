@@ -8,7 +8,7 @@ export const CHECKS = [
   { url: 'https://mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
   { url: 'https://mindiweik.com/blog/', expectStatus: 200 },
   { url: 'https://mindiweik.com/podcast/', expectStatus: 200 },
-  { url: 'https://www.mindiweik.com/', expectStatus: 200 },
+  { url: 'https://www.mindiweik.com/', expectStatus: 200, expectText: 'mindiweik' },
   { url: 'https://wip-podcast.com/', expectStatus: 200 },
 ];
 
@@ -23,7 +23,7 @@ export async function checkOne(check, opts = {}) {
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
-      const res = await fetchFn(url);
+      const res = await fetchFn(url, { signal: AbortSignal.timeout(10000) });
       if (res.status !== expectStatus) {
         detail = `expected ${expectStatus}, got ${res.status}`;
       } else if (expectText) {
