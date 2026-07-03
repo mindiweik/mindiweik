@@ -7,6 +7,7 @@ url: https://mindiweik.com
 repoUrl: https://github.com/mindiweik/mindiweik
 order: 3
 since: 2026
+lastUpdated: 2026-06-30
 ---
 
 The site you are reading right now. My blog, the [WIP] podcast archive, speaking history, and these project pages, all under one roof after years of living on separate platforms.
