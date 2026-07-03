@@ -21,9 +21,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
-- **Related-content buttons** — at the end of posts/episodes, buttons suggesting other posts,
-  [WIP] episodes, etc. (could start simple: same-tag matches from the collections). Mindi
-  requested 2026-07-02.
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
@@ -35,19 +32,19 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
-- **Phase B shape DECIDED (2026-07-02):** wip-podcast.com becomes a single [WIP] podcast
-  landing page (brand + subscribe links to YouTube/Spotify/Apple + "browse all episodes ->"
-  linking to mindiweik.com/podcast); every other old URL gets a 301 to its mindiweik.com
-  equivalent. No duplicate content, no double publishing, domain + brand presence kept.
-  Mechanics: move wip-podcast.com off Website Builder to file hosting, upload landing page
-  + .htaccess redirect map (old slug list recoverable from the old sitemap).
-
 ## Resolved
+- ~~**Phase B: wip-podcast.com landing page + 301s**~~ -> LIVE 2026-07-02. Landing page +
+  .htaccess redirect map deployed via deploy.yml; verified on apex and www (www needed a
+  Hostinger CDN purge). Migration-era sitemap of old URLs live at wip-podcast.com/sitemap.xml.
+- ~~**Related-content buttons**~~ -> shipped 2026-07-02. Tag-driven `RelatedPosts` (shared-tag
+  scoring, recency tie-break, cap 4, recent-posts fallback) + `EpisodeNav` prev/next on podcast
+  episodes. Open idea: gtag click event on related cards to see which links get used.
 - ~~**Draft mode**~~ + ~~**Scheduled posts**~~ -> shipped 2026-07-02. `draft: true` frontmatter
   (blog/podcast/speaking) and future `pubDate`/`date` both render in dev (with a dashed
   draft/scheduled chip) and are excluded from prod builds via `src/lib/publish.ts` `isVisible`.
-  Daily cron rebuild (13:00 UTC ≈ 6am Denver) in deploy.yml releases scheduled posts; push or
-  manual workflow run releases immediately. Spec:
+  Daily cron rebuild (13:00 UTC = 6am Denver in winter, 7am in summer) in deploy.yml releases
+  scheduled posts; push or manual workflow run releases immediately. Since 2026-07-02, date-only
+  pubDates release at the cron hour (not midnight UTC), so plain dates are safe long-term. Spec:
   `docs/superpowers/specs/2026-07-02-draft-mode-scheduled-posts-design.md`.
 - ~~**Blog post chip label "essay"**~~ -> renamed to "blog" everywhere (chip, changelog type,
   About + blog index copy) per Mindi's pick (2026-07-02).
