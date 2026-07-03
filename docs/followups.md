@@ -4,10 +4,12 @@ These are known, intentionally-deferred items from the initial scaffold. None bl
 scaffold being "done." Most belong with the content-migration or light-mode (v1.1) work.
 
 ## Content / data
+
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
+
 - **Dependabot** — set up GitHub Dependabot for the `mindiweik` repo (automated dependency
   update PRs + security alerts). Add `.github/dependabot.yml` (npm + github-actions ecosystems).
   Mindi requested 2026-07-03.
@@ -23,6 +25,9 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
   block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
   a bad merge going live. Mindi requested 2026-07-03.
+  - **Partial (7/3):** `.github/workflows/lint.yml` now runs ESLint + Prettier check + tests on
+    every push/PR (see resolved "Linting + formatting"). Still to add here: `astro build` +
+    `astro check` steps, and the branch-protection rule to actually block merge on red.
 - **Prose lint in CI** — enforce the documented writing conventions automatically: fail on
   emdashes in `src/content/` (extend to sentence-casing / lowercase-hashtag checks later).
   Freezes the manual style review into a check that runs every push. Mindi requested 2026-07-03.
@@ -64,6 +69,19 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+
+- ~~**Linting + formatting**~~ -> shipped 2026-07-03. ESLint flat config (`typescript-eslint`
+  recommended + `eslint-plugin-astro`) covering `.astro`/`.ts`/`.mjs`, and Prettier
+  (`prettier-plugin-astro` + `prettier-plugin-tailwindcss`; single-quote, 100-col, matches the
+  existing style). Scripts: `lint`, `lint:fix`, `format`, `format:check`. Enforced three ways:
+  `lint.yml` (ESLint + Prettier check + tests on push/PR), plus husky + lint-staged pre-commit
+  (fix + format staged files only). One-time repo-wide `prettier --write` applied as its own
+  commit. Config choices worth knowing: `no-explicit-any` is `warn` (pragmatic uses in test
+  mocks + the getCollection-shape type); `no-undef` is off for `.astro` (TS resolves ambient
+  Astro globals); blog `.md` files use `embeddedLanguageFormatting: off` so code samples are
+  never rewritten; `BaseHead.astro` is prettier-ignored (upstream prettier-plugin-astro bug
+  parsing the inline gtag `define:vars` script — ESLint still lints it). `docs/superpowers/`
+  and `scripts/fixtures/` are prettier-ignored (embedded fragments / byte-exact fixtures).
 - ~~**Social sharing preview images**~~ -> SHIPPED 2026-07-03. Five zone-colored OG cards
   (checked-in satori script, `npm run og:cards`, rendered at 2x for retina crispness) in
   `public/og/`; `BaseHead` emits absolute `og:image` + `twitter:card` with fallback chain
