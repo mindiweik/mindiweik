@@ -2,11 +2,13 @@
 import type { ZoneKey } from '../../lib/zones.ts';
 import { zoneVar } from '../../lib/zones.ts';
 import type { PublishState } from '../../lib/publish.ts';
+import { showUnpublished } from '../../lib/publish.ts';
 interface Props { state?: PublishState; zone: ZoneKey; }
 const { state = 'published', zone } = Astro.props;
-// Dev-only: prod builds filter unpublished entries out entirely, so this
-// never renders there. The dashed border marks "not live yet" at a glance.
-const show = import.meta.env.DEV && state !== 'published';
+// Dev + preview builds only: the real prod build filters unpublished entries
+// out entirely, so this never renders there. The dashed border marks
+// "not live yet" at a glance.
+const show = showUnpublished() && state !== 'published';
 const fill = zoneVar(zone);
 ---
 {show && (
