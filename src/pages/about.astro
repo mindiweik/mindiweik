@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionLabel from '../components/content/SectionLabel.astro';
 import VersionChip from '../components/content/VersionChip.astro';
 import KofiCard from '../components/support/KofiCard.astro';
+import { SITE } from '../config/site.ts';
 
 const now = [
   { dot: '--accent-blog', k: 'onboarding', v: 'new providers @ OpenRouter' },
@@ -39,10 +40,9 @@ const now = [
 
   <SectionLabel label="// elsewhere" />
   <div style="font-family:var(--font-mono);font-size:0.8rem;display:flex;gap:1.2rem;flex-wrap:wrap;padding:0.5rem 0">
-    <a href="https://www.linkedin.com/in/mindiweik/" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-blog)">linkedin</a>
-    <a href="https://github.com/mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-projects)">github</a>
-    <a href="https://gitlab.com/mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-speaking)">gitlab</a>
-    <a href="https://www.youtube.com/@mindiweik" style="color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-podcast)">youtube</a>
+    {SITE.socials.map((s) => (
+      <a href={s.url} style={`color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent})`}>{s.label}</a>
+    ))}
   </div>
 
   <KofiCard />

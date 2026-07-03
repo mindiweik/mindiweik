@@ -6,6 +6,11 @@ const year = new Date().getFullYear();
 ---
 <footer style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding:2rem 1.4rem;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted)">
   <span>© {year} {SITE.author} · v2.0.0</span>
+  <span style="display:flex;gap:0.9rem;flex-wrap:wrap">
+    {SITE.socials.map((s) => (
+      <a href={s.url} target="_blank" rel="noopener noreferrer" style={`color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:var(--accent-${s.accent})`}>{s.label}</a>
+    ))}
+  </span>
   <KofiLink />
   <ThemeToggle />
 </footer>
