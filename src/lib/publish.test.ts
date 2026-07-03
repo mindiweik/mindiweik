@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { publishState } from './publish';
+import { publishState, showUnpublished } from './publish';
 
 const NOW = new Date('2026-07-02T12:00:00Z');
 
@@ -39,5 +39,23 @@ describe('publishState', () => {
   it('explicit datetimes are respected as-is', () => {
     expect(publishState({ pubDate: new Date('2026-07-02T08:00:00Z') }, NOW)).toBe('published');
     expect(publishState({ pubDate: new Date('2026-07-02T18:00:00Z') }, NOW)).toBe('scheduled');
+  });
+});
+
+describe('showUnpublished', () => {
+  it('is true in the dev server', () => {
+    expect(showUnpublished({ DEV: true })).toBe(true);
+  });
+
+  it('is true for a preview build (PUBLIC_SHOW_DRAFTS=true)', () => {
+    expect(showUnpublished({ DEV: false, PUBLIC_SHOW_DRAFTS: 'true' })).toBe(true);
+  });
+
+  it('is false for a plain prod build', () => {
+    expect(showUnpublished({ DEV: false })).toBe(false);
+  });
+
+  it('requires the exact string "true"', () => {
+    expect(showUnpublished({ DEV: false, PUBLIC_SHOW_DRAFTS: '1' })).toBe(false);
   });
 });

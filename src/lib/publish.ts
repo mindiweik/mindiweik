@@ -26,9 +26,18 @@ export function publishState(data: Publishable, now: Date): PublishState {
   return 'published';
 }
 
-// Dev renders everything; prod builds evaluate "now" at build time, so the
-// daily cron rebuild is what releases scheduled entries.
+// True when unpublished entries should render: the dev server, or a
+// PUBLIC_SHOW_DRAFTS=true build (the dev.mindiweik.com preview).
+// Env is injectable for tests; import.meta.env values are strings.
+export function showUnpublished(
+  env: { DEV?: boolean; PUBLIC_SHOW_DRAFTS?: string } = import.meta.env,
+): boolean {
+  return !!env.DEV || env.PUBLIC_SHOW_DRAFTS === 'true';
+}
+
+// Dev + preview render everything; prod builds evaluate "now" at build time,
+// so the daily cron rebuild is what releases scheduled entries.
 export function isVisible(entry: { data: Publishable }): boolean {
-  if (import.meta.env.DEV) return true;
+  if (showUnpublished()) return true;
   return publishState(entry.data, new Date()) === 'published';
 }
