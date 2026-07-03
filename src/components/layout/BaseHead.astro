@@ -5,7 +5,11 @@ const { title, description = SITE.description, image, zone } = Astro.props;
 const fullTitle = title === SITE.name ? title : `${title} · ${SITE.name}`;
 // og:image resolution: explicit page image -> zone card -> site default.
 // Absolute URL required (LinkedIn ignores relative paths).
-const ogImage = new URL(image ?? (zone ? `/og/${zone}.png` : '/og/default.png'), SITE.url).href;
+// Bump OG_CARD_VERSION when regenerating cards: Hostinger's CDN caches the
+// PNGs for 7 days, so scrapers would otherwise keep pulling the stale variant.
+const OG_CARD_VERSION = 2;
+const cardPath = `/og/${zone ?? 'default'}.png?v=${OG_CARD_VERSION}`;
+const ogImage = new URL(image ?? cardPath, SITE.url).href;
 ---
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
