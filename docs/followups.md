@@ -43,10 +43,15 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   so project pages share the generic site OG description instead of their blurb. Matches the
   preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
   From final review 2026-07-03.
-- **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
-  color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
-  the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
-  the baseline. Mindi requested 2026-07-02.
+- **Accessibility pass** — audit + fixes across the site. Mindi requested 2026-07-02.
+  - **Baseline shipped 2026-07-03 (PR #11, `chore/a11y-audit`):** skip-to-content link +
+    `id="main-content"` on `<main>` (WCAG 2.4.1); global `:focus-visible` outline (2.4.7);
+    `aria-current="page"` on active nav link (1.4.1); `prefers-reduced-motion` media query
+    (2.3.3); labeled header/footer nav landmarks (1.3.1). Verified in built `dist/`.
+  - **Still open:** color contrast (accent-on-dark chips + muted text, incl. the `opacity:0.6`
+    inactive nav links); heading order audit; alt text sweep (ties into the images pass +
+    `og:image:alt` below); keyboard nav on cards; run Lighthouse/axe as the baseline
+    (ties into the Lighthouse CI budgets item above).
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
