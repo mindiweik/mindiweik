@@ -1,6 +1,7 @@
-# Quality gate: lint, format check, and tests on every push and PR.
-# Kept separate from deploy.yml so a formatting slip fails fast without
-# touching the deploy pipeline.
+# Quality gate: lint, format, prose, type-check, build, and tests on every
+# push and PR. Kept separate from deploy.yml so a slip fails fast without
+# touching the deploy pipeline. Since main auto-deploys to prod, the `build`
+# job is the seatbelt against a broken build going live.
 name: Lint
 
 on:
@@ -28,5 +29,28 @@ jobs:
       - name: Prettier (check formatting)
         run: npm run format:check
 
+      - name: Prose (no emdashes in content)
+        run: npm run prose:lint
+
       - name: Tests
         run: npm test
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Astro type check
+        run: npm run check
+
+      - name: Astro build
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

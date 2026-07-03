@@ -11,10 +11,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
+    "check": "astro check",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "prose:lint": "node scripts/prose-lint.mjs",
     "og:cards": "node scripts/generate-og-cards.mjs",
     "prepare": "husky"
   },

@@ -10,18 +10,18 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 
 ## Site features
 
-- **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
-  block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
-  a bad merge going live. Mindi requested 2026-07-03.
-  - **Partial (7/3):** `.github/workflows/lint.yml` now runs ESLint + Prettier check + tests on
-    every push/PR (see resolved "Linting + formatting"). Still to add here: `astro build` +
-    `astro check` steps, and the branch-protection rule to actually block merge on red.
-- **Prose lint in CI** — enforce the documented writing conventions automatically: fail on
-  emdashes in `src/content/` (extend to sentence-casing / lowercase-hashtag checks later).
-  Freezes the manual style review into a check that runs every push. Mindi requested 2026-07-03.
-- **Link checker in CI** — automate the dead-link pass (lychee or similar) so internal/external
-  links stay clean as content grows, instead of relying on periodic manual sweeps.
-  Mindi requested 2026-07-03.
+- **Prose lint: extend beyond emdashes** — the emdash gate shipped (see resolved "CI quality
+  gates"); the deferred extras are sentence-casing and lowercase-hashtag checks. Noted 2026-07-03.
+- **Link checker in CI** — attempted 2026-07-03 (lychee over built `dist/`), then pulled before
+  merge: the first run was mostly false positives (97 YouTube URLs, plus Canva/Substack/Udemy/
+  Medium/Loom) because those hosts return 999/403/429 to a CI runner, not because the links are
+  dead. A useful version needs a curated `.lycheeignore` of bot-blocking hosts first, so red
+  actually means broken. Genuinely dead link found in the process: `coding-with-callie.com`
+  (referenced in `src/content/blog/capturing-curiosity.md` and
+  `src/content/speaking/capturing-curiosity-talk.md`) — unlink whenever content gets a pass.
+  Working config to revive: lychee with `--root-dir ${{ github.workspace }}/dist` (needed so
+  site-absolute links like `/about` resolve), advisory (not a required check), on content PRs +
+  weekly.
 - **Structured data (JSON-LD)** — add schema.org markup: `Article` for blog posts,
   `PodcastEpisode` for episodes. Improves search appearance (ties into the GSC work).
   Mindi requested 2026-07-03.
@@ -63,6 +63,13 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   floated to the top of the changelog dated "today". Pinned with `lastUpdated: 2026-06-30` (the
   official launch date) in `src/content/projects/mindiweik-site.md`; `lastUpdated` already wins
   the `?? pushedAt ?? Jan-1-of-since` precedence in `toChangelogEntries` (no logic change).
+- ~~**CI quality gates (build gate + prose lint + branch protection)**~~ -> shipped
+  2026-07-03. Extends `lint.yml`: a new `build` job runs `astro check` + `astro build` (the
+  seatbelt against a broken build auto-deploying to prod), and the `lint` job gained a prose
+  step (`scripts/prose-lint.mjs` fails on emdashes in `src/content/`, skipping fenced code).
+  Branch protection on `main` requires the `lint` and `build` checks to pass before merge.
+  Deferred: sentence-casing + lowercase-hashtag prose checks. A link checker was attempted and
+  pulled (see the open "Link checker in CI" item for why + a working config to revive).
 - ~~**Linting + formatting**~~ -> shipped 2026-07-03. ESLint flat config (`typescript-eslint`
   recommended + `eslint-plugin-astro`) covering `.astro`/`.ts`/`.mjs`, and Prettier
   (`prettier-plugin-astro` + `prettier-plugin-tailwindcss`; single-quote, 100-col, matches the
