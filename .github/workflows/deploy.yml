@@ -95,3 +95,20 @@ jobs:
             **/node_modules/**
             **/.htaccess
             **/.htpasswd*
+
+  # Post-deploy verification: fetch the live sites and fail the run if any is
+  # not serving the expected content. Notification only (FTP has no rollback);
+  # value is fast awareness. See scripts/smoke-test.mjs.
+  smoke-test:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Smoke-test the live sites
+        run: node scripts/smoke-test.mjs
