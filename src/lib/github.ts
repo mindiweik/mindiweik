@@ -36,7 +36,7 @@ async function lookup(key: string): Promise<RepoActivity | null> {
     const headers: Record<string, string> = { Accept: 'application/vnd.github+json' };
     const token = import.meta.env?.GITHUB_TOKEN ?? process.env.GITHUB_TOKEN;
     if (token) headers.Authorization = `Bearer ${token}`;
-    const res = await fetch(`https://api.github.com/repos/${key}`, { headers });
+    const res = await fetch(`https://api.github.com/repos/${key}`, { headers, signal: AbortSignal.timeout(5000) });
     if (!res.ok) {
       console.warn(`[github] ${key}: HTTP ${res.status}; skipping last-active data`);
       return null;

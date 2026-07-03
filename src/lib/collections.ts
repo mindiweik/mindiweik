@@ -4,7 +4,7 @@ import { isVisible } from './publish';
 import { fetchRepoActivity } from './github';
 
 export interface ChangelogEntry {
-  type: string;   // "blog" | "v1.0.4" | "talk" | "ship"
+  type: string;   // "blog" | "v1.0.4" | "talk" | "guest" | "update"
   zone: ZoneKey;
   title: string;
   url: string;

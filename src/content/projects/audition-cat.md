@@ -6,6 +6,7 @@ stack: [TypeScript, Node, PostgreSQL, React]
 featured: true
 order: 1
 since: 2023
+lastUpdated: 2026-07-03
 ---
 
 audition cat is a platform that helps actors keep their auditions, self-tapes, and callbacks organized in one place, so the admin side of an acting career stops living in spreadsheets and camera rolls.

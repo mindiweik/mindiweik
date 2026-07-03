@@ -65,7 +65,7 @@ const projects = defineCollection({
         repoUrl: z.string().optional(),
         featured: z.boolean().default(false),
         order: z.number().optional(),
-        since: z.number(),
+        since: z.number().int().min(2000).max(2100),
         lastUpdated: z.coerce.date().optional(),
         image: image().optional(),
         imageAlt: z.string().optional(),
