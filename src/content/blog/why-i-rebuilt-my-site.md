@@ -1,7 +1,7 @@
 ---
 title: why I rebuilt my whole site from scratch
 description: Tearing down the old site, keeping the version numbers.
-pubDate: 2026-07-03T06:00:00-06:00
+pubDate: 2026-07-03
 tags: [astro, meta]
 ---
 

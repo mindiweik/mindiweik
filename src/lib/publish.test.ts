@@ -28,4 +28,16 @@ describe('publishState', () => {
   it('returns published when there is no date at all', () => {
     expect(publishState({}, NOW)).toBe('published');
   });
+
+  it('date-only pubDates stay scheduled until the cron rebuild hour', () => {
+    // 2026-07-02 date-only parses as midnight UTC (6pm Denver on July 1).
+    // It must NOT publish before 13:00 UTC on the 2nd, even though midnight passed.
+    expect(publishState({ pubDate: new Date('2026-07-02') }, new Date('2026-07-02T12:59:00Z'))).toBe('scheduled');
+    expect(publishState({ pubDate: new Date('2026-07-02') }, new Date('2026-07-02T13:00:01Z'))).toBe('published');
+  });
+
+  it('explicit datetimes are respected as-is', () => {
+    expect(publishState({ pubDate: new Date('2026-07-02T08:00:00Z') }, NOW)).toBe('published');
+    expect(publishState({ pubDate: new Date('2026-07-02T18:00:00Z') }, NOW)).toBe('scheduled');
+  });
 });
