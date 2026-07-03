@@ -5,6 +5,7 @@ import VersionChip from '../components/content/VersionChip.astro';
 import PublishStateChip from '../components/content/PublishStateChip.astro';
 import type { PublishState } from '../lib/publish.ts';
 import RelatedPosts from '../components/content/RelatedPosts.astro';
+import KofiCard from '../components/support/KofiCard.astro';
 import '../styles/prose.css';
 interface Props { title: string; slug: string; date: Date; tags: string[]; readingMins: number; youtubeUrl?: string; state?: PublishState; }
 const { title, slug, date, tags, readingMins, youtubeUrl, state } = Astro.props;
@@ -37,5 +38,6 @@ const ytId = youtubeUrl ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11
   )}
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
   <div style="margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--border);font-family:var(--font-display);font-size:1rem;color:var(--text-muted)">thanks so much for reading! ✨</div>
+  <KofiCard />
   <RelatedPosts currentId={slug} />
 </BaseLayout>

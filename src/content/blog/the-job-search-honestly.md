@@ -1,14 +1,14 @@
 ---
 title: the job search, honestly
 description: What the job search actually felt like, minus the LinkedIn gloss.
-pubDate: 2026-05-23
+pubDate: 2026-07-09
 tags: [career]
 draft: true
 ---
 
-I applied to 65 jobs. At my peak I had 3 active processes going at the same time. I made it to final rounds with 2 companies. I got 1 offer. And one company liked me enough that even after the process ended, they wanted to put me in for a different role.
+I applied to 65 jobs. At my peak I had 3 active processes going at the same time. I made it to final rounds with 2 companies. I got 1 offer. The other company liked me enough that even after the process ended, they wanted to put me in for a different role.
 
-And for most of those interviews? I thought I was doing terribly.
+And for most of those interviews? I thought I was doing between mediocre to terrible.
 
 That contrast, the numbers versus how it felt from the inside, is the whole story. So let's actually tell it.
 
@@ -16,9 +16,7 @@ That contrast, the numbers versus how it felt from the inside, is the whole stor
 
 Leaving my last job was the right call, not an escape hatch. Those are different things, and knowing which one you're doing matters for everything that comes after.
 
-I was targeting TypeScript and Node roles, growth and product-leaning teams, remote or Denver hybrid. The search started focused, got broader when the silence stretched out, then narrowed again as I learned what I actually wanted. First application to final rounds took about eight weeks.
-
-This was also my first real search as an experienced engineer. It is a completely different bar than interviewing out of a bootcamp, and nobody hands you the updated rulebook.
+I was targeting TypeScript and Node roles, growth and product-leaning teams, remote or Boulder/Denver hybrid. The search started focused, got broader when the silence stretched out, then narrowed again as I learned what I actually wanted. First application to final rounds took about eight weeks.
 
 ## what it actually felt like
 
@@ -52,8 +50,6 @@ The chapter is closed. Something new has already started, and it's good.
 
 I won't pretend the search was fun, because it wasn't. But it was clarifying in a way I didn't expect. I know myself better as an engineer than I did before it. I know what I'm worth. I know what I'm looking for. That knowledge cost 65 applications, and I'd still call it a fair price.
 
+If you'd rather hear this story than read it, I recently unpacked the whole thing with Anna Miller in a [LinkedIn Live](/speaking/job-search-from-search-to-final-rounds-in-2-months). Same search, live reactions included. 🎙️
+
 If you're in a job search right now, I'd love to hear what it's actually like for you. Not the version you post on LinkedIn. The real one. 💙
-
-import KofiCard from '../../components/support/KofiCard.astro';
-
-<KofiCard />
