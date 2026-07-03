@@ -24,15 +24,16 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
-- **Smart 404** — instead of a plain 404, try to suggest a similar/related page (e.g. fuzzy-match
-  the requested path against the collections' slugs client-side and offer "did you mean" links).
-  Mindi requested 2026-07-02.
 - **Email subscription** — newsletter signup so readers get new posts/episodes by email
   (replaces the old Substack subscribe). Options to evaluate: Buttondown (indie-friendly,
   RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 ## Resolved
+- ~~**Smart 404**~~ -> shipped 2026-07-02. Build-time route list (isVisible-filtered, so drafts
+  never leak) inlined into 404.astro; client-side fuzzy match (token overlap + Levenshtein on
+  the last segment, section words excluded) renders up to 5 "did you mean" buttons showing
+  post titles. No close match = section stays hidden.
 - ~~**Consistent title casing**~~ -> done 2026-07-02. Convention: all lowercase across the
   board (titles already were; 303 in-body headings normalized across 51 files). Preserved: the
   pronoun I, `code` spans, link URLs, the [WIP] mark, code-fence contents. Heading scale also
