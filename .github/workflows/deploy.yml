@@ -16,9 +16,11 @@ on:
     branches: [main]
   workflow_dispatch:
   # Daily rebuild so scheduled posts (future pubDate) go live without a push.
-  # 13:00 UTC = 6am Denver in winter (MST), 7am in summer (MDT).
+  # Posts flip live at RELEASE_HOUR_UTC (13:00, see src/lib/publish.ts); the build
+  # runs at 13:23 UTC because GitHub delays or skips top-of-hour crons under load.
+  # 13:23 UTC = ~6:23am Denver in winter (MST), ~7:23am in summer (MDT).
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '23 13 * * *'
 
 jobs:
   deploy:
