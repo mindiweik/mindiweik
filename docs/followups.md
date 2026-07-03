@@ -14,9 +14,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 - **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Inline code styling** — make inline `code-word` spans more visually distinct (background/color/border) so they're easy to pick out in prose. `.prose code` in `src/styles/prose.css`. Deferred 2026-07-01.
-- **Consistent title casing** — titles/headings are inconsistent (some lowercase site-voice, some title-case from source). Pick one convention and normalize across blog/podcast/speaking. Deferred 2026-07-01.
-- **Internal cross-links point to old paths** — migrated content links to old wip-podcast paths like `/15-...` or `/vNNN-...` instead of `/blog/<slug>` or `/podcast/<slug>`. Sweep all content and rewrite internal links. Fixing case-by-case as flagged; needs a full pass. Deferred 2026-07-01.
-- **Inline links duplicating link buttons** — some speaking/podcast bodies repeat a link inline that's already a frontmatter button (e.g. "Slide Deck"). Removing as flagged; could sweep. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
@@ -36,6 +33,16 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 ## Resolved
+- ~~**Consistent title casing**~~ -> done 2026-07-02. Convention: all lowercase across the
+  board (titles already were; 303 in-body headings normalized across 51 files). Preserved: the
+  pronoun I, `code` spans, link URLs, the [WIP] mark, code-fence contents. Heading scale also
+  bumped (h2 1.65 / h3 1.3 / h4 1.1rem) so levels read distinctly without casing cues.
+- ~~**Internal cross-links point to old paths**~~ -> done 2026-07-02. Full validation pass:
+  every internal link in content checked against the built dist — zero broken. Last straggler
+  (`/show-notes-tech-podcast` in v1-0-0-release-notes) rewritten to `/podcast`. The
+  wip-podcast.com root link in why-i-rebuilt-my-site is intentional (refers to the domain).
+- ~~**Inline links duplicating link buttons**~~ -> verified clean 2026-07-02: no
+  podcast/speaking body repeats a frontmatter button URL (scripted check).
 - ~~**Images for specific posts**~~ -> done 2026-07-02 (confirmed: zero `MIGRATION TODO`
   markers remain in `src/content/`; images live in `src/assets/blog`).
 - ~~**Phase B: wip-podcast.com landing page + 301s**~~ -> LIVE 2026-07-02. Landing page +
