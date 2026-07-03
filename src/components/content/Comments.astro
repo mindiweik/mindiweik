@@ -1,0 +1,114 @@
+---
+interface Props {
+  pageKey: string;
+  zone: 'blog' | 'podcast';
+}
+const { pageKey, zone } = Astro.props;
+const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog)';
+const field =
+  'font-family:var(--font-body);font-size:0.85rem;padding:0.5rem 0.6rem;' +
+  'background:transparent;color:var(--text);border:1px solid var(--border);border-radius:6px';
+---
+<section aria-labelledby="comments-heading" style="margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--border)">
+  <h2 id="comments-heading" style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin:0 0 1rem">Comments</h2>
+
+  <div data-comments-root data-page-key={pageKey} data-accent={accent}>
+    <p data-comments-status style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">Loading comments…</p>
+    <ol data-comments-list style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem"></ol>
+
+    <form data-comments-form style="margin-top:1.4rem;display:flex;flex-direction:column;gap:0.6rem">
+      <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+        <input name="name" placeholder="name" maxlength="80" required aria-label="name" style={field + ';flex:1;min-width:9rem'} />
+        <input name="email" type="email" placeholder="email (private)" maxlength="190" required aria-label="email" style={field + ';flex:1;min-width:9rem'} />
+      </div>
+      <textarea name="body" placeholder="say something nice…" maxlength="5000" required rows="4" aria-label="comment" style={field + ';resize:vertical'}></textarea>
+      <!-- honeypot: hidden from humans; bots fill it and get silently dropped -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+      <div style="display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap">
+        <button type="submit" style={`font-family:var(--font-mono);font-size:0.72rem;padding:0.45rem 0.9rem;border:0;border-radius:6px;cursor:pointer;background:${accent};color:var(--ink)`}>post comment</button>
+        <span data-comments-formstatus role="status" style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted)"></span>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin:0">Comments are held for approval. Your email stays private.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  import { commentsApiUrl, validateComment, formatCommentDate } from '../../lib/comments.ts';
+
+  const root = document.querySelector('[data-comments-root]');
+  if (root instanceof HTMLElement) {
+    const pageKey = root.dataset.pageKey ?? '';
+    const accent = root.dataset.accent ?? 'var(--border)';
+    const api = commentsApiUrl();
+    const list = root.querySelector('[data-comments-list]') as HTMLElement;
+    const status = root.querySelector('[data-comments-status]') as HTMLElement;
+    const form = root.querySelector('[data-comments-form]') as HTMLFormElement;
+    const formStatus = root.querySelector('[data-comments-formstatus]') as HTMLElement;
+
+    function render(comments: any[]) {
+      list.replaceChildren();
+      if (!comments.length) {
+        status.textContent = 'Be the first to comment.';
+        return;
+      }
+      status.textContent = '';
+      for (const c of comments) {
+        const li = document.createElement('li');
+        li.style.cssText = `border-left:2px solid ${accent};padding-left:0.8rem`;
+        const meta = document.createElement('div');
+        meta.style.cssText = 'font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)';
+        meta.textContent = `${c.name} · ${formatCommentDate(c.created_at)}`;
+        const body = document.createElement('p');
+        body.style.cssText = 'font-family:var(--font-body);font-size:0.85rem;margin:0.3rem 0 0;white-space:pre-wrap';
+        body.textContent = c.body; // textContent keeps stored text inert (no XSS)
+        li.append(meta, body);
+        list.append(li);
+      }
+    }
+
+    async function load() {
+      try {
+        const res = await fetch(`${api}?page=${encodeURIComponent(pageKey)}`);
+        const data = await res.json();
+        render(Array.isArray(data.comments) ? data.comments : []);
+      } catch {
+        status.textContent = 'Could not load comments.';
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const input = {
+        name: String(fd.get('name') ?? ''),
+        email: String(fd.get('email') ?? ''),
+        body: String(fd.get('body') ?? ''),
+      };
+      const { ok, errors } = validateComment(input);
+      if (!ok) {
+        formStatus.textContent = `Please check: ${errors.join(', ')}.`;
+        return;
+      }
+      formStatus.textContent = 'Posting…';
+      try {
+        const res = await fetch(api, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ page_key: pageKey, ...input, website: String(fd.get('website') ?? '') }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+          form.reset();
+          formStatus.textContent = data.message ?? 'Thanks.';
+        } else {
+          formStatus.textContent = data.error ?? 'Something went wrong.';
+        }
+      } catch {
+        formStatus.textContent = 'Network error. Please try again.';
+      }
+    });
+
+    load();
+  }
+</script>
