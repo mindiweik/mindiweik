@@ -7,11 +7,12 @@ const { active } = Astro.props;
 ---
 <header class="site-header">
   <a href="/" aria-label={`${SITE.name} home`} class="site-header__logo"><Logo /></a>
-  <nav class="site-header__nav">
+  <nav class="site-header__nav" aria-label="Primary">
     {SITE.nav.map((item) => (
       <a
         href={item.href}
         class="hov-link"
+        aria-current={active === item.href ? 'page' : undefined}
         style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''};--hover-accent:var(--accent-${item.href.replace('/', '') || 'primary'}, var(--accent-primary))`}
       >{item.label}</a>
     ))}
