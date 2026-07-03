@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import { fetchRepoActivity } from '../../lib/github.ts';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+const activity = project.data.repoUrl ? await fetchRepoActivity(project.data.repoUrl) : null;
+---
+<ProjectLayout
+  name={project.data.name}
+  slug={project.id}
+  status={project.data.status}
+  stack={project.data.stack}
+  since={project.data.since}
+  featured={project.data.featured}
+  pushedAt={activity?.pushedAt}
+  url={project.data.url}
+  repoUrl={project.data.repoUrl}
+  image={project.data.image}
+  imageAlt={project.data.imageAlt}
+>
+  <Content />
+</ProjectLayout>
