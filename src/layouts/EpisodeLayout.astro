@@ -5,6 +5,7 @@ import VersionChip from '../components/content/VersionChip.astro';
 import PublishStateChip from '../components/content/PublishStateChip.astro';
 import type { PublishState } from '../lib/publish.ts';
 import EpisodeNav from '../components/content/EpisodeNav.astro';
+import Comments from '../components/content/Comments.astro';
 import '../styles/prose.css';
 interface Props {
   id: string; title: string; version: string; season: number; pubDate: Date;
@@ -74,4 +75,5 @@ const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b))
 
   <article class="prose" style="margin-top:1.2rem"><slot /></article>
   <EpisodeNav currentId={id} />
+  <Comments pageKey={`podcast/${id}`} zone="podcast" />
 </BaseLayout>
