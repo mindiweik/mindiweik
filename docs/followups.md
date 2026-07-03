@@ -10,13 +10,31 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   - **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
     `src/lib/collections.ts`. Replace with real ship dates; add a test for the `order > 0` branch.
   - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
-- **About copy** is placeholder; real bio + the crew during content work.
-- **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
-- **Inline code styling** — make inline `code-word` spans more visually distinct (background/color/border) so they're easy to pick out in prose. `.prose code` in `src/styles/prose.css`. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
 
 ## Site features
+- **Dependabot** — set up GitHub Dependabot for the `mindiweik` repo (automated dependency
+  update PRs + security alerts). Add `.github/dependabot.yml` (npm + github-actions ecosystems).
+  Mindi requested 2026-07-03.
+- **Post-deploy smoke test** — after the FTP upload in `deploy.yml`, curl the homepage + a
+  couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
+  FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
+  bad deploy). Highest-value reliability add. Mindi requested 2026-07-03.
+- **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
+  block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
+  a bad merge going live. Mindi requested 2026-07-03.
+- **Prose lint in CI** — enforce the documented writing conventions automatically: fail on
+  emdashes in `src/content/` (extend to sentence-casing / lowercase-hashtag checks later).
+  Freezes the manual style review into a check that runs every push. Mindi requested 2026-07-03.
+- **Link checker in CI** — automate the dead-link pass (lychee or similar) so internal/external
+  links stay clean as content grows, instead of relying on periodic manual sweeps.
+  Mindi requested 2026-07-03.
+- **Structured data (JSON-LD)** — add schema.org markup: `Article` for blog posts,
+  `PodcastEpisode` for episodes. Improves search appearance (ties into the GSC work).
+  Mindi requested 2026-07-03.
+- **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
+  silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
 - **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
   color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
   the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
@@ -29,7 +47,26 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   RSS-to-email automation fits a static site), Kit/ConvertKit, or Mailerlite; site already
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
+- **OG card niceties (deferred from social share cards, 2026-07-03)** — three minors from the
+  final review, none urgent: (1) `og:image:alt` for accessibility (fold into the accessibility
+  pass); (2) `og:image:width/height` are hardcoded to the zone-card dims even when a post sets
+  a custom `ogImage` (blast radius one post, ratio is what matters); (3) the tagline in
+  `scripts/generate-og-cards.mjs` duplicates `site.ts` without a source comment. Also open:
+  Hostinger CDN image optimization serves the cards at 1600×840 instead of the full 2400×1260 —
+  fine today; hPanel toggle exists if full-res ever matters.
+
 ## Resolved
+- ~~**Social sharing preview images**~~ -> SHIPPED 2026-07-03. Five zone-colored OG cards
+  (checked-in satori script, `npm run og:cards`, rendered at 2x for retina crispness) in
+  `public/og/`; `BaseHead` emits absolute `og:image` + `twitter:card` with fallback chain
+  (opt-in `ogImage` frontmatter -> zone card -> default); fixed the og:description bug
+  (article/episode/speaking pages emitted the site tagline). Card URLs carry `?v=N` — bump
+  `OG_CARD_VERSION` in `BaseHead.astro` whenever regenerating (Hostinger CDN caches PNGs 7
+  days). Spec + plan in `docs/superpowers/`. Remaining: LinkedIn Post Inspector re-scrape on
+  already-shared URLs (Mindi).
+- ~~**About copy**~~ -> done 2026-07-03. Real bio + the crew replaced the placeholder.
+- ~~**Social links**~~ -> done 2026-07-03. Mindi's socials added.
+- ~~**Inline code styling**~~ -> done 2026-07-03. Inline `code` spans visually distinct in prose.
 - ~~**Smart 404**~~ -> shipped 2026-07-02. Build-time route list (isVisible-filtered, so drafts
   never leak) inlined into 404.astro; client-side fuzzy match (token overlap + Levenshtein on
   the last segment, section words excluded) renders up to 5 "did you mean" buttons showing
