@@ -8,15 +8,21 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
+      time: "09:00"
+      timezone: "America/Denver"
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
-    # Bundle minor + patch bumps into one PR to cut noise on a solo repo.
     groups:
+      # Safe bumps: one bundled PR to merge without much thought.
       npm-minor-patch:
         update-types:
           - "minor"
           - "patch"
+      # Majors: bundled into one deliberate "review carefully" PR.
+      npm-major:
+        update-types:
+          - "major"
 
   # GitHub Actions used in workflows (e.g. deploy.yml)
   - package-ecosystem: "github-actions"
@@ -24,11 +30,17 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
+      time: "09:00"
+      timezone: "America/Denver"
     labels:
       - "dependencies"
       - "github-actions"
     groups:
+      # First-party actions rarely break; bundle everything (incl. majors).
       actions-all:
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
+          - "major"
