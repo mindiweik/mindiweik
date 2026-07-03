@@ -102,6 +102,18 @@ try {
       }
     }
 
+    // Per-email cap: since a confirmation email is sent to whatever address is
+    // entered, limit how often any one address can be mailed (blocks using the
+    // form to send unsolicited mail to a victim). 3 per address per day.
+    $erl = $pdo->prepare(
+      'SELECT COUNT(*) FROM comments
+       WHERE author_email = ? AND created_at >= UTC_TIMESTAMP() - INTERVAL 1 DAY'
+    );
+    $erl->execute([$email]);
+    if ((int) $erl->fetchColumn() >= 3) {
+      respond(429, ['error' => 'Too many comments from this email today.']);
+    }
+
     // Store as unverified (approved=0) with a one-time token. The link emailed
     // below flips it to approved=1 (live) when the commenter clicks it.
     $token = bin2hex(random_bytes(32));
