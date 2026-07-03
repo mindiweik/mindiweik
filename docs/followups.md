@@ -10,18 +10,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 
 ## Site features
 
-- **Dependabot** — set up GitHub Dependabot for the `mindiweik` repo (automated dependency
-  update PRs + security alerts). Add `.github/dependabot.yml` (npm + github-actions ecosystems).
-  Mindi requested 2026-07-03.
-- **Post-deploy smoke test** — after the FTP upload in `deploy.yml`, curl the homepage + a
-  couple key pages and assert 200 + expected content; fail the workflow if not. Catches the
-  FTP-timeout / silent-breakage failures (main auto-deploys, so nothing currently notices a
-  bad deploy). Highest-value reliability add. Mindi requested 2026-07-03.
-  - **False-positive found 7/3 (run for `ed252e6`):** Hostinger 403'd the Actions runner on
-    ALL urls (both domains) when two deploys ran back-to-back; the site was fine from a
-    residential IP. Likely WAF/rate-limit on the runner IP. Consider: longer backoff between
-    retries, a browser-ish User-Agent, or tolerating 403-from-runner when a prior run just
-    passed.
 - **PR build gate + branch protection** — run `astro build` + `astro check` on every PR and
   block merge to main on failure. Since main auto-deploys to prod, this is the seatbelt against
   a bad merge going live. Mindi requested 2026-07-03.
@@ -48,10 +36,15 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   so project pages share the generic site OG description instead of their blurb. Matches the
   preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
   From final review 2026-07-03.
-- **Accessibility pass** — audit + fixes across the site: semantic landmarks/heading order,
-  color contrast (accent-on-dark chips + muted text), focus states, alt text sweep (ties into
-  the images pass), reduced-motion handling, keyboard nav on cards/nav. Run Lighthouse/axe as
-  the baseline. Mindi requested 2026-07-02.
+- **Accessibility pass** — audit + fixes across the site. Mindi requested 2026-07-02.
+  - **Baseline shipped 2026-07-03 (PR #11, `chore/a11y-audit`):** skip-to-content link +
+    `id="main-content"` on `<main>` (WCAG 2.4.1); global `:focus-visible` outline (2.4.7);
+    `aria-current="page"` on active nav link (1.4.1); `prefers-reduced-motion` media query
+    (2.3.3); labeled header/footer nav landmarks (1.3.1). Verified in built `dist/`.
+  - **Still open:** color contrast (accent-on-dark chips + muted text, incl. the `opacity:0.6`
+    inactive nav links); heading order audit; alt text sweep (ties into the images pass +
+    `og:image:alt` below); keyboard nav on cards; run Lighthouse/axe as the baseline
+    (ties into the Lighthouse CI budgets item above).
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
@@ -82,6 +75,23 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   never rewritten; `BaseHead.astro` is prettier-ignored (upstream prettier-plugin-astro bug
   parsing the inline gtag `define:vars` script — ESLint still lints it). `docs/superpowers/`
   and `scripts/fixtures/` are prettier-ignored (embedded fragments / byte-exact fixtures).
+- ~~**Post-deploy smoke test**~~ -> SHIPPED 2026-07-03; false-alarm hardened same day.
+  `scripts/smoke-test.mjs` (+ unit tests) runs as the `smoke-test` job in `deploy.yml`:
+  fetches the five prod URLs, asserts 200 + the `mindiweik` marker on both homepages, retries
+  5x/10s for FTP/CDN propagation lag. The 7/3 false positive (Hostinger 403'd the runner IP on
+  ALL urls while the site was fine from a residential IP) is fixed two ways: (1) send a
+  browser-ish `User-Agent`/`Accept` so the runner reads less like a bot; (2) classify a uniform
+  403/429 across every URL as INCONCLUSIVE (warn, exit 0) instead of failing the run; a real
+  breakage still fails loudly (any 404/500/timeout, a 200 missing the marker, or a mixed
+  pass/block result). Separately, raised the FTP-Deploy-Action timeout 30s->120s on all three
+  uploads to absorb the intermittent "Failed to connect... via FTP" deploy drops.
+- ~~**Dependabot**~~ -> shipped 2026-07-03. `.github/dependabot.yml` covers npm +
+  github-actions, weekly (Mon 09:00 America/Denver). Grouping: npm minor/patch bundled,
+  npm majors bundled separately for deliberate review, all github-actions (incl. majors)
+  bundled since first-party actions rarely break. First scan opened PRs #5-#8 (all merged).
+  Repo `dependencies` + `github-actions` labels created. Remaining (manual, one toggle):
+  enable **Dependabot security updates** under Settings > Code security for CVE-driven PRs —
+  the config file only does version updates.
 - ~~**Social sharing preview images**~~ -> SHIPPED 2026-07-03. Five zone-colored OG cards
   (checked-in satori script, `npm run og:cards`, rendered at 2x for retina crispness) in
   `public/og/`; `BaseHead` emits absolute `og:image` + `twitter:card` with fallback chain

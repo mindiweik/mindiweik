@@ -26,9 +26,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
@@ -39,11 +39,15 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Bumped from the 30s default: Hostinger's FTP endpoint has intermittently
+          # been slow to accept the connection ("Failed to connect... via FTP"), which
+          # failed the deploy. A longer per-operation timeout absorbs a slow handshake.
+          timeout: 120000
           local-dir: ./dist/
           server-dir: /domains/mindiweik.com/public_html/
           # dev/ is the dev.mindiweik.com preview (nested subdomain folder);
@@ -61,11 +65,12 @@ jobs:
         run: node scripts/build-wip-landing.mjs
 
       - name: Deploy wip-podcast.com landing page
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          timeout: 120000 # see note on the prod upload above
           local-dir: ./wip-dist/
           server-dir: /domains/wip-podcast.com/public_html/
 
@@ -85,11 +90,12 @@ jobs:
           printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
 
       - name: Deploy dev preview via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          timeout: 120000 # see note on the prod upload above
           local-dir: ./dist/
           server-dir: /domains/mindiweik.com/public_html/dev/
           exclude: |
@@ -107,9 +113,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions: {}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
 
