@@ -33,7 +33,7 @@ Now, Mara is on a mission to improve community connections and relationships tha
 
 > We become the people that we spend the most time with. The more intentional we can be and the more tools we can have to nurture our relationships with those people that we do want to be around, he more satisfying our lives will be. It's okay to have an amazing, satisfying life!
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

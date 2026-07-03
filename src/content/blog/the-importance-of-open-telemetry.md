@@ -29,7 +29,7 @@ First, I want to share a bit of a story with a fun analogy I enjoyed using in my
 
 Here I have also gone into more detail than I was able to cover in my 5-minute lightning talk. *Talk recording at the end of this post for those interested!*
 
-## Have you ever tried debugging without logs?
+## have you ever tried debugging without logs?
 
 When I started working on one of my first greenfield projects, we were still setting up our CI/CD pipelines for deployments and this was often my task.
 
@@ -47,7 +47,7 @@ It’s not impossible to solve bugs this way. However, it's frustrating, time-co
 
 *That’s where observability and telemetry come in! Let’s start small and build our way up, shall we?*
 
-## 👾 What is Telemetry?
+## 👾 what is telemetry?
 
 I like to think of telemetry most simply as a *collection of data*.
 
@@ -61,7 +61,7 @@ This data is also what will be fed into our Observability tooling!
 - Metrics
 - Traces
 
-### Logs
+### logs
 
 Logs are text records of events that happen within your application. It’s an append-only data structure, usually including a timestamp and a message about the event.
 
@@ -77,7 +77,7 @@ When something goes wrong, which can - and does - happen, it’s important to lo
 
 In the case of telemetry, logs are sent to a database with efficient storage that allows for filtering and searching.
 
-### Metrics
+### metrics
 
 Metrics are numbers that help us track performance. It’s hard to measure something without numbers!
 
@@ -85,7 +85,7 @@ To best use metrics, it’s very helpful to have an idea of what measurements yo
 
 There are 4 common types: counters, gauges, histograms, and summaries. I like to think of this as data that we can use to visualize what’s going on inside the application.
 
-### Traces
+### traces
 
 Consider these maps of what happened. You can follow the route to see what turns were taken and when.
 
@@ -97,7 +97,7 @@ Because we can now see previously invisible bottlenecks, we can identify what to
 
 ***Let’s look at a recent example I encountered!***
 
-## 🤓 Real Example
+## 🤓 real example
 
 While reviewing some of the data, we noticed in our **metrics** that there were several of requests that were taking give or take an average of ~8 seconds to respond. 
 
@@ -109,7 +109,7 @@ I was tasked with figuring out what was going on. I reviewed our **logs** and **
 
 Blurry for added privacy and to capture all trace events. Highlighted portion = all the same call repeated multiple times
 
-### ***What was happening?***
+### ***what was happening?***
 
 Upon first glance, it appeared related to a code call that shouldn’t have been happening with the inputs provided. I was questioning, “how in the world is this getting called with an expected undefined input?” 🤔
 
@@ -121,7 +121,7 @@ We didn’t notice it because our local data set is MUCH smaller than our produc
 
 After a relatively simple refactor of how this interface was initiated and this particular value captured (and now stored) at the very beginning, I tested with Application Insights again locally and I was thrilled to find out that I fixed it! 😮‍💨
 
-## 📊 What is Observability?
+## 📊 what is observability?
 
 As simply as possible, I would define observability as a collection of data. Specifically all of the telemetry data we already covered!
 
@@ -147,7 +147,7 @@ Myriad tools exist for observability, some with more emphasis on certain telemet
 
 The point is, there are a lot of options. To decide, you will also need to know what information is most important to your company, for your software, or whatever other stakeholder so you can capture and display that data most appropriately.
 
-## 🔭 What is Open Telemetry?
+## 🔭 what is open telemetry?
 
 Again, in the simplest terms: OTel is a free, open source framework. It aids in the collection and export of telemetry data to various observability tools.
 
@@ -196,7 +196,7 @@ There are opportunities for customization, but better yet, there are “auto-ins
 
 Once it’s implemented, Open Telemetry is useful for debugging, maintaining reliable systems, and monitoring performance of your application(s).
 
-## Closing Thoughts
+## closing thoughts
 
 [Open Telemetry](https://opentelemetry.io/) isn’t necessarily super *easy* to use, but it was much easier to work with than I expected!
 
@@ -216,7 +216,7 @@ It feels like our real example was resolved much faster than it would have been 
 
 If you haven’t yet, but you want to improve your understanding of your application adn its actions, I highly recommend Open Telemetry! 😁
 
-## 👀 BONUS: Recording
+## 👀 bonus: recording
 
 <div style="margin:1.2rem 0;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
   <iframe src="https://www.youtube-nocookie.com/embed/s3JYirx26s8" title="How to See the Invisible: Intro to OpenTelemetry" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>

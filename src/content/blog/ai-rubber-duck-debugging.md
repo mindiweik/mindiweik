@@ -14,7 +14,7 @@ It works. Sometimes embarrassingly well.
 
 Lately I've been doing something even better. Same concept, but the duck talks back.
 
-## The setup
+## the setup
 
 I'm a founding engineer at a startup. We're small, moving fast, and I often find myself deep in territory I haven't been in before. CD pipelines. Docker buildx. GitLab CI. Infrastructure stuff that I'm interested in, but isn't my daily bread.
 
@@ -26,7 +26,7 @@ And I mean *actually* talk through it, not "write me a CI pipeline," but "here's
 
 There's a definitive difference.
 
-## What makes it actually work
+## what makes it actually work
 
 The magic isn't AI itself. The magic is **the process of explaining the problem.**
 
@@ -34,7 +34,7 @@ When you're forced to write up what's happening like what you expected, what act
 
 It's the rubber duck effect. Except when you're done explaining, the duck goes "oh interesting, that error usually means X. Have you checked Y?" and suddenly you're actually learning *why* X causes that behavior, not just copying a fix from Stack Overflow.
 
-## A real example
+## a real example
 
 Recently I spent a few hours debugging a CD pipeline for that startup project I work on. Here's a taste of what we went through:
 
@@ -48,7 +48,7 @@ Each one of those could have been a rabbit hole I fell into alone, probably gett
 
 Instead, each time something broke, I pasted the error and explained what I was seeing. We troubleshot it together. I asked "why does this happen?" and got actual explanations, not just "run this command." By the end, I understood QEMU emulation, Docker credential stores, and buildkit networking in a way I genuinely wouldn't have if I'd just followed a tutorial.
 
-## The writing-up-the-problem part is a skill
+## the writing-up-the-problem part is a skill
 
 This is maybe the most underrated part.
 
@@ -62,7 +62,7 @@ When you can do this well, you become better at asking for help from humans too.
 
 And weirdly, sometimes you don't even need the answer. You just needed to write it out.
 
-## It's not cheating. It's learning out loud.
+## it's not cheating. it's learning out loud.
 
 I think there's still some guilt in the developer community around using AI. Like you're supposed to suffer through the docs alone as some kind of rite of passage.
 

@@ -35,7 +35,7 @@ Anna's network-first philosophy isn't just theory. It's built from years of watc
 
 > Record yourself speaking about something. Anything. If you do it, you will be a more successful person in life.
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

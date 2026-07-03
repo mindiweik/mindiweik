@@ -8,7 +8,7 @@ readingTime: 9
 
 I previously shared the beginnings of my journey into JMeter in Part 1:
 
-#### [JMeter Performance Testing: Part 1](/blog/jmeter-performance-testing-part-1)
+#### [jmeter performance testing: part 1](/blog/jmeter-performance-testing-part-1)
 
 If you missed that, the TLDR is that JMeter has a nuanced interface that takes practice. We explored JMeter basics and discussed the setup options used for our specific API service that acts as a mapping translation.
 
@@ -19,7 +19,7 @@ Now, we move on to Part 2! ✌️This time, we’ll look at my usage and experie
 1. 👩🏽‍💻 Usage and Testing
 2. 🤖 Script and Automate
 
-## 👩🏽‍💻 Usage and Testing
+## 👩🏽‍💻 usage and testing
 
 To get going, I checked how JMeter worked in the GUI with a local server instance and also checked connections to our development service. It was important to me to check that everything worked properly before getting too far.
 
@@ -38,7 +38,7 @@ I informed others using the service with ample notice of the intended testing st
 
 *Let’s go!*
 
-## Start With a Plan
+## start with a plan
 
 We opted to perform **load testing**, **stress testing**, and **spike testing**. To learn more about these in detail, [check this Geeks for Geeks post](https://www.geeksforgeeks.org/performance-testing-software-testing/#types-of-performance-testing:~:text=users%20or%20transactions.-,Types%20of%20performance%20testing,-Performance%20Testing%20is). In the meantime, here are my generalized definitions:
 
@@ -63,7 +63,7 @@ We opted to perform **load testing**, **stress testing**, and **spike testing**.
   - We chose 48 hours for our test.
 - I opted to run this toward the end of the week and over a weekend to reduce disruptions for other devs testing out our service for implementation.
 
-## Configure the Tests
+## configure the tests
 
 Next, I used the setup options from [Part 1](/blog/jmeter-performance-testing-part-1). Although it was a bit cumbersome, I created a file for each testing scenario. I did this for two reasons.
 
@@ -72,25 +72,25 @@ Next, I used the setup options from [Part 1](/blog/jmeter-performance-testing-pa
 
 ***“So, what were the configurations?”*** you ask. Let’s cover some rough variations!
 
-### 🔁 Option 1: HTTP Request
+### 🔁 option 1: http request
 
 For each test, this remained generally the same. The only difference was the local http:// request as opposed to the deployment service https:// request. 
 
-### 📋 Option 2: HTTP Header Manager
+### 📋 option 2: http header manager
 
 Another easy one! This remained constant between the sets of local and development service tests, but we used separate values for each environment.
 
-### 🧐 Option 4: Extended CSV Data Set Config
+### 🧐 option 4: extended csv data set config
 
 Yes, I went out of order; bear with me! This was another consistent option. This setup used the same CSV file with thousands of inputs.
 
-### ⏱️ Option 3: Constant Throughput Timer
+### ⏱️ option 3: constant throughput timer
 
 Here’s where most of the complications came in. Each test had a different throughput amount and/or time range we wanted to test. Below are the details. Remember that the throughput field needs a number for the “samples per minute.”
 
 Again we assume we had an average of 50,000 daily requests with the highest average of 100,000 daily requests for easier reference. I’ve rounded all results for simplification, but you can extend to whatever decimal point range you like.
 
-#### **Load Testing**
+#### **load testing**
 
 - Average Load Testing
   - **Time:** We wanted to test the average load over an hour.
@@ -99,7 +99,7 @@ Again we assume we had an average of 50,000 daily requests with the highest aver
   - **Time:** We wanted to test the highest average load over an hour for consistency.
   - **Throughput:** 100,000 / 24 hours / 60 minutes = **69.4 requests/minute**
 
-#### **Stress Testing**
+#### **stress testing**
 
 - 3x the Average Load
   - **Time:** For consistency, we maintained an hour timeframe.
@@ -110,7 +110,7 @@ Again we assume we had an average of 50,000 daily requests with the highest aver
   - **Throughput:** Multiply the Highest Average Load Test amount by 3. I’m using the rounded number again to keep things simple.
     - 69.4 requests x 3 = **208.2 requests/minute**
 
-#### **Spike Testing**
+#### **spike testing**
 
 We set up a short “warm-up” period for the server to better simulate a real-world spike among regular traffic in each spike test. Each of my warm-ups lasted 5 minutes and used the average load throughput of **34.7 requests/minute**. 
 
@@ -130,7 +130,7 @@ For consistency, each spike test was set to last for 10 minutes after the 5-minu
   - **Throughput:** To simulate this spike, we will divide our spike amount of 50,000 by the 10-minute timeframe.
     - 50,000 requests / 10 minutes = **5,000 requests/minute**
 
-#### **Standard Load Testing**
+#### **standard load testing**
 
 After performing all of these, I checked with our QA testing expert to see if I had missed anything. She suggested we perform this test, too! I repeated the average load and highest average load tests with a much longer timeframe.
 
@@ -143,13 +143,13 @@ After performing all of these, I checked with our QA testing expert to see if I 
 
 This is quite a long time to test! In our case, we had others using the API to implement it in the platform to ultimately use the service. For this reason, I tested Friday through Sunday. I checked in a little over the weekend, which is easy to do when you work remotely. 👍
 
-## Test Away
+## test away
 
 Once everything is set up, run the tests!
 
 I kept an eye on them and did low-key tasks while waiting to check the progress in case of any issues. For instance, my internet cut out during one of my tests! I quickly reset and started the test again.
 
-## Don’t Forget to Document
+## don’t forget to document
 
 Immediately after finishing the tests, I documented results, stored the test files, and gathered details so anyone could access and run the tests later if desired. Don’t wait!
 
@@ -157,7 +157,7 @@ I added this to a Confluence document with additional information, like which pl
 
 Documentation like this, even if it’s not exciting, will be helpful for your team and your leaders to know what you tested so they can provide feedback and understand what was tested if more testing is needed later.
 
-## 🤖 Script and Automate
+## 🤖 script and automate
 
 Despite all that lovely documentation, my teammate and I felt storing test files in the repo would be best for our future selves and teammates.
 
@@ -165,13 +165,13 @@ What would be even better? If our future selves and teammates could run those te
 
 *This is where the real fun began!*
 
-## User Defined Variables
+## user defined variables
 
 The first thing to learn was how to use the [CLI](https://jmeter.apache.org/usermanual/get-started.html#non_gui:~:text=1.4.4%20CLI%20Mode%20(Command%20Line%20mode%20was%20called%20NON%20GUI%20mode)%C2%B6) and incorporate User Defined Variables. This [Stack Overflow response](https://stackoverflow.com/questions/59139762/how-to-use-command-line-parameters-in-jmeter#:~:text=10-,Let%27s%20start%20clean%3A,-In%20the%20User) helped get me started.
 
 Again, I toyed with different options and worked through some examples to get comfortable with User Defined Variables. It’s neat to see just how much you can parameterize! *Spoiler alert: almost everything!*
 
-### How to Parameterize?
+### how to parameterize?
 
 First, we need to add a config element for User Defined Variables.
 
@@ -195,7 +195,7 @@ One important thing I learned during this process is that it is possible to use 
 
 ![Using the full URL in the path field of an HTTP Request](../../assets/blog/jmeter-performance-testing-part-2/full-url-in-path.png)
 
-## Consider the Options
+## consider the options
 
 Once I had thoroughly tested the available parameterization options, I had to consider our goals. I first went overboard and made a single test file that we could run any test we wanted because everything was parameterized, with most of the test numbers defaulting to zero as a safe placeholder.
 
@@ -229,19 +229,19 @@ jmeter -n -t <path_to_file.jmx> \
 
 Once a test is completed, you can review the results! Using .csv is an option, but it provides minimal detail. The most informative option uses JMeter GUI mode to review the .jtl results file using the View Results Tree, Summary Report, or Aggregate Report options within the test plan.
 
-## Create and Iterate
+## create and iterate
 
 I started by creating the three files.
 
-#### Load Test
+#### load test
 
 I created a load.jmx file, which contained the default settings for a 60-minute test of the average load.
 
-#### Stress Test
+#### stress test
 
 The stress.jmx file contained the default settings for a 60-minute test of 3x the average load.
 
-#### Spike Test
+#### spike test
 
 The spike.jmx file contained the default settings for a 10-minute stress test (50k spike target by default). As with spike testing, there is a 5-minute warm-up before the spike start for a 15-minute total test.
 
@@ -251,7 +251,7 @@ Finally, I added these files to the repo and added information on a sample scrip
 
 **I hope that this has been helpful and/or interesting! This was where the fun presented itself in the form of a challenge; it was a joy trying to figure out the parameterization!**
 
-## 📚 Further Reading
+## 📚 further reading
 
 - Stack Overflow: [How to Use Command Line Parameters in JMeter](https://stackoverflow.com/questions/59139762/how-to-use-command-line-parameters-in-jmeter)
 - Perforce: [BlazeMeter - User Defined Variables](https://portal.perforce.com/s/article/Using-User-Defined-Variables-1707509382889)

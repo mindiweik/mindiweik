@@ -20,9 +20,9 @@ Let’s look at the course from a high level and find out how I think it went. �
 - 🎬 Instructor
 - 👉 Conclusion
 
-## 💻 Overall Content
+## 💻 overall content
 
-### 🎯 Who is the Best Audience?
+### 🎯 who is the best audience?
 
 Any engineer can leverage knowledge of backend engineering. So, pretty much any active developer could take this course!
 
@@ -30,7 +30,7 @@ Admittedly, a backend engineer will likely get more from the course as it is gea
 
 That said, this isn’t as ideal for a brand-new engineer with little experience. I’m not saying, “Don’t take it,” if you fall into that category, but I would recommend some self-guided digging into how the internet works and getting a nice base level of knowledge before taking the course. Nothing too thorough; he covers some basics. Having a point of reference for some terms would be useful.
 
-### 🛠️ Are the Skills Real World Applicable?
+### 🛠️ are the skills real world applicable?
 
 A resounding yes! 
 
@@ -40,7 +40,7 @@ These concepts directly aided my understanding of the full scope of the project 
 
 It was helpful for me, and I could see any of these areas being helpful for another developer in the right project or scenario.
 
-## ⏳ Time Commitment
+## ⏳ time commitment
 
 The course holds 55 lectures with 16 hours of content.
 
@@ -48,7 +48,7 @@ It’s one of the biggest Udemy courses I’ve taken to completion! I spent abou
 
 Often, it feels good to finish quickly. But I took my time watching a lecture every few days. I did this intentionally to absorb the content fully; I was committed to forming a solid foundation for the future.
 
-## 💸 Value
+## 💸 value
 
 The currently listed cost of this course is $94.99 USD.
 
@@ -58,7 +58,7 @@ If you are lucky enough for your company to have a deal with Udemy to provide yo
 
 Considering all of the in-depth content, I find this course to be very affordable. Of course, it’s even more affordable when purchased through a Udemy sale. Having been through the content, I feel the full price would be worth the investment.
 
-## 🎬 Instructor
+## 🎬 instructor
 
 [Hussein Nasser](https://www.udemy.com/course/fundamentals-of-backend-communications-and-protocols/?couponCode=KEEPLEARNING#instructor-1) is an Engineer with about 25 years of experience, which is apparent during his lectures. As he dove into a lecture or a concept, his excitement encouraged my desire to learn more!
 
@@ -70,7 +70,7 @@ The lectures are a collection of videos; some are from other courses by Hussein.
 
 Finally, if interested, there is a repo you can reference alongside the code examples. It was cool to see a small chat service and how that might work locally, for example!
 
-## 👉 Conclusion
+## 👉 conclusion
 
 **All things considered, this course was useful, engaging, and valuable to me. I highly recommend it to developers with a base level of knowledge who want to learn more about how things work “under the hood!”**
 
@@ -82,12 +82,12 @@ This course has so much usable content. I used it more than once in my day-to-da
 
 Hussein Nasser brings a wealth of knowledge and experience. Come prepared for energetic and informative lectures with plenty of visual aids!
 
-### 🥸 Proof of completion, just for fun:
+### 🥸 proof of completion, just for fun:
 
 ![Mindi's Udemy course completion certificate for Fundamentals of Backend Engineering](../../assets/blog/fundamentals-of-backend-engineering-course-review/udemy-backend-certificate.webp)
 
 **Mindi’s Udemy course completion certificate**
 
-### 👉 Bonus:
+### 👉 bonus:
 
 I was looking for new Podcasts to listen to during the course. I poked around a bit and found that Hussein Nasser has one if you want to listen! [Backend Engineering](https://www.husseinnasser.com/p/podcast.html)

@@ -6,7 +6,7 @@ tags: ["career","mindset"]
 readingTime: 2
 ---
 
-## Start with Failure - Speed Up Success
+## start with failure - speed up success
 
 As I began my endeavor to learn more in public, it felt symbolic to start with failing fast. I first heard this when [Dr. Emilyn Dale](https://www.linkedin.com/in/emilyndale/) talked about this at a [Women Impact Tech](https://womenimpacttech.com/) panel in Denver, CO, last year; it struck a chord for me. Little did I know I had already embraced it!
 
@@ -37,7 +37,7 @@ Here are a couple of examples:
 
 I recommend fostering a company culture of experimentation and innovation, but it doesn’t work for all businesses. As an individual contributor, embracing this concept when possible is good to help you make quick progress!
 
-## **Ideas to try in your own projects or at work:**
+## **ideas to try in your own projects or at work:**
 
 - Focus on one concept at a time. Iterations should be small.
 - After you read about ideas or approaches, try them!

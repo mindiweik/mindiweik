@@ -21,7 +21,7 @@ This is Part 3 of a 4-part series:
 
 Let's get into it.
 
-## The Network tab
+## the network tab
 
 Open DevTools and click the **Network** tab. If it looks empty, refresh the page.
 
@@ -29,7 +29,7 @@ Suddenly: a waterfall of requests. Every image, every script, every API call, ev
 
 Here's the thing: most debugging conversations I've had that started with "my API call isn't working" ended the second someone opened the Network tab. The answer is almost always right there.
 
-## HTTP status codes (the ones you actually need)
+## http status codes (the ones you actually need)
 
 Before we start breaking things on purpose, a quick cheat sheet:
 
@@ -48,7 +48,7 @@ Before we start breaking things on purpose, a quick cheat sheet:
 
 You'll see these in the Network tab. Learning to read them is half the debugging battle.
 
-## A working request, then some chaos
+## a working request, then some chaos
 
 Open a new browser tab, open DevTools to the Network tab, and paste this into the Console:
 
@@ -64,7 +64,7 @@ That's a healthy request. Now let's break some stuff.
 
 ## 4 ways things go wrong (and what they look like)
 
-### 1. Bad URL (failed request)
+### 1. bad url (failed request)
 
 ```js
 fetch('https://this-url-does-not-exist-at-all.xyz/api')
@@ -73,7 +73,7 @@ fetch('https://this-url-does-not-exist-at-all.xyz/api')
 
 No status code. No response. Just a red `failed` entry in the Network tab. This happens when the DNS lookup fails because the server doesn't exist. Classic typo in a base URL.
 
-### 2. Wrong endpoint, 404
+### 2. wrong endpoint, 404
 
 ```js
 fetch('https://api.thecatapi.com/v1/imaaaages/search')
@@ -82,7 +82,7 @@ fetch('https://api.thecatapi.com/v1/imaaaages/search')
 
 Spot the typo? `imaaaages` instead of `images`. The server exists, but the route doesn't. You'll see a clean `404` in the Network tab. This is one of the most common bugs I've seen new devs spend 20 minutes on and it's a one-character fix.
 
-### 3. CORS issues
+### 3. cors issues
 
 ```js
 fetch('https://www.google.com')
@@ -93,7 +93,7 @@ This one will fail with a CORS error. You'll see it in both the Console and the 
 
 CORS errors are confusing when you first encounter them, but they always follow the same pattern. Check the Network tab, look for the blocked request, and look for the `Access-Control-Allow-Origin` header in the response.
 
-### 4. Wrong HTTP method, 405
+### 4. wrong http method, 405
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -104,7 +104,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 
 The endpoint exists, but it doesn't accept DELETE requests (or whatever method you used). The server responds with a `405 Method Not Allowed`. If you're getting a 405, double-check your HTTP verb; it's almost always a `POST` where there should be a `PUT`, or a `GET` where there should be a `PATCH`.
 
-## The Application tab
+## the application tab
 
 Okay, Network tab handled. Now let's talk about the **Application tab** which is less glamorous but super duper useful.
 
@@ -116,7 +116,7 @@ On the left sidebar you'll see a tree of storage options. The ones you'll use mo
 - **Local storage** - key/value pairs that persist even after you close the browser. Commonly used for things like dark mode preferences, cached data, or "remember me" flags.
 - **Session storage** - same as local storage, but cleared when you close the tab. Good for temporary state.
 
-## Viewing and editing stored data
+## viewing and editing stored data
 
 Click **Local storage** in the sidebar, then click your domain. You'll see a table of keys and values. You can:
 
@@ -128,7 +128,7 @@ This is incredibly useful for debugging auth or other workflows. If you're logge
 
 Real-world example: you're building a theme toggle. Light mode, dark mode, whatever. You store the preference in localStorage as `theme: "dark"`. If the toggle isn't working, open the Application tab and check: is the value actually being set? Is it being read correctly? You can manually change the value and refresh to test both states without touching your code.
 
-## Your Catz4Life challenge 🐱
+## your catz4life challenge 🐱
 
 Back to the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life). Open the project and the Network tab at the same time. Somewhere in the app there's a broken API call. Watch the Network tab as you interact with the page and find the failed request to figure out what went wrong.
 
@@ -136,7 +136,7 @@ Then check the Application tab. There's a theme toggle buried in the UI. Find wh
 
 Hints mode is still there if you need it: `HINTS = true` in `script.js`.
 
-## What's next
+## what's next
 
 In Part 4 (the finale!), we're covering Sources, Performance, and Lighthouse plus a full guided walkthrough of the Catz4Life sandbox with all the bugs called out by tab.
 

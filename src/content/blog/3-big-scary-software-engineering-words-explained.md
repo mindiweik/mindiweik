@@ -18,7 +18,7 @@ We’ll cover three of these terms that have given me past trouble. I hope I can
 
 **Let’s dive in!** 
 
-## ♻️ Idempotent
+## ♻️ idempotent
 
 **Simplified Meaning:**
 
@@ -62,7 +62,7 @@ We’ll cover three of these terms that have given me past trouble. I hope I can
 - [REST API Tutorial: Idempotent REST API](https://restfulapi.net/idempotent-rest-apis/)
 - [VIDEO: Alex Hyett](https://www.youtube.com/watch?v=XAccGbtl3Z8)
 
-## 🔀 Polymorphism
+## 🔀 polymorphism
 
 **Simplified Meaning:**
 
@@ -119,7 +119,7 @@ animal_sound(cat)  # Outputs: meow meow
 - [Tech Target](https://www.techtarget.com/whatis/definition/polymorphism#:~:text=The%20word%20polymorphism%20is%20derived,biology%2C%20chemistry%20and%20drug%20development.)
 - [VIDEO: iAmDev](https://www.youtube.com/watch?v=tIWm3I_Zu7I)
 
-## 💻 Isomorphic [JavaScript]
+## 💻 isomorphic [javascript]
 
 **Simplified Meaning:**
 

@@ -29,7 +29,7 @@ Before asking for help, we should consider what we need and be as specific as po
 3. 🤔 Reach outside your company
 4. 😊 Work on your own project(s)
 
-## 🫵 Look within your own team
+## 🫵 look within your own team
 
 Whether it’s a direct teammate or an admirable person on another team, start within! Don’t jump in “half-cocked,” though. 
 
@@ -56,7 +56,7 @@ Perhaps the Engineering Manager shared that their recommendation is actively loo
 
 The benefit to them will depend on the situation.
 
-## 🤝 Don’t underestimate other departments
+## 🤝 don’t underestimate other departments
 
 Unless an organization has strict policies barring collaboration across departments (Is that a thing? 🤔), connecting with new people working in other areas can bring a wealth of insight and information.
 
@@ -76,7 +76,7 @@ Even if your organization doesn’t openly support this approach, the benefits c
 
 Sometimes asking for forgiveness rather than permission isn’t a bad approach 😉 but use your best judgement!
 
-## 🤔 Reach outside your company
+## 🤔 reach outside your company
 
 Whether you find someone internally or not, there is almost always someone in your network who can help! Or, someone within your network can connect you with someone in *their* network. It’s all a big web after all. 🕸️
 
@@ -100,7 +100,7 @@ Here are just a few examples. Think outside the box; you might find other avenue
 - **Attend virtual events** - Similar to in-person events, these can be tech-related but don't have to be. There are loads of webinars and networking events online to expand your opportunities.
 - **Open Source** - If you have the time and capacity, consider working on open source projects to expand your skills!
 
-## 😊 Work on your own project(s)
+## 😊 work on your own project(s)
 
 Whether you have a cool idea or find a cool way to play with something new, working on personal project(s) is yet another great option.
 
@@ -116,7 +116,7 @@ Better yet, find a friend or two or more to work on a project with. You’ll hav
 
 Whatever path (or paths) you choose, there’s opportunity for you waiting behind a door. ***You just have to start opening them!* 🚪**
 
-## 🍀 Still no luck?
+## 🍀 still no luck?
 
 I recognize that the above won’t always work or it might just take too much time. It’s worth noting if it is time to [consider leaving your job](https://open.substack.com/pub/thehustlingengineer/p/6-clear-signs-its-time-to-quit-your?utm_source=share&utm_medium=android&r=29u7hv). In several places I’ve come across the reminder that stagnation is a career killer.
 

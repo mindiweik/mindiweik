@@ -20,7 +20,7 @@ However, I know I’m not the only one to fall into this trap. I thought it woul
 
 **I’ll share some examples and my story. We’ll keep it simple.** 😉
 
-## 📂 Package & Module Definitions
+## 📂 package & module definitions
 
 Let’s quickly define a “package” and a “module” in software development to ensure a common understanding. 
 
@@ -40,7 +40,7 @@ When you add tooling like this, it needs ongoing maintenance - someone has to up
 
 Hidden security risks can also exist, especially if the creator(s) no longer maintain it. 
 
-## 💎 What is a Dependency?
+## 💎 what is a dependency?
 
 Dependencies are ultimately any package used in your project. Dependencies should be added to your package.json file's dependencies object to help your project function properly when deployed. 
 
@@ -72,7 +72,7 @@ And Zod? Especially because we use TypeScript in my team projects, a more strict
 
 Hopefully these examples provide a bit more context. To reiterate, when we need to use a package in the production deployment or if a tool is needed to interact with or validate user input, this is usually an indicator that your package needs to be located in the dependencies list.
 
-## 🧑🏾‍💻 What is a Dev Dependency?
+## 🧑🏾‍💻 what is a dev dependency?
 
 Now that we’ve established what a dependency is, let’s look at the other side of the equation - devDependencies. The devDependencies packages are specifically used for **local development and testing**. 
 
@@ -115,7 +115,7 @@ Of course, that makes sense. They say hindsight is 20/20.
 
 **I hope this cautionary tale is helpful for those who have just learned about** dependencies **and** devDependencies **or a good reminder for those who already know. Take an extra moment to think about your packages and where they belong!**
 
-## 🤓 Continued Reading:
+## 🤓 continued reading:
 
 If you want more details, I used these sources to help me refine my thoughts and phrasing!
 

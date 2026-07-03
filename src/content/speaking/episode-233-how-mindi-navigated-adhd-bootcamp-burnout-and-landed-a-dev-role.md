@@ -8,6 +8,6 @@ links:
   - { label: recording, url: "https://www.youtube.com/watch?v=Vpudcpxew1g" }
 ---
 
-### [Develop Yourself Podcast](https://www.parsity.io/podcast)
+### [develop yourself podcast](https://www.parsity.io/podcast)
 
 After connecting with [Brian Jenney](https://www.linkedin.com/in/brianjenney/) through mutual connections, it was a pleasure to share my story of career transition and navigation!

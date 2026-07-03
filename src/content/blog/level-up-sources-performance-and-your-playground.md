@@ -21,7 +21,7 @@ This is Part 4 of a 4-part series:
 
 Let's finish this.
 
-## The Sources tab
+## the sources tab
 
 The Sources tab is where debugging gets serious.
 
@@ -29,7 +29,7 @@ Open DevTools and click **Sources**. You'll see a file tree on the left where al
 
 Here's the thing: most new devs default to sprinkling `console.log` everywhere when something breaks. That works! But breakpoints are faster, more powerful, and make you look like a wizard to anyone watching.
 
-### Setting a breakpoint
+### setting a breakpoint
 
 1. Open the Sources tab
 2. Navigate to a JavaScript file in the file tree
@@ -37,7 +37,7 @@ Here's the thing: most new devs default to sprinkling `console.log` everywhere w
 
 That's it. A blue arrow appears on the line. Now when that line of code runs, your browser will pause, and you can inspect everything: variables, the call stack, what's in scope.
 
-### Stepping through code
+### stepping through code
 
 Once you're paused at a breakpoint, you have controls in the top right of the Sources panel:
 
@@ -48,17 +48,17 @@ Once you're paused at a breakpoint, you have controls in the top right of the So
 
 This is how senior engineers debug. They don't guess. They pause, look around, and step through the code line by line until they find exactly where things go wrong.
 
-### Conditional breakpoints
+### conditional breakpoints
 
 Right-click a line number and choose **Add conditional breakpoint**. You can type an expression like `count > 5` and the browser will only pause when that condition is true. Incredibly useful for loops where the bug only shows up on a specific iteration.
 
-## The Performance tab
+## the performance tab
 
 The Performance tab answers a question you'll hear a lot as you grow: *why is this so slow?* I don't see many devs using this tool and I don't use it as often as I probably could. 😅
 
 Open DevTools and click **Performance**. You'll see a big empty space and a record button.
 
-### Recording a performance profile
+### recording a performance profile
 
 1. Click the **record button** (or press `Cmd + E` on Mac, `Ctrl + E` on Windows)
 2. Interact with your page - scroll, click, load something
@@ -70,7 +70,7 @@ Now you'll see a timeline. It looks intimidating at first, but here's what to fo
 
 **The summary panel** at the bottom shows a breakdown of where time was spent: Scripting, Rendering, Painting, etc. If Scripting eats most of your time, your JavaScript is the culprit. If Rendering is high, your layout or CSS might be thrashing.
 
-### What to look for
+### what to look for
 
 - **Long tasks** - anything over 50ms is flagged in red. These are the tasks that make your UI feel crummy.
 - **Layout thrashing** - repeatedly reading and writing to the DOM forces the browser to recalculate layout over and over. It shows up as alternating purple (layout) and green (paint) blocks.
@@ -78,7 +78,7 @@ Now you'll see a timeline. It looks intimidating at first, but here's what to fo
 
 You don't need to master the Performance tab. But knowing it exists and how to open a recording means that when someone says "this page feels slow," you have a tool to actually find out why.
 
-## The Lighthouse tab
+## the lighthouse tab
 
 Lighthouse is an automated auditing tool built right into DevTools. It's one of the most useful things to run on any project you care about.
 
@@ -102,7 +102,7 @@ Each finding links to documentation explaining why it matters and how to fix it.
 
 Run Lighthouse on your side projects. You'll learn a lot about what "production-ready" actually means.
 
-## The full Catz4Life sandbox walkthrough
+## the full catz4life sandbox walkthrough
 
 If you've been following this series, you've had access to the [Catz4Life Adopshun Centre](https://github.com/mindiweik/catz4life) sandbox since Part 1. Now let's pull it all together.
 
@@ -114,7 +114,7 @@ Here's a quick guide to get started if you haven't yet:
 
 Hints mode is available if you want a nudge: set `HINTS = true` in `script.js`.
 
-### What's broken and where to find it
+### what's broken and where to find it
 
 **Elements tab**
 
@@ -142,7 +142,7 @@ Set a breakpoint on the button click handler and step through the code. Where do
 
 Run a Lighthouse audit on the page. What's the accessibility score? There are at least two issues to find.
 
-## Your browser is a workbench
+## your browser is a workbench
 
 Here's the thing about DevTools: it's not a tab you open when something breaks. It's a workbench you keep open while you build.
 
@@ -152,7 +152,7 @@ That instinct takes practice. But the fact that you've read all four parts of th
 
 Now go break something on purpose.
 
-## Your final Catz4Life challenge 🐱
+## your final catz4life challenge 🐱
 
 Fork the repo. Open DevTools. Fix every bug.
 

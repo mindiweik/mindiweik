@@ -5,7 +5,7 @@ season: 0
 pubDate: 2025-07-07
 ---
 
-## Welcome!
+## welcome!
 
 I'm excited for you to join me on my new adventure: a podcast called **[WIP]** where I’ll be talking about human development in tech!
 

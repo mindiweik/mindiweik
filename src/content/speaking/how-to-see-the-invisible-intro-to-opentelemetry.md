@@ -10,7 +10,7 @@ links:
   - { label: blog post, url: "/blog/the-importance-of-open-telemetry" }
 ---
 
-### Gusto Denver
+### gusto denver
 
 The Gusto Denver office put on [a night of inspiring Lightning Talks from women and folks in the tech industry](https://www.eventbrite.com/e/lightning-talks-from-women-and-folks-in-tech-tickets-1297171919129)!
 

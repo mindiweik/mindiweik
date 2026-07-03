@@ -23,37 +23,37 @@ Below, we’ll review the book's first two sections. They cover career fundament
 3. 🔨 Career Fundamentals
 4. 🔧 Building Competence
 
-## 🎬 The Presentation
+## 🎬 the presentation
 
 I [recorded a Loom presentation](https://www.loom.com/share/5ac9c21df8524559b6f8b824d6d35f7b?sid=8515e32e-f773-4d1a-b457-4d8f0d6ac798) if you’d prefer to hear and/or visually see this information. It’s about 22 minutes long. [Here is a link to the slides!](https://www.canva.com/design/DAGKHoLXYFo/88WU5ztzzdR4B70ygO3VHQ/edit?utm_content=DAGKHoLXYFo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 <div style="margin:1.2rem 0;position:relative;padding-bottom:64.92178098676294%;height:0;border-radius:10px;overflow:hidden;border:1px solid var(--border)"><iframe src="https://www.loom.com/embed/5ac9c21df8524559b6f8b824d6d35f7b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div>
 
-## 💡 My 3 Big Takeaways
+## 💡 my 3 big takeaways
 
 1. No one will advocate for your career better than you. Take ownership!
 2. Write it down. Yes, everything!
 3. Each journey is entirely unique.
 
-### 🫵 No one will advocate for your career better than you. Take ownership!
+### 🫵 no one will advocate for your career better than you. take ownership!
 
 When stated, it seems obvious. You are in control of your own career. In my [Power of Career Change](/blog/the-power-of-career-change) post, I talked about “ambiguous ambition,” where I didn’t have direction in my career path. ***I am happier actively making goals, completing activities toward those goals, and fulfilling a career trajectory.***
 
 I bring related topics to my one-on-one meetings. *Here’s [a terrific read](https://read.highgrowthengineer.com/p/you-and-your-manager-3-ways-to-work?utm_source=publication-search) in a collaboration post from [High Growth Engineer](https://open.substack.com/pub/highgrowthengineer) on working with your manager(s).*
 
-### 📝 Write it down. Yes, everything!
+### 📝 write it down. yes, everything!
 
 Documenting accomplishments, challenges, and projects cannot be understated. ***Don’t forget to add peer feedback!*** You will better understand what you’re doing now and what’s next. This is also a solid tool when discussing your role. This could be a promotion conversation aid, a resume update reference, or proof if you are in a sticky situation.
 
 Be consistent and store it on a personal device or account to retain access. I have a weekly reminder, tried a few templates, and currently use a [Trello board](https://trello.com/templates/productivity/self-advocacy-record-A7mAFfdr) adaptation. (Other options: [Brag Document](https://jvns.ca/blog/brag-documents/), Notion, spreadsheet(s), etc.)
 
-### 🦋 Each journey is entirely unique.
+### 🦋 each journey is entirely unique.
 
 Through Meetup, I meet women from all over who reside in my state and work in tech. Their stories and tech roles are different, even if they have the same title! The best we can do is learn from other’s experiences and apply their lessons to our challenges.
 
 ***Whatever advice, suggestions, and feedback you receive, you are responsible for discovering how and whether to apply it.*** Gergely did an excellent job clarifying that in this book. The information is a reference, not explicit instructions.
 
-## 🔨 Career Fundamentals
+## 🔨 career fundamentals
 
 The book starts with core aspects of career growth and ideas for reflection. We’ll touch on some concepts, but I encourage you to read it to understand them fully!
 
@@ -61,7 +61,7 @@ The book starts with core aspects of career growth and ideas for reflection. We�
 
 *→ I won’t touch on compensation, company tiers, performance reviews, promotions, and switching jobs here, but the book covers these in detail.*
 
-### 🏢 Types of Tech Companies
+### 🏢 types of tech companies
 
 There are several types of companies that hire technical workers.
 
@@ -74,7 +74,7 @@ There are several types of companies that hire technical workers.
 
 With such variety, how do you know what’s right for you? That may take some thought. Narrow realistic options based on your circumstances. Talk with other engineers to learn about their experiences and ask questions!
 
-### 👟 Types of Career Paths
+### 👟 types of career paths
 
 Once you find a role, how do you determine a path? Each is unique and could change over time, but how do you get there?
 
@@ -104,19 +104,19 @@ Some engineers stick with IC, some follow the single-track path, and some switch
 | Level 7 | Fellow | Senior VP of Eng |
 | Level 8 | | CTO |
 
-### ⚖️ Cost Centers and Profit Centers
+### ⚖️ cost centers and profit centers
 
 Some teams or projects are considered cost centers, while others are profit centers. Each has valuable experience, and working in both provides a more well-rounded engineering perspective.
 
-#### **📉 Cost Centers**
+#### **📉 cost centers**
 
 Cost centers are needed for smooth operation, but they don’t typically generate business income. The challenges tend to be more interesting. Experienced engineers may join a cost center to build creative solutions for more significant problems. A downside is turnover. These teams are often targets when businesses need to reduce costs or engineers seeking career advancement could transfer to a profit center team.
 
-#### **💰 Profit Centers**
+#### **💰 profit centers**
 
 Put simply, profit centers directly generate revenue for the business. Promotions can be more achievable in a profit center; it’s usually easier to reward profit! Performance reviews usually get better “scores” and bonuses, too. Engineers may join a profit center team to focus on growth or more straightforward challenges.
 
-### ✨ Career Progress Alternatives
+### ✨ career progress alternatives
 
 There’s more to a career than finances and benefits, right? Absolutely! Here are a few to consider in your long-term career.
 
@@ -127,11 +127,11 @@ There’s more to a career than finances and benefits, right? Absolutely! Here a
 - **Growth -** Are there opportunities for growth or options to progress your skills and career? You don’t want to stagnate!
 - **People -** This includes your relationship with your manager and peer dynamics.
 
-### 🎯 Owning Your Career
+### 🎯 owning your career
 
 No one else will advocate as well as you can throughout your career.
 
-#### **🏹 You’re in charge**
+#### **🏹 you’re in charge**
 
 It’s up to you! Set goals, track goal efforts, and iterate. Managers don’t usually have enough bandwidth to grow individual careers. Here are some ways to take charge:
 
@@ -139,7 +139,7 @@ It’s up to you! Set goals, track goal efforts, and iterate. Managers don’t u
 2. Share work you did that others may not notice.
 3. Create opportunities for feedback from others.
 
-#### **🏆 Be seen as someone who “gets things done”**
+#### **🏆 be seen as someone who “gets things done”**
 
 The easiest way is actually to get stuff done! Ideally, your work is high-quality and completed reliably. Finish the work you commit to and overdeliver when you can.
 
@@ -147,13 +147,13 @@ Spend your efforts on impactful projects. How do you find these? Explore and ask
 
 Talk about things you complete! Don’t go overboard, but your manager should definitely hear about it. Share it if there is a measurable business impact, the work was unusually complex, or it took great effort.
 
-#### **✏️ Keep a work log**
+#### **✏️ keep a work log**
 
 Identify and stick to a solution and a cadence that works for you. What should you track? Significant code changes, code reviews, design docs, discussions, planning, helping others, postmortems, and anything else that takes time and has an impact.
 
 A work log is powerful for identifying priorities and keeping them top of mind. You may feel empowered to say “no” or re-prioritize. Viewing completed work can bring a sense of accomplishment, too. It’s an incredible reference to quantify your impact.
 
-#### **💬 Feedback**
+#### **💬 feedback**
 
 Give and receive feedback as often as possible!
 
@@ -173,7 +173,7 @@ It’s helpful to consider your approach for positive and critical feedback.
 - **Positive:** Call out good work when you really mean it. Share specifics about what you liked and why.
 - **Critical:** Make it clear that you want to help and try to end positively. Focus on situational observations and impacts, clarify that it’s only an observation, and avoid telling them what to do. Deliver a critique in person (or via video) to reduce the chances of miscommunication.
 
-#### **🤝 Ally with your manager**
+#### **🤝 ally with your manager**
 
 Your manager will impact your career. It’s a significant workplace relationship! One who believes in, advocates for, and supports your career goals can make a huge difference. How can you foster this relationship? *It takes time.*
 
@@ -183,7 +183,7 @@ Your manager will impact your career. It’s a significant workplace relationshi
 
 ***This relationship isn’t only about you.*** Take time to understand their goals and challenges. You might help each other, or you may learn more about team nuances to identify opportunities in the future. Try to handle a task weighing on the team, especially if it helps you grow. *Your manager is human; empathy can go a long way!*
 
-#### 🐢 **Pace Yourself**
+#### 🐢 **pace yourself**
 
 The “Stretching, Executing, Coast” method can help prevent burnout. These are states of being in your day-to-day. Navigate between them.
 
@@ -194,14 +194,14 @@ The “Stretching, Executing, Coast” method can help prevent burnout. These ar
 - **Coast** when needed, but it should only be a few days. You may work at lower quality, not be proactive, and need task nudges in this state. 
   - It could be a breather after a tough project, catching up, or a mental break due to personal circumstances or symptoms of low motivation. If this extends, consider what must change ahead of a difficult conversation!
 
-#### **🤔 Owning Your Own Career Advice**
+#### **🤔 owning your own career advice**
 
 - Take a long-term view. Careers are not straightforward!
 - Find your own happiness. Don’t let promotions and titles define your self-worth.
 - Resist envy and avoid comparing yourself with others. It’s all about demonstrating impact when opportunities are not evenly spread out.
 - Play well with others. Don’t “elbow” people out of the way. You will only benefit by getting along well with others and helping each other.
 
-#### **🌱 Thriving in Different Environments**
+#### **🌱 thriving in different environments**
 
 There are different modes of work environments. Learning to work in each has a well-rounded result as companies and teams may shift over time.
 
@@ -230,13 +230,13 @@ Next, we’ll cover company modes: peacetime and wartime.
   - **Prioritize business needs.** Work like your job depends on it…it might!
   - Pace yourself to avoid burnout!
 
-## 🔧 Building Competence
+## 🔧 building competence
 
 The following are essential things to master to be considered a reliable and “competent” developer from the book's second part.
 
 These things take time; keep pushing forward!
 
-### 💪 Getting Things Done
+### 💪 getting things done
 
 Competent engineers are good at breaking down work, providing realistic estimates, unblocking themselves, and delivering quality work.
 
@@ -271,7 +271,7 @@ What if a person blocks you? This is more common at larger companies, and gettin
 
 ***Take initiative*** when you can. Some of the most productive engineers take on work that wasn’t assigned! Talk with others to learn about projects and opportunities to volunteer. Try to document unclear things, take on investigations, research tools or frameworks your team uses, and talk with your manager about upcoming projects.
 
-### ⌨️ Coding
+### ⌨️ coding
 
 Practice. Practice more. You need to be proficient to translate your ideas into working code efficiently. Here are some ways to practice:
 
@@ -279,21 +279,21 @@ Practice. Practice more. You need to be proficient to translate your ideas into 
 - ***Read as much as you write.*** This helps avoid unusual habits, styles, and conventions. Check out open-source code for more reading opportunities!
 - ***Code some more.*** Build a side project, complete tutorials with coding exercises, do coding challenges, or complete code katas.
 
-#### **👀 Readable Code**
+#### **👀 readable code**
 
 Crafting code that others can read (and maintain) is equally important as code that is correct. What readable code actually is may vary by team, company, and language. Ultimately, if you and others you work with can easily understand it, then it’s readable!
 
 You can practice this by revisiting the code you drafted to improve it before asking for a code review. When you receive feedback in code reviews, try to implement and understand them. Coding is a social activity; pay attention to the questions reviewers ask and ask follow-up questions. They might hold clues to improving readability!
 
-#### ✅ **Writing Quality Code**
+#### ✅ **writing quality code**
 
 Like all of the other advice in this section, this comes with practice. Some things to work on include using the correct levels of abstraction, handling errors well, and being wary of “unknown” states. In any case, you may have to experience these things to learn to do them well.
 
-### 😎 Software Development
+### 😎 software development
 
 Wouldn’t you know it? As you go along, there are also software development-specific things you can work on!
 
-#### 👌 **Become proficient in a language**
+#### 👌 **become proficient in a language**
 
 Learn the fundamentals and work to understand advanced features. You can consult docs, find a good reference, look at code examples, study a book, or watch videos. Then go deeper! Learn about what happens “behind the scenes.” It’s recommended to go deeper before going more broad.
 
@@ -301,23 +301,23 @@ Master the “main” framework you use with a language. You can follow the same
 
 Once you have a good handle on one language, learn a second. It doesn’t have to be done arbitrarily; seek out helpful opportunities! AI as a tool can aid you to learn faster, too. Doing this helps you better compare language strengths and weaknesses and, hopefully, keeps you from repeatedly using the same language.
 
-#### **🐞 Debugging**
+#### **🐞 debugging**
 
 Get to know your IDE. Some of them have really powerful runtime debugging tools! You should also watch more experienced developers debug, perhaps during a paired debugging session.
 
 Although it sounds counterintuitive, learning to debug without tools can be helpful. There’s the well-known console.log method, but you can also use paper to draw/write it out or write unit tests to help pinpoint issues.
 
-#### **♻️ Refactoring**
+#### **♻️ refactoring**
 
 This also takes practice! Make this an everyday habit and work on it, starting with your own. After you write code, revisit it and see what you can improve. Some IDEs have refactoring capabilities. Look at yours and give it a shot if yours has this ability.  Code reviews can give you more ideas for refactoring. It’s a good idea to give them a shot!
 
 Reading through code should provide new insights: you can deepen your knowledge of the codebase and begin to spot inconsistencies. Make notes as you go along and seek feedback to see if a refactor is worthwhile before diving in. For an easier start, you could look at refactoring tests and the helpers for those tests. It will deepen your codebase understanding; ideally, others will be able to better understand.
 
-#### **🧪 Testing**
+#### **🧪 testing**
 
 Speaking of tests, competent software developers ensure their code works, plain and simple. Before requesting a code review, they test the code. Preferably, your team will use automated testing to make this more seamless. In any case, reliable developers care deeply about edge cases and work to cover their work as much as possible.
 
-### 🧰 Tools of the Productive Software Engineer
+### 🧰 tools of the productive software engineer
 
 We’ve covered a lot already, but there are a few more things to consider.
 

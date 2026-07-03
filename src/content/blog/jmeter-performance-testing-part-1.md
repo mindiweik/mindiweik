@@ -21,7 +21,7 @@ First, we’ll review some initial understanding and setup details. In the [seco
 1. ☝️ Quick Intro to JMeter
 2. 🛠️ Test Setup
 
-## ☝️ Quick Intro to JMeter
+## ☝️ quick intro to jmeter
 
 [Apache JMeter](https://jmeter.apache.org/) is a free, open-source Java application for performance testing at the protocol level. It offers flexibility and configurability. It’s even OS-independent!
 
@@ -55,7 +55,7 @@ At the core, JMeter facilitates sending requests to your server and fielding res
   </div>
 </div>
 
-## 🛠️ Test Setup
+## 🛠️ test setup
 
 The initial setup and getting to know the software is nuanced, to say the least. A [Geeks for Geeks tutorial](https://www.geeksforgeeks.org/how-to-use-jmeter-for-performance-and-load-testing/) helped me get the basics, which was *very* useful. Afterward, I better understood where things were and how to leverage more options.
 
@@ -69,7 +69,7 @@ Next, I started working on specific options we wanted to use. Trial, error, and 
 
 For example, we wanted to test real requests with randomized inputs using a CSV with thousands of possibilities. I found a [CSV Data Set Config](https://www.blazemeter.com/blog/jmeter-csv-dataset-config) option, but this inputs from the file line-by-line! Random inputs would better simulate a real-world test. Identifying that tool took more effort, but I did find it! We’ll cover that below.
 
-### 🔁 Option 1: HTTP Request
+### 🔁 option 1: http request
 
 Testing an API service requires using an HTTP Request. Simple enough! Right?
 
@@ -89,13 +89,13 @@ One “gotcha” you might encounter is that you’ll need to ensure you have a 
 
 ![Thread Group screenshot](../../assets/blog/jmeter-performance-testing-part-1/thread-group-screenshot.png)
 
-### 📋 Option 2: HTTP Header Manager
+### 📋 option 2: http header manager
 
 For our service, we use a specific header. This needed to be included for our service to work properly with the tests, and this was one of the simplest items to add. I popped in a header key and an appropriate value and checked this off the list. ✅
 
 ![Header Manager screenshot](../../assets/blog/jmeter-performance-testing-part-1/header-manager-screenshot.png)
 
-### ⏱️ Option 3: Constant Throughput Timer
+### ⏱️ option 3: constant throughput timer
 
 While performing the initial simple tests to grasp JMeter, I discovered requests are sent without a throttle by default. However, we wanted to test specific loads that represented an approximate average of what we saw in the past for a similar service.
 
@@ -111,7 +111,7 @@ In our example, I input 34.7 to the “Target throughput (in samples per minute)
 
 In other words, if I test for 1 minute, I should expect about 34 requests to have been sent and received for my test’s duration. This option was helpful for deeper control over our test parameters!
 
-### 🧐 Option 4: Extended CSV Data Set Config
+### 🧐 option 4: extended csv data set config
 
 Finally, one of the most interesting options was the [Extended CSV Data Set Config](https://rollno748.medium.com/extended-csv-dataset-config-for-jmeter-17b1d8bda6b8). The CSV Data Set Config option didn’t provide the desired random input effect.
 
@@ -141,9 +141,9 @@ Now we’ve got a setup that replicates my selections!
 
 > **👋 That’s it for now! I hope you’ll check out Part 2 where we cover the usage of JMeter followed by parameterizing the file to script and automate for future use!**
 
-#### [JMeter Performance Testing: Part 2](/blog/jmeter-performance-testing-part-2)
+#### [jmeter performance testing: part 2](/blog/jmeter-performance-testing-part-2)
 
-## Further Reading
+## further reading
 
 - BlazeMeter: [JMeter Testing: Everything You Need to Know](https://www.blazemeter.com/resources/jmeter-testing)
   - PS I found many helpful resources on BlazeMeter!

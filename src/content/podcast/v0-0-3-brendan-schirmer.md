@@ -33,7 +33,7 @@ With the help of his own coach, he’s made revisions to his approach in pricing
 
 > Consider how you communicate with others as well as yourself, and the tiny changes you can make moving forward if you want to see true change.
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

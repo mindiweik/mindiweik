@@ -22,7 +22,7 @@ I want to share 3 resources for identifying and working through these challenges
 2. 📨 A well-timed post from a newsletter subscription
 3. 🎧 A truly excellent podcast episode
 
-## 🔗 A link from someone who cares
+## 🔗 a link from someone who cares
 
 One of the best ways to work through these challenges is to talk to someone who can hear you, relate, and help you put things into perspective. I’m thankful for the support around me. My partner is patient and kind and grapples with these things, too, as they are well into their tech career and have been here before.
 
@@ -38,7 +38,7 @@ But learning takes time. And I’m burnt out. After a short break, perseverance 
 
 **The list of recommendations at the end is an excellent resource for working through these challenges if you’re in this funk, too.**
 
-## 📨 A well-timed post from a newsletter subscription
+## 📨 a well-timed post from a newsletter subscription
 
 This week, I received a newsletter in my inbox that was serendipitously timed with these current experiences.
 
@@ -52,7 +52,7 @@ Everyone feels like an impostor sometimes. It’s a sign that we are growing and
 
 It doesn’t feel great right now, but if we keep going, our destination will most likely surprise us!
 
-## 🎧 A truly excellent podcast episode
+## 🎧 a truly excellent podcast episode
 
 Although Women Who Code is closing down, I’ve learned a lot from the experiences, including the podcast they’ve run for the last several years, one episode in particular hits home during these times.
 
@@ -68,7 +68,7 @@ It was initially called the “Imposter phenomenon” in the 1970s research.
 
 Additionally, this episode provides many tangible concepts and helps put the typical “imposter syndrome” feelings into perspective. It’s a great listen if you can get to it sooner rather than later, I can’t guarantee the podcast will live on.
 
-## Conclusion
+## conclusion
 
 Acknowledging and identifying the discomfort is the first step.
 

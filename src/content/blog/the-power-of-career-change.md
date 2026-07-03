@@ -31,7 +31,7 @@ I found tech later in life, as many others have. Let’s start with a brief care
 - Year four with the same company
   - I was a Platform Expert and Onboarding Manager and then I moved into a Software Engineer role last May!
 
-## **Lessons Learned**
+## **lessons learned**
 
 I’ve learned much and the things that went well for me others can now use to thrive! Here are five tips from my journey.
 
@@ -41,7 +41,7 @@ I’ve learned much and the things that went well for me others can now use to t
 4. Allow experiences to navigate
 5. Intentional work, better than hard work
 
-## **#1 - Identify your “foot in the door”**
+## **#1 - identify your “foot in the door”**
 
 Consider whether current or prior industry experiences can open opportunities. It may be the boost needed to get in - or closer to - the end goal.
 
@@ -51,7 +51,7 @@ Later, I landed my first tech role through real estate experience. It sounds cou
 
 This leads us to the next tip!
 
-## **#2 - Use expertise in new pursuits**
+## **#2 - use expertise in new pursuits**
 
 Expertise is composed differently depending on the background. Pinpoint your skills and harness them to propel a new career!
 
@@ -61,7 +61,7 @@ Entering tech through Support, I deeply leveraged my communication skills. I fre
 
 These skills help in my current role as a software engineer, too! I have a unique empathy for our customers and their needs. I collaborate with teams. I find opportunities to “train” on concepts I'm learning or demo work. And I directly contribute to our project planning.
 
-## **#3 - Weaknesses are growth opportunities**
+## **#3 - weaknesses are growth opportunities**
 
 Take stock of where you need work. We all have something! For me, this is patience and what I call ambiguous ambition.
 
@@ -73,7 +73,7 @@ It feels to me looking back I spent far too much time as a real estate assistant
 
 The important thing is to identify these areas and self-honesty about the challenges and skills to practice when seeking a career change. I keep practicing to grow personally, professionally, technically, and as a leader. There’s no need to be overly self-critical, but awareness is helpful.
 
-## **#4 - Allow experiences to navigate**
+## **#4 - allow experiences to navigate**
 
 Decisions and unexpected opportunities may arise. Gauge whether they’re worth taking or align with your direction. This was my situation when I became the Onboarding Manager. It felt backward from the technical role I wanted, and I was open with the company about this.
 
@@ -85,7 +85,7 @@ Other times, you might determine it’s time for a shift. After reaching burnout
 
 These decisions are very personal. Trust in yourself, your wants, and your goals are important. I hope that these stories are helpful.
 
-## **#5 - Intentional work, better than hard work**
+## **#5 - intentional work, better than hard work**
 
 It’s easy to fall into working hard without direction. [Take it from Arit!](https://www.youtube.com/watch?v=pe5fb4t_JDw) *(← A Women Who Code video ~1 hour long with some tremendously useful stories and advice!)*
 

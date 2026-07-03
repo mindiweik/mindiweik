@@ -19,7 +19,7 @@ Let’s be clear: I am not an expert on curiosity or perfect at practicing it. H
 3. ⚖️ Benefits + Challenges
 4. 👉 The 4 Core Concepts
 
-## 🎬 Video + Presentation Insights
+## 🎬 video + presentation insights
 
 Below is a recording of the first presentation for “Capturing Curiosity”, a [collaboration](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date) with [Coding with Callie](https://coding-with-callie.com/) in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
 
@@ -56,7 +56,7 @@ This third event was also live but not recorded. In this space, we focused more 
 
 I learned so much through these experiences! I appreciate everyone who spoke up to ask questions and who provided me feedback individually, including friends, family, and LinkedIn connections who watched the recording afterward. 🙏
 
-## 🤔 What is Curiosity?
+## 🤔 what is curiosity?
 
 Selfishly, I research curiosity to better understand it and continue to learn and grow as a human being. I’ve worked to reprogram my brain and retrain my actions to lean into my own curiosity. I’ve tried to simplify and distill what I found to make it easy to digest and, therefore, put into practice as a pattern of behavior!
 
@@ -77,7 +77,7 @@ We seek a sweet spot between under- and overstimulation. Although we seek this, 
 
 Curiosity is an impulse to explore, a spark for novelty, and a drive to discover without necessarily having an end goal. A thirst for knowledge guides our unique ways of interacting with the world through a mindset and a pattern of individual behaviors.
 
-## ⚖️ Benefits + Challenges
+## ⚖️ benefits + challenges
 
 The **benefits** of our curiosity are plentiful and relatively simple to understand. Here are a few we can review:
 
@@ -90,7 +90,7 @@ The **benefits** of our curiosity are plentiful and relatively simple to underst
 
 That said, there are 3 major **challenges** I’ve identified that can be potential blockers. We should be mindful of these, which can lead us to avoid practicing curiosity.
 
-### **Discipline**
+### **discipline**
 
 This one is the hardest for me. When I think of curiosity, I think about excitement, spontaneity, and the ability to embrace change. That’s a part of it, but it’s not the whole picture.
 
@@ -100,7 +100,7 @@ If you are consistently complacent in that “sweet spot,” you may lose touch 
 
 Different people will find practicing each of the four concepts below easier or harder than others - it just depends! In any case, it takes practice to build a habit that will become more automatic.
 
-### **Fear**
+### **fear**
 
 Another challenge most of us face is fear. It comes in many forms, but with curiosity, it seems to lean more toward a fear of judgment from others. Curiosity takes a lot of guts in some instances!
 
@@ -112,7 +112,7 @@ Often, companies and teams express a value for the curious trait. But almost as 
 
 Please remember that you don’t have to necessarily act on anything, especially if you are truly uncomfortable. Even asking questions to challenge something small, like, “I wonder how greeting cards became a staple for birthdays and holidays,” could lead to an interesting exercise and possibly bring some new insights.
 
-### **Humility**
+### **humility**
 
 It’s also extremely important to apply your curiosity inward. You can learn so much about yourself if you utilize the tools toward yourself as a human being, but it’s tough to ask the really hard questions.
 
@@ -124,11 +124,11 @@ Don’t be afraid to dig a little deeper than you are comfortable with, but also
 
 The more you build your curiosity, the more you will open yourself to other points of view. Humility will allow you to listen better, hear shared experiences, and more empathetically consider others.
 
-## 👉 The 4 Core Concepts
+## 👉 the 4 core concepts
 
 My goal is for you to take away actionable patterns and tools. I’ve distilled much of what I found to keep the message clear. This list is small, but these core concepts can make a big impact!
 
-### **#1 Observe & Investigate**
+### **#1 observe & investigate**
 
 To start off easy, you can just sit back, relax, and observe. I’m serious!
 
@@ -154,7 +154,7 @@ All of that said, there are a lot of words out there. It’s a good idea to avoi
 
 All that is to say, be selective.
 
-### **#2 Embrace Failure**
+### **#2 embrace failure**
 
 This tactic is often difficult to practice for most. Embracing failure is hard when we’re drilled over and over to avoid failure, whether pressured to get good marks in our education or work extra hard to get a promotion.
 
@@ -178,7 +178,7 @@ It took me several attempts to get the octopus right. Each time, though, I learn
 
 The point is that even when you encounter failure, it may or may not help you in the future. However, you’re expanding your toolbox for the next problem you encounter, the next project you work on, or the next idea you want to approach.
 
-### **#3 Ask the “Right” Questions**
+### **#3 ask the “right” questions**
 
 There is true value in the ability to question knowledge. Even people we typically consider smart - like scientists - are often wrong and must iterate on what we “know” as a human species. This also applied to explorers! Consider Christopher Columbus, whose claim to fame you may know as an explorer who “discovered” the Americas. He thought he was in the East Indies!
 
@@ -234,7 +234,7 @@ Over time, you can also try applying these questions inward. Take time to learn 
 > “Being **curious** can manifest itself in the activity of asking questions, but it can also be a position from which one approaches their life.”
 > - From [gostrengths.com](https://gostrengths.com/what-is-curiosity/)
 
-### **#4 Seek New Experiences**
+### **#4 seek new experiences**
 
 When we were very small, almost every experience was new. We were in exploration mode! These many “firsts” slowly diminish as we age. Don’t fret; there are still plenty of opportunities!
 
@@ -256,7 +256,7 @@ Perhaps you’ll go through a new-to-you neighborhood and meet a friendly new fa
 
 In any of these cases, you’ll learn something new!
 
-## Conclusion
+## conclusion
 
 Now armed with a pattern framework, try to do a few repetitions each day.
 

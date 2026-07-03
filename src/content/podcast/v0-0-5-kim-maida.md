@@ -45,7 +45,7 @@ But, how much do users actually need to know? How deeply should DevRel go into s
 - [In celebration of Vittorio Bertocci](https://auth0.com/blog/in-celebration-of-vittorio-bertocci/)
 - [YouTube playlist](https://www.youtube.com/playlist?list=PL3v-_yYK87UIx-3apmJ1FoCYb52r7e_UF)
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

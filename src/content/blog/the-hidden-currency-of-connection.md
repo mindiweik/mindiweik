@@ -18,7 +18,7 @@ Whether you are a natural extrovert who thrives in groups and fills up their bat
 
 **…of Networking! Let’s boogie. 🪩**
 
-### Want to watch instead? You got it, dude. 👍
+### want to watch instead? you got it, dude. 👍
 
 <div style="margin:1.2rem 0;position:relative;width:100%;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
   <iframe
@@ -31,7 +31,7 @@ Whether you are a natural extrovert who thrives in groups and fills up their bat
   ></iframe>
 </div>
 
-## ❓What
+## ❓what
 
 Networking isn’t one specific thing. It can be in-person or online, in live conversations or via text. Networking can span multiple participants, too, as with large groups, small groups, or even one-on-one.
 
@@ -45,7 +45,7 @@ I’m not saying you have to be a best friend to everyone you meet and hang out 
 
 *Always remember, if anyone crosses a line or you’re not mutually benefitting, you don’t have to keep engaging. Give yourself permission to disengage.*
 
-## 🤨 Why
+## 🤨 why
 
 One obvious benefit is that networking can help you when you are in need. For instance, you need help finding a job, funding sources for a startup, or mentor options, for example.
 
@@ -57,7 +57,7 @@ Most importantly, you might be surprised by the new friendships you find in your
 
 I’ve met wonderful people all over the globe, throughout my US state, and within different realms of tech that have blown me away. 🤩
 
-## ⏰ When
+## ⏰ when
 
 **Spoiler Alert: Anytime is a great time to network!**
 
@@ -84,7 +84,7 @@ If the answer is no, then I politely decline in an RSVP situation or don’t go 
 
 If the answer is yes, I find a way to reframe the situation and go anyway. In these times, I’ve rarely ever left not having enjoyed myself. It’s generally worth the push!
 
-## 🗺️ Where
+## 🗺️ where
 
 We know that any time can be network-building time, so by extension, you can network from almost anywhere!
 
@@ -102,7 +102,7 @@ If you become too uncomfortable, like if the group is too large or you’re over
 
 Once you start building your connections, it will build your confidence to try new groups and meet more people over time. Your new connections could become new friends, mentors, or even just point you toward another event where you might feel comfortable or welcome!
 
-## 🥸 Who
+## 🥸 who
 
 Of course, it can be easier to connect with people doing similar things as you, but **I want to challenge you to** **find connections outside of your own tech stack, industry, or comfort zone.** 
 
@@ -120,13 +120,13 @@ It is so applicable to networking!
 
 If not, try to stretch your curiosity muscles and ask more about them, their passions, what they are working on, etc.!
 
-## 💭 Closing Thoughts
+## 💭 closing thoughts
 
 Whatever you do for networking, remember to be yourself! Not everyone will like you, and you won’t like everyone, and that’s okay. We don’t need to force it - that only leads to wasted energy. 
 
 **Bring yourself and an open mind; I’m sure you’ll find more in networking than you expected!**
 
-### 🥳 BONUS
+### 🥳 bonus
 
 Someone in *my* *network* mentioned that they hadn’t been networking for the last several years. They wanted to get back into it and started reading *[Networking for People Who Hate Networking](https://www.thriftbooks.com/w/networking-for-people-who-hate-networking-a-field-guide-for-introverts-the-overwhelmed-and-the-underconnected_devora-zack/311700/)* by Devora Zack. Although not yet finished, they said there were multiple helpful tips even within the first half!
 

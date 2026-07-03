@@ -8,7 +8,7 @@ readingTime: 3
 
 After trying to get 3 “big” software engineering words to stick, I wrote a similar post: 
 
-#### [3 Big, Scary Software Engineering Words Explained](/blog/3-big-scary-software-engineering-words-explained)
+#### [3 big, scary software engineering words explained](/blog/3-big-scary-software-engineering-words-explained)
 
 My brain often mixes up transpiling and compiling. As I picked up TypeScript, I wasn't always clear on how they affected runtime. I needed to get them straightened out!
 
@@ -37,7 +37,7 @@ Let’s pretend we’re making something warm. I’m in the mood for some ramen.
 
 We have a recipe in front of us (our code) 📖 that we want to combine and turn it into a delicious bowl of soup (something that will work in a browser or on a computer). 🍜
 
-## 📖 Compiling
+## 📖 compiling
 
 *First, let’s change the recipe from one language to a completely different language.*
 
@@ -47,7 +47,7 @@ So, our recipe is currently written in Japanese (TypeScript), but we need it to 
 
 *This could also look like translating C or Rust to machine code.*
 
-## 🧑🏽‍🍳 Transpiling
+## 🧑🏽‍🍳 transpiling
 
 *Okay, great! But, now we want to rewrite it to make it simpler English.*
 
@@ -61,7 +61,7 @@ Let’s rewrite the recipe from those detailed, fancy words (modern JavaScript a
 
 *This can also look like a transformation of JSX files to JavaScript or Sass to CSS.*
 
-## 🔥 Runtime
+## 🔥 runtime
 
 *Finally, let’s actually use this recipe we’ve worked so hard on! We’ll cook the ramen!*
 

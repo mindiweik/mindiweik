@@ -45,7 +45,7 @@ Anemari has seen this story hundreds of times. She knows what actually helps. In
 - [Leveling Up as a Tech Lead](https://www.oreilly.com/library/view/leveling-up-as/9781098177508/) (O’Reilly)
 - [Soft Skills for Tech Leads](https://www.oreilly.com/library/view/soft-skills-for/0642572043995) (O’Reilly)
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

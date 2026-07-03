@@ -47,7 +47,7 @@ Her PhD research focuses on AI ethical frameworks with a human-centric, communit
 
 > Keep on showing up, keep on making your voice heard, and seek micro or macro glimmers of joy and hope.
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

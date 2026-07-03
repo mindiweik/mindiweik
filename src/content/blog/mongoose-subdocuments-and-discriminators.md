@@ -14,7 +14,7 @@ Our API proxy service will add a safety layer between the platform and a third-p
 
 Another long-term goal is to decouple our platform, allowing more vendor flexibility in the future. You never know when something will change with an API you don’t control. 😉
 
-## Why MongoDB - or why a NoSQL database - you might ask?
+## why mongodb - or why a nosql database - you might ask?
 
 Although there is a level of flexibility you can build and connect with relational databases and foreign keys, NoSQL databases are known for their flexible data structure capabilities. Ever-growing SQL tables leads to complicated queries and multiple join tables to access scattered data. Those queries can become expensive.
 
@@ -26,7 +26,7 @@ I mentioned the possibility of future third-party vendor(s). Preliminary researc
 
 …and that’s the perfect segway to the crux of this topic.
 
-### In this post, we’ll cover:
+### in this post, we’ll cover:
 
 - ❓ What is Mongoose?
 - 📒 Mongoose Documents
@@ -34,7 +34,7 @@ I mentioned the possibility of future third-party vendor(s). Preliminary researc
 - 🙈🙉🙊 Mongoose Discriminators
 - 🛠️ When and how to use these tools
 
-## ❓ What is Mongoose?
+## ❓ what is mongoose?
 
 To more easily work with MongoDB, developers frequently use Mongoose. It’s not the only tool, and a tool is not required to use MongoDB, but tools provide structure and fluidity in my experience.
 
@@ -58,7 +58,7 @@ const foodBaseSchema = new Schema({
 const foodBaseModel = mongoose.model('Food', foodBaseSchema);
 ```
 
-## 📒 Mongoose Documents
+## 📒 mongoose documents
 
 A Mongoose document is a mapping of a model. Your model should match the pre-defined schema(s). The Model class is a subclass of the Document class in the Mongoose [implementation](https://mongoosejs.com/docs/documents.html#:~:text=Document%20and%20Model%20are%20distinct%20classes%20in%20Mongoose.%20The%20Model%20class%20is%20a%20subclass%20of%20the%20Document%20class.%20When%20you%20use%20the%20Model%20constructor%2C%20you%20create%20a%20new%20document.). When you use a Mongoose query, you are interacting with the Mongoose Document.
 
@@ -75,7 +75,7 @@ foodDocument instanceof mongoose.Model; // true
 foodDocument instanceof mongoose.Document; // true
 ```
 
-## 📑 Mongoose Subdocuments
+## 📑 mongoose subdocuments
 
 A Subdocument represents a Document embedded inside another Document. In other words, a Subdocument can also be defined as a schema within another schema.
 
@@ -104,7 +104,7 @@ const foodBaseModel = new Schema({
 });
 ```
 
-#### Subdocuments and Nested Paths are Different
+#### subdocuments and nested paths are different
 
 Before we move on, we should cover a common point of confusion. A nested path is not the same as a Subdocument, though they do look quite similar.
 
@@ -130,7 +130,7 @@ Although this might look close to what we did above, and they may look similar v
 3. Although you can certainly use JavaScript methods on a subdocument or nested path object, nested paths do not allow you to take advantage of the built-in Mongoose methods to interact directly with a Document’s list of Subdocuments like our `cook` field.
 If you need more clarification, I recommend referring to the Subdocument [documentation](https://mongoosejs.com/docs/subdocs.html).
 
-## 🙈🙉🙊 Mongoose Discriminators
+## 🙈🙉🙊 mongoose discriminators
 
 Discriminators essentially allow you to create schemas with varying object models to store within the same collection. This is an excellent option if you have a similar underlying schema structure, but you need slight differences. 
 
@@ -224,7 +224,7 @@ bread.save();
 // We now have a bread Document!
 ```
 
-## 🛠️ When and how to use these tools
+## 🛠️ when and how to use these tools
 
 Whether you use these options in a Mongoose project has the same answer heard frequently within the world of software engineering: *“It depends.”*
 

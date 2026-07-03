@@ -27,7 +27,7 @@ We’ll cover:
 
 *Let's start by building shared understanding. I've added links for further reading, but I won't go too deep!*
 
-## 👉 Some Basic Terms
+## 👉 some basic terms
 
 **CI/CD**, or [Continuous Integration Continuous Delivery/Deployment](https://www.redhat.com/en/topics/devops/what-is-ci-cd#:~:text=CI%2FCD%2C%20which%20stands%20for,a%20shared%20source%20code%20repository.), is a best practice in developing software. It allows frequent automated checks when changes are ready to be considered for a merge with the overall team repository. 
 
@@ -39,7 +39,7 @@ GitLab is a ***distributed*** version control system that allows multiple develo
 
 *[Here’s a link to more reading about version control and GitLab.](https://about.gitlab.com/topics/version-control/)*
 
-## ✅ Three Main Steps
+## ✅ three main steps
 
 *The following outlines my process with links to GitLab’s excellent documentation and tutorials. If you’d like to try any of these, I recommend using GitLab docs, as I found them exceptionally valuable and easy to follow!*
 
@@ -55,7 +55,7 @@ Before starting, I needed:
 2. Install and Create a GitLab Runner
 3. Register the GitLab Runner for the Pipeline
 
-### Create a GitLab Pipeline
+### create a gitlab pipeline
 
 The [GitLab pipeline tutorial](https://docs.gitlab.com/ee/ci/quick_start/#steps) states that Runners should be available before starting, but my process began with the pipeline itself. Setting up the CI pipelines was the original goal. I wanted to take small, iterative steps. 
 
@@ -71,7 +71,7 @@ Here, you can enter your YAML file contents and click on **Validate** which will
 
 ![GitLab screenshot of the CI lint tool](../../assets/blog/experiences-with-a-local-gitlab-runner-part-1/ci-lint-tool.webp)
 
-### Install and Create a GitLab Runner
+### install and create a gitlab runner
 
 After a short celebration 🎉 I moved to the next challenge: installing a local Runner.
 
@@ -93,7 +93,7 @@ Upon creation, leave the new Runner confirmation screen up. There are registrati
 
 Let’s move on to the next step.
 
-### Register the GitLab Runner for the Pipeline
+### register the gitlab runner for the pipeline
 
 Once installed, it’s necessary to [register the Runner](https://docs.gitlab.com/runner/register/). Here was where I found it a little tricky. There are some basic directions on the GitLab screen you have open from the step above.
 
@@ -127,7 +127,7 @@ It helped that I had preemptively added matching CI pipeline tags to the **`.git
 
 As it was my first time, I had to do some troubleshooting, mainly for settings. Don’t be surprised if it doesn’t work perfectly the first time. However, I was able to figure everything out with a bit of research! 
 
-## 📝 Experience Synopsis
+## 📝 experience synopsis
 
 Generally, the process was manageable and a fun challenge!
 

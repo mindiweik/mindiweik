@@ -28,7 +28,7 @@ Between personal life changes and growing into this profession, she has learned 
 
 > Do it scared. Do it nervous. It can be hard to keep going when you’re not confident, but it’s so worth it to reach out for help at your comfort level. There are plenty of resources out there and people who truly want you to succeed!
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

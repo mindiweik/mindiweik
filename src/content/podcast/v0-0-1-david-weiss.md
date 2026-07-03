@@ -38,7 +38,7 @@ We met on LinkedIn about 2 years ago and bonded over being career changers and b
 - [David’s LinkedIn Live Events](https://www.linkedin.com/in/bydavidweiss/recent-activity/events/)
 - [Check out the Resume project!](https://www.useresume.app/)
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

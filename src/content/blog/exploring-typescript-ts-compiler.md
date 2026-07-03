@@ -18,7 +18,7 @@ This post will cover the **TypeScript Compiler**.
 
 **Let's dive in!**
 
-## 🤔 What is tsc (TypeScript Compiler)?
+## 🤔 what is tsc (typescript compiler)?
 
 TypeScript is free and [open-source](https://github.com/microsoft/TypeScript). Microsoft originally developed and released it in 2012. This language is often best used in larger or more complicated projects.
 
@@ -60,9 +60,9 @@ Technically, other compiler options, like Babel, could be used. However, in my o
 
 🤯 I know, it blew my mind, too, when I heard [Josh Goldberg](https://www.linkedin.com/in/joshuakgoldbergcodes/) mention this in a recent talk I heard!
 
-## 🦾 How to best leverage tsc as a tool
+## 🦾 how to best leverage tsc as a tool
 
-### **Okay, I think I get it, so how do I use it? 🛠️**
+### **okay, I think I get it, so how do I use it? 🛠️**
 
 Well, to start, you need to ensure you [install TypeScript](https://www.typescriptlang.org/download). You can do this globally:
 
@@ -86,7 +86,7 @@ The above command will perform the compilation step of the TypeScript file and o
 
 Overall, it’s pretty simple to use, and I use it often in my package.json scripts!  If you want to get a little “fancy,” you can also make use of the many tsc [CLI options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in your scripts or directly in the terminal.
 
-### **`tsc` is installed, and I can generate JavaScript files! But how can I have more control over the TypeScript Compiler? ⚙️**
+### **`tsc` is installed, and I can generate javascript files! but how can I have more control over the typescript compiler? ⚙️**
 
 The best way to manage your compiler output (as well as other TypeScript usage details) is through the tsconfig.json file. You can set up the TS project and this special file using the [command](https://www.typescriptlang.org/docs/handbook/compiler-options.html#:~:text=Initializes%20a%20TypeScript%20project%20and%20creates%20a%20tsconfig.json%20file.):
 
@@ -100,7 +100,7 @@ You can set up your project details, such as whether or not you want “strict�
 
 There are so many configurations you can use! In fact, each of the various TS projects I’ve worked on has a uniquely different tsconfig file based on the needs of the team and the project.
 
-### **Anything else I should know? ⛓️**
+### **anything else I should know? ⛓️**
 
 You’re not limited to one single tsconfig file!
 
@@ -148,7 +148,7 @@ Then, we have a debugger setup in which we want to ensure everything else is the
 
 When we want to run the debugger, this extended tsconfig file is used on top of the original!
 
-## 📚 Resources for further reading
+## 📚 resources for further reading
 
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/) 
   - `tsc` / [Compiler section](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#tsc-the-typescript-compiler)

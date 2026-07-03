@@ -6,7 +6,7 @@ tags: ["books","career"]
 readingTime: 8
 ---
 
-## *Clean Code* is a **classic**.
+## *clean code* is a **classic**.
 
 I am not the first to summarize; I won’t be the last! Thank you to my partner for gifting this book to me when I started my career change. 🙏 After I read *Clean Code: A Handbook of Agile Software Craftsmanship,* it was requested I share insights with my team. Any chance to share knowledge is a win! I share the details included in my presentation here, focusing on the most widely applicable content.
 
@@ -26,7 +26,7 @@ I am not the first to summarize; I won’t be the last! Thank you to my partner 
 - 🤔 Questions to consider
 - 🫶 Bonus Recommendation
 
-## 🎬 The Presentation
+## 🎬 the presentation
 
 The conversation that was sparked pleasantly surprised me when I presented to the team in the Western hemisphere. Some insights:
 
@@ -47,13 +47,13 @@ The conversation that was sparked pleasantly surprised me when I presented to th
   ></iframe>
 </div>
 
-## 💡 My 3 Big Takeaways
+## 💡 my 3 big takeaways
 
 1. **Writing code is a process**. Start with a draft, refine, and repeat. It takes practice.
 2. What ultimately matters is that your team **agrees on standards and sticks to them**.
 3. It is ***everyone’s responsibility*** to keep a codebase clean!
 
-## 💻 What is clean code?
+## 💻 what is clean code?
 
 For me, clean code is beautiful and embodies ***discipline***. It is concise and clear to any reader. Business needs and team members will inevitably change! So, it’s important to hone the craft to solve a problem with meaningful code for others to understand.
 
@@ -83,15 +83,15 @@ Tidiness takes a team effort to clean up - and maintain - the codebase. Martin r
 
 ![A smiling Earth illustration reading 'Leave it better than you found it.'](../../assets/blog/clean-code-by-robert-c-martin/leave-it-better.png)
 
-## 🏗️ Foundations: names, functions, comments, and formatting
+## 🏗️ foundations: names, functions, comments, and formatting
 
 What does this actually consist of? Let’s cover major areas where pain points arise.
 
-## Names
+## names
 
 What’s in a name anyway? Well, a lot of meaning, actually!
 
-### **Variable Naming Tips:**
+### **variable naming tips:**
 
 **USE**
 
@@ -111,7 +111,7 @@ What’s in a name anyway? Well, a lot of meaning, actually!
 - Noise words - These include words like “a” or “the” if it doesn’t add useful meaning.
 - Encodings and mental mapping - This adds unnecessary cognitive load to decipher meaning.
 
-### **Class Naming Tips:**
+### **class naming tips:**
 
 **USE**
 
@@ -127,7 +127,7 @@ What’s in a name anyway? Well, a lot of meaning, actually!
 - Too much context
 - Cleverness, slang, puns - Too many teams are globally distributed, and these won’t have the same meaning in all countries or even within different teams in the same country!
 
-## Functions
+## functions
 
 Functions are the heart of any program. They should have consistent blocks and indentation for an easily followed nested structure.
 
@@ -156,7 +156,7 @@ Functions are the heart of any program. They should have consistent blocks and i
   - Martin recommends exceptions to handle errors separately.
 - Don’t repeat yourself (DRY).
 
-## Comments
+## comments
 
 Everyone has their own view on this. Regardless, note point 2 in my main takeaways. If your team agrees on a pattern, adopt the pattern. Ultimately, the best advice I’ve received is that a comment should explain ***why*** you made a decision (like business needs) and not ***what*** your code is doing.
 
@@ -186,7 +186,7 @@ Everyone has their own view on this. Regardless, note point 2 in my main takeawa
   - not obvious connections
   - function headers
 
-## Formatting
+## formatting
 
 Why is this a foundation? It’s too important to ignore, and so many linting tools exist. There’s no excuse. Because there are many tools, I won’t go into excessive detail!
 
@@ -208,7 +208,7 @@ We’ve covered the foundational concepts! But, as Martin says, just because we 
 >
 > Chapter 1, “The Art of Clean Code?”
 
-## 🚀 Put it into Practice
+## 🚀 put it into practice
 
 To put some of the following chapters into practice, I’ve pulled some of the more interesting or applicable concepts and suggestions!
 
@@ -271,7 +271,7 @@ To put some of the following chapters into practice, I’ve pulled some of the m
 
 > "Of course bad code can be cleaned up. But it’s very expensive. As code rots, the modules insinuate themselves into each other, creating lots of hidden and tangled dependencies."
 
-## 🥸 Code Smells
+## 🥸 code smells
 
 Below is a table of common issues provided by Martin (excluding Java-related items).
 
@@ -294,7 +294,7 @@ You may need to scroll to see all the goodies!
 
 **That’s a wrap!**
 
-## 🤔 Questions to consider:
+## 🤔 questions to consider:
 
 1. Have you read *Clean Code?* Did you have any different insights or any I missed?
 2. What was your favorite or least favorite part?
@@ -302,7 +302,7 @@ You may need to scroll to see all the goodies!
 4. Have you - or are you - putting anything into practice in your daily work?
 5. Is this most relevant to new engineers, or is it also useful for seniors or managers?
 
-## 🫶 Bonus Recommendation
+## 🫶 bonus recommendation
 
 I recently began listening to the [Working Code Podcast](https://workingcode.dev/) (from the 2020 start…it’s how I listen to all podcasts). The hosts reviewed *Clean Code* in episodes [#22](https://workingcode.dev/episodes/022-book-club-1-clean-code-by-uncle-bob-martin-pt1/) and [#23](https://workingcode.dev/episodes/023-book-club-1-clean-code-by-uncle-bob-martin-pt2/).
 

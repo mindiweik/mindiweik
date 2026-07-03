@@ -36,7 +36,7 @@ One of his biggest recommendations for anyone trying to learn something new? It�
 
 Data-viz tools discussed: [D3](https://d3js.org/), [Apache ECharts](https://echarts.apache.org/en/index.html), [Matplotlib](https://matplotlib.org/), [Plotly](https://plotly.com/), [hvPlot](https://hvplot.holoviz.org/en/docs/latest/index.html), [Pandas](https://pandas.pydata.org/), [Polars](https://pola.rs/)
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

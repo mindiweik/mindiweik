@@ -35,7 +35,7 @@ So when someone asks where I’ll be in [*n*] years, I can’t give them a neat 
 ✅ balance  
 ✅ a career that can take hits and keep evolving
 
-## **Career ladders are actually jungle gyms**
+## **career ladders are actually jungle gyms**
 
 Even in v0 of the [WIP] Podcast, it's clear to me that no journey is the same, nor is any journey I've heard straightforward. 
 
@@ -54,7 +54,7 @@ Adaptability is staying functional while the rules keep updating.
 
 ## **“I don’t know” moments**
 
-### **😱 Moment #1: Inquiry about “the future”**
+### **😱 moment #1: inquiry about “the future”**
 
 I was talking with my therapist about this afterward, too. (Yay therapy!) I shared those recent moments where I had been asked where I think I'll be in [*n*] [*timeframe*] and shared my concerns about how much I feel I really can't answer that clearly.
 
@@ -65,7 +65,7 @@ In retrospect, the honest answer is simpler: Focus on what I can actually contro
 
 Because the truth is: **we've seen too many ‘stable paths’ disappear mid-walk.** Especially in the last few years.
 
-### **🤨 Moment #2: The definition changed**
+### **🤨 moment #2: the definition changed**
 
 Earlier this year I started a new job with new challenges. It was exciting, as it is for most of us when starting something new! But, there was also a lot of new things and unknowns to I didn't expect to grapple with related to all of this consistent change.
 
@@ -87,7 +87,7 @@ The job didn’t just evolve. **The scorecard changed.**
 
 So “I don’t know” isn’t actually a weakness. It’s just… accurate. **And it's 100% okay to acknowledge and say it.**
 
-## **Adaptability requires balance**
+## **adaptability requires balance**
 
 Have you noticed a trend on LinkedIn? Online in general? It's called burnout. Everyone is talking about it. I've been there. Done that. (See [previous post](/blog/3-habits-that-helped-me-recover-from-burnout-and-stay-motivated).)
 
@@ -107,7 +107,7 @@ Balance isn’t a reward for success. **It's what lets you stay in the game long
 
 ## **3 sustainable ways to grow your adaptability**
 
-### **1 - ⚓️ Anchor to skills, not titles**
+### **1 - ⚓️ anchor to skills, not titles**
 
 Titles change. Teams change. Tech stacks change. But transferable skills continually show up like:
 
@@ -121,7 +121,7 @@ Titles change. Teams change. Tech stacks change. But transferable skills continu
 
 Ask yourself: “If my stack disappeared tomorrow, what would still make me valuable?” That answer is your foundation.
 
-### **2 - 🧪 Run small experiments often**
+### **2 - 🧪 run small experiments often**
 
 You don’t need a full reinvention every time the industry shifts. Instead, work with something new and small:
 
@@ -139,7 +139,7 @@ Small experiments teach you:
 
 Adaptability is built through practice, not panic.
 
-### **3 - 🛠️ Build a balance system you can actually maintain**
+### **3 - 🛠️ build a balance system you can actually maintain**
 
 Balance isn’t goofing off while pretending deadlines don't exist. It’s having a pace you can trust. 
 
@@ -153,7 +153,7 @@ Some examples:
 
 Your career isn’t a hackathon and you don’t need to optimize your entire life. I still have to remind myself these things often!
 
-## **A better question**
+## **a better question**
 
 If someone asks me today where I see myself, I am certain that I will still say, **“I don’t know.”**
 

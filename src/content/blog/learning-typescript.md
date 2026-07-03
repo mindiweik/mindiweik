@@ -22,7 +22,7 @@ We'll talk through my core learning materials and suggestions:
 4. 💻 Udemy: TypeScript 5 for Developers by Alex Dan
 5. 💪 Lots of Practice
 
-## 👩‍💻 Scrimba
+## 👩‍💻 scrimba
 
 When I first started, I sought an interactive way to learn, which is how many best absorb knowledge. I found this in Scrimba!
 
@@ -32,7 +32,7 @@ I found a course here called “[Learn TypeScript](https://scrimba.com/learn/typ
 
 I’ve taken a look at other Scrimba courses since taking this particular course and I’ve enjoyed a majority of those I’ve worked on or experienced.
 
-## 📖 Programming TypeScript by Boris Cherny
+## 📖 programming typescript by boris cherny
 
 A teammate sent this book to me and I was so grateful. There are so many beginner-friendly concepts here that were helpful. 
 
@@ -42,7 +42,7 @@ Even though I had been working with TypeScript for a couple of months when I rec
 
 As the book moves forward, more advanced concepts and examples are provided, too, so regardless of level of experience with TypeScript there is sure to be something for everyone to take away!
 
-## 🤓 Effective TypeScript by Dan Vanderkam
+## 🤓 effective typescript by dan vanderkam
 
 I felt this book had more tangible and actionable advice, tips, and examples. *Programming TypeScript* felt better at providing that aforementioned foundation and underlying concepts.
 
@@ -54,7 +54,7 @@ I’ve also [mentioned on LinkedIn](https://www.linkedin.com/posts/mindiweik_tod
 
 I’ll refer back to this book, in particular, to take a look at it’s very specific examples and suggestions when I run into any issues or need inspiration to solve a problem.
 
-## 💻 Udemy: TypeScript 5 for Developers by Alex Dan
+## 💻 udemy: typescript 5 for developers by alex dan
 
 Generally, I appreciate repetition in my learning. 
 
@@ -68,7 +68,7 @@ I haven’t done a review of this course, like I did with the [Fundamentals of B
 
 ![Mindi's Udemy course completion certificate for TypeScript 5 for Developers](../../assets/blog/learning-typescript/udemy-typescript5-certificate.jpeg)
 
-## 💪 Lots of Practice
+## 💪 lots of practice
 
 This should not be understated! Practice makes perfect and there is a reason why the cliche exists. If anything, this was the ***most*** helpful aspect of my learning journey and I encourage everyone to take this seriously in their own journey.
 

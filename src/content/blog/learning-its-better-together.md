@@ -6,7 +6,7 @@ tags: ["career","learning"]
 readingTime: 1
 ---
 
-## Hello & Welcome
+## hello & welcome
 
 Thank you for joining me! Together I hope that we will learn something new, add to shared knowledge through conversation, and dive deep into interesting technical topics.
 
@@ -18,13 +18,13 @@ This content will remain free for the foreseeable future! My aim is to learn tog
 
 You can expect varied content about software development, personal development, and various adjacent tech topics from me. Mostly, I will share what I’m learning or thinking about in my tech career. 
 
-## What this space is NOT intended to be:
+## what this space is not intended to be:
 
 - for rude comments or negative interactions
 - solely for active/current engineers. I read a lot of blogs/articles prior to my own career shift
 - for exclusion of anyone trying to learn & grow
 
-## What this space is intended to be:
+## what this space is intended to be:
 
 - to share knowledge and ask curious questions
 - to practice constructive criticism
@@ -32,6 +32,6 @@ You can expect varied content about software development, personal development, 
 - for anyone interested in the technical topic, regardless of current working status
 - for inclusivity - anyone with a desire to learn is welcome!
 
-## Keep an eye out!
+## keep an eye out!
 
 I look forward to sharing with you all and I hope you’ll engage along this journey.

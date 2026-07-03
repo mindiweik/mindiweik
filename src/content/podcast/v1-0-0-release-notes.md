@@ -6,7 +6,7 @@ pubDate: 2026-01-22
 youtubeUrl: https://www.youtube.com/watch?v=m-FzyhJVo3M
 ---
 
-## What It Looks Like to Build, Pause, and Return in Public
+## what it looks like to build, pause, and return in public
 
 ### chore: acknowledge the pause + appreciation
 
@@ -42,7 +42,7 @@ This season is yet another experiment iteration. Let's try something new!
 
 I’ll be testing new episode styles/different formats, and potentially new ways of having conversations. There may be a familiar face joining soon in a collaborative capacity or repeat guest(s). TBD - leaning into curiosity and iteration!
 
-## Thanks & Gratitude 🙏
+## thanks & gratitude 🙏
 
 The background music in this episode was created by the amazing [Sarah Garlock](https://www.linkedin.com/in/sarah-garlock/).
 You can also find Sarah **@sarg_makes_beats** on [Instagram](https://www.instagram.com/sarg_makes_beats/) and [TikTok](https://www.tiktok.com/@sarg_makes_beats)!

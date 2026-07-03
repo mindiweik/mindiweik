@@ -6,13 +6,13 @@ tags: ["burnout","mindset"]
 readingTime: 6
 ---
 
-## ICYMI I had the pleasure of writing a guest spot...
+## icymi I had the pleasure of writing a guest spot...
 
 ...for my friend, David Weiss' newsletter called [Besides Code](https://www.besidescode.com/)! It was enjoyable to be a little vulnerable. I hope you'll check out his newsletter if you're not already following it - he shares excellent tips, advice, and stories to help with growth, communication, and leadership skills. 😁
 
 [Mindi Weik](https://www.linkedin.com/in/mindiweik/)
 
-### [Link to Original Post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
+### [link to original post](https://www.besidescode.com/p/3-habits-that-helped-me-recover-from?r=29u7hv&utm_campaign=post&utm_medium=web)
 
 *I’m happy to share this guest post from my friend,* [Mindi Weik](https://www.linkedin.com/in/mindiweik/)*. She has a vulnerable story to share about burnout that we can all learn from.*
 
@@ -26,7 +26,7 @@ Whether a resolution, intention, or goal, it can be hard to maintain momentum. Y
 
 Whatever the case, start by reminding yourself that stumbling is OK. We’re here to talk about ways to pick yourself back up when that happens!
 
-## **Shifting**
+## **shifting**
 
 Last year, I stumbled. More than once. Despite this, I tried to maintain multiple spinning plates. This led to severe burnout.
 
@@ -43,7 +43,7 @@ Burned out, all of my plates suffered. Quality dipped, and it was perpetually ha
 - Drop certain plates
 - Take a break
 
-### **Drop certain plates**
+### **drop certain plates**
 
 Dropping all the plates is the worst-case scenario. When you drop everything, you stop, and growth halts.
 
@@ -63,7 +63,7 @@ Compare the plates. Is our hands-on side project work the most important? Or is 
 
 The individual decision varies, but it’s important to examine thoroughly to identify if you spend your time where you desire or need to. Then you can drop plates that don’t help you progress or are okay to drop. Like a plastic plate that can easily be picked up later, maybe it’s reading a technical book or a personal project you can pause and resume in a few weeks or months.
 
-### **Take a break**
+### **take a break**
 
 If you get anywhere close to burnout, it’s time for a break. Full stop.
 
@@ -83,7 +83,7 @@ To pinpoint what to drop, I paused everything for roughly 2-3 months. I found op
 
 This space helped me think about what I *wanted* to accomplish and which plates might be plastic. I recharged, ending with a better sense of what was important for me moving forward.
 
-## **Start Small**
+## **start small**
 
 We shifted; we’re ready to regain motivation and resume growth! But how can we do that?
 
@@ -98,7 +98,7 @@ The two concepts that helped me most:
 1. The 4 laws of behavior change
 2. Habit Stacking
 
-### **The 4 laws of behavior change**
+### **the 4 laws of behavior change**
 
 Reflect on your goals, resolutions, or intentions and brainstorm ideas to make them slightly easier to accomplish. The more you break it down, the easier to start building momentum, however microscopic it may feel.
 
@@ -123,7 +123,7 @@ Even if we only make it to the gym at first, roll out a yoga mat, or put on some
 
 → Bonus tip: Reverse the 4 laws of change to break a bad habit!
 
-### **Habit Stacking**
+### **habit stacking**
 
 This is one of my favorite concepts because it worked particularly well for me. Building on an existing habit makes a new habit stickier.
 
@@ -133,13 +133,13 @@ Of course, I still miss the mark sometimes, but it was easier when I built upon 
 
 It keeps me from unnecessary scrolling and promotes my reading habit. Brushing my teeth now triggers an urge to open a book. In turn, I make a little progress in the book and it helps me drift off more easily than my screen!
 
-## **Give Yourself Grace**
+## **give yourself grace**
 
 There will be bumps and stumbles. It’s normal! The best thing we can do is remain kind to ourselves to keep going when it’s tough.
 
 Self-talk matters. **Talk to yourself like you would a friend.**
 
-### **Affirmations and Positive Self-Talk**
+### **affirmations and positive self-talk**
 
 I’ll leave you with some helpful ideas. We can reframe our self-talk. I like to imagine I’m talking to someone else in my shoes. It helps me provide more genuine self-talk.
 

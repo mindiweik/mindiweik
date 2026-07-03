@@ -18,7 +18,7 @@ Understanding the nitty gritty bits and pieces of a language can only benefit us
 
 **Let's go!**
 
-## 🤔 What is runtime?
+## 🤔 what is runtime?
 
 To start, let’s better grasp what type of “runtime” I’m referring to and what it actually means in that context.
 
@@ -26,7 +26,7 @@ Here, **runtime** refers to the process of a computer interpreting and performin
 
 In the first post of this series, I wrote about the [TypeScript Compiler](/blog/exploring-typescript-ts-compiler).
 
-### *What does the compiler have to do with runtime?*
+### *what does the compiler have to do with runtime?*
 
 We learned that JavaScript code is generated from our TypeScript code through the compilation steps, which is what our runtime will use! JavaScript runtime is often executed in Node but could also be accomplished using Deno, Bun, or a web browser.
 
@@ -39,7 +39,7 @@ Why is this helpful?
 - You’ll achieve better readability and maintainability for your future self and teammates. When written well, TypeScript reads like good documentation.
   - There should also be less cognitive load, scrolling, and searching for files; your IDE will show you relevant information when you mouse over variables!
 
-### *What does runtime have to do with TypeScript, then?*
+### *what does runtime have to do with typescript, then?*
 
 Simply put, TypeScript types don’t exist at runtime.
 
@@ -112,11 +112,11 @@ Before we run this code, we’ll encounter issues. In VSCode, for example, a lit
 - We tried to use a string to describe `Rayla` as `'6 months'` instead of the expected number input for her age (`0`, `0.5`, or `1` depending on your own interpretation). Whoops! What were we thinking?
 - Afterward, we created an imaginary cat. Because it’s not real, we aren’t sure how old it is! Bummer. Alas, `Pet` as an interface is looking for an age field.
 
-### *Wait, this example uses an interface, and that goes away after compile time, right?*
+### *wait, this example uses an interface, and that goes away after compile time, right?*
 
 Correct; I’m so glad you brought that back to the forefront. Let’s look into how you can still ensure type safety at runtime!
 
-## 🦾 Reconstruct and confirm runtime types
+## 🦾 reconstruct and confirm runtime types
 
 Although TypeScript-specific features don’t exist at runtime, there are ways to ensure that runtime is safe. Don’t fret!
 
@@ -137,7 +137,7 @@ tsc <file-name.ts> # compiles your file into JavaScript
 node <file-name.js> # runs your compiled code in Node
 ```
 
-### **Validate inputs from external sources**
+### **validate inputs from external sources**
 
 You can usually find me building APIs with TypeScript. 
 
@@ -206,7 +206,7 @@ const countrySchema = z.object({
 
 …And there are all sorts of maneuvers like this you can use to check your data from the outside world to ensure it’s about as safe as you can manage - both for type safety and input security!
 
-### **Check types or properties to handle in your code**
+### **check types or properties to handle in your code**
 
 When working with multiple potential types, it’s a good idea to confirm the input's “shape” or data type. This is great both in your TypeScript code and for runtime! 
 
@@ -297,7 +297,7 @@ Again, the JavaScript code generated appears almost identical! The interface is 
 
 The property check only involves values that are available at runtime but still allows the type checker to refine the object's shape to the `Art` type. That’s great TypeScript code practice and translatable JavaScript all at once!
 
-### **Use a discriminated (or “tagged”) union**
+### **use a discriminated (or “tagged”) union**
 
 This concept is similar to the object case above, and I’ve found it useful to specifically use the field name `type`, especially for building APIs. As a user I’ve seen it often in third-party APIs, so I feel it’s a common enough practice to lean on.
 
@@ -341,7 +341,7 @@ How can we access this? It’s because there is also a value stored in the `type
 
 **I hope that these examples were helpful! Considering how your runtime will read and follow your instructions through your TyeScript code after compilation may help you build better!**
 
-## 📚 Resources for further reading
+## 📚 resources for further reading
 
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
   - [“TypeScript in 5 Minutes”](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)

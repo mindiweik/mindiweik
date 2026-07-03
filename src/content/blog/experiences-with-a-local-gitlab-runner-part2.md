@@ -19,7 +19,7 @@ Let’s find out how it went after the initial setup…
 3. 🔄 Current Usage
 4. 💡 Lessons Learned
 
-## 🧩 First Local Success and Challenge
+## 🧩 first local success and challenge
 
 **Success:** If you read [Part 1](/blog/experiences-with-a-local-gitlab-runner-part-1), you’ll find that I successfully learned how to set up a local GitLab Runner on my MacBook! 
 
@@ -33,7 +33,7 @@ This was not ideal! I wanted to move the Runner to a [Raspberry Pi 4](https://ww
 
 **Sure, we could have chosen other options for a Runner**, including using the GitLab built-in Runners. But I’ve wanted to find a good use for this Raspberry Pi, and I was determined to make it work!
 
-## 🥧 Move to Raspberry Pi
+## 🥧 move to raspberry pi
 
 The Raspberry Pi hadn’t been booted up since pre-pandemic times. It had armv7l architecture and Raspian Stretch as the OS. By this time, both were quite outdated.
 
@@ -59,7 +59,7 @@ We’re using TypeScript, and I also needed to add a d.ts [types file](https://w
 
 And THEN, it was safe to celebrate when the pipeline jobs turned green again while using the Raspberry Pi Gitlab Runner! ✅
 
-## 🔄 Current Usage
+## 🔄 current usage
 
 **TL;DR: Things are running smoothly! 🙌**
 
@@ -71,7 +71,7 @@ After getting everything set up properly, I’ve had to move the device's locati
 
 Otherwise, the Raspberry Pi is essentially left running with limited effort and power usage. We recently installed solar panels that can cover more than our household usage; I don’t feel I’m wasting energy keeping a small server running! ⚡️
 
-## 💡 Lessons Learned
+## 💡 lessons learned
 
 This second part of the journey certainly had ups and downs. I gave a quick snapshot above, but there was so much time spent reading articles, documentation, and tutorials, plus ample Google searching to try to pinpoint the right methods to make everything work well together. 
 
@@ -81,7 +81,7 @@ This second part of the journey certainly had ups and downs. I gave a quick snap
 2. Don’t forget to read beyond the surface details.
 3. Keep going, even when it’s hard. The reward awaits!
 
-### Sometimes, a setback can propel overall development.
+### sometimes, a setback can propel overall development.
 
 There’s such a thing as the [sunk cost fallacy](https://thedecisionlab.com/biases/the-sunk-cost-fallacy). I’m sure you’ve heard of it. I fell into this trap, too, and didn’t want to pivot after I invested a lot of time on a solution already.
 
@@ -91,7 +91,7 @@ Without being stopped in my tracks, I may have kept banging my head against the 
 
 But it was never going to work, honestly. Starting over gave me a new perspective that allowed me to get where I needed to be much faster than I likely would have otherwise.
 
-### Don’t forget to read beyond the surface details.
+### don’t forget to read beyond the surface details.
 
 Errors always provide clues. It’s not that you have to read between the lines, but read them carefully!
 
@@ -101,7 +101,7 @@ Always, always, always read the messages thoroughly and don’t be afraid to Goo
 
 Some of the hits may not match exactly what you need for your own situation, but often I’ve found that reading others’ results can help point to the right direction of what to look into next to try to solve my particular brand of the issue.
 
-### **Keep going, even when it’s hard. The reward awaits!**
+### **keep going, even when it’s hard. the reward awaits!**
 
 Although this migration to the Raspberry Pi took time and effort, it’s been one of my happiest and more rewarding moments as a software engineer.
 

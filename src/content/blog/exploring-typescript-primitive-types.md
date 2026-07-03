@@ -23,7 +23,7 @@ Now that we've covered the [TypeScript Compiler](/blog/exploring-typescript-ts-c
 
 So, let's take it from the top!
 
-## 🤔 What are primitive types?
+## 🤔 what are primitive types?
 
 To start, we need a shared understanding of the types we will discuss. Because TypeScript is a superset of JavaScript, these types will naturally mirror some JavaScript.
 
@@ -281,7 +281,7 @@ Finally, equality between the two differs. `null` and `undefined` are loosely eq
 
 **I hope that covering these primitives can be at least a little bit informative! In writing this I learned a few new things myself or at least considered aspects of these types I hadn't before. 🤓**
 
-## 📚 Resources for further reading
+## 📚 resources for further reading
 
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - ["TypeScript in 5 Minutes"](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)

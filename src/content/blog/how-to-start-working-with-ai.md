@@ -14,7 +14,7 @@ I engage in several Slack communities in varying spaces. I like to keep a pulse 
 2. 📌 My Response
 3. 🤖 Useful Tips
 
-## ❓ The Question
+## ❓ the question
 
 Let’s start by understanding what prompted the question and where her headspace was.
 
@@ -36,7 +36,7 @@ Related to the article and discussion, she shared:
 
 I couldn’t agree more with her interpretation; this mindset forms my thinking about AI! Let’s look at how I responded and some tips I offered.
 
-## 📌 My Response
+## 📌 my response
 
 My response has been edited to fix spelling and punctuation, add space and links to bring meaning, and be more visually appealing than a big text block. The core of the response is still present.
 
@@ -54,9 +54,9 @@ Personally, I also love to write some basic ideas down for something I want to w
 
 My point is really that I agree that AI will be a force to make us faster, more efficient, and more accurate and there are so many creative ways to use it! I think if you want to practice, you could start by asking the chatbot when you want to Google something and then see where it leads. Honestly, there are times when it doesn't work out, and that's okay! It doesn't waste too much time to give it a shot, and you know where to look if it doesn't pan out.
 
-## 🤖 Useful Tips
+## 🤖 useful tips
 
-### From my response, I would pull the following tips:
+### from my response, I would pull the following tips:
 
 - Ask a chatbot first when you want to Google something. You can confirm it afterward. Even if it’s incorrect, you generally don’t waste much time.
 - AI is helpful when coding, writing, and more, but you should *always* double-check the work!
@@ -66,7 +66,7 @@ My point is really that I agree that AI will be a force to make us faster, more 
 
 And, finally, this wouldn’t be a good article about AI without asking AI for input! As usual, there are some good nuggets here, but some suggestions are odd, even after going back and forth a few times.
 
-## ChatGPT’s 10 Tips to Leverage AI in Your Day-to-Day
+## chatgpt’s 10 tips to leverage ai in your day-to-day
 
 "These actionable tips provide a more hands-on approach to incorporating AI into daily activities, especially for tech professionals.”
 
@@ -81,7 +81,7 @@ And, finally, this wouldn’t be a good article about AI without asking AI for i
 9. **Implement AI in Home Automation:** Design AI systems for smart home automation, optimizing energy usage and security.
 10. **Educate Others on AI Benefits:** Share insights on AI benefits and dispel myths to promote informed discussions.
 
-### 🤩 A final tip:
+### 🤩 a final tip:
 
 Say “thank you” to your AI assistant(s)! It feels good - at least to me - and it covers your backside if AI gains sentience one day. I’m only half-joking. 😉
 

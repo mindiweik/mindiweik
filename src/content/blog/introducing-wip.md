@@ -12,7 +12,7 @@ Over the last year and a half I’ve experimented with **codeOutLoud** as a cond
 
 You may - or may not - have noticed a recent, subtle rebrand as I tried to formalize my thoughts, goals, “personal brand,” and what’s in store for the future. Alas, it’s not quite enough. At least for me.
 
-## Here’s what’s been on my mind:
+## here’s what’s been on my mind:
 
 - I want to get more creative!
 - I want to diversify my own approach to learning new things!
@@ -31,13 +31,13 @@ If you’re not familiar, “WIP” is often used to declare that a pull/merge r
 
 What does this mean moving forward?
 
-## Newsletter
+## newsletter
 
 **Cadence: (mostly) bi-weekly to monthly**
 
 Newsletter posts about things I’m trying out, learning about, and experiencing will continue. Business as usual in that department, but with a new name and face!
 
-## Podcast
+## podcast
 
 **Launch: Sometime in July 2025**
 
@@ -47,9 +47,9 @@ The intent is to humanize the tech industry with curiosity as we learn about the
 
 A majority of the episodes will feature guests! I will reach all across the industry including not only engineers, but also support, product, design, marketing, strategists, coaches, and more! Some smaller snippets will be sprinkled in to share my own learning moments and - perhaps - learning moments from others.
 
-## Here’s a glimpse at the new branding 👀
+## here’s a glimpse at the new branding 👀
 
-## Join me!
+## join me!
 
 Over the next several weeks, you may see changes to reflect the new name and face that will trickle into all existing posts and upcoming new posts alongside my new YouTube channel and personal branding on LinkedIn.
 

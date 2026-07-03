@@ -20,11 +20,11 @@ We’ll cover my experience for someone considering this path or for curious min
 
 *\*The part-time program was discontinued in 2023; as of this writing, only full-time is available.*
 
-## 🤔 Takeaways
+## 🤔 takeaways
 
 I learned so much, even beyond the technology! 
 
-#### Communication is extremely important.
+#### communication is extremely important.
 
 Working in tech necessitates clear communication to solve challenging problems. Our projects involved “clients” and instructors acted as engineering managers, offering project scope navigation.
 
@@ -38,23 +38,23 @@ Along the way, my cohort lost several people at various stages and reasons. Some
 
 Hack Reactor gave the ability to stop or postpone at various points which could result in a full or partial refund, a do-over with a later cohort, or a complete removal without a refund. The stipulations for each were fair to me.
 
-#### You learn quickly in a fast-paced program.
+#### you learn quickly in a fast-paced program.
 
 With strictly planned coursework, there’s a tight deadline. The first weeks included foundational training followed by projects with quick deadlines of 4-6 weeks. Mid-way through was a major test to confirm we gained the knowledge to finish the second half of the course.
 
 We had to quickly pick up new tech to complete projects on time while practicing existing tools and communicating with our team and instructors. We learned to ask questions early and often. It’s not worth struggling well into a deadline!
 
-#### Projects are the best possible learning tool.
+#### projects are the best possible learning tool.
 
 I’m certain you’ve heard this before. Tutorials and reading can only get you so far. 
 
 Touching the tech, working through confusion, and practicing in a project are the best ways to learn. I’ve taken that seriously since diving into my career and side projects.
 
-## 🤯 Challenges
+## 🤯 challenges
 
 No one told me bootcamp would be easy. I was well-informed that it would be difficult. We talked about it at length during our first week of onboarding. I was unprepared for it to be one of my toughest experiences.
 
-#### Investments are high.
+#### investments are high.
 
 Of course, there was a large financial investment. I chose a high-cost program because acquaintances completed it and did well over the last 5-6 years. Real results are the best recommendation!
 
@@ -66,7 +66,7 @@ Weekdays for me consisted of meetings with customers, my team, and other teams. 
 
 Saturdays involved a 5-hour class followed by outside coursework. The program recommended taking Sundays off, and I tried, but it was my best time for a clear mind to focus and grasp content. I often worked on Sundays as a trade-off to rest after long workdays.
 
-#### Life goes on during the course.
+#### life goes on during the course.
 
 Whether a program takes weeks, months, or one or more years to complete, this is a valid challenge and the one I least expected.
 
@@ -74,9 +74,9 @@ I suddenly lost someone important to me, learned my father had lung cancer, and 
 
 I’m sure others had hardships, too, but this was a level I had never faced. My career and coursework were challenging, and my personal life added even more to juggle in the last half of the course.
 
-## 😌 Advice
+## 😌 advice
 
-#### You get out of it what you put into it.
+#### you get out of it what you put into it.
 
 No matter the program, you get reciprocal success for the effort given. If you learned the fundamentals, you were quicker to grasp the next phases. If you spent time on individual tools, you were more capable of applying them in projects.
 
@@ -86,7 +86,7 @@ He was blunt with me. He wasn't thrilled when he learned my company committed to
 
 Which leads me to my next point.
 
-#### Career changers are powerful!
+#### career changers are powerful!
 
 These days, many people find tech after pursuing other careers. This brings a wealth of knowledge and experience from different domains and levels.
 
@@ -96,7 +96,7 @@ Right away, I applied my experience in US real estate to my company where we bui
 
 **If you’re a hiring manager**, your team will be more diverse if you hire folks with varied experience. Even if it’s not as directly correlated as my experience, we bring all sorts of skills to build better software!
 
-#### Job searching.
+#### job searching.
 
 Here is the best I can give: leverage your network. For my first role, I am grateful that my company supported my efforts and moved me to engineering after completion. 
 
@@ -104,7 +104,7 @@ I didn’t go through what many in tech have in recent years. Multiple interview
 
 I worked hard for them and clarified my goals - to give myself proper credit. I talked to the leadership team early and often. Granted, I work for a small company with under 100 full-time employees; I had the ability to speak with the C-suite directly.
 
-## Conclusion
+## conclusion
 
 Results will vary. Honestly, I could leave it there, but I’ll wrap it up. 
 
