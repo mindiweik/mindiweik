@@ -5,33 +5,194 @@ interface Props {
 }
 const { pageKey, zone } = Astro.props;
 const accent = zone === 'podcast' ? 'var(--accent-podcast)' : 'var(--accent-blog)';
-const field =
-  'font-family:var(--font-body);font-size:0.85rem;padding:0.5rem 0.6rem;' +
-  'background:transparent;color:var(--text);border:1px solid var(--border);border-radius:6px';
 ---
-<section aria-labelledby="comments-heading" style="margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--border)">
-  <h2 id="comments-heading" style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin:0 0 1rem">Comments</h2>
+<section class="comments" aria-labelledby="comments-heading" style={`--c-accent:${accent}`}>
+  <h2 id="comments-heading" class="eyebrow">// comments<span data-comments-count></span></h2>
 
-  <div data-comments-root data-page-key={pageKey} data-accent={accent}>
-    <p data-comments-status style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">Loading comments…</p>
-    <ol data-comments-list style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem"></ol>
+  <div data-comments-root data-page-key={pageKey}>
+    <p data-comments-status class="cstatus">Loading comments…</p>
+    <ol data-comments-list class="clist"></ol>
 
-    <form data-comments-form style="margin-top:1.4rem;display:flex;flex-direction:column;gap:0.6rem">
-      <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
-        <input name="name" placeholder="name" maxlength="80" required aria-label="name" style={field + ';flex:1;min-width:9rem'} />
-        <input name="email" type="email" placeholder="email (private)" maxlength="190" required aria-label="email" style={field + ';flex:1;min-width:9rem'} />
-      </div>
-      <textarea name="body" placeholder="say something nice…" maxlength="5000" required rows="4" aria-label="comment" style={field + ';resize:vertical'}></textarea>
-      <!-- honeypot: hidden from humans; bots fill it and get silently dropped -->
-      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
-      <div style="display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap">
-        <button type="submit" style={`font-family:var(--font-mono);font-size:0.72rem;padding:0.45rem 0.9rem;border:0;border-radius:6px;cursor:pointer;background:${accent};color:var(--ink)`}>post comment</button>
-        <span data-comments-formstatus role="status" style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted)"></span>
-      </div>
-      <p style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted);margin:0">Comments are held for approval. Your email stays private.</p>
-    </form>
+    <details class="disclosure">
+      <summary class="disclosure-summary">leave a comment</summary>
+
+      <form data-comments-form class="cform">
+        <label class="field-row">
+          <span class="field-label">name</span>
+          <input name="name" maxlength="80" required autocomplete="name" class="field" />
+        </label>
+
+        <label class="field-row">
+          <span class="field-label">email</span>
+          <input name="email" type="email" maxlength="190" required autocomplete="email" class="field" />
+          <span class="hint">Used once to send a confirmation link, so we know you are a real person. It is never shown or shared.</span>
+        </label>
+
+        <label class="field-row">
+          <span class="field-label">comment</span>
+          <textarea name="body" maxlength="5000" required rows="4" class="field ta"></textarea>
+        </label>
+
+        <!-- honeypot: hidden from humans; bots fill it and get silently dropped -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" />
+
+        <div class="submit-row">
+          <button type="submit" class="submit">post comment</button>
+          <span data-comments-formstatus role="status" class="fstatus"></span>
+        </div>
+      </form>
+    </details>
   </div>
 </section>
+
+<style>
+  .comments {
+    margin-top: 2.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin: 0 0 1.1rem;
+  }
+  .cstatus {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .clist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .clist:not(:empty) {
+    margin-bottom: 0.4rem;
+  }
+
+  .disclosure {
+    margin-top: 1.4rem;
+  }
+  .disclosure-summary {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    background: var(--c-accent);
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  .disclosure-summary::-webkit-details-marker { display: none; }
+  .disclosure[open] .disclosure-summary {
+    margin-bottom: 1rem;
+    opacity: 0.85;
+  }
+  .disclosure-summary:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 2px;
+  }
+
+  .cform {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 34rem;
+  }
+  .field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .field-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .field {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.55rem 0.7rem;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: 100%;
+  }
+  .field:focus-visible {
+    outline: none;
+    border-color: var(--c-accent);
+  }
+  .ta { resize: vertical; }
+  .hint {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .submit-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+  .submit {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--c-accent);
+    color: var(--ink);
+  }
+  .submit:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 2px;
+  }
+  .fstatus {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .citem {
+    border-left: 2px solid var(--c-accent);
+    padding-left: 0.9rem;
+  }
+  .cmeta {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-muted);
+  }
+  .cbody {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0.3rem 0 0;
+    white-space: pre-wrap;
+  }
+</style>
 
 <script>
   import { commentsApiUrl, validateComment, formatCommentDate } from '../../lib/comments.ts';
@@ -39,28 +200,29 @@ const field =
   const root = document.querySelector('[data-comments-root]');
   if (root instanceof HTMLElement) {
     const pageKey = root.dataset.pageKey ?? '';
-    const accent = root.dataset.accent ?? 'var(--border)';
     const api = commentsApiUrl();
     const list = root.querySelector('[data-comments-list]') as HTMLElement;
     const status = root.querySelector('[data-comments-status]') as HTMLElement;
+    const count = document.querySelector('[data-comments-count]') as HTMLElement;
     const form = root.querySelector('[data-comments-form]') as HTMLFormElement;
     const formStatus = root.querySelector('[data-comments-formstatus]') as HTMLElement;
 
     function render(comments: any[]) {
       list.replaceChildren();
+      count.textContent = comments.length ? ` (${comments.length})` : '';
       if (!comments.length) {
-        status.textContent = 'Be the first to comment.';
+        status.textContent = 'No comments yet. Start the conversation.';
         return;
       }
       status.textContent = '';
       for (const c of comments) {
         const li = document.createElement('li');
-        li.style.cssText = `border-left:2px solid ${accent};padding-left:0.8rem`;
+        li.className = 'citem';
         const meta = document.createElement('div');
-        meta.style.cssText = 'font-family:var(--font-mono);font-size:0.62rem;color:var(--text-muted)';
+        meta.className = 'cmeta';
         meta.textContent = `${c.name} · ${formatCommentDate(c.created_at)}`;
         const body = document.createElement('p');
-        body.style.cssText = 'font-family:var(--font-body);font-size:0.85rem;margin:0.3rem 0 0;white-space:pre-wrap';
+        body.className = 'cbody';
         body.textContent = c.body; // textContent keeps stored text inert (no XSS)
         li.append(meta, body);
         list.append(li);
@@ -90,7 +252,7 @@ const field =
         formStatus.textContent = `Please check: ${errors.join(', ')}.`;
         return;
       }
-      formStatus.textContent = 'Posting…';
+      formStatus.textContent = 'Sending…';
       try {
         const res = await fetch(api, {
           method: 'POST',
@@ -100,7 +262,7 @@ const field =
         const data = await res.json();
         if (res.ok) {
           form.reset();
-          formStatus.textContent = data.message ?? 'Thanks.';
+          formStatus.textContent = data.message ?? 'Almost there. Check your email for the confirmation link.';
         } else {
           formStatus.textContent = data.error ?? 'Something went wrong.';
         }
