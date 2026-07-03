@@ -4,12 +4,6 @@ These are known, intentionally-deferred items from the initial scaffold. None bl
 scaffold being "done." Most belong with the content-migration or light-mode (v1.1) work.
 
 ## Content / data
-- **Projects revamp (post-migration)** — after the wip-podcast content migration, give each
-  project its own detail page (longer description, links, images) instead of a bare index row.
-  Fold these deferred bits into that work:
-  - **Projects changelog date** is synthesized from `order` -> a Jan-2026 date in
-    `src/lib/collections.ts`. Replace with real ship dates; add a test for the `order > 0` branch.
-  - **Projects with no url** currently link to `#`. Real links come later (leave as-is for now).
 - **About copy** is placeholder; real bio + the crew during content work.
 - **Social links** — add Mindi's socials (LinkedIn, etc.) to the About page and/or the site footer (maybe both). Deferred 2026-07-01 during content migration.
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
@@ -30,6 +24,14 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 ## Resolved
+- ~~**Projects revamp**~~ -> shipped 2026-07-03. Five projects (Audition Cat ★,
+  Drip Dash, mindiweik.com, catz4life, prettykitties), each with a detail page
+  (markdown body via ProjectLayout, same pattern as blog). Cards navigate
+  internally; the `#` fallback and the synthesized changelog dates are gone.
+  Changelog project entries are type `update`, dated lastUpdated (manual, for
+  Audition Cat milestones) -> GitHub pushedAt (build-time fetch, fresh daily via
+  cron) -> Jan 1 of `since`. Screenshots pending from Mindi (image/imageAlt
+  fields are wired). GitLab API for AC = deliberately skipped.
 - ~~**Smart 404**~~ -> shipped 2026-07-02. Build-time route list (isVisible-filtered, so drafts
   never leak) inlined into 404.astro; client-side fuzzy match (token overlap + Levenshtein on
   the last segment, section words excluded) renders up to 5 "did you mean" buttons showing
