@@ -6,7 +6,7 @@ interface Props { zone: ZoneKey; heading: string; sub: string; }
 const { zone, heading, sub } = Astro.props;
 const z = ZONES[zone];
 ---
-<BaseLayout title={z.label} active={z.route}>
+<BaseLayout title={z.label} description={sub} zone={zone} active={z.route}>
   <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);padding-top:1.6rem">~{z.route}</div>
   <h1 style="font-family:var(--font-display);font-weight:700;font-size:1.7rem;letter-spacing:-0.02em;margin:0.4rem 0 0;line-height:1.5"><span style={`background:${zoneVar(zone)};color:var(--ink);padding:0.08em 0.34em;border-radius:7px;box-decoration-break:clone;-webkit-box-decoration-break:clone`}>{heading}</span></h1>
   <p style="font-family:var(--font-body);font-size:0.85rem;color:var(--text-muted);margin-top:0.4rem">{sub}</p>

@@ -26,7 +26,7 @@ const linkRank = (l: { url: string }) => {
 };
 const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b));
 ---
-<BaseLayout title={title} active="/podcast">
+<BaseLayout title={title} description={descriptor} zone="podcast" active="/podcast">
   <Breadcrumb path={`~/podcast/${id}`} />
   <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
     <VersionChip label={version} zone="podcast" />

@@ -10,11 +10,12 @@ interface Props {
   date: Date;
   type?: string;
   links: { label: string; url: string }[];
+  description?: string;
 }
-const { id, title, event, date, type, links } = Astro.props;
+const { id, title, event, date, type, links, description } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 ---
-<BaseLayout title={title} active="/speaking">
+<BaseLayout title={title} description={description} zone="speaking" active="/speaking">
   <Breadcrumb path={`~/speaking/${id}`} />
   <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
     <VersionChip label={type ?? 'talk'} zone="speaking" />
