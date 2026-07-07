@@ -2,6 +2,8 @@
 
 Mindi Weik's personal site: blog, [WIP] podcast, speaking, and projects. Built with Astro.
 
+**Live at [mindiweik.com](https://mindiweik.com)** ✨
+
 ## Develop
 
 ```bash
