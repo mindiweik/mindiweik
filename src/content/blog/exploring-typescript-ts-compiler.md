@@ -110,7 +110,7 @@ I could keep brainstorming, but I think you get the point.
 
 _So, how does one extend a_ tsconfig _file or use more than one one?_
 
-Put simply, use the extends option and reference the base file. I found [an example here](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/) that shows this pretty well. [The example is an older reference. Some options may have changed with newer TS version releases!]
+Put simply, use the extends option and reference the base file.
 
 Here is a simplified file example from my own usage, too:
 

@@ -21,7 +21,7 @@ Let’s be clear: I am not an expert on curiosity or perfect at practicing it. H
 
 ## 🎬 video + presentation insights
 
-Below is a recording of the first presentation for “Capturing Curiosity”, a [collaboration](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date) with [Coding with Callie](https://coding-with-callie.com/) in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
+Below is a recording of the first presentation for “Capturing Curiosity”, a collaboration with Coding with Callie in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
 
 If you have any feedback you would like to share, I’m open to hearing it! [Link to the current slides, if interested!](https://www.canva.com/design/DAGRKyHC3TE/FUsGdL0j9XI1Ck96kVq2eQ/edit?utm_content=DAGRKyHC3TE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
@@ -41,7 +41,7 @@ If you have any feedback you would like to share, I’m open to hearing it! [Lin
 - Consider the timing for outside lighting. 😅 I didn’t realize until halfway through that I was partially in shadow. I don’t usually record that time of evening!
 - The Q&A highlighted a few lacking areas of my initial introduction story, so I added more detail for later iterations. ✅
 
-A few weeks later, I shared only my intro in another online setting, my [Toastmasters](https://thunderbolt.toastmastersclubs.org/) group, where I’m excited to learn and grow into a more professional presenter. Though it was a brief glimpse into the talk, I received helpful feedback on my physical and verbal presentation techniques rather than the content.
+A few weeks later, I shared only my intro in another online setting, my Toastmasters group, where I’m excited to learn and grow into a more professional presenter. Though it was a brief glimpse into the talk, I received helpful feedback on my physical and verbal presentation techniques rather than the content.
 
 About a month after the first full talk, I shared this again at the [PLoP 2024](https://plopcon.org/plop2024/) conference, focusing on “Pattern Languages of Programs, People & Practices.” Applying curiosity fits each of these because you need to consider how you will interact with people, how you can apply your curiosity to software - or other tangible things - that you build, and how you approach practices in your day-to-day, personally and professionally.
 

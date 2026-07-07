@@ -1,0 +1,52 @@
+# Advisory link checker: builds the site and runs lychee over the generated
+# dist/ to catch genuinely broken links. Deliberately standalone (NOT a
+# required status check) so it never blocks the auto-deploy on main. Hosts that
+# bot-block CI runners are excluded via .lycheeignore, so red means broken.
+# History: a first attempt on 2026-07-03 was pulled for false positives before
+# the ignore-list existed (see docs/followups.md).
+name: Links
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/**'
+      - 'src/pages/**'
+      - 'src/components/**'
+      - '.lycheeignore'
+      - '.github/workflows/links.yml'
+  schedule:
+    - cron: '0 16 * * 1' # Mondays 16:00 UTC (~9-10am Denver)
+  workflow_dispatch:
+
+# One run per ref; newer pushes cancel in-flight checks.
+concurrency:
+  group: links-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      # --root-dir lets site-absolute links like /about resolve against dist/.
+      # GITHUB_TOKEN raises the rate limit on github.com links.
+      - name: Check links (lychee)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-loopback --timeout 30 --max-retries 2 --root-dir ${{ github.workspace }}/dist dist
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

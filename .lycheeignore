@@ -1,0 +1,54 @@
+# Hosts that block CI runners with 999 / 403 / 429 responses (bot protection),
+# not because the links are dead. Curated from the hosts actually present in
+# this site's content so that a RED link check means a genuinely broken link.
+# These platforms gate non-browser clients regardless of whether the target
+# exists, so checking them from CI is always a false positive. Trim any you'd
+# rather have actively verified. See docs/followups.md for the full backstory.
+
+# Own domains: checked locally via dist/ (internal links) and by deploy.yml's
+# smoke-test job (liveness). Hostinger 403s the CI runner IP, so checking the
+# fully-qualified self-links here is always a false positive.
+mindiweik\.com
+wip-podcast\.com
+
+# Social platforms (return 999 / login-wall to non-browser clients)
+linkedin\.com
+tiktok\.com
+instagram\.com
+
+# Video (bot-throttled / 429)
+youtube\.com
+youtube-nocookie\.com
+youtu\.be
+
+# Course / media / design / docs platforms (403 to CI runners)
+canva\.com
+substack\.com
+udemy\.com
+medium\.com
+loom\.com
+oreilly\.com
+goodreads\.com
+meetup\.com
+npmjs\.com
+raspberrypi\.com
+openai\.com
+claude\.ai
+gitlab\.com
+inc\.com
+techopedia\.com
+
+# Intentional 404: this blog post demonstrates a deliberately mistyped URL
+# ("imaaaages" instead of "images") to show a failed request.
+https://api\.thecatapi\.com/v1/imaaaages/search
+
+# Kept intentionally though the site is now offline: a former podcast guest's
+# project (David Weiss). Preserved as a credit; skip it in the checker.
+useresume\.app
+
+# Illustrative placeholder / example URLs used inside tutorials (not real
+# links): the JMeter post's "external testing" example, and an error-handling
+# code sample that deliberately fetches a non-existent domain. (Loopback
+# examples like 127.0.0.1 are handled by lychee's --exclude-loopback flag.)
+https://url-path\.com
+this-url-does-not-exist-at-all\.xyz
