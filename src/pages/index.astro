@@ -5,6 +5,7 @@ import ZoneCard from '../components/home/ZoneCard.astro';
 import ChangelogFeed from '../components/home/ChangelogFeed.astro';
 import SectionLabel from '../components/content/SectionLabel.astro';
 import JsonLd from '../components/layout/JsonLd.astro';
+import SubscribeForm from '../components/content/SubscribeForm.astro';
 import { getChangelog } from '../lib/collections.ts';
 import { SITE } from '../config/site.ts';
 import { personSchema, websiteSchema } from '../lib/schema.ts';
@@ -36,4 +37,6 @@ const changelog = await getChangelog(6);
     style="display:inline-block;margin-top:1rem;font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted)"
     >→ full changelog</a
   >
+  <SectionLabel label="// subscribe" />
+  <SubscribeForm variant="homepage" />
 </BaseLayout>
