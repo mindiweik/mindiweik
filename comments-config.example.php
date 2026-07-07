@@ -25,4 +25,8 @@ return [
   'smtp_pass'      => 'REPLACE_WITH_MAILBOX_PASSWORD',
   'from_email'     => 'noreply@mindiweik.com',
   'from_name'      => 'mindiweik.com',
+
+  // Owner notification: emailed when a comment is verified and goes live.
+  // Leave empty ('') to disable.
+  'notify_email'   => 'REPLACE_WITH_YOUR_EMAIL',
 ];
