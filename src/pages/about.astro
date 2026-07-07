@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionLabel from '../components/content/SectionLabel.astro';
 import VersionChip from '../components/content/VersionChip.astro';
 import KofiCard from '../components/support/KofiCard.astro';
+import JsonLd from '../components/layout/JsonLd.astro';
 import { SITE } from '../config/site.ts';
+import { personSchema } from '../lib/schema.ts';
 
 const now = [
   { dot: '--accent-blog', k: 'onboarding', v: 'new providers @ OpenRouter' },
@@ -14,6 +16,7 @@ const now = [
 ---
 
 <BaseLayout title="about" active="/about">
+  <JsonLd schema={personSchema()} />
   <div
     style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);padding-top:1.6rem"
   >
