@@ -4,8 +4,8 @@
 > confirm, notify, preferences, unsubscribe, admin) require a local MySQL
 > database, which is not available in the dev environment. They are verified
 > in the production smoke section after deploy instead. The DB-free checks
-> (php -l on every endpoint, build + notify-feed.json shape, JS suite) were
-> run and passed on this branch.
+> (php -l on every endpoint, build + notify-feed.json shape, JS suite, lint,
+> prose:lint) were run and passed on this branch.
 
 PHP has no test toolchain in this repo, so the endpoints are verified with
 curl against a local server and database. Run after any change to
