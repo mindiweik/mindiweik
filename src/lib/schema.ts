@@ -5,8 +5,9 @@ import { SITE } from '../config/site.ts';
 
 const CONTEXT = 'https://schema.org';
 const SERIES_NAME = '[WIP] Podcast';
+const PERSON_ID = `${SITE.url}/#person`;
 
-const author = () => ({ '@type': 'Person', name: SITE.author, url: SITE.url });
+const author = () => ({ '@type': 'Person', '@id': PERSON_ID, name: SITE.author, url: SITE.url });
 
 // Escape < so a value like "</script>" cannot close the inline script tag.
 export function serializeJsonLd(schema: object): string {
@@ -17,6 +18,7 @@ export function personSchema() {
   return {
     '@context': CONTEXT,
     '@type': 'Person',
+    '@id': PERSON_ID,
     name: SITE.author,
     url: SITE.url,
     jobTitle: 'Software Engineer',

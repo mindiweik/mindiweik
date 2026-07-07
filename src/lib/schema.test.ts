@@ -19,6 +19,7 @@ describe('personSchema', () => {
   it('identifies Mindi with sameAs profile links', () => {
     const p = personSchema() as Record<string, unknown>;
     expect(p['@type']).toBe('Person');
+    expect(p['@id']).toBe('https://mindiweik.com/#person');
     expect(p.name).toBe('Mindi Weik');
     expect(p.url).toBe('https://mindiweik.com');
     expect(p.sameAs).toContain('https://www.linkedin.com/in/mindiweik/');
@@ -32,6 +33,7 @@ describe('websiteSchema', () => {
     expect(w['@type']).toBe('WebSite');
     expect(w.url).toBe('https://mindiweik.com');
     expect(w.author.name).toBe('Mindi Weik');
+    expect(w.author['@id']).toBe('https://mindiweik.com/#person');
   });
 });
 
@@ -56,6 +58,7 @@ describe('blogPostingSchema', () => {
     expect(b.dateModified).toBe('2026-07-03T00:00:00.000Z');
     expect(b.keywords).toBe('ai, debugging');
     expect(b.author.name).toBe('Mindi Weik');
+    expect(b.author['@id']).toBe('https://mindiweik.com/#person');
     expect(b.mainEntityOfPage).toBe(base.url);
   });
 
