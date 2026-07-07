@@ -6,6 +6,10 @@ import PublishStateChip from '../components/content/PublishStateChip.astro';
 import type { PublishState } from '../lib/publish.ts';
 import EpisodeNav from '../components/content/EpisodeNav.astro';
 import Comments from '../components/content/Comments.astro';
+import JsonLd from '../components/layout/JsonLd.astro';
+import { podcastEpisodeSchema } from '../lib/schema.ts';
+import { canonicalUrl } from '../lib/urls.ts';
+import { SITE } from '../config/site.ts';
 import '../styles/prose.css';
 interface Props {
   id: string;
@@ -15,6 +19,7 @@ interface Props {
   pubDate: Date;
   duration?: string;
   descriptor?: string;
+  episodeNumber?: number;
   youtubeUrl?: string;
   chapters: { timestamp: string; title: string }[];
   links: { label: string; url: string }[];
@@ -28,11 +33,13 @@ const {
   pubDate,
   duration,
   descriptor,
+  episodeNumber,
   youtubeUrl,
   chapters,
   links,
   state,
 } = Astro.props;
+const pageUrl = canonicalUrl(Astro.url.pathname, Astro.site ?? new URL(SITE.url));
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const ytId = youtubeUrl
@@ -51,6 +58,16 @@ const sortedLinks = [...(links ?? [])].sort((a, b) => linkRank(a) - linkRank(b))
 ---
 
 <BaseLayout title={title} description={descriptor} zone="podcast" active="/podcast">
+  <JsonLd
+    schema={podcastEpisodeSchema({
+      title,
+      url: pageUrl,
+      datePublished: pubDate,
+      description: descriptor,
+      seasonNumber: season,
+      episodeNumber,
+    })}
+  />
   <Breadcrumb path={`~/podcast/${id}`} />
   <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.7rem">
     <VersionChip label={version} zone="podcast" />

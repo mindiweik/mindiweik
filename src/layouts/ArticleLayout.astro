@@ -7,11 +7,16 @@ import type { PublishState } from '../lib/publish.ts';
 import RelatedPosts from '../components/content/RelatedPosts.astro';
 import Comments from '../components/content/Comments.astro';
 import KofiCard from '../components/support/KofiCard.astro';
+import JsonLd from '../components/layout/JsonLd.astro';
+import { blogPostingSchema } from '../lib/schema.ts';
+import { canonicalUrl } from '../lib/urls.ts';
+import { SITE } from '../config/site.ts';
 import '../styles/prose.css';
 interface Props {
   title: string;
   slug: string;
   date: Date;
+  updatedDate?: Date;
   tags: string[];
   readingMins: number;
   youtubeUrl?: string;
@@ -19,12 +24,15 @@ interface Props {
   description?: string;
   image?: string;
 }
-const { title, slug, date, tags, readingMins, youtubeUrl, state, description, image } = Astro.props;
+const { title, slug, date, updatedDate, tags, readingMins, youtubeUrl, state, description, image } =
+  Astro.props;
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const ytId = youtubeUrl
   ? (youtubeUrl.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] ?? null)
   : null;
+const pageUrl = canonicalUrl(Astro.url.pathname, Astro.site ?? new URL(SITE.url));
+const schemaImage = new URL(image ?? '/og/blog.png', SITE.url).href;
 ---
 
 <BaseLayout
@@ -36,6 +44,17 @@ const ytId = youtubeUrl
   type="article"
   pubDate={date}
 >
+  <JsonLd
+    schema={blogPostingSchema({
+      title,
+      description,
+      url: pageUrl,
+      datePublished: date,
+      dateModified: updatedDate,
+      image: schemaImage,
+      tags,
+    })}
+  />
   <Breadcrumb path={`~/blog/${slug}.mdx`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label="blog" zone="blog" />

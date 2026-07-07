@@ -5,6 +5,8 @@ import { SITE } from '../../config/site.ts';
 import { getCollection } from 'astro:content';
 import { isVisible, publishState } from '../../lib/publish.ts';
 import PublishStateChip from '../../components/content/PublishStateChip.astro';
+import JsonLd from '../../components/layout/JsonLd.astro';
+import { podcastSeriesSchema } from '../../lib/schema.ts';
 
 const eps = (await getCollection('podcast', isVisible)).sort(
   (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
@@ -23,6 +25,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
 ---
 
 <ZoneIndexLayout zone="podcast" heading="[WIP] podcast" sub={sub}>
+  <JsonLd schema={podcastSeriesSchema()} />
   {
     status !== 'active' && (
       <div style="margin-bottom:0.6rem">

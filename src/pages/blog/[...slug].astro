@@ -19,6 +19,7 @@ const mins = post.data.readingTime ?? readingTime(post.body ?? '');
   image={post.data.ogImage}
   slug={post.id}
   date={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
   tags={post.data.tags}
   readingMins={mins}
   youtubeUrl={post.data.youtubeUrl}
