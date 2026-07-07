@@ -24,3 +24,41 @@ export function validateSubscribe(input: SubscribeInput): { ok: boolean; errors:
 export function subscribeApiUrl(env: { PUBLIC_SUBSCRIBE_API?: string } = import.meta.env): string {
   return env.PUBLIC_SUBSCRIBE_API || '/api/subscribe.php';
 }
+
+// Feed shaping for /notify-feed.json. Pure so it can be tested on fixtures;
+// the endpoint feeds it real collections filtered by isVisible.
+export interface NotifyFeedItem {
+  key: string;
+  type: 'blog' | 'podcast';
+  title: string;
+  description: string;
+  link: string;
+  pubDate: string;
+}
+
+interface CollectionEntry {
+  id: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
+}
+
+export function toNotifyFeedItems(
+  raw: { blog: CollectionEntry[]; podcast: CollectionEntry[] },
+  site: string,
+  limit = 20,
+): NotifyFeedItem[] {
+  const base = site.replace(/\/+$/, '');
+  const shape =
+    (type: 'blog' | 'podcast') =>
+    (e: CollectionEntry): NotifyFeedItem => ({
+      key: `${type}/${e.id}`,
+      type,
+      title: e.data.title,
+      description: e.data.description ?? '',
+      link: `${base}/${type}/${e.id}/`,
+      pubDate: e.data.pubDate.toISOString(),
+    });
+  return [...raw.blog.map(shape('blog')), ...raw.podcast.map(shape('podcast'))]
+    .sort((a, b) => b.pubDate.localeCompare(a.pubDate))
+    .slice(0, limit);
+}

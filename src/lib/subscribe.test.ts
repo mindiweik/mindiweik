@@ -66,3 +66,74 @@ describe('subscribeApiUrl', () => {
     ).toBe('http://localhost:8080/api/subscribe.php');
   });
 });
+
+import { toNotifyFeedItems } from './subscribe';
+
+describe('toNotifyFeedItems', () => {
+  const site = 'https://mindiweik.com';
+  const blogEntry = (id: string, iso: string) => ({
+    id,
+    data: { title: `post ${id}`, description: `about ${id}`, pubDate: new Date(iso) },
+  });
+  const podEntry = (id: string, iso: string) => ({
+    id,
+    data: { title: `ep ${id}`, description: `show ${id}`, pubDate: new Date(iso), version: id },
+  });
+
+  it('shapes blog and podcast entries with absolute links', () => {
+    const items = toNotifyFeedItems(
+      { blog: [blogEntry('my-post', '2026-07-01')], podcast: [podEntry('v1.0.4', '2026-06-01')] },
+      site,
+    );
+    expect(items).toEqual([
+      {
+        key: 'blog/my-post',
+        type: 'blog',
+        title: 'post my-post',
+        description: 'about my-post',
+        link: 'https://mindiweik.com/blog/my-post/',
+        pubDate: new Date('2026-07-01').toISOString(),
+      },
+      {
+        key: 'podcast/v1.0.4',
+        type: 'podcast',
+        title: 'ep v1.0.4',
+        description: 'show v1.0.4',
+        link: 'https://mindiweik.com/podcast/v1.0.4/',
+        pubDate: new Date('2026-06-01').toISOString(),
+      },
+    ]);
+  });
+
+  it('sorts newest first across both collections', () => {
+    const items = toNotifyFeedItems(
+      {
+        blog: [blogEntry('old', '2026-01-01'), blogEntry('new', '2026-07-01')],
+        podcast: [podEntry('mid', '2026-04-01')],
+      },
+      site,
+    );
+    expect(items.map((i) => i.key)).toEqual(['blog/new', 'podcast/mid', 'blog/old']);
+  });
+
+  it('caps at the limit (default 20)', () => {
+    const blog = Array.from({ length: 25 }, (_, i) =>
+      blogEntry(`p${i}`, `2026-01-${String(i + 1).padStart(2, '0')}`),
+    );
+    expect(toNotifyFeedItems({ blog, podcast: [] }, site)).toHaveLength(20);
+    expect(toNotifyFeedItems({ blog, podcast: [] }, site, 5)).toHaveLength(5);
+  });
+
+  it('defaults a missing description to empty string', () => {
+    const entry = { id: 'bare', data: { title: 'bare', pubDate: new Date('2026-07-01') } };
+    expect(toNotifyFeedItems({ blog: [entry], podcast: [] }, site)[0].description).toBe('');
+  });
+
+  it('strips a trailing slash from the site url', () => {
+    const items = toNotifyFeedItems(
+      { blog: [blogEntry('x', '2026-07-01')], podcast: [] },
+      `${site}/`,
+    );
+    expect(items[0].link).toBe('https://mindiweik.com/blog/x/');
+  });
+});
