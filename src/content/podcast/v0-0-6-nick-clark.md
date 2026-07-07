@@ -26,7 +26,7 @@ links:
       label: 'BuiltInPublic',
       url: 'https://www.linkedin.com/company/built-in-public/posts/?feedView=all',
     }
-  - { label: 'episode v0.0.2', url: '/v002-christin-martin' }
+  - { label: 'episode v0.0.2', url: '/podcast/v0-0-2-christin-martin' }
   - { label: 'Renovate repo', url: 'https://github.com/renovatebot/renovate' }
 ---
 

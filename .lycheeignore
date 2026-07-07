@@ -45,3 +45,10 @@ https://api\.thecatapi\.com/v1/imaaaages/search
 # Kept intentionally though the site is now offline: a former podcast guest's
 # project (David Weiss). Preserved as a credit; skip it in the checker.
 useresume\.app
+
+# Illustrative placeholder / example URLs used inside tutorials (not real
+# links): the JMeter post's "external testing" example, and an error-handling
+# code sample that deliberately fetches a non-existent domain. (Loopback
+# examples like 127.0.0.1 are handled by lychee's --exclude-loopback flag.)
+https://url-path\.com
+this-url-does-not-exist-at-all\.xyz
