@@ -29,4 +29,8 @@ return [
   // Owner notification: emailed when a comment is verified and goes live.
   // Leave empty ('') to disable.
   'notify_email'   => 'REPLACE_WITH_YOUR_EMAIL',
+
+  // Email subscriptions: secret gating the cron endpoint
+  // (notify.php?key=...). Generate with: php -r "echo bin2hex(random_bytes(32));"
+  'cron_key'       => 'REPLACE_WITH_LONG_RANDOM_STRING',
 ];
