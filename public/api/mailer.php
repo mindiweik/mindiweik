@@ -80,9 +80,9 @@ function send_list_email(array $config, string $toEmail, string $subject, string
     $unsubLink = $site . '/api/unsubscribe.php?token=' . $manageToken;
     $body .=
       "\n\n--\n" .
-      "You get this because you subscribed at mindiweik.com.\n" .
-      'Manage preferences: ' . $prefsLink . "\n" .
-      'Unsubscribe: ' . $unsubLink . "\n";
+      "You signed up for updates at mindiweik.com.\n" .
+      'Change what you get: ' . $prefsLink . "\n" .
+      'Unsubscribe anytime: ' . $unsubLink . "\n";
     $mail->addCustomHeader(
       'List-Unsubscribe',
       sprintf('<mailto:%s>, <%s>', (string) $config['from_email'], $unsubLink)

@@ -47,3 +47,35 @@ function sub_render_page(string $title, string $message, string $link, string $l
      . '</body></html>';
   exit;
 }
+
+// Builds the subject and plain-text body for a content notification (a new
+// blog post or podcast episode). $item is a notify-feed.json row with keys
+// type, title, description, link. The description line is skipped when empty
+// (podcast episodes without a descriptor). Shared by notify.php (real sends)
+// and its sample mode, so a preview is byte-identical to the real thing.
+function sub_content_email(array $item): array {
+  $isPodcast = ($item['type'] ?? '') === 'podcast';
+  $title = (string) ($item['title'] ?? '');
+  $desc  = trim((string) ($item['description'] ?? ''));
+  $link  = (string) ($item['link'] ?? '');
+
+  if ($isPodcast) {
+    $subject = 'New episode: ' . $title;
+    $intro   = 'Hey! A new episode just dropped 🎙️';
+    $cta     = 'Have a listen → ' . $link;
+    $signoff = "Thanks for tuning in,\nMindi";
+  } else {
+    $subject = 'New post: ' . $title;
+    $intro   = 'Hey! Just published something new 📝';
+    $cta     = 'Give it a read → ' . $link;
+    $signoff = "Thanks for following along,\nMindi";
+  }
+
+  $body = $intro . "\n\n" . $title . "\n";
+  if ($desc !== '') {
+    $body .= $desc . "\n";
+  }
+  $body .= "\n" . $cta . "\n\n" . $signoff;
+
+  return ['subject' => $subject, 'body' => $body];
+}

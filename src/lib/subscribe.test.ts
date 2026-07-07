@@ -75,9 +75,10 @@ describe('toNotifyFeedItems', () => {
     id,
     data: { title: `post ${id}`, description: `about ${id}`, pubDate: new Date(iso) },
   });
+  // Real episodes carry `descriptor` (not `description`) and a `version`.
   const podEntry = (id: string, iso: string) => ({
     id,
-    data: { title: `ep ${id}`, description: `show ${id}`, pubDate: new Date(iso), version: id },
+    data: { title: `ep ${id}`, descriptor: `show ${id}`, pubDate: new Date(iso), version: id },
   });
 
   it('shapes blog and podcast entries with absolute links', () => {
@@ -97,12 +98,51 @@ describe('toNotifyFeedItems', () => {
       {
         key: 'podcast/v1.0.4',
         type: 'podcast',
-        title: 'ep v1.0.4',
+        title: 'v1.0.4 ep v1.0.4',
         description: 'show v1.0.4',
         link: 'https://mindiweik.com/podcast/v1.0.4/',
         pubDate: new Date('2026-06-01').toISOString(),
       },
     ]);
+  });
+
+  it('prefixes podcast titles with the version and reads descriptor', () => {
+    const items = toNotifyFeedItems(
+      {
+        blog: [],
+        podcast: [
+          {
+            id: 'guest-slug',
+            data: {
+              title: 'a great guest',
+              descriptor: 'we talked shop',
+              version: 'v2.0.0',
+              pubDate: new Date('2026-07-01'),
+            },
+          },
+        ],
+      },
+      site,
+    );
+    expect(items[0].title).toBe('v2.0.0 a great guest');
+    expect(items[0].description).toBe('we talked shop');
+  });
+
+  it('leaves podcast description empty when it has no descriptor yet', () => {
+    const items = toNotifyFeedItems(
+      {
+        blog: [],
+        podcast: [
+          {
+            id: 'bare-ep',
+            data: { title: 'no summary', version: 'v0.0.1', pubDate: new Date('2026-07-01') },
+          },
+        ],
+      },
+      site,
+    );
+    expect(items[0].title).toBe('v0.0.1 no summary');
+    expect(items[0].description).toBe('');
   });
 
   it('sorts newest first across both collections', () => {
