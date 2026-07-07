@@ -1,6 +1,6 @@
 ---
 title: 'exploring typescript: primitive types'
-description: "A clear breakdown of TypeScript's 7 primitive types: string, number, boolean, bigint, symbol, null, and undefined, with examples and gotchas for every one."
+description: "TypeScript's 7 primitive types broken down with examples, const type literal gotchas, and the nuances I didn't fully grasp until I wrote this out."
 pubDate: 2025-01-14
 tags: ['typescript']
 readingTime: 6

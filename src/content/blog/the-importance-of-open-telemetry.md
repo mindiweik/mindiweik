@@ -1,6 +1,6 @@
 ---
 title: 'the importance of open telemetry'
-description: 'How to See the Invisible 👀'
+description: "What OpenTelemetry actually is and why I didn't know how much I needed it until we found a bug hiding in plain sight with traces and metrics."
 pubDate: 2025-05-27
 tags: ['observability', 'backend']
 readingTime: 8

@@ -1,6 +1,6 @@
 ---
 title: 'capturing curiosity'
-description: 'A behavioral "muscle" pattern anyone can build!'
+description: "A framework for rebuilding curiosity as a practice. Based on a talk I gave in 2024, covering four core habits to get more out of how you learn."
 pubDate: 2024-11-19
 tags: ['career', 'mindset']
 readingTime: 15

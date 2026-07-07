@@ -1,6 +1,6 @@
 ---
 title: 'your new best friend, the console'
-description: 'Part 2 of 4 in the "Unlocking Your Browser" series'
+description: "Part 2 of 4: the Console tab is a live JavaScript environment in your browser. Six things you can do right now, from styling on the fly to making any page editable."
 pubDate: 2026-02-25
 tags: ['browser', 'devtools', 'javascript']
 readingTime: 4

@@ -1,6 +1,6 @@
 ---
 title: 'feeling inadequate is okay.'
-description: 'Say it with me...'
+description: "Struggling with imposter syndrome after Women Who Code shut down. Three resources that helped me reframe inadequacy as a sign of growth, not failure."
 pubDate: 2024-04-23
 tags: ['career', 'mindset']
 readingTime: 3

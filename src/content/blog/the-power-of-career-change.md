@@ -1,6 +1,6 @@
 ---
 title: 'the power of career change'
-description: '5 Lessons Learned'
+description: "Five lessons from a winding career change into software engineering, from real estate and nonprofits to writing code for a living, one intentional step at a time."
 pubDate: 2024-05-28
 tags: ['career']
 readingTime: 5

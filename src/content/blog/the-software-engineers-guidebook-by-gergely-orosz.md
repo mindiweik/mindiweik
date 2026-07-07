@@ -1,6 +1,6 @@
 ---
 title: "the software engineer's guidebook review"
-description: "Gergely Orosz wrote the book on growing as a software engineer - literally. Here are the insights that actually stick from The Software Engineer's Guidebook."
+description: "My breakdown of The Software Engineer's Guidebook by Gergely Orosz: career fundamentals, building competence, and the takeaways I'm actually using in practice."
 pubDate: 2024-10-08
 tags: ['books', 'career']
 readingTime: 15

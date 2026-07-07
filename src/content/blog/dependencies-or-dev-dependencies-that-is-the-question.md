@@ -1,6 +1,6 @@
 ---
 title: "dependencies or dev dependencies, that is the question"
-description: "Understanding basic package management"
+description: "Dependencies vs devDependencies: what they actually are, why the distinction matters, and the time I moved a package to the wrong place in production."
 pubDate: 2024-11-14
 tags: ["javascript","fundamentals"]
 readingTime: 6

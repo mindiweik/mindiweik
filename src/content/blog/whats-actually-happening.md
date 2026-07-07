@@ -1,6 +1,6 @@
 ---
 title: "what's actually happening"
-description: 'Part 3 of 4 in the "Unlocking Your Browser" series'
+description: "Part 3 of 4: the Network tab for every request, status code, and CORS error. Plus the Application tab for cookies and localStorage. Your debugging just leveled up."
 pubDate: 2026-03-12
 tags: ['browser', 'devtools']
 readingTime: 4

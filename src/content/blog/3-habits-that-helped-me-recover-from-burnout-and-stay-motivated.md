@@ -1,6 +1,6 @@
 ---
 title: '3 habits that helped me recover from burnout and stay motivated'
-description: 'Simple, effective ways to rebuild routines and keep going when it gets tough'
+description: "A guest post on burning out hard, dropping the plates that don't matter, and the three habits that helped me actually rebuild momentum."
 pubDate: 2025-02-25
 tags: ['burnout', 'mindset']
 readingTime: 6

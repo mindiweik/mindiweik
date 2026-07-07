@@ -1,6 +1,6 @@
 ---
 title: 'how to start working with ai'
-description: 'Tips to EMPOWER yourself with AI'
+description: "A question in a Slack community got me thinking about how I actually use AI at work. My honest tips, plus what ChatGPT suggested when I asked it too."
 pubDate: 2024-03-05
 tags: ['ai']
 readingTime: 4

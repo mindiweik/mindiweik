@@ -1,6 +1,6 @@
 ---
 title: 'clean code by robert c. martin'
-description: 'A practical breakdown of Clean Code by Robert C. Martin: key takeaways on naming, functions, comments, and writing code your team can actually maintain.'
+description: "A book breakdown I shared with my team. Key takeaways from Clean Code on naming, functions, comments, and why keeping a codebase clean is everyone's job."
 pubDate: 2024-02-20
 tags: ['books', 'career']
 readingTime: 8

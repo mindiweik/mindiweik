@@ -1,6 +1,6 @@
 ---
 title: the job search, honestly
-description: What the job search actually felt like, minus the LinkedIn gloss.
+description: "65 applications, 3 final rounds, 1 offer. And for most of those interviews I thought I was bombing it. What the job search actually looks like from the inside."
 pubDate: 2026-07-09
 tags: [career]
 ---

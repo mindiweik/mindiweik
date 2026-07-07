@@ -1,6 +1,6 @@
 ---
 title: 'building a compass'
-description: 'Adaptability and balance in a tech industry that won’t sit still.'
+description: "I can’t tell you where I’ll be in five years and I’ve made peace with that. On adaptability, balance, and building a career that survives change."
 pubDate: 2026-01-27
 tags: ['career', 'mindset']
 readingTime: 5

@@ -1,6 +1,6 @@
 ---
 title: 'unlocking your browser'
-description: "Meet Your Browser's Toolbox"
+description: "Part 1 of 4: a tour of browser DevTools starting with the Elements tab. Learn to inspect the DOM, tweak styles live, and use the tool you already have open."
 pubDate: 2026-02-18
 tags: ['browser', 'devtools']
 readingTime: 5

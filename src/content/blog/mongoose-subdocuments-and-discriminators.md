@@ -1,6 +1,6 @@
 ---
 title: "mongoose subdocuments & discriminators"
-description: "Interesting Mongoose options for MongoDB collections!"
+description: "A deep dive into two Mongoose tools: subdocuments for nested schemas and discriminators for storing schema variants in the same MongoDB collection."
 pubDate: 2024-02-07
 tags: ["backend","databases"]
 readingTime: 6

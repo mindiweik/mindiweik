@@ -1,6 +1,6 @@
 ---
 title: '3 big, scary software engineering words explained'
-description: 'Idempotent | Polymorphism | Isomorphic'
+description: "Idempotent, polymorphism, isomorphic JavaScript. Three terms that tripped me up, broken down with use cases and examples until they finally stuck."
 pubDate: 2024-06-25
 tags: ['fundamentals', 'backend']
 readingTime: 3

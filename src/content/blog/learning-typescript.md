@@ -1,6 +1,6 @@
 ---
 title: 'learning typescript'
-description: '5 tools recommended from my own journey'
+description: "Five resources that actually helped me learn TypeScript: a Scrimba course, two O'Reilly books, a Udemy course, and honestly just building a lot of small things."
 pubDate: 2024-04-16
 tags: ['typescript', 'learning']
 readingTime: 5

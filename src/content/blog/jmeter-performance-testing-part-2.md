@@ -1,6 +1,6 @@
 ---
 title: "jmeter performance testing: part 2"
-description: "Let's parameterize!"
+description: "Part 2: running load, stress, and spike tests in JMeter, then parameterizing the whole thing with CLI scripts so future-me doesn't have to repeat the setup."
 pubDate: 2025-04-08
 tags: ["performance","testing"]
 readingTime: 9

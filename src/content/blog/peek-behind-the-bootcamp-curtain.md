@@ -1,6 +1,6 @@
 ---
 title: 'peek behind the bootcamp curtain 🧐'
-description: 'Truths, challenges, and how to make the most of it'
+description: "What Hack Reactor was actually like: the cost, the pace, the moments life didn't pause for coursework, and why career changers bring something real to the table."
 pubDate: 2024-03-19
 tags: ['career', 'learning']
 readingTime: 5

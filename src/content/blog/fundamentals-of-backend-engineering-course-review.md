@@ -1,6 +1,6 @@
 ---
 title: 'fundamentals of backend engineering course review'
-description: 'A resource for any engineer!'
+description: "A review of Hussein Nasser's Fundamentals of Backend Engineering on Udemy. 16 hours on protocols, TCP, TLS, WebSockets, and more, worth every penny."
 pubDate: 2024-03-12
 tags: ['backend', 'learning']
 readingTime: 3
