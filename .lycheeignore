@@ -41,3 +41,7 @@ techopedia\.com
 # Intentional 404: this blog post demonstrates a deliberately mistyped URL
 # ("imaaaages" instead of "images") to show a failed request.
 https://api\.thecatapi\.com/v1/imaaaages/search
+
+# Kept intentionally though the site is now offline: a former podcast guest's
+# project (David Weiss). Preserved as a credit; skip it in the checker.
+useresume\.app

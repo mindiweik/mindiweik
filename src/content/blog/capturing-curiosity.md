@@ -41,7 +41,7 @@ If you have any feedback you would like to share, I’m open to hearing it! [Lin
 - Consider the timing for outside lighting. 😅 I didn’t realize until halfway through that I was partially in shadow. I don’t usually record that time of evening!
 - The Q&A highlighted a few lacking areas of my initial introduction story, so I added more detail for later iterations. ✅
 
-A few weeks later, I shared only my intro in another online setting, my [Toastmasters](https://thunderbolt.toastmastersclubs.org/) group, where I’m excited to learn and grow into a more professional presenter. Though it was a brief glimpse into the talk, I received helpful feedback on my physical and verbal presentation techniques rather than the content.
+A few weeks later, I shared only my intro in another online setting, my Toastmasters group, where I’m excited to learn and grow into a more professional presenter. Though it was a brief glimpse into the talk, I received helpful feedback on my physical and verbal presentation techniques rather than the content.
 
 About a month after the first full talk, I shared this again at the [PLoP 2024](https://plopcon.org/plop2024/) conference, focusing on “Pattern Languages of Programs, People & Practices.” Applying curiosity fits each of these because you need to consider how you will interact with people, how you can apply your curiosity to software - or other tangible things - that you build, and how you approach practices in your day-to-day, personally and professionally.
 
