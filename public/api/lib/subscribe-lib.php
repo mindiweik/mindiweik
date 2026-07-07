@@ -60,15 +60,15 @@ function sub_content_email(array $item): array {
   $link  = (string) ($item['link'] ?? '');
 
   if ($isPodcast) {
-    $subject = 'New episode: ' . $title;
-    $intro   = 'Hey! A new episode just dropped 🎙️';
+    $subject = 'New [WIP] Podcast episode: ' . $title;
+    $intro   = 'Guess what?! A new [WIP] Podcast episode just dropped 🎙️';
     $cta     = 'Have a listen → ' . $link;
-    $signoff = "Thanks for tuning in,\nMindi";
+    $signoff = "Thanks for tuning in,\n✨ Mindi";
   } else {
     $subject = 'New post: ' . $title;
-    $intro   = 'Hey! Just published something new 📝';
+    $intro   = 'Just published something new 📝';
     $cta     = 'Give it a read → ' . $link;
-    $signoff = "Thanks for following along,\nMindi";
+    $signoff = "Thanks for following along,\n✨ Mindi";
   }
 
   $body = $intro . "\n\n" . $title . "\n";
