@@ -1,0 +1,26 @@
+# Hosts that block CI runners with 999 / 403 / 429 responses (bot protection),
+# not because the links are dead. Curated from the hosts actually present in
+# this site's content so that a RED link check means a genuinely broken link.
+# These platforms gate non-browser clients regardless of whether the target
+# exists, so checking them from CI is always a false positive. Trim any you'd
+# rather have actively verified. See docs/followups.md for the full backstory.
+
+# Social platforms (return 999 / login-wall to non-browser clients)
+linkedin\.com
+tiktok\.com
+instagram\.com
+
+# Video (bot-throttled / 429)
+youtube\.com
+youtube-nocookie\.com
+youtu\.be
+
+# Course / media / design platforms (403 to CI)
+canva\.com
+substack\.com
+udemy\.com
+medium\.com
+loom\.com
+oreilly\.com
+goodreads\.com
+meetup\.com

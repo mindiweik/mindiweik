@@ -13,4 +13,4 @@ links:
   - { label: blog post, url: '/blog/capturing-curiosity' }
 ---
 
-I first shared this talk at a [Coding with Callie](https://coding-with-callie.com/) Meetup. You can find this recording [here](https://www.youtube.com/watch?v=QX8qPM_xKBE).
+I first shared this talk at a Coding with Callie Meetup. You can find this recording [here](https://www.youtube.com/watch?v=QX8qPM_xKBE).

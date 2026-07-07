@@ -21,7 +21,7 @@ Let’s be clear: I am not an expert on curiosity or perfect at practicing it. H
 
 ## 🎬 video + presentation insights
 
-Below is a recording of the first presentation for “Capturing Curiosity”, a [collaboration](https://coding-with-callie.com/guest-speakers#:~:text=Watch%20Recording-,Mindi%20Weik,-Meet%2Dup%20Date) with [Coding with Callie](https://coding-with-callie.com/) in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
+Below is a recording of the first presentation for “Capturing Curiosity”, a collaboration with Coding with Callie in September 2024. It was a blast to finally share this content! The actual presentation is about 40 minutes long, followed by a Q&A.
 
 If you have any feedback you would like to share, I’m open to hearing it! [Link to the current slides, if interested!](https://www.canva.com/design/DAGRKyHC3TE/FUsGdL0j9XI1Ck96kVq2eQ/edit?utm_content=DAGRKyHC3TE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
