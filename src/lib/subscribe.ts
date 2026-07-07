@@ -52,14 +52,20 @@ export function toNotifyFeedItems(
   const base = site.replace(/\/+$/, '');
   const shape =
     (type: 'blog' | 'podcast') =>
-    (e: CollectionEntry): NotifyFeedItem => ({
-      key: `${type}/${e.id}`,
-      type,
-      title: e.data.title,
-      description: e.data.description ?? '',
-      link: `${base}/${type}/${e.id}/`,
-      pubDate: e.data.pubDate.toISOString(),
-    });
+    (e: CollectionEntry): NotifyFeedItem => {
+      // Episodes are identified by version + title (matching the site's
+      // VersionChip), and their summary lives in `descriptor`, not
+      // `description`. Blog posts use `description` and carry no version.
+      const version = type === 'podcast' && e.data.version ? `${e.data.version} ` : '';
+      return {
+        key: `${type}/${e.id}`,
+        type,
+        title: `${version}${e.data.title}`,
+        description: e.data.description ?? e.data.descriptor ?? '',
+        link: `${base}/${type}/${e.id}/`,
+        pubDate: e.data.pubDate.toISOString(),
+      };
+    };
   return [...raw.blog.map(shape('blog')), ...raw.podcast.map(shape('podcast'))]
     .sort((a, b) => b.pubDate.localeCompare(a.pubDate))
     .slice(0, limit);

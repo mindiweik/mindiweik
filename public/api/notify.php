@@ -23,6 +23,52 @@ if ($cronKey === '' || !hash_equals($cronKey, (string) ($_GET['key'] ?? ''))) {
   exit;
 }
 
+// Sample mode: preview the current email copy without touching sent_items or
+// the queue. Sends one blog and one podcast sample (newest of each in the
+// feed) to an address.
+//   GET /api/notify.php?key=<cron_key>&sample=you@example.com
+// If that address is a subscriber, the sample carries their real footer +
+// unsubscribe links; otherwise it goes without a footer.
+if (isset($_GET['sample'])) {
+  $to = strtolower(trim((string) $_GET['sample']));
+  if (!sub_valid_email($to)) {
+    http_response_code(400);
+    echo "bad sample address\n";
+    exit;
+  }
+  try {
+    $pdo = sub_db($config);
+    $tokRow = $pdo->prepare('SELECT manage_token FROM subscribers WHERE email = ? LIMIT 1');
+    $tokRow->execute([$to]);
+    $sub = $tokRow->fetch();
+    $token = $sub ? (string) $sub['manage_token'] : '';
+
+    $raw = @file_get_contents(sub_site_url($config) . '/notify-feed.json');
+    $items = $raw !== false ? json_decode($raw, true) : null;
+    if (!is_array($items)) {
+      http_response_code(502);
+      echo "feed unavailable\n";
+      exit;
+    }
+    $sent = [];
+    foreach (['blog', 'podcast'] as $type) {
+      foreach ($items as $item) {
+        if (is_array($item) && ($item['type'] ?? '') === $type) {
+          $mail = sub_content_email($item);
+          send_list_email($config, $to, '[sample] ' . $mail['subject'], $mail['body'], $token);
+          $sent[] = $type;
+          break;
+        }
+      }
+    }
+    echo 'sample sent to ' . $to . ': ' . implode(', ', $sent) . "\n";
+  } catch (Throwable $e) {
+    http_response_code(500);
+    echo "sample error\n";
+  }
+  exit;
+}
+
 const BATCH_SIZE = 40;
 const MAX_ATTEMPTS = 3;
 
@@ -99,10 +145,9 @@ try {
         $fail->execute([$attempts, $attempts >= MAX_ATTEMPTS ? 2 : 0, (int) $r['id']]);
         continue;
       }
-      $subject = 'New on mindiweik.com: ' . (string) $item['title'];
-      $body = (string) $item['title'] . "\n\n"
-            . (string) ($item['description'] ?? '') . "\n\n"
-            . (string) $item['link'];
+      $email = sub_content_email($item);
+      $subject = $email['subject'];
+      $body = $email['body'];
     } else {
       $iid = (int) $r['issue_id'];
       if (!isset($issueCache[$iid])) {
