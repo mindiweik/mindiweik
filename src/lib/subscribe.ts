@@ -21,7 +21,9 @@ export function validateSubscribe(input: SubscribeInput): { ok: boolean; errors:
 }
 
 // Same-origin in prod; PUBLIC_SUBSCRIBE_API lets local dev point at a php -S server.
-export function subscribeApiUrl(env: { PUBLIC_SUBSCRIBE_API?: string } = import.meta.env): string {
+export function subscribeApiUrl(
+  env: { PUBLIC_SUBSCRIBE_API?: string } = import.meta.env as { PUBLIC_SUBSCRIBE_API?: string },
+): string {
   return env.PUBLIC_SUBSCRIBE_API || '/api/subscribe.php';
 }
 
