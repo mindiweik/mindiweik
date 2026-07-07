@@ -1,11 +1,8 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import MarkdownIt from 'markdown-it';
-import sanitizeHtml from 'sanitize-html';
 import { SITE } from '../config/site.ts';
+import { renderFeedHtml } from '../lib/feed.mjs';
 import { isVisible } from '../lib/publish.ts';
-
-const parser = new MarkdownIt();
 
 export async function GET(context) {
   const posts = (await getCollection('blog', isVisible)).sort(
@@ -22,10 +19,9 @@ export async function GET(context) {
       pubDate: post.data.pubDate,
       link: `/blog/${post.id}/`,
       // Full post HTML so feed readers and AI ingestion get the whole text,
-      // not just the description. Sanitized per the Astro RSS recipe.
-      content: sanitizeHtml(parser.render(post.body ?? ''), {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
-      }),
+      // not just the description. Raw HTML blocks (embed iframes, styled div
+      // cards) are parsed as HTML then stripped to safe tags by renderFeedHtml.
+      content: renderFeedHtml(post.body ?? ''),
     })),
   });
 }
