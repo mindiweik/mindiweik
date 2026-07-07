@@ -27,7 +27,15 @@ const ytId = youtubeUrl
   : null;
 ---
 
-<BaseLayout title={title} description={description} image={image} zone="blog" active="/blog">
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  zone="blog"
+  active="/blog"
+  type="article"
+  pubDate={date}
+>
   <Breadcrumb path={`~/blog/${slug}.mdx`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label="blog" zone="blog" />

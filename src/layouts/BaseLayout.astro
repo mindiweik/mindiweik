@@ -9,8 +9,10 @@ interface Props {
   image?: string;
   zone?: string;
   active?: string;
+  type?: 'website' | 'article';
+  pubDate?: Date;
 }
-const { title, description, image, zone, active } = Astro.props;
+const { title, description, image, zone, active, type, pubDate } = Astro.props;
 // Page-wide hover accent: interactive elements light up in the active zone's
 // color (see the .hov-* rules in global.css). Mixed-zone spots override inline.
 const ZONE_HOVER: Record<string, string> = {
@@ -25,7 +27,14 @@ const hoverAccent = ZONE_HOVER[active ?? ''] ?? '--accent-primary';
 <!doctype html>
 <html lang="en" data-theme="dark">
   <head>
-    <BaseHead title={title} description={description} image={image} zone={zone} />
+    <BaseHead
+      title={title}
+      description={description}
+      image={image}
+      zone={zone}
+      type={type}
+      pubDate={pubDate}
+    />
     <script is:inline>
       (function () {
         try {
