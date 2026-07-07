@@ -59,6 +59,14 @@ jobs:
             **/node_modules/**
             dev/**
 
+      # Tell IndexNow (Bing and friends; Bing feeds ChatGPT search) about the
+      # deployed URL set. Best effort: a failed ping never fails the deploy.
+      # The daily cron rebuild pings too, which auto-submits scheduled posts
+      # the moment they go live. See scripts/indexnow-ping.mjs.
+      - name: Ping IndexNow with the deployed URLs
+        run: node scripts/indexnow-ping.mjs
+        continue-on-error: true
+
       # Phase B: wip-podcast.com landing page + 301 redirect map.
       # Enabled 2026-07-02 after wip-podcast.com moved to file hosting.
       - name: Build wip-podcast.com landing page
