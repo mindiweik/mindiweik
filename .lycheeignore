@@ -5,6 +5,12 @@
 # exists, so checking them from CI is always a false positive. Trim any you'd
 # rather have actively verified. See docs/followups.md for the full backstory.
 
+# Own domains: checked locally via dist/ (internal links) and by deploy.yml's
+# smoke-test job (liveness). Hostinger 403s the CI runner IP, so checking the
+# fully-qualified self-links here is always a false positive.
+mindiweik\.com
+wip-podcast\.com
+
 # Social platforms (return 999 / login-wall to non-browser clients)
 linkedin\.com
 tiktok\.com
@@ -15,7 +21,7 @@ youtube\.com
 youtube-nocookie\.com
 youtu\.be
 
-# Course / media / design platforms (403 to CI)
+# Course / media / design / docs platforms (403 to CI runners)
 canva\.com
 substack\.com
 udemy\.com
@@ -24,3 +30,14 @@ loom\.com
 oreilly\.com
 goodreads\.com
 meetup\.com
+npmjs\.com
+raspberrypi\.com
+openai\.com
+claude\.ai
+gitlab\.com
+inc\.com
+techopedia\.com
+
+# Intentional 404: this blog post demonstrates a deliberately mistyped URL
+# ("imaaaages" instead of "images") to show a failed request.
+https://api\.thecatapi\.com/v1/imaaaages/search
