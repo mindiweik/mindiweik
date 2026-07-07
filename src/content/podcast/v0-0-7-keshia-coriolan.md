@@ -1,5 +1,6 @@
 ---
 title: 'keshia coriolan'
+descriptor: "Keshia Coriolan on technical support, transitioning back to software engineering, and what it means to belong in tech as a woman and minority."
 guest: 'Keshia Coriolan'
 version: v0.0.7
 season: 0

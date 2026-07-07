@@ -1,5 +1,6 @@
 ---
 title: 'kim maida'
+descriptor: "Kim Maida on what DevRel actually does, architecture-driven auth, closing the knowledge gap in identity and security, and building miniatures."
 guest: 'Kim Maida'
 version: v0.0.5
 season: 0

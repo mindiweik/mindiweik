@@ -1,5 +1,6 @@
 ---
 title: 'anna miller'
+descriptor: "Anna Miller on tech hiring as a human process, online visibility as a career skill, landing vs passing interviews, and her Outlier Mentors community."
 guest: 'Anna Miller'
 version: v1.0.3
 season: 1

@@ -1,5 +1,6 @@
 ---
 title: 'grace dees'
+descriptor: "Grace Dees on transitioning from the equine industry to cybersecurity, preventing burnout, setting boundaries, and doing it scared anyway."
 guest: 'Grace Dees'
 version: v0.0.9
 season: 0

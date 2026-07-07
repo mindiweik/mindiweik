@@ -1,5 +1,6 @@
 ---
 title: 'mara kaela'
+descriptor: "Mara Kaela on UX applied to wellness, building Align Vegan, and the Starflower app: an AI-powered platform designed for intentional relationships."
 guest: 'Mara Kaela'
 version: v0.0.8
 season: 0

@@ -1,5 +1,6 @@
 ---
 title: 'brendan schirmer'
+descriptor: "Brendan Schirmer on going from software engineer to communication coach, async team culture, and why two-millimeter shifts create real change."
 guest: 'Brendan Schirmer'
 version: v0.0.3
 season: 0

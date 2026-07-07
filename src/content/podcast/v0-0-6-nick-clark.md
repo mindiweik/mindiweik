@@ -1,5 +1,6 @@
 ---
 title: 'nick clark'
+descriptor: "Nick Clark on DevOps and CI/CD, when certifications actually matter, and building in public with GitHub Actions."
 guest: 'Nick Clark'
 version: v0.0.6
 season: 0
