@@ -49,7 +49,7 @@ if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
 try {
   $pdo = db($config);
 
-  $sel = $pdo->prepare('SELECT id, page_key FROM comments WHERE verify_token = ? AND approved = 0 LIMIT 1');
+  $sel = $pdo->prepare('SELECT id, page_key, author_name, author_email, body FROM comments WHERE verify_token = ? AND approved = 0 LIMIT 1');
   $sel->execute([$token]);
   $row = $sel->fetch();
 
@@ -62,6 +62,19 @@ try {
 
   // page_key ("blog/slug" or "podcast/id") maps directly to a site route.
   $postUrl = $siteUrl . '/' . ltrim((string) $row['page_key'], '/');
+
+  // Owner notification, only after the comment is actually live. Best-effort:
+  // a mail hiccup must never break the reader's confirmation page, so failures
+  // are logged and swallowed. Skipped when notify_email is unset (opt-in).
+  if (!empty($config['notify_email'])) {
+    try {
+      require_once __DIR__ . '/mailer.php';
+      send_new_comment_notification($config, $row, $postUrl);
+    } catch (Throwable $e) {
+      error_log('comment notification failed: ' . $e->getMessage());
+    }
+  }
+
   render('Comment confirmed', 'Thanks. Your comment is now live.', $postUrl, 'Back to the post');
 } catch (Throwable $e) {
   http_response_code(500);
