@@ -10,16 +10,16 @@ const accent =
     : zone === 'blog'
       ? 'var(--accent-blog)'
       : 'var(--accent-primary)';
-const showHeading = variant !== 'footer';
+// Inline (in-content) shows its own eyebrow heading. Homepage gets its heading
+// from the SectionLabel above it, so it skips the eyebrow but keeps the pitch.
+// Footer stays compact with neither.
+const showHeading = variant === 'inline';
+const showPitch = variant !== 'footer';
 ---
 
 <section class:list={['subscribe', `v-${variant}`]} style={`--c-accent:${accent}`}>
   {showHeading && <h2 class="eyebrow">// subscribe</h2>}
-  {
-    showHeading && (
-      <p class="pitch">New posts and episodes by email. No spam, unsubscribe anytime.</p>
-    )
-  }
+  {showPitch && <p class="pitch">New posts and episodes by email. No spam, unsubscribe anytime.</p>}
 
   <form data-subscribe-root class="sform" novalidate>
     <div class="row">
