@@ -1,6 +1,6 @@
 ---
 title: "exploring typescript: runtime"
-description: "What's the deal with runtime?"
+description: "TypeScript types don't exist at runtime. Here's what that actually means, and three ways to keep your code type-safe once they're gone."
 pubDate: 2024-08-20
 tags: ["typescript"]
 readingTime: 6

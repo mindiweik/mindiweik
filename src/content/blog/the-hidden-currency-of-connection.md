@@ -1,6 +1,6 @@
 ---
 title: 'the hidden currency of connection'
-description: 'Networking isn’t just nice - it’s necessary'
+description: "Networking doesn’t have to feel forced. A tour through the what, why, when, where, and who of building a community that actually supports your career."
 pubDate: 2025-04-15
 tags: ['career', 'community']
 readingTime: 5

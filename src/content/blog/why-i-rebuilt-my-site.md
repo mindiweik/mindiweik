@@ -1,6 +1,6 @@
 ---
 title: why I rebuilt my whole site from scratch
-description: Tearing down the old site, keeping the version numbers.
+description: "Why I rebuilt mindiweik.com from scratch on Astro, moved away from the website builder, and what I didn't expect the process to feel like along the way."
 pubDate: 2026-07-03
 tags: [astro, meta]
 ---

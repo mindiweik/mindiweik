@@ -1,5 +1,6 @@
 ---
 title: 'the first commit'
+descriptor: "Introducing [WIP], a podcast about the real, human side of working in tech. Growth, career stories, and being a work in progress."
 version: v0.0.0
 season: 0
 pubDate: 2025-07-07

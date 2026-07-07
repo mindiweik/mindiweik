@@ -1,5 +1,6 @@
 ---
 title: 'jaidie vargas'
+descriptor: "Jaidie Vargas on building Amigas in Tech, researching AI ethics, and how asking 'why not?' took her from Navy IT to cybersecurity leadership."
 guest: 'Jaidie Vargas'
 version: v1.0.1
 season: 1

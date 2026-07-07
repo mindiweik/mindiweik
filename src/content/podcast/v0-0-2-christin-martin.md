@@ -1,5 +1,6 @@
 ---
 title: 'christin martin'
+descriptor: "Christin Martin on building BuiltInPublic, learning TypeScript, and how a tough job search accidentally became an open-source community project."
 guest: 'Christin Martin'
 version: v0.0.2
 season: 0

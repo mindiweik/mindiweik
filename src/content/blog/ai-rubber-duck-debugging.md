@@ -1,6 +1,6 @@
 ---
 title: 'ai is rubber duck debugging, but the duck talks back'
-description: 'rubber duck debugging works. it works even better when the duck answers.'
+description: "What if your rubber duck answered back? How I use AI to think through debugging out loud, and why explaining the problem is the real skill."
 pubDate: 2026-07-16
 tags: ['ai', 'learning', 'debugging']
 ---

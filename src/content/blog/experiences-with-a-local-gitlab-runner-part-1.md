@@ -1,6 +1,6 @@
 ---
 title: 'experiences with a local gitlab runner: part 1'
-description: 'Setting up a local GitLab Runner'
+description: "Part 1: setting up a local GitLab Runner from scratch. CI/CD basics, installation steps, registration, and what I learned going in mostly blind."
 pubDate: 2024-04-09
 tags: ['devops', 'ci-cd']
 readingTime: 6

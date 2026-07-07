@@ -1,5 +1,6 @@
 ---
 title: 'anemari fiser'
+descriptor: "Anemari Fiser on burning out in a job she loved, becoming a tech lead at 26, and coaching 500+ engineers through the messy middle of leadership."
 guest: 'Anemari Fiser'
 version: v1.0.4
 season: 1

@@ -1,5 +1,6 @@
 ---
 title: 'colin j lacy'
+descriptor: "Colin J Lacy on cloud engineering, AI infrastructure and observability, MCP, and why being early to the party is its own kind of learning."
 guest: 'Colin J Lacy'
 version: v0.0.4
 season: 0

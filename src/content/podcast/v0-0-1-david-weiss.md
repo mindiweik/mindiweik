@@ -1,5 +1,6 @@
 ---
 title: 'david weiss'
+descriptor: "David Weiss on building in public, overcoming fear of rejection, and the mindset of a consistent creator who can't stop starting side projects."
 guest: 'David Weiss'
 version: v0.0.1
 season: 0

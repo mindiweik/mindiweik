@@ -1,6 +1,6 @@
 ---
 title: '✨ introducing... [wip]'
-description: 'An upcoming rebrand + a new podcast coming soon!'
+description: "Introducing [WIP]: a newsletter and podcast about human development in tech, and the honest, ongoing process of growing as an engineer."
 pubDate: 2025-06-11
 tags: ['community']
 readingTime: 2

@@ -10,6 +10,12 @@
 # fully-qualified self-links here is always a false positive.
 mindiweik\.com
 wip-podcast\.com
+# Audition Cat (own product site): 415s the CI runner, live in reality.
+audition\.cat
+
+# Answers non-browser clients with 415 (Unsupported Media Type), a header
+# negotiation rejection, not a dead link.
+gostrengths\.com
 
 # Social platforms (return 999 / login-wall to non-browser clients)
 linkedin\.com

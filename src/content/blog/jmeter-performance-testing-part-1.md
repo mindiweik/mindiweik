@@ -1,6 +1,6 @@
 ---
 title: 'jmeter performance testing: part 1'
-description: '...with randomized CSV inputs!'
+description: "Part 1: getting started with Apache JMeter for API performance testing. Covers the GUI setup, randomized CSV inputs, and the options I used on a real project."
 pubDate: 2025-03-04
 tags: ['performance', 'testing']
 readingTime: 6

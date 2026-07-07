@@ -1,6 +1,6 @@
 ---
 title: 'learning: it’s better together.'
-description: 'Come, learn alongside me!'
+description: "The first post. A software engineer with a winding background invites you along for the learning, the questions, and whatever curiosity surfaces next."
 pubDate: 2024-01-09
 tags: ['career', 'learning']
 readingTime: 1

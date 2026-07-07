@@ -1,5 +1,6 @@
 ---
 title: 'release notes'
+descriptor: "The podcast returns. On pausing when life happened, the messages that brought it back, and building in public, one version at a time."
 version: v1.0.0
 season: 1
 pubDate: 2026-01-22

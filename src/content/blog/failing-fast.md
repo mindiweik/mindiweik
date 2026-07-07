@@ -1,6 +1,6 @@
 ---
 title: 'failing fast'
-description: 'How to foster failure to leap toward success'
+description: "Failing fast isn't a productivity hack, it's an Agile mindset. Two real examples from my own work where iterating quickly saved a lot of wasted time."
 pubDate: 2024-01-24
 tags: ['career', 'mindset']
 readingTime: 2

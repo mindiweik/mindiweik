@@ -1,6 +1,6 @@
 ---
 title: "what's the difference?!"
-description: 'Transpiler | Compiler | Runtime'
+description: "Compiling, transpiling, and runtime explained with a ramen recipe analogy. Because sometimes the only way to make something stick is to think about food."
 pubDate: 2025-05-13
 tags: ['fundamentals']
 readingTime: 3

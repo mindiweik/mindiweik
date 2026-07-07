@@ -1,6 +1,6 @@
 ---
 title: "exploring typescript: ts compiler"
-description: "What is it? How can we best leverage the compiler?"
+description: "What the TypeScript compiler actually does, how to configure tsconfig.json, and why tsc being written in TypeScript blew my mind a little."
 pubDate: 2024-07-16
 tags: ["typescript"]
 readingTime: 4

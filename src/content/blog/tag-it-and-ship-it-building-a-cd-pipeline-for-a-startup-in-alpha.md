@@ -1,6 +1,6 @@
 ---
 title: 'tag it and ship it: building a CD pipeline for a startup in alpha'
-description: 'how a two-engineer startup went from SSH-and-pray to a tag-based pipeline, and what changed between the plan and production.'
+description: "How a two-engineer startup went from SSH-and-pray to a tag-based GitLab CD pipeline, and what changed between the clean plan and what actually runs."
 pubDate: 2026-07-23
 tags: ['devops', 'ci-cd']
 ---

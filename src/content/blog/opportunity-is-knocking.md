@@ -1,6 +1,6 @@
 ---
 title: 'opportunity is knocking'
-description: 'What to do when there are few opportunities at work'
+description: "Feeling stagnant at work? Four ways to create your own growth: within your team, across departments, through your network, and in your own projects."
 pubDate: 2025-03-11
 tags: ['career']
 readingTime: 6

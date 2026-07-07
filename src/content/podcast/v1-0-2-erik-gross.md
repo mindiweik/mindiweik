@@ -1,5 +1,6 @@
 ---
 title: 'erik gross'
+descriptor: "Erik Gross on co-founding the Tech Academy, why AI is a crutch for beginners, and his journey from Navy nuclear reactors to The Uncommon Engineer."
 guest: 'Erik Gross'
 version: v1.0.2
 season: 1

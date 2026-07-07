@@ -1,5 +1,6 @@
 ---
 title: 'joram mutenge'
+descriptor: "Joram Mutenge on the data trifecta of engineering, analytics, and science, plus SQL, Python, Rust, and why curated learning beats random tutorials."
 guest: 'Joram Mutenge'
 version: v0.0.10
 season: 0

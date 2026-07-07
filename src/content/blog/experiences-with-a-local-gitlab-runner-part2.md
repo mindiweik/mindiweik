@@ -1,6 +1,6 @@
 ---
 title: 'experiences with a local gitlab runner: part2'
-description: 'Ups, downs, and - 🙈 SPOILER - the rewards'
+description: "Part 2: moving the GitLab Runner to a Raspberry Pi. I corrupted it, started over, hit Mac/Linux case-sensitivity issues, and earned that green checkmark."
 pubDate: 2024-06-11
 tags: ['devops', 'ci-cd']
 readingTime: 5

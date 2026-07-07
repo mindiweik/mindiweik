@@ -1,6 +1,6 @@
 ---
 title: 'level up: sources, performance & your playground'
-description: 'Part 4 of 4 in the "Unlocking Your Browser" series'
+description: "Part 4 of 4: breakpoints in the Sources tab, performance profiling with the flame chart, Lighthouse audits, and a full Catz4Life sandbox walkthrough."
 pubDate: 2026-03-26
 tags: ['browser', 'devtools', 'performance']
 readingTime: 5
