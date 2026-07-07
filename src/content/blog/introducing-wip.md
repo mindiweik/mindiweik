@@ -1,6 +1,6 @@
 ---
 title: '✨ introducing... [wip]'
-description: "codeOutLoud is getting a rebrand. Introducing [WIP]: human development in tech, a newsletter and podcast about the honest, ongoing process of growing in tech."
+description: "Introducing [WIP]: a newsletter and podcast about human development in tech, and the honest, ongoing process of growing as an engineer."
 pubDate: 2025-06-11
 tags: ['community']
 readingTime: 2
