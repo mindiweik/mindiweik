@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { getRelatedPosts } from '../../lib/related.ts';
 import { isVisible } from '../../lib/publish.ts';
+import { relatedPostClickEvent } from '../../lib/analytics.ts';
 
 interface Props {
   currentId: string;
@@ -20,10 +21,18 @@ const fmt = (d: Date) =>
         // related posts
       </span>
       <div style="margin-top:0.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:0.5rem">
-        {related.map((p) => (
+        {related.map((p, i) => (
           <a
             href={`/blog/${p.id}`}
             class="hov-card"
+            data-ga-event={JSON.stringify(
+              relatedPostClickEvent({
+                source: currentId,
+                target: p.id,
+                title: p.data.title,
+                position: i + 1,
+              }),
+            )}
             style="display:block;padding:0.75rem 0.85rem;border:1px solid var(--border);border-radius:10px;--hover-accent:var(--accent-blog)"
           >
             <span style="display:block;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted)">
@@ -38,3 +47,20 @@ const fmt = (d: Date) =>
     </div>
   )
 }
+
+{
+  /* Forward related-card clicks to GA4. gtag only exists in prod, so this
+    no-ops in dev. Navigation is instant, so we push before it happens. */
+}
+<script is:inline>
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-ga-event]');
+    if (!card || typeof window.gtag !== 'function') return;
+    try {
+      const ev = JSON.parse(card.dataset.gaEvent);
+      window.gtag('event', ev.name, ev.params);
+    } catch {
+      /* malformed payload: skip silently rather than break navigation */
+    }
+  });
+</script>
