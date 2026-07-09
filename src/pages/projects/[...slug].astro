@@ -14,6 +14,7 @@ const activity = project.data.repoUrl ? await fetchRepoActivity(project.data.rep
 
 <ProjectLayout
   name={project.data.name}
+  blurb={project.data.blurb}
   slug={project.id}
   status={project.data.status}
   stack={project.data.stack}

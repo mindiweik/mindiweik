@@ -7,6 +7,7 @@ import '../styles/prose.css';
 
 interface Props {
   name: string;
+  blurb?: string;
   slug: string;
   status: string;
   stack: string[];
@@ -21,6 +22,7 @@ interface Props {
 }
 const {
   name,
+  blurb,
   slug,
   status,
   stack,
@@ -49,7 +51,7 @@ const links = [
 ];
 ---
 
-<BaseLayout title={name} active="/projects">
+<BaseLayout title={name} description={blurb} active="/projects">
   <Breadcrumb path={`~/projects/${slug}.md`} />
   <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;margin-top:0.7rem">
     <VersionChip label={status} zone="projects" />

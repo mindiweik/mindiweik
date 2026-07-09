@@ -19,10 +19,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   Mindi requested 2026-07-03.
 - **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
   silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
-- **Project page OG descriptions** — ProjectLayout doesn't pass a description to BaseLayout,
-  so project pages share the generic site OG description instead of their blurb. Matches the
-  preexisting pattern on article/episode layouts, so fix as a site-wide description pass.
-  From final review 2026-07-03.
 - **Accessibility pass** — audit + fixes across the site. Mindi requested 2026-07-02.
   - **Baseline shipped 2026-07-03 (PR #11, `chore/a11y-audit`):** skip-to-content link +
     `id="main-content"` on `<main>` (WCAG 2.4.1); global `:focus-visible` outline (2.4.7);
@@ -49,6 +45,14 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+
+- ~~**Project page OG descriptions**~~ -> shipped 2026-07-09 on `fix/project-og-descriptions`.
+  `ProjectLayout` was the only content layout not forwarding a `description` to `BaseLayout`, so
+  project pages fell back to `BaseHead`'s `SITE.description` default. Added an optional `blurb`
+  prop that forwards as `description={blurb}` (mirrors `EpisodeLayout`'s `descriptor` -> `description`
+  pattern), and passed `blurb={project.data.blurb}` from `projects/[...slug].astro`. Verified in
+  built `dist/`: all three tags (`description`, `og:description`, `twitter:description`) now read the
+  project blurb. The "site-wide pass" confirmed the other four layouts already forward one.
 
 - ~~**Link checker in CI**~~ -> shipped 2026-07-07 on `feat/link-checker`. Standalone advisory
   `Links` workflow builds the site and runs lychee over `dist/` (`--root-dir` so site-absolute
