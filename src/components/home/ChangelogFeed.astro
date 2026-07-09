@@ -1,6 +1,6 @@
 ---
 import type { ChangelogEntry } from '../../lib/collections.ts';
-import { zoneVar } from '../../lib/zones.ts';
+import { zoneVar, zoneTextVar } from '../../lib/zones.ts';
 interface Props {
   entries: ChangelogEntry[];
 }
@@ -14,7 +14,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
       <a
         href={e.url}
         class="hov-card"
-        style={`display:flex;gap:0.7rem;align-items:baseline;padding:0.65rem 0;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem;--hover-accent:${zoneVar(e.zone)}`}
+        style={`display:flex;gap:0.7rem;align-items:baseline;padding:0.65rem 0;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:0.8rem;--hover-accent:${zoneTextVar(e.zone)}`}
       >
         <span style="flex:none;width:3.8rem">
           <span

@@ -112,5 +112,5 @@
   margin: 0.4rem 0 0;
 }
 .prose a:hover {
-  color: var(--hover-accent, var(--accent-primary));
+  color: var(--hover-accent, var(--accent-primary-text));
 }

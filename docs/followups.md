@@ -19,15 +19,6 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   Mindi requested 2026-07-03.
 - **Lighthouse CI budgets** — run Lighthouse in CI with perf/SEO/a11y budgets so scores can't
   silently regress; folds into the accessibility pass below. Mindi requested 2026-07-03.
-- **Accessibility pass** — audit + fixes across the site. Mindi requested 2026-07-02.
-  - **Baseline shipped 2026-07-03 (PR #11, `chore/a11y-audit`):** skip-to-content link +
-    `id="main-content"` on `<main>` (WCAG 2.4.1); global `:focus-visible` outline (2.4.7);
-    `aria-current="page"` on active nav link (1.4.1); `prefers-reduced-motion` media query
-    (2.3.3); labeled header/footer nav landmarks (1.3.1). Verified in built `dist/`.
-  - **Still open:** color contrast (accent-on-dark chips + muted text, incl. the `opacity:0.6`
-    inactive nav links); heading order audit; alt text sweep (ties into the images pass +
-    `og:image:alt` below); keyboard nav on cards; run Lighthouse/axe as the baseline
-    (ties into the Lighthouse CI budgets item above).
 - **Comments** — comment capability on posts/episodes. Static-site-friendly options to evaluate:
   giscus (GitHub Discussions-backed, free, no ads, matches the dev audience), utterances
   (GitHub Issues), or a hosted service. Mindi requested 2026-07-02.
@@ -37,14 +28,31 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
   has RSS+sitemap to feed it. Mindi requested 2026-07-02.
 
 - **OG card niceties (deferred from social share cards, 2026-07-03)** — three minors from the
-  final review, none urgent: (1) `og:image:alt` for accessibility (fold into the accessibility
-  pass); (2) `og:image:width/height` are hardcoded to the zone-card dims even when a post sets
+  final review, none urgent: (1) ~~`og:image:alt` for accessibility~~ -> shipped 2026-07-09
+  (part of the accessibility pass; `og:image:alt` + `twitter:image:alt` via BaseHead, optional
+  `imageAlt` prop with a branded default); (2) `og:image:width/height` are hardcoded to the
+  zone-card dims even when a post sets
   a custom `ogImage` (blast radius one post, ratio is what matters); (3) the tagline in
   `scripts/generate-og-cards.mjs` duplicates `site.ts` without a source comment. Also open:
   Hostinger CDN image optimization serves the cards at 1600×840 instead of the full 2400×1260 —
   fine today; hPanel toggle exists if full-res ever matters.
 
 ## Resolved
+
+- ~~**Accessibility pass**~~ -> finished 2026-07-09 on `chore/a11y-audit-2` (baseline was
+  PR #11). Ran axe-core (WCAG 2.0/2.1 A + AA) over 13 representative pages in **both** themes.
+  Dark mode was already clean; every failure was **light-mode-only** — the accent palette was
+  tuned for the dark canvas and never re-checked against the near-white light `--bg`. Fixes:
+  (1) new `--accent-*-text` tokens — the bright `--accent-*` stay as fills (dark `--ink` sits on
+  them, mode-independent), while accent-colored **text/hover** darkens on the light canvas to
+  clear 4.5:1; `--hover-accent` + the static accent-text spots (Hero words, Ko-fi link) route
+  through them, with a new `zoneTextVar()` helper for the two `zoneVar()`-driven hover cards;
+  (2) light `--text-muted` 0.62 -> 0.68 alpha (footer/muted text was 4.4:1); (3) inactive
+  nav-link `opacity` 0.6 -> 0.7 (was 4.3:1 on light); (4) `og:image:alt` + `twitter:image:alt`
+  in `BaseHead` (optional `imageAlt` prop, branded default). Re-audited and **already passing,
+  no change needed**: heading order (single H1, no skips), DOM alt text, keyboard nav on cards
+  (real focusable `<a>`s, `link-name` clean). Post-fix axe: **0 violations, both themes, all 13
+  pages**. Running Lighthouse/axe **in CI** stays open under the Lighthouse CI budgets item.
 
 - ~~**Project page OG descriptions**~~ -> shipped 2026-07-09 on `fix/project-og-descriptions`.
   `ProjectLayout` was the only content layout not forwarding a `description` to `BaseLayout`, so
