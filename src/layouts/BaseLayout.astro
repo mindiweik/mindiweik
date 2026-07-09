@@ -15,13 +15,15 @@ interface Props {
 const { title, description, image, zone, active, type, pubDate } = Astro.props;
 // Page-wide hover accent: interactive elements light up in the active zone's
 // color (see the .hov-* rules in global.css). Mixed-zone spots override inline.
+// Use the -text accent tokens: --hover-accent tints TEXT/outlines, so it must
+// stay AA-legible on the light canvas (the bright fills don't). See global.css.
 const ZONE_HOVER: Record<string, string> = {
-  '/blog': '--accent-blog',
-  '/podcast': '--accent-podcast',
-  '/speaking': '--accent-speaking',
-  '/projects': '--accent-projects',
+  '/blog': '--accent-blog-text',
+  '/podcast': '--accent-podcast-text',
+  '/speaking': '--accent-speaking-text',
+  '/projects': '--accent-projects-text',
 };
-const hoverAccent = ZONE_HOVER[active ?? ''] ?? '--accent-primary';
+const hoverAccent = ZONE_HOVER[active ?? ''] ?? '--accent-primary-text';
 ---
 
 <!doctype html>

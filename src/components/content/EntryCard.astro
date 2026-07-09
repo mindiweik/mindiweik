@@ -1,6 +1,6 @@
 ---
 import type { ZoneKey } from '../../lib/zones.ts';
-import { zoneVar } from '../../lib/zones.ts';
+import { zoneVar, zoneTextVar } from '../../lib/zones.ts';
 import type { PublishState } from '../../lib/publish.ts';
 import PublishStateChip from './PublishStateChip.astro';
 interface Props {
@@ -18,7 +18,7 @@ const { href, title, meta, zone, id, state } = Astro.props;
   id={id}
   href={href}
   class="hov-card"
-  style={`display:block;padding:0.8rem 0;border-top:1px solid var(--border);scroll-margin-top:1.5rem;--hover-accent:${zoneVar(zone)}`}
+  style={`display:block;padding:0.8rem 0;border-top:1px solid var(--border);scroll-margin-top:1.5rem;--hover-accent:${zoneTextVar(zone)}`}
 >
   <span style="display:flex;align-items:center;gap:0.5rem">
     <span

@@ -11,8 +11,11 @@
 }
 
 /* Canvas + accent tokens. Dark is the default theme; light is opt-in via the
-   header/footer toggle. The [data-theme="light"] block overrides ONLY canvas
-   tokens. Accent tokens (and --ink) are mode-independent thanks to the fill rule. */
+   header/footer toggle. The [data-theme="light"] block overrides canvas tokens
+   plus the --accent-*-text tokens. The bright --accent-* tokens are used as
+   FILLS (dark --ink text sits on them, so they stay mode-independent). The
+   --accent-*-text tokens are the same bright colors on dark, but darkened on
+   the light canvas so accent-colored TEXT/hover clears WCAG AA (4.5:1). */
 :root,
 [data-theme='dark'] {
   --bg: #0b0e14;
@@ -27,6 +30,13 @@
   --accent-podcast: #ff5c85;
   --accent-speaking: #34d399;
   --accent-projects: #ff9f45;
+
+  /* Accent-as-text: on the dark canvas the bright fills already pass AA. */
+  --accent-blog-text: var(--accent-blog);
+  --accent-podcast-text: var(--accent-podcast);
+  --accent-speaking-text: var(--accent-speaking);
+  --accent-projects-text: var(--accent-projects);
+  --accent-primary-text: var(--accent-blog-text);
 }
 
 [data-theme='light'] {
@@ -34,8 +44,15 @@
   --surface: #ffffff;
   --border: rgba(11, 14, 20, 0.12);
   --text: #1a1d24;
-  --text-muted: rgba(26, 29, 36, 0.62);
+  --text-muted: rgba(26, 29, 36, 0.68); /* AA on --bg (was 0.62 -> 4.4:1) */
   /* --ink unchanged: still dark ink on bright accent fills */
+
+  /* Darkened accents for text/hover on the light canvas (all >= 4.5:1 on --bg). */
+  --accent-blog-text: #4750c7;
+  --accent-podcast-text: #c81e57;
+  --accent-speaking-text: #0c7d54;
+  --accent-projects-text: #8f5400;
+  --accent-primary-text: var(--accent-blog-text);
 }
 
 [data-theme='dark'] {
@@ -143,7 +160,7 @@ button {
 
 .hov-link:hover,
 .hov-link:focus-visible {
-  color: var(--hover-accent, var(--accent-primary));
+  color: var(--hover-accent, var(--accent-primary-text));
 }
 
 .hov-fill:hover,

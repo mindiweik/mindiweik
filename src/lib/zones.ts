@@ -17,3 +17,11 @@ export const ZONES: Record<ZoneKey, Zone> = {
 export function zoneVar(key: ZoneKey): string {
   return `var(${ZONES[key].token})`;
 }
+
+/* Canvas-safe accent for accent-colored TEXT/hover (e.g. --hover-accent).
+   Mirrors --accent-<zone>-text, which is the bright fill on dark and a darker
+   AA-passing value on the light canvas. Use this instead of zoneVar() anywhere
+   the accent tints text rather than filling a shape. */
+export function zoneTextVar(key: ZoneKey): string {
+  return `var(${ZONES[key].token}-text)`;
+}

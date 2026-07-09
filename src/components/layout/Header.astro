@@ -17,7 +17,7 @@ const { active } = Astro.props;
           href={item.href}
           class="hov-link"
           aria-current={active === item.href ? 'page' : undefined}
-          style={`opacity:${active === item.href ? '1' : '0.6'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''};--hover-accent:var(--accent-${item.href.replace('/', '') || 'primary'}, var(--accent-primary))`}
+          style={`opacity:${active === item.href ? '1' : '0.7'};${active === item.href ? 'border-bottom:2px solid var(--accent-blog);padding-bottom:2px' : ''};--hover-accent:var(--accent-${item.href.replace('/', '') || 'primary'}-text, var(--accent-primary-text))`}
         >
           {item.label}
         </a>
