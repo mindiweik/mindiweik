@@ -27,9 +27,10 @@ export default tseslint.config(
   },
 
   // Plain Node scripts and config files run in Node, not the browser.
+  // `.cjs` (e.g. lighthouserc.cjs) is CommonJS since package.json is type:module.
   {
-    files: ['scripts/**/*.mjs', '*.config.{js,mjs,ts}', 'vitest.config.ts'],
-    languageOptions: { globals: { ...globals.node } },
+    files: ['scripts/**/*.mjs', '*.config.{js,mjs,ts}', 'vitest.config.ts', '**/*.cjs'],
+    languageOptions: { globals: { ...globals.node }, sourceType: 'commonjs' },
   },
 
   // Project tweaks.

@@ -22,7 +22,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{astro,ts,mjs,js}": [
+    "*.{astro,ts,mjs,js,cjs}": [
       "eslint --fix",
       "prettier --write"
     ],
