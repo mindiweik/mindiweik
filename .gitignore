@@ -29,3 +29,6 @@ wip-dist/
 
 # Comments backend secrets (uploaded to the server by hand, never committed)
 comments-config.php
+
+# Lighthouse CI local artifacts
+.lighthouseci/

@@ -1,0 +1,37 @@
+# Lighthouse budgets: audits a representative set of pages on every PR and
+# hard-fails if performance, accessibility, best-practices, or SEO regress
+# below threshold (see lighthouserc.cjs). Runs on pull_request ONLY so it never
+# gates the direct-to-main auto-deploy; intended as a required status check.
+name: Lighthouse
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+# One run per ref; newer pushes cancel in-flight checks.
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Lighthouse CI
+        run: npm run lhci
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
