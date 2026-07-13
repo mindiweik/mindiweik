@@ -91,7 +91,7 @@ third-party-action surface small.
 3. `/blog` (index)
 4. `/podcast` (index)
 5. `/projects` (index)
-6. `/blog/ai-rubber-duck-debugging`
+6. `/blog/how-to-start-working-with-ai`
 7. `/blog/3-big-scary-software-engineering-words-explained`
 8. `/podcast/v0-0-10-joram-mutenge`
 9. `/podcast/v0-0-0-the-first-commit`

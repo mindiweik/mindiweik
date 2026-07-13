@@ -68,7 +68,7 @@ module.exports = {
         'http://localhost/blog/',
         'http://localhost/podcast/',
         'http://localhost/projects/',
-        'http://localhost/blog/ai-rubber-duck-debugging/',
+        'http://localhost/blog/how-to-start-working-with-ai/',
         'http://localhost/blog/3-big-scary-software-engineering-words-explained/',
         'http://localhost/podcast/v0-0-10-joram-mutenge/',
         'http://localhost/podcast/v0-0-0-the-first-commit/',
@@ -103,7 +103,7 @@ Expected: `dist/` is created. If the build errors on a missing `GITHUB_TOKEN`, r
 Run:
 ```bash
 for p in index about/index blog/index podcast/index projects/index \
-  blog/ai-rubber-duck-debugging/index \
+  blog/how-to-start-working-with-ai/index \
   blog/3-big-scary-software-engineering-words-explained/index \
   podcast/v0-0-10-joram-mutenge/index podcast/v0-0-0-the-first-commit/index \
   projects/audition-cat/index; do
