@@ -23,6 +23,9 @@ const ACCENTS = {
   speaking: '#34D399',
   projects: '#FF9F45',
 };
+// Mirrors SITE.description in src/config/site.ts, intentionally lowercased for
+// the card aesthetic. This script is a plain .mjs and can't import the TS
+// config, so keep the two in sync by hand if the tagline ever changes.
 const TAGLINE =
   'software engineer, writer, builder. figuring it out in public, one version at a time.';
 
