@@ -2,7 +2,7 @@
 name: Drip Dash
 blurb: A dashboard for Gardyn hydroponic systems.
 status: wip
-stack: [TypeScript, React]
+stack: [TypeScript, React, Express, SQLite]
 order: 2
 since: 2025
 repoUrl: https://github.com/mindiweik/drip-dash
@@ -16,8 +16,8 @@ Classic scratch-your-own-itch project. I wanted one screen that answered "how ar
 
 ## how it's built
 
-TypeScript and React. It talks to the Gardyn side and turns the data into something glanceable.
+TypeScript and React on the front, Express and SQLite behind it. A data-source adapter keeps the dashboard honest about where readings come from: today a realistic mock, eventually the Gardyns themselves.
 
 ## where it's at
 
-Honestly? Dormant, but on the shortlist to revisit. Saying that publicly is half the motivation strategy.
+Revived (July 2026). Turns out saying "dormant" publicly was half the motivation strategy, because it worked. The revamp is spec'd and planned: a kiosk dashboard plus a break-time chore board first, then real sensor data, then an AI layer that can look at plant photos and tell me what needs doing.

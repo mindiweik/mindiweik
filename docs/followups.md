@@ -5,7 +5,7 @@ scaffold being "done." Most belong with the content-migration or light-mode (v1.
 
 ## Content / data
 
-- **Projects page: Drip Dash back to active** — Mindi is reviving Drip Dash (revamp + AI roadmap brainstormed 2026-07-06 in MARVIN). Flip its status to active on the projects page.
+- ~~**Projects page: Drip Dash back to active**~~ ✅ project page copy updated to reflect the July 2026 revival (2026-07-14). The status enum has no "active"; `wip` stays, the stale "dormant" body copy was the actual fix. Roadmap spec lives in the drip-dash repo (`docs/superpowers/specs/2026-07-14-drip-dash-roadmap-design.md`).
 - **Projects page: show original publish dates** — list projects by their original publish/start dates instead of "last updated" check-in dates.
 - **Visual variety for long posts** — the longer, older blog posts read as walls of text; add visual variety (pull quotes, callouts, dividers, images?) at least for some. Deferred 2026-07-01.
 - **Missing talk recordings** — ~~`the-software-engineers-guidebook-overview-talk`~~ ✅ Loom recording button added + embedded in the blog post (2026-07-02; Loom stays as host since it can't be downloaded for YT). Still to locate: `the-case-of-the-curious-engineer-talk`. Deferred 2026-07-01.
