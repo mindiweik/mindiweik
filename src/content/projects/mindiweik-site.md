@@ -5,7 +5,7 @@ status: live
 stack: [Astro, TypeScript]
 url: https://mindiweik.com
 repoUrl: https://github.com/mindiweik/mindiweik
-order: 3
+order: 4
 since: 2026
 lastUpdated: 2026-06-30
 ---
