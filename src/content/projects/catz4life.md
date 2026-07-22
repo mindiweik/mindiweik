@@ -4,7 +4,7 @@ blurb: A deliberately broken cat adoption page for learning browser DevTools.
 status: live
 stack: [JavaScript, HTML, CSS]
 repoUrl: https://github.com/mindiweik/catz4life
-order: 4
+order: 5
 since: 2025
 ---
 
