@@ -43,6 +43,10 @@ claude\.ai
 gitlab\.com
 inc\.com
 techopedia\.com
+# Contentful blog: live (200 from browsers + CLI clients) but blocks the CI
+# runner IP range. Two "further reading" links in the TypeScript posts, real
+# and reachable for readers; only CI sees the block. Ignoring, not removing.
+contentful\.com
 
 # Intentional 404: this blog post demonstrates a deliberately mistyped URL
 # ("imaaaages" instead of "images") to show a failed request.

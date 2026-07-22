@@ -4,7 +4,7 @@ blurb: A quick TypeScript + React app from my first year as an engineer.
 status: archived
 stack: [TypeScript, React]
 repoUrl: https://github.com/mindiweik/prettykitties
-order: 5
+order: 6
 since: 2023
 ---
 
