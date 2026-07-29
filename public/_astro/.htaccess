@@ -1,0 +1,7 @@
+# Everything under /_astro/ has a content-hashed filename, so it can be cached
+# forever: any change ships under a new URL. Hostinger's default is only 7 days,
+# which PSI flags as an inefficient cache lifetime. Scoped to this directory so
+# non-hashed assets (favicons, og images) keep the short default.
+<IfModule mod_headers.c>
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</IfModule>
