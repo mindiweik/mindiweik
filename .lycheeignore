@@ -48,6 +48,13 @@ techopedia\.com
 # and reachable for readers; only CI sees the block. Ignoring, not removing.
 contentful\.com
 
+# jvns.ca (Julia Evans' blog): live + fast (HTTP 200 in ~0.3s from browsers +
+# CLI) but times out from the GitHub runner IP. A "further reading" brag-doc
+# link in the software-engineers-guidebook post; real for readers, CI-flaky
+# only. Was surfacing as a lychee timeout (not an error) that still tripped
+# the job's fail:true. Ignoring, not removing.
+jvns\.ca
+
 # Intentional 404: this blog post demonstrates a deliberately mistyped URL
 # ("imaaaages" instead of "images") to show a failed request.
 https://api\.thecatapi\.com/v1/imaaaages/search
