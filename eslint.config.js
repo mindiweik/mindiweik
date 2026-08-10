@@ -33,6 +33,12 @@ export default tseslint.config(
     languageOptions: { globals: { ...globals.node }, sourceType: 'commonjs' },
   },
 
+  // `require()` is the only import mechanism available in CommonJS files.
+  {
+    files: ['**/*.cjs'],
+    rules: { '@typescript-eslint/no-require-imports': 'off' },
+  },
+
   // Project tweaks.
   {
     rules: {

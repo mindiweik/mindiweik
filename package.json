@@ -13,6 +13,7 @@
     "test": "vitest run",
     "check": "astro check",
     "lhci": "lhci autorun",
+    "lhci:desktop": "lhci autorun --config=lighthouserc.desktop.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
