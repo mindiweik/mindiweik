@@ -1,7 +1,9 @@
 # Lighthouse budgets: audits a representative set of pages on every PR and
 # hard-fails if performance, accessibility, best-practices, or SEO regress
-# below threshold (see lighthouserc.cjs). Runs on pull_request ONLY so it never
-# gates the direct-to-main auto-deploy; intended as a required status check.
+# below threshold. Two runs: mobile (lighthouserc.cjs, the primary gate -
+# Lighthouse default emulation = Moto-G-class + slow-4G) and desktop
+# (lighthouserc.desktop.cjs). Runs on pull_request ONLY so it never gates the
+# direct-to-main auto-deploy; intended as a required status check.
 name: Lighthouse
 
 on:
@@ -31,7 +33,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Lighthouse CI
+      - name: Lighthouse CI (mobile)
         run: npm run lhci
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Lighthouse CI (desktop)
+        run: npm run lhci:desktop
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
