@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homeward - Lost Pet Alerts</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-icon">🐾</span>
+                <div>
+                    <h1>Homeward</h1>
+                    <p class="tagline">Community lost-pet alerts - help bring them home.</p>
+                </div>
+            </div>
+            <button id="theme-toggle" class="btn btn-ghost">Toggle theme</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="controls" class="controls">
+            <label for="space-filter">Where were they last seen?</label>
+            <select id="space-filter">
+                <option value="all">All pets</option>
+                <option value="indoor">Indoor escape artists</option>
+                <option value="outdoor">Outdoor wanderers</option>
+            </select>
+        </section>
+
+        <section id="pet-gallery">
+            <h2>Currently missing</h2>
+            <div id="lost-pets-container">
+                <p class="empty-state">Loading the lost pet list…</p>
+            </div>
+        </section>
+
+        <section id="map-panel" hidden>
+            <h2>Last seen</h2>
+            <div id="map-slot">
+                <p class="map-placeholder">No map loaded yet.</p>
+            </div>
+        </section>
+
+        <div class="report-row">
+            <button id="report-button" class="btn btn-primary">Report a sighting</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Homeward · a community lost-pet registry</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
