@@ -1,29 +1,22 @@
-/* ===== Homeward - community lost-pet registry ===== */
+/* ===== Homeward - community lost-pet registry =====
+   Uses the mindiweik.com design tokens so the demo reads as part of the site:
+   dark-first canvas, role-named accents as FILLS with --ink on top, and the
+   three type roles (display / mono / body). No hue-named or hardcoded colors. */
 
 :root {
-    --bg: #f6f4ef;
-    --surface: #ffffff;
-    --text: #2b2a33;
-    --muted: #6f6a77;
-    --accent: #e07a3f;
-    --accent-dark: #c25f2a;
-    --accent-soft: #fbeadd;
-    --teal: #2a7f7f;
-    --border: #e5e0d8;
-    --shadow: 0 1px 3px rgba(43, 42, 51, 0.08), 0 4px 14px rgba(43, 42, 51, 0.06);
-}
-
-body.dark {
-    --bg: #201f27;
-    --surface: #2a2933;
-    --text: #ece9f2;
-    --muted: #a29cae;
-    --accent: #e8935c;
-    --accent-dark: #d3773f;
-    --accent-soft: #3a2f27;
-    --teal: #4fb3b3;
-    --border: #3a3945;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.3);
+    /* Fallbacks only. When this page is served from the site these come from
+       global.css; standalone they keep the app legible. */
+    --bg: #0b0e14;
+    --surface: #11151f;
+    --border: rgba(255, 255, 255, 0.1);
+    --text: #ececf1;
+    --text-muted: rgba(236, 236, 241, 0.6);
+    --ink: #0b0e14;
+    --accent-blog: #6e7bff;
+    --accent-primary: var(--accent-blog);
+    --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+    --font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -31,7 +24,7 @@ body.dark {
 }
 
 body {
-    font-family: "Nunito", system-ui, sans-serif;
+    font-family: var(--font-body);
     background-color: var(--bg);
     color: var(--text);
     margin: 0;
@@ -39,7 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.55;
-    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* ===== Header ===== */
@@ -66,20 +58,30 @@ body {
 }
 
 .brand-icon {
-    font-size: 2rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 7px;
+    /* Accent as a FILL, ink glyph on top. */
+    background: var(--accent-primary);
+    color: var(--ink);
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .site-header h1 {
     margin: 0;
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
     letter-spacing: -0.02em;
 }
 
 .tagline {
     margin: 0;
-    font-size: 0.85rem;
-    color: var(--muted);
+    font-size: 0.82rem;
+    color: var(--text-muted);
 }
 
 /* ===== Layout ===== */
@@ -93,10 +95,13 @@ main {
 }
 
 h2 {
-    font-size: 1.15rem;
-    font-weight: 800;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
     margin: 1.8rem 0 0.9rem;
-    letter-spacing: -0.01em;
 }
 
 /* ===== Controls ===== */
@@ -107,90 +112,91 @@ h2 {
     gap: 0.7rem;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 0.9rem 1.1rem;
-    box-shadow: var(--shadow);
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .controls label {
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
 select {
-    font-family: inherit;
-    font-size: 0.95rem;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
     padding: 0.45rem 0.7rem;
-    border-radius: 8px;
+    border-radius: 7px;
     border: 1px solid var(--border);
-    background: var(--surface);
+    background: var(--bg);
     color: var(--text);
     cursor: pointer;
 }
 
-/* ===== Cat cards ===== */
+/* ===== Pet cards ===== */
 
 #lost-pets-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 1.1rem;
+    gap: 1rem;
     margin-top: 0.5rem;
 }
 
 .pet-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 0.9rem;
-    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.pet-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 2px 6px rgba(43, 42, 51, 0.1), 0 10px 24px rgba(43, 42, 51, 0.1);
 }
 
 .pet-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 7px;
+    display: block;
 }
 
 .photo-missing {
     width: 100%;
     height: 150px;
-    border-radius: 10px;
-    border: 2px dashed var(--border);
+    border-radius: 7px;
+    border: 1px dashed var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--muted);
-    font-size: 0.85rem;
-    font-style: italic;
-    background: var(--accent-soft);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
 .pet-card h3 {
-    margin: 0.5rem 0 0;
-    font-size: 1.05rem;
-    font-weight: 800;
+    margin: 0.6rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .muted {
-    color: var(--muted);
-    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
     margin: 0;
 }
 
 .pet-card p {
     margin: 0.15rem 0 0;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
 }
 
 /* ===== Map panel ===== */
@@ -198,9 +204,8 @@ select {
 #map-slot {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    min-height: 160px;
+    border-radius: 10px;
+    min-height: 150px;
     max-width: 560px;
     padding: 1.4rem;
     display: flex;
@@ -209,64 +214,56 @@ select {
 }
 
 .map-placeholder {
-    color: var(--muted);
-    font-style: italic;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
     margin: 0;
+    text-align: center;
 }
 
 /* ===== Buttons ===== */
 
 .btn {
-    font-family: inherit;
+    font-family: var(--font-mono);
     font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     border: none;
-    border-radius: 10px;
-    padding: 0.6rem 1.2rem;
+    border-radius: 7px;
+    padding: 0.6rem 1.1rem;
     cursor: pointer;
-    font-size: 0.95rem;
-    transition: background-color 0.15s ease, transform 0.1s ease;
-}
-
-.btn:active {
-    transform: scale(0.97);
 }
 
 .btn-primary {
-    background: var(--accent);
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: var(--accent-dark);
+    background: var(--accent-primary);
+    color: var(--ink);
 }
 
 .btn-ghost {
     background: transparent;
-    color: var(--muted);
+    color: var(--text-muted);
     border: 1px solid var(--border);
 }
 
-.btn-ghost:hover {
-    background: var(--accent-soft);
-    color: var(--text);
-}
-
 .map-btn {
-    margin-top: 0.6rem;
-    background: var(--accent-soft);
-    color: var(--accent-dark);
-    font-weight: 700;
-    font-size: 0.88rem;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 0.9rem;
+    margin-top: 0.7rem;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    padding: 0.45rem 0.8rem;
     cursor: pointer;
     align-self: flex-start;
 }
 
 .map-btn:hover {
-    background: var(--accent);
-    color: #fff;
+    background: var(--accent-primary);
+    color: var(--ink);
 }
 
 .report-row {
@@ -279,8 +276,9 @@ select {
 .empty-state {
     grid-column: 1 / -1;
     text-align: center;
-    color: var(--muted);
-    font-style: italic;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
     padding: 2rem 0;
 }
 
@@ -288,8 +286,9 @@ select {
 
 footer {
     text-align: center;
-    color: var(--muted);
-    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
     padding: 1.2rem;
     border-top: 1px solid var(--border);
     background: var(--surface);
@@ -297,4 +296,15 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* ===== Light theme =====
+   Mirrors the site: light mode overrides canvas tokens only, accents stay. */
+
+body.light {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --border: rgba(11, 14, 20, 0.12);
+    --text: #1a1d24;
+    --text-muted: rgba(26, 29, 36, 0.68);
 }

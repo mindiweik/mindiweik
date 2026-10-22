@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homeward - Lost Pet Alerts</title>
+    <title>Homeward - lost pet alerts</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="site-header">
         <div class="header-inner">
             <div class="brand">
-                <span class="brand-icon">🐾</span>
+                <span class="brand-icon" aria-hidden="true">🐾</span>
                 <div>
                     <h1>Homeward</h1>
                     <p class="tagline">Community lost-pet alerts - help bring them home.</p>
@@ -35,14 +32,14 @@
         </section>
 
         <section id="pet-gallery">
-            <h2>Currently missing</h2>
+            <h2>// currently missing</h2>
             <div id="lost-pets-container">
-                <p class="empty-state">Loading the lost pet list…</p>
+                <p class="empty-state">Loading the lost pet list...</p>
             </div>
         </section>
 
         <section id="map-panel" hidden>
-            <h2>Last seen</h2>
+            <h2>// last seen</h2>
             <div id="map-slot">
                 <p class="map-placeholder">No map loaded yet.</p>
             </div>
@@ -54,7 +51,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Homeward · a community lost-pet registry</p>
+        <p>&copy; 2026 Homeward &middot; a community lost-pet registry</p>
     </footer>
 
     <script src="script.js"></script>

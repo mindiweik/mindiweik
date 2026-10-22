@@ -31,9 +31,11 @@ We start with the ask, not with the bugs. The delegation request goes out in the
 
 The hosted page is for looking. To change the code you need the files on your machine, because the loop is edit the file, save, refresh the browser.
 
-1. Download the four files: [index.html](/lab/blocked/index.html), [styles.css](/lab/blocked/styles.css), [script.js](/lab/blocked/script.js), [favicon.svg](/lab/blocked/favicon.svg).
-2. Put them in one folder.
+1. **[Download the app](/files/homeward.zip)** (one zip, six files).
+2. Unzip it.
 3. Open `index.html` in your browser.
 4. Edit `script.js` in any text editor, save, refresh.
+
+The zip also works with no server and no internet for the fonts, so it is fine to hand out on a USB stick at a workshop.
 
 The **Sources** tab in DevTools is for looking, not editing. Set breakpoints, inspect values, read the code as the browser sees it. Edits typed directly into Sources vanish the moment you reload.

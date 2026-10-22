@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (HINTS) console.log("Hint: One tab shows you why images are missing. Start in the Network tab.");
 
     // Load theme from local storage
-    const theme = localStorage.getItem("theme") || "light";
+    const theme = localStorage.getItem("theme") || "dark";
     document.body.className = theme;
 
     themeToggle.addEventListener("click", () => {
