@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blocked: a survival guide - slides</title>
+<link rel="icon" type="image/svg+xml" href="/lab/blocked/favicon.svg">
+<style>
+  /* Site tokens with standalone fallbacks, same approach as the demo app. */
+  :root {
+    --bg: #0b0e14;
+    --surface: #11151f;
+    --border: rgba(255, 255, 255, 0.1);
+    --text: #ececf1;
+    --text-muted: rgba(236, 236, 241, 0.6);
+    --ink: #0b0e14;
+    --accent-blog: #6e7bff;
+    --accent-primary: var(--accent-blog);
+    --accent-speaking: #34d399;
+    --accent-projects: #ff9f45;
+    --accent-podcast: #ff5c85;
+    --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+    --font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .deck { flex: 1; position: relative; }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    padding: 4vh 7vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    overflow-y: auto;
+  }
+  .slide.active { display: flex; }
+
+  h1 {
+    align-self: flex-start;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0;
+    font-weight: 700;
+  }
+  h2 {
+    align-self: flex-start;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-weight: 700;
+  }
+  p {
+    font-size: clamp(0.95rem, 1.5vw, 1.18rem);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 46ch;
+    opacity: 0.92;
+  }
+  .wide { max-width: 62ch; }
+
+  .eyebrow {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .chip {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: var(--accent-primary);
+    color: var(--ink);
+  }
+  .chip.speaking { background: var(--accent-speaking); }
+  .chip.projects { background: var(--accent-projects); }
+  .chip.podcast { background: var(--accent-podcast); }
+
+  ul { margin: 0; padding-left: 1.2rem; max-width: 52ch; align-self: flex-start; }
+  li {
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    line-height: 1.65;
+    margin-bottom: 0.45rem;
+  }
+  li strong { font-weight: 700; }
+
+  .rule { height: 1px; background: var(--border); margin: 0.4rem 0; width: 100%; max-width: 46rem; flex: none; }
+
+  .cards { align-self: flex-start; display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); max-width: 60rem; }
+  .card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+  }
+  .card h3 {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    margin: 0 0 0.35rem;
+    font-weight: 700;
+  }
+  .card p { font-size: 0.92rem; max-width: none; }
+  .card .min {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .compare { align-self: flex-start; display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); max-width: 58rem; }
+  .bad { border-left: 3px solid var(--accent-podcast); padding-left: 0.9rem; }
+  .good { border-left: 3px solid var(--accent-speaking); padding-left: 0.9rem; }
+  .bad .label, .good .label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .good .label { color: var(--accent-speaking); }
+  .bad .label { color: var(--accent-podcast); }
+
+  .code {
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 0.9rem;
+    color: var(--text);
+    max-width: 44rem;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .code .hit { color: var(--accent-podcast); }
+
+  .big {
+    align-self: flex-start;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    max-width: 26ch;
+    font-weight: 700;
+  }
+  .big em {
+    font-style: normal;
+    background: var(--accent-primary);
+    color: var(--ink);
+    padding: 0.04em 0.26em;
+    border-radius: 6px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 1.4rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+  .nav { display: flex; gap: 0.5rem; align-items: center; }
+  .nav button {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+  }
+  .nav button:hover { border-color: var(--accent-primary); }
+  .progress { flex: 1; height: 2px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .progress span { display: block; height: 100%; background: var(--accent-primary); width: 0; transition: width 0.2s ease; }
+
+  a { color: var(--text); text-decoration-color: var(--accent-primary); text-underline-offset: 3px; }
+
+  @media print {
+    body { overflow: visible; }
+    .foot { display: none; }
+    .slide { display: flex !important; position: static; page-break-after: always; min-height: 90vh; }
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide active">
+    <span class="chip speaking">tech talk 3</span>
+    <h1>blocked:<br>a survival guide</h1>
+    <p class="wide">What to do in the moment you are stuck, especially when the thing you are waiting on is a person.</p>
+    <div class="rule"></div>
+    <span class="eyebrow">mindi weik &middot; the tech academy &middot; oct 23, 2026</span>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// who i am</span>
+    <h2>I got here the long way</h2>
+    <ul>
+      <li>Communication degree, studio art minor. Not computer science.</li>
+      <li>Ten years as a professional and leader in <strong>real estate and non-profits</strong>.</li>
+      <li>Then a bootcamp, and a hard pivot into code.</li>
+    </ul>
+    <p class="wide">That detour is not a footnote. It is why I build thinking about the user, the stakeholder, and the system at the same time.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// what i do now</span>
+    <h2>These days</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>OpenRouter</h3>
+        <p>Onboarding new providers, pulling more of the AI ecosystem into one place developers can actually reach.</p>
+      </div>
+      <div class="card">
+        <h3>Audition Cat</h3>
+        <p>Founding engineer on a CRM for performing artists. Three years in the making, finally in alpha.</p>
+      </div>
+      <div class="card">
+        <h3>Colorado Women&amp;TECH</h3>
+        <p>Organizer. I care about amplifying underrepresented groups in tech, especially women and neurodivergent folks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// where this series has been</span>
+    <h2>Two talks, then this one</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="min">talk 1 &middot; dec 2025</span>
+        <h3>Growing in tech</h3>
+        <p>Career growth, real-world projects, and what the path actually looks like.</p>
+      </div>
+      <div class="card">
+        <span class="min">talk 2</span>
+        <h3>The browser deep dive</h3>
+        <p>DevTools, end to end. A deliberately broken app to debug. This answered: <strong>where do I look?</strong></p>
+      </div>
+      <div class="card">
+        <span class="min">talk 3 &middot; today</span>
+        <h3>blocked</h3>
+        <p>What to do when looking is not enough, and the thing you need belongs to someone else.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// the actual problem</span>
+    <h2>Being stuck is not the problem</h2>
+    <p class="wide">Everyone gets stuck. The problem is what we do next. The usual instinct is to go quiet and wait, either for permission or for the one right answer to arrive.</p>
+    <div class="rule"></div>
+    <p class="big">Stuck and silent is the thing that costs you the week.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// move one</span>
+    <h2>Change the question</h2>
+    <div class="compare">
+      <div class="bad">
+        <span class="label">the wall</span>
+        <p>"How do I solve this?"</p>
+      </div>
+      <div class="good">
+        <span class="label">the menu</span>
+        <p>"What can I do <strong>right now</strong>, in the next ten minutes?"</p>
+      </div>
+    </div>
+    <p class="wide">The first question has one answer and you do not have it. The second has several, and you can start on any of them. Same situation, different shape.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// move two</span>
+    <h2>When the gap belongs to someone else</h2>
+    <ul>
+      <li><strong>Build around the gap.</strong> Stub the hole with something clearly labelled, keep building the parts that do not need it.</li>
+      <li><strong>Shrink the ask.</strong> "Can you help me" puts the whole problem on them. One precise question can be answered in thirty seconds.</li>
+    </ul>
+    <p class="wide">You are allowed to keep working while you wait. That is the entire skill.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// today</span>
+    <h2>How this runs</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="min">0 to 5 min</span>
+        <h3>Find the dead end</h3>
+        <p>Open the app. One button will show you something you cannot fix.</p>
+      </div>
+      <div class="card">
+        <span class="min">5 to 10 min</span>
+        <h3>Make the ask</h3>
+        <p>Write one email, one precise question. Send it to the ops address.</p>
+      </div>
+      <div class="card">
+        <span class="min">10 to 30 min</span>
+        <h3>Work while you wait</h3>
+        <p>Three bugs in the app. This is the real content, and it happens against the clock.</p>
+      </div>
+      <div class="card">
+        <span class="min">30 min</span>
+        <h3>The key lands</h3>
+        <p>Stub becomes live. Nobody leaves stuck, no matter what.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// the app</span>
+    <h2>Homeward</h2>
+    <p class="wide">A community lost-pet registry. Someone's cat got out. The site mostly works, which is the point: it looks finished enough that the problems read as bugs to find rather than a broken page.</p>
+    <ul>
+      <li>Seven animals, all listed. Six have no photo.</li>
+      <li>One thing is broken in a way that says nothing at all.</li>
+      <li>One thing cannot be fixed, because it needs a key only I have.</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// start here</span>
+    <h2>Your first job is to get blocked</h2>
+    <p class="wide">Click "Show on map" on any animal. You will get a panel that says the map needs a location service key. That key is not in the code, and it is not on the internet.</p>
+    <div class="rule"></div>
+    <p class="big">You cannot fix this one. So what <em>can</em> you do right now?</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// the ask</span>
+    <h2>What a good ask looks like</h2>
+    <div class="compare">
+      <div class="bad">
+        <span class="label">costs everyone a round trip</span>
+        <p>"Hey, the map doesn't work, can you help?"</p>
+      </div>
+      <div class="good">
+        <span class="label">answerable in one line</span>
+        <p>"The map panel needs a location service key. I have the panel and the placeholder built and everything else in the app works. Can you send the workshop key for this provider?"</p>
+      </div>
+    </div>
+    <p class="wide">What you tried, what you built anyway, and one question. That is the difference between a request and a guess.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// while you wait</span>
+    <h2>Three things to do in the app</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="min">the loud one</span>
+        <h3>Six missing photos</h3>
+        <p>The Network tab will show you a failing request. It is one character wrong.</p>
+      </div>
+      <div class="card">
+        <span class="min">the silent one</span>
+        <h3>The empty filter</h3>
+        <p>A dropdown option gives you nothing at all. No error. No red text. Nothing to read.</p>
+      </div>
+      <div class="card">
+        <span class="min">the bonus</span>
+        <h3>The breaking button</h3>
+        <p>One button throws when you click it. Easy win if you get there first.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// the real lesson</span>
+    <h2>When there is nothing to read</h2>
+    <p class="wide">The loud bug teaches you to use the tools. The silent bug teaches you what to do when the tools have nothing to say: you instrument. You add your own logging and go look at what the app is actually comparing.</p>
+    <div class="code">Filtering by "indoor": 0 match(es).
+<span class="hit">// the records say "Indoor". the filter sent "indoor".</span></div>
+    <p class="wide">Blank is not a broken page. Blank is data.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// close</span>
+    <h2>Three things to take with you</h2>
+    <ul>
+      <li>Ask what you can do right now, not how to solve the whole thing.</li>
+      <li>Build around the gap before you have permission to fill it.</li>
+      <li>Shrink the ask until it is easy to say yes to.</li>
+    </ul>
+    <div class="rule"></div>
+    <p class="wide">And say the thing out loud when you are stuck. Silent is the only unrecoverable state.</p>
+  </section>
+
+  <section class="slide">
+    <span class="eyebrow">// links</span>
+    <h2>Everything from today</h2>
+    <ul>
+      <li><strong>Play with it:</strong> <a href="/lab/blocked/">mindiweik.com/lab/blocked</a></li>
+      <li><strong>Take it home:</strong> <a href="/files/homeward.zip">mindiweik.com/files/homeward.zip</a></li>
+      <li><strong>This deck:</strong> <a href="/lab/blocked/slides.html">mindiweik.com/lab/blocked/slides.html</a></li>
+    </ul>
+    <div class="rule"></div>
+    <span class="eyebrow">mindi weik &middot; questions after today are welcome</span>
+  </section>
+
+</div>
+
+<div class="foot">
+  <span id="counter">1 / 15</span>
+  <div class="progress"><span id="bar"></span></div>
+  <div class="nav">
+    <button id="prev" aria-label="previous slide">prev</button>
+    <button id="next" aria-label="next slide">next</button>
+  </div>
+</div>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  const counter = document.getElementById('counter');
+  const bar = document.getElementById('bar');
+  let i = 0;
+
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    history.replaceState(null, '', '#' + (i + 1));
+  }
+
+  document.getElementById('prev').onclick = () => show(i - 1);
+  document.getElementById('next').onclick = () => show(i + 1);
+
+  addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); show(i + 1); }
+    if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); show(i - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+
+  const fromHash = parseInt(location.hash.replace('#', ''), 10);
+  show(Number.isFinite(fromHash) && fromHash > 0 ? fromHash - 1 : 0);
+</script>
+</body>
+</html>
