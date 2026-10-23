@@ -55,10 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     spaceFilter.addEventListener("change", () => {
-        const value = spaceFilter.value;            // "all" | "indoor" | "outdoor"
-        const filtered = value === "all" ? allPets : allPets.filter(pet => pet.space === value);
-        console.log(`Filtering by "${value}": ${filtered.length} match(es).`);
-        renderPets(filtered);
+        renderPets(currentSelection());
     });
 
     reportButton.addEventListener("click", () => {
@@ -75,9 +72,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 });
 
+// ---- Patchable on purpose ------------------------------------------------
+// Everything below is declared with `function` / `const` at top level, which
+// means it lives on `window`. You can replace any of it from the DevTools
+// console and see the fix take effect without reloading. Reloading brings the
+// original bug back, which is the point: the console is a scratchpad.
+//
+//   currentSelection        -> the filter bug lives here
+//   fetchSpeciesPhotos      -> the photo URL bug lives here
+//   reportSighting          -> the throwing button lives here
+// -------------------------------------------------------------------------
+
+function matchesSpace(pet, value) {
+    return pet.space === value;
+}
+
 function currentSelection() {
     const value = spaceFilter.value;
-    return value === "all" ? allPets : allPets.filter(pet => pet.space === value);
+    if (value === "all") return allPets;
+    const filtered = allPets.filter(pet => matchesSpace(pet, value));
+    console.log(`Filtering by "${value}": ${filtered.length} match(es).`);
+    return filtered;
 }
 
 // Fetch a handful of photos for each species. A failure here costs photos only.
@@ -144,8 +159,11 @@ function showOnMap(petId) {
     panel.hidden = false;
 
     if (!MAP_API_KEY) {
-        // This is the dead zone. Build the panel, then leave a clear placeholder.
-        slot.innerHTML = "<p class='map-placeholder'>Map needs the location service key (see the workshop email).</p>";
+        // If no API key, trigger the modal and halt.
+        document.getElementById("access-modal").hidden = false;
+        document.body.classList.add('no-scroll'); // Prevent scrolling behind modal
+        // Hide the map panel itself for now.
+        panel.hidden = true;
         return;
     }
 

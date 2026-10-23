@@ -50,10 +50,39 @@
         </div>
     </main>
 
+    <div id="access-modal" class="modal" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="access-gate">
+                <p class="gate-intro">
+                    The map needs a location service key. This workspace does not have one.
+                    You have to request access, and the ops team takes a few minutes to answer.
+                </p>
+                <div class="gate-row">
+                    <input id="gate-email" type="email" placeholder="you@example.com" autocomplete="email">
+                    <button id="gate-submit" class="btn btn-primary">Request access</button>
+                </div>
+                <p class="gate-note">Your email is not saved, stored, or sent anywhere. The wait is the assignment: while it runs, keep building everything that does not need the key.</p>
+                <div id="gate-status" hidden>
+                    <p class="gate-timer-line">Request logged at <span id="gate-time"></span>. The ops team typically replies in about six minutes.</p>
+                    <div class="gate-progress"><span id="gate-bar"></span></div>
+                    <p class="gate-count" id="gate-count"></p>
+                    <div id="gate-done" hidden>
+                        <p class="gate-approved">Access approved.</p>
+                        <p class="gate-next">Your access code: <strong id="gate-code"></strong></p>
+                        <p class="gate-next">Show this to Mindi to get the location service key, then put the key in <code>MAP_API_KEY</code> at the top of <code>script.js</code>, save, and reload.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Homeward &middot; a community lost-pet registry</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="access-gate.js"></script>
 </body>
 </html>
