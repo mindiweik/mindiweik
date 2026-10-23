@@ -31,6 +31,15 @@ We start with the ask, not with the bugs. The delegation request goes out in the
 
 **[Open the slides](/lab/blocked/slides/)** if you want the framing: who I am, why this topic, and how the session runs. Arrow keys or the buttons move between slides.
 
+## The access request
+
+Click "Show on map" on any animal. A modal will open asking you to request access.
+
+- Enter any email and click "Request access." (Your email is not saved or sent.)
+- A timer will start. The ops team takes about six minutes to reply.
+- While you wait, go fix the three bugs in the app.
+- When the timer expires, an access code appears. Show it to Mindi to get the real map key.
+
 ## If you want to fix it yourself
 
 The hosted page is for looking. To change the code you need the files on your machine, because the loop is edit the file, save, refresh the browser.
@@ -39,7 +48,5 @@ The hosted page is for looking. To change the code you need the files on your ma
 2. Unzip it.
 3. Open `index.html` in your browser.
 4. Edit `script.js` in any text editor, save, refresh.
-
-The zip also works with no server and no internet for the fonts, so it is fine to hand out on a USB stick at a workshop.
 
 The **Sources** tab in DevTools is for looking, not editing. Set breakpoints, inspect values, read the code as the browser sees it. Edits typed directly into Sources vanish the moment you reload.
