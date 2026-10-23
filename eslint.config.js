@@ -39,6 +39,13 @@ export default tseslint.config(
     rules: { '@typescript-eslint/no-require-imports': 'off' },
   },
 
+  // Browser-side scripts imported with ?url and injected as plain <script> tags.
+  // They run in the page, not in Node, and are not processed by Vite.
+  {
+    files: ['src/lib/slides/*.js'],
+    languageOptions: { globals: { ...globals.browser } },
+  },
+
   // Project tweaks.
   {
     rules: {

@@ -9,7 +9,7 @@ links:
   - label: Try the app
     url: /lab/blocked/
   - label: Slides
-    url: /lab/blocked/slides.html
+    url: /lab/blocked/slides/
 ---
 
 Talk 3 of The Tech Academy's series, and the one where the subject is not a tool but a habit: what you actually do in the moment you are stuck.
@@ -29,7 +29,7 @@ We start with the ask, not with the bugs. The delegation request goes out in the
 
 **[Open the app](/lab/blocked/)** in a new tab. It loads in the state students see: working, but not finished.
 
-**[Open the slides](/lab/blocked/slides.html)** if you want the framing: who I am, why this topic, and how the session runs. Arrow keys or the buttons move between slides.
+**[Open the slides](/lab/blocked/slides/)** if you want the framing: who I am, why this topic, and how the session runs. Arrow keys or the buttons move between slides.
 
 ## If you want to fix it yourself
 
